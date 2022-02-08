@@ -38,6 +38,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The type of activity
         /// </summary>
@@ -155,6 +161,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
         /// <summary>
         /// The type of activity
         /// </summary>
@@ -242,6 +252,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The user&#39;s percentage score for this activity
+        /// </summary>
+        /// <value>The user&#39;s percentage score for this activity</value>
+        [DataMember(Name="percentageScore", EmitDefaultValue=false)]
+        public float? PercentageScore { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// True if the activity was passed
+        /// </summary>
+        /// <value>True if the activity was passed</value>
+        [DataMember(Name="isPassed", EmitDefaultValue=false)]
+        public bool? IsPassed { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -311,6 +339,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  PercentageScore: ").Append(PercentageScore).Append("\n");
+            sb.Append("  IsPassed: ").Append(IsPassed).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -380,6 +410,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.PercentageScore == other.PercentageScore ||
+                    this.PercentageScore != null &&
+                    this.PercentageScore.Equals(other.PercentageScore)
+                ) &&
+                (
+                    this.IsPassed == other.IsPassed ||
+                    this.IsPassed != null &&
+                    this.IsPassed.Equals(other.IsPassed)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -444,6 +484,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
+                if (this.PercentageScore != null)
+                    hash = hash * 59 + this.PercentageScore.GetHashCode();
+                
+                if (this.IsPassed != null)
+                    hash = hash * 59 + this.IsPassed.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

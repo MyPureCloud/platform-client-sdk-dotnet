@@ -13,7 +13,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteSpeechandtextanalyticsTopic**](SpeechTextAnalyticsApi.html#deletespeechandtextanalyticstopic) | **DELETE** /api/v2/speechandtextanalytics/topics/{topicId} | Delete a Speech &amp; Text Analytics topic by id |
 | [**GetSpeechandtextanalyticsConversation**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsconversation) | **GET** /api/v2/speechandtextanalytics/conversations/{conversationId} | Get Speech and Text Analytics for a specific conversation |
 | [**GetSpeechandtextanalyticsConversationCommunicationTranscripturl**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsconversationcommunicationtranscripturl) | **GET** /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturl | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
-| [**GetSpeechandtextanalyticsDialects**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsdialects) | **GET** /api/v2/speechandtextanalytics/dialects | Get list of supported Speech &amp; Text Analytics dialects |
 | [**GetSpeechandtextanalyticsProgram**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogram) | **GET** /api/v2/speechandtextanalytics/programs/{programId} | Get a Speech &amp; Text Analytics program by id |
 | [**GetSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogrammappings) | **GET** /api/v2/speechandtextanalytics/programs/{programId}/mappings | Get Speech &amp; Text Analytics program mappings to queues and flows by id |
 | [**GetSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprograms) | **GET** /api/v2/speechandtextanalytics/programs | Get the list of Speech &amp; Text Analytics programs |
@@ -427,65 +426,6 @@ namespace Example
 ### Return type
 
 [**TranscriptUrl**](TranscriptUrl.html)
-
-<a name="getspeechandtextanalyticsdialects"></a>
-
-## **List&lt;Object&gt;** GetSpeechandtextanalyticsDialects ()
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Get list of supported Speech & Text Analytics dialects
-
-This api has been deprecated. Use api/v2/topics/dialects instead
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetSpeechandtextanalyticsDialectsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new SpeechTextAnalyticsApi();
-
-            try
-            { 
-                // Get list of supported Speech & Text Analytics dialects
-                List<Object> result = apiInstance.GetSpeechandtextanalyticsDialects();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsDialects: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-
-
-### Return type
-
-**List<Object>**
 
 <a name="getspeechandtextanalyticsprogram"></a>
 

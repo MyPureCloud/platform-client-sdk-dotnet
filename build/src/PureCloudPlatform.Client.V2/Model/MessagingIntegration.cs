@@ -26,6 +26,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The status of the Integration
         /// </summary>
@@ -180,6 +183,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The status of the Integration
         /// </summary>
@@ -215,8 +220,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagingIntegration" /> class.
         /// </summary>
-        public MessagingIntegration()
+        /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
+        public MessagingIntegration(SupportedContentReference SupportedContent = null)
         {
+            this.SupportedContent = SupportedContent;
             
         }
         
@@ -237,6 +244,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the Integration</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Defines the SupportedContent profile configured for an integration
+        /// </summary>
+        /// <value>Defines the SupportedContent profile configured for an integration</value>
+        [DataMember(Name="supportedContent", EmitDefaultValue=false)]
+        public SupportedContentReference SupportedContent { get; set; }
         
         
         
@@ -317,6 +333,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  MessengerType: ").Append(MessengerType).Append("\n");
             sb.Append("  Recipient: ").Append(Recipient).Append("\n");
@@ -375,6 +392,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.SupportedContent == other.SupportedContent ||
+                    this.SupportedContent != null &&
+                    this.SupportedContent.Equals(other.SupportedContent)
                 ) &&
                 (
                     this.Status == other.Status ||
@@ -440,6 +462,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.SupportedContent != null)
+                    hash = hash * 59 + this.SupportedContent.GetHashCode();
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();

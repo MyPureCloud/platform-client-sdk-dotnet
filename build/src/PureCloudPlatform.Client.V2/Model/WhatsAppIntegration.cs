@@ -29,6 +29,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The status of the WhatsApp Integration
         /// </summary>
@@ -216,6 +219,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The status of the WhatsApp Integration
         /// </summary>
@@ -271,6 +276,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WhatsAppIntegration" /> class.
         /// </summary>
         /// <param name="Name">The name of the WhatsApp integration. (required).</param>
+        /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
         /// <param name="PhoneNumber">The phone number associated to the whatsApp integration. (required).</param>
         /// <param name="Status">The status of the WhatsApp Integration.</param>
         /// <param name="DateCreated">Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -278,9 +284,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedBy">User reference that created this Integration.</param>
         /// <param name="ModifiedBy">User reference that last modified this Integration.</param>
         /// <param name="Version">Version number required for updates. (required).</param>
-        public WhatsAppIntegration(string Name = null, string PhoneNumber = null, StatusEnum? Status = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, int? Version = null)
+        public WhatsAppIntegration(string Name = null, SupportedContentReference SupportedContent = null, string PhoneNumber = null, StatusEnum? Status = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, int? Version = null)
         {
             this.Name = Name;
+            this.SupportedContent = SupportedContent;
             this.PhoneNumber = PhoneNumber;
             this.Status = Status;
             this.DateCreated = DateCreated;
@@ -308,6 +315,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the WhatsApp integration.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Defines the SupportedContent profile configured for an integration
+        /// </summary>
+        /// <value>Defines the SupportedContent profile configured for an integration</value>
+        [DataMember(Name="supportedContent", EmitDefaultValue=false)]
+        public SupportedContentReference SupportedContent { get; set; }
         
         
         
@@ -417,6 +433,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Recipient: ").Append(Recipient).Append("\n");
@@ -479,6 +496,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.SupportedContent == other.SupportedContent ||
+                    this.SupportedContent != null &&
+                    this.SupportedContent.Equals(other.SupportedContent)
                 ) &&
                 (
                     this.PhoneNumber == other.PhoneNumber ||
@@ -564,6 +586,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.SupportedContent != null)
+                    hash = hash * 59 + this.SupportedContent.GetHashCode();
                 
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();

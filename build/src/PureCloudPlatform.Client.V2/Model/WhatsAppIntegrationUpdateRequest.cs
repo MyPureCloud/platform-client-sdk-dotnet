@@ -26,6 +26,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The action used to activate and then confirm a WhatsApp Integration.
         /// </summary>
@@ -99,6 +102,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The action used to activate and then confirm a WhatsApp Integration.
         /// </summary>
@@ -124,11 +129,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WhatsAppIntegrationUpdateRequest" /> class.
         /// </summary>
+        /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
         /// <param name="Action">The action used to activate and then confirm a WhatsApp Integration..</param>
         /// <param name="AuthenticationMethod">The authentication method used to confirm a WhatsApp Integration activation. If action is set to Activate, then authenticationMethod is a required field. .</param>
         /// <param name="ConfirmationCode">The confirmation code sent by Whatsapp to you during the activation step. If action is set to Confirm, then confirmationCode is a required field..</param>
-        public WhatsAppIntegrationUpdateRequest(ActionEnum? Action = null, AuthenticationMethodEnum? AuthenticationMethod = null, string ConfirmationCode = null)
+        public WhatsAppIntegrationUpdateRequest(SupportedContentReference SupportedContent = null, ActionEnum? Action = null, AuthenticationMethodEnum? AuthenticationMethod = null, string ConfirmationCode = null)
         {
+            this.SupportedContent = SupportedContent;
             this.Action = Action;
             this.AuthenticationMethod = AuthenticationMethod;
             this.ConfirmationCode = ConfirmationCode;
@@ -152,6 +159,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>WhatsApp Integration name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Defines the SupportedContent profile configured for an integration
+        /// </summary>
+        /// <value>Defines the SupportedContent profile configured for an integration</value>
+        [DataMember(Name="supportedContent", EmitDefaultValue=false)]
+        public SupportedContentReference SupportedContent { get; set; }
         
         
         
@@ -187,6 +203,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  AuthenticationMethod: ").Append(AuthenticationMethod).Append("\n");
             sb.Append("  ConfirmationCode: ").Append(ConfirmationCode).Append("\n");
@@ -242,6 +259,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.SupportedContent == other.SupportedContent ||
+                    this.SupportedContent != null &&
+                    this.SupportedContent.Equals(other.SupportedContent)
+                ) &&
+                (
                     this.Action == other.Action ||
                     this.Action != null &&
                     this.Action.Equals(other.Action)
@@ -280,6 +302,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.SupportedContent != null)
+                    hash = hash * 59 + this.SupportedContent.GetHashCode();
                 
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();

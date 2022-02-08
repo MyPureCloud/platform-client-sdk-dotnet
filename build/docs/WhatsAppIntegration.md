@@ -9,6 +9,7 @@ title: WhatsAppIntegration
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | A unique Integration Id. | |
 | **Name** | **string** | The name of the WhatsApp integration. | |
+| **SupportedContent** | [**SupportedContentReference**](SupportedContentReference.html) | Defines the SupportedContent profile configured for an integration | [optional] |
 | **PhoneNumber** | **string** | The phone number associated to the whatsApp integration. | |
 | **Status** | **string** | The status of the WhatsApp Integration | [optional] |
 | **Recipient** | [**DomainEntityRef**](DomainEntityRef.html) | The recipient associated to the WhatsApp Integration. This recipient is used to associate a flow to an integration | [optional] |

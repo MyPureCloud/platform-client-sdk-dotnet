@@ -228,6 +228,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The direction of the message.
         /// </summary>
@@ -254,6 +260,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The status of the message.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        
+        
+        
+        
         
         
         
@@ -396,6 +406,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The message into normalized format
+        /// </summary>
+        /// <value>The message into normalized format</value>
+        [DataMember(Name="normalizedMessage", EmitDefaultValue=false)]
+        public ConversationNormalizedMessage NormalizedMessage { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The delivery event associated with this message in normalized format, if the message direction was outbound
+        /// </summary>
+        /// <value>The delivery event associated with this message in normalized format, if the message direction was outbound</value>
+        [DataMember(Name="normalizedReceipts", EmitDefaultValue=false)]
+        public List<ConversationNormalizedMessage> NormalizedReceipts { get; private set; }
+        
+        
+        
+        /// <summary>
         /// User who sent this message.
         /// </summary>
         /// <value>User who sent this message.</value>
@@ -442,6 +470,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Media: ").Append(Media).Append("\n");
             sb.Append("  Stickers: ").Append(Stickers).Append("\n");
+            sb.Append("  NormalizedMessage: ").Append(NormalizedMessage).Append("\n");
+            sb.Append("  NormalizedReceipts: ").Append(NormalizedReceipts).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -546,6 +576,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Stickers.SequenceEqual(other.Stickers)
                 ) &&
                 (
+                    this.NormalizedMessage == other.NormalizedMessage ||
+                    this.NormalizedMessage != null &&
+                    this.NormalizedMessage.Equals(other.NormalizedMessage)
+                ) &&
+                (
+                    this.NormalizedReceipts == other.NormalizedReceipts ||
+                    this.NormalizedReceipts != null &&
+                    this.NormalizedReceipts.SequenceEqual(other.NormalizedReceipts)
+                ) &&
+                (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
@@ -609,6 +649,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Stickers != null)
                     hash = hash * 59 + this.Stickers.GetHashCode();
+                
+                if (this.NormalizedMessage != null)
+                    hash = hash * 59 + this.NormalizedMessage.GetHashCode();
+                
+                if (this.NormalizedReceipts != null)
+                    hash = hash * 59 + this.NormalizedReceipts.GetHashCode();
                 
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();

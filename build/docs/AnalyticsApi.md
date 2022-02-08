@@ -331,6 +331,7 @@ Get a conversation by id
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
+* analytics:agentConversationDetail:view
 
 ### Example
 ```{"language":"csharp"}
@@ -396,6 +397,7 @@ Gets multiple conversations by id
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
+* analytics:agentConversationDetail:view
 
 ### Example
 ```{"language":"csharp"}

@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WhatsAppIntegrationRequest" /> class.
@@ -56,11 +61,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WhatsAppIntegrationRequest" /> class.
         /// </summary>
         /// <param name="Name">The name of the WhatsApp Integration (required).</param>
+        /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
         /// <param name="PhoneNumber">The phone number associated to the whatsApp integration (required).</param>
         /// <param name="WabaCertificate">The waba(WhatsApp Business Manager) certificate associated to the WhatsApp integration phone number (required).</param>
-        public WhatsAppIntegrationRequest(string Name = null, string PhoneNumber = null, string WabaCertificate = null)
+        public WhatsAppIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, string PhoneNumber = null, string WabaCertificate = null)
         {
             this.Name = Name;
+            this.SupportedContent = SupportedContent;
             this.PhoneNumber = PhoneNumber;
             this.WabaCertificate = WabaCertificate;
             
@@ -83,6 +90,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the WhatsApp Integration</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Defines the SupportedContent profile configured for an integration
+        /// </summary>
+        /// <value>Defines the SupportedContent profile configured for an integration</value>
+        [DataMember(Name="supportedContent", EmitDefaultValue=false)]
+        public SupportedContentReference SupportedContent { get; set; }
         
         
         
@@ -123,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  WabaCertificate: ").Append(WabaCertificate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -177,6 +194,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.SupportedContent == other.SupportedContent ||
+                    this.SupportedContent != null &&
+                    this.SupportedContent.Equals(other.SupportedContent)
+                ) &&
+                (
                     this.PhoneNumber == other.PhoneNumber ||
                     this.PhoneNumber != null &&
                     this.PhoneNumber.Equals(other.PhoneNumber)
@@ -210,6 +232,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.SupportedContent != null)
+                    hash = hash * 59 + this.SupportedContent.GetHashCode();
                 
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();

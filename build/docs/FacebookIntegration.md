@@ -9,6 +9,7 @@ title: FacebookIntegration
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | A unique Integration Id. | |
 | **Name** | **string** | The name of the Facebook Integration | |
+| **SupportedContent** | [**SupportedContentReference**](SupportedContentReference.html) | Defines the SupportedContent profile configured for an integration | [optional] |
 | **AppId** | **string** | The App Id from Facebook messenger | |
 | **PageId** | **string** | The Page Id from Facebook messenger | [optional] |
 | **PageName** | **string** | The name of the Facebook page | [optional] |

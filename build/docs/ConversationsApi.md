@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationsopenintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/open/{integrationId} | Delete an Open messaging integration |
 | [**DeleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationstwitterintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Delete a Twitter messaging integration |
 | [**DeleteConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationswhatsappintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Delete a WhatsApp messaging integration |
+| [**DeleteConversationsMessagingSupportedcontentSupportedContentId**](ConversationsApi.html#deleteconversationsmessagingsupportedcontentsupportedcontentid) | **DELETE** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Delete a supported content profile |
 | [**GetAnalyticsConversationDetails**](ConversationsApi.html#getanalyticsconversationdetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
 | [**GetAnalyticsConversationsDetails**](ConversationsApi.html#getanalyticsconversationsdetails) | **GET** /api/v2/analytics/conversations/details | Gets multiple conversations by id |
 | [**GetAnalyticsConversationsDetailsJob**](ConversationsApi.html#getanalyticsconversationsdetailsjob) | **GET** /api/v2/analytics/conversations/details/jobs/{jobId} | Get status for async query for conversation details |
@@ -75,6 +76,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagingIntegrationsWhatsapp**](ConversationsApi.html#getconversationsmessagingintegrationswhatsapp) | **GET** /api/v2/conversations/messaging/integrations/whatsapp | Get a list of WhatsApp Integrations |
 | [**GetConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationswhatsappintegrationid) | **GET** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Get a WhatsApp messaging integration |
 | [**GetConversationsMessagingSticker**](ConversationsApi.html#getconversationsmessagingsticker) | **GET** /api/v2/conversations/messaging/stickers/{messengerType} | Get a list of Messaging Stickers |
+| [**GetConversationsMessagingSupportedcontent**](ConversationsApi.html#getconversationsmessagingsupportedcontent) | **GET** /api/v2/conversations/messaging/supportedcontent | Get a list of Supported Content profiles |
+| [**GetConversationsMessagingSupportedcontentDefault**](ConversationsApi.html#getconversationsmessagingsupportedcontentdefault) | **GET** /api/v2/conversations/messaging/supportedcontent/default | Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. |
+| [**GetConversationsMessagingSupportedcontentSupportedContentId**](ConversationsApi.html#getconversationsmessagingsupportedcontentsupportedcontentid) | **GET** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Get a supported content profile |
 | [**GetConversationsMessagingThreadingtimeline**](ConversationsApi.html#getconversationsmessagingthreadingtimeline) | **GET** /api/v2/conversations/messaging/threadingtimeline | Get conversation threading window timeline for each messaging type |
 | [**PatchConversationParticipant**](ConversationsApi.html#patchconversationparticipant) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](ConversationsApi.html#patchconversationparticipantattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
@@ -107,6 +111,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationsopenintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/open/{integrationId} | Update an Open messaging integration |
 | [**PatchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationstwitterintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Update Twitter messaging integration |
 | [**PatchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationswhatsappintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Update or activate a WhatsApp messaging integration. |
+| [**PatchConversationsMessagingSupportedcontentSupportedContentId**](ConversationsApi.html#patchconversationsmessagingsupportedcontentsupportedcontentid) | **PATCH** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Update a supported content profile |
 | [**PostAnalyticsConversationDetailsProperties**](ConversationsApi.html#postanalyticsconversationdetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
 | [**PostAnalyticsConversationsAggregatesQuery**](ConversationsApi.html#postanalyticsconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
 | [**PostAnalyticsConversationsDetailsJobs**](ConversationsApi.html#postanalyticsconversationsdetailsjobs) | **POST** /api/v2/analytics/conversations/details/jobs | Query for conversation details asynchronously |
@@ -149,11 +154,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessagingIntegrationsOpen**](ConversationsApi.html#postconversationsmessagingintegrationsopen) | **POST** /api/v2/conversations/messaging/integrations/open | Create an Open messaging integration |
 | [**PostConversationsMessagingIntegrationsTwitter**](ConversationsApi.html#postconversationsmessagingintegrationstwitter) | **POST** /api/v2/conversations/messaging/integrations/twitter | Create a Twitter Integration |
 | [**PostConversationsMessagingIntegrationsWhatsapp**](ConversationsApi.html#postconversationsmessagingintegrationswhatsapp) | **POST** /api/v2/conversations/messaging/integrations/whatsapp | Create a WhatsApp Integration |
+| [**PostConversationsMessagingSupportedcontent**](ConversationsApi.html#postconversationsmessagingsupportedcontent) | **POST** /api/v2/conversations/messaging/supportedcontent | Create a Supported Content profile |
 | [**PutConversationParticipantFlaggedreason**](ConversationsApi.html#putconversationparticipantflaggedreason) | **PUT** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Set flagged reason on conversation participant to indicate bad conversation quality. |
 | [**PutConversationTags**](ConversationsApi.html#putconversationtags) | **PUT** /api/v2/conversations/{conversationId}/tags | Update the tags on a conversation. |
 | [**PutConversationsCallParticipantCommunicationUuidata**](ConversationsApi.html#putconversationscallparticipantcommunicationuuidata) | **PUT** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata | Set uuiData to be sent on future commands. |
 | [**PutConversationsEmailMessagesDraft**](ConversationsApi.html#putconversationsemailmessagesdraft) | **PUT** /api/v2/conversations/emails/{conversationId}/messages/draft | Update conversation draft reply |
 | [**PutConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#putconversationsmessagingintegrationslineintegrationid) | **PUT** /api/v2/conversations/messaging/integrations/line/{integrationId} | Update a LINE messenger integration |
+| [**PutConversationsMessagingSupportedcontentDefault**](ConversationsApi.html#putconversationsmessagingsupportedcontentdefault) | **PUT** /api/v2/conversations/messaging/supportedcontent/default | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
 | [**PutConversationsMessagingThreadingtimeline**](ConversationsApi.html#putconversationsmessagingthreadingtimeline) | **PUT** /api/v2/conversations/messaging/threadingtimeline | Update conversation threading window timeline for each messaging type |
 {: class="table table-striped"}
 
@@ -805,6 +812,70 @@ namespace Example
 
 [**WhatsAppIntegration**](WhatsAppIntegration.html)
 
+<a name="deleteconversationsmessagingsupportedcontentsupportedcontentid"></a>
+
+## void DeleteConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId)
+
+
+
+Delete a supported content profile
+
+
+
+Requires ALL permissions: 
+
+* messaging:supportedContent:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteConversationsMessagingSupportedcontentSupportedContentIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var supportedContentId = supportedContentId_example;  // string | Supported Content ID
+
+            try
+            { 
+                // Delete a supported content profile
+                apiInstance.DeleteConversationsMessagingSupportedcontentSupportedContentId(supportedContentId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversationsMessagingSupportedcontentSupportedContentId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **supportedContentId** | **string**| Supported Content ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="getanalyticsconversationdetails"></a>
 
 ## [**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes.html) GetAnalyticsConversationDetails (string conversationId)
@@ -818,6 +889,7 @@ Get a conversation by id
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
+* analytics:agentConversationDetail:view
 
 ### Example
 ```{"language":"csharp"}
@@ -883,6 +955,7 @@ Gets multiple conversations by id
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
+* analytics:agentConversationDetail:view
 
 ### Example
 ```{"language":"csharp"}
@@ -4625,6 +4698,198 @@ namespace Example
 
 [**MessagingStickerEntityListing**](MessagingStickerEntityListing.html)
 
+<a name="getconversationsmessagingsupportedcontent"></a>
+
+## [**SupportedContentListing**](SupportedContentListing.html) GetConversationsMessagingSupportedcontent (int? pageSize = null, int? pageNumber = null)
+
+
+
+Get a list of Supported Content profiles
+
+
+
+Requires ALL permissions: 
+
+* messaging:supportedContent:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingSupportedcontentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get a list of Supported Content profiles
+                SupportedContentListing result = apiInstance.GetConversationsMessagingSupportedcontent(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingSupportedcontent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**SupportedContentListing**](SupportedContentListing.html)
+
+<a name="getconversationsmessagingsupportedcontentdefault"></a>
+
+## [**SupportedContent**](SupportedContent.html) GetConversationsMessagingSupportedcontentDefault ()
+
+
+
+Get the organization's default supported content profile that will be used as the default when creating an integration.
+
+When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+
+Requires ALL permissions: 
+
+* messaging:supportedContent:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingSupportedcontentDefaultExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+
+            try
+            { 
+                // Get the organization's default supported content profile that will be used as the default when creating an integration.
+                SupportedContent result = apiInstance.GetConversationsMessagingSupportedcontentDefault();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingSupportedcontentDefault: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**SupportedContent**](SupportedContent.html)
+
+<a name="getconversationsmessagingsupportedcontentsupportedcontentid"></a>
+
+## [**SupportedContent**](SupportedContent.html) GetConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId)
+
+
+
+Get a supported content profile
+
+
+
+Requires ALL permissions: 
+
+* messaging:supportedContent:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingSupportedcontentSupportedContentIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var supportedContentId = supportedContentId_example;  // string | Supported Content ID
+
+            try
+            { 
+                // Get a supported content profile
+                SupportedContent result = apiInstance.GetConversationsMessagingSupportedcontentSupportedContentId(supportedContentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingSupportedcontentSupportedContentId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **supportedContentId** | **string**| Supported Content ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SupportedContent**](SupportedContent.html)
+
 <a name="getconversationsmessagingthreadingtimeline"></a>
 
 ## [**ConversationThreadingWindow**](ConversationThreadingWindow.html) GetConversationsMessagingThreadingtimeline ()
@@ -6780,6 +7045,73 @@ namespace Example
 ### Return type
 
 [**WhatsAppIntegration**](WhatsAppIntegration.html)
+
+<a name="patchconversationsmessagingsupportedcontentsupportedcontentid"></a>
+
+## [**SupportedContent**](SupportedContent.html) PatchConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body)
+
+
+
+Update a supported content profile
+
+
+
+Requires ALL permissions: 
+
+* messaging:supportedContent:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsMessagingSupportedcontentSupportedContentIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var supportedContentId = supportedContentId_example;  // string | Supported Content ID
+            var body = new SupportedContent(); // SupportedContent | SupportedContent
+
+            try
+            { 
+                // Update a supported content profile
+                SupportedContent result = apiInstance.PatchConversationsMessagingSupportedcontentSupportedContentId(supportedContentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsMessagingSupportedcontentSupportedContentId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **supportedContentId** | **string**| Supported Content ID |  |
+| **body** | [**SupportedContent**](SupportedContent.html)| SupportedContent |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SupportedContent**](SupportedContent.html)
 
 <a name="postanalyticsconversationdetailsproperties"></a>
 
@@ -9572,6 +9904,71 @@ namespace Example
 
 [**WhatsAppIntegration**](WhatsAppIntegration.html)
 
+<a name="postconversationsmessagingsupportedcontent"></a>
+
+## [**SupportedContent**](SupportedContent.html) PostConversationsMessagingSupportedcontent (SupportedContent body)
+
+
+
+Create a Supported Content profile
+
+
+
+Requires ANY permissions: 
+
+* messaging:supportedContent:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessagingSupportedcontentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new SupportedContent(); // SupportedContent | SupportedContent
+
+            try
+            { 
+                // Create a Supported Content profile
+                SupportedContent result = apiInstance.PostConversationsMessagingSupportedcontent(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessagingSupportedcontent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SupportedContent**](SupportedContent.html)| SupportedContent |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SupportedContent**](SupportedContent.html)
+
 <a name="putconversationparticipantflaggedreason"></a>
 
 ## void PutConversationParticipantFlaggedreason (string conversationId, string participantId)
@@ -9906,6 +10303,71 @@ namespace Example
 ### Return type
 
 [**LineIntegration**](LineIntegration.html)
+
+<a name="putconversationsmessagingsupportedcontentdefault"></a>
+
+## [**SupportedContent**](SupportedContent.html) PutConversationsMessagingSupportedcontentDefault (SupportedContentReference body)
+
+
+
+Set the organization's default supported content profile that may be assigned to an integration when it is created.
+
+When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+
+Requires ALL permissions: 
+
+* messaging:supportedContent:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsMessagingSupportedcontentDefaultExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new SupportedContentReference(); // SupportedContentReference | SupportedContent
+
+            try
+            { 
+                // Set the organization's default supported content profile that may be assigned to an integration when it is created.
+                SupportedContent result = apiInstance.PutConversationsMessagingSupportedcontentDefault(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsMessagingSupportedcontentDefault: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SupportedContentReference**](SupportedContentReference.html)| SupportedContent |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SupportedContent**](SupportedContent.html)
 
 <a name="putconversationsmessagingthreadingtimeline"></a>
 

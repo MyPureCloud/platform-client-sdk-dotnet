@@ -247,6 +247,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WhatsAppIntegration> DeleteConversationsMessagingIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId);
         
         /// <summary>
+        /// Delete a supported content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns></returns>
+        void DeleteConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId);
+
+        /// <summary>
+        /// Delete a supported content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteConversationsMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId);
+        
+        /// <summary>
         /// Get a conversation by id
         /// </summary>
         /// <remarks>
@@ -1631,6 +1653,72 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<MessagingStickerEntityListing> GetConversationsMessagingStickerWithHttpInfo (string messengerType, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
+        /// Get a list of Supported Content profiles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>SupportedContentListing</returns>
+        SupportedContentListing GetConversationsMessagingSupportedcontent (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a list of Supported Content profiles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of SupportedContentListing</returns>
+        ApiResponse<SupportedContentListing> GetConversationsMessagingSupportedcontentWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
+        /// <summary>
+        /// Get the organization&#39;s default supported content profile that will be used as the default when creating an integration.
+        /// </summary>
+        /// <remarks>
+        /// When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>SupportedContent</returns>
+        SupportedContent GetConversationsMessagingSupportedcontentDefault ();
+
+        /// <summary>
+        /// Get the organization&#39;s default supported content profile that will be used as the default when creating an integration.
+        /// </summary>
+        /// <remarks>
+        /// When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of SupportedContent</returns>
+        ApiResponse<SupportedContent> GetConversationsMessagingSupportedcontentDefaultWithHttpInfo ();
+        
+        /// <summary>
+        /// Get a supported content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>SupportedContent</returns>
+        SupportedContent GetConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId);
+
+        /// <summary>
+        /// Get a supported content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>ApiResponse of SupportedContent</returns>
+        ApiResponse<SupportedContent> GetConversationsMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId);
+        
+        /// <summary>
         /// Get conversation threading window timeline for each messaging type
         /// </summary>
         /// <remarks>
@@ -2447,6 +2535,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">WhatsAppIntegrationUpdateRequest</param>
         /// <returns>ApiResponse of WhatsAppIntegration</returns>
         ApiResponse<WhatsAppIntegration> PatchConversationsMessagingIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId, WhatsAppIntegrationUpdateRequest body);
+        
+        /// <summary>
+        /// Update a supported content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>SupportedContent</returns>
+        SupportedContent PatchConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body);
+
+        /// <summary>
+        /// Update a supported content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>ApiResponse of SupportedContent</returns>
+        ApiResponse<SupportedContent> PatchConversationsMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId, SupportedContent body);
         
         /// <summary>
         /// Index conversation properties
@@ -3449,6 +3561,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WhatsAppIntegration> PostConversationsMessagingIntegrationsWhatsappWithHttpInfo (WhatsAppIntegrationRequest body);
         
         /// <summary>
+        /// Create a Supported Content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>SupportedContent</returns>
+        SupportedContent PostConversationsMessagingSupportedcontent (SupportedContent body);
+
+        /// <summary>
+        /// Create a Supported Content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>ApiResponse of SupportedContent</returns>
+        ApiResponse<SupportedContent> PostConversationsMessagingSupportedcontentWithHttpInfo (SupportedContent body);
+        
+        /// <summary>
         /// Set flagged reason on conversation participant to indicate bad conversation quality.
         /// </summary>
         /// <remarks>
@@ -3571,6 +3705,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>ApiResponse of LineIntegration</returns>
         ApiResponse<LineIntegration> PutConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId, LineIntegrationRequest body);
+        
+        /// <summary>
+        /// Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created.
+        /// </summary>
+        /// <remarks>
+        /// When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>SupportedContent</returns>
+        SupportedContent PutConversationsMessagingSupportedcontentDefault (SupportedContentReference body);
+
+        /// <summary>
+        /// Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created.
+        /// </summary>
+        /// <remarks>
+        /// When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>ApiResponse of SupportedContent</returns>
+        ApiResponse<SupportedContent> PutConversationsMessagingSupportedcontentDefaultWithHttpInfo (SupportedContentReference body);
         
         /// <summary>
         /// Update conversation threading window timeline for each messaging type
@@ -3827,6 +3983,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Integration ID</param>
         /// <returns>Task of ApiResponse (WhatsAppIntegration)</returns>
         System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> DeleteConversationsMessagingIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId);
+        
+        /// <summary>
+        /// Delete a supported content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteConversationsMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId);
+
+        /// <summary>
+        /// Delete a supported content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId);
         
         /// <summary>
         /// Get a conversation by id
@@ -5213,6 +5391,72 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<MessagingStickerEntityListing>> GetConversationsMessagingStickerAsyncWithHttpInfo (string messengerType, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
+        /// Get a list of Supported Content profiles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of SupportedContentListing</returns>
+        System.Threading.Tasks.Task<SupportedContentListing> GetConversationsMessagingSupportedcontentAsync (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a list of Supported Content profiles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (SupportedContentListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SupportedContentListing>> GetConversationsMessagingSupportedcontentAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
+        /// <summary>
+        /// Get the organization&#39;s default supported content profile that will be used as the default when creating an integration.
+        /// </summary>
+        /// <remarks>
+        /// When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of SupportedContent</returns>
+        System.Threading.Tasks.Task<SupportedContent> GetConversationsMessagingSupportedcontentDefaultAsync ();
+
+        /// <summary>
+        /// Get the organization&#39;s default supported content profile that will be used as the default when creating an integration.
+        /// </summary>
+        /// <remarks>
+        /// When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SupportedContent>> GetConversationsMessagingSupportedcontentDefaultAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Get a supported content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>Task of SupportedContent</returns>
+        System.Threading.Tasks.Task<SupportedContent> GetConversationsMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId);
+
+        /// <summary>
+        /// Get a supported content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SupportedContent>> GetConversationsMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId);
+        
+        /// <summary>
         /// Get conversation threading window timeline for each messaging type
         /// </summary>
         /// <remarks>
@@ -6029,6 +6273,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">WhatsAppIntegrationUpdateRequest</param>
         /// <returns>Task of ApiResponse (WhatsAppIntegration)</returns>
         System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> PatchConversationsMessagingIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId, WhatsAppIntegrationUpdateRequest body);
+        
+        /// <summary>
+        /// Update a supported content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>Task of SupportedContent</returns>
+        System.Threading.Tasks.Task<SupportedContent> PatchConversationsMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId, SupportedContent body);
+
+        /// <summary>
+        /// Update a supported content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PatchConversationsMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId, SupportedContent body);
         
         /// <summary>
         /// Index conversation properties
@@ -7031,6 +7299,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> PostConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo (WhatsAppIntegrationRequest body);
         
         /// <summary>
+        /// Create a Supported Content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>Task of SupportedContent</returns>
+        System.Threading.Tasks.Task<SupportedContent> PostConversationsMessagingSupportedcontentAsync (SupportedContent body);
+
+        /// <summary>
+        /// Create a Supported Content profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PostConversationsMessagingSupportedcontentAsyncWithHttpInfo (SupportedContent body);
+        
+        /// <summary>
         /// Set flagged reason on conversation participant to indicate bad conversation quality.
         /// </summary>
         /// <remarks>
@@ -7153,6 +7443,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>Task of ApiResponse (LineIntegration)</returns>
         System.Threading.Tasks.Task<ApiResponse<LineIntegration>> PutConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId, LineIntegrationRequest body);
+        
+        /// <summary>
+        /// Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created.
+        /// </summary>
+        /// <remarks>
+        /// When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>Task of SupportedContent</returns>
+        System.Threading.Tasks.Task<SupportedContent> PutConversationsMessagingSupportedcontentDefaultAsync (SupportedContentReference body);
+
+        /// <summary>
+        /// Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created.
+        /// </summary>
+        /// <remarks>
+        /// When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PutConversationsMessagingSupportedcontentDefaultAsyncWithHttpInfo (SupportedContentReference body);
         
         /// <summary>
         /// Update conversation threading window timeline for each messaging type
@@ -9239,6 +9551,197 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WhatsAppIntegration>(localVarStatusCode,
                 localVarHeaders,
                 (WhatsAppIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete a supported content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns></returns>
+        public void DeleteConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId)
+        {
+             DeleteConversationsMessagingSupportedcontentSupportedContentIdWithHttpInfo(supportedContentId);
+        }
+
+        /// <summary>
+        /// Delete a supported content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteConversationsMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId)
+        { 
+            // verify the required parameter 'supportedContentId' is set
+            if (supportedContentId == null)
+                throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling ConversationsApi->DeleteConversationsMessagingSupportedcontentSupportedContentId");
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (supportedContentId != null) localVarPathParams.Add("supportedContentId", this.Configuration.ApiClient.ParameterToString(supportedContentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete a supported content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteConversationsMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId)
+        {
+             await DeleteConversationsMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo(supportedContentId);
+
+        }
+
+        /// <summary>
+        /// Delete a supported content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId)
+        { 
+            // verify the required parameter 'supportedContentId' is set
+            if (supportedContentId == null)
+                throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling ConversationsApi->DeleteConversationsMessagingSupportedcontentSupportedContentId");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (supportedContentId != null) localVarPathParams.Add("supportedContentId", this.Configuration.ApiClient.ParameterToString(supportedContentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -20792,6 +21295,571 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get a list of Supported Content profiles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>SupportedContentListing</returns>
+        public SupportedContentListing GetConversationsMessagingSupportedcontent (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<SupportedContentListing> localVarResponse = GetConversationsMessagingSupportedcontentWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of Supported Content profiles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of SupportedContentListing</returns>
+        public ApiResponse< SupportedContentListing > GetConversationsMessagingSupportedcontentWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SupportedContentListing>(localVarStatusCode,
+                localVarHeaders,
+                (SupportedContentListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SupportedContentListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a list of Supported Content profiles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of SupportedContentListing</returns>
+        public async System.Threading.Tasks.Task<SupportedContentListing> GetConversationsMessagingSupportedcontentAsync (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<SupportedContentListing> localVarResponse = await GetConversationsMessagingSupportedcontentAsyncWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of Supported Content profiles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (SupportedContentListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SupportedContentListing>> GetConversationsMessagingSupportedcontentAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SupportedContentListing>(localVarStatusCode,
+                localVarHeaders,
+                (SupportedContentListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SupportedContentListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>SupportedContent</returns>
+        public SupportedContent GetConversationsMessagingSupportedcontentDefault ()
+        {
+             ApiResponse<SupportedContent> localVarResponse = GetConversationsMessagingSupportedcontentDefaultWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of SupportedContent</returns>
+        public ApiResponse< SupportedContent > GetConversationsMessagingSupportedcontentDefaultWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent/default";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontentDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontentDefault: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SupportedContent>(localVarStatusCode,
+                localVarHeaders,
+                (SupportedContent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SupportedContent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of SupportedContent</returns>
+        public async System.Threading.Tasks.Task<SupportedContent> GetConversationsMessagingSupportedcontentDefaultAsync ()
+        {
+             ApiResponse<SupportedContent> localVarResponse = await GetConversationsMessagingSupportedcontentDefaultAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SupportedContent>> GetConversationsMessagingSupportedcontentDefaultAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent/default";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontentDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontentDefault: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SupportedContent>(localVarStatusCode,
+                localVarHeaders,
+                (SupportedContent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SupportedContent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a supported content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>SupportedContent</returns>
+        public SupportedContent GetConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId)
+        {
+             ApiResponse<SupportedContent> localVarResponse = GetConversationsMessagingSupportedcontentSupportedContentIdWithHttpInfo(supportedContentId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a supported content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>ApiResponse of SupportedContent</returns>
+        public ApiResponse< SupportedContent > GetConversationsMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId)
+        { 
+            // verify the required parameter 'supportedContentId' is set
+            if (supportedContentId == null)
+                throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling ConversationsApi->GetConversationsMessagingSupportedcontentSupportedContentId");
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (supportedContentId != null) localVarPathParams.Add("supportedContentId", this.Configuration.ApiClient.ParameterToString(supportedContentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SupportedContent>(localVarStatusCode,
+                localVarHeaders,
+                (SupportedContent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SupportedContent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a supported content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>Task of SupportedContent</returns>
+        public async System.Threading.Tasks.Task<SupportedContent> GetConversationsMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId)
+        {
+             ApiResponse<SupportedContent> localVarResponse = await GetConversationsMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo(supportedContentId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a supported content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SupportedContent>> GetConversationsMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId)
+        { 
+            // verify the required parameter 'supportedContentId' is set
+            if (supportedContentId == null)
+                throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling ConversationsApi->GetConversationsMessagingSupportedcontentSupportedContentId");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (supportedContentId != null) localVarPathParams.Add("supportedContentId", this.Configuration.ApiClient.ParameterToString(supportedContentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SupportedContent>(localVarStatusCode,
+                localVarHeaders,
+                (SupportedContent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SupportedContent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get conversation threading window timeline for each messaging type Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27894,6 +28962,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WhatsAppIntegration>(localVarStatusCode,
                 localVarHeaders,
                 (WhatsAppIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update a supported content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>SupportedContent</returns>
+        public SupportedContent PatchConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body)
+        {
+             ApiResponse<SupportedContent> localVarResponse = PatchConversationsMessagingSupportedcontentSupportedContentIdWithHttpInfo(supportedContentId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a supported content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>ApiResponse of SupportedContent</returns>
+        public ApiResponse< SupportedContent > PatchConversationsMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId, SupportedContent body)
+        { 
+            // verify the required parameter 'supportedContentId' is set
+            if (supportedContentId == null)
+                throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling ConversationsApi->PatchConversationsMessagingSupportedcontentSupportedContentId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingSupportedcontentSupportedContentId");
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (supportedContentId != null) localVarPathParams.Add("supportedContentId", this.Configuration.ApiClient.ParameterToString(supportedContentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SupportedContent>(localVarStatusCode,
+                localVarHeaders,
+                (SupportedContent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SupportedContent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update a supported content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>Task of SupportedContent</returns>
+        public async System.Threading.Tasks.Task<SupportedContent> PatchConversationsMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId, SupportedContent body)
+        {
+             ApiResponse<SupportedContent> localVarResponse = await PatchConversationsMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo(supportedContentId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a supported content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="supportedContentId">Supported Content ID</param>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PatchConversationsMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId, SupportedContent body)
+        { 
+            // verify the required parameter 'supportedContentId' is set
+            if (supportedContentId == null)
+                throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling ConversationsApi->PatchConversationsMessagingSupportedcontentSupportedContentId");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingSupportedcontentSupportedContentId");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (supportedContentId != null) localVarPathParams.Add("supportedContentId", this.Configuration.ApiClient.ParameterToString(supportedContentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SupportedContent>(localVarStatusCode,
+                localVarHeaders,
+                (SupportedContent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SupportedContent)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -36740,6 +38022,207 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Create a Supported Content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>SupportedContent</returns>
+        public SupportedContent PostConversationsMessagingSupportedcontent (SupportedContent body)
+        {
+             ApiResponse<SupportedContent> localVarResponse = PostConversationsMessagingSupportedcontentWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a Supported Content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>ApiResponse of SupportedContent</returns>
+        public ApiResponse< SupportedContent > PostConversationsMessagingSupportedcontentWithHttpInfo (SupportedContent body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingSupportedcontent");
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingSupportedcontent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingSupportedcontent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SupportedContent>(localVarStatusCode,
+                localVarHeaders,
+                (SupportedContent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SupportedContent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a Supported Content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>Task of SupportedContent</returns>
+        public async System.Threading.Tasks.Task<SupportedContent> PostConversationsMessagingSupportedcontentAsync (SupportedContent body)
+        {
+             ApiResponse<SupportedContent> localVarResponse = await PostConversationsMessagingSupportedcontentAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a Supported Content profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PostConversationsMessagingSupportedcontentAsyncWithHttpInfo (SupportedContent body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingSupportedcontent");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingSupportedcontent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingSupportedcontent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SupportedContent>(localVarStatusCode,
+                localVarHeaders,
+                (SupportedContent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SupportedContent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Set flagged reason on conversation participant to indicate bad conversation quality. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -37819,6 +39302,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LineIntegration>(localVarStatusCode,
                 localVarHeaders,
                 (LineIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LineIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>SupportedContent</returns>
+        public SupportedContent PutConversationsMessagingSupportedcontentDefault (SupportedContentReference body)
+        {
+             ApiResponse<SupportedContent> localVarResponse = PutConversationsMessagingSupportedcontentDefaultWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>ApiResponse of SupportedContent</returns>
+        public ApiResponse< SupportedContent > PutConversationsMessagingSupportedcontentDefaultWithHttpInfo (SupportedContentReference body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingSupportedcontentDefault");
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent/default";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingSupportedcontentDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingSupportedcontentDefault: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SupportedContent>(localVarStatusCode,
+                localVarHeaders,
+                (SupportedContent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SupportedContent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>Task of SupportedContent</returns>
+        public async System.Threading.Tasks.Task<SupportedContent> PutConversationsMessagingSupportedcontentDefaultAsync (SupportedContentReference body)
+        {
+             ApiResponse<SupportedContent> localVarResponse = await PutConversationsMessagingSupportedcontentDefaultAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SupportedContent</param>
+        /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PutConversationsMessagingSupportedcontentDefaultAsyncWithHttpInfo (SupportedContentReference body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingSupportedcontentDefault");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/supportedcontent/default";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingSupportedcontentDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingSupportedcontentDefault: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SupportedContent>(localVarStatusCode,
+                localVarHeaders,
+                (SupportedContent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SupportedContent)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

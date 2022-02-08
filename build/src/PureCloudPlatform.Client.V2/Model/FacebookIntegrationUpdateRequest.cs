@@ -45,16 +45,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="FacebookIntegrationUpdateRequest" /> class.
         /// </summary>
         /// <param name="Name">The name of the Facebook Integration.</param>
+        /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
         /// <param name="PageAccessToken">The long-lived Page Access Token of Facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  Either pageAccessToken or userAccessToken should be provided..</param>
         /// <param name="UserAccessToken">The short-lived User Access Token of the Facebook user logged into the Facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  Either pageAccessToken or userAccessToken should be provided..</param>
-        public FacebookIntegrationUpdateRequest(string Name = null, string PageAccessToken = null, string UserAccessToken = null)
+        public FacebookIntegrationUpdateRequest(string Name = null, SupportedContentReference SupportedContent = null, string PageAccessToken = null, string UserAccessToken = null)
         {
             this.Name = Name;
+            this.SupportedContent = SupportedContent;
             this.PageAccessToken = PageAccessToken;
             this.UserAccessToken = UserAccessToken;
             
@@ -77,6 +84,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the Facebook Integration</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Defines the SupportedContent profile configured for an integration
+        /// </summary>
+        /// <value>Defines the SupportedContent profile configured for an integration</value>
+        [DataMember(Name="supportedContent", EmitDefaultValue=false)]
+        public SupportedContentReference SupportedContent { get; set; }
         
         
         
@@ -117,6 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
             sb.Append("  PageAccessToken: ").Append(PageAccessToken).Append("\n");
             sb.Append("  UserAccessToken: ").Append(UserAccessToken).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -171,6 +188,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.SupportedContent == other.SupportedContent ||
+                    this.SupportedContent != null &&
+                    this.SupportedContent.Equals(other.SupportedContent)
+                ) &&
+                (
                     this.PageAccessToken == other.PageAccessToken ||
                     this.PageAccessToken != null &&
                     this.PageAccessToken.Equals(other.PageAccessToken)
@@ -204,6 +226,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.SupportedContent != null)
+                    hash = hash * 59 + this.SupportedContent.GetHashCode();
                 
                 if (this.PageAccessToken != null)
                     hash = hash * 59 + this.PageAccessToken.GetHashCode();
