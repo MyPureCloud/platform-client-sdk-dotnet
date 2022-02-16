@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsConfig" /> class.
@@ -48,11 +53,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageColumn">The Contact List column specifying the message to send to the contact. (required).</param>
         /// <param name="PhoneColumn">The Contact List column specifying the phone number to send a message to. (required).</param>
         /// <param name="SenderSmsPhoneNumber">A reference to the SMS Phone Number that will be used as the sender of a message. (required).</param>
-        public SmsConfig(string MessageColumn = null, string PhoneColumn = null, SmsPhoneNumberRef SenderSmsPhoneNumber = null)
+        /// <param name="ContentTemplate">The content template used to formulate the message to send to the contact..</param>
+        public SmsConfig(string MessageColumn = null, string PhoneColumn = null, SmsPhoneNumberRef SenderSmsPhoneNumber = null, DomainEntityRef ContentTemplate = null)
         {
             this.MessageColumn = MessageColumn;
             this.PhoneColumn = PhoneColumn;
             this.SenderSmsPhoneNumber = SenderSmsPhoneNumber;
+            this.ContentTemplate = ContentTemplate;
             
         }
         
@@ -84,6 +91,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public SmsPhoneNumberRef SenderSmsPhoneNumber { get; set; }
         
         
+        
+        /// <summary>
+        /// The content template used to formulate the message to send to the contact.
+        /// </summary>
+        /// <value>The content template used to formulate the message to send to the contact.</value>
+        [DataMember(Name="contentTemplate", EmitDefaultValue=false)]
+        public DomainEntityRef ContentTemplate { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessageColumn: ").Append(MessageColumn).Append("\n");
             sb.Append("  PhoneColumn: ").Append(PhoneColumn).Append("\n");
             sb.Append("  SenderSmsPhoneNumber: ").Append(SenderSmsPhoneNumber).Append("\n");
+            sb.Append("  ContentTemplate: ").Append(ContentTemplate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,6 +167,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SenderSmsPhoneNumber == other.SenderSmsPhoneNumber ||
                     this.SenderSmsPhoneNumber != null &&
                     this.SenderSmsPhoneNumber.Equals(other.SenderSmsPhoneNumber)
+                ) &&
+                (
+                    this.ContentTemplate == other.ContentTemplate ||
+                    this.ContentTemplate != null &&
+                    this.ContentTemplate.Equals(other.ContentTemplate)
                 );
         }
 
@@ -173,6 +195,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SenderSmsPhoneNumber != null)
                     hash = hash * 59 + this.SenderSmsPhoneNumber.GetHashCode();
+                
+                if (this.ContentTemplate != null)
+                    hash = hash * 59 + this.ContentTemplate.GetHashCode();
                 
                 return hash;
             }

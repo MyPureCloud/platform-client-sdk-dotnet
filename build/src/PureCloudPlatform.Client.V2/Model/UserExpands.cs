@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserExpands" /> class.
@@ -81,6 +86,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Active presence</value>
         [DataMember(Name="presence", EmitDefaultValue=false)]
         public UserPresence Presence { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Active 3rd party presence
+        /// </summary>
+        /// <value>Active 3rd party presence</value>
+        [DataMember(Name="integrationPresence", EmitDefaultValue=false)]
+        public UserPresence IntegrationPresence { get; private set; }
         
         
         
@@ -139,6 +153,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
             sb.Append("  Presence: ").Append(Presence).Append("\n");
+            sb.Append("  IntegrationPresence: ").Append(IntegrationPresence).Append("\n");
             sb.Append("  ConversationSummary: ").Append(ConversationSummary).Append("\n");
             sb.Append("  OutOfOffice: ").Append(OutOfOffice).Append("\n");
             sb.Append("  Geolocation: ").Append(Geolocation).Append("\n");
@@ -195,6 +210,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Presence.Equals(other.Presence)
                 ) &&
                 (
+                    this.IntegrationPresence == other.IntegrationPresence ||
+                    this.IntegrationPresence != null &&
+                    this.IntegrationPresence.Equals(other.IntegrationPresence)
+                ) &&
+                (
                     this.ConversationSummary == other.ConversationSummary ||
                     this.ConversationSummary != null &&
                     this.ConversationSummary.Equals(other.ConversationSummary)
@@ -238,6 +258,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Presence != null)
                     hash = hash * 59 + this.Presence.GetHashCode();
+                
+                if (this.IntegrationPresence != null)
+                    hash = hash * 59 + this.IntegrationPresence.GetHashCode();
                 
                 if (this.ConversationSummary != null)
                     hash = hash * 59 + this.ConversationSummary.GetHashCode();

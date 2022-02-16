@@ -91,12 +91,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The start day of week for this business unit
         /// </summary>
         /// <value>The start day of week for this business unit</value>
         [DataMember(Name="startDayOfWeek", EmitDefaultValue=false)]
         public StartDayOfWeekEnum? StartDayOfWeek { get; set; }
+        
+        
         
         
         
@@ -116,10 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="UpdateBusinessUnitSettings" /> class.
         /// </summary>
         /// <param name="ShortTermForecasting">Short term forecasting settings.</param>
+        /// <param name="Scheduling">Scheduling settings.</param>
         /// <param name="Metadata">Version metadata for this business unit (required).</param>
-        public UpdateBusinessUnitSettings(BuShortTermForecastingSettings ShortTermForecasting = null, WfmVersionedEntityMetadata Metadata = null)
+        public UpdateBusinessUnitSettings(BuShortTermForecastingSettings ShortTermForecasting = null, BuSchedulingSettings Scheduling = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.ShortTermForecasting = ShortTermForecasting;
+            this.Scheduling = Scheduling;
             this.Metadata = Metadata;
             
         }
@@ -147,6 +154,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Scheduling settings
+        /// </summary>
+        /// <value>Scheduling settings</value>
+        [DataMember(Name="scheduling", EmitDefaultValue=false)]
+        public BuSchedulingSettings Scheduling { get; set; }
+        
+        
+        
+        /// <summary>
         /// Version metadata for this business unit
         /// </summary>
         /// <value>Version metadata for this business unit</value>
@@ -166,6 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartDayOfWeek: ").Append(StartDayOfWeek).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  ShortTermForecasting: ").Append(ShortTermForecasting).Append("\n");
+            sb.Append("  Scheduling: ").Append(Scheduling).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -223,6 +240,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ShortTermForecasting.Equals(other.ShortTermForecasting)
                 ) &&
                 (
+                    this.Scheduling == other.Scheduling ||
+                    this.Scheduling != null &&
+                    this.Scheduling.Equals(other.Scheduling)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -249,6 +271,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ShortTermForecasting != null)
                     hash = hash * 59 + this.ShortTermForecasting.GetHashCode();
+                
+                if (this.Scheduling != null)
+                    hash = hash * 59 + this.Scheduling.GetHashCode();
                 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

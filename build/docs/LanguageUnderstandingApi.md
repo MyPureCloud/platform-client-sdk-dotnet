@@ -1127,7 +1127,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
 | **intentId** | **string**| The ID of the intent to be retrieved. |  |
-| **expand** | **string**| Option to fetch utterances | [optional]  |
+| **expand** | **string**| Option to fetch utterances | [optional] <br />**Values**: phrases, utterances |
 {: class="table table-striped"}
 
 ### Return type
@@ -1194,7 +1194,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
-| **expand** | **string**| Option to fetch utterances. | [optional]  |
+| **expand** | **string**| Option to fetch utterances. | [optional] <br />**Values**: phrases, utterances |
 {: class="table table-striped"}
 
 ### Return type

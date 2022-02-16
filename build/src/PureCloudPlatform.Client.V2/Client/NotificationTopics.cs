@@ -12,6 +12,7 @@ namespace PureCloudPlatform.Client.V2.Client
         {
             Topics = new Dictionary<string, Type>
             { 
+              {"v2.analytics.conversation.{id}.metrics", typeof(ConversationMetricsTopicConversationMetricRecord)},
               {"v2.analytics.conversations.details.jobs.availability", typeof(ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification)},
               {"v2.analytics.flow.{id}.aggregates", typeof(StatEventFlowTopicStatsNotification)},
               {"v2.analytics.flowoutcome.{id}.aggregates", typeof(StatEventFlowOutcomeTopicStatsNotification)},
@@ -81,8 +82,9 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.routing.queues.{id}.conversations.socialexpressions", typeof(QueueConversationSocialExpressionEventTopicConversation)},
               {"v2.routing.queues.{id}.conversations.videos", typeof(QueueConversationVideoEventTopicConversation)},
               {"v2.routing.queues.{id}.users", typeof(QueueUserEventTopicQueueMember)},
-              {"v2.speechandtextanalytics.programs.publishjobs.{id}", typeof(PublishProgramPublishJob)},
-              {"v2.speechandtextanalytics.topics.publishjobs.{id}", typeof(PublishTopicPublishJob)},
+              {"v2.speechandtextanalytics.programs.general.jobs.{id}", typeof(CreateGeneralProgramTopicsDefinitionsJob)},
+              {"v2.speechandtextanalytics.programs.publishjobs.{id}", typeof(PublishProgramTopicsDefinitionsJob)},
+              {"v2.speechandtextanalytics.topics.publishjobs.{id}", typeof(PublishTopicTopicsDefinitionsJob)},
               {"v2.system.no_longer_subscribed.{id}", typeof(SystemMessageSystemMessage)},
               {"v2.system.socket_closing", typeof(SystemMessageSystemMessage)},
               {"v2.system.token_revoked.{id}", typeof(SystemMessageSystemMessage)},

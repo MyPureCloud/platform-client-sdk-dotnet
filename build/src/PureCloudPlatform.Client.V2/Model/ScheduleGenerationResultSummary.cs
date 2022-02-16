@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ScheduleGenerationResultSummary" /> class.
@@ -42,11 +47,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Failed">Whether the schedule generation run failed.</param>
         /// <param name="RunId">The ID of the schedule generation run. Reference this when requesting support.</param>
         /// <param name="MessageCount">The number of schedule generation messages for this schedule generation run.</param>
-        public ScheduleGenerationResultSummary(bool? Failed = null, string RunId = null, int? MessageCount = null)
+        /// <param name="MessageSeverityCounts">The list of schedule generation message counts by severity for this schedule generation run.</param>
+        public ScheduleGenerationResultSummary(bool? Failed = null, string RunId = null, int? MessageCount = null, List<SchedulerMessageSeverityCount> MessageSeverityCounts = null)
         {
             this.Failed = Failed;
             this.RunId = RunId;
             this.MessageCount = MessageCount;
+            this.MessageSeverityCounts = MessageSeverityCounts;
             
         }
         
@@ -78,6 +85,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? MessageCount { get; set; }
         
         
+        
+        /// <summary>
+        /// The list of schedule generation message counts by severity for this schedule generation run
+        /// </summary>
+        /// <value>The list of schedule generation message counts by severity for this schedule generation run</value>
+        [DataMember(Name="messageSeverityCounts", EmitDefaultValue=false)]
+        public List<SchedulerMessageSeverityCount> MessageSeverityCounts { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Failed: ").Append(Failed).Append("\n");
             sb.Append("  RunId: ").Append(RunId).Append("\n");
             sb.Append("  MessageCount: ").Append(MessageCount).Append("\n");
+            sb.Append("  MessageSeverityCounts: ").Append(MessageSeverityCounts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -144,6 +161,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessageCount == other.MessageCount ||
                     this.MessageCount != null &&
                     this.MessageCount.Equals(other.MessageCount)
+                ) &&
+                (
+                    this.MessageSeverityCounts == other.MessageSeverityCounts ||
+                    this.MessageSeverityCounts != null &&
+                    this.MessageSeverityCounts.SequenceEqual(other.MessageSeverityCounts)
                 );
         }
 
@@ -167,6 +189,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MessageCount != null)
                     hash = hash * 59 + this.MessageCount.GetHashCode();
+                
+                if (this.MessageSeverityCounts != null)
+                    hash = hash * 59 + this.MessageSeverityCounts.GetHashCode();
                 
                 return hash;
             }

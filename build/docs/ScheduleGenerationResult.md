@@ -11,6 +11,7 @@ title: ScheduleGenerationResult
 | **RunId** | **string** | The ID of the schedule generation run. Reference this when requesting support | [optional] |
 | **MessageCount** | **int?** | The number of schedule generation messages for this schedule generation run | [optional] |
 | **Messages** | [**List&lt;ScheduleGenerationMessage&gt;**](ScheduleGenerationMessage.html) | User facing messages related to the schedule generation run | [optional] |
+| **MessageSeverities** | [**List&lt;SchedulerMessageTypeSeverity&gt;**](SchedulerMessageTypeSeverity.html) | The list of messages by severity in this schedule generation run | [optional] |
 {: class="table table-striped"}
 
 

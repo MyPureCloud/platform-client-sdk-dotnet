@@ -130,12 +130,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The state of the generation run
         /// </summary>
         /// <value>The state of the generation run</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -181,9 +186,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SchedulingCanceledBy">The user who canceled the scheduling run, if applicable.</param>
         /// <param name="SchedulingCompletedTime">When the scheduling run was completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="MessageCount">The number of schedule generation messages for this schedule generation run.</param>
+        /// <param name="MessageSeverityCounts">The list of schedule generation message counts by severity for this schedule generation run.</param>
         /// <param name="ReschedulingOptions">Rescheduling options for this run.  Null unless intradayRescheduling is true.</param>
         /// <param name="ReschedulingResultExpiration">When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public BuScheduleRun(string SchedulerRunId = null, bool? IntradayRescheduling = null, StateEnum? State = null, int? WeekCount = null, double? PercentComplete = null, String TargetWeek = null, BuScheduleReference Schedule = null, string ScheduleDescription = null, DateTime? SchedulingStartTime = null, UserReference SchedulingStartedBy = null, UserReference SchedulingCanceledBy = null, DateTime? SchedulingCompletedTime = null, int? MessageCount = null, ReschedulingOptionsRunResponse ReschedulingOptions = null, DateTime? ReschedulingResultExpiration = null)
+        public BuScheduleRun(string SchedulerRunId = null, bool? IntradayRescheduling = null, StateEnum? State = null, int? WeekCount = null, double? PercentComplete = null, String TargetWeek = null, BuScheduleReference Schedule = null, string ScheduleDescription = null, DateTime? SchedulingStartTime = null, UserReference SchedulingStartedBy = null, UserReference SchedulingCanceledBy = null, DateTime? SchedulingCompletedTime = null, int? MessageCount = null, List<SchedulerMessageSeverityCount> MessageSeverityCounts = null, ReschedulingOptionsRunResponse ReschedulingOptions = null, DateTime? ReschedulingResultExpiration = null)
         {
             this.SchedulerRunId = SchedulerRunId;
             this.IntradayRescheduling = IntradayRescheduling;
@@ -198,6 +204,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SchedulingCanceledBy = SchedulingCanceledBy;
             this.SchedulingCompletedTime = SchedulingCompletedTime;
             this.MessageCount = MessageCount;
+            this.MessageSeverityCounts = MessageSeverityCounts;
             this.ReschedulingOptions = ReschedulingOptions;
             this.ReschedulingResultExpiration = ReschedulingResultExpiration;
             
@@ -325,6 +332,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The list of schedule generation message counts by severity for this schedule generation run
+        /// </summary>
+        /// <value>The list of schedule generation message counts by severity for this schedule generation run</value>
+        [DataMember(Name="messageSeverityCounts", EmitDefaultValue=false)]
+        public List<SchedulerMessageSeverityCount> MessageSeverityCounts { get; set; }
+        
+        
+        
+        /// <summary>
         /// Rescheduling options for this run.  Null unless intradayRescheduling is true
         /// </summary>
         /// <value>Rescheduling options for this run.  Null unless intradayRescheduling is true</value>
@@ -373,6 +389,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SchedulingCanceledBy: ").Append(SchedulingCanceledBy).Append("\n");
             sb.Append("  SchedulingCompletedTime: ").Append(SchedulingCompletedTime).Append("\n");
             sb.Append("  MessageCount: ").Append(MessageCount).Append("\n");
+            sb.Append("  MessageSeverityCounts: ").Append(MessageSeverityCounts).Append("\n");
             sb.Append("  ReschedulingOptions: ").Append(ReschedulingOptions).Append("\n");
             sb.Append("  ReschedulingResultExpiration: ").Append(ReschedulingResultExpiration).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -487,6 +504,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessageCount.Equals(other.MessageCount)
                 ) &&
                 (
+                    this.MessageSeverityCounts == other.MessageSeverityCounts ||
+                    this.MessageSeverityCounts != null &&
+                    this.MessageSeverityCounts.SequenceEqual(other.MessageSeverityCounts)
+                ) &&
+                (
                     this.ReschedulingOptions == other.ReschedulingOptions ||
                     this.ReschedulingOptions != null &&
                     this.ReschedulingOptions.Equals(other.ReschedulingOptions)
@@ -556,6 +578,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MessageCount != null)
                     hash = hash * 59 + this.MessageCount.GetHashCode();
+                
+                if (this.MessageSeverityCounts != null)
+                    hash = hash * 59 + this.MessageSeverityCounts.GetHashCode();
                 
                 if (this.ReschedulingOptions != null)
                     hash = hash * 59 + this.ReschedulingOptions.GetHashCode();

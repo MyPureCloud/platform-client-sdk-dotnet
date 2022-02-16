@@ -21,6 +21,7 @@ title: BuScheduleRun
 | **SchedulingCanceledBy** | [**UserReference**](UserReference.html) | The user who canceled the scheduling run, if applicable | [optional] |
 | **SchedulingCompletedTime** | **DateTime?** | When the scheduling run was completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **MessageCount** | **int?** | The number of schedule generation messages for this schedule generation run | [optional] |
+| **MessageSeverityCounts** | [**List&lt;SchedulerMessageSeverityCount&gt;**](SchedulerMessageSeverityCount.html) | The list of schedule generation message counts by severity for this schedule generation run | [optional] |
 | **ReschedulingOptions** | [**ReschedulingOptionsRunResponse**](ReschedulingOptionsRunResponse.html) | Rescheduling options for this run.  Null unless intradayRescheduling is true | [optional] |
 | **ReschedulingResultExpiration** | **DateTime?** | When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

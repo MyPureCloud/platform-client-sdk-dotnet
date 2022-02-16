@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="BuGenerateScheduleRequest" /> class.
@@ -46,13 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BuGenerateScheduleRequest" /> class.
         /// </summary>
         /// <param name="Description">The description for the schedule (required).</param>
-        /// <param name="ShortTermForecast">The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule&#39;s start week + week count (required).</param>
+        /// <param name="ShortTermForecast">The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule&#39;s start week + week count.</param>
         /// <param name="WeekCount">The number of weeks in the schedule. One extra day is added at the end (required).</param>
-        public BuGenerateScheduleRequest(string Description = null, BuShortTermForecastReference ShortTermForecast = null, int? WeekCount = null)
+        /// <param name="Options">Additional scheduling options.</param>
+        public BuGenerateScheduleRequest(string Description = null, BuShortTermForecastReference ShortTermForecast = null, int? WeekCount = null, SchedulingOptionsRequest Options = null)
         {
             this.Description = Description;
             this.ShortTermForecast = ShortTermForecast;
             this.WeekCount = WeekCount;
+            this.Options = Options;
             
         }
         
@@ -84,6 +91,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? WeekCount { get; set; }
         
         
+        
+        /// <summary>
+        /// Additional scheduling options
+        /// </summary>
+        /// <value>Additional scheduling options</value>
+        [DataMember(Name="options", EmitDefaultValue=false)]
+        public SchedulingOptionsRequest Options { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  ShortTermForecast: ").Append(ShortTermForecast).Append("\n");
             sb.Append("  WeekCount: ").Append(WeekCount).Append("\n");
+            sb.Append("  Options: ").Append(Options).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,6 +167,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WeekCount == other.WeekCount ||
                     this.WeekCount != null &&
                     this.WeekCount.Equals(other.WeekCount)
+                ) &&
+                (
+                    this.Options == other.Options ||
+                    this.Options != null &&
+                    this.Options.Equals(other.Options)
                 );
         }
 
@@ -173,6 +195,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WeekCount != null)
                     hash = hash * 59 + this.WeekCount.GetHashCode();
+                
+                if (this.Options != null)
+                    hash = hash * 59 + this.Options.GetHashCode();
                 
                 return hash;
             }

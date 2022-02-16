@@ -1439,7 +1439,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Harddelete for "HardDelete"
             /// </summary>
             [EnumMember(Value = "HardDelete")]
-            Harddelete
+            Harddelete,
+            
+            /// <summary>
+            /// Enum Reset for "Reset"
+            /// </summary>
+            [EnumMember(Value = "Reset")]
+            Reset
         }
         
         

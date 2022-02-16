@@ -609,6 +609,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EvaluationFormEntityListing> GetQualityFormsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
         
         /// <summary>
+        /// Retrieve a list of the latest published evaluation form versions by context ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
+        /// <returns>List&lt;EvaluationForm&gt;</returns>
+        List<EvaluationForm> GetQualityFormsEvaluationsBulkContexts (List<string> contextId);
+
+        /// <summary>
+        /// Retrieve a list of the latest published evaluation form versions by context ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
+        /// <returns>ApiResponse of List&lt;EvaluationForm&gt;</returns>
+        ApiResponse<List<EvaluationForm>> GetQualityFormsEvaluationsBulkContextsWithHttpInfo (List<string> contextId);
+        
+        /// <summary>
         /// Get a survey form
         /// </summary>
         /// <remarks>
@@ -1071,6 +1093,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of QualityAuditQueryExecutionStatusResponse</returns>
         ApiResponse<QualityAuditQueryExecutionStatusResponse> PostQualityConversationsAuditsQueryWithHttpInfo (QMAuditQueryRequest body);
+        
+        /// <summary>
+        /// Query for evaluation aggregates for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>EvaluationAggregateQueryResponse</returns>
+        EvaluationAggregateQueryResponse PostQualityEvaluationsAggregatesQueryMe (EvaluationAggregationQueryMe body);
+
+        /// <summary>
+        /// Query for evaluation aggregates for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of EvaluationAggregateQueryResponse</returns>
+        ApiResponse<EvaluationAggregateQueryResponse> PostQualityEvaluationsAggregatesQueryMeWithHttpInfo (EvaluationAggregationQueryMe body);
         
         /// <summary>
         /// Score evaluation
@@ -1993,6 +2037,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
         
         /// <summary>
+        /// Retrieve a list of the latest published evaluation form versions by context ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
+        /// <returns>Task of List&lt;EvaluationForm&gt;</returns>
+        System.Threading.Tasks.Task<List<EvaluationForm>> GetQualityFormsEvaluationsBulkContextsAsync (List<string> contextId);
+
+        /// <summary>
+        /// Retrieve a list of the latest published evaluation form versions by context ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
+        /// <returns>Task of ApiResponse (List&lt;EvaluationForm&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<EvaluationForm>>> GetQualityFormsEvaluationsBulkContextsAsyncWithHttpInfo (List<string> contextId);
+        
+        /// <summary>
         /// Get a survey form
         /// </summary>
         /// <remarks>
@@ -2455,6 +2521,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (QualityAuditQueryExecutionStatusResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<QualityAuditQueryExecutionStatusResponse>> PostQualityConversationsAuditsQueryAsyncWithHttpInfo (QMAuditQueryRequest body);
+        
+        /// <summary>
+        /// Query for evaluation aggregates for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of EvaluationAggregateQueryResponse</returns>
+        System.Threading.Tasks.Task<EvaluationAggregateQueryResponse> PostQualityEvaluationsAggregatesQueryMeAsync (EvaluationAggregationQueryMe body);
+
+        /// <summary>
+        /// Query for evaluation aggregates for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (EvaluationAggregateQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EvaluationAggregateQueryResponse>> PostQualityEvaluationsAggregatesQueryMeAsyncWithHttpInfo (EvaluationAggregationQueryMe body);
         
         /// <summary>
         /// Score evaluation
@@ -7169,6 +7257,199 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Retrieve a list of the latest published evaluation form versions by context ids 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
+        /// <returns>List&lt;EvaluationForm&gt;</returns>
+        public List<EvaluationForm> GetQualityFormsEvaluationsBulkContexts (List<string> contextId)
+        {
+             ApiResponse<List<EvaluationForm>> localVarResponse = GetQualityFormsEvaluationsBulkContextsWithHttpInfo(contextId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a list of the latest published evaluation form versions by context ids 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
+        /// <returns>ApiResponse of List&lt;EvaluationForm&gt;</returns>
+        public ApiResponse< List<EvaluationForm> > GetQualityFormsEvaluationsBulkContextsWithHttpInfo (List<string> contextId)
+        { 
+            // verify the required parameter 'contextId' is set
+            if (contextId == null)
+                throw new ApiException(400, "Missing required parameter 'contextId' when calling QualityApi->GetQualityFormsEvaluationsBulkContexts");
+
+            var localVarPath = "/api/v2/quality/forms/evaluations/bulk/contexts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (contextId != null) contextId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("contextId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluationsBulkContexts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluationsBulkContexts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<EvaluationForm>>(localVarStatusCode,
+                localVarHeaders,
+                (List<EvaluationForm>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<EvaluationForm>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve a list of the latest published evaluation form versions by context ids 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
+        /// <returns>Task of List&lt;EvaluationForm&gt;</returns>
+        public async System.Threading.Tasks.Task<List<EvaluationForm>> GetQualityFormsEvaluationsBulkContextsAsync (List<string> contextId)
+        {
+             ApiResponse<List<EvaluationForm>> localVarResponse = await GetQualityFormsEvaluationsBulkContextsAsyncWithHttpInfo(contextId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a list of the latest published evaluation form versions by context ids 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
+        /// <returns>Task of ApiResponse (List&lt;EvaluationForm&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<EvaluationForm>>> GetQualityFormsEvaluationsBulkContextsAsyncWithHttpInfo (List<string> contextId)
+        { 
+            // verify the required parameter 'contextId' is set
+            if (contextId == null)
+                throw new ApiException(400, "Missing required parameter 'contextId' when calling QualityApi->GetQualityFormsEvaluationsBulkContexts");
+            
+
+            var localVarPath = "/api/v2/quality/forms/evaluations/bulk/contexts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (contextId != null) contextId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("contextId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluationsBulkContexts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluationsBulkContexts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<EvaluationForm>>(localVarStatusCode,
+                localVarHeaders,
+                (List<EvaluationForm>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<EvaluationForm>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get a survey form 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10989,6 +11270,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<QualityAuditQueryExecutionStatusResponse>(localVarStatusCode,
                 localVarHeaders,
                 (QualityAuditQueryExecutionStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualityAuditQueryExecutionStatusResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Query for evaluation aggregates for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>EvaluationAggregateQueryResponse</returns>
+        public EvaluationAggregateQueryResponse PostQualityEvaluationsAggregatesQueryMe (EvaluationAggregationQueryMe body)
+        {
+             ApiResponse<EvaluationAggregateQueryResponse> localVarResponse = PostQualityEvaluationsAggregatesQueryMeWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for evaluation aggregates for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of EvaluationAggregateQueryResponse</returns>
+        public ApiResponse< EvaluationAggregateQueryResponse > PostQualityEvaluationsAggregatesQueryMeWithHttpInfo (EvaluationAggregationQueryMe body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityEvaluationsAggregatesQueryMe");
+
+            var localVarPath = "/api/v2/quality/evaluations/aggregates/query/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityEvaluationsAggregatesQueryMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityEvaluationsAggregatesQueryMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationAggregateQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EvaluationAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationAggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Query for evaluation aggregates for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of EvaluationAggregateQueryResponse</returns>
+        public async System.Threading.Tasks.Task<EvaluationAggregateQueryResponse> PostQualityEvaluationsAggregatesQueryMeAsync (EvaluationAggregationQueryMe body)
+        {
+             ApiResponse<EvaluationAggregateQueryResponse> localVarResponse = await PostQualityEvaluationsAggregatesQueryMeAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for evaluation aggregates for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (EvaluationAggregateQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationAggregateQueryResponse>> PostQualityEvaluationsAggregatesQueryMeAsyncWithHttpInfo (EvaluationAggregationQueryMe body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityEvaluationsAggregatesQueryMe");
+            
+
+            var localVarPath = "/api/v2/quality/evaluations/aggregates/query/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityEvaluationsAggregatesQueryMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityEvaluationsAggregatesQueryMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationAggregateQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EvaluationAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

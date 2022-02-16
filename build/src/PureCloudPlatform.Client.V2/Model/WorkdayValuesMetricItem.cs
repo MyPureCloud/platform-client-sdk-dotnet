@@ -26,6 +26,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The unit type of the metric value
         /// </summary>
@@ -95,6 +98,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The unit type of the metric value
         /// </summary>
@@ -120,6 +125,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gamification metric for the average and the trend
         /// </summary>
         /// <value>Gamification metric for the average and the trend</value>
+        [DataMember(Name="metric", EmitDefaultValue=false)]
+        public AddressableEntityRef Metric { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Gamification metric definition for the average and the trend
+        /// </summary>
+        /// <value>Gamification metric definition for the average and the trend</value>
         [DataMember(Name="metricDefinition", EmitDefaultValue=false)]
         public DomainEntityRef MetricDefinition { get; private set; }
         
@@ -153,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class WorkdayValuesMetricItem {\n");
             
+            sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  MetricDefinition: ").Append(MetricDefinition).Append("\n");
             sb.Append("  Average: ").Append(Average).Append("\n");
             sb.Append("  UnitType: ").Append(UnitType).Append("\n");
@@ -198,6 +213,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Metric == other.Metric ||
+                    this.Metric != null &&
+                    this.Metric.Equals(other.Metric)
+                ) &&
+                (
                     this.MetricDefinition == other.MetricDefinition ||
                     this.MetricDefinition != null &&
                     this.MetricDefinition.Equals(other.MetricDefinition)
@@ -230,6 +250,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Metric != null)
+                    hash = hash * 59 + this.Metric.GetHashCode();
                 
                 if (this.MetricDefinition != null)
                     hash = hash * 59 + this.MetricDefinition.GetHashCode();

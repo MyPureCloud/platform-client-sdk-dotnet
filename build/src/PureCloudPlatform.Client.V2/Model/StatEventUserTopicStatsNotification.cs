@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Group">Group.</param>
         /// <param name="Data">Data.</param>
-        public StatEventUserTopicStatsNotification(Dictionary<string, string> Group = null, List<StatEventUserTopicDatum> Data = null)
+        public StatEventUserTopicStatsNotification(Dictionary<string, string> Group = null, List<StatEventUserTopicIntervalMetrics> Data = null)
         {
             this.Group = Group;
             this.Data = Data;
@@ -57,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public List<StatEventUserTopicDatum> Data { get; set; }
+        public List<StatEventUserTopicIntervalMetrics> Data { get; set; }
         
         
         /// <summary>

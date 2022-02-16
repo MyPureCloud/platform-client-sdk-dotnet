@@ -26,8 +26,48 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The auto start type for the messenger conversation
+        /// </summary>
+        /// <value>The auto start type for the messenger conversation</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AutoStartTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Standard for "Standard"
+            /// </summary>
+            [EnumMember(Value = "Standard")]
+            Standard,
+            
+            /// <summary>
+            /// Enum Automatic for "Automatic"
+            /// </summary>
+            [EnumMember(Value = "Automatic")]
+            Automatic
+        }
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The auto start type for the messenger conversation
+        /// </summary>
+        /// <value>The auto start type for the messenger conversation</value>
+        [DataMember(Name="autoStartType", EmitDefaultValue=false)]
+        public AutoStartTypeEnum? AutoStartType { get; set; }
         
         
     
@@ -36,10 +76,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ShowAgentTypingIndicator">The toggle to enable or disable typing indicator for messenger.</param>
         /// <param name="ShowUserTypingIndicator">The toggle to enable or disable typing indicator for messenger.</param>
-        public ConversationAppSettings(bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null)
+        /// <param name="AutoStartType">The auto start type for the messenger conversation.</param>
+        public ConversationAppSettings(bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null, AutoStartTypeEnum? AutoStartType = null)
         {
             this.ShowAgentTypingIndicator = ShowAgentTypingIndicator;
             this.ShowUserTypingIndicator = ShowUserTypingIndicator;
+            this.AutoStartType = AutoStartType;
             
         }
         
@@ -62,6 +104,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? ShowUserTypingIndicator { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -73,6 +117,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  ShowAgentTypingIndicator: ").Append(ShowAgentTypingIndicator).Append("\n");
             sb.Append("  ShowUserTypingIndicator: ").Append(ShowUserTypingIndicator).Append("\n");
+            sb.Append("  AutoStartType: ").Append(AutoStartType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -122,6 +167,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ShowUserTypingIndicator == other.ShowUserTypingIndicator ||
                     this.ShowUserTypingIndicator != null &&
                     this.ShowUserTypingIndicator.Equals(other.ShowUserTypingIndicator)
+                ) &&
+                (
+                    this.AutoStartType == other.AutoStartType ||
+                    this.AutoStartType != null &&
+                    this.AutoStartType.Equals(other.AutoStartType)
                 );
         }
 
@@ -142,6 +192,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ShowUserTypingIndicator != null)
                     hash = hash * 59 + this.ShowUserTypingIndicator.GetHashCode();
+                
+                if (this.AutoStartType != null)
+                    hash = hash * 59 + this.AutoStartType.GetHashCode();
                 
                 return hash;
             }

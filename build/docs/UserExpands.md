@@ -9,6 +9,7 @@ title: UserExpands
 |------------ | ------------- | ------------- | -------------|
 | **RoutingStatus** | [**RoutingStatus**](RoutingStatus.html) | ACD routing status | [optional] |
 | **Presence** | [**UserPresence**](UserPresence.html) | Active presence | [optional] |
+| **IntegrationPresence** | [**UserPresence**](UserPresence.html) | Active 3rd party presence | [optional] |
 | **ConversationSummary** | [**UserConversationSummary**](UserConversationSummary.html) | Summary of conversion statistics for conversation types. | [optional] |
 | **OutOfOffice** | [**OutOfOffice**](OutOfOffice.html) | Determine if out of office is enabled | [optional] |
 | **Geolocation** | [**Geolocation**](Geolocation.html) | Current geolocation position | [optional] |

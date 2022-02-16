@@ -8,7 +8,8 @@ title: ConversationChannel
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | The type or category of this channel. | [optional] |
-| **Platform** | **string** | The platform used to deliver media for the conversation for a given channel (e.g. Twitter, Messenger, PureCloud Edge). | [optional] |
+| **MessageType** | **string** | Message type for messaging conversations. | [optional] |
+| **Platform** | **string** | The source provider for the conversation (e.g. Edge, PureCloud Messaging, PureCloud Email). | [optional] |
 {: class="table table-striped"}
 
 

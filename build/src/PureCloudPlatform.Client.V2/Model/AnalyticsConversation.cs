@@ -171,6 +171,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The original direction of the conversation
         /// </summary>
@@ -243,6 +246,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The original direction of the conversation
         /// </summary>
@@ -269,6 +274,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationId">Unique identifier for the conversation.</param>
         /// <param name="ConversationInitiator">Indicates the participant purpose of the participant initiating a message conversation.</param>
         /// <param name="ConversationStart">The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="CustomerParticipation">Indicates a messaging conversation in which the customer participated by sending at least one message.</param>
         /// <param name="DivisionIds">Identifier(s) of division(s) associated with a conversation.</param>
         /// <param name="ExternalTag">External tag for the conversation.</param>
         /// <param name="KnowledgeBaseIds">The unique identifier(s) of the knowledge base(s) used.</param>
@@ -280,12 +286,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Surveys">Surveys associated with this conversation.</param>
         /// <param name="Resolutions">Resolutions associated with this conversation.</param>
         /// <param name="Participants">Participants in the conversation.</param>
-        public AnalyticsConversation(DateTime? ConversationEnd = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, DateTime? ConversationStart = null, List<string> DivisionIds = null, string ExternalTag = null, List<string> KnowledgeBaseIds = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, bool? SelfServed = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<AnalyticsParticipant> Participants = null)
+        public AnalyticsConversation(DateTime? ConversationEnd = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, DateTime? ConversationStart = null, bool? CustomerParticipation = null, List<string> DivisionIds = null, string ExternalTag = null, List<string> KnowledgeBaseIds = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, bool? SelfServed = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<AnalyticsParticipant> Participants = null)
         {
             this.ConversationEnd = ConversationEnd;
             this.ConversationId = ConversationId;
             this.ConversationInitiator = ConversationInitiator;
             this.ConversationStart = ConversationStart;
+            this.CustomerParticipation = CustomerParticipation;
             this.DivisionIds = DivisionIds;
             this.ExternalTag = ExternalTag;
             this.KnowledgeBaseIds = KnowledgeBaseIds;
@@ -328,6 +335,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="conversationStart", EmitDefaultValue=false)]
         public DateTime? ConversationStart { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates a messaging conversation in which the customer participated by sending at least one message
+        /// </summary>
+        /// <value>Indicates a messaging conversation in which the customer participated by sending at least one message</value>
+        [DataMember(Name="customerParticipation", EmitDefaultValue=false)]
+        public bool? CustomerParticipation { get; set; }
         
         
         
@@ -435,6 +451,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  ConversationInitiator: ").Append(ConversationInitiator).Append("\n");
             sb.Append("  ConversationStart: ").Append(ConversationStart).Append("\n");
+            sb.Append("  CustomerParticipation: ").Append(CustomerParticipation).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("  KnowledgeBaseIds: ").Append(KnowledgeBaseIds).Append("\n");
@@ -505,6 +522,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationStart == other.ConversationStart ||
                     this.ConversationStart != null &&
                     this.ConversationStart.Equals(other.ConversationStart)
+                ) &&
+                (
+                    this.CustomerParticipation == other.CustomerParticipation ||
+                    this.CustomerParticipation != null &&
+                    this.CustomerParticipation.Equals(other.CustomerParticipation)
                 ) &&
                 (
                     this.DivisionIds == other.DivisionIds ||
@@ -586,6 +608,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ConversationStart != null)
                     hash = hash * 59 + this.ConversationStart.GetHashCode();
+                
+                if (this.CustomerParticipation != null)
+                    hash = hash * 59 + this.CustomerParticipation.GetHashCode();
                 
                 if (this.DivisionIds != null)
                     hash = hash * 59 + this.DivisionIds.GetHashCode();

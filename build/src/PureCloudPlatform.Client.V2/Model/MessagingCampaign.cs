@@ -127,12 +127,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current status of the messaging campaign. A messaging campaign may be turned 'on' or 'off'.
         /// </summary>
         /// <value>The current status of the messaging campaign. A messaging campaign may be turned 'on' or 'off'.</value>
         [DataMember(Name="campaignStatus", EmitDefaultValue=false)]
         public CampaignStatusEnum? CampaignStatus { get; set; }
+        
+        
         
         
         
@@ -173,9 +178,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AlwaysRunning">Whether this messaging campaign is always running.</param>
         /// <param name="ContactSorts">The order in which to sort contacts for dialing, based on up to four columns..</param>
         /// <param name="MessagesPerMinute">How many messages this messaging campaign will send per minute. (required).</param>
+        /// <param name="ContactListFilters">The contact list filter to check before sending a message for this messaging campaign..</param>
         /// <param name="Errors">A list of current error conditions associated with this messaging campaign..</param>
         /// <param name="SmsConfig">Configuration for this messaging campaign to send SMS messages..</param>
-        public MessagingCampaign(string Name = null, int? Version = null, DomainEntityRef Division = null, CampaignStatusEnum? CampaignStatus = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef ContactList = null, List<DomainEntityRef> DncLists = null, bool? AlwaysRunning = null, List<ContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<RestErrorDetail> Errors = null, SmsConfig SmsConfig = null)
+        public MessagingCampaign(string Name = null, int? Version = null, DomainEntityRef Division = null, CampaignStatusEnum? CampaignStatus = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef ContactList = null, List<DomainEntityRef> DncLists = null, bool? AlwaysRunning = null, List<ContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<DomainEntityRef> ContactListFilters = null, List<RestErrorDetail> Errors = null, SmsConfig SmsConfig = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -187,6 +193,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AlwaysRunning = AlwaysRunning;
             this.ContactSorts = ContactSorts;
             this.MessagesPerMinute = MessagesPerMinute;
+            this.ContactListFilters = ContactListFilters;
             this.Errors = Errors;
             this.SmsConfig = SmsConfig;
             
@@ -304,6 +311,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The contact list filter to check before sending a message for this messaging campaign.
+        /// </summary>
+        /// <value>The contact list filter to check before sending a message for this messaging campaign.</value>
+        [DataMember(Name="contactListFilters", EmitDefaultValue=false)]
+        public List<DomainEntityRef> ContactListFilters { get; set; }
+        
+        
+        
+        /// <summary>
         /// A list of current error conditions associated with this messaging campaign.
         /// </summary>
         /// <value>A list of current error conditions associated with this messaging campaign.</value>
@@ -351,6 +367,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AlwaysRunning: ").Append(AlwaysRunning).Append("\n");
             sb.Append("  ContactSorts: ").Append(ContactSorts).Append("\n");
             sb.Append("  MessagesPerMinute: ").Append(MessagesPerMinute).Append("\n");
+            sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
             sb.Append("  SmsConfig: ").Append(SmsConfig).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -460,6 +477,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessagesPerMinute.Equals(other.MessagesPerMinute)
                 ) &&
                 (
+                    this.ContactListFilters == other.ContactListFilters ||
+                    this.ContactListFilters != null &&
+                    this.ContactListFilters.SequenceEqual(other.ContactListFilters)
+                ) &&
+                (
                     this.Errors == other.Errors ||
                     this.Errors != null &&
                     this.Errors.SequenceEqual(other.Errors)
@@ -526,6 +548,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MessagesPerMinute != null)
                     hash = hash * 59 + this.MessagesPerMinute.GetHashCode();
+                
+                if (this.ContactListFilters != null)
+                    hash = hash * 59 + this.ContactListFilters.GetHashCode();
                 
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();

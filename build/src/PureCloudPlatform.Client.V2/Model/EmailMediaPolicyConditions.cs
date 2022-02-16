@@ -38,6 +38,32 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets CustomerParticipation
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CustomerParticipationEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Yes for "YES"
+            /// </summary>
+            [EnumMember(Value = "YES")]
+            Yes,
+            
+            /// <summary>
+            /// Enum No for "NO"
+            /// </summary>
+            [EnumMember(Value = "NO")]
+            No
+        }
         
         
         
@@ -48,6 +74,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets CustomerParticipation
+        /// </summary>
+        [DataMember(Name="customerParticipation", EmitDefaultValue=false)]
+        public CustomerParticipationEnum? CustomerParticipation { get; set; }
         
         
     
@@ -60,7 +98,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapupCodes">WrapupCodes.</param>
         /// <param name="Languages">Languages.</param>
         /// <param name="TimeAllowed">TimeAllowed.</param>
-        public EmailMediaPolicyConditions(List<User> ForUsers = null, List<string> DateRanges = null, List<Queue> ForQueues = null, List<WrapupCode> WrapupCodes = null, List<Language> Languages = null, TimeAllowed TimeAllowed = null)
+        /// <param name="CustomerParticipation">CustomerParticipation.</param>
+        public EmailMediaPolicyConditions(List<User> ForUsers = null, List<string> DateRanges = null, List<Queue> ForQueues = null, List<WrapupCode> WrapupCodes = null, List<Language> Languages = null, TimeAllowed TimeAllowed = null, CustomerParticipationEnum? CustomerParticipation = null)
         {
             this.ForUsers = ForUsers;
             this.DateRanges = DateRanges;
@@ -68,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WrapupCodes = WrapupCodes;
             this.Languages = Languages;
             this.TimeAllowed = TimeAllowed;
+            this.CustomerParticipation = CustomerParticipation;
             
         }
         
@@ -120,6 +160,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public TimeAllowed TimeAllowed { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -135,6 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WrapupCodes: ").Append(WrapupCodes).Append("\n");
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  TimeAllowed: ").Append(TimeAllowed).Append("\n");
+            sb.Append("  CustomerParticipation: ").Append(CustomerParticipation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -204,6 +247,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeAllowed == other.TimeAllowed ||
                     this.TimeAllowed != null &&
                     this.TimeAllowed.Equals(other.TimeAllowed)
+                ) &&
+                (
+                    this.CustomerParticipation == other.CustomerParticipation ||
+                    this.CustomerParticipation != null &&
+                    this.CustomerParticipation.Equals(other.CustomerParticipation)
                 );
         }
 
@@ -236,6 +284,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TimeAllowed != null)
                     hash = hash * 59 + this.TimeAllowed.GetHashCode();
+                
+                if (this.CustomerParticipation != null)
+                    hash = hash * 59 + this.CustomerParticipation.GetHashCode();
                 
                 return hash;
             }

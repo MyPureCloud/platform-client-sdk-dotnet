@@ -8,7 +8,7 @@ title: StatEventFlowTopicStatsNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Group** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-| **Data** | [**List&lt;StatEventFlowTopicDatum&gt;**](StatEventFlowTopicDatum.html) |  | [optional] |
+| **Data** | [**List&lt;StatEventFlowTopicIntervalMetrics&gt;**](StatEventFlowTopicIntervalMetrics.html) |  | [optional] |
 {: class="table table-striped"}
 
 

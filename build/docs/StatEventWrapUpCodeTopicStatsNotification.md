@@ -8,7 +8,7 @@ title: StatEventWrapUpCodeTopicStatsNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Group** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-| **Data** | [**List&lt;StatEventWrapUpCodeTopicDatum&gt;**](StatEventWrapUpCodeTopicDatum.html) |  | [optional] |
+| **Data** | [**List&lt;StatEventWrapUpCodeTopicIntervalMetrics&gt;**](StatEventWrapUpCodeTopicIntervalMetrics.html) |  | [optional] |
 {: class="table table-striped"}
 
 

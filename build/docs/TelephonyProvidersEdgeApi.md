@@ -3564,7 +3564,7 @@ namespace Example
             var apiInstance = new TelephonyProvidersEdgeApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to startNumber)
+            var sortBy = sortBy_example;  // string | Sort by (optional) 
             var number = number_example;  // string | Number (optional) 
 
             try
@@ -3589,7 +3589,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to startNumber] |
+| **sortBy** | **string**| Sort by | [optional]  |
 | **number** | **string**| Number | [optional]  |
 {: class="table table-striped"}
 

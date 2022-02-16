@@ -85,10 +85,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversationid,
             
             /// <summary>
+            /// Enum Conversationinitiator for "conversationInitiator"
+            /// </summary>
+            [EnumMember(Value = "conversationInitiator")]
+            Conversationinitiator,
+            
+            /// <summary>
             /// Enum Conversationstart for "conversationStart"
             /// </summary>
             [EnumMember(Value = "conversationStart")]
             Conversationstart,
+            
+            /// <summary>
+            /// Enum Customerparticipation for "customerParticipation"
+            /// </summary>
+            [EnumMember(Value = "customerParticipation")]
+            Customerparticipation,
             
             /// <summary>
             /// Enum Divisionid for "divisionId"

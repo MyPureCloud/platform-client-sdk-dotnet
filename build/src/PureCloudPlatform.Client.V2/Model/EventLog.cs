@@ -167,7 +167,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Schedule for "SCHEDULE"
             /// </summary>
             [EnumMember(Value = "SCHEDULE")]
-            Schedule
+            Schedule,
+            
+            /// <summary>
+            /// Enum MessagingCampaignSchedule for "MESSAGING_CAMPAIGN_SCHEDULE"
+            /// </summary>
+            [EnumMember(Value = "MESSAGING_CAMPAIGN_SCHEDULE")]
+            MessagingCampaignSchedule,
+            
+            /// <summary>
+            /// Enum EmailCampaignSchedule for "EMAIL_CAMPAIGN_SCHEDULE"
+            /// </summary>
+            [EnumMember(Value = "EMAIL_CAMPAIGN_SCHEDULE")]
+            EmailCampaignSchedule
         }
         
         

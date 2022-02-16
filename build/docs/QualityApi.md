@@ -27,6 +27,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetQualityFormsEvaluation**](QualityApi.html#getqualityformsevaluation) | **GET** /api/v2/quality/forms/evaluations/{formId} | Get an evaluation form |
 | [**GetQualityFormsEvaluationVersions**](QualityApi.html#getqualityformsevaluationversions) | **GET** /api/v2/quality/forms/evaluations/{formId}/versions | Gets all the revisions for a specific evaluation. |
 | [**GetQualityFormsEvaluations**](QualityApi.html#getqualityformsevaluations) | **GET** /api/v2/quality/forms/evaluations | Get the list of evaluation forms |
+| [**GetQualityFormsEvaluationsBulkContexts**](QualityApi.html#getqualityformsevaluationsbulkcontexts) | **GET** /api/v2/quality/forms/evaluations/bulk/contexts | Retrieve a list of the latest published evaluation form versions by context ids |
 | [**GetQualityFormsSurvey**](QualityApi.html#getqualityformssurvey) | **GET** /api/v2/quality/forms/surveys/{formId} | Get a survey form |
 | [**GetQualityFormsSurveyVersions**](QualityApi.html#getqualityformssurveyversions) | **GET** /api/v2/quality/forms/surveys/{formId}/versions | Gets all the revisions for a specific survey. |
 | [**GetQualityFormsSurveys**](QualityApi.html#getqualityformssurveys) | **GET** /api/v2/quality/forms/surveys | Get the list of survey forms |
@@ -46,6 +47,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostQualityCalibrations**](QualityApi.html#postqualitycalibrations) | **POST** /api/v2/quality/calibrations | Create a calibration |
 | [**PostQualityConversationEvaluations**](QualityApi.html#postqualityconversationevaluations) | **POST** /api/v2/quality/conversations/{conversationId}/evaluations | Create an evaluation |
 | [**PostQualityConversationsAuditsQuery**](QualityApi.html#postqualityconversationsauditsquery) | **POST** /api/v2/quality/conversations/audits/query | Create audit query execution |
+| [**PostQualityEvaluationsAggregatesQueryMe**](QualityApi.html#postqualityevaluationsaggregatesqueryme) | **POST** /api/v2/quality/evaluations/aggregates/query/me | Query for evaluation aggregates for the current user |
 | [**PostQualityEvaluationsScoring**](QualityApi.html#postqualityevaluationsscoring) | **POST** /api/v2/quality/evaluations/scoring | Score evaluation |
 | [**PostQualityForms**](QualityApi.html#postqualityforms) | **POST** /api/v2/quality/forms | Create an evaluation form. |
 | [**PostQualityFormsEvaluations**](QualityApi.html#postqualityformsevaluations) | **POST** /api/v2/quality/forms/evaluations | Create an evaluation form. |
@@ -1511,6 +1513,71 @@ namespace Example
 
 [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
 
+<a name="getqualityformsevaluationsbulkcontexts"></a>
+
+## [**List&lt;EvaluationForm&gt;**](EvaluationForm.html) GetQualityFormsEvaluationsBulkContexts (List<string> contextId)
+
+
+
+Retrieve a list of the latest published evaluation form versions by context ids
+
+
+
+Requires ALL permissions: 
+
+* quality:evaluationForm:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityFormsEvaluationsBulkContextsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var contextId = new List<string>(); // List<string> | A comma-delimited list of valid evaluation form context ids
+
+            try
+            { 
+                // Retrieve a list of the latest published evaluation form versions by context ids
+                List<EvaluationForm> result = apiInstance.GetQualityFormsEvaluationsBulkContexts(contextId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityFormsEvaluationsBulkContexts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contextId** | [**List<string>**](string.html)| A comma-delimited list of valid evaluation form context ids |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<EvaluationForm>**](EvaluationForm.html)
+
 <a name="getqualityformssurvey"></a>
 
 ## [**SurveyForm**](SurveyForm.html) GetQualityFormsSurvey (string formId)
@@ -2784,6 +2851,70 @@ namespace Example
 ### Return type
 
 [**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html)
+
+<a name="postqualityevaluationsaggregatesqueryme"></a>
+
+## [**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html) PostQualityEvaluationsAggregatesQueryMe (EvaluationAggregationQueryMe body)
+
+
+
+Query for evaluation aggregates for the current user
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostQualityEvaluationsAggregatesQueryMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var body = new EvaluationAggregationQueryMe(); // EvaluationAggregationQueryMe | query
+
+            try
+            { 
+                // Query for evaluation aggregates for the current user
+                EvaluationAggregateQueryResponse result = apiInstance.PostQualityEvaluationsAggregatesQueryMe(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PostQualityEvaluationsAggregatesQueryMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**EvaluationAggregationQueryMe**](EvaluationAggregationQueryMe.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html)
 
 <a name="postqualityevaluationsscoring"></a>
 

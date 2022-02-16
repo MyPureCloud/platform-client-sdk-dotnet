@@ -290,6 +290,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Nuancemixintegration,
             
             /// <summary>
+            /// Enum Oauthclient for "OAUTHCLIENT"
+            /// </summary>
+            [EnumMember(Value = "OAUTHCLIENT")]
+            Oauthclient,
+            
+            /// <summary>
             /// Enum Outboundcallflow for "OUTBOUNDCALLFLOW"
             /// </summary>
             [EnumMember(Value = "OUTBOUNDCALLFLOW")]

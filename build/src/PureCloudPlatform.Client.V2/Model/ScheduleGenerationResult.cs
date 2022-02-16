@@ -40,6 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ScheduleGenerationResult" /> class.
@@ -48,12 +53,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RunId">The ID of the schedule generation run. Reference this when requesting support.</param>
         /// <param name="MessageCount">The number of schedule generation messages for this schedule generation run.</param>
         /// <param name="Messages">User facing messages related to the schedule generation run.</param>
-        public ScheduleGenerationResult(bool? Failed = null, string RunId = null, int? MessageCount = null, List<ScheduleGenerationMessage> Messages = null)
+        /// <param name="MessageSeverities">The list of messages by severity in this schedule generation run.</param>
+        public ScheduleGenerationResult(bool? Failed = null, string RunId = null, int? MessageCount = null, List<ScheduleGenerationMessage> Messages = null, List<SchedulerMessageTypeSeverity> MessageSeverities = null)
         {
             this.Failed = Failed;
             this.RunId = RunId;
             this.MessageCount = MessageCount;
             this.Messages = Messages;
+            this.MessageSeverities = MessageSeverities;
             
         }
         
@@ -94,6 +101,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ScheduleGenerationMessage> Messages { get; set; }
         
         
+        
+        /// <summary>
+        /// The list of messages by severity in this schedule generation run
+        /// </summary>
+        /// <value>The list of messages by severity in this schedule generation run</value>
+        [DataMember(Name="messageSeverities", EmitDefaultValue=false)]
+        public List<SchedulerMessageTypeSeverity> MessageSeverities { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -107,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RunId: ").Append(RunId).Append("\n");
             sb.Append("  MessageCount: ").Append(MessageCount).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
+            sb.Append("  MessageSeverities: ").Append(MessageSeverities).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -166,6 +183,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Messages == other.Messages ||
                     this.Messages != null &&
                     this.Messages.SequenceEqual(other.Messages)
+                ) &&
+                (
+                    this.MessageSeverities == other.MessageSeverities ||
+                    this.MessageSeverities != null &&
+                    this.MessageSeverities.SequenceEqual(other.MessageSeverities)
                 );
         }
 
@@ -192,6 +214,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Messages != null)
                     hash = hash * 59 + this.Messages.GetHashCode();
+                
+                if (this.MessageSeverities != null)
+                    hash = hash * 59 + this.MessageSeverities.GetHashCode();
                 
                 return hash;
             }

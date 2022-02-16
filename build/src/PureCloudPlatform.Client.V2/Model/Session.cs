@@ -126,6 +126,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
             /// Enum Inbound for "Inbound"
             /// </summary>
             [EnumMember(Value = "Inbound")]
@@ -140,6 +146,170 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        /// <summary>
+        /// Disconnect reason for the last user connected to the conversation.
+        /// </summary>
+        /// <value>Disconnect reason for the last user connected to the conversation.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum LastUserDisconnectTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Endpoint for "Endpoint"
+            /// </summary>
+            [EnumMember(Value = "Endpoint")]
+            Endpoint,
+            
+            /// <summary>
+            /// Enum Client for "Client"
+            /// </summary>
+            [EnumMember(Value = "Client")]
+            Client,
+            
+            /// <summary>
+            /// Enum System for "System"
+            /// </summary>
+            [EnumMember(Value = "System")]
+            System,
+            
+            /// <summary>
+            /// Enum Transfer for "Transfer"
+            /// </summary>
+            [EnumMember(Value = "Transfer")]
+            Transfer,
+            
+            /// <summary>
+            /// Enum Error for "Error"
+            /// </summary>
+            [EnumMember(Value = "Error")]
+            Error,
+            
+            /// <summary>
+            /// Enum Peer for "Peer"
+            /// </summary>
+            [EnumMember(Value = "Peer")]
+            Peer,
+            
+            /// <summary>
+            /// Enum Other for "Other"
+            /// </summary>
+            [EnumMember(Value = "Other")]
+            Other,
+            
+            /// <summary>
+            /// Enum Spam for "Spam"
+            /// </summary>
+            [EnumMember(Value = "Spam")]
+            Spam,
+            
+            /// <summary>
+            /// Enum Timeout for "Timeout"
+            /// </summary>
+            [EnumMember(Value = "Timeout")]
+            Timeout,
+            
+            /// <summary>
+            /// Enum Transportfailure for "TransportFailure"
+            /// </summary>
+            [EnumMember(Value = "TransportFailure")]
+            Transportfailure,
+            
+            /// <summary>
+            /// Enum Conferencetransfer for "ConferenceTransfer"
+            /// </summary>
+            [EnumMember(Value = "ConferenceTransfer")]
+            Conferencetransfer,
+            
+            /// <summary>
+            /// Enum Consulttransfer for "ConsultTransfer"
+            /// </summary>
+            [EnumMember(Value = "ConsultTransfer")]
+            Consulttransfer,
+            
+            /// <summary>
+            /// Enum Forwardtransfer for "ForwardTransfer"
+            /// </summary>
+            [EnumMember(Value = "ForwardTransfer")]
+            Forwardtransfer,
+            
+            /// <summary>
+            /// Enum Noanswertransfer for "NoAnswerTransfer"
+            /// </summary>
+            [EnumMember(Value = "NoAnswerTransfer")]
+            Noanswertransfer,
+            
+            /// <summary>
+            /// Enum Notavailabletransfer for "NotAvailableTransfer"
+            /// </summary>
+            [EnumMember(Value = "NotAvailableTransfer")]
+            Notavailabletransfer,
+            
+            /// <summary>
+            /// Enum Uncallable for "Uncallable"
+            /// </summary>
+            [EnumMember(Value = "Uncallable")]
+            Uncallable
+        }
+        
+        
+        
+        
+        /// <summary>
+        /// Last ACD outcome for the conversation.
+        /// </summary>
+        /// <value>Last ACD outcome for the conversation.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum LastAcdOutcomeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Abandon for "Abandon"
+            /// </summary>
+            [EnumMember(Value = "Abandon")]
+            Abandon,
+            
+            /// <summary>
+            /// Enum Answered for "Answered"
+            /// </summary>
+            [EnumMember(Value = "Answered")]
+            Answered,
+            
+            /// <summary>
+            /// Enum Flowout for "FlowOut"
+            /// </summary>
+            [EnumMember(Value = "FlowOut")]
+            Flowout
+        }
         
         
         
@@ -240,6 +410,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Disconnect reason for the last user connected to the conversation.
+        /// </summary>
+        /// <value>Disconnect reason for the last user connected to the conversation.</value>
+        [DataMember(Name="lastUserDisconnectType", EmitDefaultValue=false)]
+        public LastUserDisconnectTypeEnum? LastUserDisconnectType { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Last ACD outcome for the conversation.
+        /// </summary>
+        /// <value>Last ACD outcome for the conversation.</value>
+        [DataMember(Name="lastAcdOutcome", EmitDefaultValue=false)]
+        public LastAcdOutcomeEnum? LastAcdOutcome { get; set; }
+        
+        
+        
         
         
         
@@ -290,12 +478,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationChannels">Represents the channels used for this conversation..</param>
         /// <param name="OriginatingDirection">The original direction of the conversation..</param>
         /// <param name="ConversationSubject">The subject for the conversation, for example an email subject..</param>
+        /// <param name="LastUserDisconnectType">Disconnect reason for the last user connected to the conversation..</param>
+        /// <param name="LastAcdOutcome">Last ACD outcome for the conversation..</param>
         /// <param name="Authenticated">Indicates whether or not the session is authenticated..</param>
         /// <param name="CreatedDate">Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndedDate">Timestamp indicating when the session was ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AwayDate">Timestamp indicating when the visitor should be considered as away. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="IdleDate">Timestamp indicating when the visitor should be considered as idle. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public Session(string CustomerId = null, string CustomerIdType = null, string Type = null, string ExternalId = null, string ExternalUrl = null, string ShortId = null, List<OutcomeAchievement> OutcomeAchievements = null, List<SessionSegmentAssignment> SegmentAssignments = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttributeList> AttributeLists = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyPage LastPage = null, JourneyCampaign MktCampaign = null, Referrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, SessionLastEvent LastEvent = null, ConnectedQueue LastConnectedQueue = null, ConnectedUser LastConnectedUser = null, ConversationUserDisposition LastUserDisposition = null, List<ConversationChannel> ConversationChannels = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, bool? Authenticated = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, DateTime? AwayDate = null, DateTime? IdleDate = null)
+        public Session(string CustomerId = null, string CustomerIdType = null, string Type = null, string ExternalId = null, string ExternalUrl = null, string ShortId = null, List<OutcomeAchievement> OutcomeAchievements = null, List<SessionSegmentAssignment> SegmentAssignments = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttributeList> AttributeLists = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyPage LastPage = null, JourneyCampaign MktCampaign = null, Referrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, SessionLastEvent LastEvent = null, ConnectedQueue LastConnectedQueue = null, ConnectedUser LastConnectedUser = null, ConversationUserDisposition LastUserDisposition = null, List<ConversationChannel> ConversationChannels = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, DateTime? AwayDate = null, DateTime? IdleDate = null)
         {
             this.CustomerId = CustomerId;
             this.CustomerIdType = CustomerIdType;
@@ -328,6 +518,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationChannels = ConversationChannels;
             this.OriginatingDirection = OriginatingDirection;
             this.ConversationSubject = ConversationSubject;
+            this.LastUserDisconnectType = LastUserDisconnectType;
+            this.LastAcdOutcome = LastAcdOutcome;
             this.Authenticated = Authenticated;
             this.CreatedDate = CreatedDate;
             this.EndedDate = EndedDate;
@@ -619,6 +811,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
         /// <summary>
         /// Indicates whether or not the session is authenticated.
         /// </summary>
@@ -731,6 +927,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationChannels: ").Append(ConversationChannels).Append("\n");
             sb.Append("  OriginatingDirection: ").Append(OriginatingDirection).Append("\n");
             sb.Append("  ConversationSubject: ").Append(ConversationSubject).Append("\n");
+            sb.Append("  LastUserDisconnectType: ").Append(LastUserDisconnectType).Append("\n");
+            sb.Append("  LastAcdOutcome: ").Append(LastAcdOutcome).Append("\n");
             sb.Append("  Authenticated: ").Append(Authenticated).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
@@ -940,6 +1138,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationSubject.Equals(other.ConversationSubject)
                 ) &&
                 (
+                    this.LastUserDisconnectType == other.LastUserDisconnectType ||
+                    this.LastUserDisconnectType != null &&
+                    this.LastUserDisconnectType.Equals(other.LastUserDisconnectType)
+                ) &&
+                (
+                    this.LastAcdOutcome == other.LastAcdOutcome ||
+                    this.LastAcdOutcome != null &&
+                    this.LastAcdOutcome.Equals(other.LastAcdOutcome)
+                ) &&
+                (
                     this.Authenticated == other.Authenticated ||
                     this.Authenticated != null &&
                     this.Authenticated.Equals(other.Authenticated)
@@ -1088,6 +1296,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ConversationSubject != null)
                     hash = hash * 59 + this.ConversationSubject.GetHashCode();
+                
+                if (this.LastUserDisconnectType != null)
+                    hash = hash * 59 + this.LastUserDisconnectType.GetHashCode();
+                
+                if (this.LastAcdOutcome != null)
+                    hash = hash * 59 + this.LastAcdOutcome.GetHashCode();
                 
                 if (this.Authenticated != null)
                     hash = hash * 59 + this.Authenticated.GetHashCode();

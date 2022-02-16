@@ -25,14 +25,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterSettings" /> class.
         /// </summary>
         /// <param name="Enabled">Whether or not support center is enabled.</param>
-        public SupportCenterSettings(bool? Enabled = null)
+        /// <param name="KnowledgeBase">The knowledge base for support center.</param>
+        public SupportCenterSettings(bool? Enabled = null, AddressableEntityRef KnowledgeBase = null)
         {
             this.Enabled = Enabled;
+            this.KnowledgeBase = KnowledgeBase;
             
         }
         
@@ -46,6 +53,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Enabled { get; set; }
         
         
+        
+        /// <summary>
+        /// The knowledge base for support center
+        /// </summary>
+        /// <value>The knowledge base for support center</value>
+        [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
+        public AddressableEntityRef KnowledgeBase { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -56,6 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class SupportCenterSettings {\n");
             
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  KnowledgeBase: ").Append(KnowledgeBase).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -100,6 +117,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
+                ) &&
+                (
+                    this.KnowledgeBase == other.KnowledgeBase ||
+                    this.KnowledgeBase != null &&
+                    this.KnowledgeBase.Equals(other.KnowledgeBase)
                 );
         }
 
@@ -117,6 +139,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                
+                if (this.KnowledgeBase != null)
+                    hash = hash * 59 + this.KnowledgeBase.GetHashCode();
                 
                 return hash;
             }

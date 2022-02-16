@@ -1253,7 +1253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to startNumber)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Number (optional)</param>
         /// <returns>ExtensionPoolEntityListing</returns>
         ExtensionPoolEntityListing GetTelephonyProvidersEdgesExtensionpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null);
@@ -1267,7 +1267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to startNumber)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Number (optional)</param>
         /// <returns>ApiResponse of ExtensionPoolEntityListing</returns>
         ApiResponse<ExtensionPoolEntityListing> GetTelephonyProvidersEdgesExtensionpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null);
@@ -4439,7 +4439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to startNumber)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Number (optional)</param>
         /// <returns>Task of ExtensionPoolEntityListing</returns>
         System.Threading.Tasks.Task<ExtensionPoolEntityListing> GetTelephonyProvidersEdgesExtensionpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null);
@@ -4453,7 +4453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to startNumber)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Number (optional)</param>
         /// <returns>Task of ApiResponse (ExtensionPoolEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExtensionPoolEntityListing>> GetTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null);
@@ -16652,7 +16652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to startNumber)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Number (optional)</param>
         /// <returns>ExtensionPoolEntityListing</returns>
         public ExtensionPoolEntityListing GetTelephonyProvidersEdgesExtensionpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)
@@ -16667,7 +16667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to startNumber)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Number (optional)</param>
         /// <returns>ApiResponse of ExtensionPoolEntityListing</returns>
         public ApiResponse< ExtensionPoolEntityListing > GetTelephonyProvidersEdgesExtensionpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)
@@ -16753,7 +16753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to startNumber)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Number (optional)</param>
         /// <returns>Task of ExtensionPoolEntityListing</returns>
         public async System.Threading.Tasks.Task<ExtensionPoolEntityListing> GetTelephonyProvidersEdgesExtensionpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)
@@ -16769,7 +16769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to startNumber)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Number (optional)</param>
         /// <returns>Task of ApiResponse (ExtensionPoolEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ExtensionPoolEntityListing>> GetTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)

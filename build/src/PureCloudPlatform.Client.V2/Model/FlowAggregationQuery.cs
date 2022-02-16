@@ -136,6 +136,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Convertedto,
             
             /// <summary>
+            /// Enum Customerparticipation for "customerParticipation"
+            /// </summary>
+            [EnumMember(Value = "customerParticipation")]
+            Customerparticipation,
+            
+            /// <summary>
             /// Enum Deliverystatus for "deliveryStatus"
             /// </summary>
             [EnumMember(Value = "deliveryStatus")]

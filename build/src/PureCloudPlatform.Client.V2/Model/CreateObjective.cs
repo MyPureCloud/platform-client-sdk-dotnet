@@ -35,6 +35,83 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        /// <summary>
+        /// Gets or Sets MediaTypes
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MediaTypesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Callback for "callback"
+            /// </summary>
+            [EnumMember(Value = "callback")]
+            Callback,
+            
+            /// <summary>
+            /// Enum Chat for "chat"
+            /// </summary>
+            [EnumMember(Value = "chat")]
+            Chat,
+            
+            /// <summary>
+            /// Enum Cobrowse for "cobrowse"
+            /// </summary>
+            [EnumMember(Value = "cobrowse")]
+            Cobrowse,
+            
+            /// <summary>
+            /// Enum Email for "email"
+            /// </summary>
+            [EnumMember(Value = "email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Message for "message"
+            /// </summary>
+            [EnumMember(Value = "message")]
+            Message,
+            
+            /// <summary>
+            /// Enum Screenshare for "screenshare"
+            /// </summary>
+            [EnumMember(Value = "screenshare")]
+            Screenshare,
+            
+            /// <summary>
+            /// Enum Unknown for "unknown"
+            /// </summary>
+            [EnumMember(Value = "unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Video for "video"
+            /// </summary>
+            [EnumMember(Value = "video")]
+            Video,
+            
+            /// <summary>
+            /// Enum Voice for "voice"
+            /// </summary>
+            [EnumMember(Value = "voice")]
+            Voice
+        }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\".
         /// </summary>
@@ -80,6 +157,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
         /// <summary>
         /// A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\".
         /// </summary>
@@ -98,14 +179,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Zones">Objective zone specifies min,max points and values for the associated metric.</param>
         /// <param name="Enabled">A flag for whether this objective is enabled for the related metric.</param>
         /// <param name="TopicIds">A list of topic ids for detected topic metrics.</param>
+        /// <param name="MediaTypes">A list of media types for the metric.</param>
+        /// <param name="QueueIds">A list of queue ids for the metric.</param>
         /// <param name="TopicIdsFilterType">A filter type for topic Ids. It&#39;s only used for objectives with topicIds. Default filter behavior is \&quot;or\&quot;..</param>
         /// <param name="DateStart">start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
-        public CreateObjective(string TemplateId = null, List<ObjectiveZone> Zones = null, bool? Enabled = null, List<string> TopicIds = null, TopicIdsFilterTypeEnum? TopicIdsFilterType = null, String DateStart = null)
+        public CreateObjective(string TemplateId = null, List<ObjectiveZone> Zones = null, bool? Enabled = null, List<string> TopicIds = null, List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, TopicIdsFilterTypeEnum? TopicIdsFilterType = null, String DateStart = null)
         {
             this.TemplateId = TemplateId;
             this.Zones = Zones;
             this.Enabled = Enabled;
             this.TopicIds = TopicIds;
+            this.MediaTypes = MediaTypes;
+            this.QueueIds = QueueIds;
             this.TopicIdsFilterType = TopicIdsFilterType;
             this.DateStart = DateStart;
             
@@ -158,6 +243,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// A list of media types for the metric
+        /// </summary>
+        /// <value>A list of media types for the metric</value>
+        [DataMember(Name="mediaTypes", EmitDefaultValue=false)]
+        public List<MediaTypesEnum> MediaTypes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of queue ids for the metric
+        /// </summary>
+        /// <value>A list of queue ids for the metric</value>
+        [DataMember(Name="queueIds", EmitDefaultValue=false)]
+        public List<string> QueueIds { get; set; }
+        
+        
+        
         
         
         /// <summary>
@@ -182,6 +285,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Zones: ").Append(Zones).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  TopicIds: ").Append(TopicIds).Append("\n");
+            sb.Append("  MediaTypes: ").Append(MediaTypes).Append("\n");
+            sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
             sb.Append("  TopicIdsFilterType: ").Append(TopicIdsFilterType).Append("\n");
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
             sb.Append("}\n");
@@ -250,6 +355,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TopicIds.SequenceEqual(other.TopicIds)
                 ) &&
                 (
+                    this.MediaTypes == other.MediaTypes ||
+                    this.MediaTypes != null &&
+                    this.MediaTypes.SequenceEqual(other.MediaTypes)
+                ) &&
+                (
+                    this.QueueIds == other.QueueIds ||
+                    this.QueueIds != null &&
+                    this.QueueIds.SequenceEqual(other.QueueIds)
+                ) &&
+                (
                     this.TopicIdsFilterType == other.TopicIdsFilterType ||
                     this.TopicIdsFilterType != null &&
                     this.TopicIdsFilterType.Equals(other.TopicIdsFilterType)
@@ -287,6 +402,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TopicIds != null)
                     hash = hash * 59 + this.TopicIds.GetHashCode();
+                
+                if (this.MediaTypes != null)
+                    hash = hash * 59 + this.MediaTypes.GetHashCode();
+                
+                if (this.QueueIds != null)
+                    hash = hash * 59 + this.QueueIds.GetHashCode();
                 
                 if (this.TopicIdsFilterType != null)
                     hash = hash * 59 + this.TopicIdsFilterType.GetHashCode();

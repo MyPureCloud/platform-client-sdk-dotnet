@@ -46,8 +46,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ForecastPlanningGroupData" /> class.
         /// </summary>
         /// <param name="PlanningGroupId">The ID of the planning group to which this data applies. Note this is a snapshot of the planning group at the time of forecast creation and may not correspond to the current configuration (required).</param>
-        /// <param name="OfferedPerInterval">Forecast offered counts per interval for this week of the forecast (required).</param>
-        /// <param name="AverageHandleTimeSecondsPerInterval">Forecast average handle time per interval in seconds (required).</param>
+        /// <param name="OfferedPerInterval">Forecast offered counts per 15 minute interval for this week of the forecast (required).</param>
+        /// <param name="AverageHandleTimeSecondsPerInterval">Forecast average handle time per 15 minute interval in seconds (required).</param>
         public ForecastPlanningGroupData(string PlanningGroupId = null, List<double?> OfferedPerInterval = null, List<double?> AverageHandleTimeSecondsPerInterval = null)
         {
             this.PlanningGroupId = PlanningGroupId;
@@ -68,18 +68,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Forecast offered counts per interval for this week of the forecast
+        /// Forecast offered counts per 15 minute interval for this week of the forecast
         /// </summary>
-        /// <value>Forecast offered counts per interval for this week of the forecast</value>
+        /// <value>Forecast offered counts per 15 minute interval for this week of the forecast</value>
         [DataMember(Name="offeredPerInterval", EmitDefaultValue=false)]
         public List<double?> OfferedPerInterval { get; set; }
         
         
         
         /// <summary>
-        /// Forecast average handle time per interval in seconds
+        /// Forecast average handle time per 15 minute interval in seconds
         /// </summary>
-        /// <value>Forecast average handle time per interval in seconds</value>
+        /// <value>Forecast average handle time per 15 minute interval in seconds</value>
         [DataMember(Name="averageHandleTimeSecondsPerInterval", EmitDefaultValue=false)]
         public List<double?> AverageHandleTimeSecondsPerInterval { get; set; }
         

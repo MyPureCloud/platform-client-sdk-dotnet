@@ -176,12 +176,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -439,6 +444,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Integration presence
+        /// </summary>
+        /// <value>Integration presence</value>
+        [DataMember(Name="integrationPresence", EmitDefaultValue=false)]
+        public UserPresence IntegrationPresence { get; private set; }
+        
+        
+        
+        /// <summary>
         /// Summary of conversion statistics for conversation types.
         /// </summary>
         /// <value>Summary of conversion statistics for conversation types.</value>
@@ -608,6 +622,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EmployerInfo: ").Append(EmployerInfo).Append("\n");
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
             sb.Append("  Presence: ").Append(Presence).Append("\n");
+            sb.Append("  IntegrationPresence: ").Append(IntegrationPresence).Append("\n");
             sb.Append("  ConversationSummary: ").Append(ConversationSummary).Append("\n");
             sb.Append("  OutOfOffice: ").Append(OutOfOffice).Append("\n");
             sb.Append("  Geolocation: ").Append(Geolocation).Append("\n");
@@ -760,6 +775,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Presence.Equals(other.Presence)
                 ) &&
                 (
+                    this.IntegrationPresence == other.IntegrationPresence ||
+                    this.IntegrationPresence != null &&
+                    this.IntegrationPresence.Equals(other.IntegrationPresence)
+                ) &&
+                (
                     this.ConversationSummary == other.ConversationSummary ||
                     this.ConversationSummary != null &&
                     this.ConversationSummary.Equals(other.ConversationSummary)
@@ -909,6 +929,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Presence != null)
                     hash = hash * 59 + this.Presence.GetHashCode();
+                
+                if (this.IntegrationPresence != null)
+                    hash = hash * 59 + this.IntegrationPresence.GetHashCode();
                 
                 if (this.ConversationSummary != null)
                     hash = hash * 59 + this.ConversationSummary.GetHashCode();
