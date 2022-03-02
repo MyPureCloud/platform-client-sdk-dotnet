@@ -943,8 +943,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
-        /// <returns>QueueMemberEntityListing</returns>
-        QueueMemberEntityListing GetRoutingQueueUsers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+        /// <returns>QueueMemberEntityListingV1</returns>
+        QueueMemberEntityListingV1 GetRoutingQueueUsers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
 
         /// <summary>
         /// DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
@@ -965,8 +965,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
-        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        ApiResponse<QueueMemberEntityListing> GetRoutingQueueUsersWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+        /// <returns>ApiResponse of QueueMemberEntityListingV1</returns>
+        ApiResponse<QueueMemberEntityListingV1> GetRoutingQueueUsersWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
         
         /// <summary>
         /// Get the wrap-up codes for a queue
@@ -1725,8 +1725,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>QueueMemberEntityListing</returns>
-        QueueMemberEntityListing PatchRoutingQueueUsers (string queueId, List<QueueMember> body);
+        /// <returns>QueueMemberEntityListingV1</returns>
+        QueueMemberEntityListingV1 PatchRoutingQueueUsers (string queueId, List<QueueMember> body);
 
         /// <summary>
         /// DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
@@ -1737,8 +1737,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        ApiResponse<QueueMemberEntityListing> PatchRoutingQueueUsersWithHttpInfo (string queueId, List<QueueMember> body);
+        /// <returns>ApiResponse of QueueMemberEntityListingV1</returns>
+        ApiResponse<QueueMemberEntityListingV1> PatchRoutingQueueUsersWithHttpInfo (string queueId, List<QueueMember> body);
         
         /// <summary>
         /// Update Contact Center Settings
@@ -3499,8 +3499,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
-        /// <returns>Task of QueueMemberEntityListing</returns>
-        System.Threading.Tasks.Task<QueueMemberEntityListing> GetRoutingQueueUsersAsync (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+        /// <returns>Task of QueueMemberEntityListingV1</returns>
+        System.Threading.Tasks.Task<QueueMemberEntityListingV1> GetRoutingQueueUsersAsync (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
 
         /// <summary>
         /// DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
@@ -3521,8 +3521,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
-        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetRoutingQueueUsersAsyncWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+        /// <returns>Task of ApiResponse (QueueMemberEntityListingV1)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListingV1>> GetRoutingQueueUsersAsyncWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
         
         /// <summary>
         /// Get the wrap-up codes for a queue
@@ -4281,8 +4281,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>Task of QueueMemberEntityListing</returns>
-        System.Threading.Tasks.Task<QueueMemberEntityListing> PatchRoutingQueueUsersAsync (string queueId, List<QueueMember> body);
+        /// <returns>Task of QueueMemberEntityListingV1</returns>
+        System.Threading.Tasks.Task<QueueMemberEntityListingV1> PatchRoutingQueueUsersAsync (string queueId, List<QueueMember> body);
 
         /// <summary>
         /// DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
@@ -4293,8 +4293,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> PatchRoutingQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body);
+        /// <returns>Task of ApiResponse (QueueMemberEntityListingV1)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListingV1>> PatchRoutingQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body);
         
         /// <summary>
         /// Update Contact Center Settings
@@ -12741,10 +12741,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
-        /// <returns>QueueMemberEntityListing</returns>
-        public QueueMemberEntityListing GetRoutingQueueUsers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        /// <returns>QueueMemberEntityListingV1</returns>
+        public QueueMemberEntityListingV1 GetRoutingQueueUsers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = GetRoutingQueueUsersWithHttpInfo(queueId, pageNumber, pageSize, sortOrder, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
+             ApiResponse<QueueMemberEntityListingV1> localVarResponse = GetRoutingQueueUsersWithHttpInfo(queueId, pageNumber, pageSize, sortOrder, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
              return localVarResponse.Data;
         }
 
@@ -12764,8 +12764,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
-        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        public ApiResponse< QueueMemberEntityListing > GetRoutingQueueUsersWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        /// <returns>ApiResponse of QueueMemberEntityListingV1</returns>
+        public ApiResponse< QueueMemberEntityListingV1 > GetRoutingQueueUsersWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -12845,9 +12845,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
+            return new ApiResponse<QueueMemberEntityListingV1>(localVarStatusCode,
                 localVarHeaders,
-                (QueueMemberEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)),
+                (QueueMemberEntityListingV1) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListingV1)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -12869,10 +12869,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
-        /// <returns>Task of QueueMemberEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueMemberEntityListing> GetRoutingQueueUsersAsync (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        /// <returns>Task of QueueMemberEntityListingV1</returns>
+        public async System.Threading.Tasks.Task<QueueMemberEntityListingV1> GetRoutingQueueUsersAsync (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = await GetRoutingQueueUsersAsyncWithHttpInfo(queueId, pageNumber, pageSize, sortOrder, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
+             ApiResponse<QueueMemberEntityListingV1> localVarResponse = await GetRoutingQueueUsersAsyncWithHttpInfo(queueId, pageNumber, pageSize, sortOrder, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
              return localVarResponse.Data;
 
         }
@@ -12893,8 +12893,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
-        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetRoutingQueueUsersAsyncWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        /// <returns>Task of ApiResponse (QueueMemberEntityListingV1)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListingV1>> GetRoutingQueueUsersAsyncWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -12975,9 +12975,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueueUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
+            return new ApiResponse<QueueMemberEntityListingV1>(localVarStatusCode,
                 localVarHeaders,
-                (QueueMemberEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)),
+                (QueueMemberEntityListingV1) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListingV1)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -18948,10 +18948,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>QueueMemberEntityListing</returns>
-        public QueueMemberEntityListing PatchRoutingQueueUsers (string queueId, List<QueueMember> body)
+        /// <returns>QueueMemberEntityListingV1</returns>
+        public QueueMemberEntityListingV1 PatchRoutingQueueUsers (string queueId, List<QueueMember> body)
         {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = PatchRoutingQueueUsersWithHttpInfo(queueId, body);
+             ApiResponse<QueueMemberEntityListingV1> localVarResponse = PatchRoutingQueueUsersWithHttpInfo(queueId, body);
              return localVarResponse.Data;
         }
 
@@ -18961,8 +18961,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        public ApiResponse< QueueMemberEntityListing > PatchRoutingQueueUsersWithHttpInfo (string queueId, List<QueueMember> body)
+        /// <returns>ApiResponse of QueueMemberEntityListingV1</returns>
+        public ApiResponse< QueueMemberEntityListingV1 > PatchRoutingQueueUsersWithHttpInfo (string queueId, List<QueueMember> body)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -19039,9 +19039,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
+            return new ApiResponse<QueueMemberEntityListingV1>(localVarStatusCode,
                 localVarHeaders,
-                (QueueMemberEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)),
+                (QueueMemberEntityListingV1) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListingV1)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -19053,10 +19053,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>Task of QueueMemberEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueMemberEntityListing> PatchRoutingQueueUsersAsync (string queueId, List<QueueMember> body)
+        /// <returns>Task of QueueMemberEntityListingV1</returns>
+        public async System.Threading.Tasks.Task<QueueMemberEntityListingV1> PatchRoutingQueueUsersAsync (string queueId, List<QueueMember> body)
         {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = await PatchRoutingQueueUsersAsyncWithHttpInfo(queueId, body);
+             ApiResponse<QueueMemberEntityListingV1> localVarResponse = await PatchRoutingQueueUsersAsyncWithHttpInfo(queueId, body);
              return localVarResponse.Data;
 
         }
@@ -19067,8 +19067,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> PatchRoutingQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body)
+        /// <returns>Task of ApiResponse (QueueMemberEntityListingV1)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListingV1>> PatchRoutingQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -19147,9 +19147,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchRoutingQueueUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
+            return new ApiResponse<QueueMemberEntityListingV1>(localVarStatusCode,
                 localVarHeaders,
-                (QueueMemberEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)),
+                (QueueMemberEntityListingV1) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListingV1)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

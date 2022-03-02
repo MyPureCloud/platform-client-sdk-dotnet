@@ -25,14 +25,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AutomaticTimeZoneMappingSettings" /> class.
         /// </summary>
         /// <param name="CallableWindows">The time intervals to use for automatic time zone mapping..</param>
-        public AutomaticTimeZoneMappingSettings(List<CallableWindow> CallableWindows = null)
+        /// <param name="SupportedCountries">The countries that are supported for automatic time zone mapping..</param>
+        public AutomaticTimeZoneMappingSettings(List<CallableWindow> CallableWindows = null, List<string> SupportedCountries = null)
         {
             this.CallableWindows = CallableWindows;
+            this.SupportedCountries = SupportedCountries;
             
         }
         
@@ -46,6 +53,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<CallableWindow> CallableWindows { get; set; }
         
         
+        
+        /// <summary>
+        /// The countries that are supported for automatic time zone mapping.
+        /// </summary>
+        /// <value>The countries that are supported for automatic time zone mapping.</value>
+        [DataMember(Name="supportedCountries", EmitDefaultValue=false)]
+        public List<string> SupportedCountries { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -56,6 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AutomaticTimeZoneMappingSettings {\n");
             
             sb.Append("  CallableWindows: ").Append(CallableWindows).Append("\n");
+            sb.Append("  SupportedCountries: ").Append(SupportedCountries).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -100,6 +117,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallableWindows == other.CallableWindows ||
                     this.CallableWindows != null &&
                     this.CallableWindows.SequenceEqual(other.CallableWindows)
+                ) &&
+                (
+                    this.SupportedCountries == other.SupportedCountries ||
+                    this.SupportedCountries != null &&
+                    this.SupportedCountries.SequenceEqual(other.SupportedCountries)
                 );
         }
 
@@ -117,6 +139,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CallableWindows != null)
                     hash = hash * 59 + this.CallableWindows.GetHashCode();
+                
+                if (this.SupportedCountries != null)
+                    hash = hash * 59 + this.SupportedCountries.GetHashCode();
                 
                 return hash;
             }

@@ -2263,8 +2263,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
+        /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns></returns>
-        void PostOutboundDnclistPhonenumbers (string dncListId, List<string> body);
+        void PostOutboundDnclistPhonenumbers (string dncListId, List<string> body, string expirationDateTime = null);
 
         /// <summary>
         /// Add phone numbers to a DNC list.
@@ -2275,8 +2276,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
+        /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostOutboundDnclistPhonenumbersWithHttpInfo (string dncListId, List<string> body);
+        ApiResponse<Object> PostOutboundDnclistPhonenumbersWithHttpInfo (string dncListId, List<string> body, string expirationDateTime = null);
         
         /// <summary>
         /// Create dialer DNC list
@@ -5025,8 +5027,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
+        /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostOutboundDnclistPhonenumbersAsync (string dncListId, List<string> body);
+        System.Threading.Tasks.Task PostOutboundDnclistPhonenumbersAsync (string dncListId, List<string> body, string expirationDateTime = null);
 
         /// <summary>
         /// Add phone numbers to a DNC list.
@@ -5037,8 +5040,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
+        /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body, string expirationDateTime = null);
         
         /// <summary>
         /// Create dialer DNC list
@@ -23488,10 +23492,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
+        /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns></returns>
-        public void PostOutboundDnclistPhonenumbers (string dncListId, List<string> body)
+        public void PostOutboundDnclistPhonenumbers (string dncListId, List<string> body, string expirationDateTime = null)
         {
-             PostOutboundDnclistPhonenumbersWithHttpInfo(dncListId, body);
+             PostOutboundDnclistPhonenumbersWithHttpInfo(dncListId, body, expirationDateTime);
         }
 
         /// <summary>
@@ -23500,8 +23505,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
+        /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostOutboundDnclistPhonenumbersWithHttpInfo (string dncListId, List<string> body)
+        public ApiResponse<Object> PostOutboundDnclistPhonenumbersWithHttpInfo (string dncListId, List<string> body, string expirationDateTime = null)
         { 
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
@@ -23544,6 +23550,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (dncListId != null) localVarPathParams.Add("dncListId", this.Configuration.ApiClient.ParameterToString(dncListId));
 
             // Query params
+            if (expirationDateTime != null) localVarQueryParams.Add(new Tuple<string, string>("expirationDateTime", this.Configuration.ApiClient.ParameterToString(expirationDateTime)));
 
             // Header params
 
@@ -23592,10 +23599,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
+        /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostOutboundDnclistPhonenumbersAsync (string dncListId, List<string> body)
+        public async System.Threading.Tasks.Task PostOutboundDnclistPhonenumbersAsync (string dncListId, List<string> body, string expirationDateTime = null)
         {
-             await PostOutboundDnclistPhonenumbersAsyncWithHttpInfo(dncListId, body);
+             await PostOutboundDnclistPhonenumbersAsyncWithHttpInfo(dncListId, body, expirationDateTime);
 
         }
 
@@ -23605,8 +23613,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
+        /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body, string expirationDateTime = null)
         { 
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
@@ -23651,6 +23660,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (dncListId != null) localVarPathParams.Add("dncListId", this.Configuration.ApiClient.ParameterToString(dncListId));
 
             // Query params
+            if (expirationDateTime != null) localVarQueryParams.Add(new Tuple<string, string>("expirationDateTime", this.Configuration.ApiClient.ParameterToString(expirationDateTime)));
 
             // Header params
 

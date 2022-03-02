@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ExpiredEdgeListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
-        public ExpiredEdgeListing(List<EdgeIdNamePair> Entities = null)
+        public ExpiredEdgeListing(List<DomainEntityRef> Entities = null)
         {
             this.Entities = Entities;
             
@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<EdgeIdNamePair> Entities { get; set; }
+        public List<DomainEntityRef> Entities { get; set; }
         
         
         /// <summary>

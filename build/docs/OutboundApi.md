@@ -6130,7 +6130,7 @@ namespace Example
 
 <a name="postoutbounddnclistphonenumbers"></a>
 
-## void PostOutboundDnclistPhonenumbers (string dncListId, List<string> body)
+## void PostOutboundDnclistPhonenumbers (string dncListId, List<string> body, string expirationDateTime = null)
 
 
 
@@ -6166,11 +6166,12 @@ namespace Example
             var apiInstance = new OutboundApi();
             var dncListId = dncListId_example;  // string | DncList ID
             var body = ;  // List<string> | DNC Phone Numbers
+            var expirationDateTime = expirationDateTime_example;  // string | Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional) 
 
             try
             { 
                 // Add phone numbers to a DNC list.
-                apiInstance.PostOutboundDnclistPhonenumbers(dncListId, body);
+                apiInstance.PostOutboundDnclistPhonenumbers(dncListId, body, expirationDateTime);
             }
             catch (Exception e)
             {
@@ -6188,6 +6189,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
 | **body** | **List<string>**| DNC Phone Numbers |  |
+| **expirationDateTime** | **string**| Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

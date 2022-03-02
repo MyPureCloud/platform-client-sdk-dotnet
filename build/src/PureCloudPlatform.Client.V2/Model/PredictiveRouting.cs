@@ -20,14 +20,30 @@ namespace PureCloudPlatform.Client.V2.Model
     {
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PredictiveRouting" /> class.
         /// </summary>
-        public PredictiveRouting()
+        /// <param name="RespectSkills">A switch used to determine if agent skills will be considered..</param>
+        public PredictiveRouting(bool? RespectSkills = null)
         {
+            this.RespectSkills = RespectSkills;
             
         }
+        
+        
+        
+        /// <summary>
+        /// A switch used to determine if agent skills will be considered.
+        /// </summary>
+        /// <value>A switch used to determine if agent skills will be considered.</value>
+        [DataMember(Name="respectSkills", EmitDefaultValue=false)]
+        public bool? RespectSkills { get; set; }
         
         
         /// <summary>
@@ -39,6 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class PredictiveRouting {\n");
             
+            sb.Append("  RespectSkills: ").Append(RespectSkills).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -78,7 +95,12 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.RespectSkills == other.RespectSkills ||
+                    this.RespectSkills != null &&
+                    this.RespectSkills.Equals(other.RespectSkills)
+                );
         }
 
         /// <summary>
@@ -92,6 +114,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.RespectSkills != null)
+                    hash = hash * 59 + this.RespectSkills.GetHashCode();
                 
                 return hash;
             }

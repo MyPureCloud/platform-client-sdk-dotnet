@@ -11,6 +11,7 @@ title: Team
 | **Name** | **string** | The team name | |
 | **Division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** | Team information. | [optional] |
+| **DateCreated** | **DateTime?** | Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **MemberCount** | **long?** | Number of members in a team | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

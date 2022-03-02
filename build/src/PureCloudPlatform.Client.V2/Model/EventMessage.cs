@@ -233,6 +233,18 @@ namespace PureCloudPlatform.Client.V2.Model
             DataActionNotFound,
             
             /// <summary>
+            /// Enum DataActionTooManyRequests for "DATA_ACTION_TOO_MANY_REQUESTS"
+            /// </summary>
+            [EnumMember(Value = "DATA_ACTION_TOO_MANY_REQUESTS")]
+            DataActionTooManyRequests,
+            
+            /// <summary>
+            /// Enum DataActionTooManyRequestsRemote for "DATA_ACTION_TOO_MANY_REQUESTS_REMOTE"
+            /// </summary>
+            [EnumMember(Value = "DATA_ACTION_TOO_MANY_REQUESTS_REMOTE")]
+            DataActionTooManyRequestsRemote,
+            
+            /// <summary>
             /// Enum DncAuthenticationFailure for "DNC_AUTHENTICATION_FAILURE"
             /// </summary>
             [EnumMember(Value = "DNC_AUTHENTICATION_FAILURE")]

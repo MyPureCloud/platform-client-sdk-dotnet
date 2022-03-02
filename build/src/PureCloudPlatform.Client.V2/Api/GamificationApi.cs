@@ -1058,8 +1058,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">performanceProfile</param>
+        /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>GetProfilesResponse</returns>
-        GetProfilesResponse PostGamificationProfiles (CreatePerformanceProfile body);
+        GetProfilesResponse PostGamificationProfiles (CreatePerformanceProfile body, bool? copyMetrics = null);
 
         /// <summary>
         /// Create a new custom performance profile
@@ -1069,8 +1070,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">performanceProfile</param>
+        /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>ApiResponse of GetProfilesResponse</returns>
-        ApiResponse<GetProfilesResponse> PostGamificationProfilesWithHttpInfo (CreatePerformanceProfile body);
+        ApiResponse<GetProfilesResponse> PostGamificationProfilesWithHttpInfo (CreatePerformanceProfile body, bool? copyMetrics = null);
         
         /// <summary>
         /// Updates a metric
@@ -2216,8 +2218,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">performanceProfile</param>
+        /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>Task of GetProfilesResponse</returns>
-        System.Threading.Tasks.Task<GetProfilesResponse> PostGamificationProfilesAsync (CreatePerformanceProfile body);
+        System.Threading.Tasks.Task<GetProfilesResponse> PostGamificationProfilesAsync (CreatePerformanceProfile body, bool? copyMetrics = null);
 
         /// <summary>
         /// Create a new custom performance profile
@@ -2227,8 +2230,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">performanceProfile</param>
+        /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>Task of ApiResponse (GetProfilesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetProfilesResponse>> PostGamificationProfilesAsyncWithHttpInfo (CreatePerformanceProfile body);
+        System.Threading.Tasks.Task<ApiResponse<GetProfilesResponse>> PostGamificationProfilesAsyncWithHttpInfo (CreatePerformanceProfile body, bool? copyMetrics = null);
         
         /// <summary>
         /// Updates a metric
@@ -11175,10 +11179,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">performanceProfile</param>
+        /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>GetProfilesResponse</returns>
-        public GetProfilesResponse PostGamificationProfiles (CreatePerformanceProfile body)
+        public GetProfilesResponse PostGamificationProfiles (CreatePerformanceProfile body, bool? copyMetrics = null)
         {
-             ApiResponse<GetProfilesResponse> localVarResponse = PostGamificationProfilesWithHttpInfo(body);
+             ApiResponse<GetProfilesResponse> localVarResponse = PostGamificationProfilesWithHttpInfo(body, copyMetrics);
              return localVarResponse.Data;
         }
 
@@ -11187,8 +11192,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">performanceProfile</param>
+        /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>ApiResponse of GetProfilesResponse</returns>
-        public ApiResponse< GetProfilesResponse > PostGamificationProfilesWithHttpInfo (CreatePerformanceProfile body)
+        public ApiResponse< GetProfilesResponse > PostGamificationProfilesWithHttpInfo (CreatePerformanceProfile body, bool? copyMetrics = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -11227,6 +11233,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (copyMetrics != null) localVarQueryParams.Add(new Tuple<string, string>("copyMetrics", this.Configuration.ApiClient.ParameterToString(copyMetrics)));
 
             // Header params
 
@@ -11274,10 +11281,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">performanceProfile</param>
+        /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>Task of GetProfilesResponse</returns>
-        public async System.Threading.Tasks.Task<GetProfilesResponse> PostGamificationProfilesAsync (CreatePerformanceProfile body)
+        public async System.Threading.Tasks.Task<GetProfilesResponse> PostGamificationProfilesAsync (CreatePerformanceProfile body, bool? copyMetrics = null)
         {
-             ApiResponse<GetProfilesResponse> localVarResponse = await PostGamificationProfilesAsyncWithHttpInfo(body);
+             ApiResponse<GetProfilesResponse> localVarResponse = await PostGamificationProfilesAsyncWithHttpInfo(body, copyMetrics);
              return localVarResponse.Data;
 
         }
@@ -11287,8 +11295,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">performanceProfile</param>
+        /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>Task of ApiResponse (GetProfilesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetProfilesResponse>> PostGamificationProfilesAsyncWithHttpInfo (CreatePerformanceProfile body)
+        public async System.Threading.Tasks.Task<ApiResponse<GetProfilesResponse>> PostGamificationProfilesAsyncWithHttpInfo (CreatePerformanceProfile body, bool? copyMetrics = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -11328,6 +11337,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (copyMetrics != null) localVarQueryParams.Add(new Tuple<string, string>("copyMetrics", this.Configuration.ApiClient.ParameterToString(copyMetrics)));
 
             // Header params
 

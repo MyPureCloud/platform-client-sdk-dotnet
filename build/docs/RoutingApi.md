@@ -2635,7 +2635,7 @@ namespace Example
 
 <a name="getroutingqueueusers"></a>
 
-## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) GetRoutingQueueUsers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+## [**QueueMemberEntityListingV1**](QueueMemberEntityListingV1.html) GetRoutingQueueUsers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -2686,7 +2686,7 @@ namespace Example
             try
             { 
                 // DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
-                QueueMemberEntityListing result = apiInstance.GetRoutingQueueUsers(queueId, pageNumber, pageSize, sortOrder, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
+                QueueMemberEntityListingV1 result = apiInstance.GetRoutingQueueUsers(queueId, pageNumber, pageSize, sortOrder, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2719,7 +2719,7 @@ namespace Example
 
 ### Return type
 
-[**QueueMemberEntityListing**](QueueMemberEntityListing.html)
+[**QueueMemberEntityListingV1**](QueueMemberEntityListingV1.html)
 
 <a name="getroutingqueuewrapupcodes"></a>
 
@@ -4705,7 +4705,7 @@ void (empty response body)
 
 <a name="patchroutingqueueusers"></a>
 
-## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) PatchRoutingQueueUsers (string queueId, List<QueueMember> body)
+## [**QueueMemberEntityListingV1**](QueueMemberEntityListingV1.html) PatchRoutingQueueUsers (string queueId, List<QueueMember> body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -4746,7 +4746,7 @@ namespace Example
             try
             { 
                 // DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
-                QueueMemberEntityListing result = apiInstance.PatchRoutingQueueUsers(queueId, body);
+                QueueMemberEntityListingV1 result = apiInstance.PatchRoutingQueueUsers(queueId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4769,7 +4769,7 @@ namespace Example
 
 ### Return type
 
-[**QueueMemberEntityListing**](QueueMemberEntityListing.html)
+[**QueueMemberEntityListingV1**](QueueMemberEntityListingV1.html)
 
 <a name="patchroutingsettingscontactcenter"></a>
 

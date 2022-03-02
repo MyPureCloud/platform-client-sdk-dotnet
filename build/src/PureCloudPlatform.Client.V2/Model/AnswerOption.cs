@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnswerOption" /> class.
@@ -42,11 +47,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         /// <param name="Text">Text.</param>
         /// <param name="Value">Value.</param>
-        public AnswerOption(string Id = null, string Text = null, int? Value = null)
+        /// <param name="AssistanceConditions">AssistanceConditions.</param>
+        public AnswerOption(string Id = null, string Text = null, int? Value = null, List<AssistanceCondition> AssistanceConditions = null)
         {
             this.Id = Id;
             this.Text = Text;
             this.Value = Value;
+            this.AssistanceConditions = AssistanceConditions;
             
         }
         
@@ -75,6 +82,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? Value { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets AssistanceConditions
+        /// </summary>
+        [DataMember(Name="assistanceConditions", EmitDefaultValue=false)]
+        public List<AssistanceCondition> AssistanceConditions { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -87,6 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  AssistanceConditions: ").Append(AssistanceConditions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,6 +157,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
+                ) &&
+                (
+                    this.AssistanceConditions == other.AssistanceConditions ||
+                    this.AssistanceConditions != null &&
+                    this.AssistanceConditions.SequenceEqual(other.AssistanceConditions)
                 );
         }
 
@@ -164,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
+                if (this.AssistanceConditions != null)
+                    hash = hash * 59 + this.AssistanceConditions.GetHashCode();
                 
                 return hash;
             }

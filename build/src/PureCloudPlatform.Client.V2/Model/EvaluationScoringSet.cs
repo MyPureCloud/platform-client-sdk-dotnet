@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationScoringSet" /> class.
@@ -66,7 +71,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AnyFailedKillQuestions">Indicates that at least one fatal question was answered without having the highest score available for the question.</param>
         /// <param name="Comments">Overall comments from the evaluator.</param>
         /// <param name="AgentComments">Comments from the agent while reviewing evaluation results.</param>
-        public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, float? TotalNonCriticalScore = null, List<EvaluationQuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string AgentComments = null)
+        /// <param name="TranscriptTopics">List of topics found within the conversation&#39;s transcripts.</param>
+        public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, float? TotalNonCriticalScore = null, List<EvaluationQuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string AgentComments = null, List<TranscriptTopic> TranscriptTopics = null)
         {
             this.TotalScore = TotalScore;
             this.TotalCriticalScore = TotalCriticalScore;
@@ -75,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AnyFailedKillQuestions = AnyFailedKillQuestions;
             this.Comments = Comments;
             this.AgentComments = AgentComments;
+            this.TranscriptTopics = TranscriptTopics;
             
         }
         
@@ -141,6 +148,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string AgentComments { get; set; }
         
         
+        
+        /// <summary>
+        /// List of topics found within the conversation&#39;s transcripts
+        /// </summary>
+        /// <value>List of topics found within the conversation&#39;s transcripts</value>
+        [DataMember(Name="transcriptTopics", EmitDefaultValue=false)]
+        public List<TranscriptTopic> TranscriptTopics { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -157,6 +173,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AnyFailedKillQuestions: ").Append(AnyFailedKillQuestions).Append("\n");
             sb.Append("  Comments: ").Append(Comments).Append("\n");
             sb.Append("  AgentComments: ").Append(AgentComments).Append("\n");
+            sb.Append("  TranscriptTopics: ").Append(TranscriptTopics).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -231,6 +248,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentComments == other.AgentComments ||
                     this.AgentComments != null &&
                     this.AgentComments.Equals(other.AgentComments)
+                ) &&
+                (
+                    this.TranscriptTopics == other.TranscriptTopics ||
+                    this.TranscriptTopics != null &&
+                    this.TranscriptTopics.SequenceEqual(other.TranscriptTopics)
                 );
         }
 
@@ -266,6 +288,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AgentComments != null)
                     hash = hash * 59 + this.AgentComments.GetHashCode();
+                
+                if (this.TranscriptTopics != null)
+                    hash = hash * 59 + this.TranscriptTopics.GetHashCode();
                 
                 return hash;
             }

@@ -54,40 +54,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Sms,
             
             /// <summary>
-            /// Enum Facebook for "facebook"
-            /// </summary>
-            [EnumMember(Value = "facebook")]
-            Facebook,
-            
-            /// <summary>
-            /// Enum Twitter for "twitter"
-            /// </summary>
-            [EnumMember(Value = "twitter")]
-            Twitter,
-            
-            /// <summary>
-            /// Enum Line for "line"
-            /// </summary>
-            [EnumMember(Value = "line")]
-            Line,
-            
-            /// <summary>
             /// Enum Whatsapp for "whatsapp"
             /// </summary>
             [EnumMember(Value = "whatsapp")]
             Whatsapp,
-            
-            /// <summary>
-            /// Enum Webmessaging for "webmessaging"
-            /// </summary>
-            [EnumMember(Value = "webmessaging")]
-            Webmessaging,
-            
-            /// <summary>
-            /// Enum Instagram for "instagram"
-            /// </summary>
-            [EnumMember(Value = "instagram")]
-            Instagram,
             
             /// <summary>
             /// Enum Open for "open"

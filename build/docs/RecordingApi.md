@@ -518,7 +518,7 @@ void (empty response body)
 
 <a name="getconversationrecording"></a>
 
-## [**Recording**](Recording.html) GetConversationRecording (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null)
+## [**Recording**](Recording.html) GetConversationRecording (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
 
 
 
@@ -562,11 +562,12 @@ namespace Example
             var download = true;  // bool? | requesting a download format of the recording. Valid values:true,false (optional)  (default to false)
             var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
             var locale = locale_example;  // string | The locale for the requested file when downloading, as an ISO 639-1 code (optional) 
+            var mediaFormats = new List<string>(); // List<string> | All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional) 
 
             try
             { 
                 // Gets a specific recording.
-                Recording result = apiInstance.GetConversationRecording(conversationId, recordingId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale);
+                Recording result = apiInstance.GetConversationRecording(conversationId, recordingId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -592,6 +593,7 @@ namespace Example
 | **download** | **bool?**| requesting a download format of the recording. Valid values:true,false | [optional] [default to false] |
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
 | **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
+| **mediaFormats** | [**List<string>**](string.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -870,7 +872,7 @@ namespace Example
 
 <a name="getconversationrecordings"></a>
 
-## [**List&lt;Recording&gt;**](Recording.html) GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null)
+## [**List&lt;Recording&gt;**](Recording.html) GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
 
 
 
@@ -907,12 +909,13 @@ namespace Example
             var apiInstance = new RecordingApi();
             var conversationId = conversationId_example;  // string | Conversation ID
             var maxWaitMs = 56;  // int? | The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional)  (default to 5000)
-            var formatId = formatId_example;  // string | The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional)  (default to WEBM)
+            var formatId = formatId_example;  // string | The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional)  (default to WEBM)
+            var mediaFormats = new List<string>(); // List<string> | All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional) 
 
             try
             { 
                 // Get all of a Conversation's Recordings.
-                List<Recording> result = apiInstance.GetConversationRecordings(conversationId, maxWaitMs, formatId);
+                List<Recording> result = apiInstance.GetConversationRecordings(conversationId, maxWaitMs, formatId, mediaFormats);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -931,7 +934,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **maxWaitMs** | **int?**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000] |
-| **formatId** | **string**| The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+| **formatId** | **string**| The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+| **mediaFormats** | [**List<string>**](string.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1005,7 +1009,7 @@ namespace Example
 
 <a name="getorphanrecordingmedia"></a>
 
-## [**Recording**](Recording.html) GetOrphanrecordingMedia (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null)
+## [**Recording**](Recording.html) GetOrphanrecordingMedia (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
 
 
 
@@ -1047,11 +1051,12 @@ namespace Example
             var download = true;  // bool? | requesting a download format of the recording (optional)  (default to false)
             var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
             var locale = locale_example;  // string | The locale for the requested file when downloading, as an ISO 639-1 code (optional) 
+            var mediaFormats = new List<string>(); // List<string> | All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional) 
 
             try
             { 
                 // Gets the media of a single orphan recording
-                Recording result = apiInstance.GetOrphanrecordingMedia(orphanId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale);
+                Recording result = apiInstance.GetOrphanrecordingMedia(orphanId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1076,6 +1081,7 @@ namespace Example
 | **download** | **bool?**| requesting a download format of the recording | [optional] [default to false] |
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
 | **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
+| **mediaFormats** | [**List<string>**](string.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

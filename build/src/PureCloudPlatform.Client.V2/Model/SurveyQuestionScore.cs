@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyQuestionScore" /> class.
@@ -63,15 +68,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AnswerId">AnswerId.</param>
         /// <param name="Score">Unweighted score of the question.</param>
         /// <param name="MarkedNA">MarkedNA.</param>
+        /// <param name="AssistedAnswerId">AnswerId found with evaluation assistance conditions.</param>
         /// <param name="NpsScore">NpsScore.</param>
         /// <param name="NpsTextAnswer">NpsTextAnswer.</param>
         /// <param name="FreeTextAnswer">FreeTextAnswer.</param>
-        public SurveyQuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, int? NpsScore = null, string NpsTextAnswer = null, string FreeTextAnswer = null)
+        public SurveyQuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, string AssistedAnswerId = null, int? NpsScore = null, string NpsTextAnswer = null, string FreeTextAnswer = null)
         {
             this.QuestionId = QuestionId;
             this.AnswerId = AnswerId;
             this.Score = Score;
             this.MarkedNA = MarkedNA;
+            this.AssistedAnswerId = AssistedAnswerId;
             this.NpsScore = NpsScore;
             this.NpsTextAnswer = NpsTextAnswer;
             this.FreeTextAnswer = FreeTextAnswer;
@@ -114,6 +121,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// AnswerId found with evaluation assistance conditions
+        /// </summary>
+        /// <value>AnswerId found with evaluation assistance conditions</value>
+        [DataMember(Name="assistedAnswerId", EmitDefaultValue=false)]
+        public string AssistedAnswerId { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets NpsScore
         /// </summary>
         [DataMember(Name="npsScore", EmitDefaultValue=false)]
@@ -149,6 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AnswerId: ").Append(AnswerId).Append("\n");
             sb.Append("  Score: ").Append(Score).Append("\n");
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
+            sb.Append("  AssistedAnswerId: ").Append(AssistedAnswerId).Append("\n");
             sb.Append("  NpsScore: ").Append(NpsScore).Append("\n");
             sb.Append("  NpsTextAnswer: ").Append(NpsTextAnswer).Append("\n");
             sb.Append("  FreeTextAnswer: ").Append(FreeTextAnswer).Append("\n");
@@ -213,6 +230,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MarkedNA.Equals(other.MarkedNA)
                 ) &&
                 (
+                    this.AssistedAnswerId == other.AssistedAnswerId ||
+                    this.AssistedAnswerId != null &&
+                    this.AssistedAnswerId.Equals(other.AssistedAnswerId)
+                ) &&
+                (
                     this.NpsScore == other.NpsScore ||
                     this.NpsScore != null &&
                     this.NpsScore.Equals(other.NpsScore)
@@ -252,6 +274,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
+                
+                if (this.AssistedAnswerId != null)
+                    hash = hash * 59 + this.AssistedAnswerId.GetHashCode();
                 
                 if (this.NpsScore != null)
                     hash = hash * 59 + this.NpsScore.GetHashCode();

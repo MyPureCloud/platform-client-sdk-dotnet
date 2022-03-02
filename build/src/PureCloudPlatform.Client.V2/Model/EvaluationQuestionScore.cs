@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationQuestionScore" /> class.
@@ -58,14 +63,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AnswerId">AnswerId.</param>
         /// <param name="Score">Unweighted score of the question.</param>
         /// <param name="MarkedNA">MarkedNA.</param>
+        /// <param name="AssistedAnswerId">AnswerId found with evaluation assistance conditions.</param>
         /// <param name="FailedKillQuestion">Applicable only on fatal questions. Indicates that the answer selected was not the highest score available for the question.</param>
         /// <param name="Comments">Comments from the evaluator specific to this question.</param>
-        public EvaluationQuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, bool? FailedKillQuestion = null, string Comments = null)
+        public EvaluationQuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, string AssistedAnswerId = null, bool? FailedKillQuestion = null, string Comments = null)
         {
             this.QuestionId = QuestionId;
             this.AnswerId = AnswerId;
             this.Score = Score;
             this.MarkedNA = MarkedNA;
+            this.AssistedAnswerId = AssistedAnswerId;
             this.FailedKillQuestion = FailedKillQuestion;
             this.Comments = Comments;
             
@@ -107,6 +114,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// AnswerId found with evaluation assistance conditions
+        /// </summary>
+        /// <value>AnswerId found with evaluation assistance conditions</value>
+        [DataMember(Name="assistedAnswerId", EmitDefaultValue=false)]
+        public string AssistedAnswerId { get; set; }
+        
+        
+        
+        /// <summary>
         /// Applicable only on fatal questions. Indicates that the answer selected was not the highest score available for the question
         /// </summary>
         /// <value>Applicable only on fatal questions. Indicates that the answer selected was not the highest score available for the question</value>
@@ -136,6 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AnswerId: ").Append(AnswerId).Append("\n");
             sb.Append("  Score: ").Append(Score).Append("\n");
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
+            sb.Append("  AssistedAnswerId: ").Append(AssistedAnswerId).Append("\n");
             sb.Append("  FailedKillQuestion: ").Append(FailedKillQuestion).Append("\n");
             sb.Append("  Comments: ").Append(Comments).Append("\n");
             sb.Append("}\n");
@@ -199,6 +216,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MarkedNA.Equals(other.MarkedNA)
                 ) &&
                 (
+                    this.AssistedAnswerId == other.AssistedAnswerId ||
+                    this.AssistedAnswerId != null &&
+                    this.AssistedAnswerId.Equals(other.AssistedAnswerId)
+                ) &&
+                (
                     this.FailedKillQuestion == other.FailedKillQuestion ||
                     this.FailedKillQuestion != null &&
                     this.FailedKillQuestion.Equals(other.FailedKillQuestion)
@@ -233,6 +255,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
+                
+                if (this.AssistedAnswerId != null)
+                    hash = hash * 59 + this.AssistedAnswerId.GetHashCode();
                 
                 if (this.FailedKillQuestion != null)
                     hash = hash * 59 + this.FailedKillQuestion.GetHashCode();

@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Team" /> class.
@@ -118,6 +123,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
         
@@ -153,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -217,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
@@ -256,6 +276,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();

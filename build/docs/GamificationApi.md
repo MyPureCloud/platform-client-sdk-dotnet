@@ -2941,7 +2941,7 @@ namespace Example
 
 <a name="postgamificationprofiles"></a>
 
-## [**GetProfilesResponse**](GetProfilesResponse.html) PostGamificationProfiles (CreatePerformanceProfile body)
+## [**GetProfilesResponse**](GetProfilesResponse.html) PostGamificationProfiles (CreatePerformanceProfile body, bool? copyMetrics = null)
 
 
 
@@ -2976,11 +2976,12 @@ namespace Example
 
             var apiInstance = new GamificationApi();
             var body = new CreatePerformanceProfile(); // CreatePerformanceProfile | performanceProfile
+            var copyMetrics = true;  // bool? | Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional)  (default to true)
 
             try
             { 
                 // Create a new custom performance profile
-                GetProfilesResponse result = apiInstance.PostGamificationProfiles(body);
+                GetProfilesResponse result = apiInstance.PostGamificationProfiles(body, copyMetrics);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2998,6 +2999,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreatePerformanceProfile**](CreatePerformanceProfile.html)| performanceProfile |  |
+| **copyMetrics** | **bool?**| Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. | [optional] [default to true] |
 {: class="table table-striped"}
 
 ### Return type

@@ -185,8 +185,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The configuration version name (required).</param>
         /// <param name="Description">The description of the configuration.</param>
-        /// <param name="Languages">A list of languages supported on the configuration.</param>
-        /// <param name="DefaultLanguage">The default language to use for the configuration.</param>
+        /// <param name="Languages">A list of languages supported on the configuration required if the messenger is enabled.</param>
+        /// <param name="DefaultLanguage">The default language to use for the configuration required if the messenger is enabled.</param>
         /// <param name="Messenger">The settings for messenger.</param>
         /// <param name="Position">The settings for position.</param>
         /// <param name="SupportCenter">The settings for support center.</param>
@@ -249,18 +249,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// A list of languages supported on the configuration
+        /// A list of languages supported on the configuration required if the messenger is enabled
         /// </summary>
-        /// <value>A list of languages supported on the configuration</value>
+        /// <value>A list of languages supported on the configuration required if the messenger is enabled</value>
         [DataMember(Name="languages", EmitDefaultValue=false)]
         public List<string> Languages { get; set; }
         
         
         
         /// <summary>
-        /// The default language to use for the configuration
+        /// The default language to use for the configuration required if the messenger is enabled
         /// </summary>
-        /// <value>The default language to use for the configuration</value>
+        /// <value>The default language to use for the configuration required if the messenger is enabled</value>
         [DataMember(Name="defaultLanguage", EmitDefaultValue=false)]
         public string DefaultLanguage { get; set; }
         

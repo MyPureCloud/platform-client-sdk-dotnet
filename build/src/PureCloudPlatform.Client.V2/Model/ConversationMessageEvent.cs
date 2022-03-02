@@ -39,8 +39,17 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Cobrowse for "CoBrowse"
             /// </summary>
             [EnumMember(Value = "CoBrowse")]
-            Cobrowse
+            Cobrowse,
+            
+            /// <summary>
+            /// Enum Typing for "Typing"
+            /// </summary>
+            [EnumMember(Value = "Typing")]
+            Typing
         }
+        
+        
+        
         
         
         
@@ -59,6 +68,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMessageEvent" /> class.
@@ -71,10 +82,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="EventType">Type of this event element (required).</param>
         /// <param name="CoBrowse">CoBrowse event..</param>
-        public ConversationMessageEvent(EventTypeEnum? EventType = null, ConversationEventCoBrowse CoBrowse = null)
+        /// <param name="Typing">Typing event..</param>
+        public ConversationMessageEvent(EventTypeEnum? EventType = null, ConversationEventCoBrowse CoBrowse = null, ConversationEventTyping Typing = null)
         {
             this.EventType = EventType;
             this.CoBrowse = CoBrowse;
+            this.Typing = Typing;
             
         }
         
@@ -90,6 +103,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationEventCoBrowse CoBrowse { get; set; }
         
         
+        
+        /// <summary>
+        /// Typing event.
+        /// </summary>
+        /// <value>Typing event.</value>
+        [DataMember(Name="typing", EmitDefaultValue=false)]
+        public ConversationEventTyping Typing { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -101,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  CoBrowse: ").Append(CoBrowse).Append("\n");
+            sb.Append("  Typing: ").Append(Typing).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,6 +173,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CoBrowse == other.CoBrowse ||
                     this.CoBrowse != null &&
                     this.CoBrowse.Equals(other.CoBrowse)
+                ) &&
+                (
+                    this.Typing == other.Typing ||
+                    this.Typing != null &&
+                    this.Typing.Equals(other.Typing)
                 );
         }
 
@@ -170,6 +198,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CoBrowse != null)
                     hash = hash * 59 + this.CoBrowse.GetHashCode();
+                
+                if (this.Typing != null)
+                    hash = hash * 59 + this.Typing.GetHashCode();
                 
                 return hash;
             }

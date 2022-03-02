@@ -35,6 +35,39 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The type of the DncList.
+        /// </summary>
+        /// <value>The type of the DncList.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DncSourceTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Rds for "rds"
+            /// </summary>
+            [EnumMember(Value = "rds")]
+            Rds,
+            
+            /// <summary>
+            /// Enum Dnccom for "dnc.com"
+            /// </summary>
+            [EnumMember(Value = "dnc.com")]
+            Dnccom,
+            
+            /// <summary>
+            /// Enum Gryphon for "gryphon"
+            /// </summary>
+            [EnumMember(Value = "gryphon")]
+            Gryphon
+        }
         
         
         
@@ -46,6 +79,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The type of the DncList.
+        /// </summary>
+        /// <value>The type of the DncList.</value>
+        [DataMember(Name="dncSourceType", EmitDefaultValue=false)]
+        public DncSourceTypeEnum? DncSourceType { get; set; }
         
         
         
@@ -109,6 +155,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -131,6 +179,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
+            sb.Append("  DncSourceType: ").Append(DncSourceType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -198,6 +247,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Size.Equals(other.Size)
                 ) &&
                 (
+                    this.DncSourceType == other.DncSourceType ||
+                    this.DncSourceType != null &&
+                    this.DncSourceType.Equals(other.DncSourceType)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -230,6 +284,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Size != null)
                     hash = hash * 59 + this.Size.GetHashCode();
+                
+                if (this.DncSourceType != null)
+                    hash = hash * 59 + this.DncSourceType.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

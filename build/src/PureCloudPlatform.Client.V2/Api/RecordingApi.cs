@@ -190,8 +190,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Recording</returns>
-        Recording GetConversationRecording (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null);
+        Recording GetConversationRecording (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
         /// Gets a specific recording.
@@ -209,8 +210,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
-        ApiResponse<Recording> GetConversationRecordingWithHttpInfo (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null);
+        ApiResponse<Recording> GetConversationRecordingWithHttpInfo (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
         
         /// <summary>
         /// Get annotation
@@ -317,9 +319,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>List&lt;Recording&gt;</returns>
-        List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null);
+        List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null);
 
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
@@ -330,9 +333,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
-        ApiResponse<List<Recording>> GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
+        ApiResponse<List<Recording>> GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null);
         
         /// <summary>
         /// Gets a single orphan recording
@@ -371,8 +375,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Recording</returns>
-        Recording GetOrphanrecordingMedia (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null);
+        Recording GetOrphanrecordingMedia (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
         /// Gets the media of a single orphan recording
@@ -389,8 +394,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
-        ApiResponse<Recording> GetOrphanrecordingMediaWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null);
+        ApiResponse<Recording> GetOrphanrecordingMediaWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
         
         /// <summary>
         /// Gets all orphan recordings
@@ -1530,8 +1536,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of Recording</returns>
-        System.Threading.Tasks.Task<Recording> GetConversationRecordingAsync (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null);
+        System.Threading.Tasks.Task<Recording> GetConversationRecordingAsync (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
         /// Gets a specific recording.
@@ -1549,8 +1556,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
         
         /// <summary>
         /// Get annotation
@@ -1657,9 +1665,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
-        System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null);
+        System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null);
 
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
@@ -1670,9 +1679,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
+        System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null);
         
         /// <summary>
         /// Gets a single orphan recording
@@ -1711,8 +1721,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of Recording</returns>
-        System.Threading.Tasks.Task<Recording> GetOrphanrecordingMediaAsync (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null);
+        System.Threading.Tasks.Task<Recording> GetOrphanrecordingMediaAsync (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
         /// Gets the media of a single orphan recording
@@ -1729,8 +1740,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Recording>> GetOrphanrecordingMediaAsyncWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<Recording>> GetOrphanrecordingMediaAsyncWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
         
         /// <summary>
         /// Gets all orphan recordings
@@ -4162,10 +4174,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Recording</returns>
-        public Recording GetConversationRecording (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null)
+        public Recording GetConversationRecording (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         {
-             ApiResponse<Recording> localVarResponse = GetConversationRecordingWithHttpInfo(conversationId, recordingId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale);
+             ApiResponse<Recording> localVarResponse = GetConversationRecordingWithHttpInfo(conversationId, recordingId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats);
              return localVarResponse.Data;
         }
 
@@ -4182,8 +4195,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
-        public ApiResponse< Recording > GetConversationRecordingWithHttpInfo (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null)
+        public ApiResponse< Recording > GetConversationRecordingWithHttpInfo (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -4234,6 +4248,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (download != null) localVarQueryParams.Add(new Tuple<string, string>("download", this.Configuration.ApiClient.ParameterToString(download)));
             if (fileName != null) localVarQueryParams.Add(new Tuple<string, string>("fileName", this.Configuration.ApiClient.ParameterToString(fileName)));
             if (locale != null) localVarQueryParams.Add(new Tuple<string, string>("locale", this.Configuration.ApiClient.ParameterToString(locale)));
+            if (mediaFormats != null) mediaFormats.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("mediaFormats", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -4284,10 +4299,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of Recording</returns>
-        public async System.Threading.Tasks.Task<Recording> GetConversationRecordingAsync (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null)
+        public async System.Threading.Tasks.Task<Recording> GetConversationRecordingAsync (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         {
-             ApiResponse<Recording> localVarResponse = await GetConversationRecordingAsyncWithHttpInfo(conversationId, recordingId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale);
+             ApiResponse<Recording> localVarResponse = await GetConversationRecordingAsyncWithHttpInfo(conversationId, recordingId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats);
              return localVarResponse.Data;
 
         }
@@ -4305,8 +4321,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording. Valid values:true,false (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -4359,6 +4376,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (download != null) localVarQueryParams.Add(new Tuple<string, string>("download", this.Configuration.ApiClient.ParameterToString(download)));
             if (fileName != null) localVarQueryParams.Add(new Tuple<string, string>("fileName", this.Configuration.ApiClient.ParameterToString(fileName)));
             if (locale != null) localVarQueryParams.Add(new Tuple<string, string>("locale", this.Configuration.ApiClient.ParameterToString(locale)));
+            if (mediaFormats != null) mediaFormats.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("mediaFormats", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -5227,11 +5245,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>List&lt;Recording&gt;</returns>
-        public List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null)
+        public List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
         {
-             ApiResponse<List<Recording>> localVarResponse = GetConversationRecordingsWithHttpInfo(conversationId, maxWaitMs, formatId);
+             ApiResponse<List<Recording>> localVarResponse = GetConversationRecordingsWithHttpInfo(conversationId, maxWaitMs, formatId, mediaFormats);
              return localVarResponse.Data;
         }
 
@@ -5241,9 +5260,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
-        public ApiResponse< List<Recording> > GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
+        public ApiResponse< List<Recording> > GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -5285,6 +5305,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (maxWaitMs != null) localVarQueryParams.Add(new Tuple<string, string>("maxWaitMs", this.Configuration.ApiClient.ParameterToString(maxWaitMs)));
             if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
+            if (mediaFormats != null) mediaFormats.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("mediaFormats", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -5328,11 +5349,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null)
+        public async System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
         {
-             ApiResponse<List<Recording>> localVarResponse = await GetConversationRecordingsAsyncWithHttpInfo(conversationId, maxWaitMs, formatId);
+             ApiResponse<List<Recording>> localVarResponse = await GetConversationRecordingsAsyncWithHttpInfo(conversationId, maxWaitMs, formatId, mediaFormats);
              return localVarResponse.Data;
 
         }
@@ -5343,9 +5365,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -5388,6 +5411,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (maxWaitMs != null) localVarQueryParams.Add(new Tuple<string, string>("maxWaitMs", this.Configuration.ApiClient.ParameterToString(maxWaitMs)));
             if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
+            if (mediaFormats != null) mediaFormats.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("mediaFormats", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -5631,10 +5655,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Recording</returns>
-        public Recording GetOrphanrecordingMedia (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null)
+        public Recording GetOrphanrecordingMedia (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         {
-             ApiResponse<Recording> localVarResponse = GetOrphanrecordingMediaWithHttpInfo(orphanId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale);
+             ApiResponse<Recording> localVarResponse = GetOrphanrecordingMediaWithHttpInfo(orphanId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats);
              return localVarResponse.Data;
         }
 
@@ -5650,8 +5675,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
-        public ApiResponse< Recording > GetOrphanrecordingMediaWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null)
+        public ApiResponse< Recording > GetOrphanrecordingMediaWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         { 
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
@@ -5698,6 +5724,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (download != null) localVarQueryParams.Add(new Tuple<string, string>("download", this.Configuration.ApiClient.ParameterToString(download)));
             if (fileName != null) localVarQueryParams.Add(new Tuple<string, string>("fileName", this.Configuration.ApiClient.ParameterToString(fileName)));
             if (locale != null) localVarQueryParams.Add(new Tuple<string, string>("locale", this.Configuration.ApiClient.ParameterToString(locale)));
+            if (mediaFormats != null) mediaFormats.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("mediaFormats", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -5747,10 +5774,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of Recording</returns>
-        public async System.Threading.Tasks.Task<Recording> GetOrphanrecordingMediaAsync (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null)
+        public async System.Threading.Tasks.Task<Recording> GetOrphanrecordingMediaAsync (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         {
-             ApiResponse<Recording> localVarResponse = await GetOrphanrecordingMediaAsyncWithHttpInfo(orphanId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale);
+             ApiResponse<Recording> localVarResponse = await GetOrphanrecordingMediaAsyncWithHttpInfo(orphanId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats);
              return localVarResponse.Data;
 
         }
@@ -5767,8 +5795,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
+        /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Recording>> GetOrphanrecordingMediaAsyncWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Recording>> GetOrphanrecordingMediaAsyncWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         { 
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
@@ -5816,6 +5845,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (download != null) localVarQueryParams.Add(new Tuple<string, string>("download", this.Configuration.ApiClient.ParameterToString(download)));
             if (fileName != null) localVarQueryParams.Add(new Tuple<string, string>("fileName", this.Configuration.ApiClient.ParameterToString(fileName)));
             if (locale != null) localVarQueryParams.Add(new Tuple<string, string>("locale", this.Configuration.ApiClient.ParameterToString(locale)));
+            if (mediaFormats != null) mediaFormats.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("mediaFormats", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

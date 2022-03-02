@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStation" /> class.
@@ -136,6 +141,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, string> ProviderInfo { get; set; }
         
         
+        
+        /// <summary>
+        /// The number of call appearances on the station.
+        /// </summary>
+        /// <value>The number of call appearances on the station.</value>
+        [DataMember(Name="webRtcCallAppearances", EmitDefaultValue=false)]
+        public int? WebRtcCallAppearances { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,6 +166,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssociatedDate: ").Append(AssociatedDate).Append("\n");
             sb.Append("  DefaultUser: ").Append(DefaultUser).Append("\n");
             sb.Append("  ProviderInfo: ").Append(ProviderInfo).Append("\n");
+            sb.Append("  WebRtcCallAppearances: ").Append(WebRtcCallAppearances).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -226,6 +241,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ProviderInfo == other.ProviderInfo ||
                     this.ProviderInfo != null &&
                     this.ProviderInfo.SequenceEqual(other.ProviderInfo)
+                ) &&
+                (
+                    this.WebRtcCallAppearances == other.WebRtcCallAppearances ||
+                    this.WebRtcCallAppearances != null &&
+                    this.WebRtcCallAppearances.Equals(other.WebRtcCallAppearances)
                 );
         }
 
@@ -261,6 +281,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ProviderInfo != null)
                     hash = hash * 59 + this.ProviderInfo.GetHashCode();
+                
+                if (this.WebRtcCallAppearances != null)
+                    hash = hash * 59 + this.WebRtcCallAppearances.GetHashCode();
                 
                 return hash;
             }
