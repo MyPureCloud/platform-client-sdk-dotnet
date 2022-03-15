@@ -119,6 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Bullseye,
             
             /// <summary>
+            /// Enum Conditional for "Conditional"
+            /// </summary>
+            [EnumMember(Value = "Conditional")]
+            Conditional,
+            
+            /// <summary>
             /// Enum Last for "Last"
             /// </summary>
             [EnumMember(Value = "Last")]
@@ -172,6 +178,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Bullseye")]
             Bullseye,
+            
+            /// <summary>
+            /// Enum Conditional for "Conditional"
+            /// </summary>
+            [EnumMember(Value = "Conditional")]
+            Conditional,
             
             /// <summary>
             /// Enum Last for "Last"

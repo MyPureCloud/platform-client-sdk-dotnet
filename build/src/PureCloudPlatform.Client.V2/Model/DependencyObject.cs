@@ -140,6 +140,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Dialogflowcxagent,
             
             /// <summary>
+            /// Enum Digitalbotflow for "DIGITALBOTFLOW"
+            /// </summary>
+            [EnumMember(Value = "DIGITALBOTFLOW")]
+            Digitalbotflow,
+            
+            /// <summary>
             /// Enum Emailroute for "EMAILROUTE"
             /// </summary>
             [EnumMember(Value = "EMAILROUTE")]

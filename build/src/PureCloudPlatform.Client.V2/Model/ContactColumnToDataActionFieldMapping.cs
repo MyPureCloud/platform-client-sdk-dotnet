@@ -20,14 +20,52 @@ namespace PureCloudPlatform.Client.V2.Model
     {
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactColumnToDataActionFieldMapping" /> class.
         /// </summary>
-        public ContactColumnToDataActionFieldMapping()
+        [JsonConstructorAttribute]
+        protected ContactColumnToDataActionFieldMapping() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ContactColumnToDataActionFieldMapping" /> class.
+        /// </summary>
+        /// <param name="ContactColumnName">The name of a contact column whose data will be passed to the data action (required).</param>
+        /// <param name="DataActionField">The name of an input field from the data action that the contact column data will be passed to (required).</param>
+        public ContactColumnToDataActionFieldMapping(string ContactColumnName = null, string DataActionField = null)
         {
+            this.ContactColumnName = ContactColumnName;
+            this.DataActionField = DataActionField;
             
         }
+        
+        
+        
+        /// <summary>
+        /// The name of a contact column whose data will be passed to the data action
+        /// </summary>
+        /// <value>The name of a contact column whose data will be passed to the data action</value>
+        [DataMember(Name="contactColumnName", EmitDefaultValue=false)]
+        public string ContactColumnName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The name of an input field from the data action that the contact column data will be passed to
+        /// </summary>
+        /// <value>The name of an input field from the data action that the contact column data will be passed to</value>
+        [DataMember(Name="dataActionField", EmitDefaultValue=false)]
+        public string DataActionField { get; set; }
         
         
         /// <summary>
@@ -39,6 +77,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ContactColumnToDataActionFieldMapping {\n");
             
+            sb.Append("  ContactColumnName: ").Append(ContactColumnName).Append("\n");
+            sb.Append("  DataActionField: ").Append(DataActionField).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -78,7 +118,17 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.ContactColumnName == other.ContactColumnName ||
+                    this.ContactColumnName != null &&
+                    this.ContactColumnName.Equals(other.ContactColumnName)
+                ) &&
+                (
+                    this.DataActionField == other.DataActionField ||
+                    this.DataActionField != null &&
+                    this.DataActionField.Equals(other.DataActionField)
+                );
         }
 
         /// <summary>
@@ -92,6 +142,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.ContactColumnName != null)
+                    hash = hash * 59 + this.ContactColumnName.GetHashCode();
+                
+                if (this.DataActionField != null)
+                    hash = hash * 59 + this.DataActionField.GetHashCode();
                 
                 return hash;
             }

@@ -69,7 +69,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Dede for "de-DE"
             /// </summary>
             [EnumMember(Value = "de-DE")]
-            Dede
+            Dede,
+            
+            /// <summary>
+            /// Enum Esus for "es-US"
+            /// </summary>
+            [EnumMember(Value = "es-US")]
+            Esus,
+            
+            /// <summary>
+            /// Enum Eses for "es-ES"
+            /// </summary>
+            [EnumMember(Value = "es-ES")]
+            Eses,
+            
+            /// <summary>
+            /// Enum Frfr for "fr-FR"
+            /// </summary>
+            [EnumMember(Value = "fr-FR")]
+            Frfr,
+            
+            /// <summary>
+            /// Enum Ptbr for "pt-BR"
+            /// </summary>
+            [EnumMember(Value = "pt-BR")]
+            Ptbr,
+            
+            /// <summary>
+            /// Enum Nlnl for "nl-NL"
+            /// </summary>
+            [EnumMember(Value = "nl-NL")]
+            Nlnl,
+            
+            /// <summary>
+            /// Enum Itit for "it-IT"
+            /// </summary>
+            [EnumMember(Value = "it-IT")]
+            Itit
         }
         
         

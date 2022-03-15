@@ -1,0 +1,14 @@
+---
+title: FlowMetricsTopicConversationScoredAgent
+---
+## ININ.PureCloudApi.Model.FlowMetricsTopicConversationScoredAgent
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **AgentScore** | **int?** | Assigned agent score for this conversation (0 - 100, higher being better) | [optional] |
+| **ScoredAgentId** | **string** | Unique identifier for the agent that was scored for this conversation | [optional] |
+{: class="table table-striped"}
+
+

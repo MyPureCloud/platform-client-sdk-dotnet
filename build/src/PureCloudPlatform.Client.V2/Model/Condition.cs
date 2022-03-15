@@ -268,6 +268,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The type of the condition.
         /// </summary>
@@ -313,6 +334,20 @@ namespace PureCloudPlatform.Client.V2.Model
         public PropertyTypeEnum? PropertyType { get; set; }
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Condition" /> class.
@@ -326,7 +361,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Codes">List of wrap-up code identifiers. Required for a wrapupCondition..</param>
         /// <param name="Property">A value associated with the property type of this Condition. Required for a contactPropertyCondition..</param>
         /// <param name="PropertyType">The type of the property associated with this Condition. Required for a contactPropertyCondition..</param>
-        public Condition(TypeEnum? Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null, string Property = null, PropertyTypeEnum? PropertyType = null)
+        /// <param name="DataAction">The Data Action to use for this condition. Required for a dataActionCondition..</param>
+        /// <param name="DataNotFoundResolution">The result of this condition if the data action returns a result indicating there was no data. Required for a DataActionCondition..</param>
+        /// <param name="ContactIdField">The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionCondition..</param>
+        /// <param name="CallAnalysisResultField">The input field from the data action that the callAnalysisResult will be passed to for this condition. Valid for a wrapup dataActionCondition..</param>
+        /// <param name="AgentWrapupField">The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition..</param>
+        /// <param name="ContactColumnToDataActionFieldMappings">A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition..</param>
+        /// <param name="Predicates">A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition..</param>
+        public Condition(TypeEnum? Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null, string Property = null, PropertyTypeEnum? PropertyType = null, DomainEntityRef DataAction = null, bool? DataNotFoundResolution = null, string ContactIdField = null, string CallAnalysisResultField = null, string AgentWrapupField = null, List<ContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings = null, List<DataActionConditionPredicate> Predicates = null)
         {
             this.Type = Type;
             this.Inverted = Inverted;
@@ -337,6 +379,13 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Codes = Codes;
             this.Property = Property;
             this.PropertyType = PropertyType;
+            this.DataAction = DataAction;
+            this.DataNotFoundResolution = DataNotFoundResolution;
+            this.ContactIdField = ContactIdField;
+            this.CallAnalysisResultField = CallAnalysisResultField;
+            this.AgentWrapupField = AgentWrapupField;
+            this.ContactColumnToDataActionFieldMappings = ContactColumnToDataActionFieldMappings;
+            this.Predicates = Predicates;
             
         }
         
@@ -394,6 +443,69 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// The Data Action to use for this condition. Required for a dataActionCondition.
+        /// </summary>
+        /// <value>The Data Action to use for this condition. Required for a dataActionCondition.</value>
+        [DataMember(Name="dataAction", EmitDefaultValue=false)]
+        public DomainEntityRef DataAction { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The result of this condition if the data action returns a result indicating there was no data. Required for a DataActionCondition.
+        /// </summary>
+        /// <value>The result of this condition if the data action returns a result indicating there was no data. Required for a DataActionCondition.</value>
+        [DataMember(Name="dataNotFoundResolution", EmitDefaultValue=false)]
+        public bool? DataNotFoundResolution { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionCondition.
+        /// </summary>
+        /// <value>The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionCondition.</value>
+        [DataMember(Name="contactIdField", EmitDefaultValue=false)]
+        public string ContactIdField { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The input field from the data action that the callAnalysisResult will be passed to for this condition. Valid for a wrapup dataActionCondition.
+        /// </summary>
+        /// <value>The input field from the data action that the callAnalysisResult will be passed to for this condition. Valid for a wrapup dataActionCondition.</value>
+        [DataMember(Name="callAnalysisResultField", EmitDefaultValue=false)]
+        public string CallAnalysisResultField { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition.
+        /// </summary>
+        /// <value>The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition.</value>
+        [DataMember(Name="agentWrapupField", EmitDefaultValue=false)]
+        public string AgentWrapupField { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition.
+        /// </summary>
+        /// <value>A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition.</value>
+        [DataMember(Name="contactColumnToDataActionFieldMappings", EmitDefaultValue=false)]
+        public List<ContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition.
+        /// </summary>
+        /// <value>A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition.</value>
+        [DataMember(Name="predicates", EmitDefaultValue=false)]
+        public List<DataActionConditionPredicate> Predicates { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -412,6 +524,13 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Codes: ").Append(Codes).Append("\n");
             sb.Append("  Property: ").Append(Property).Append("\n");
             sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
+            sb.Append("  DataAction: ").Append(DataAction).Append("\n");
+            sb.Append("  DataNotFoundResolution: ").Append(DataNotFoundResolution).Append("\n");
+            sb.Append("  ContactIdField: ").Append(ContactIdField).Append("\n");
+            sb.Append("  CallAnalysisResultField: ").Append(CallAnalysisResultField).Append("\n");
+            sb.Append("  AgentWrapupField: ").Append(AgentWrapupField).Append("\n");
+            sb.Append("  ContactColumnToDataActionFieldMappings: ").Append(ContactColumnToDataActionFieldMappings).Append("\n");
+            sb.Append("  Predicates: ").Append(Predicates).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -496,6 +615,41 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PropertyType == other.PropertyType ||
                     this.PropertyType != null &&
                     this.PropertyType.Equals(other.PropertyType)
+                ) &&
+                (
+                    this.DataAction == other.DataAction ||
+                    this.DataAction != null &&
+                    this.DataAction.Equals(other.DataAction)
+                ) &&
+                (
+                    this.DataNotFoundResolution == other.DataNotFoundResolution ||
+                    this.DataNotFoundResolution != null &&
+                    this.DataNotFoundResolution.Equals(other.DataNotFoundResolution)
+                ) &&
+                (
+                    this.ContactIdField == other.ContactIdField ||
+                    this.ContactIdField != null &&
+                    this.ContactIdField.Equals(other.ContactIdField)
+                ) &&
+                (
+                    this.CallAnalysisResultField == other.CallAnalysisResultField ||
+                    this.CallAnalysisResultField != null &&
+                    this.CallAnalysisResultField.Equals(other.CallAnalysisResultField)
+                ) &&
+                (
+                    this.AgentWrapupField == other.AgentWrapupField ||
+                    this.AgentWrapupField != null &&
+                    this.AgentWrapupField.Equals(other.AgentWrapupField)
+                ) &&
+                (
+                    this.ContactColumnToDataActionFieldMappings == other.ContactColumnToDataActionFieldMappings ||
+                    this.ContactColumnToDataActionFieldMappings != null &&
+                    this.ContactColumnToDataActionFieldMappings.SequenceEqual(other.ContactColumnToDataActionFieldMappings)
+                ) &&
+                (
+                    this.Predicates == other.Predicates ||
+                    this.Predicates != null &&
+                    this.Predicates.SequenceEqual(other.Predicates)
                 );
         }
 
@@ -537,6 +691,27 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PropertyType != null)
                     hash = hash * 59 + this.PropertyType.GetHashCode();
+                
+                if (this.DataAction != null)
+                    hash = hash * 59 + this.DataAction.GetHashCode();
+                
+                if (this.DataNotFoundResolution != null)
+                    hash = hash * 59 + this.DataNotFoundResolution.GetHashCode();
+                
+                if (this.ContactIdField != null)
+                    hash = hash * 59 + this.ContactIdField.GetHashCode();
+                
+                if (this.CallAnalysisResultField != null)
+                    hash = hash * 59 + this.CallAnalysisResultField.GetHashCode();
+                
+                if (this.AgentWrapupField != null)
+                    hash = hash * 59 + this.AgentWrapupField.GetHashCode();
+                
+                if (this.ContactColumnToDataActionFieldMappings != null)
+                    hash = hash * 59 + this.ContactColumnToDataActionFieldMappings.GetHashCode();
+                
+                if (this.Predicates != null)
+                    hash = hash * 59 + this.Predicates.GetHashCode();
                 
                 return hash;
             }

@@ -5140,7 +5140,7 @@ namespace Example
 
 Get a list of notifications for the current user
 
-
+Notifications are only initially sent if you have the relevant Notify and Edit permissions
 
 Requires NO permissions: 
 

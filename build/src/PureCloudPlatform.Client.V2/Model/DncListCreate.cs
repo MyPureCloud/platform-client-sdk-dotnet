@@ -78,6 +78,37 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The contact method. Required if dncSourceType is rds.
+        /// </summary>
+        /// <value>The contact method. Required if dncSourceType is rds.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ContactMethodEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Email for "Email"
+            /// </summary>
+            [EnumMember(Value = "Email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Phone for "Phone"
+            /// </summary>
+            [EnumMember(Value = "Phone")]
+            Phone
+        }
+        
+        
+        
+        
         
         
         
@@ -117,6 +148,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The contact method. Required if dncSourceType is rds.
+        /// </summary>
+        /// <value>The contact method. Required if dncSourceType is rds.</value>
+        [DataMember(Name="contactMethod", EmitDefaultValue=false)]
+        public ContactMethodEnum? ContactMethod { get; set; }
+        
+        
+        
         
         
         
@@ -139,15 +179,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the DncList. (required).</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="DncSourceType">The type of the DncList. (required).</param>
+        /// <param name="ContactMethod">The contact method. Required if dncSourceType is rds..</param>
         /// <param name="LoginId">A dnc.com loginId. Required if the dncSourceType is dnc.com..</param>
         /// <param name="DncCodes">The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com..</param>
         /// <param name="LicenseId">A gryphon license number. Required if the dncSourceType is gryphon..</param>
         /// <param name="Division">The division this DncList belongs to..</param>
-        public DncListCreate(string Name = null, int? Version = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, DomainEntityRef Division = null)
+        public DncListCreate(string Name = null, int? Version = null, DncSourceTypeEnum? DncSourceType = null, ContactMethodEnum? ContactMethod = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, DomainEntityRef Division = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.DncSourceType = DncSourceType;
+            this.ContactMethod = ContactMethod;
             this.LoginId = LoginId;
             this.DncCodes = DncCodes;
             this.LicenseId = LicenseId;
@@ -222,6 +264,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// A dnc.com loginId. Required if the dncSourceType is dnc.com.
         /// </summary>
@@ -283,6 +327,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  DncSourceType: ").Append(DncSourceType).Append("\n");
+            sb.Append("  ContactMethod: ").Append(ContactMethod).Append("\n");
             sb.Append("  LoginId: ").Append(LoginId).Append("\n");
             sb.Append("  DncCodes: ").Append(DncCodes).Append("\n");
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
@@ -369,6 +414,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DncSourceType.Equals(other.DncSourceType)
                 ) &&
                 (
+                    this.ContactMethod == other.ContactMethod ||
+                    this.ContactMethod != null &&
+                    this.ContactMethod.Equals(other.ContactMethod)
+                ) &&
+                (
                     this.LoginId == other.LoginId ||
                     this.LoginId != null &&
                     this.LoginId.Equals(other.LoginId)
@@ -430,6 +480,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DncSourceType != null)
                     hash = hash * 59 + this.DncSourceType.GetHashCode();
+                
+                if (this.ContactMethod != null)
+                    hash = hash * 59 + this.ContactMethod.GetHashCode();
                 
                 if (this.LoginId != null)
                     hash = hash * 59 + this.LoginId.GetHashCode();

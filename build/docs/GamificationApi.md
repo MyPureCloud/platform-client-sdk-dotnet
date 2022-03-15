@@ -2941,7 +2941,7 @@ namespace Example
 
 <a name="postgamificationprofiles"></a>
 
-## [**GetProfilesResponse**](GetProfilesResponse.html) PostGamificationProfiles (CreatePerformanceProfile body, bool? copyMetrics = null)
+## [**PerformanceProfile**](PerformanceProfile.html) PostGamificationProfiles (CreatePerformanceProfile body, bool? copyMetrics = null)
 
 
 
@@ -2981,7 +2981,7 @@ namespace Example
             try
             { 
                 // Create a new custom performance profile
-                GetProfilesResponse result = apiInstance.PostGamificationProfiles(body, copyMetrics);
+                PerformanceProfile result = apiInstance.PostGamificationProfiles(body, copyMetrics);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3004,7 +3004,7 @@ namespace Example
 
 ### Return type
 
-[**GetProfilesResponse**](GetProfilesResponse.html)
+[**PerformanceProfile**](PerformanceProfile.html)
 
 <a name="putgamificationmetric"></a>
 

@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseSet" /> class.
@@ -68,11 +73,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the ResponseSet. (required).</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="Responses">Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}. (required).</param>
-        public ResponseSet(string Name = null, int? Version = null, Dictionary<string, Reaction> Responses = null)
+        /// <param name="BeepDetectionEnabled">Whether to enable answering machine beep detection.</param>
+        public ResponseSet(string Name = null, int? Version = null, Dictionary<string, Reaction> Responses = null, bool? BeepDetectionEnabled = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.Responses = Responses;
+            this.BeepDetectionEnabled = BeepDetectionEnabled;
             
         }
         
@@ -133,6 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Whether to enable answering machine beep detection
+        /// </summary>
+        /// <value>Whether to enable answering machine beep detection</value>
+        [DataMember(Name="beepDetectionEnabled", EmitDefaultValue=false)]
+        public bool? BeepDetectionEnabled { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -155,6 +171,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Responses: ").Append(Responses).Append("\n");
+            sb.Append("  BeepDetectionEnabled: ").Append(BeepDetectionEnabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -227,6 +244,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Responses.SequenceEqual(other.Responses)
                 ) &&
                 (
+                    this.BeepDetectionEnabled == other.BeepDetectionEnabled ||
+                    this.BeepDetectionEnabled != null &&
+                    this.BeepDetectionEnabled.Equals(other.BeepDetectionEnabled)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -262,6 +284,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Responses != null)
                     hash = hash * 59 + this.Responses.GetHashCode();
+                
+                if (this.BeepDetectionEnabled != null)
+                    hash = hash * 59 + this.BeepDetectionEnabled.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

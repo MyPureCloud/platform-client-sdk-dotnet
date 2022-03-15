@@ -52,6 +52,7 @@ title: Participant
 | **FlaggedReason** | **string** | The reason specifying why participant flagged the conversation. | [optional] |
 | **StartAcwTime** | **DateTime?** | The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **EndAcwTime** | **DateTime?** | The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **BargedParticipantId** | **string** | If this participant barged in a participant&#39;s call, then this will be the id of the targeted participant. | [optional] |
 {: class="table table-striped"}
 
 

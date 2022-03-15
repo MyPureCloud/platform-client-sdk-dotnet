@@ -68,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the Open messaging integration. (required).</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
         /// <param name="OutboundNotificationWebhookUrl">The outbound notification webhook URL for the Open messaging integration. (required).</param>
-        /// <param name="OutboundNotificationWebhookSignatureSecretToken">The outbound notification webhook signature secret token. (required).</param>
+        /// <param name="OutboundNotificationWebhookSignatureSecretToken">The outbound notification webhook signature secret token. This token must be longer than 15 characters. (required).</param>
         /// <param name="WebhookHeaders">The user specified headers for the Open messaging integration..</param>
         public OpenIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, string OutboundNotificationWebhookUrl = null, string OutboundNotificationWebhookSignatureSecretToken = null, Dictionary<string, string> WebhookHeaders = null)
         {
@@ -119,9 +119,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The outbound notification webhook signature secret token.
+        /// The outbound notification webhook signature secret token. This token must be longer than 15 characters.
         /// </summary>
-        /// <value>The outbound notification webhook signature secret token.</value>
+        /// <value>The outbound notification webhook signature secret token. This token must be longer than 15 characters.</value>
         [DataMember(Name="outboundNotificationWebhookSignatureSecretToken", EmitDefaultValue=false)]
         public string OutboundNotificationWebhookSignatureSecretToken { get; set; }
         

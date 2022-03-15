@@ -309,7 +309,7 @@ namespace Example
 | **sortBy** | **string**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional] <br />**Values**: RecommendedCompletionDate, DateModified |
 | **userId** | [**List<string>**](string.html)| Specifies the list of user IDs to be queried, up to 100 user IDs. | [optional]  |
 | **types** | [**List<string>**](string.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional] <br />**Values**: Informational, AssessedContent, Assessment |
-| **states** | [**List<string>**](string.html)| Specifies the assignment states to filter by | [optional] <br />**Values**: Assigned, InProgress, Completed |
+| **states** | [**List<string>**](string.html)| Specifies the assignment states to filter by | [optional] <br />**Values**: Assigned, InProgress, Completed, NotCompleted |
 | **expand** | [**List<string>**](string.html)| Specifies the expand option for returning additional information | [optional] <br />**Values**: ModuleSummary |
 {: class="table table-striped"}
 
@@ -399,7 +399,7 @@ namespace Example
 | **sortOrder** | **string**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
 | **sortBy** | **string**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional] <br />**Values**: RecommendedCompletionDate, DateModified |
 | **types** | [**List<string>**](string.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional] <br />**Values**: Informational, AssessedContent, Assessment |
-| **states** | [**List<string>**](string.html)| Specifies the assignment states to filter by | [optional] <br />**Values**: Assigned, InProgress, Completed |
+| **states** | [**List<string>**](string.html)| Specifies the assignment states to filter by | [optional] <br />**Values**: Assigned, InProgress, Completed, NotCompleted |
 | **expand** | [**List<string>**](string.html)| Specifies the expand option for returning additional information | [optional] <br />**Values**: ModuleSummary |
 {: class="table table-striped"}
 

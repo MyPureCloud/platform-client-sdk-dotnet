@@ -441,6 +441,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting
         /// </summary>
@@ -551,6 +557,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CallMediaParticipant" /> class.
@@ -599,9 +609,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FaxStatus">Extra fax information if the call is a fax..</param>
         /// <param name="MonitoredParticipantId">The ID of the participant being monitored when performing a call monitor..</param>
         /// <param name="CoachedParticipantId">The ID of the participant being coached when performing a call coach..</param>
+        /// <param name="BargedParticipantId">If this participant barged in a participant&#39;s call, then this will be the id of the targeted participant..</param>
         /// <param name="ConsultParticipantId">The ID of the consult transfer target participant when performing a consult transfer..</param>
         /// <param name="UuiData">User-to-User information which maps to a SIP header field defined in RFC7433. UUI data is used in the Public Switched Telephone Network (PSTN) for use cases described in RFC6567..</param>
-        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string ConsultParticipantId = null, string UuiData = null)
+        /// <param name="BargedTime">The timestamp when this participant was connected to the barge conference in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, string ConsultParticipantId = null, string UuiData = null, DateTime? BargedTime = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -647,8 +659,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FaxStatus = FaxStatus;
             this.MonitoredParticipantId = MonitoredParticipantId;
             this.CoachedParticipantId = CoachedParticipantId;
+            this.BargedParticipantId = BargedParticipantId;
             this.ConsultParticipantId = ConsultParticipantId;
             this.UuiData = UuiData;
+            this.BargedTime = BargedTime;
             
         }
         
@@ -1016,6 +1030,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// If this participant barged in a participant&#39;s call, then this will be the id of the targeted participant.
+        /// </summary>
+        /// <value>If this participant barged in a participant&#39;s call, then this will be the id of the targeted participant.</value>
+        [DataMember(Name="bargedParticipantId", EmitDefaultValue=false)]
+        public string BargedParticipantId { get; set; }
+        
+        
+        
+        /// <summary>
         /// The ID of the consult transfer target participant when performing a consult transfer.
         /// </summary>
         /// <value>The ID of the consult transfer target participant when performing a consult transfer.</value>
@@ -1030,6 +1053,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>User-to-User information which maps to a SIP header field defined in RFC7433. UUI data is used in the Public Switched Telephone Network (PSTN) for use cases described in RFC6567.</value>
         [DataMember(Name="uuiData", EmitDefaultValue=false)]
         public string UuiData { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The timestamp when this participant was connected to the barge conference in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The timestamp when this participant was connected to the barge conference in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="bargedTime", EmitDefaultValue=false)]
+        public DateTime? BargedTime { get; set; }
         
         
         /// <summary>
@@ -1085,8 +1117,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
             sb.Append("  CoachedParticipantId: ").Append(CoachedParticipantId).Append("\n");
+            sb.Append("  BargedParticipantId: ").Append(BargedParticipantId).Append("\n");
             sb.Append("  ConsultParticipantId: ").Append(ConsultParticipantId).Append("\n");
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
+            sb.Append("  BargedTime: ").Append(BargedTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1348,6 +1382,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CoachedParticipantId.Equals(other.CoachedParticipantId)
                 ) &&
                 (
+                    this.BargedParticipantId == other.BargedParticipantId ||
+                    this.BargedParticipantId != null &&
+                    this.BargedParticipantId.Equals(other.BargedParticipantId)
+                ) &&
+                (
                     this.ConsultParticipantId == other.ConsultParticipantId ||
                     this.ConsultParticipantId != null &&
                     this.ConsultParticipantId.Equals(other.ConsultParticipantId)
@@ -1356,6 +1395,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UuiData == other.UuiData ||
                     this.UuiData != null &&
                     this.UuiData.Equals(other.UuiData)
+                ) &&
+                (
+                    this.BargedTime == other.BargedTime ||
+                    this.BargedTime != null &&
+                    this.BargedTime.Equals(other.BargedTime)
                 );
         }
 
@@ -1503,11 +1547,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.CoachedParticipantId != null)
                     hash = hash * 59 + this.CoachedParticipantId.GetHashCode();
                 
+                if (this.BargedParticipantId != null)
+                    hash = hash * 59 + this.BargedParticipantId.GetHashCode();
+                
                 if (this.ConsultParticipantId != null)
                     hash = hash * 59 + this.ConsultParticipantId.GetHashCode();
                 
                 if (this.UuiData != null)
                     hash = hash * 59 + this.UuiData.GetHashCode();
+                
+                if (this.BargedTime != null)
+                    hash = hash * 59 + this.BargedTime.GetHashCode();
                 
                 return hash;
             }

@@ -324,106 +324,403 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        /// <summary>
+        /// Indicates the participant purpose of the participant initiating a message conversation
+        /// </summary>
+        /// <value>Indicates the participant purpose of the participant initiating a message conversation</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ConversationInitiatorEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Acd for "acd"
+            /// </summary>
+            [EnumMember(Value = "acd")]
+            Acd,
+            
+            /// <summary>
+            /// Enum Agent for "agent"
+            /// </summary>
+            [EnumMember(Value = "agent")]
+            Agent,
+            
+            /// <summary>
+            /// Enum Api for "api"
+            /// </summary>
+            [EnumMember(Value = "api")]
+            Api,
+            
+            /// <summary>
+            /// Enum Botflow for "botflow"
+            /// </summary>
+            [EnumMember(Value = "botflow")]
+            Botflow,
+            
+            /// <summary>
+            /// Enum Campaign for "campaign"
+            /// </summary>
+            [EnumMember(Value = "campaign")]
+            Campaign,
+            
+            /// <summary>
+            /// Enum Customer for "customer"
+            /// </summary>
+            [EnumMember(Value = "customer")]
+            Customer,
+            
+            /// <summary>
+            /// Enum Dialer for "dialer"
+            /// </summary>
+            [EnumMember(Value = "dialer")]
+            Dialer,
+            
+            /// <summary>
+            /// Enum External for "external"
+            /// </summary>
+            [EnumMember(Value = "external")]
+            External,
+            
+            /// <summary>
+            /// Enum Fax for "fax"
+            /// </summary>
+            [EnumMember(Value = "fax")]
+            Fax,
+            
+            /// <summary>
+            /// Enum Group for "group"
+            /// </summary>
+            [EnumMember(Value = "group")]
+            Group,
+            
+            /// <summary>
+            /// Enum Inbound for "inbound"
+            /// </summary>
+            [EnumMember(Value = "inbound")]
+            Inbound,
+            
+            /// <summary>
+            /// Enum Ivr for "ivr"
+            /// </summary>
+            [EnumMember(Value = "ivr")]
+            Ivr,
+            
+            /// <summary>
+            /// Enum Manual for "manual"
+            /// </summary>
+            [EnumMember(Value = "manual")]
+            Manual,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound,
+            
+            /// <summary>
+            /// Enum Station for "station"
+            /// </summary>
+            [EnumMember(Value = "station")]
+            Station,
+            
+            /// <summary>
+            /// Enum User for "user"
+            /// </summary>
+            [EnumMember(Value = "user")]
+            User,
+            
+            /// <summary>
+            /// Enum Voicemail for "voicemail"
+            /// </summary>
+            [EnumMember(Value = "voicemail")]
+            Voicemail,
+            
+            /// <summary>
+            /// Enum Workflow for "workflow"
+            /// </summary>
+            [EnumMember(Value = "workflow")]
+            Workflow
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The email or SMS delivery status
+        /// </summary>
+        /// <value>The email or SMS delivery status</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DeliveryStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Deliveryfailed for "DeliveryFailed"
+            /// </summary>
+            [EnumMember(Value = "DeliveryFailed")]
+            Deliveryfailed,
+            
+            /// <summary>
+            /// Enum Deliverysuccess for "DeliverySuccess"
+            /// </summary>
+            [EnumMember(Value = "DeliverySuccess")]
+            Deliverysuccess,
+            
+            /// <summary>
+            /// Enum Failed for "Failed"
+            /// </summary>
+            [EnumMember(Value = "Failed")]
+            Failed,
+            
+            /// <summary>
+            /// Enum Queued for "Queued"
+            /// </summary>
+            [EnumMember(Value = "Queued")]
+            Queued,
+            
+            /// <summary>
+            /// Enum Read for "Read"
+            /// </summary>
+            [EnumMember(Value = "Read")]
+            Read,
+            
+            /// <summary>
+            /// Enum Received for "Received"
+            /// </summary>
+            [EnumMember(Value = "Received")]
+            Received,
+            
+            /// <summary>
+            /// Enum Sent for "Sent"
+            /// </summary>
+            [EnumMember(Value = "Sent")]
+            Sent
+        }
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The direction of the communication
+        /// </summary>
+        /// <value>The direction of the communication</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DirectionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Inbound for "inbound"
+            /// </summary>
+            [EnumMember(Value = "inbound")]
+            Inbound,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound
+        }
+        
+        
+        
+        
+        /// <summary>
+        /// The session disconnect type
+        /// </summary>
+        /// <value>The session disconnect type</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DisconnectTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Client for "client"
+            /// </summary>
+            [EnumMember(Value = "client")]
+            Client,
+            
+            /// <summary>
+            /// Enum Conferencetransfer for "conferenceTransfer"
+            /// </summary>
+            [EnumMember(Value = "conferenceTransfer")]
+            Conferencetransfer,
+            
+            /// <summary>
+            /// Enum Consulttransfer for "consultTransfer"
+            /// </summary>
+            [EnumMember(Value = "consultTransfer")]
+            Consulttransfer,
+            
+            /// <summary>
+            /// Enum Endpoint for "endpoint"
+            /// </summary>
+            [EnumMember(Value = "endpoint")]
+            Endpoint,
+            
+            /// <summary>
+            /// Enum Error for "error"
+            /// </summary>
+            [EnumMember(Value = "error")]
+            Error,
+            
+            /// <summary>
+            /// Enum Forwardtransfer for "forwardTransfer"
+            /// </summary>
+            [EnumMember(Value = "forwardTransfer")]
+            Forwardtransfer,
+            
+            /// <summary>
+            /// Enum Noanswertransfer for "noAnswerTransfer"
+            /// </summary>
+            [EnumMember(Value = "noAnswerTransfer")]
+            Noanswertransfer,
+            
+            /// <summary>
+            /// Enum Notavailabletransfer for "notAvailableTransfer"
+            /// </summary>
+            [EnumMember(Value = "notAvailableTransfer")]
+            Notavailabletransfer,
+            
+            /// <summary>
+            /// Enum Other for "other"
+            /// </summary>
+            [EnumMember(Value = "other")]
+            Other,
+            
+            /// <summary>
+            /// Enum Peer for "peer"
+            /// </summary>
+            [EnumMember(Value = "peer")]
+            Peer,
+            
+            /// <summary>
+            /// Enum Spam for "spam"
+            /// </summary>
+            [EnumMember(Value = "spam")]
+            Spam,
+            
+            /// <summary>
+            /// Enum System for "system"
+            /// </summary>
+            [EnumMember(Value = "system")]
+            System,
+            
+            /// <summary>
+            /// Enum Timeout for "timeout"
+            /// </summary>
+            [EnumMember(Value = "timeout")]
+            Timeout,
+            
+            /// <summary>
+            /// Enum Transfer for "transfer"
+            /// </summary>
+            [EnumMember(Value = "transfer")]
+            Transfer,
+            
+            /// <summary>
+            /// Enum Transportfailure for "transportFailure"
+            /// </summary>
+            [EnumMember(Value = "transportFailure")]
+            Transportfailure,
+            
+            /// <summary>
+            /// Enum Uncallable for "uncallable"
+            /// </summary>
+            [EnumMember(Value = "uncallable")]
+            Uncallable
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Reason for which participant flagged conversation
+        /// </summary>
+        /// <value>Reason for which participant flagged conversation</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlaggedReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum General for "general"
+            /// </summary>
+            [EnumMember(Value = "general")]
+            General
+        }
         
         
         
@@ -468,6 +765,278 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The session media type
+        /// </summary>
+        /// <value>The session media type</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MediaTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Callback for "callback"
+            /// </summary>
+            [EnumMember(Value = "callback")]
+            Callback,
+            
+            /// <summary>
+            /// Enum Chat for "chat"
+            /// </summary>
+            [EnumMember(Value = "chat")]
+            Chat,
+            
+            /// <summary>
+            /// Enum Cobrowse for "cobrowse"
+            /// </summary>
+            [EnumMember(Value = "cobrowse")]
+            Cobrowse,
+            
+            /// <summary>
+            /// Enum Email for "email"
+            /// </summary>
+            [EnumMember(Value = "email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Message for "message"
+            /// </summary>
+            [EnumMember(Value = "message")]
+            Message,
+            
+            /// <summary>
+            /// Enum Screenshare for "screenshare"
+            /// </summary>
+            [EnumMember(Value = "screenshare")]
+            Screenshare,
+            
+            /// <summary>
+            /// Enum Unknown for "unknown"
+            /// </summary>
+            [EnumMember(Value = "unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Video for "video"
+            /// </summary>
+            [EnumMember(Value = "video")]
+            Video,
+            
+            /// <summary>
+            /// Enum Voice for "voice"
+            /// </summary>
+            [EnumMember(Value = "voice")]
+            Voice
+        }
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The original direction of the conversation
+        /// </summary>
+        /// <value>The original direction of the conversation</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum OriginatingDirectionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Inbound for "inbound"
+            /// </summary>
+            [EnumMember(Value = "inbound")]
+            Inbound,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The participant's purpose
+        /// </summary>
+        /// <value>The participant's purpose</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum PurposeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Acd for "acd"
+            /// </summary>
+            [EnumMember(Value = "acd")]
+            Acd,
+            
+            /// <summary>
+            /// Enum Agent for "agent"
+            /// </summary>
+            [EnumMember(Value = "agent")]
+            Agent,
+            
+            /// <summary>
+            /// Enum Api for "api"
+            /// </summary>
+            [EnumMember(Value = "api")]
+            Api,
+            
+            /// <summary>
+            /// Enum Botflow for "botflow"
+            /// </summary>
+            [EnumMember(Value = "botflow")]
+            Botflow,
+            
+            /// <summary>
+            /// Enum Campaign for "campaign"
+            /// </summary>
+            [EnumMember(Value = "campaign")]
+            Campaign,
+            
+            /// <summary>
+            /// Enum Customer for "customer"
+            /// </summary>
+            [EnumMember(Value = "customer")]
+            Customer,
+            
+            /// <summary>
+            /// Enum Dialer for "dialer"
+            /// </summary>
+            [EnumMember(Value = "dialer")]
+            Dialer,
+            
+            /// <summary>
+            /// Enum External for "external"
+            /// </summary>
+            [EnumMember(Value = "external")]
+            External,
+            
+            /// <summary>
+            /// Enum Fax for "fax"
+            /// </summary>
+            [EnumMember(Value = "fax")]
+            Fax,
+            
+            /// <summary>
+            /// Enum Group for "group"
+            /// </summary>
+            [EnumMember(Value = "group")]
+            Group,
+            
+            /// <summary>
+            /// Enum Inbound for "inbound"
+            /// </summary>
+            [EnumMember(Value = "inbound")]
+            Inbound,
+            
+            /// <summary>
+            /// Enum Ivr for "ivr"
+            /// </summary>
+            [EnumMember(Value = "ivr")]
+            Ivr,
+            
+            /// <summary>
+            /// Enum Manual for "manual"
+            /// </summary>
+            [EnumMember(Value = "manual")]
+            Manual,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound,
+            
+            /// <summary>
+            /// Enum Station for "station"
+            /// </summary>
+            [EnumMember(Value = "station")]
+            Station,
+            
+            /// <summary>
+            /// Enum User for "user"
+            /// </summary>
+            [EnumMember(Value = "user")]
+            User,
+            
+            /// <summary>
+            /// Enum Voicemail for "voicemail"
+            /// </summary>
+            [EnumMember(Value = "voicemail")]
+            Voicemail,
+            
+            /// <summary>
+            /// Enum Workflow for "workflow"
+            /// </summary>
+            [EnumMember(Value = "workflow")]
+            Workflow
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
         /// Gets or Sets RequestedRoutings
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
@@ -486,6 +1055,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Bullseye")]
             Bullseye,
+            
+            /// <summary>
+            /// Enum Conditional for "Conditional"
+            /// </summary>
+            [EnumMember(Value = "Conditional")]
+            Conditional,
             
             /// <summary>
             /// Enum Last for "Last"
@@ -573,6 +1148,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Bullseye,
             
             /// <summary>
+            /// Enum Conditional for "Conditional"
+            /// </summary>
+            [EnumMember(Value = "Conditional")]
+            Conditional,
+            
+            /// <summary>
             /// Enum Last for "Last"
             /// </summary>
             [EnumMember(Value = "Last")]
@@ -657,6 +1238,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Indicates the participant purpose of the participant initiating a message conversation
+        /// </summary>
+        /// <value>Indicates the participant purpose of the participant initiating a message conversation</value>
+        [DataMember(Name="conversationInitiator", EmitDefaultValue=false)]
+        public ConversationInitiatorEnum? ConversationInitiator { get; set; }
         
         
         
@@ -666,14 +1253,32 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The email or SMS delivery status
+        /// </summary>
+        /// <value>The email or SMS delivery status</value>
+        [DataMember(Name="deliveryStatus", EmitDefaultValue=false)]
+        public DeliveryStatusEnum? DeliveryStatus { get; set; }
         
         
         
         
         
+        /// <summary>
+        /// The direction of the communication
+        /// </summary>
+        /// <value>The direction of the communication</value>
+        [DataMember(Name="direction", EmitDefaultValue=false)]
+        public DirectionEnum? Direction { get; set; }
         
         
         
+        /// <summary>
+        /// The session disconnect type
+        /// </summary>
+        /// <value>The session disconnect type</value>
+        [DataMember(Name="disconnectType", EmitDefaultValue=false)]
+        public DisconnectTypeEnum? DisconnectType { get; set; }
         
         
         
@@ -697,6 +1302,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Reason for which participant flagged conversation
+        /// </summary>
+        /// <value>Reason for which participant flagged conversation</value>
+        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
+        public FlaggedReasonEnum? FlaggedReason { get; set; }
         
         
         
@@ -726,16 +1337,44 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The session media type
+        /// </summary>
+        /// <value>The session media type</value>
+        [DataMember(Name="mediaType", EmitDefaultValue=false)]
+        public MediaTypeEnum? MediaType { get; set; }
         
         
         
         
         
+        /// <summary>
+        /// The original direction of the conversation
+        /// </summary>
+        /// <value>The original direction of the conversation</value>
+        [DataMember(Name="originatingDirection", EmitDefaultValue=false)]
+        public OriginatingDirectionEnum? OriginatingDirection { get; set; }
         
         
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The participant's purpose
+        /// </summary>
+        /// <value>The participant's purpose</value>
+        [DataMember(Name="purpose", EmitDefaultValue=false)]
+        public PurposeEnum? Purpose { get; set; }
         
         
         
@@ -812,6 +1451,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationInitiator">Indicates the participant purpose of the participant initiating a message conversation.</param>
         /// <param name="ConvertedFrom">Session media type that was converted from in case of a media type conversion.</param>
         /// <param name="ConvertedTo">Session media type that was converted to in case of a media type conversion.</param>
+        /// <param name="CustomerParticipation">Indicates a messaging conversation in which the customer participated by sending at least one message.</param>
         /// <param name="DeliveryStatus">The email or SMS delivery status.</param>
         /// <param name="DestinationAddresses">Destination address(es) of transfers or consults.</param>
         /// <param name="Direction">The direction of the communication.</param>
@@ -873,7 +1513,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapUpCode">Wrap up code.</param>
         /// <param name="ProposedAgents">Proposed agents.</param>
         /// <param name="ScoredAgents">Scored agents.</param>
-        public ConversationMetricsTopicConversationMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, string ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, string DeliveryStatus = null, List<string> DestinationAddresses = null, string Direction = null, string DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, string FlaggedReason = null, string FlowInType = null, string FlowOutType = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, List<string> KnowledgeBaseIds = null, int? MediaCount = null, string MediaType = null, string MessageType = null, string OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, string Purpose = null, string QueueId = null, string Remote = null, List<string> RemovedSkillIds = null, bool? Reoffered = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StationId = null, string TeamId = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<ConversationMetricsTopicConversationProposedAgent> ProposedAgents = null, List<ConversationMetricsTopicConversationScoredAgent> ScoredAgents = null)
+        public ConversationMetricsTopicConversationMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowInType = null, string FlowOutType = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, List<string> KnowledgeBaseIds = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string Remote = null, List<string> RemovedSkillIds = null, bool? Reoffered = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StationId = null, string TeamId = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<ConversationMetricsTopicConversationProposedAgent> ProposedAgents = null, List<ConversationMetricsTopicConversationScoredAgent> ScoredAgents = null)
         {
             this.Metric = Metric;
             this.MetricDate = MetricDate;
@@ -892,6 +1532,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationInitiator = ConversationInitiator;
             this.ConvertedFrom = ConvertedFrom;
             this.ConvertedTo = ConvertedTo;
+            this.CustomerParticipation = CustomerParticipation;
             this.DeliveryStatus = DeliveryStatus;
             this.DestinationAddresses = DestinationAddresses;
             this.Direction = Direction;
@@ -1077,13 +1718,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// Indicates the participant purpose of the participant initiating a message conversation
-        /// </summary>
-        /// <value>Indicates the participant purpose of the participant initiating a message conversation</value>
-        [DataMember(Name="conversationInitiator", EmitDefaultValue=false)]
-        public string ConversationInitiator { get; set; }
-        
         
         
         /// <summary>
@@ -1105,11 +1739,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The email or SMS delivery status
+        /// Indicates a messaging conversation in which the customer participated by sending at least one message
         /// </summary>
-        /// <value>The email or SMS delivery status</value>
-        [DataMember(Name="deliveryStatus", EmitDefaultValue=false)]
-        public string DeliveryStatus { get; set; }
+        /// <value>Indicates a messaging conversation in which the customer participated by sending at least one message</value>
+        [DataMember(Name="customerParticipation", EmitDefaultValue=false)]
+        public bool? CustomerParticipation { get; set; }
+        
+        
         
         
         
@@ -1122,21 +1758,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// The direction of the communication
-        /// </summary>
-        /// <value>The direction of the communication</value>
-        [DataMember(Name="direction", EmitDefaultValue=false)]
-        public string Direction { get; set; }
         
-        
-        
-        /// <summary>
-        /// The session disconnect type
-        /// </summary>
-        /// <value>The session disconnect type</value>
-        [DataMember(Name="disconnectType", EmitDefaultValue=false)]
-        public string DisconnectType { get; set; }
         
         
         
@@ -1229,13 +1851,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? FirstQueue { get; set; }
         
         
-        
-        /// <summary>
-        /// Reason for which participant flagged conversation
-        /// </summary>
-        /// <value>Reason for which participant flagged conversation</value>
-        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
-        public string FlaggedReason { get; set; }
         
         
         
@@ -1356,13 +1971,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// The session media type
-        /// </summary>
-        /// <value>The session media type</value>
-        [DataMember(Name="mediaType", EmitDefaultValue=false)]
-        public string MediaType { get; set; }
-        
         
         
         /// <summary>
@@ -1373,13 +1981,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string MessageType { get; set; }
         
         
-        
-        /// <summary>
-        /// The original direction of the conversation
-        /// </summary>
-        /// <value>The original direction of the conversation</value>
-        [DataMember(Name="originatingDirection", EmitDefaultValue=false)]
-        public string OriginatingDirection { get; set; }
         
         
         
@@ -1436,13 +2037,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Provider { get; set; }
         
         
-        
-        /// <summary>
-        /// The participant&#39;s purpose
-        /// </summary>
-        /// <value>The participant&#39;s purpose</value>
-        [DataMember(Name="purpose", EmitDefaultValue=false)]
-        public string Purpose { get; set; }
         
         
         
@@ -1671,6 +2265,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationInitiator: ").Append(ConversationInitiator).Append("\n");
             sb.Append("  ConvertedFrom: ").Append(ConvertedFrom).Append("\n");
             sb.Append("  ConvertedTo: ").Append(ConvertedTo).Append("\n");
+            sb.Append("  CustomerParticipation: ").Append(CustomerParticipation).Append("\n");
             sb.Append("  DeliveryStatus: ").Append(DeliveryStatus).Append("\n");
             sb.Append("  DestinationAddresses: ").Append(DestinationAddresses).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
@@ -1856,6 +2451,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConvertedTo == other.ConvertedTo ||
                     this.ConvertedTo != null &&
                     this.ConvertedTo.Equals(other.ConvertedTo)
+                ) &&
+                (
+                    this.CustomerParticipation == other.CustomerParticipation ||
+                    this.CustomerParticipation != null &&
+                    this.CustomerParticipation.Equals(other.CustomerParticipation)
                 ) &&
                 (
                     this.DeliveryStatus == other.DeliveryStatus ||
@@ -2226,6 +2826,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ConvertedTo != null)
                     hash = hash * 59 + this.ConvertedTo.GetHashCode();
+                
+                if (this.CustomerParticipation != null)
+                    hash = hash * 59 + this.CustomerParticipation.GetHashCode();
                 
                 if (this.DeliveryStatus != null)
                     hash = hash * 59 + this.DeliveryStatus.GetHashCode();

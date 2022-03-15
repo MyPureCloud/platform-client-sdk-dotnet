@@ -1720,7 +1720,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of notifications for the current user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Notifications are only initially sent if you have the relevant Notify and Edit permissions
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>NotificationsResponse</returns>
@@ -1730,7 +1730,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of notifications for the current user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Notifications are only initially sent if you have the relevant Notify and Edit permissions
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of NotificationsResponse</returns>
@@ -4962,7 +4962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of notifications for the current user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Notifications are only initially sent if you have the relevant Notify and Edit permissions
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of NotificationsResponse</returns>
@@ -4972,7 +4972,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of notifications for the current user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Notifications are only initially sent if you have the relevant Notify and Edit permissions
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (NotificationsResponse)</returns>
@@ -20872,7 +20872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a list of notifications for the current user 
+        /// Get a list of notifications for the current user Notifications are only initially sent if you have the relevant Notify and Edit permissions
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>NotificationsResponse</returns>
@@ -20883,7 +20883,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of notifications for the current user 
+        /// Get a list of notifications for the current user Notifications are only initially sent if you have the relevant Notify and Edit permissions
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of NotificationsResponse</returns>
@@ -20961,7 +20961,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a list of notifications for the current user 
+        /// Get a list of notifications for the current user Notifications are only initially sent if you have the relevant Notify and Edit permissions
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of NotificationsResponse</returns>
@@ -20973,7 +20973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of notifications for the current user 
+        /// Get a list of notifications for the current user Notifications are only initially sent if you have the relevant Notify and Edit permissions
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (NotificationsResponse)</returns>

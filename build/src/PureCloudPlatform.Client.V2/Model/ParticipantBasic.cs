@@ -320,6 +320,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// This field controls how the UI prompts the agent for a wrapup.
         /// </summary>
@@ -386,6 +389,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ParticipantBasic" /> class.
@@ -435,7 +440,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
         /// <param name="StartAcwTime">The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndAcwTime">The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string TeamId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null)
+        /// <param name="BargedParticipantId">If this participant barged in a participant&#39;s call, then this will be the id of the targeted participant..</param>
+        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string TeamId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, string BargedParticipantId = null)
         {
             this.Id = Id;
             this.StartTime = StartTime;
@@ -482,6 +488,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FlaggedReason = FlaggedReason;
             this.StartAcwTime = StartAcwTime;
             this.EndAcwTime = EndAcwTime;
+            this.BargedParticipantId = BargedParticipantId;
             
         }
         
@@ -860,6 +867,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? EndAcwTime { get; set; }
         
         
+        
+        /// <summary>
+        /// If this participant barged in a participant&#39;s call, then this will be the id of the targeted participant.
+        /// </summary>
+        /// <value>If this participant barged in a participant&#39;s call, then this will be the id of the targeted participant.</value>
+        [DataMember(Name="bargedParticipantId", EmitDefaultValue=false)]
+        public string BargedParticipantId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -914,6 +930,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
             sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
+            sb.Append("  BargedParticipantId: ").Append(BargedParticipantId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1178,6 +1195,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndAcwTime == other.EndAcwTime ||
                     this.EndAcwTime != null &&
                     this.EndAcwTime.Equals(other.EndAcwTime)
+                ) &&
+                (
+                    this.BargedParticipantId == other.BargedParticipantId ||
+                    this.BargedParticipantId != null &&
+                    this.BargedParticipantId.Equals(other.BargedParticipantId)
                 );
         }
 
@@ -1327,6 +1349,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.EndAcwTime != null)
                     hash = hash * 59 + this.EndAcwTime.GetHashCode();
+                
+                if (this.BargedParticipantId != null)
+                    hash = hash * 59 + this.BargedParticipantId.GetHashCode();
                 
                 return hash;
             }

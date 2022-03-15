@@ -1135,6 +1135,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<WrapupCode>> GetConversationsEmailParticipantWrapupcodesWithHttpInfo (string conversationId, string participantId);
         
         /// <summary>
+        /// Get emails settings for a given conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>EmailsSettings</returns>
+        EmailsSettings GetConversationsEmailSettings (string conversationId);
+
+        /// <summary>
+        /// Get emails settings for a given conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>ApiResponse of EmailsSettings</returns>
+        ApiResponse<EmailsSettings> GetConversationsEmailSettingsWithHttpInfo (string conversationId);
+        
+        /// <summary>
         /// Get active email conversations for the logged in user
         /// </summary>
         /// <remarks>
@@ -4871,6 +4893,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="participantId">participantId</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetConversationsEmailParticipantWrapupcodesAsyncWithHttpInfo (string conversationId, string participantId);
+        
+        /// <summary>
+        /// Get emails settings for a given conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of EmailsSettings</returns>
+        System.Threading.Tasks.Task<EmailsSettings> GetConversationsEmailSettingsAsync (string conversationId);
+
+        /// <summary>
+        /// Get emails settings for a given conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ApiResponse (EmailsSettings)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailsSettings>> GetConversationsEmailSettingsAsyncWithHttpInfo (string conversationId);
         
         /// <summary>
         /// Get active email conversations for the logged in user
@@ -17095,6 +17139,199 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
                 localVarHeaders,
                 (List<WrapupCode>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get emails settings for a given conversation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>EmailsSettings</returns>
+        public EmailsSettings GetConversationsEmailSettings (string conversationId)
+        {
+             ApiResponse<EmailsSettings> localVarResponse = GetConversationsEmailSettingsWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get emails settings for a given conversation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>ApiResponse of EmailsSettings</returns>
+        public ApiResponse< EmailsSettings > GetConversationsEmailSettingsWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsEmailSettings");
+
+            var localVarPath = "/api/v2/conversations/emails/{conversationId}/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailsSettings>(localVarStatusCode,
+                localVarHeaders,
+                (EmailsSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailsSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get emails settings for a given conversation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of EmailsSettings</returns>
+        public async System.Threading.Tasks.Task<EmailsSettings> GetConversationsEmailSettingsAsync (string conversationId)
+        {
+             ApiResponse<EmailsSettings> localVarResponse = await GetConversationsEmailSettingsAsyncWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get emails settings for a given conversation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ApiResponse (EmailsSettings)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailsSettings>> GetConversationsEmailSettingsAsyncWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsEmailSettings");
+            
+
+            var localVarPath = "/api/v2/conversations/emails/{conversationId}/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailsSettings>(localVarStatusCode,
+                localVarHeaders,
+                (EmailsSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailsSettings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

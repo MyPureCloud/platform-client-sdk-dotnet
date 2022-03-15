@@ -169,7 +169,7 @@ namespace Example
             var apiInstance = new QualityApi();
             var conversationId = conversationId_example;  // string | conversationId
             var evaluationId = evaluationId_example;  // string | evaluationId
-            var expand = expand_example;  // string | evaluatorId (optional) 
+            var expand = expand_example;  // string | evaluatorId, evaluationForm (optional) 
 
             try
             { 
@@ -193,7 +193,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **evaluationId** | **string**| evaluationId |  |
-| **expand** | **string**| evaluatorId | [optional]  |
+| **expand** | **string**| evaluatorId, evaluationForm | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3542,7 +3542,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var evaluationId = evaluationId_example;  // string | evaluationId
             var body = new Evaluation(); // Evaluation | evaluation
-            var expand = expand_example;  // string | evaluatorId (optional) 
+            var expand = expand_example;  // string | evaluatorId, evaluationForm (optional) 
 
             try
             { 
@@ -3567,7 +3567,7 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **evaluationId** | **string**| evaluationId |  |
 | **body** | [**Evaluation**](Evaluation.html)| evaluation |  |
-| **expand** | **string**| evaluatorId | [optional]  |
+| **expand** | **string**| evaluatorId, evaluationForm | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

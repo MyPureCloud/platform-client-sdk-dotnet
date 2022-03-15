@@ -260,6 +260,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
@@ -309,6 +312,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AcwDetailEventTopicAfterCallWorkEvent" /> class.
@@ -332,8 +337,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserId">UserId.</param>
         /// <param name="QueueId">QueueId.</param>
         /// <param name="WrapupCode">WrapupCode.</param>
+        /// <param name="WrapupNotes">WrapupNotes.</param>
         /// <param name="WrapupDurationMs">WrapupDurationMs.</param>
-        public AcwDetailEventTopicAfterCallWorkEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string UserId = null, string QueueId = null, string WrapupCode = null, int? WrapupDurationMs = null)
+        public AcwDetailEventTopicAfterCallWorkEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string UserId = null, string QueueId = null, string WrapupCode = null, string WrapupNotes = null, int? WrapupDurationMs = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -354,6 +360,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.UserId = UserId;
             this.QueueId = QueueId;
             this.WrapupCode = WrapupCode;
+            this.WrapupNotes = WrapupNotes;
             this.WrapupDurationMs = WrapupDurationMs;
             
         }
@@ -495,6 +502,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets WrapupNotes
+        /// </summary>
+        [DataMember(Name="wrapupNotes", EmitDefaultValue=false)]
+        public string WrapupNotes { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets WrapupDurationMs
         /// </summary>
         [DataMember(Name="wrapupDurationMs", EmitDefaultValue=false)]
@@ -529,6 +544,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  WrapupCode: ").Append(WrapupCode).Append("\n");
+            sb.Append("  WrapupNotes: ").Append(WrapupNotes).Append("\n");
             sb.Append("  WrapupDurationMs: ").Append(WrapupDurationMs).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -666,6 +682,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WrapupCode.Equals(other.WrapupCode)
                 ) &&
                 (
+                    this.WrapupNotes == other.WrapupNotes ||
+                    this.WrapupNotes != null &&
+                    this.WrapupNotes.Equals(other.WrapupNotes)
+                ) &&
+                (
                     this.WrapupDurationMs == other.WrapupDurationMs ||
                     this.WrapupDurationMs != null &&
                     this.WrapupDurationMs.Equals(other.WrapupDurationMs)
@@ -740,6 +761,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WrapupCode != null)
                     hash = hash * 59 + this.WrapupCode.GetHashCode();
+                
+                if (this.WrapupNotes != null)
+                    hash = hash * 59 + this.WrapupNotes.GetHashCode();
                 
                 if (this.WrapupDurationMs != null)
                     hash = hash * 59 + this.WrapupDurationMs.GetHashCode();

@@ -38,6 +38,45 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Key type used in this configuration
+        /// </summary>
+        /// <value>Key type used in this configuration</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum KeyConfigurationTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Kmssymmetric for "KmsSymmetric"
+            /// </summary>
+            [EnumMember(Value = "KmsSymmetric")]
+            Kmssymmetric,
+            
+            /// <summary>
+            /// Enum Localkeymanager for "LocalKeyManager"
+            /// </summary>
+            [EnumMember(Value = "LocalKeyManager")]
+            Localkeymanager,
+            
+            /// <summary>
+            /// Enum Native for "Native"
+            /// </summary>
+            [EnumMember(Value = "Native")]
+            Native,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None
+        }
         
         
         
@@ -51,6 +90,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Key type used in this configuration
+        /// </summary>
+        /// <value>Key type used in this configuration</value>
+        [DataMember(Name="keyConfigurationType", EmitDefaultValue=false)]
+        public KeyConfigurationTypeEnum? KeyConfigurationType { get; set; }
         
         
         
@@ -64,13 +116,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="KeydataSummary">key data summary (base 64 encoded public key).</param>
         /// <param name="User">user that requested generation of public key.</param>
         /// <param name="LocalEncryptionConfiguration">Local configuration.</param>
-        public EncryptionKey(string Name = null, DateTime? CreateDate = null, string KeydataSummary = null, User User = null, LocalEncryptionConfiguration LocalEncryptionConfiguration = null)
+        /// <param name="KeyConfigurationType">Key type used in this configuration.</param>
+        public EncryptionKey(string Name = null, DateTime? CreateDate = null, string KeydataSummary = null, User User = null, LocalEncryptionConfiguration LocalEncryptionConfiguration = null, KeyConfigurationTypeEnum? KeyConfigurationType = null)
         {
             this.Name = Name;
             this.CreateDate = CreateDate;
             this.KeydataSummary = KeydataSummary;
             this.User = User;
             this.LocalEncryptionConfiguration = LocalEncryptionConfiguration;
+            this.KeyConfigurationType = KeyConfigurationType;
             
         }
         
@@ -129,6 +183,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -152,6 +208,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  KeydataSummary: ").Append(KeydataSummary).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  LocalEncryptionConfiguration: ").Append(LocalEncryptionConfiguration).Append("\n");
+            sb.Append("  KeyConfigurationType: ").Append(KeyConfigurationType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -224,6 +281,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LocalEncryptionConfiguration.Equals(other.LocalEncryptionConfiguration)
                 ) &&
                 (
+                    this.KeyConfigurationType == other.KeyConfigurationType ||
+                    this.KeyConfigurationType != null &&
+                    this.KeyConfigurationType.Equals(other.KeyConfigurationType)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -259,6 +321,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LocalEncryptionConfiguration != null)
                     hash = hash * 59 + this.LocalEncryptionConfiguration.GetHashCode();
+                
+                if (this.KeyConfigurationType != null)
+                    hash = hash * 59 + this.KeyConfigurationType.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

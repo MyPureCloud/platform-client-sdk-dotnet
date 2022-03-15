@@ -56,6 +56,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Commonmodule,
             
             /// <summary>
+            /// Enum Digitalbot for "DIGITALBOT"
+            /// </summary>
+            [EnumMember(Value = "DIGITALBOT")]
+            Digitalbot,
+            
+            /// <summary>
             /// Enum Inboundcall for "INBOUNDCALL"
             /// </summary>
             [EnumMember(Value = "INBOUNDCALL")]

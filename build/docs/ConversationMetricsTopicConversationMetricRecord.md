@@ -24,6 +24,7 @@ title: ConversationMetricsTopicConversationMetricRecord
 | **ConversationInitiator** | **string** | Indicates the participant purpose of the participant initiating a message conversation | [optional] |
 | **ConvertedFrom** | **string** | Session media type that was converted from in case of a media type conversion | [optional] |
 | **ConvertedTo** | **string** | Session media type that was converted to in case of a media type conversion | [optional] |
+| **CustomerParticipation** | **bool?** | Indicates a messaging conversation in which the customer participated by sending at least one message | [optional] |
 | **DeliveryStatus** | **string** | The email or SMS delivery status | [optional] |
 | **DestinationAddresses** | **List&lt;string&gt;** | Destination address(es) of transfers or consults | [optional] |
 | **Direction** | **string** | The direction of the communication | [optional] |

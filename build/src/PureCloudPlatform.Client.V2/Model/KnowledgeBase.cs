@@ -30,9 +30,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Core language for knowledge base in which initial content must be created first
+        /// Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes
         /// </summary>
-        /// <value>Core language for knowledge base in which initial content must be created first</value>
+        /// <value>Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum CoreLanguageEnum
         {
@@ -66,7 +66,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Dede for "de-DE"
             /// </summary>
             [EnumMember(Value = "de-DE")]
-            Dede
+            Dede,
+            
+            /// <summary>
+            /// Enum Esus for "es-US"
+            /// </summary>
+            [EnumMember(Value = "es-US")]
+            Esus,
+            
+            /// <summary>
+            /// Enum Eses for "es-ES"
+            /// </summary>
+            [EnumMember(Value = "es-ES")]
+            Eses,
+            
+            /// <summary>
+            /// Enum Frfr for "fr-FR"
+            /// </summary>
+            [EnumMember(Value = "fr-FR")]
+            Frfr,
+            
+            /// <summary>
+            /// Enum Ptbr for "pt-BR"
+            /// </summary>
+            [EnumMember(Value = "pt-BR")]
+            Ptbr,
+            
+            /// <summary>
+            /// Enum Nlnl for "nl-NL"
+            /// </summary>
+            [EnumMember(Value = "nl-NL")]
+            Nlnl,
+            
+            /// <summary>
+            /// Enum Itit for "it-IT"
+            /// </summary>
+            [EnumMember(Value = "it-IT")]
+            Itit
         }
         
         
@@ -101,9 +137,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Core language for knowledge base in which initial content must be created first
+        /// Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes
         /// </summary>
-        /// <value>Core language for knowledge base in which initial content must be created first</value>
+        /// <value>Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes</value>
         [DataMember(Name="coreLanguage", EmitDefaultValue=false)]
         public CoreLanguageEnum? CoreLanguage { get; set; }
         
@@ -134,7 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Knowledge base description.</param>
-        /// <param name="CoreLanguage">Core language for knowledge base in which initial content must be created first (required).</param>
+        /// <param name="CoreLanguage">Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes (required).</param>
         public KnowledgeBase(string Name = null, string Description = null, CoreLanguageEnum? CoreLanguage = null)
         {
             this.Name = Name;

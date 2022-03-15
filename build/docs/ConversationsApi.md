@@ -55,6 +55,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsEmailMessagesDraft**](ConversationsApi.html#getconversationsemailmessagesdraft) | **GET** /api/v2/conversations/emails/{conversationId}/messages/draft | Get conversation draft reply |
 | [**GetConversationsEmailParticipantWrapup**](ConversationsApi.html#getconversationsemailparticipantwrapup) | **GET** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationsEmailParticipantWrapupcodes**](ConversationsApi.html#getconversationsemailparticipantwrapupcodes) | **GET** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsEmailSettings**](ConversationsApi.html#getconversationsemailsettings) | **GET** /api/v2/conversations/emails/{conversationId}/settings | Get emails settings for a given conversation |
 | [**GetConversationsEmails**](ConversationsApi.html#getconversationsemails) | **GET** /api/v2/conversations/emails | Get active email conversations for the logged in user |
 | [**GetConversationsMessage**](ConversationsApi.html#getconversationsmessage) | **GET** /api/v2/conversations/messages/{conversationId} | Get message conversation |
 | [**GetConversationsMessageCommunicationMessagesMediaMediaId**](ConversationsApi.html#getconversationsmessagecommunicationmessagesmediamediaid) | **GET** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId} | Get media |
@@ -3287,6 +3288,70 @@ namespace Example
 ### Return type
 
 [**List<WrapupCode>**](WrapupCode.html)
+
+<a name="getconversationsemailsettings"></a>
+
+## [**EmailsSettings**](EmailsSettings.html) GetConversationsEmailSettings (string conversationId)
+
+
+
+Get emails settings for a given conversation
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsEmailSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+
+            try
+            { 
+                // Get emails settings for a given conversation
+                EmailsSettings result = apiInstance.GetConversationsEmailSettings(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsEmailSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmailsSettings**](EmailsSettings.html)
 
 <a name="getconversationsemails"></a>
 
