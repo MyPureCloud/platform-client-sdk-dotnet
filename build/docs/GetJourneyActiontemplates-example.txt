@@ -1,0 +1,41 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetJourneyActiontemplatesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetJourneyActiontemplatesRequest();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Field(s) to sort by. Prefix with '-' for descending (e.g. sortBy=name,-createdDate). (optional) 
+            var mediaType = mediaType_example;  // string | Media type (optional) 
+            var state = state_example;  // string | Action template state. (optional) 
+            var queryFields = new List<string>(); // List<string> | ActionTemplate field(s) to query on. Requires 'queryValue' to also be set. (optional) 
+            var queryValue = queryValue_example;  // string | Value to query on. Requires 'queryFields' to also be set. (optional) 
+
+            try
+            { 
+                // Retrieve all action templates.
+                ActionTemplateListing result = apiInstance.GetJourneyActiontemplates(pageNumber, pageSize, sortBy, mediaType, state, queryFields, queryValue);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetJourneyActiontemplatesRequest.GetJourneyActiontemplates: " + e.Message );
+            }
+        }
+    }
+}

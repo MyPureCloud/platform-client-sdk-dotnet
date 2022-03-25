@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class PostOutboundContactlistContactsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PostOutboundContactlistContactsRequest();
+            var contactListId = contactListId_example;  // string | Contact List ID
+            var body = new List<WritableDialerContact>(); // List<WritableDialerContact> | Contact
+            var priority = true;  // bool? | Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional) 
+            var clearSystemData = true;  // bool? | Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won't. (optional) 
+            var doNotQueue = true;  // bool? | Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the 'priority' parameter. (optional) 
+
+            try
+            { 
+                // Add contacts to a contact list.
+                List<DialerContact> result = apiInstance.PostOutboundContactlistContacts(contactListId, body, priority, clearSystemData, doNotQueue);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PostOutboundContactlistContactsRequest.PostOutboundContactlistContacts: " + e.Message );
+            }
+        }
+    }
+}

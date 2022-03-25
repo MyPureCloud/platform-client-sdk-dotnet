@@ -1,0 +1,30 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetWebmessagingMessagesExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new GetWebmessagingMessagesRequest();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get the messages for a web messaging session.
+                WebMessagingMessageEntityList result = apiInstance.GetWebmessagingMessages(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetWebmessagingMessagesRequest.GetWebmessagingMessages: " + e.Message );
+            }
+        }
+    }
+}

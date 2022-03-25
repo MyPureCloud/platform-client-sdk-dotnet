@@ -1,0 +1,29 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementCalendarDataIcsExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new GetWorkforcemanagementCalendarDataIcsRequest();
+            var calendarId = calendarId_example;  // string | The id of the ics-formatted calendar
+
+            try
+            { 
+                // Get ics formatted calendar based on shareable link
+                string result = apiInstance.GetWorkforcemanagementCalendarDataIcs(calendarId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetWorkforcemanagementCalendarDataIcsRequest.GetWorkforcemanagementCalendarDataIcs: " + e.Message );
+            }
+        }
+    }
+}

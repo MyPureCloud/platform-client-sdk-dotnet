@@ -1,0 +1,41 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetIntegrationsUserappsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetIntegrationsUserappsRequest();
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            var appHost = appHost_example;  // string | The type of UserApp to filter by (optional) 
+
+            try
+            { 
+                // List permitted user app integrations for the logged in user
+                UserAppEntityListing result = apiInstance.GetIntegrationsUserapps(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, appHost);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetIntegrationsUserappsRequest.GetIntegrationsUserapps: " + e.Message );
+            }
+        }
+    }
+}

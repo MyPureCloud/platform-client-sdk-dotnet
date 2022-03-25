@@ -1,0 +1,44 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetUsersDevelopmentActivitiesMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetUsersDevelopmentActivitiesMeRequest();
+            var moduleId = moduleId_example;  // string | Specifies the ID of the learning module. (optional) 
+            var interval = interval_example;  // string | Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
+            var completionInterval = completionInterval_example;  // string | Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
+            var overdue = overdue_example;  // string | Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional)  (default to Any)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortOrder = sortOrder_example;  // string | Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)
+            var types = new List<string>(); // List<string> | Specifies the activity types. (optional) 
+            var statuses = new List<string>(); // List<string> | Specifies the activity statuses to filter by (optional) 
+            var relationship = new List<string>(); // List<string> | Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional) 
+
+            try
+            { 
+                // Get list of Development Activities for current user
+                DevelopmentActivityListing result = apiInstance.GetUsersDevelopmentActivitiesMe(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, types, statuses, relationship);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetUsersDevelopmentActivitiesMeRequest.GetUsersDevelopmentActivitiesMe: " + e.Message );
+            }
+        }
+    }
+}

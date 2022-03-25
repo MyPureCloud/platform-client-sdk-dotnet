@@ -1,0 +1,37 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetAnalyticsUsersDetailsJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetAnalyticsUsersDetailsJobResultsRequest();
+            var jobId = jobId_example;  // string | jobId
+            var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page) (optional) 
+            var pageSize = 56;  // int? | The desired maximum number of results (optional) 
+
+            try
+            { 
+                // Fetch a page of results for an async query
+                AnalyticsUserDetailsAsyncQueryResponse result = apiInstance.GetAnalyticsUsersDetailsJobResults(jobId, cursor, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetAnalyticsUsersDetailsJobResultsRequest.GetAnalyticsUsersDetailsJobResults: " + e.Message );
+            }
+        }
+    }
+}

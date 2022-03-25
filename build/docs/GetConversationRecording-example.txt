@@ -1,0 +1,44 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetConversationRecordingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetConversationRecordingRequest();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var recordingId = recordingId_example;  // string | Recording ID
+            var formatId = formatId_example;  // string | The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE (optional)  (default to WEBM)
+            var emailFormatId = emailFormatId_example;  // string | The desired media format when downloading an email recording. Valid values:EML,NONE (optional)  (default to EML)
+            var chatFormatId = chatFormatId_example;  // string | The desired media format when downloading a chat recording. Valid values:ZIP,NONE  (optional)  (default to ZIP)
+            var messageFormatId = messageFormatId_example;  // string | The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional)  (default to ZIP)
+            var download = true;  // bool? | requesting a download format of the recording. Valid values:true,false (optional)  (default to false)
+            var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
+            var locale = locale_example;  // string | The locale for the requested file when downloading, as an ISO 639-1 code (optional) 
+            var mediaFormats = new List<string>(); // List<string> | All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional) 
+
+            try
+            { 
+                // Gets a specific recording.
+                Recording result = apiInstance.GetConversationRecording(conversationId, recordingId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetConversationRecordingRequest.GetConversationRecording: " + e.Message );
+            }
+        }
+    }
+}

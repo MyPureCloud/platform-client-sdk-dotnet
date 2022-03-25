@@ -1,0 +1,44 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetRecordingMediaretentionpoliciesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetRecordingMediaretentionpoliciesRequest();
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            var name = name_example;  // string | the policy name - used for filtering results in searches. (optional) 
+            var enabled = true;  // bool? | checks to see if policy is enabled - use enabled = true or enabled = false (optional) 
+            var summary = true;  // bool? | provides a less verbose response of policy lists. (optional)  (default to false)
+            var hasErrors = true;  // bool? | provides a way to fetch all policies with errors or policies that do not have errors (optional) 
+
+            try
+            { 
+                // Gets media retention policy list with query options to filter on name and enabled.
+                PolicyEntityListing result = apiInstance.GetRecordingMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetRecordingMediaretentionpoliciesRequest.GetRecordingMediaretentionpolicies: " + e.Message );
+            }
+        }
+    }
+}

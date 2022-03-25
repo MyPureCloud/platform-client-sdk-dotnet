@@ -1,0 +1,36 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class PostExternalcontactsContactNotesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PostExternalcontactsContactNotesRequest();
+            var contactId = contactId_example;  // string | ExternalContact Id
+            var body = new Note(); // Note | ExternalContact
+
+            try
+            { 
+                // Create a note for an external contact
+                Note result = apiInstance.PostExternalcontactsContactNotes(contactId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PostExternalcontactsContactNotesRequest.PostExternalcontactsContactNotes: " + e.Message );
+            }
+        }
+    }
+}

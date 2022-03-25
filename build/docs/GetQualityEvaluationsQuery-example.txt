@@ -1,0 +1,52 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetQualityEvaluationsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetQualityEvaluationsQueryRequest();
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            var conversationId = conversationId_example;  // string | conversationId specified (optional) 
+            var agentUserId = agentUserId_example;  // string | user id of the agent (optional) 
+            var evaluatorUserId = evaluatorUserId_example;  // string | evaluator user id (optional) 
+            var queueId = queueId_example;  // string | queue id (optional) 
+            var startTime = startTime_example;  // string | start time of the evaluation query (optional) 
+            var endTime = endTime_example;  // string | end time of the evaluation query (optional) 
+            var evaluationState = new List<string>(); // List<string> |  (optional) 
+            var isReleased = true;  // bool? | the evaluation has been released (optional) 
+            var agentHasRead = true;  // bool? | agent has the evaluation (optional) 
+            var expandAnswerTotalScores = true;  // bool? | get the total scores for evaluations (optional) 
+            var maximum = 56;  // int? | maximum (optional) 
+            var sortOrder = sortOrder_example;  // string | sort order options for agentUserId or evaluatorUserId query. Valid options are 'a', 'asc', 'ascending', 'd', 'desc', 'descending' (optional) 
+
+            try
+            { 
+                // Queries Evaluations and returns a paged list
+                EvaluationEntityListing result = apiInstance.GetQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetQualityEvaluationsQueryRequest.GetQualityEvaluationsQuery: " + e.Message );
+            }
+        }
+    }
+}

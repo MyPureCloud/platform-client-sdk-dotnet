@@ -1,0 +1,29 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetQualitySurveysScorableExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new GetQualitySurveysScorableRequest();
+            var customerSurveyUrl = customerSurveyUrl_example;  // string | customerSurveyUrl
+
+            try
+            { 
+                // Get a survey as an end-customer, for the purposes of scoring it.
+                ScorableSurvey result = apiInstance.GetQualitySurveysScorable(customerSurveyUrl);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetQualitySurveysScorableRequest.GetQualitySurveysScorable: " + e.Message );
+            }
+        }
+    }
+}

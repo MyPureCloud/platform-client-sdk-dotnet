@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementManagementunitWorkplanValidateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PostWorkforcemanagementManagementunitWorkplanValidateRequest();
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var workPlanId = workPlanId_example;  // string | The ID of the work plan to validate. For new work plan, use the word 'new' for the ID.
+            var body = new WorkPlanValidationRequest(); // WorkPlanValidationRequest | body (optional) 
+            var expand = new List<string>(); // List<string> |  (optional) 
+
+            try
+            { 
+                // Validate Work Plan
+                ValidateWorkPlanResponse result = apiInstance.PostWorkforcemanagementManagementunitWorkplanValidate(managementUnitId, workPlanId, body, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PostWorkforcemanagementManagementunitWorkplanValidateRequest.PostWorkforcemanagementManagementunitWorkplanValidate: " + e.Message );
+            }
+        }
+    }
+}

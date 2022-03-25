@@ -1,0 +1,47 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetOutboundCampaignsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetOutboundCampaignsRequest();
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
+            var name = name_example;  // string | Name (optional) 
+            var id = new List<string>(); // List<string> | id (optional) 
+            var contactListId = contactListId_example;  // string | Contact List ID (optional) 
+            var dncListIds = dncListIds_example;  // string | DNC list ID (optional) 
+            var distributionQueueId = distributionQueueId_example;  // string | Distribution queue ID (optional) 
+            var edgeGroupId = edgeGroupId_example;  // string | Edge group ID (optional) 
+            var callAnalysisResponseSetId = callAnalysisResponseSetId_example;  // string | Call analysis response set ID (optional) 
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            var sortBy = sortBy_example;  // string | Sort by (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
+
+            try
+            { 
+                // Query a list of dialer campaigns.
+                CampaignEntityListing result = apiInstance.GetOutboundCampaigns(pageSize, pageNumber, filterType, name, id, contactListId, dncListIds, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, divisionId, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetOutboundCampaignsRequest.GetOutboundCampaigns: " + e.Message );
+            }
+        }
+    }
+}

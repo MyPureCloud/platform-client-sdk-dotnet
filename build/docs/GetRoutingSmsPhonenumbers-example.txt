@@ -1,0 +1,43 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetRoutingSmsPhonenumbersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetRoutingSmsPhonenumbersRequest();
+            var phoneNumber = phoneNumber_example;  // string | Filter on phone number address. Allowable characters are the digits '0-9' and the wild card character '\\*'. If just digits are present, a contains search is done on the address pattern. For example, '317' could be matched anywhere in the address. An '\\*' will match multiple digits. For example, to match a specific area code within the US a pattern like '1317*' could be used. (optional) 
+            var phoneNumberType = new List<string>(); // List<string> | Filter on phone number type (optional) 
+            var phoneNumberStatus = new List<string>(); // List<string> | Filter on phone number status (optional) 
+            var countryCode = new List<string>(); // List<string> | Filter on country code (optional) 
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortBy = sortBy_example;  // string | Optional field to sort results (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional) 
+            var language = en-US;  // string | A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations (optional)  (default to en-US)
+
+            try
+            { 
+                // Get a list of provisioned phone numbers.
+                SmsPhoneNumberEntityListing result = apiInstance.GetRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetRoutingSmsPhonenumbersRequest.GetRoutingSmsPhonenumbers: " + e.Message );
+            }
+        }
+    }
+}

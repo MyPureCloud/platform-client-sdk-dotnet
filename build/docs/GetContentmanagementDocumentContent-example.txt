@@ -1,0 +1,37 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetContentmanagementDocumentContentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetContentmanagementDocumentContentRequest();
+            var documentId = documentId_example;  // string | Document ID
+            var disposition = disposition_example;  // string | Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional) 
+            var contentType = contentType_example;  // string | The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav (optional) 
+
+            try
+            { 
+                // Download a document.
+                DownloadResponse result = apiInstance.GetContentmanagementDocumentContent(documentId, disposition, contentType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetContentmanagementDocumentContentRequest.GetContentmanagementDocumentContent: " + e.Message );
+            }
+        }
+    }
+}

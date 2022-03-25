@@ -1,0 +1,37 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class PatchScimV2UserExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PatchScimV2UserRequest();
+            var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/v2/users.
+            var body = new ScimV2PatchRequest(); // ScimV2PatchRequest | The information used to modify a user.
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
+
+            try
+            { 
+                // Modify a user
+                ScimV2User result = apiInstance.PatchScimV2User(userId, body, ifMatch);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PatchScimV2UserRequest.PatchScimV2User: " + e.Message );
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryRequest();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var weekId = 2013-10-20;  // String | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var scheduleId = scheduleId_example;  // string | The ID of the schedule
+            var body = new BuQueryAgentSchedulesRequest(); // BuQueryAgentSchedulesRequest | body
+            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
+            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
+
+            try
+            { 
+                // Loads agent schedule data from the schedule. Used in combination with the metadata route
+                BuAsyncAgentSchedulesQueryResponse result = apiInstance.PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery(businessUnitId, weekId, scheduleId, body, forceAsync, forceDownloadService);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryRequest.PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery: " + e.Message );
+            }
+        }
+    }
+}

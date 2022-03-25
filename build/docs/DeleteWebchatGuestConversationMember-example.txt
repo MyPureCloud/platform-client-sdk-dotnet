@@ -1,0 +1,33 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class DeleteWebchatGuestConversationMemberExample
+    {
+        public void main()
+        { 
+            // Configure API key authorization: Guest Chat JWT
+            Configuration.Default.ApiKey.Add('Authorization', 'YOUR_API_KEY');
+            // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add('Authorization', 'BEARER');
+
+            var apiInstance = new DeleteWebchatGuestConversationMemberRequest();
+            var conversationId = conversationId_example;  // string | conversationId
+            var memberId = memberId_example;  // string | memberId
+
+            try
+            { 
+                // Remove a member from a chat conversation
+                apiInstance.DeleteWebchatGuestConversationMember(conversationId, memberId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DeleteWebchatGuestConversationMemberRequest.DeleteWebchatGuestConversationMember: " + e.Message );
+            }
+        }
+    }
+}

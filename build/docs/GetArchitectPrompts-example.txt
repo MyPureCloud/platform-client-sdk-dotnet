@@ -1,0 +1,41 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetArchitectPromptsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetArchitectPromptsRequest();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var name = new List<string>(); // List<string> | Name (optional) 
+            var description = description_example;  // string | Description (optional) 
+            var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+
+            try
+            { 
+                // Get a pageable list of user prompts
+                PromptEntityListing result = apiInstance.GetArchitectPrompts(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetArchitectPromptsRequest.GetArchitectPrompts: " + e.Message );
+            }
+        }
+    }
+}

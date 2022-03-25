@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetUserExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetUserRequest();
+            var userId = userId_example;  // string | User ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            var integrationPresenceSource = integrationPresenceSource_example;  // string | Gets an integration presence for a user instead of their default. (optional) 
+            var state = state_example;  // string | Search for a user with this state (optional)  (default to active)
+
+            try
+            { 
+                // Get user.
+                User result = apiInstance.GetUser(userId, expand, integrationPresenceSource, state);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetUserRequest.GetUser: " + e.Message );
+            }
+        }
+    }
+}

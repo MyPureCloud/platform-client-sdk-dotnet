@@ -1,0 +1,41 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetArchitectDependencytrackingDeletedresourceconsumersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetArchitectDependencytrackingDeletedresourceconsumersRequest();
+            var name = name_example;  // string | Name to search for (optional) 
+            var objectType = new List<string>(); // List<string> | Object type(s) to search for (optional) 
+            var flowFilter = flowFilter_example;  // string | Show only checkedIn or published flows (optional) 
+            var consumedResources = true;  // bool? | Return consumed resources? (optional)  (default to false)
+            var consumedResourceType = new List<string>(); // List<string> | Resource type(s) to return (optional) 
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Get Dependency Tracking objects that consume deleted resources
+                DependencyObjectEntityListing result = apiInstance.GetArchitectDependencytrackingDeletedresourceconsumers(name, objectType, flowFilter, consumedResources, consumedResourceType, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetArchitectDependencytrackingDeletedresourceconsumersRequest.GetArchitectDependencytrackingDeletedresourceconsumers: " + e.Message );
+            }
+        }
+    }
+}

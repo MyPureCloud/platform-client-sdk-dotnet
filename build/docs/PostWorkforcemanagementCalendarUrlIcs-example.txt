@@ -1,0 +1,35 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementCalendarUrlIcsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PostWorkforcemanagementCalendarUrlIcsRequest();
+            var language = en-US;  // string | A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize default activity code names in the ics-formatted calendar (optional)  (default to en-US)
+
+            try
+            { 
+                // Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
+                CalendarUrlResponse result = apiInstance.PostWorkforcemanagementCalendarUrlIcs(language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PostWorkforcemanagementCalendarUrlIcsRequest.PostWorkforcemanagementCalendarUrlIcs: " + e.Message );
+            }
+        }
+    }
+}

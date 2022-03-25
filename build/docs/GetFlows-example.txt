@@ -1,0 +1,53 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetFlowsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetFlowsRequest();
+            var type = new List<string>(); // List<string> | Type (optional) 
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var id = new List<string>(); // List<string> | ID (optional) 
+            var name = name_example;  // string | Name (optional) 
+            var description = description_example;  // string | Description (optional) 
+            var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
+            var publishVersionId = publishVersionId_example;  // string | Publish version ID (optional) 
+            var editableBy = editableBy_example;  // string | Editable by (optional) 
+            var lockedBy = lockedBy_example;  // string | Locked by (optional) 
+            var lockedByClientId = lockedByClientId_example;  // string | Locked by client ID (optional) 
+            var secure = secure_example;  // string | Secure (optional) 
+            var deleted = true;  // bool? | Include deleted (optional)  (default to false)
+            var includeSchemas = true;  // bool? | Include variable schemas (optional)  (default to false)
+            var publishedAfter = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01;  // string | Published after (optional) 
+            var publishedBefore = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01;  // string | Published before (optional) 
+            var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
+
+            try
+            { 
+                // Get a pageable list of flows, filtered by query parameters
+                FlowEntityListing result = apiInstance.GetFlows(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, lockedByClientId, secure, deleted, includeSchemas, publishedAfter, publishedBefore, divisionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetFlowsRequest.GetFlows: " + e.Message );
+            }
+        }
+    }
+}

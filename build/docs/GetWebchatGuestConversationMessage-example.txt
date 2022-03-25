@@ -1,0 +1,34 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetWebchatGuestConversationMessageExample
+    {
+        public void main()
+        { 
+            // Configure API key authorization: Guest Chat JWT
+            Configuration.Default.ApiKey.Add('Authorization', 'YOUR_API_KEY');
+            // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add('Authorization', 'BEARER');
+
+            var apiInstance = new GetWebchatGuestConversationMessageRequest();
+            var conversationId = conversationId_example;  // string | conversationId
+            var messageId = messageId_example;  // string | messageId
+
+            try
+            { 
+                // Get a web chat conversation message
+                WebChatMessage result = apiInstance.GetWebchatGuestConversationMessage(conversationId, messageId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetWebchatGuestConversationMessageRequest.GetWebchatGuestConversationMessage: " + e.Message );
+            }
+        }
+    }
+}

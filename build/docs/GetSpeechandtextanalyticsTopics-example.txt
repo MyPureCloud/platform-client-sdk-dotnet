@@ -1,0 +1,41 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsTopicsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetSpeechandtextanalyticsTopicsRequest();
+            var nextPage = nextPage_example;  // string | The key for listing the next page (optional) 
+            var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 20)
+            var state = state_example;  // string | Topic state. Defaults to latest (optional) 
+            var name = name_example;  // string | Case insensitive partial name to filter by (optional) 
+            var ids = new List<string>(); // List<string> | Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional) 
+            var sortBy = sortBy_example;  // string | Sort results by. Defaults to name (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order. Defaults to asc (optional) 
+
+            try
+            { 
+                // Get the list of Speech & Text Analytics topics
+                TopicsEntityListing result = apiInstance.GetSpeechandtextanalyticsTopics(nextPage, pageSize, state, name, ids, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetSpeechandtextanalyticsTopicsRequest.GetSpeechandtextanalyticsTopics: " + e.Message );
+            }
+        }
+    }
+}

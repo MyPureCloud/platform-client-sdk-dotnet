@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetContentmanagementSharedSharedIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetContentmanagementSharedSharedIdRequest();
+            var sharedId = sharedId_example;  // string | Shared ID
+            var redirect = true;  // bool? | Turn on or off redirect (optional)  (default to true)
+            var disposition = disposition_example;  // string | Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional)  (default to attachment)
+            var contentType = contentType_example;  // string | The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav (optional) 
+            var expand = expand_example;  // string | Expand some document fields (optional) 
+
+            try
+            { 
+                // Get shared documents. Securely download a shared document.
+                SharedResponse result = apiInstance.GetContentmanagementSharedSharedId(sharedId, redirect, disposition, contentType, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetContentmanagementSharedSharedIdRequest.GetContentmanagementSharedSharedId: " + e.Message );
+            }
+        }
+    }
+}

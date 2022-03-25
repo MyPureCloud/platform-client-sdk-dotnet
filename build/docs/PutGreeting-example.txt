@@ -1,0 +1,36 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class PutGreetingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PutGreetingRequest();
+            var greetingId = greetingId_example;  // string | Greeting ID
+            var body = new Greeting(); // Greeting | The updated Greeting
+
+            try
+            { 
+                // Updates the Greeting with the given GreetingId
+                Greeting result = apiInstance.PutGreeting(greetingId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PutGreetingRequest.PutGreeting: " + e.Message );
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class PostTextbotsBotflowsSessionTurnsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PostTextbotsBotflowsSessionTurnsRequest();
+            var sessionId = sessionId_example;  // string | The bot flow session ID, typically obtained from 'POST /api/v2/textbots/botflows/sessions'
+            var turnRequest = new TextBotFlowTurnRequest(); // TextBotFlowTurnRequest | 
+
+            try
+            { 
+                // Issue a bot flow turn event
+                TextBotFlowTurnResponse result = apiInstance.PostTextbotsBotflowsSessionTurns(sessionId, turnRequest);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PostTextbotsBotflowsSessionTurnsRequest.PostTextbotsBotflowsSessionTurns: " + e.Message );
+            }
+        }
+    }
+}

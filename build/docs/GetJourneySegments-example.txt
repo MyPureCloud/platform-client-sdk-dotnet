@@ -1,0 +1,41 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetJourneySegmentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetJourneySegmentsRequest();
+            var sortBy = sortBy_example;  // string | Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate). (optional) 
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var isActive = true;  // bool? | Determines whether or not to show only active segments. (optional) 
+            var segmentIds = new List<string>(); // List<string> | IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional) 
+            var queryFields = new List<string>(); // List<string> | Segment field(s) to query on. Requires 'queryValue' to also be set. (optional) 
+            var queryValue = queryValue_example;  // string | Value to query on. Requires 'queryFields' to also be set. (optional) 
+
+            try
+            { 
+                // Retrieve all segments.
+                SegmentListing result = apiInstance.GetJourneySegments(sortBy, pageSize, pageNumber, isActive, segmentIds, queryFields, queryValue);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetJourneySegmentsRequest.GetJourneySegments: " + e.Message );
+            }
+        }
+    }
+}

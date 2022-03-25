@@ -1,0 +1,36 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class PostIntegrationsActionDraftPublishExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PostIntegrationsActionDraftPublishRequest();
+            var actionId = actionId_example;  // string | actionId
+            var body = new PublishDraftInput(); // PublishDraftInput | Input used to patch the Action.
+
+            try
+            { 
+                // Publish a Draft and make it the active Action configuration
+                PureCloudPlatform.Client.V2.Model.Action result = apiInstance.PostIntegrationsActionDraftPublish(actionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PostIntegrationsActionDraftPublishRequest.PostIntegrationsActionDraftPublish: " + e.Message );
+            }
+        }
+    }
+}

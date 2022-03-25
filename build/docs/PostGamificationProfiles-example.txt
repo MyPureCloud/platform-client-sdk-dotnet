@@ -1,0 +1,36 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class PostGamificationProfilesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PostGamificationProfilesRequest();
+            var body = new CreatePerformanceProfile(); // CreatePerformanceProfile | performanceProfile
+            var copyMetrics = true;  // bool? | Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional)  (default to true)
+
+            try
+            { 
+                // Create a new custom performance profile
+                PerformanceProfile result = apiInstance.PostGamificationProfiles(body, copyMetrics);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PostGamificationProfilesRequest.PostGamificationProfiles: " + e.Message );
+            }
+        }
+    }
+}

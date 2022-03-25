@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementManagementunitWorkplanExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PatchWorkforcemanagementManagementunitWorkplanRequest();
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var workPlanId = workPlanId_example;  // string | The ID of the work plan to update
+            var body = new WorkPlan(); // WorkPlan | body (optional) 
+            var validationMode = validationMode_example;  // string | Allows to update work plan even if validation result is invalid (optional) 
+
+            try
+            { 
+                // Update a work plan
+                WorkPlan result = apiInstance.PatchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, body, validationMode);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PatchWorkforcemanagementManagementunitWorkplanRequest.PatchWorkforcemanagementManagementunitWorkplan: " + e.Message );
+            }
+        }
+    }
+}

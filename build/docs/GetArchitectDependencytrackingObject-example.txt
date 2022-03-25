@@ -1,0 +1,42 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetArchitectDependencytrackingObjectExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetArchitectDependencytrackingObjectRequest();
+            var id = id_example;  // string | Object ID
+            var version = version_example;  // string | Object version (optional) 
+            var objectType = objectType_example;  // string | Object type (optional) 
+            var consumedResources = true;  // bool? | Include resources this item consumes (optional) 
+            var consumingResources = true;  // bool? | Include resources that consume this item (optional) 
+            var consumedResourceType = new List<string>(); // List<string> | Types of consumed resources to return, if consumed resources are requested (optional) 
+            var consumingResourceType = new List<string>(); // List<string> | Types of consuming resources to return, if consuming resources are requested (optional) 
+            var consumedResourceRequest = true;  // bool? | Indicate that this is going to look up a consumed resource object (optional) 
+
+            try
+            { 
+                // Get a Dependency Tracking object
+                DependencyObject result = apiInstance.GetArchitectDependencytrackingObject(id, version, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType, consumedResourceRequest);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetArchitectDependencytrackingObjectRequest.GetArchitectDependencytrackingObject: " + e.Message );
+            }
+        }
+    }
+}

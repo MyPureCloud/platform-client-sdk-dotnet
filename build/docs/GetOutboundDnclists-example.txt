@@ -1,0 +1,45 @@
+using System;
+using System.Diagnostics;
+using .Api;
+using .Client;
+using .Model;
+
+namespace Example
+{
+    public class GetOutboundDnclistsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GetOutboundDnclistsRequest();
+            var includeImportStatus = true;  // bool? | Import status (optional)  (default to false)
+            var includeSize = true;  // bool? | Include size (optional)  (default to false)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
+            var name = name_example;  // string | Name (optional) 
+            var dncSourceType = dncSourceType_example;  // string | DncSourceType (optional) 
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            var sortBy = sortBy_example;  // string | Sort by (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional) 
+
+            try
+            { 
+                // Query dialer DNC lists
+                DncListEntityListing result = apiInstance.GetOutboundDnclists(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, dncSourceType, divisionId, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GetOutboundDnclistsRequest.GetOutboundDnclists: " + e.Message );
+            }
+        }
+    }
+}
