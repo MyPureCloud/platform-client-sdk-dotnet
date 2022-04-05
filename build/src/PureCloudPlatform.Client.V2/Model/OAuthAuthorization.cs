@@ -47,6 +47,44 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unauthorized for "Unauthorized"
+            /// </summary>
+            [EnumMember(Value = "Unauthorized")]
+            Unauthorized,
+            
+            /// <summary>
+            /// Enum Requested for "Requested"
+            /// </summary>
+            [EnumMember(Value = "Requested")]
+            Requested,
+            
+            /// <summary>
+            /// Enum Authorized for "Authorized"
+            /// </summary>
+            [EnumMember(Value = "Authorized")]
+            Authorized,
+            
+            /// <summary>
+            /// Enum Revoked for "Revoked"
+            /// </summary>
+            [EnumMember(Value = "Revoked")]
+            Revoked
+        }
         
         
         
@@ -61,6 +99,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
         
         
         
@@ -71,22 +126,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Client">Client.</param>
         /// <param name="Scope">Scope.</param>
+        /// <param name="Roles">Roles.</param>
         /// <param name="ResourceOwner">ResourceOwner.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreatedBy">CreatedBy.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="Pending">Pending.</param>
-        public OAuthAuthorization(OAuthClient Client = null, List<string> Scope = null, DomainEntityRef ResourceOwner = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, bool? Pending = null)
+        /// <param name="State">State.</param>
+        public OAuthAuthorization(OAuthClient Client = null, List<string> Scope = null, List<string> Roles = null, DomainEntityRef ResourceOwner = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, bool? Pending = null, StateEnum? State = null)
         {
             this.Client = Client;
             this.Scope = Scope;
+            this.Roles = Roles;
             this.ResourceOwner = ResourceOwner;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.CreatedBy = CreatedBy;
             this.ModifiedBy = ModifiedBy;
             this.Pending = Pending;
+            this.State = State;
             
         }
         
@@ -105,6 +164,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="scope", EmitDefaultValue=false)]
         public List<string> Scope { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Roles
+        /// </summary>
+        [DataMember(Name="roles", EmitDefaultValue=false)]
+        public List<string> Roles { get; set; }
         
         
         
@@ -158,6 +225,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -177,12 +246,14 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Client: ").Append(Client).Append("\n");
             sb.Append("  Scope: ").Append(Scope).Append("\n");
+            sb.Append("  Roles: ").Append(Roles).Append("\n");
             sb.Append("  ResourceOwner: ").Append(ResourceOwner).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  Pending: ").Append(Pending).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -235,6 +306,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Scope.SequenceEqual(other.Scope)
                 ) &&
                 (
+                    this.Roles == other.Roles ||
+                    this.Roles != null &&
+                    this.Roles.SequenceEqual(other.Roles)
+                ) &&
+                (
                     this.ResourceOwner == other.ResourceOwner ||
                     this.ResourceOwner != null &&
                     this.ResourceOwner.Equals(other.ResourceOwner)
@@ -265,6 +341,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Pending.Equals(other.Pending)
                 ) &&
                 (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -289,6 +370,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Scope != null)
                     hash = hash * 59 + this.Scope.GetHashCode();
                 
+                if (this.Roles != null)
+                    hash = hash * 59 + this.Roles.GetHashCode();
+                
                 if (this.ResourceOwner != null)
                     hash = hash * 59 + this.ResourceOwner.GetHashCode();
                 
@@ -306,6 +390,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Pending != null)
                     hash = hash * 59 + this.Pending.GetHashCode();
+                
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

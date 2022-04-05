@@ -14,6 +14,7 @@ title: ConversationEventTopicVideo
 | **AudioMuted** | **bool?** | Indicates whether this participant has muted their outgoing audio. | [optional] |
 | **VideoMuted** | **bool?** | Indicates whether this participant has muted/paused their outgoing video. | [optional] |
 | **SharingScreen** | **bool?** | Indicates whether this participant is sharing their screen to the session. | [optional] |
+| **PeerCount** | [**ConversationEventTopicObject**](ConversationEventTopicObject.html) | The number of peer participants from the perspective of the participant in the conference. | [optional] |
 | **Provider** | **string** | The media provider controlling the video. | [optional] |
 | **ScriptId** | **string** | The UUID of the script to use. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |

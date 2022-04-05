@@ -39,8 +39,17 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Cobrowse for "CoBrowse"
             /// </summary>
             [EnumMember(Value = "CoBrowse")]
-            Cobrowse
+            Cobrowse,
+            
+            /// <summary>
+            /// Enum Presence for "Presence"
+            /// </summary>
+            [EnumMember(Value = "Presence")]
+            Presence
         }
+        
+        
+        
         
         
         
@@ -59,6 +68,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WebMessagingEvent" /> class.
@@ -71,10 +82,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="EventType">Type of this event element (required).</param>
         /// <param name="CoBrowse">Cobrowse event..</param>
-        public WebMessagingEvent(EventTypeEnum? EventType = null, WebMessagingEventCoBrowse CoBrowse = null)
+        /// <param name="Presence">Presence event..</param>
+        public WebMessagingEvent(EventTypeEnum? EventType = null, WebMessagingEventCoBrowse CoBrowse = null, WebMessagingEventPresence Presence = null)
         {
             this.EventType = EventType;
             this.CoBrowse = CoBrowse;
+            this.Presence = Presence;
             
         }
         
@@ -90,6 +103,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public WebMessagingEventCoBrowse CoBrowse { get; set; }
         
         
+        
+        /// <summary>
+        /// Presence event.
+        /// </summary>
+        /// <value>Presence event.</value>
+        [DataMember(Name="presence", EmitDefaultValue=false)]
+        public WebMessagingEventPresence Presence { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -101,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  CoBrowse: ").Append(CoBrowse).Append("\n");
+            sb.Append("  Presence: ").Append(Presence).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,6 +173,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CoBrowse == other.CoBrowse ||
                     this.CoBrowse != null &&
                     this.CoBrowse.Equals(other.CoBrowse)
+                ) &&
+                (
+                    this.Presence == other.Presence ||
+                    this.Presence != null &&
+                    this.Presence.Equals(other.Presence)
                 );
         }
 
@@ -170,6 +198,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CoBrowse != null)
                     hash = hash * 59 + this.CoBrowse.GetHashCode();
+                
+                if (this.Presence != null)
+                    hash = hash * 59 + this.Presence.GetHashCode();
                 
                 return hash;
             }

@@ -61,6 +61,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteResponsemanagementResponseWithHttpInfo (string responseId);
         
         /// <summary>
+        /// Delete response asset
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns></returns>
+        void DeleteResponsemanagementResponseasset (string responseAssetId);
+
+        /// <summary>
+        /// Delete response asset
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteResponsemanagementResponseassetWithHttpInfo (string responseAssetId);
+        
+        /// <summary>
         /// Gets a list of existing response libraries.
         /// </summary>
         /// <remarks>
@@ -133,6 +155,50 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Response> GetResponsemanagementResponseWithHttpInfo (string responseId, string expand = null);
         
         /// <summary>
+        /// Get response asset information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>ResponseAsset</returns>
+        ResponseAsset GetResponsemanagementResponseasset (string responseAssetId);
+
+        /// <summary>
+        /// Get response asset information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>ApiResponse of ResponseAsset</returns>
+        ApiResponse<ResponseAsset> GetResponsemanagementResponseassetWithHttpInfo (string responseAssetId);
+        
+        /// <summary>
+        /// Get response asset upload status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="statusId">Status Id</param>
+        /// <returns>ResponseAssetStatus</returns>
+        ResponseAssetStatus GetResponsemanagementResponseassetsStatusStatusId (string statusId);
+
+        /// <summary>
+        /// Get response asset upload status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="statusId">Status Id</param>
+        /// <returns>ApiResponse of ResponseAssetStatus</returns>
+        ApiResponse<ResponseAssetStatus> GetResponsemanagementResponseassetsStatusStatusIdWithHttpInfo (string statusId);
+        
+        /// <summary>
         /// Gets a list of existing responses.
         /// </summary>
         /// <remarks>
@@ -181,6 +247,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Library</param>
         /// <returns>ApiResponse of Library</returns>
         ApiResponse<Library> PostResponsemanagementLibrariesWithHttpInfo (Library body);
+        
+        /// <summary>
+        /// Search response assets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>ResponseAssetSearchResults</returns>
+        ResponseAssetSearchResults PostResponsemanagementResponseassetsSearch (ResponseAssetSearchRequest body, List<string> expand = null);
+
+        /// <summary>
+        /// Search response assets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>ApiResponse of ResponseAssetSearchResults</returns>
+        ApiResponse<ResponseAssetSearchResults> PostResponsemanagementResponseassetsSearchWithHttpInfo (ResponseAssetSearchRequest body, List<string> expand = null);
+        
+        /// <summary>
+        /// Creates pre-signed url for uploading response asset
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>CreateResponseAssetResponse</returns>
+        CreateResponseAssetResponse PostResponsemanagementResponseassetsUploads (CreateResponseAssetRequest body);
+
+        /// <summary>
+        /// Creates pre-signed url for uploading response asset
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>ApiResponse of CreateResponseAssetResponse</returns>
+        ApiResponse<CreateResponseAssetResponse> PostResponsemanagementResponseassetsUploadsWithHttpInfo (CreateResponseAssetRequest body);
         
         /// <summary>
         /// Create a response.
@@ -278,6 +390,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Response</returns>
         ApiResponse<Response> PutResponsemanagementResponseWithHttpInfo (string responseId, Response body, string expand = null);
         
+        /// <summary>
+        /// Update response asset
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <param name="body">request</param>
+        /// <returns>ResponseAsset</returns>
+        ResponseAsset PutResponsemanagementResponseasset (string responseAssetId, ResponseAssetRequest body);
+
+        /// <summary>
+        /// Update response asset
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <param name="body">request</param>
+        /// <returns>ApiResponse of ResponseAsset</returns>
+        ApiResponse<ResponseAsset> PutResponsemanagementResponseassetWithHttpInfo (string responseAssetId, ResponseAssetRequest body);
+        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
@@ -325,6 +461,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="responseId">Response ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteResponsemanagementResponseAsyncWithHttpInfo (string responseId);
+        
+        /// <summary>
+        /// Delete response asset
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteResponsemanagementResponseassetAsync (string responseAssetId);
+
+        /// <summary>
+        /// Delete response asset
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteResponsemanagementResponseassetAsyncWithHttpInfo (string responseAssetId);
         
         /// <summary>
         /// Gets a list of existing response libraries.
@@ -399,6 +557,50 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Response>> GetResponsemanagementResponseAsyncWithHttpInfo (string responseId, string expand = null);
         
         /// <summary>
+        /// Get response asset information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>Task of ResponseAsset</returns>
+        System.Threading.Tasks.Task<ResponseAsset> GetResponsemanagementResponseassetAsync (string responseAssetId);
+
+        /// <summary>
+        /// Get response asset information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>Task of ApiResponse (ResponseAsset)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseAsset>> GetResponsemanagementResponseassetAsyncWithHttpInfo (string responseAssetId);
+        
+        /// <summary>
+        /// Get response asset upload status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="statusId">Status Id</param>
+        /// <returns>Task of ResponseAssetStatus</returns>
+        System.Threading.Tasks.Task<ResponseAssetStatus> GetResponsemanagementResponseassetsStatusStatusIdAsync (string statusId);
+
+        /// <summary>
+        /// Get response asset upload status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="statusId">Status Id</param>
+        /// <returns>Task of ApiResponse (ResponseAssetStatus)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseAssetStatus>> GetResponsemanagementResponseassetsStatusStatusIdAsyncWithHttpInfo (string statusId);
+        
+        /// <summary>
         /// Gets a list of existing responses.
         /// </summary>
         /// <remarks>
@@ -447,6 +649,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Library</param>
         /// <returns>Task of ApiResponse (Library)</returns>
         System.Threading.Tasks.Task<ApiResponse<Library>> PostResponsemanagementLibrariesAsyncWithHttpInfo (Library body);
+        
+        /// <summary>
+        /// Search response assets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ResponseAssetSearchResults</returns>
+        System.Threading.Tasks.Task<ResponseAssetSearchResults> PostResponsemanagementResponseassetsSearchAsync (ResponseAssetSearchRequest body, List<string> expand = null);
+
+        /// <summary>
+        /// Search response assets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseAssetSearchResults)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseAssetSearchResults>> PostResponsemanagementResponseassetsSearchAsyncWithHttpInfo (ResponseAssetSearchRequest body, List<string> expand = null);
+        
+        /// <summary>
+        /// Creates pre-signed url for uploading response asset
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>Task of CreateResponseAssetResponse</returns>
+        System.Threading.Tasks.Task<CreateResponseAssetResponse> PostResponsemanagementResponseassetsUploadsAsync (CreateResponseAssetRequest body);
+
+        /// <summary>
+        /// Creates pre-signed url for uploading response asset
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>Task of ApiResponse (CreateResponseAssetResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateResponseAssetResponse>> PostResponsemanagementResponseassetsUploadsAsyncWithHttpInfo (CreateResponseAssetRequest body);
         
         /// <summary>
         /// Create a response.
@@ -543,6 +791,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<Response>> PutResponsemanagementResponseAsyncWithHttpInfo (string responseId, Response body, string expand = null);
+        
+        /// <summary>
+        /// Update response asset
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <param name="body">request</param>
+        /// <returns>Task of ResponseAsset</returns>
+        System.Threading.Tasks.Task<ResponseAsset> PutResponsemanagementResponseassetAsync (string responseAssetId, ResponseAssetRequest body);
+
+        /// <summary>
+        /// Update response asset
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <param name="body">request</param>
+        /// <returns>Task of ApiResponse (ResponseAsset)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseAsset>> PutResponsemanagementResponseassetAsyncWithHttpInfo (string responseAssetId, ResponseAssetRequest body);
         
         #endregion Asynchronous Operations
         
@@ -1008,6 +1280,197 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteResponsemanagementResponse: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteResponsemanagementResponse: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete response asset 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns></returns>
+        public void DeleteResponsemanagementResponseasset (string responseAssetId)
+        {
+             DeleteResponsemanagementResponseassetWithHttpInfo(responseAssetId);
+        }
+
+        /// <summary>
+        /// Delete response asset 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteResponsemanagementResponseassetWithHttpInfo (string responseAssetId)
+        { 
+            // verify the required parameter 'responseAssetId' is set
+            if (responseAssetId == null)
+                throw new ApiException(400, "Missing required parameter 'responseAssetId' when calling ResponseManagementApi->DeleteResponsemanagementResponseasset");
+
+            var localVarPath = "/api/v2/responsemanagement/responseassets/{responseAssetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (responseAssetId != null) localVarPathParams.Add("responseAssetId", this.Configuration.ApiClient.ParameterToString(responseAssetId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteResponsemanagementResponseasset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteResponsemanagementResponseasset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete response asset 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteResponsemanagementResponseassetAsync (string responseAssetId)
+        {
+             await DeleteResponsemanagementResponseassetAsyncWithHttpInfo(responseAssetId);
+
+        }
+
+        /// <summary>
+        /// Delete response asset 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteResponsemanagementResponseassetAsyncWithHttpInfo (string responseAssetId)
+        { 
+            // verify the required parameter 'responseAssetId' is set
+            if (responseAssetId == null)
+                throw new ApiException(400, "Missing required parameter 'responseAssetId' when calling ResponseManagementApi->DeleteResponsemanagementResponseasset");
+            
+
+            var localVarPath = "/api/v2/responsemanagement/responseassets/{responseAssetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (responseAssetId != null) localVarPathParams.Add("responseAssetId", this.Configuration.ApiClient.ParameterToString(responseAssetId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteResponsemanagementResponseasset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteResponsemanagementResponseasset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -1609,6 +2072,392 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get response asset information 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>ResponseAsset</returns>
+        public ResponseAsset GetResponsemanagementResponseasset (string responseAssetId)
+        {
+             ApiResponse<ResponseAsset> localVarResponse = GetResponsemanagementResponseassetWithHttpInfo(responseAssetId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get response asset information 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>ApiResponse of ResponseAsset</returns>
+        public ApiResponse< ResponseAsset > GetResponsemanagementResponseassetWithHttpInfo (string responseAssetId)
+        { 
+            // verify the required parameter 'responseAssetId' is set
+            if (responseAssetId == null)
+                throw new ApiException(400, "Missing required parameter 'responseAssetId' when calling ResponseManagementApi->GetResponsemanagementResponseasset");
+
+            var localVarPath = "/api/v2/responsemanagement/responseassets/{responseAssetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (responseAssetId != null) localVarPathParams.Add("responseAssetId", this.Configuration.ApiClient.ParameterToString(responseAssetId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementResponseasset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementResponseasset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseAsset>(localVarStatusCode,
+                localVarHeaders,
+                (ResponseAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseAsset)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get response asset information 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>Task of ResponseAsset</returns>
+        public async System.Threading.Tasks.Task<ResponseAsset> GetResponsemanagementResponseassetAsync (string responseAssetId)
+        {
+             ApiResponse<ResponseAsset> localVarResponse = await GetResponsemanagementResponseassetAsyncWithHttpInfo(responseAssetId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get response asset information 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <returns>Task of ApiResponse (ResponseAsset)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseAsset>> GetResponsemanagementResponseassetAsyncWithHttpInfo (string responseAssetId)
+        { 
+            // verify the required parameter 'responseAssetId' is set
+            if (responseAssetId == null)
+                throw new ApiException(400, "Missing required parameter 'responseAssetId' when calling ResponseManagementApi->GetResponsemanagementResponseasset");
+            
+
+            var localVarPath = "/api/v2/responsemanagement/responseassets/{responseAssetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (responseAssetId != null) localVarPathParams.Add("responseAssetId", this.Configuration.ApiClient.ParameterToString(responseAssetId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementResponseasset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementResponseasset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseAsset>(localVarStatusCode,
+                localVarHeaders,
+                (ResponseAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseAsset)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get response asset upload status 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="statusId">Status Id</param>
+        /// <returns>ResponseAssetStatus</returns>
+        public ResponseAssetStatus GetResponsemanagementResponseassetsStatusStatusId (string statusId)
+        {
+             ApiResponse<ResponseAssetStatus> localVarResponse = GetResponsemanagementResponseassetsStatusStatusIdWithHttpInfo(statusId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get response asset upload status 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="statusId">Status Id</param>
+        /// <returns>ApiResponse of ResponseAssetStatus</returns>
+        public ApiResponse< ResponseAssetStatus > GetResponsemanagementResponseassetsStatusStatusIdWithHttpInfo (string statusId)
+        { 
+            // verify the required parameter 'statusId' is set
+            if (statusId == null)
+                throw new ApiException(400, "Missing required parameter 'statusId' when calling ResponseManagementApi->GetResponsemanagementResponseassetsStatusStatusId");
+
+            var localVarPath = "/api/v2/responsemanagement/responseassets/status/{statusId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (statusId != null) localVarPathParams.Add("statusId", this.Configuration.ApiClient.ParameterToString(statusId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementResponseassetsStatusStatusId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementResponseassetsStatusStatusId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseAssetStatus>(localVarStatusCode,
+                localVarHeaders,
+                (ResponseAssetStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseAssetStatus)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get response asset upload status 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="statusId">Status Id</param>
+        /// <returns>Task of ResponseAssetStatus</returns>
+        public async System.Threading.Tasks.Task<ResponseAssetStatus> GetResponsemanagementResponseassetsStatusStatusIdAsync (string statusId)
+        {
+             ApiResponse<ResponseAssetStatus> localVarResponse = await GetResponsemanagementResponseassetsStatusStatusIdAsyncWithHttpInfo(statusId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get response asset upload status 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="statusId">Status Id</param>
+        /// <returns>Task of ApiResponse (ResponseAssetStatus)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseAssetStatus>> GetResponsemanagementResponseassetsStatusStatusIdAsyncWithHttpInfo (string statusId)
+        { 
+            // verify the required parameter 'statusId' is set
+            if (statusId == null)
+                throw new ApiException(400, "Missing required parameter 'statusId' when calling ResponseManagementApi->GetResponsemanagementResponseassetsStatusStatusId");
+            
+
+            var localVarPath = "/api/v2/responsemanagement/responseassets/status/{statusId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (statusId != null) localVarPathParams.Add("statusId", this.Configuration.ApiClient.ParameterToString(statusId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementResponseassetsStatusStatusId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementResponseassetsStatusStatusId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseAssetStatus>(localVarStatusCode,
+                localVarHeaders,
+                (ResponseAssetStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseAssetStatus)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Gets a list of existing responses. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2014,6 +2863,414 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Library>(localVarStatusCode,
                 localVarHeaders,
                 (Library) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Library)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Search response assets 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>ResponseAssetSearchResults</returns>
+        public ResponseAssetSearchResults PostResponsemanagementResponseassetsSearch (ResponseAssetSearchRequest body, List<string> expand = null)
+        {
+             ApiResponse<ResponseAssetSearchResults> localVarResponse = PostResponsemanagementResponseassetsSearchWithHttpInfo(body, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search response assets 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>ApiResponse of ResponseAssetSearchResults</returns>
+        public ApiResponse< ResponseAssetSearchResults > PostResponsemanagementResponseassetsSearchWithHttpInfo (ResponseAssetSearchRequest body, List<string> expand = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponseassetsSearch");
+
+            var localVarPath = "/api/v2/responsemanagement/responseassets/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostResponsemanagementResponseassetsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostResponsemanagementResponseassetsSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseAssetSearchResults>(localVarStatusCode,
+                localVarHeaders,
+                (ResponseAssetSearchResults) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseAssetSearchResults)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Search response assets 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ResponseAssetSearchResults</returns>
+        public async System.Threading.Tasks.Task<ResponseAssetSearchResults> PostResponsemanagementResponseassetsSearchAsync (ResponseAssetSearchRequest body, List<string> expand = null)
+        {
+             ApiResponse<ResponseAssetSearchResults> localVarResponse = await PostResponsemanagementResponseassetsSearchAsyncWithHttpInfo(body, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search response assets 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseAssetSearchResults)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseAssetSearchResults>> PostResponsemanagementResponseassetsSearchAsyncWithHttpInfo (ResponseAssetSearchRequest body, List<string> expand = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponseassetsSearch");
+            
+
+            var localVarPath = "/api/v2/responsemanagement/responseassets/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostResponsemanagementResponseassetsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostResponsemanagementResponseassetsSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseAssetSearchResults>(localVarStatusCode,
+                localVarHeaders,
+                (ResponseAssetSearchResults) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseAssetSearchResults)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Creates pre-signed url for uploading response asset 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>CreateResponseAssetResponse</returns>
+        public CreateResponseAssetResponse PostResponsemanagementResponseassetsUploads (CreateResponseAssetRequest body)
+        {
+             ApiResponse<CreateResponseAssetResponse> localVarResponse = PostResponsemanagementResponseassetsUploadsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates pre-signed url for uploading response asset 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>ApiResponse of CreateResponseAssetResponse</returns>
+        public ApiResponse< CreateResponseAssetResponse > PostResponsemanagementResponseassetsUploadsWithHttpInfo (CreateResponseAssetRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponseassetsUploads");
+
+            var localVarPath = "/api/v2/responsemanagement/responseassets/uploads";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostResponsemanagementResponseassetsUploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostResponsemanagementResponseassetsUploads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CreateResponseAssetResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CreateResponseAssetResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateResponseAssetResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Creates pre-signed url for uploading response asset 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>Task of CreateResponseAssetResponse</returns>
+        public async System.Threading.Tasks.Task<CreateResponseAssetResponse> PostResponsemanagementResponseassetsUploadsAsync (CreateResponseAssetRequest body)
+        {
+             ApiResponse<CreateResponseAssetResponse> localVarResponse = await PostResponsemanagementResponseassetsUploadsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates pre-signed url for uploading response asset 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>Task of ApiResponse (CreateResponseAssetResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateResponseAssetResponse>> PostResponsemanagementResponseassetsUploadsAsyncWithHttpInfo (CreateResponseAssetRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponseassetsUploads");
+            
+
+            var localVarPath = "/api/v2/responsemanagement/responseassets/uploads";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostResponsemanagementResponseassetsUploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostResponsemanagementResponseassetsUploads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CreateResponseAssetResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CreateResponseAssetResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateResponseAssetResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2856,6 +4113,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Response>(localVarStatusCode,
                 localVarHeaders,
                 (Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Response)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update response asset 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <param name="body">request</param>
+        /// <returns>ResponseAsset</returns>
+        public ResponseAsset PutResponsemanagementResponseasset (string responseAssetId, ResponseAssetRequest body)
+        {
+             ApiResponse<ResponseAsset> localVarResponse = PutResponsemanagementResponseassetWithHttpInfo(responseAssetId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update response asset 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <param name="body">request</param>
+        /// <returns>ApiResponse of ResponseAsset</returns>
+        public ApiResponse< ResponseAsset > PutResponsemanagementResponseassetWithHttpInfo (string responseAssetId, ResponseAssetRequest body)
+        { 
+            // verify the required parameter 'responseAssetId' is set
+            if (responseAssetId == null)
+                throw new ApiException(400, "Missing required parameter 'responseAssetId' when calling ResponseManagementApi->PutResponsemanagementResponseasset");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PutResponsemanagementResponseasset");
+
+            var localVarPath = "/api/v2/responsemanagement/responseassets/{responseAssetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (responseAssetId != null) localVarPathParams.Add("responseAssetId", this.Configuration.ApiClient.ParameterToString(responseAssetId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutResponsemanagementResponseasset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutResponsemanagementResponseasset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseAsset>(localVarStatusCode,
+                localVarHeaders,
+                (ResponseAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseAsset)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update response asset 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <param name="body">request</param>
+        /// <returns>Task of ResponseAsset</returns>
+        public async System.Threading.Tasks.Task<ResponseAsset> PutResponsemanagementResponseassetAsync (string responseAssetId, ResponseAssetRequest body)
+        {
+             ApiResponse<ResponseAsset> localVarResponse = await PutResponsemanagementResponseassetAsyncWithHttpInfo(responseAssetId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update response asset 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseAssetId">Asset Id</param>
+        /// <param name="body">request</param>
+        /// <returns>Task of ApiResponse (ResponseAsset)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseAsset>> PutResponsemanagementResponseassetAsyncWithHttpInfo (string responseAssetId, ResponseAssetRequest body)
+        { 
+            // verify the required parameter 'responseAssetId' is set
+            if (responseAssetId == null)
+                throw new ApiException(400, "Missing required parameter 'responseAssetId' when calling ResponseManagementApi->PutResponsemanagementResponseasset");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PutResponsemanagementResponseasset");
+            
+
+            var localVarPath = "/api/v2/responsemanagement/responseassets/{responseAssetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (responseAssetId != null) localVarPathParams.Add("responseAssetId", this.Configuration.ApiClient.ParameterToString(responseAssetId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutResponsemanagementResponseasset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutResponsemanagementResponseasset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseAsset>(localVarStatusCode,
+                localVarHeaders,
+                (ResponseAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseAsset)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -251,7 +251,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
         /// <param name="OutboundMessagingAddresses">The messaging addresses for the queue..</param>
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
-        /// <param name="SourceQueueId">The id of an existing queue to copy the settings from when creating a new queue..</param>
+        /// <param name="SourceQueueId">The id of an existing queue to copy the settings (does not include GPR settings) from when creating a new queue..</param>
         public CreateQueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string SourceQueueId = null)
         {
             this.Name = Name;
@@ -539,9 +539,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The id of an existing queue to copy the settings from when creating a new queue.
+        /// The id of an existing queue to copy the settings (does not include GPR settings) from when creating a new queue.
         /// </summary>
-        /// <value>The id of an existing queue to copy the settings from when creating a new queue.</value>
+        /// <value>The id of an existing queue to copy the settings (does not include GPR settings) from when creating a new queue.</value>
         [DataMember(Name="sourceQueueId", EmitDefaultValue=false)]
         public string SourceQueueId { get; set; }
         

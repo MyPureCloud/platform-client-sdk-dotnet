@@ -46,8 +46,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>OAuthAuthorization</returns>
-        OAuthAuthorization GetOauthAuthorization (string clientId);
+        OAuthAuthorization GetOauthAuthorization (string clientId, string acceptLanguage = null);
 
         /// <summary>
         /// Get a client that is authorized by the resource owner
@@ -57,28 +58,31 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>ApiResponse of OAuthAuthorization</returns>
-        ApiResponse<OAuthAuthorization> GetOauthAuthorizationWithHttpInfo (string clientId);
+        ApiResponse<OAuthAuthorization> GetOauthAuthorizationWithHttpInfo (string clientId, string acceptLanguage = null);
         
         /// <summary>
-        /// List clients that are authorized by the resource owner
+        /// List clients that have been authorized, requested, or revoked by the resource owner
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>OAuthAuthorizationListing</returns>
-        OAuthAuthorizationListing GetOauthAuthorizations ();
+        OAuthAuthorizationListing GetOauthAuthorizations (string acceptLanguage = null);
 
         /// <summary>
-        /// List clients that are authorized by the resource owner
+        /// List clients that have been authorized, requested, or revoked by the resource owner
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>ApiResponse of OAuthAuthorizationListing</returns>
-        ApiResponse<OAuthAuthorizationListing> GetOauthAuthorizationsWithHttpInfo ();
+        ApiResponse<OAuthAuthorizationListing> GetOauthAuthorizationsWithHttpInfo (string acceptLanguage = null);
         
         /// <summary>
         /// Get OAuth Client
@@ -342,8 +346,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>Task of OAuthAuthorization</returns>
-        System.Threading.Tasks.Task<OAuthAuthorization> GetOauthAuthorizationAsync (string clientId);
+        System.Threading.Tasks.Task<OAuthAuthorization> GetOauthAuthorizationAsync (string clientId, string acceptLanguage = null);
 
         /// <summary>
         /// Get a client that is authorized by the resource owner
@@ -353,28 +358,31 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>Task of ApiResponse (OAuthAuthorization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthAuthorization>> GetOauthAuthorizationAsyncWithHttpInfo (string clientId);
+        System.Threading.Tasks.Task<ApiResponse<OAuthAuthorization>> GetOauthAuthorizationAsyncWithHttpInfo (string clientId, string acceptLanguage = null);
         
         /// <summary>
-        /// List clients that are authorized by the resource owner
+        /// List clients that have been authorized, requested, or revoked by the resource owner
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>Task of OAuthAuthorizationListing</returns>
-        System.Threading.Tasks.Task<OAuthAuthorizationListing> GetOauthAuthorizationsAsync ();
+        System.Threading.Tasks.Task<OAuthAuthorizationListing> GetOauthAuthorizationsAsync (string acceptLanguage = null);
 
         /// <summary>
-        /// List clients that are authorized by the resource owner
+        /// List clients that have been authorized, requested, or revoked by the resource owner
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>Task of ApiResponse (OAuthAuthorizationListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthAuthorizationListing>> GetOauthAuthorizationsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<OAuthAuthorizationListing>> GetOauthAuthorizationsAsyncWithHttpInfo (string acceptLanguage = null);
         
         /// <summary>
         /// Get OAuth Client
@@ -892,10 +900,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>OAuthAuthorization</returns>
-        public OAuthAuthorization GetOauthAuthorization (string clientId)
+        public OAuthAuthorization GetOauthAuthorization (string clientId, string acceptLanguage = null)
         {
-             ApiResponse<OAuthAuthorization> localVarResponse = GetOauthAuthorizationWithHttpInfo(clientId);
+             ApiResponse<OAuthAuthorization> localVarResponse = GetOauthAuthorizationWithHttpInfo(clientId, acceptLanguage);
              return localVarResponse.Data;
         }
 
@@ -904,8 +913,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>ApiResponse of OAuthAuthorization</returns>
-        public ApiResponse< OAuthAuthorization > GetOauthAuthorizationWithHttpInfo (string clientId)
+        public ApiResponse< OAuthAuthorization > GetOauthAuthorizationWithHttpInfo (string clientId, string acceptLanguage = null)
         { 
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -947,6 +957,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
 
             // Header params
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
 
             // Form params
             
@@ -987,10 +998,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>Task of OAuthAuthorization</returns>
-        public async System.Threading.Tasks.Task<OAuthAuthorization> GetOauthAuthorizationAsync (string clientId)
+        public async System.Threading.Tasks.Task<OAuthAuthorization> GetOauthAuthorizationAsync (string clientId, string acceptLanguage = null)
         {
-             ApiResponse<OAuthAuthorization> localVarResponse = await GetOauthAuthorizationAsyncWithHttpInfo(clientId);
+             ApiResponse<OAuthAuthorization> localVarResponse = await GetOauthAuthorizationAsyncWithHttpInfo(clientId, acceptLanguage);
              return localVarResponse.Data;
 
         }
@@ -1000,8 +1012,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>Task of ApiResponse (OAuthAuthorization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthAuthorization>> GetOauthAuthorizationAsyncWithHttpInfo (string clientId)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthAuthorization>> GetOauthAuthorizationAsyncWithHttpInfo (string clientId, string acceptLanguage = null)
         { 
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1044,6 +1057,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
 
             // Header params
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
 
             // Form params
             
@@ -1081,22 +1095,24 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// List clients that are authorized by the resource owner 
+        /// List clients that have been authorized, requested, or revoked by the resource owner 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>OAuthAuthorizationListing</returns>
-        public OAuthAuthorizationListing GetOauthAuthorizations ()
+        public OAuthAuthorizationListing GetOauthAuthorizations (string acceptLanguage = null)
         {
-             ApiResponse<OAuthAuthorizationListing> localVarResponse = GetOauthAuthorizationsWithHttpInfo();
+             ApiResponse<OAuthAuthorizationListing> localVarResponse = GetOauthAuthorizationsWithHttpInfo(acceptLanguage);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List clients that are authorized by the resource owner 
+        /// List clients that have been authorized, requested, or revoked by the resource owner 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>ApiResponse of OAuthAuthorizationListing</returns>
-        public ApiResponse< OAuthAuthorizationListing > GetOauthAuthorizationsWithHttpInfo ()
+        public ApiResponse< OAuthAuthorizationListing > GetOauthAuthorizationsWithHttpInfo (string acceptLanguage = null)
         { 
 
             var localVarPath = "/api/v2/oauth/authorizations";
@@ -1134,6 +1150,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
 
             // Header params
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
 
             // Form params
             
@@ -1170,23 +1187,25 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// List clients that are authorized by the resource owner 
+        /// List clients that have been authorized, requested, or revoked by the resource owner 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>Task of OAuthAuthorizationListing</returns>
-        public async System.Threading.Tasks.Task<OAuthAuthorizationListing> GetOauthAuthorizationsAsync ()
+        public async System.Threading.Tasks.Task<OAuthAuthorizationListing> GetOauthAuthorizationsAsync (string acceptLanguage = null)
         {
-             ApiResponse<OAuthAuthorizationListing> localVarResponse = await GetOauthAuthorizationsAsyncWithHttpInfo();
+             ApiResponse<OAuthAuthorizationListing> localVarResponse = await GetOauthAuthorizationsAsyncWithHttpInfo(acceptLanguage);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// List clients that are authorized by the resource owner 
+        /// List clients that have been authorized, requested, or revoked by the resource owner 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
         /// <returns>Task of ApiResponse (OAuthAuthorizationListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthAuthorizationListing>> GetOauthAuthorizationsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthAuthorizationListing>> GetOauthAuthorizationsAsyncWithHttpInfo (string acceptLanguage = null)
         { 
 
             var localVarPath = "/api/v2/oauth/authorizations";
@@ -1224,6 +1243,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
 
             // Header params
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
 
             // Form params
             

@@ -150,7 +150,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Reason">Reason.</param>
         /// <param name="Message">Message.</param>
         /// <param name="Data">Data.</param>
-        public SystemMessageSystemMessage(string ChannelId = null, SystemTopicTypeEnum? SystemTopicType = null, string CorrelationId = null, string OrganizationId = null, string UserId = null, string OauthClientId = null, ReasonEnum? Reason = null, string Message = null, Object Data = null)
+        public SystemMessageSystemMessage(string ChannelId = null, SystemTopicTypeEnum? SystemTopicType = null, string CorrelationId = null, string OrganizationId = null, string UserId = null, string OauthClientId = null, ReasonEnum? Reason = null, string Message = null, Dictionary<string, SystemMessageObject> Data = null)
         {
             this.ChannelId = ChannelId;
             this.SystemTopicType = SystemTopicType;
@@ -222,7 +222,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public Object Data { get; set; }
+        public Dictionary<string, SystemMessageObject> Data { get; set; }
         
         
         /// <summary>
@@ -326,7 +326,7 @@ namespace PureCloudPlatform.Client.V2.Model
                 (
                     this.Data == other.Data ||
                     this.Data != null &&
-                    this.Data.Equals(other.Data)
+                    this.Data.SequenceEqual(other.Data)
                 );
         }
 

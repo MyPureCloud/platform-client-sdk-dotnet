@@ -218,6 +218,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Getresponseaction,
             
             /// <summary>
+            /// Enum Jumptotaskaction for "JumpToTaskAction"
+            /// </summary>
+            [EnumMember(Value = "JumpToTaskAction")]
+            Jumptotaskaction,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

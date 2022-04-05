@@ -316,6 +316,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Move,
             
             /// <summary>
+            /// Enum Copy for "Copy"
+            /// </summary>
+            [EnumMember(Value = "Copy")]
+            Copy,
+            
+            /// <summary>
             /// Enum Delete for "Delete"
             /// </summary>
             [EnumMember(Value = "Delete")]
@@ -326,6 +332,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "DeleteAll")]
             Deleteall,
+            
+            /// <summary>
+            /// Enum Fax for "Fax"
+            /// </summary>
+            [EnumMember(Value = "Fax")]
+            Fax,
+            
+            /// <summary>
+            /// Enum Versioncreate for "VersionCreate"
+            /// </summary>
+            [EnumMember(Value = "VersionCreate")]
+            Versioncreate,
             
             /// <summary>
             /// Enum Download for "Download"
@@ -356,6 +374,36 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "MemberRemove")]
             Memberremove,
+            
+            /// <summary>
+            /// Enum Shareadd for "ShareAdd"
+            /// </summary>
+            [EnumMember(Value = "ShareAdd")]
+            Shareadd,
+            
+            /// <summary>
+            /// Enum Shareremove for "ShareRemove"
+            /// </summary>
+            [EnumMember(Value = "ShareRemove")]
+            Shareremove,
+            
+            /// <summary>
+            /// Enum Tagadd for "TagAdd"
+            /// </summary>
+            [EnumMember(Value = "TagAdd")]
+            Tagadd,
+            
+            /// <summary>
+            /// Enum Tagremove for "TagRemove"
+            /// </summary>
+            [EnumMember(Value = "TagRemove")]
+            Tagremove,
+            
+            /// <summary>
+            /// Enum Tagupdate for "TagUpdate"
+            /// </summary>
+            [EnumMember(Value = "TagUpdate")]
+            Tagupdate,
             
             /// <summary>
             /// Enum Read for "Read"
@@ -1254,6 +1302,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Module")]
             Module,
+            
+            /// <summary>
+            /// Enum Numberorder for "NumberOrder"
+            /// </summary>
+            [EnumMember(Value = "NumberOrder")]
+            Numberorder,
             
             /// <summary>
             /// Enum Numberplan for "NumberPlan"

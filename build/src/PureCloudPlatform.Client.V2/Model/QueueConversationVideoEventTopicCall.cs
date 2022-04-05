@@ -357,6 +357,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -434,6 +437,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationVideoEventTopicCall" /> class.
@@ -460,11 +465,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectReasons">List of reasons that this call was disconnected. This will be set once the call disconnects..</param>
         /// <param name="FaxStatus">FaxStatus.</param>
         /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
+        /// <param name="BargedTime">The timestamp when this participant was connected to the barge conference in the provider clock..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">AfterCallWork.</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
-        public QueueConversationVideoEventTopicCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, QueueConversationVideoEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, QueueConversationVideoEventTopicAddress Self = null, QueueConversationVideoEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<QueueConversationVideoEventTopicDisconnectReason> DisconnectReasons = null, QueueConversationVideoEventTopicFaxStatus FaxStatus = null, string UuiData = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
+        public QueueConversationVideoEventTopicCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, QueueConversationVideoEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, QueueConversationVideoEventTopicAddress Self = null, QueueConversationVideoEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<QueueConversationVideoEventTopicDisconnectReason> DisconnectReasons = null, QueueConversationVideoEventTopicFaxStatus FaxStatus = null, string UuiData = null, DateTime? BargedTime = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
         {
             this.Id = Id;
             this.State = State;
@@ -488,6 +494,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DisconnectReasons = DisconnectReasons;
             this.FaxStatus = FaxStatus;
             this.UuiData = UuiData;
+            this.BargedTime = BargedTime;
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
@@ -665,6 +672,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The timestamp when this participant was connected to the barge conference in the provider clock.
+        /// </summary>
+        /// <value>The timestamp when this participant was connected to the barge conference in the provider clock.</value>
+        [DataMember(Name="bargedTime", EmitDefaultValue=false)]
+        public DateTime? BargedTime { get; set; }
+        
+        
+        
+        /// <summary>
         /// Call wrap up or disposition data.
         /// </summary>
         /// <value>Call wrap up or disposition data.</value>
@@ -729,6 +745,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
+            sb.Append("  BargedTime: ").Append(BargedTime).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
@@ -884,6 +901,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UuiData.Equals(other.UuiData)
                 ) &&
                 (
+                    this.BargedTime == other.BargedTime ||
+                    this.BargedTime != null &&
+                    this.BargedTime.Equals(other.BargedTime)
+                ) &&
+                (
                     this.Wrapup == other.Wrapup ||
                     this.Wrapup != null &&
                     this.Wrapup.Equals(other.Wrapup)
@@ -982,6 +1004,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.UuiData != null)
                     hash = hash * 59 + this.UuiData.GetHashCode();
+                
+                if (this.BargedTime != null)
+                    hash = hash * 59 + this.BargedTime.GetHashCode();
                 
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();

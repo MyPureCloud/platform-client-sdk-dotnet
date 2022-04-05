@@ -97,12 +97,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Key type used in this configuration
         /// </summary>
         /// <value>Key type used in this configuration</value>
         [DataMember(Name="keyConfigurationType", EmitDefaultValue=false)]
         public KeyConfigurationTypeEnum? KeyConfigurationType { get; set; }
+        
+        
         
         
         
@@ -117,7 +122,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">user that requested generation of public key.</param>
         /// <param name="LocalEncryptionConfiguration">Local configuration.</param>
         /// <param name="KeyConfigurationType">Key type used in this configuration.</param>
-        public EncryptionKey(string Name = null, DateTime? CreateDate = null, string KeydataSummary = null, User User = null, LocalEncryptionConfiguration LocalEncryptionConfiguration = null, KeyConfigurationTypeEnum? KeyConfigurationType = null)
+        /// <param name="KmsKeyArn">ARN of internal key to be wrapped by AWS KMS Symmetric key.</param>
+        public EncryptionKey(string Name = null, DateTime? CreateDate = null, string KeydataSummary = null, User User = null, LocalEncryptionConfiguration LocalEncryptionConfiguration = null, KeyConfigurationTypeEnum? KeyConfigurationType = null, string KmsKeyArn = null)
         {
             this.Name = Name;
             this.CreateDate = CreateDate;
@@ -125,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.User = User;
             this.LocalEncryptionConfiguration = LocalEncryptionConfiguration;
             this.KeyConfigurationType = KeyConfigurationType;
+            this.KmsKeyArn = KmsKeyArn;
             
         }
         
@@ -186,6 +193,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// ARN of internal key to be wrapped by AWS KMS Symmetric key
+        /// </summary>
+        /// <value>ARN of internal key to be wrapped by AWS KMS Symmetric key</value>
+        [DataMember(Name="kmsKeyArn", EmitDefaultValue=false)]
+        public string KmsKeyArn { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -209,6 +225,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  LocalEncryptionConfiguration: ").Append(LocalEncryptionConfiguration).Append("\n");
             sb.Append("  KeyConfigurationType: ").Append(KeyConfigurationType).Append("\n");
+            sb.Append("  KmsKeyArn: ").Append(KmsKeyArn).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -286,6 +303,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.KeyConfigurationType.Equals(other.KeyConfigurationType)
                 ) &&
                 (
+                    this.KmsKeyArn == other.KmsKeyArn ||
+                    this.KmsKeyArn != null &&
+                    this.KmsKeyArn.Equals(other.KmsKeyArn)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -324,6 +346,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.KeyConfigurationType != null)
                     hash = hash * 59 + this.KeyConfigurationType.GetHashCode();
+                
+                if (this.KmsKeyArn != null)
+                    hash = hash * 59 + this.KmsKeyArn.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

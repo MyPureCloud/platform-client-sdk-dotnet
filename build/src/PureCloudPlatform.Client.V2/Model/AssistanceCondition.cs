@@ -21,8 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets _Operator
+        /// The operator for the assistance condition. The operator defines whether the listed topicIds should EXIST or NOTEXIST for the condition to be evaluated as true.
         /// </summary>
+        /// <value>The operator for the assistance condition. The operator defines whether the listed topicIds should EXIST or NOTEXIST for the condition to be evaluated as true.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
         {
@@ -55,8 +56,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets _Operator
+        /// The operator for the assistance condition. The operator defines whether the listed topicIds should EXIST or NOTEXIST for the condition to be evaluated as true.
         /// </summary>
+        /// <value>The operator for the assistance condition. The operator defines whether the listed topicIds should EXIST or NOTEXIST for the condition to be evaluated as true.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
         
@@ -67,12 +69,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AssistanceCondition" /> class.
         /// </summary>
-        /// <param name="_Operator">_Operator.</param>
-        /// <param name="TopicIds">TopicIds.</param>
-        public AssistanceCondition(OperatorEnum? _Operator = null, List<string> TopicIds = null)
+        public AssistanceCondition()
         {
-            this._Operator = _Operator;
-            this.TopicIds = TopicIds;
             
         }
         
@@ -81,10 +79,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets TopicIds
+        /// List of topicIds within the assistance condition which would be combined together using logical OR operator. Eg ( topicId_1 || topicId_2 ) .
         /// </summary>
+        /// <value>List of topicIds within the assistance condition which would be combined together using logical OR operator. Eg ( topicId_1 || topicId_2 ) .</value>
         [DataMember(Name="topicIds", EmitDefaultValue=false)]
-        public List<string> TopicIds { get; set; }
+        public List<string> TopicIds { get; private set; }
         
         
         /// <summary>

@@ -29,6 +29,7 @@ title: QueueConversationVideoEventTopicCall
 | **DisconnectReasons** | [**List&lt;QueueConversationVideoEventTopicDisconnectReason&gt;**](QueueConversationVideoEventTopicDisconnectReason.html) | List of reasons that this call was disconnected. This will be set once the call disconnects. | [optional] |
 | **FaxStatus** | [**QueueConversationVideoEventTopicFaxStatus**](QueueConversationVideoEventTopicFaxStatus.html) |  | [optional] |
 | **UuiData** | **string** | User to User Information (UUI) data managed by SIP session application. | [optional] |
+| **BargedTime** | **DateTime?** | The timestamp when this participant was connected to the barge conference in the provider clock. | [optional] |
 | **Wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) | Call wrap up or disposition data. | [optional] |
 | **AfterCallWork** | [**QueueConversationVideoEventTopicAfterCallWork**](QueueConversationVideoEventTopicAfterCallWork.html) |  | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |

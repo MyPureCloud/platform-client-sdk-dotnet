@@ -254,6 +254,52 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue
+        /// </summary>
+        /// <value>Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum RoutingStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum OffQueue for "OFF_QUEUE"
+            /// </summary>
+            [EnumMember(Value = "OFF_QUEUE")]
+            OffQueue,
+            
+            /// <summary>
+            /// Enum Idle for "IDLE"
+            /// </summary>
+            [EnumMember(Value = "IDLE")]
+            Idle,
+            
+            /// <summary>
+            /// Enum Interacting for "INTERACTING"
+            /// </summary>
+            [EnumMember(Value = "INTERACTING")]
+            Interacting,
+            
+            /// <summary>
+            /// Enum NotResponding for "NOT_RESPONDING"
+            /// </summary>
+            [EnumMember(Value = "NOT_RESPONDING")]
+            NotResponding,
+            
+            /// <summary>
+            /// Enum Communicating for "COMMUNICATING"
+            /// </summary>
+            [EnumMember(Value = "COMMUNICATING")]
+            Communicating
+        }
+        
         
         
         
@@ -337,6 +383,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue
+        /// </summary>
+        /// <value>Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue</value>
+        [DataMember(Name="routingStatus", EmitDefaultValue=false)]
+        public RoutingStatusEnum? RoutingStatus { get; set; }
+        
         
         
         /// <summary>
@@ -362,7 +415,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoutingStatus">Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue.</param>
         /// <param name="Impact">The impact of the current adherence state for this user.</param>
         /// <param name="SecondaryPresenceLookupId">The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID.</param>
-        public HistoricalAdherenceExceptionInfo(int? StartOffsetSeconds = null, int? EndOffsetSeconds = null, string ScheduledActivityCodeId = null, ScheduledActivityCategoryEnum? ScheduledActivityCategory = null, ActualActivityCategoryEnum? ActualActivityCategory = null, SystemPresenceEnum? SystemPresence = null, RoutingStatus RoutingStatus = null, ImpactEnum? Impact = null, string SecondaryPresenceLookupId = null)
+        public HistoricalAdherenceExceptionInfo(int? StartOffsetSeconds = null, int? EndOffsetSeconds = null, string ScheduledActivityCodeId = null, ScheduledActivityCategoryEnum? ScheduledActivityCategory = null, ActualActivityCategoryEnum? ActualActivityCategory = null, SystemPresenceEnum? SystemPresence = null, RoutingStatusEnum? RoutingStatus = null, ImpactEnum? Impact = null, string SecondaryPresenceLookupId = null)
         {
             this.StartOffsetSeconds = StartOffsetSeconds;
             this.EndOffsetSeconds = EndOffsetSeconds;
@@ -410,13 +463,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        /// <summary>
-        /// Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue
-        /// </summary>
-        /// <value>Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue</value>
-        [DataMember(Name="routingStatus", EmitDefaultValue=false)]
-        public RoutingStatus RoutingStatus { get; set; }
         
         
         

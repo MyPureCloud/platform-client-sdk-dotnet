@@ -9,15 +9,21 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteResponsemanagementLibrary**](ResponseManagementApi.html#deleteresponsemanagementlibrary) | **DELETE** /api/v2/responsemanagement/libraries/{libraryId} | Delete an existing response library. |
 | [**DeleteResponsemanagementResponse**](ResponseManagementApi.html#deleteresponsemanagementresponse) | **DELETE** /api/v2/responsemanagement/responses/{responseId} | Delete an existing response. |
+| [**DeleteResponsemanagementResponseasset**](ResponseManagementApi.html#deleteresponsemanagementresponseasset) | **DELETE** /api/v2/responsemanagement/responseassets/{responseAssetId} | Delete response asset |
 | [**GetResponsemanagementLibraries**](ResponseManagementApi.html#getresponsemanagementlibraries) | **GET** /api/v2/responsemanagement/libraries | Gets a list of existing response libraries. |
 | [**GetResponsemanagementLibrary**](ResponseManagementApi.html#getresponsemanagementlibrary) | **GET** /api/v2/responsemanagement/libraries/{libraryId} | Get details about an existing response library. |
 | [**GetResponsemanagementResponse**](ResponseManagementApi.html#getresponsemanagementresponse) | **GET** /api/v2/responsemanagement/responses/{responseId} | Get details about an existing response. |
+| [**GetResponsemanagementResponseasset**](ResponseManagementApi.html#getresponsemanagementresponseasset) | **GET** /api/v2/responsemanagement/responseassets/{responseAssetId} | Get response asset information |
+| [**GetResponsemanagementResponseassetsStatusStatusId**](ResponseManagementApi.html#getresponsemanagementresponseassetsstatusstatusid) | **GET** /api/v2/responsemanagement/responseassets/status/{statusId} | Get response asset upload status |
 | [**GetResponsemanagementResponses**](ResponseManagementApi.html#getresponsemanagementresponses) | **GET** /api/v2/responsemanagement/responses | Gets a list of existing responses. |
 | [**PostResponsemanagementLibraries**](ResponseManagementApi.html#postresponsemanagementlibraries) | **POST** /api/v2/responsemanagement/libraries | Create a response library. |
+| [**PostResponsemanagementResponseassetsSearch**](ResponseManagementApi.html#postresponsemanagementresponseassetssearch) | **POST** /api/v2/responsemanagement/responseassets/search | Search response assets |
+| [**PostResponsemanagementResponseassetsUploads**](ResponseManagementApi.html#postresponsemanagementresponseassetsuploads) | **POST** /api/v2/responsemanagement/responseassets/uploads | Creates pre-signed url for uploading response asset |
 | [**PostResponsemanagementResponses**](ResponseManagementApi.html#postresponsemanagementresponses) | **POST** /api/v2/responsemanagement/responses | Create a response. |
 | [**PostResponsemanagementResponsesQuery**](ResponseManagementApi.html#postresponsemanagementresponsesquery) | **POST** /api/v2/responsemanagement/responses/query | Query responses |
 | [**PutResponsemanagementLibrary**](ResponseManagementApi.html#putresponsemanagementlibrary) | **PUT** /api/v2/responsemanagement/libraries/{libraryId} | Update an existing response library. |
 | [**PutResponsemanagementResponse**](ResponseManagementApi.html#putresponsemanagementresponse) | **PUT** /api/v2/responsemanagement/responses/{responseId} | Update an existing response. |
+| [**PutResponsemanagementResponseasset**](ResponseManagementApi.html#putresponsemanagementresponseasset) | **PUT** /api/v2/responsemanagement/responseassets/{responseAssetId} | Update response asset |
 {: class="table table-striped"}
 
 <a name="deleteresponsemanagementlibrary"></a>
@@ -140,6 +146,70 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **responseId** | **string**| Response ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteresponsemanagementresponseasset"></a>
+
+## void DeleteResponsemanagementResponseasset (string responseAssetId)
+
+
+
+Delete response asset
+
+
+
+Requires ANY permissions: 
+
+* responseAssets:asset:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteResponsemanagementResponseassetExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ResponseManagementApi();
+            var responseAssetId = responseAssetId_example;  // string | Asset Id
+
+            try
+            { 
+                // Delete response asset
+                apiInstance.DeleteResponsemanagementResponseasset(responseAssetId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.DeleteResponsemanagementResponseasset: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **responseAssetId** | **string**| Asset Id |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -344,6 +414,136 @@ namespace Example
 
 [**Response**](Response.html)
 
+<a name="getresponsemanagementresponseasset"></a>
+
+## [**ResponseAsset**](ResponseAsset.html) GetResponsemanagementResponseasset (string responseAssetId)
+
+
+
+Get response asset information
+
+
+
+Requires ANY permissions: 
+
+* responseAssets:asset:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetResponsemanagementResponseassetExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ResponseManagementApi();
+            var responseAssetId = responseAssetId_example;  // string | Asset Id
+
+            try
+            { 
+                // Get response asset information
+                ResponseAsset result = apiInstance.GetResponsemanagementResponseasset(responseAssetId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.GetResponsemanagementResponseasset: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **responseAssetId** | **string**| Asset Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ResponseAsset**](ResponseAsset.html)
+
+<a name="getresponsemanagementresponseassetsstatusstatusid"></a>
+
+## [**ResponseAssetStatus**](ResponseAssetStatus.html) GetResponsemanagementResponseassetsStatusStatusId (string statusId)
+
+
+
+Get response asset upload status
+
+
+
+Requires ANY permissions: 
+
+* responseAssets:asset:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetResponsemanagementResponseassetsStatusStatusIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ResponseManagementApi();
+            var statusId = statusId_example;  // string | Status Id
+
+            try
+            { 
+                // Get response asset upload status
+                ResponseAssetStatus result = apiInstance.GetResponsemanagementResponseassetsStatusStatusId(statusId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.GetResponsemanagementResponseassetsStatusStatusId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **statusId** | **string**| Status Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ResponseAssetStatus**](ResponseAssetStatus.html)
+
 <a name="getresponsemanagementresponses"></a>
 
 ## [**ResponseEntityListing**](ResponseEntityListing.html) GetResponsemanagementResponses (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null)
@@ -477,6 +677,138 @@ namespace Example
 ### Return type
 
 [**Library**](Library.html)
+
+<a name="postresponsemanagementresponseassetssearch"></a>
+
+## [**ResponseAssetSearchResults**](ResponseAssetSearchResults.html) PostResponsemanagementResponseassetsSearch (ResponseAssetSearchRequest body, List<string> expand = null)
+
+
+
+Search response assets
+
+
+
+Requires ALL permissions: 
+
+* responseAssets:asset:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostResponsemanagementResponseassetsSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ResponseManagementApi();
+            var body = new ResponseAssetSearchRequest(); // ResponseAssetSearchRequest | request
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            { 
+                // Search response assets
+                ResponseAssetSearchResults result = apiInstance.PostResponsemanagementResponseassetsSearch(body, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.PostResponsemanagementResponseassetsSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ResponseAssetSearchRequest**](ResponseAssetSearchRequest.html)| request |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: user, division |
+{: class="table table-striped"}
+
+### Return type
+
+[**ResponseAssetSearchResults**](ResponseAssetSearchResults.html)
+
+<a name="postresponsemanagementresponseassetsuploads"></a>
+
+## [**CreateResponseAssetResponse**](CreateResponseAssetResponse.html) PostResponsemanagementResponseassetsUploads (CreateResponseAssetRequest body)
+
+
+
+Creates pre-signed url for uploading response asset
+
+
+
+Requires ANY permissions: 
+
+* responseAssets:asset:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostResponsemanagementResponseassetsUploadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ResponseManagementApi();
+            var body = new CreateResponseAssetRequest(); // CreateResponseAssetRequest | request
+
+            try
+            { 
+                // Creates pre-signed url for uploading response asset
+                CreateResponseAssetResponse result = apiInstance.PostResponsemanagementResponseassetsUploads(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.PostResponsemanagementResponseassetsUploads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateResponseAssetRequest**](CreateResponseAssetRequest.html)| request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CreateResponseAssetResponse**](CreateResponseAssetResponse.html)
 
 <a name="postresponsemanagementresponses"></a>
 
@@ -741,4 +1073,71 @@ namespace Example
 ### Return type
 
 [**Response**](Response.html)
+
+<a name="putresponsemanagementresponseasset"></a>
+
+## [**ResponseAsset**](ResponseAsset.html) PutResponsemanagementResponseasset (string responseAssetId, ResponseAssetRequest body)
+
+
+
+Update response asset
+
+
+
+Requires ALL permissions: 
+
+* responseAssets:asset:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutResponsemanagementResponseassetExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ResponseManagementApi();
+            var responseAssetId = responseAssetId_example;  // string | Asset Id
+            var body = new ResponseAssetRequest(); // ResponseAssetRequest | request
+
+            try
+            { 
+                // Update response asset
+                ResponseAsset result = apiInstance.PutResponsemanagementResponseasset(responseAssetId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.PutResponsemanagementResponseasset: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **responseAssetId** | **string**| Asset Id |  |
+| **body** | [**ResponseAssetRequest**](ResponseAssetRequest.html)| request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ResponseAsset**](ResponseAsset.html)
 

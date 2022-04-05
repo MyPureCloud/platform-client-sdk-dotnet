@@ -10,6 +10,7 @@ title: ConversationMessageEvent
 | **EventType** | **string** | Type of this event element | |
 | **CoBrowse** | [**ConversationEventCoBrowse**](ConversationEventCoBrowse.html) | CoBrowse event. | [optional] |
 | **Typing** | [**ConversationEventTyping**](ConversationEventTyping.html) | Typing event. | [optional] |
+| **Presence** | [**ConversationEventPresence**](ConversationEventPresence.html) | Presence event. | [optional] |
 {: class="table table-striped"}
 
 

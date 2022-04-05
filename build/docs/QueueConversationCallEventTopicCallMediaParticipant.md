@@ -51,6 +51,8 @@ title: QueueConversationCallEventTopicCallMediaParticipant
 | **DocumentId** | **string** |  | [optional] |
 | **MonitoredParticipantId** | **string** |  | [optional] |
 | **CoachedParticipantId** | **string** |  | [optional] |
+| **BargedParticipantId** | **string** |  | [optional] |
+| **BargedTime** | **DateTime?** |  | [optional] |
 | **ConsultParticipantId** | **string** |  | [optional] |
 | **FaxStatus** | [**QueueConversationCallEventTopicFaxStatus**](QueueConversationCallEventTopicFaxStatus.html) |  | [optional] |
 {: class="table table-striped"}

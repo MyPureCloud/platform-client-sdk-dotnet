@@ -30,18 +30,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRoutingStatusUserRoutingStatus" /> class.
         /// </summary>
+        /// <param name="Id">Id.</param>
         /// <param name="RoutingStatus">RoutingStatus.</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
-        public UserRoutingStatusUserRoutingStatus(UserRoutingStatusRoutingStatus RoutingStatus = null, UserRoutingStatusErrorInfo ErrorInfo = null)
+        public UserRoutingStatusUserRoutingStatus(UserRoutingStatusObject Id = null, UserRoutingStatusRoutingStatus RoutingStatus = null, UserRoutingStatusErrorInfo ErrorInfo = null)
         {
+            this.Id = Id;
             this.RoutingStatus = RoutingStatus;
             this.ErrorInfo = ErrorInfo;
             
         }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public UserRoutingStatusObject Id { get; set; }
         
         
         
@@ -69,6 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class UserRoutingStatusUserRoutingStatus {\n");
             
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("}\n");
@@ -112,6 +128,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.RoutingStatus == other.RoutingStatus ||
                     this.RoutingStatus != null &&
                     this.RoutingStatus.Equals(other.RoutingStatus)
@@ -134,6 +155,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();

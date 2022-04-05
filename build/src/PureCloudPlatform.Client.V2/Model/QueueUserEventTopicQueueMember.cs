@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">QueueId.</param>
         /// <param name="Joined">Joined.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueUserEventTopicQueueMember(string Id = null, QueueUserEventTopicUserReference User = null, string QueueId = null, bool? Joined = null, Object AdditionalProperties = null)
+        public QueueUserEventTopicQueueMember(string Id = null, QueueUserEventTopicUserReference User = null, string QueueId = null, bool? Joined = null, Dictionary<string, QueueUserEventTopicObject> AdditionalProperties = null)
         {
             this.Id = Id;
             this.User = User;
@@ -102,7 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
+        public Dictionary<string, QueueUserEventTopicObject> AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -182,7 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
                 (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 

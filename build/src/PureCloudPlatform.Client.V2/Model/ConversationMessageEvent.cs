@@ -45,8 +45,23 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Typing for "Typing"
             /// </summary>
             [EnumMember(Value = "Typing")]
-            Typing
+            Typing,
+            
+            /// <summary>
+            /// Enum Presence for "Presence"
+            /// </summary>
+            [EnumMember(Value = "Presence")]
+            Presence,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
         }
+        
+        
+        
         
         
         
@@ -70,6 +85,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMessageEvent" /> class.
@@ -83,11 +100,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EventType">Type of this event element (required).</param>
         /// <param name="CoBrowse">CoBrowse event..</param>
         /// <param name="Typing">Typing event..</param>
-        public ConversationMessageEvent(EventTypeEnum? EventType = null, ConversationEventCoBrowse CoBrowse = null, ConversationEventTyping Typing = null)
+        /// <param name="Presence">Presence event..</param>
+        public ConversationMessageEvent(EventTypeEnum? EventType = null, ConversationEventCoBrowse CoBrowse = null, ConversationEventTyping Typing = null, ConversationEventPresence Presence = null)
         {
             this.EventType = EventType;
             this.CoBrowse = CoBrowse;
             this.Typing = Typing;
+            this.Presence = Presence;
             
         }
         
@@ -112,6 +131,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationEventTyping Typing { get; set; }
         
         
+        
+        /// <summary>
+        /// Presence event.
+        /// </summary>
+        /// <value>Presence event.</value>
+        [DataMember(Name="presence", EmitDefaultValue=false)]
+        public ConversationEventPresence Presence { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,6 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  CoBrowse: ").Append(CoBrowse).Append("\n");
             sb.Append("  Typing: ").Append(Typing).Append("\n");
+            sb.Append("  Presence: ").Append(Presence).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -178,6 +207,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Typing == other.Typing ||
                     this.Typing != null &&
                     this.Typing.Equals(other.Typing)
+                ) &&
+                (
+                    this.Presence == other.Presence ||
+                    this.Presence != null &&
+                    this.Presence.Equals(other.Presence)
                 );
         }
 
@@ -201,6 +235,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Typing != null)
                     hash = hash * 59 + this.Typing.GetHashCode();
+                
+                if (this.Presence != null)
+                    hash = hash * 59 + this.Presence.GetHashCode();
                 
                 return hash;
             }

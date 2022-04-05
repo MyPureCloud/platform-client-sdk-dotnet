@@ -9,7 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteOauthClient**](OAuthApi.html#deleteoauthclient) | **DELETE** /api/v2/oauth/clients/{clientId} | Delete OAuth Client |
 | [**GetOauthAuthorization**](OAuthApi.html#getoauthauthorization) | **GET** /api/v2/oauth/authorizations/{clientId} | Get a client that is authorized by the resource owner |
-| [**GetOauthAuthorizations**](OAuthApi.html#getoauthauthorizations) | **GET** /api/v2/oauth/authorizations | List clients that are authorized by the resource owner |
+| [**GetOauthAuthorizations**](OAuthApi.html#getoauthauthorizations) | **GET** /api/v2/oauth/authorizations | List clients that have been authorized, requested, or revoked by the resource owner |
 | [**GetOauthClient**](OAuthApi.html#getoauthclient) | **GET** /api/v2/oauth/clients/{clientId} | Get OAuth Client |
 | [**GetOauthClientUsageQueryResult**](OAuthApi.html#getoauthclientusagequeryresult) | **GET** /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId} | Get the results of a usage query |
 | [**GetOauthClientUsageSummary**](OAuthApi.html#getoauthclientusagesummary) | **GET** /api/v2/oauth/clients/{clientId}/usage/summary | Get a summary of OAuth client API usage |
@@ -88,7 +88,7 @@ void (empty response body)
 
 <a name="getoauthauthorization"></a>
 
-## [**OAuthAuthorization**](OAuthAuthorization.html) GetOauthAuthorization (string clientId)
+## [**OAuthAuthorization**](OAuthAuthorization.html) GetOauthAuthorization (string clientId, string acceptLanguage = null)
 
 
 
@@ -123,11 +123,12 @@ namespace Example
 
             var apiInstance = new OAuthApi();
             var clientId = clientId_example;  // string | The ID of client
+            var acceptLanguage = acceptLanguage_example;  // string | The language in which to display the client descriptions. (optional)  (default to en-us)
 
             try
             { 
                 // Get a client that is authorized by the resource owner
-                OAuthAuthorization result = apiInstance.GetOauthAuthorization(clientId);
+                OAuthAuthorization result = apiInstance.GetOauthAuthorization(clientId, acceptLanguage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -145,6 +146,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| The ID of client |  |
+| **acceptLanguage** | **string**| The language in which to display the client descriptions. | [optional] [default to en-us] |
 {: class="table table-striped"}
 
 ### Return type
@@ -153,11 +155,11 @@ namespace Example
 
 <a name="getoauthauthorizations"></a>
 
-## [**OAuthAuthorizationListing**](OAuthAuthorizationListing.html) GetOauthAuthorizations ()
+## [**OAuthAuthorizationListing**](OAuthAuthorizationListing.html) GetOauthAuthorizations (string acceptLanguage = null)
 
 
 
-List clients that are authorized by the resource owner
+List clients that have been authorized, requested, or revoked by the resource owner
 
 
 
@@ -187,11 +189,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new OAuthApi();
+            var acceptLanguage = acceptLanguage_example;  // string | The language in which to display the client descriptions. (optional)  (default to en-us)
 
             try
             { 
-                // List clients that are authorized by the resource owner
-                OAuthAuthorizationListing result = apiInstance.GetOauthAuthorizations();
+                // List clients that have been authorized, requested, or revoked by the resource owner
+                OAuthAuthorizationListing result = apiInstance.GetOauthAuthorizations(acceptLanguage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -204,8 +207,12 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does require any parameters.
 
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **acceptLanguage** | **string**| The language in which to display the client descriptions. | [optional] [default to en-us] |
+{: class="table table-striped"}
 
 ### Return type
 

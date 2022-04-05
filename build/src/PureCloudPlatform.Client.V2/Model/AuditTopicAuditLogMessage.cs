@@ -455,7 +455,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unassign for "Unassign"
             /// </summary>
             [EnumMember(Value = "Unassign")]
-            Unassign
+            Unassign,
+            
+            /// <summary>
+            /// Enum Reset for "Reset"
+            /// </summary>
+            [EnumMember(Value = "Reset")]
+            Reset,
+            
+            /// <summary>
+            /// Enum Reassign for "Reassign"
+            /// </summary>
+            [EnumMember(Value = "Reassign")]
+            Reassign
         }
         
         

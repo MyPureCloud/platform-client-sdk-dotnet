@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WebMessagingRecipient" /> class.
@@ -72,6 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Nickname { get; private set; }
         
         
+        
+        /// <summary>
+        /// List of recipient additional identifiers
+        /// </summary>
+        /// <value>List of recipient additional identifiers</value>
+        [DataMember(Name="additionalIds", EmitDefaultValue=false)]
+        public List<RecipientAdditionalIdentifier> AdditionalIds { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  Nickname: ").Append(Nickname).Append("\n");
+            sb.Append("  AdditionalIds: ").Append(AdditionalIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,6 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Nickname == other.Nickname ||
                     this.Nickname != null &&
                     this.Nickname.Equals(other.Nickname)
+                ) &&
+                (
+                    this.AdditionalIds == other.AdditionalIds ||
+                    this.AdditionalIds != null &&
+                    this.AdditionalIds.SequenceEqual(other.AdditionalIds)
                 );
         }
 
@@ -161,6 +181,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Nickname != null)
                     hash = hash * 59 + this.Nickname.GetHashCode();
+                
+                if (this.AdditionalIds != null)
+                    hash = hash * 59 + this.AdditionalIds.GetHashCode();
                 
                 return hash;
             }

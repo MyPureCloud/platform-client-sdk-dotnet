@@ -108,6 +108,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
@@ -262,6 +265,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
@@ -292,13 +297,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Provider">The source provider of the screen share..</param>
         /// <param name="ScriptId">The UUID of the script to use..</param>
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
+        /// <param name="PeerCount">PeerCount.</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock..</param>
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">A communication&#39;s after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
-        public QueueConversationVideoEventTopicScreenshare(StateEnum? State = null, QueueConversationVideoEventTopicAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
+        public QueueConversationVideoEventTopicScreenshare(StateEnum? State = null, QueueConversationVideoEventTopicAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, string Provider = null, string ScriptId = null, string PeerId = null, QueueConversationVideoEventTopicObject PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
         {
             this.State = State;
             this.Self = Self;
@@ -308,6 +314,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Provider = Provider;
             this.ScriptId = ScriptId;
             this.PeerId = PeerId;
+            this.PeerCount = PeerCount;
             this.DisconnectType = DisconnectType;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
@@ -384,6 +391,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets PeerCount
+        /// </summary>
+        [DataMember(Name="peerCount", EmitDefaultValue=false)]
+        public QueueConversationVideoEventTopicObject PeerCount { get; set; }
+        
+        
+        
         
         
         /// <summary>
@@ -447,6 +462,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
+            sb.Append("  PeerCount: ").Append(PeerCount).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
@@ -534,6 +550,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PeerId.Equals(other.PeerId)
                 ) &&
                 (
+                    this.PeerCount == other.PeerCount ||
+                    this.PeerCount != null &&
+                    this.PeerCount.Equals(other.PeerCount)
+                ) &&
+                (
                     this.DisconnectType == other.DisconnectType ||
                     this.DisconnectType != null &&
                     this.DisconnectType.Equals(other.DisconnectType)
@@ -600,6 +621,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
+                
+                if (this.PeerCount != null)
+                    hash = hash * 59 + this.PeerCount.GetHashCode();
                 
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();

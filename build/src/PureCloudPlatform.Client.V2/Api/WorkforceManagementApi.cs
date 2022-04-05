@@ -2441,6 +2441,62 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body);
         
         /// <summary>
+        /// Starts processing a schedule update
+        /// </summary>
+        /// <remarks>
+        /// Call after uploading the schedule data to the url supplied by the /update/uploadurl route
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>BuAsyncScheduleResponse</returns>
+        BuAsyncScheduleResponse PostWorkforcemanagementBusinessunitWeekScheduleUpdate (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body);
+
+        /// <summary>
+        /// Starts processing a schedule update
+        /// </summary>
+        /// <remarks>
+        /// Call after uploading the schedule data to the url supplied by the /update/uploadurl route
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
+        ApiResponse<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateWithHttpInfo (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body);
+        
+        /// <summary>
+        /// Creates a signed upload URL for updating a schedule
+        /// </summary>
+        /// <remarks>
+        /// Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>UpdateScheduleUploadResponse</returns>
+        UpdateScheduleUploadResponse PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body);
+
+        /// <summary>
+        /// Creates a signed upload URL for updating a schedule
+        /// </summary>
+        /// <remarks>
+        /// Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of UpdateScheduleUploadResponse</returns>
+        ApiResponse<UpdateScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlWithHttpInfo (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body);
+        
+        /// <summary>
         /// Create a blank schedule
         /// </summary>
         /// <remarks>
@@ -2491,6 +2547,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleRunResponse</returns>
         ApiResponse<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateWithHttpInfo (string businessUnitId, String weekId, BuGenerateScheduleRequest body);
+        
+        /// <summary>
+        /// Starts processing a schedule import
+        /// </summary>
+        /// <remarks>
+        /// Call after uploading the schedule data to the url supplied by the /import/uploadurl route
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>ScheduleUploadProcessingResponse</returns>
+        ScheduleUploadProcessingResponse PostWorkforcemanagementBusinessunitWeekSchedulesImport (string businessUnitId, String weekId, WfmProcessUploadRequest body);
+
+        /// <summary>
+        /// Starts processing a schedule import
+        /// </summary>
+        /// <remarks>
+        /// Call after uploading the schedule data to the url supplied by the /import/uploadurl route
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of ScheduleUploadProcessingResponse</returns>
+        ApiResponse<ScheduleUploadProcessingResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportWithHttpInfo (string businessUnitId, String weekId, WfmProcessUploadRequest body);
+        
+        /// <summary>
+        /// Creates a signed upload URL for importing a schedule
+        /// </summary>
+        /// <remarks>
+        /// Once the upload is complete, call the /import route to start the schedule import process
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ImportScheduleUploadResponse</returns>
+        ImportScheduleUploadResponse PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl (string businessUnitId, String weekId, UploadUrlRequestBody body);
+
+        /// <summary>
+        /// Creates a signed upload URL for importing a schedule
+        /// </summary>
+        /// <remarks>
+        /// Once the upload is complete, call the /import route to start the schedule import process
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ImportScheduleUploadResponse</returns>
+        ApiResponse<ImportScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlWithHttpInfo (string businessUnitId, String weekId, UploadUrlRequestBody body);
         
         /// <summary>
         /// Copy a short term forecast
@@ -2549,6 +2657,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of AsyncForecastOperationResult</returns>
         ApiResponse<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithHttpInfo (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
+        
+        /// <summary>
+        /// Starts importing the uploaded short term forecast
+        /// </summary>
+        /// <remarks>
+        /// Call after uploading the forecast data to the url supplied by the /import/uploadurl route
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>ImportForecastResponse</returns>
+        ImportForecastResponse PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport (string businessUnitId, String weekDateId, WfmProcessUploadRequest body);
+
+        /// <summary>
+        /// Starts importing the uploaded short term forecast
+        /// </summary>
+        /// <remarks>
+        /// Call after uploading the forecast data to the url supplied by the /import/uploadurl route
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of ImportForecastResponse</returns>
+        ApiResponse<ImportForecastResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportWithHttpInfo (string businessUnitId, String weekDateId, WfmProcessUploadRequest body);
+        
+        /// <summary>
+        /// Creates a signed upload URL for importing a short term forecast
+        /// </summary>
+        /// <remarks>
+        /// Once the upload is complete, call the /import route to start the short term forecast import process
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ImportForecastUploadResponse</returns>
+        ImportForecastUploadResponse PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl (string businessUnitId, String weekDateId, UploadUrlRequestBody body);
+
+        /// <summary>
+        /// Creates a signed upload URL for importing a short term forecast
+        /// </summary>
+        /// <remarks>
+        /// Once the upload is complete, call the /import route to start the short term forecast import process
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ImportForecastUploadResponse</returns>
+        ApiResponse<ImportForecastUploadResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlWithHttpInfo (string businessUnitId, String weekDateId, UploadUrlRequestBody body);
         
         /// <summary>
         /// Add a new business unit
@@ -5683,6 +5843,62 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body);
         
         /// <summary>
+        /// Starts processing a schedule update
+        /// </summary>
+        /// <remarks>
+        /// Call after uploading the schedule data to the url supplied by the /update/uploadurl route
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of BuAsyncScheduleResponse</returns>
+        System.Threading.Tasks.Task<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateAsync (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body);
+
+        /// <summary>
+        /// Starts processing a schedule update
+        /// </summary>
+        /// <remarks>
+        /// Call after uploading the schedule data to the url supplied by the /update/uploadurl route
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> PostWorkforcemanagementBusinessunitWeekScheduleUpdateAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body);
+        
+        /// <summary>
+        /// Creates a signed upload URL for updating a schedule
+        /// </summary>
+        /// <remarks>
+        /// Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of UpdateScheduleUploadResponse</returns>
+        System.Threading.Tasks.Task<UpdateScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlAsync (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body);
+
+        /// <summary>
+        /// Creates a signed upload URL for updating a schedule
+        /// </summary>
+        /// <remarks>
+        /// Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (UpdateScheduleUploadResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UpdateScheduleUploadResponse>> PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body);
+        
+        /// <summary>
         /// Create a blank schedule
         /// </summary>
         /// <remarks>
@@ -5733,6 +5949,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleRunResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsyncWithHttpInfo (string businessUnitId, String weekId, BuGenerateScheduleRequest body);
+        
+        /// <summary>
+        /// Starts processing a schedule import
+        /// </summary>
+        /// <remarks>
+        /// Call after uploading the schedule data to the url supplied by the /import/uploadurl route
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ScheduleUploadProcessingResponse</returns>
+        System.Threading.Tasks.Task<ScheduleUploadProcessingResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportAsync (string businessUnitId, String weekId, WfmProcessUploadRequest body);
+
+        /// <summary>
+        /// Starts processing a schedule import
+        /// </summary>
+        /// <remarks>
+        /// Call after uploading the schedule data to the url supplied by the /import/uploadurl route
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (ScheduleUploadProcessingResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ScheduleUploadProcessingResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesImportAsyncWithHttpInfo (string businessUnitId, String weekId, WfmProcessUploadRequest body);
+        
+        /// <summary>
+        /// Creates a signed upload URL for importing a schedule
+        /// </summary>
+        /// <remarks>
+        /// Once the upload is complete, call the /import route to start the schedule import process
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ImportScheduleUploadResponse</returns>
+        System.Threading.Tasks.Task<ImportScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlAsync (string businessUnitId, String weekId, UploadUrlRequestBody body);
+
+        /// <summary>
+        /// Creates a signed upload URL for importing a schedule
+        /// </summary>
+        /// <remarks>
+        /// Once the upload is complete, call the /import route to start the schedule import process
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ImportScheduleUploadResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ImportScheduleUploadResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlAsyncWithHttpInfo (string businessUnitId, String weekId, UploadUrlRequestBody body);
         
         /// <summary>
         /// Copy a short term forecast
@@ -5791,6 +6059,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AsyncForecastOperationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsyncWithHttpInfo (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
+        
+        /// <summary>
+        /// Starts importing the uploaded short term forecast
+        /// </summary>
+        /// <remarks>
+        /// Call after uploading the forecast data to the url supplied by the /import/uploadurl route
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ImportForecastResponse</returns>
+        System.Threading.Tasks.Task<ImportForecastResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportAsync (string businessUnitId, String weekDateId, WfmProcessUploadRequest body);
+
+        /// <summary>
+        /// Starts importing the uploaded short term forecast
+        /// </summary>
+        /// <remarks>
+        /// Call after uploading the forecast data to the url supplied by the /import/uploadurl route
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (ImportForecastResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ImportForecastResponse>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportAsyncWithHttpInfo (string businessUnitId, String weekDateId, WfmProcessUploadRequest body);
+        
+        /// <summary>
+        /// Creates a signed upload URL for importing a short term forecast
+        /// </summary>
+        /// <remarks>
+        /// Once the upload is complete, call the /import route to start the short term forecast import process
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ImportForecastUploadResponse</returns>
+        System.Threading.Tasks.Task<ImportForecastUploadResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlAsync (string businessUnitId, String weekDateId, UploadUrlRequestBody body);
+
+        /// <summary>
+        /// Creates a signed upload URL for importing a short term forecast
+        /// </summary>
+        /// <remarks>
+        /// Once the upload is complete, call the /import route to start the short term forecast import process
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ImportForecastUploadResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ImportForecastUploadResponse>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlAsyncWithHttpInfo (string businessUnitId, String weekDateId, UploadUrlRequestBody body);
         
         /// <summary>
         /// Add a new business unit
@@ -27028,6 +27348,486 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Starts processing a schedule update Call after uploading the schedule data to the url supplied by the /update/uploadurl route
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>BuAsyncScheduleResponse</returns>
+        public BuAsyncScheduleResponse PostWorkforcemanagementBusinessunitWeekScheduleUpdate (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body)
+        {
+             ApiResponse<BuAsyncScheduleResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekScheduleUpdateWithHttpInfo(businessUnitId, weekId, scheduleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Starts processing a schedule update Call after uploading the schedule data to the url supplied by the /update/uploadurl route
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
+        public ApiResponse< BuAsyncScheduleResponse > PostWorkforcemanagementBusinessunitWeekScheduleUpdateWithHttpInfo (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdate");
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdate");
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdate");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdate");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekScheduleUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekScheduleUpdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAsyncScheduleResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BuAsyncScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAsyncScheduleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Starts processing a schedule update Call after uploading the schedule data to the url supplied by the /update/uploadurl route
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of BuAsyncScheduleResponse</returns>
+        public async System.Threading.Tasks.Task<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateAsync (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body)
+        {
+             ApiResponse<BuAsyncScheduleResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekScheduleUpdateAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Starts processing a schedule update Call after uploading the schedule data to the url supplied by the /update/uploadurl route
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> PostWorkforcemanagementBusinessunitWeekScheduleUpdateAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdate");
+            
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdate");
+            
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdate");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdate");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekScheduleUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekScheduleUpdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAsyncScheduleResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BuAsyncScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAsyncScheduleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Creates a signed upload URL for updating a schedule Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>UpdateScheduleUploadResponse</returns>
+        public UpdateScheduleUploadResponse PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body)
+        {
+             ApiResponse<UpdateScheduleUploadResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlWithHttpInfo(businessUnitId, weekId, scheduleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a signed upload URL for updating a schedule Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of UpdateScheduleUploadResponse</returns>
+        public ApiResponse< UpdateScheduleUploadResponse > PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlWithHttpInfo (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl");
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl");
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update/uploadurl";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UpdateScheduleUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UpdateScheduleUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdateScheduleUploadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Creates a signed upload URL for updating a schedule Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of UpdateScheduleUploadResponse</returns>
+        public async System.Threading.Tasks.Task<UpdateScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlAsync (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body)
+        {
+             ApiResponse<UpdateScheduleUploadResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a signed upload URL for updating a schedule Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="scheduleId">The ID of the schedule</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (UpdateScheduleUploadResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UpdateScheduleUploadResponse>> PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl");
+            
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl");
+            
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update/uploadurl";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UpdateScheduleUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UpdateScheduleUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdateScheduleUploadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Create a blank schedule 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27475,6 +28275,460 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<BuAsyncScheduleRunResponse>(localVarStatusCode,
                 localVarHeaders,
                 (BuAsyncScheduleRunResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAsyncScheduleRunResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Starts processing a schedule import Call after uploading the schedule data to the url supplied by the /import/uploadurl route
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>ScheduleUploadProcessingResponse</returns>
+        public ScheduleUploadProcessingResponse PostWorkforcemanagementBusinessunitWeekSchedulesImport (string businessUnitId, String weekId, WfmProcessUploadRequest body)
+        {
+             ApiResponse<ScheduleUploadProcessingResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekSchedulesImportWithHttpInfo(businessUnitId, weekId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Starts processing a schedule import Call after uploading the schedule data to the url supplied by the /import/uploadurl route
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of ScheduleUploadProcessingResponse</returns>
+        public ApiResponse< ScheduleUploadProcessingResponse > PostWorkforcemanagementBusinessunitWeekSchedulesImportWithHttpInfo (string businessUnitId, String weekId, WfmProcessUploadRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImport");
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImport");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImport");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulesImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulesImport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduleUploadProcessingResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduleUploadProcessingResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleUploadProcessingResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Starts processing a schedule import Call after uploading the schedule data to the url supplied by the /import/uploadurl route
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ScheduleUploadProcessingResponse</returns>
+        public async System.Threading.Tasks.Task<ScheduleUploadProcessingResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportAsync (string businessUnitId, String weekId, WfmProcessUploadRequest body)
+        {
+             ApiResponse<ScheduleUploadProcessingResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekSchedulesImportAsyncWithHttpInfo(businessUnitId, weekId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Starts processing a schedule import Call after uploading the schedule data to the url supplied by the /import/uploadurl route
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (ScheduleUploadProcessingResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduleUploadProcessingResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesImportAsyncWithHttpInfo (string businessUnitId, String weekId, WfmProcessUploadRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImport");
+            
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImport");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImport");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulesImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulesImport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduleUploadProcessingResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduleUploadProcessingResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleUploadProcessingResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Creates a signed upload URL for importing a schedule Once the upload is complete, call the /import route to start the schedule import process
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ImportScheduleUploadResponse</returns>
+        public ImportScheduleUploadResponse PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl (string businessUnitId, String weekId, UploadUrlRequestBody body)
+        {
+             ApiResponse<ImportScheduleUploadResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlWithHttpInfo(businessUnitId, weekId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a signed upload URL for importing a schedule Once the upload is complete, call the /import route to start the schedule import process
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ImportScheduleUploadResponse</returns>
+        public ApiResponse< ImportScheduleUploadResponse > PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlWithHttpInfo (string businessUnitId, String weekId, UploadUrlRequestBody body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl");
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import/uploadurl";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ImportScheduleUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ImportScheduleUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportScheduleUploadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Creates a signed upload URL for importing a schedule Once the upload is complete, call the /import route to start the schedule import process
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ImportScheduleUploadResponse</returns>
+        public async System.Threading.Tasks.Task<ImportScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlAsync (string businessUnitId, String weekId, UploadUrlRequestBody body)
+        {
+             ApiResponse<ImportScheduleUploadResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlAsyncWithHttpInfo(businessUnitId, weekId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a signed upload URL for importing a schedule Once the upload is complete, call the /import route to start the schedule import process
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ImportScheduleUploadResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ImportScheduleUploadResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlAsyncWithHttpInfo (string businessUnitId, String weekId, UploadUrlRequestBody body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl");
+            
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import/uploadurl";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ImportScheduleUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ImportScheduleUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportScheduleUploadResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -27954,6 +29208,460 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AsyncForecastOperationResult>(localVarStatusCode,
                 localVarHeaders,
                 (AsyncForecastOperationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncForecastOperationResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Starts importing the uploaded short term forecast Call after uploading the forecast data to the url supplied by the /import/uploadurl route
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>ImportForecastResponse</returns>
+        public ImportForecastResponse PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport (string businessUnitId, String weekDateId, WfmProcessUploadRequest body)
+        {
+             ApiResponse<ImportForecastResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportWithHttpInfo(businessUnitId, weekDateId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Starts importing the uploaded short term forecast Call after uploading the forecast data to the url supplied by the /import/uploadurl route
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of ImportForecastResponse</returns>
+        public ApiResponse< ImportForecastResponse > PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportWithHttpInfo (string businessUnitId, String weekDateId, WfmProcessUploadRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport");
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ImportForecastResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ImportForecastResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportForecastResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Starts importing the uploaded short term forecast Call after uploading the forecast data to the url supplied by the /import/uploadurl route
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ImportForecastResponse</returns>
+        public async System.Threading.Tasks.Task<ImportForecastResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportAsync (string businessUnitId, String weekDateId, WfmProcessUploadRequest body)
+        {
+             ApiResponse<ImportForecastResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportAsyncWithHttpInfo(businessUnitId, weekDateId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Starts importing the uploaded short term forecast Call after uploading the forecast data to the url supplied by the /import/uploadurl route
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (ImportForecastResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ImportForecastResponse>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportAsyncWithHttpInfo (string businessUnitId, String weekDateId, WfmProcessUploadRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport");
+            
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ImportForecastResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ImportForecastResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportForecastResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Creates a signed upload URL for importing a short term forecast Once the upload is complete, call the /import route to start the short term forecast import process
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ImportForecastUploadResponse</returns>
+        public ImportForecastUploadResponse PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl (string businessUnitId, String weekDateId, UploadUrlRequestBody body)
+        {
+             ApiResponse<ImportForecastUploadResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlWithHttpInfo(businessUnitId, weekDateId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a signed upload URL for importing a short term forecast Once the upload is complete, call the /import route to start the short term forecast import process
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ImportForecastUploadResponse</returns>
+        public ApiResponse< ImportForecastUploadResponse > PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlWithHttpInfo (string businessUnitId, String weekDateId, UploadUrlRequestBody body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl");
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import/uploadurl";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ImportForecastUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ImportForecastUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportForecastUploadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Creates a signed upload URL for importing a short term forecast Once the upload is complete, call the /import route to start the short term forecast import process
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ImportForecastUploadResponse</returns>
+        public async System.Threading.Tasks.Task<ImportForecastUploadResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlAsync (string businessUnitId, String weekDateId, UploadUrlRequestBody body)
+        {
+             ApiResponse<ImportForecastUploadResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlAsyncWithHttpInfo(businessUnitId, weekDateId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a signed upload URL for importing a short term forecast Once the upload is complete, call the /import route to start the short term forecast import process
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ImportForecastUploadResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ImportForecastUploadResponse>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlAsyncWithHttpInfo (string businessUnitId, String weekDateId, UploadUrlRequestBody body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl");
+            
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import/uploadurl";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ImportForecastUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ImportForecastUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportForecastUploadResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

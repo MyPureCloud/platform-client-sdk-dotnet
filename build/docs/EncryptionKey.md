@@ -14,6 +14,7 @@ title: EncryptionKey
 | **User** | [**User**](User.html) | user that requested generation of public key | [optional] |
 | **LocalEncryptionConfiguration** | [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) | Local configuration | [optional] |
 | **KeyConfigurationType** | **string** | Key type used in this configuration | [optional] |
+| **KmsKeyArn** | **string** | ARN of internal key to be wrapped by AWS KMS Symmetric key | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

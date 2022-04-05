@@ -114,6 +114,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
@@ -275,6 +278,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
@@ -306,6 +311,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AudioMuted">Indicates whether this participant has muted their outgoing audio..</param>
         /// <param name="VideoMuted">Indicates whether this participant has muted/paused their outgoing video..</param>
         /// <param name="SharingScreen">Indicates whether this participant is sharing their screen to the session..</param>
+        /// <param name="PeerCount">The number of peer participants from the perspective of the participant in the conference..</param>
         /// <param name="Provider">The media provider controlling the video..</param>
         /// <param name="ScriptId">The UUID of the script to use..</param>
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
@@ -316,7 +322,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">A communication&#39;s after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
-        public QueueConversationVideoEventTopicVideo(StateEnum? State = null, QueueConversationVideoEventTopicAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<string> Msids = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
+        public QueueConversationVideoEventTopicVideo(StateEnum? State = null, QueueConversationVideoEventTopicAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, QueueConversationVideoEventTopicObject PeerCount = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<string> Msids = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
         {
             this.State = State;
             this.Self = Self;
@@ -325,6 +331,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AudioMuted = AudioMuted;
             this.VideoMuted = VideoMuted;
             this.SharingScreen = SharingScreen;
+            this.PeerCount = PeerCount;
             this.Provider = Provider;
             this.ScriptId = ScriptId;
             this.PeerId = PeerId;
@@ -393,6 +400,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Indicates whether this participant is sharing their screen to the session.</value>
         [DataMember(Name="sharingScreen", EmitDefaultValue=false)]
         public bool? SharingScreen { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The number of peer participants from the perspective of the participant in the conference.
+        /// </summary>
+        /// <value>The number of peer participants from the perspective of the participant in the conference.</value>
+        [DataMember(Name="peerCount", EmitDefaultValue=false)]
+        public QueueConversationVideoEventTopicObject PeerCount { get; set; }
         
         
         
@@ -494,6 +510,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
             sb.Append("  VideoMuted: ").Append(VideoMuted).Append("\n");
             sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
+            sb.Append("  PeerCount: ").Append(PeerCount).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
@@ -580,6 +597,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SharingScreen.Equals(other.SharingScreen)
                 ) &&
                 (
+                    this.PeerCount == other.PeerCount ||
+                    this.PeerCount != null &&
+                    this.PeerCount.Equals(other.PeerCount)
+                ) &&
+                (
                     this.Provider == other.Provider ||
                     this.Provider != null &&
                     this.Provider.Equals(other.Provider)
@@ -663,6 +685,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SharingScreen != null)
                     hash = hash * 59 + this.SharingScreen.GetHashCode();
+                
+                if (this.PeerCount != null)
+                    hash = hash * 59 + this.PeerCount.GetHashCode();
                 
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
