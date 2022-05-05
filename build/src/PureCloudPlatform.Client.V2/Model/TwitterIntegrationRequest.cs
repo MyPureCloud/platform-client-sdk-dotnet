@@ -41,6 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The type of twitter account to be used for the integration
         /// </summary>
@@ -93,6 +96,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The type of twitter account to be used for the integration
         /// </summary>
@@ -117,16 +122,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the Twitter Integration (required).</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
+        /// <param name="MessagingSetting">MessagingSetting.</param>
         /// <param name="AccessTokenKey">The Access Token Key from Twitter messenger (required).</param>
         /// <param name="AccessTokenSecret">The Access Token Secret from Twitter messenger (required).</param>
         /// <param name="ConsumerKey">The Consumer Key from Twitter messenger (required).</param>
         /// <param name="ConsumerSecret">The Consumer Secret from Twitter messenger (required).</param>
         /// <param name="Tier">The type of twitter account to be used for the integration (required).</param>
         /// <param name="EnvName">The Twitter environment name, e.g.: env-beta (required for premium tier).</param>
-        public TwitterIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, string AccessTokenKey = null, string AccessTokenSecret = null, string ConsumerKey = null, string ConsumerSecret = null, TierEnum? Tier = null, string EnvName = null)
+        public TwitterIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, string AccessTokenKey = null, string AccessTokenSecret = null, string ConsumerKey = null, string ConsumerSecret = null, TierEnum? Tier = null, string EnvName = null)
         {
             this.Name = Name;
             this.SupportedContent = SupportedContent;
+            this.MessagingSetting = MessagingSetting;
             this.AccessTokenKey = AccessTokenKey;
             this.AccessTokenSecret = AccessTokenSecret;
             this.ConsumerKey = ConsumerKey;
@@ -162,6 +169,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Defines the SupportedContent profile configured for an integration</value>
         [DataMember(Name="supportedContent", EmitDefaultValue=false)]
         public SupportedContentReference SupportedContent { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets MessagingSetting
+        /// </summary>
+        [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
+        public MessagingSettingReference MessagingSetting { get; set; }
         
         
         
@@ -232,6 +247,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
+            sb.Append("  MessagingSetting: ").Append(MessagingSetting).Append("\n");
             sb.Append("  AccessTokenKey: ").Append(AccessTokenKey).Append("\n");
             sb.Append("  AccessTokenSecret: ").Append(AccessTokenSecret).Append("\n");
             sb.Append("  ConsumerKey: ").Append(ConsumerKey).Append("\n");
@@ -295,6 +311,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SupportedContent.Equals(other.SupportedContent)
                 ) &&
                 (
+                    this.MessagingSetting == other.MessagingSetting ||
+                    this.MessagingSetting != null &&
+                    this.MessagingSetting.Equals(other.MessagingSetting)
+                ) &&
+                (
                     this.AccessTokenKey == other.AccessTokenKey ||
                     this.AccessTokenKey != null &&
                     this.AccessTokenKey.Equals(other.AccessTokenKey)
@@ -351,6 +372,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SupportedContent != null)
                     hash = hash * 59 + this.SupportedContent.GetHashCode();
+                
+                if (this.MessagingSetting != null)
+                    hash = hash * 59 + this.MessagingSetting.GetHashCode();
                 
                 if (this.AccessTokenKey != null)
                     hash = hash * 59 + this.AccessTokenKey.GetHashCode();

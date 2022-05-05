@@ -29,6 +29,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRecordingJob**](RecordingApi.html#getrecordingjob) | **GET** /api/v2/recording/jobs/{jobId} | Get the status of the job associated with the job id. |
 | [**GetRecordingJobFailedrecordings**](RecordingApi.html#getrecordingjobfailedrecordings) | **GET** /api/v2/recording/jobs/{jobId}/failedrecordings | Get IDs of recordings that the bulk job failed for |
 | [**GetRecordingJobs**](RecordingApi.html#getrecordingjobs) | **GET** /api/v2/recording/jobs | Get the status of all jobs within the user&#39;s organization |
+| [**GetRecordingKeyconfiguration**](RecordingApi.html#getrecordingkeyconfiguration) | **GET** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Get the encryption key configurations |
+| [**GetRecordingKeyconfigurations**](RecordingApi.html#getrecordingkeyconfigurations) | **GET** /api/v2/recording/keyconfigurations | Get a list of key configurations data |
 | [**GetRecordingLocalkeysSetting**](RecordingApi.html#getrecordinglocalkeyssetting) | **GET** /api/v2/recording/localkeys/settings/{settingsId} | Get the local encryption settings |
 | [**GetRecordingLocalkeysSettings**](RecordingApi.html#getrecordinglocalkeyssettings) | **GET** /api/v2/recording/localkeys/settings | gets a list local key settings data |
 | [**GetRecordingMediaretentionpolicies**](RecordingApi.html#getrecordingmediaretentionpolicies) | **GET** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
@@ -43,7 +45,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationRecordingAnnotations**](RecordingApi.html#postconversationrecordingannotations) | **POST** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
 | [**PostRecordingBatchrequests**](RecordingApi.html#postrecordingbatchrequests) | **POST** /api/v2/recording/batchrequests | Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. |
 | [**PostRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#postrecordingcrossplatformmediaretentionpolicies) | **POST** /api/v2/recording/crossplatform/mediaretentionpolicies | Create media retention policy |
-| [**PostRecordingJobs**](RecordingApi.html#postrecordingjobs) | **POST** /api/v2/recording/jobs | Create a recording bulk job |
+| [**PostRecordingJobs**](RecordingApi.html#postrecordingjobs) | **POST** /api/v2/recording/jobs | Create a recording bulk job. |
+| [**PostRecordingKeyconfigurations**](RecordingApi.html#postrecordingkeyconfigurations) | **POST** /api/v2/recording/keyconfigurations | Setup configurations for encryption key creation |
+| [**PostRecordingKeyconfigurationsValidate**](RecordingApi.html#postrecordingkeyconfigurationsvalidate) | **POST** /api/v2/recording/keyconfigurations/validate | Validate encryption key configurations without saving it |
 | [**PostRecordingLocalkeys**](RecordingApi.html#postrecordinglocalkeys) | **POST** /api/v2/recording/localkeys | create a local recording key |
 | [**PostRecordingLocalkeysSettings**](RecordingApi.html#postrecordinglocalkeyssettings) | **POST** /api/v2/recording/localkeys/settings | create settings for local key creation |
 | [**PostRecordingMediaretentionpolicies**](RecordingApi.html#postrecordingmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
@@ -56,6 +60,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutOrphanrecording**](RecordingApi.html#putorphanrecording) | **PUT** /api/v2/orphanrecordings/{orphanId} | Updates an orphan recording to a regular recording with retention values |
 | [**PutRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#putrecordingcrossplatformmediaretentionpolicy) | **PUT** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Update a media retention policy |
 | [**PutRecordingJob**](RecordingApi.html#putrecordingjob) | **PUT** /api/v2/recording/jobs/{jobId} | Execute the recording bulk job. |
+| [**PutRecordingKeyconfiguration**](RecordingApi.html#putrecordingkeyconfiguration) | **PUT** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Update the encryption key configurations |
 | [**PutRecordingLocalkeysSetting**](RecordingApi.html#putrecordinglocalkeyssetting) | **PUT** /api/v2/recording/localkeys/settings/{settingsId} | Update the local encryption settings |
 | [**PutRecordingMediaretentionpolicy**](RecordingApi.html#putrecordingmediaretentionpolicy) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
 | [**PutRecordingRecordingkeysRotationschedule**](RecordingApi.html#putrecordingrecordingkeysrotationschedule) | **PUT** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
@@ -1233,7 +1238,7 @@ namespace Example
 
 <a name="getrecordingcrossplatformmediaretentionpolicies"></a>
 
-## [**PolicyEntityListing**](PolicyEntityListing.html) GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+## [**PolicyEntityListing**](PolicyEntityListing.html) GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
 
 
 
@@ -1277,11 +1282,12 @@ namespace Example
             var enabled = true;  // bool? | checks to see if policy is enabled - use enabled = true or enabled = false (optional) 
             var summary = true;  // bool? | provides a less verbose response of policy lists. (optional)  (default to false)
             var hasErrors = true;  // bool? | provides a way to fetch all policies with errors or policies that do not have errors (optional) 
+            var deleteDaysThreshold = 56;  // int? | provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional) 
 
             try
             { 
                 // Gets media retention policy list with query options to filter on name and enabled.
-                PolicyEntityListing result = apiInstance.GetRecordingCrossplatformMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
+                PolicyEntityListing result = apiInstance.GetRecordingCrossplatformMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors, deleteDaysThreshold);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1308,6 +1314,7 @@ namespace Example
 | **enabled** | **bool?**| checks to see if policy is enabled - use enabled = true or enabled = false | [optional]  |
 | **summary** | **bool?**| provides a less verbose response of policy lists. | [optional] [default to false] |
 | **hasErrors** | **bool?**| provides a way to fetch all policies with errors or policies that do not have errors | [optional]  |
+| **deleteDaysThreshold** | **int?**| provides a way to fetch all policies with any actions having deleteDays exceeding the provided value | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1596,6 +1603,131 @@ namespace Example
 
 [**RecordingJobEntityListing**](RecordingJobEntityListing.html)
 
+<a name="getrecordingkeyconfiguration"></a>
+
+## [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html) GetRecordingKeyconfiguration (string keyConfigurationId)
+
+
+
+Get the encryption key configurations
+
+
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRecordingKeyconfigurationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RecordingApi();
+            var keyConfigurationId = keyConfigurationId_example;  // string | Key Configurations Id
+
+            try
+            { 
+                // Get the encryption key configurations
+                RecordingEncryptionConfiguration result = apiInstance.GetRecordingKeyconfiguration(keyConfigurationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetRecordingKeyconfiguration: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **keyConfigurationId** | **string**| Key Configurations Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)
+
+<a name="getrecordingkeyconfigurations"></a>
+
+## [**RecordingEncryptionConfigurationListing**](RecordingEncryptionConfigurationListing.html) GetRecordingKeyconfigurations ()
+
+
+
+Get a list of key configurations data
+
+
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRecordingKeyconfigurationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RecordingApi();
+
+            try
+            { 
+                // Get a list of key configurations data
+                RecordingEncryptionConfigurationListing result = apiInstance.GetRecordingKeyconfigurations();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetRecordingKeyconfigurations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**RecordingEncryptionConfigurationListing**](RecordingEncryptionConfigurationListing.html)
+
 <a name="getrecordinglocalkeyssetting"></a>
 
 ## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) GetRecordingLocalkeysSetting (string settingsId)
@@ -1723,7 +1855,7 @@ This endpoint does require any parameters.
 
 <a name="getrecordingmediaretentionpolicies"></a>
 
-## [**PolicyEntityListing**](PolicyEntityListing.html) GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+## [**PolicyEntityListing**](PolicyEntityListing.html) GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
 
 
 
@@ -1767,11 +1899,12 @@ namespace Example
             var enabled = true;  // bool? | checks to see if policy is enabled - use enabled = true or enabled = false (optional) 
             var summary = true;  // bool? | provides a less verbose response of policy lists. (optional)  (default to false)
             var hasErrors = true;  // bool? | provides a way to fetch all policies with errors or policies that do not have errors (optional) 
+            var deleteDaysThreshold = 56;  // int? | provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional) 
 
             try
             { 
                 // Gets media retention policy list with query options to filter on name and enabled.
-                PolicyEntityListing result = apiInstance.GetRecordingMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
+                PolicyEntityListing result = apiInstance.GetRecordingMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors, deleteDaysThreshold);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1798,6 +1931,7 @@ namespace Example
 | **enabled** | **bool?**| checks to see if policy is enabled - use enabled = true or enabled = false | [optional]  |
 | **summary** | **bool?**| provides a less verbose response of policy lists. | [optional] [default to false] |
 | **hasErrors** | **bool?**| provides a way to fetch all policies with errors or policies that do not have errors | [optional]  |
+| **deleteDaysThreshold** | **int?**| provides a way to fetch all policies with any actions having deleteDays exceeding the provided value | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2533,9 +2667,9 @@ namespace Example
 
 
 
-Create a recording bulk job
+Create a recording bulk job.
 
-
+Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state.
 
 Requires ALL permissions: 
 
@@ -2567,7 +2701,7 @@ namespace Example
 
             try
             { 
-                // Create a recording bulk job
+                // Create a recording bulk job.
                 RecordingJob result = apiInstance.PostRecordingJobs(body);
                 Debug.WriteLine(result);
             }
@@ -2591,6 +2725,136 @@ namespace Example
 ### Return type
 
 [**RecordingJob**](RecordingJob.html)
+
+<a name="postrecordingkeyconfigurations"></a>
+
+## [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html) PostRecordingKeyconfigurations (RecordingEncryptionConfiguration body)
+
+
+
+Setup configurations for encryption key creation
+
+
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRecordingKeyconfigurationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RecordingApi();
+            var body = new RecordingEncryptionConfiguration(); // RecordingEncryptionConfiguration | Encryption Configuration
+
+            try
+            { 
+                // Setup configurations for encryption key creation
+                RecordingEncryptionConfiguration result = apiInstance.PostRecordingKeyconfigurations(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PostRecordingKeyconfigurations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)| Encryption Configuration |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)
+
+<a name="postrecordingkeyconfigurationsvalidate"></a>
+
+## [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html) PostRecordingKeyconfigurationsValidate (RecordingEncryptionConfiguration body)
+
+
+
+Validate encryption key configurations without saving it
+
+
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRecordingKeyconfigurationsValidateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RecordingApi();
+            var body = new RecordingEncryptionConfiguration(); // RecordingEncryptionConfiguration | Encryption Configuration
+
+            try
+            { 
+                // Validate encryption key configurations without saving it
+                RecordingEncryptionConfiguration result = apiInstance.PostRecordingKeyconfigurationsValidate(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PostRecordingKeyconfigurationsValidate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)| Encryption Configuration |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)
 
 <a name="postrecordinglocalkeys"></a>
 
@@ -3383,6 +3647,73 @@ namespace Example
 ### Return type
 
 [**RecordingJob**](RecordingJob.html)
+
+<a name="putrecordingkeyconfiguration"></a>
+
+## [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html) PutRecordingKeyconfiguration (string keyConfigurationId, RecordingEncryptionConfiguration body)
+
+
+
+Update the encryption key configurations
+
+
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRecordingKeyconfigurationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RecordingApi();
+            var keyConfigurationId = keyConfigurationId_example;  // string | Key Configurations Id
+            var body = new RecordingEncryptionConfiguration(); // RecordingEncryptionConfiguration | Encryption key configuration metadata
+
+            try
+            { 
+                // Update the encryption key configurations
+                RecordingEncryptionConfiguration result = apiInstance.PutRecordingKeyconfiguration(keyConfigurationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PutRecordingKeyconfiguration: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **keyConfigurationId** | **string**| Key Configurations Id |  |
+| **body** | [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)| Encryption key configuration metadata |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)
 
 <a name="putrecordinglocalkeyssetting"></a>
 

@@ -45,6 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Adherenceexplanation for "AdherenceExplanation"
+            /// </summary>
+            [EnumMember(Value = "AdherenceExplanation")]
+            Adherenceexplanation,
+            
+            /// <summary>
             /// Enum Shifttrade for "ShiftTrade"
             /// </summary>
             [EnumMember(Value = "ShiftTrade")]
@@ -82,12 +88,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The type of this notification
         /// </summary>
         /// <value>The type of this notification</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
         
         
         
@@ -171,6 +182,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// An adherence explanation notification.  Only set if type == AdherenceExplanation
+        /// </summary>
+        /// <value>An adherence explanation notification.  Only set if type == AdherenceExplanation</value>
+        [DataMember(Name="adherenceExplanation", EmitDefaultValue=false)]
+        public AdherenceExplanationNotification AdherenceExplanation { get; private set; }
+        
+        
+        
+        /// <summary>
         /// Whether this notification has been marked \&quot;read\&quot;
         /// </summary>
         /// <value>Whether this notification has been marked \&quot;read\&quot;</value>
@@ -211,6 +231,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ShiftTrade: ").Append(ShiftTrade).Append("\n");
             sb.Append("  TimeOffRequest: ").Append(TimeOffRequest).Append("\n");
+            sb.Append("  AdherenceExplanation: ").Append(AdherenceExplanation).Append("\n");
             sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
             sb.Append("  AgentNotification: ").Append(AgentNotification).Append("\n");
             sb.Append("  OtherNotificationIdsInGroup: ").Append(OtherNotificationIdsInGroup).Append("\n");
@@ -285,6 +306,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeOffRequest.Equals(other.TimeOffRequest)
                 ) &&
                 (
+                    this.AdherenceExplanation == other.AdherenceExplanation ||
+                    this.AdherenceExplanation != null &&
+                    this.AdherenceExplanation.Equals(other.AdherenceExplanation)
+                ) &&
+                (
                     this.MarkedAsRead == other.MarkedAsRead ||
                     this.MarkedAsRead != null &&
                     this.MarkedAsRead.Equals(other.MarkedAsRead)
@@ -330,6 +356,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TimeOffRequest != null)
                     hash = hash * 59 + this.TimeOffRequest.GetHashCode();
+                
+                if (this.AdherenceExplanation != null)
+                    hash = hash * 59 + this.AdherenceExplanation.GetHashCode();
                 
                 if (this.MarkedAsRead != null)
                     hash = hash * 59 + this.MarkedAsRead.GetHashCode();

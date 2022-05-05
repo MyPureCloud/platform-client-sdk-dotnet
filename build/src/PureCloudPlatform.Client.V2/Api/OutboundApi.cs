@@ -307,6 +307,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<MessagingCampaign> DeleteOutboundMessagingcampaignWithHttpInfo (string messagingCampaignId);
         
         /// <summary>
+        /// Reset messaging campaign progress and recycle the messaging campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
+        /// <returns></returns>
+        void DeleteOutboundMessagingcampaignProgress (string messagingCampaignId);
+
+        /// <summary>
+        /// Reset messaging campaign progress and recycle the messaging campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundMessagingcampaignProgressWithHttpInfo (string messagingCampaignId);
+        
+        /// <summary>
         /// Delete a Rule Set.
         /// </summary>
         /// <remarks>
@@ -3069,6 +3091,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse (MessagingCampaign)</returns>
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaign>> DeleteOutboundMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId);
+        
+        /// <summary>
+        /// Reset messaging campaign progress and recycle the messaging campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundMessagingcampaignProgressAsync (string messagingCampaignId);
+
+        /// <summary>
+        /// Reset messaging campaign progress and recycle the messaging campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundMessagingcampaignProgressAsyncWithHttpInfo (string messagingCampaignId);
         
         /// <summary>
         /// Delete a Rule Set.
@@ -8139,6 +8183,197 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<MessagingCampaign>(localVarStatusCode,
                 localVarHeaders,
                 (MessagingCampaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingCampaign)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Reset messaging campaign progress and recycle the messaging campaign 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
+        /// <returns></returns>
+        public void DeleteOutboundMessagingcampaignProgress (string messagingCampaignId)
+        {
+             DeleteOutboundMessagingcampaignProgressWithHttpInfo(messagingCampaignId);
+        }
+
+        /// <summary>
+        /// Reset messaging campaign progress and recycle the messaging campaign 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundMessagingcampaignProgressWithHttpInfo (string messagingCampaignId)
+        { 
+            // verify the required parameter 'messagingCampaignId' is set
+            if (messagingCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->DeleteOutboundMessagingcampaignProgress");
+
+            var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (messagingCampaignId != null) localVarPathParams.Add("messagingCampaignId", this.Configuration.ApiClient.ParameterToString(messagingCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundMessagingcampaignProgress: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundMessagingcampaignProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Reset messaging campaign progress and recycle the messaging campaign 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundMessagingcampaignProgressAsync (string messagingCampaignId)
+        {
+             await DeleteOutboundMessagingcampaignProgressAsyncWithHttpInfo(messagingCampaignId);
+
+        }
+
+        /// <summary>
+        /// Reset messaging campaign progress and recycle the messaging campaign 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundMessagingcampaignProgressAsyncWithHttpInfo (string messagingCampaignId)
+        { 
+            // verify the required parameter 'messagingCampaignId' is set
+            if (messagingCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->DeleteOutboundMessagingcampaignProgress");
+            
+
+            var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (messagingCampaignId != null) localVarPathParams.Add("messagingCampaignId", this.Configuration.ApiClient.ParameterToString(messagingCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundMessagingcampaignProgress: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundMessagingcampaignProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

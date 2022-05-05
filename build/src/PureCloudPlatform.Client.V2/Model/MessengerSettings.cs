@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="MessengerSettings" /> class.
@@ -54,13 +59,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LauncherButton">The launcher button settings for messenger.</param>
         /// <param name="FileUpload">The file upload settings for messenger.</param>
         /// <param name="Apps">The apps embedded in the messenger.</param>
-        public MessengerSettings(bool? Enabled = null, MessengerStyles Styles = null, LauncherButtonSettings LauncherButton = null, FileUploadSettings FileUpload = null, MessengerApps Apps = null)
+        /// <param name="HomeScreen">The homescreen settings for messenger.</param>
+        public MessengerSettings(bool? Enabled = null, MessengerStyles Styles = null, LauncherButtonSettings LauncherButton = null, FileUploadSettings FileUpload = null, MessengerApps Apps = null, MessengerHomeScreen HomeScreen = null)
         {
             this.Enabled = Enabled;
             this.Styles = Styles;
             this.LauncherButton = LauncherButton;
             this.FileUpload = FileUpload;
             this.Apps = Apps;
+            this.HomeScreen = HomeScreen;
             
         }
         
@@ -110,6 +117,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public MessengerApps Apps { get; set; }
         
         
+        
+        /// <summary>
+        /// The homescreen settings for messenger
+        /// </summary>
+        /// <value>The homescreen settings for messenger</value>
+        [DataMember(Name="homeScreen", EmitDefaultValue=false)]
+        public MessengerHomeScreen HomeScreen { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,6 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LauncherButton: ").Append(LauncherButton).Append("\n");
             sb.Append("  FileUpload: ").Append(FileUpload).Append("\n");
             sb.Append("  Apps: ").Append(Apps).Append("\n");
+            sb.Append("  HomeScreen: ").Append(HomeScreen).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -188,6 +205,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Apps == other.Apps ||
                     this.Apps != null &&
                     this.Apps.Equals(other.Apps)
+                ) &&
+                (
+                    this.HomeScreen == other.HomeScreen ||
+                    this.HomeScreen != null &&
+                    this.HomeScreen.Equals(other.HomeScreen)
                 );
         }
 
@@ -217,6 +239,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Apps != null)
                     hash = hash * 59 + this.Apps.GetHashCode();
+                
+                if (this.HomeScreen != null)
+                    hash = hash * 59 + this.HomeScreen.GetHashCode();
                 
                 return hash;
             }

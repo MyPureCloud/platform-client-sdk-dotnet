@@ -12,6 +12,7 @@ title: ConversationEventTopicMessageDetails
 | **MessageStatus** | **string** | Indicates the delivery status of the message. | [optional] |
 | **MessageSegmentCount** | **int?** | The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits. | [optional] |
 | **Media** | [**List&lt;ConversationEventTopicMessageMedia&gt;**](ConversationEventTopicMessageMedia.html) | The media (images, files, etc) associated with this message, if any | [optional] |
+| **ErrorInfo** | [**ConversationEventTopicErrorDetails**](ConversationEventTopicErrorDetails.html) | Detailed information about an error response. | [optional] |
 | **Stickers** | [**List&lt;ConversationEventTopicMessageSticker&gt;**](ConversationEventTopicMessageSticker.html) | A list of stickers included in the message | [optional] |
 {: class="table table-striped"}
 

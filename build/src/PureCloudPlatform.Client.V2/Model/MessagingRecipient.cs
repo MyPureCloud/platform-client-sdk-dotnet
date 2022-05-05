@@ -80,12 +80,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The recipient ID type. This is used to indicate the format used for the ID.
         /// </summary>
         /// <value>The recipient ID type. This is used to indicate the format used for the ID.</value>
         [DataMember(Name="idType", EmitDefaultValue=false)]
         public IdTypeEnum? IdType { get; set; }
+        
+        
         
         
         
@@ -108,10 +113,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The recipient ID specific to the provider. (required).</param>
         /// <param name="IdType">The recipient ID type. This is used to indicate the format used for the ID..</param>
-        public MessagingRecipient(string Id = null, IdTypeEnum? IdType = null)
+        /// <param name="AdditionalIds">List of recipient additional identifiers.</param>
+        public MessagingRecipient(string Id = null, IdTypeEnum? IdType = null, List<RecipientAdditionalIdentifier> AdditionalIds = null)
         {
             this.Id = Id;
             this.IdType = IdType;
+            this.AdditionalIds = AdditionalIds;
             
         }
         
@@ -172,6 +179,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Email { get; private set; }
         
         
+        
+        /// <summary>
+        /// List of recipient additional identifiers
+        /// </summary>
+        /// <value>List of recipient additional identifiers</value>
+        [DataMember(Name="additionalIds", EmitDefaultValue=false)]
+        public List<RecipientAdditionalIdentifier> AdditionalIds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,6 +204,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  AdditionalIds: ").Append(AdditionalIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -262,6 +279,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Email == other.Email ||
                     this.Email != null &&
                     this.Email.Equals(other.Email)
+                ) &&
+                (
+                    this.AdditionalIds == other.AdditionalIds ||
+                    this.AdditionalIds != null &&
+                    this.AdditionalIds.SequenceEqual(other.AdditionalIds)
                 );
         }
 
@@ -297,6 +319,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
+                
+                if (this.AdditionalIds != null)
+                    hash = hash * 59 + this.AdditionalIds.GetHashCode();
                 
                 return hash;
             }

@@ -4,11 +4,11 @@ title: Platform API Client SDK - .NET
 [![NuGet Badge](https://buildstats.info/nuget/PureCloudPlatform.Client.V2)](https://www.nuget.org/packages/PureCloudPlatform.Client.V2/)
 [![Release Notes Badge](https://developer-content.genesys.cloud/images/sdk-release-notes.png)](https://github.com/MyPureCloud/platform-client-sdk-dotnet/blob/master/releaseNotes.md)
 
-Documentation can be found at [https://developer.mypurecloud.com/api/rest/client-libraries/dotnet/](https://developer.mypurecloud.com/api/rest/client-libraries/dotnet/)
+Documentation can be found at [https://developer.genesys.cloud/devapps/sdk/docexplorer/pureclouddotnet/](https://developer.genesys.cloud/devapps/sdk/docexplorer/pureclouddotnet/)
 
 ## Install Using nuget
 
-```{"language":"csharp"}
+```bash
 install-package PureCloudPlatform.Client.V2
 ```
 
@@ -34,9 +34,9 @@ If you're building from source or otherwise not using nuget, reference your vers
 * The app is running locally on the user's computer
 * The app has an embedded browser to use for OAuth
 
-If the application will be authenticating as a human, the [Implicit Grant](http://developer.mypurecloud.com/api/rest/authorization/use-implicit-grant.html) OAuth 2 flow may be used from an embeddable browser. The access token can be retrieved from the querystring of the redirected URL in the browser control. This process is implemented in the [Genesys Cloud API dotNET OAuth Control](https://github.com/MyPureCloud/purecloud_api_dotnet_oauth_control) project.
+If the application will be authenticating as a human, the [Implicit Grant](https://developer.genesys.cloud/authorization/platform-auth/use-implicit-grant) OAuth 2 flow may be used from an embeddable browser. The access token can be retrieved from the querystring of the redirected URL in the browser control. This process is implemented in the [Genesys Cloud API dotNET OAuth Control](https://github.com/MyPureCloud/purecloud_api_dotnet_oauth_control) project.
 
-See the browser control implemented in a winforms project in the [C# OAuth With Implicit Grant](https://developer.mypurecloud.com/api/tutorials/oauth-implicit/#csharp) tutorial.
+See the browser control implemented in a winforms project in the [OAuth With Implicit Grant Login Flow](https://developer.genesys.cloud/authorization/platform-auth/guides/oauth-implicit-guide) tutorial.
 
 #### Authorization Code Grant
 
@@ -46,7 +46,7 @@ See the browser control implemented in a winforms project in the [C# OAuth With 
 * The app is served via a web server, such as IIS
 * There is server-side code that will be making API requests
 
-The [Authorization Code Grant](https://developer.mypurecloud.com/api/rest/authorization/use-authorization-code.html) will return the auth code in the querystring to allow the server-side code to make the request to get an access token with the auth code, and prevent the access token from being known by the client-side. The process for this is:
+The [Authorization Code Grant](https://developer.genesys.cloud/authorization/platform-auth/use-authorization-code) will return the auth code in the querystring to allow the server-side code to make the request to get an access token with the auth code, and prevent the access token from being known by the client-side. The process for this is:
 
 * Redirect user to OAuth login page
 * When the user is redirected to your URL, retrieve the auth code from the querystring on the server side
@@ -54,15 +54,15 @@ The [Authorization Code Grant](https://developer.mypurecloud.com/api/rest/author
 
 ##### ASP.NET tutorial
 
-This is a tutorial of how to use an Authorization Code Grant without using the SDK: [https://developer.mypurecloud.com/api/tutorials/oauth-auth-code/#csharp](https://developer.mypurecloud.com/api/tutorials/oauth-auth-code/#csharp)
+This is a tutorial of how to use an Authorization Code Grant without using the SDK: [https://developer.genesys.cloud/authorization/platform-auth/guides/oauth-auth-code-guide](https://developer.genesys.cloud/authorization/platform-auth/guides/oauth-auth-code-guide)
 
 ##### Example with the SDK
 
-In addition to the process in the tutorial above, swap out the POST to "https://login." + host + "/oauth/token" with the following:
+In addition to the process in the tutorial above, swap out the POST to `https://login.<apihost>/oauth/token` with the following:
 
 Use the following namespaces:
 
-```{"language":"csharp"}
+```csharp
 using PureCloudPlatform.Client.V2.Api;
 using PureCloudPlatform.Client.V2.Client;
 using PureCloudPlatform.Client.V2.Extensions;
@@ -70,7 +70,7 @@ using PureCloudPlatform.Client.V2.Extensions;
 
 Then call the _PostToken_ extension method of _ApiClient_, including the redirect URI and auth code:
 
-```{"language":"csharp"}
+```csharp
 var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
   "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
   "http://redirecturi.com/",
@@ -80,20 +80,20 @@ Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
 
 By default, the SDK will transparently request a new access token using the refresh token when the access token expires. If you wish to implement the refresh logic set _ShouldRefreshAccessToken_ to false and store the refresh token from the auth response:
 
-```{"language":"csharp"}
+```csharp
 var refreshToken = accessTokenInfo.RefreshToken;
 Configuration.Default.ShouldRefreshAccessToken = false;
 ```
 
 You can use the _ExpiresIn_ value to determine how long the token will live and proactively request a new one before it expires.
 
-```{"language":"csharp"}
+```csharp
 var tokenTimeToLive = authTokenInfo.ExpiresIn;
 ```
 
 When the access token expires, refresh it using the _PostToken_ method using the same clientId and clientSecret as used to request it.
 
-```{"language":"csharp"}
+```csharp
 var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
   "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
   authorizationCode: refreshToken,
@@ -106,11 +106,11 @@ refreshToken = accessTokenInfo.RefreshToken;
 
 **Use when...**
 
-* The app is authenticating as a human user, the [OAuth2 SAML2 Bearer](https://developer.mypurecloud.com/api/rest/authorization/use-saml2-bearer.html) can be used via the AuthExtensions extension methods.
+* The app is authenticating as a human user, the [OAuth2 SAML2 Bearer](https://developer.genesys.cloud/authorization/platform-auth/use-saml2-bearer) can be used via the AuthExtensions extension methods.
 
 First, use the following namespaces:
 
-```{"language":"csharp"}
+```csharp
 using PureCloudPlatform.Client.V2.Api;
 using PureCloudPlatform.Client.V2.Client;
 using PureCloudPlatform.Client.V2.Extensions;
@@ -118,7 +118,7 @@ using PureCloudPlatform.Client.V2.Extensions;
 
 Then call the _PostTokenSaml2Bearer_ extension method of _ApiClient_ with your orgName and encodedSamlAssertion
 
-```{"language":"csharp"}
+```csharp
 var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
   "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",orgName, encodedSamlAssertion);
 Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
@@ -130,11 +130,11 @@ Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
 
 * The app is authenticating as a non-human (e.g. a service, scheduled task, or other non-UI application)
 
-For headless and non-user applications, the [Client Credentials Grant](http://developer.mypurecloud.com/api/rest/authorization/use-client-credentials.html) can be used via the AuthExtensions extension methods.
+For headless and non-user applications, the [Client Credentials Grant](https://developer.genesys.cloud/authorization/platform-auth/use-client-credentials) can be used via the AuthExtensions extension methods.
 
 First, use the following namespaces:
 
-```{"language":"csharp"}
+```csharp
 using PureCloudPlatform.Client.V2.Api;
 using PureCloudPlatform.Client.V2.Client;
 using PureCloudPlatform.Client.V2.Extensions;
@@ -142,7 +142,7 @@ using PureCloudPlatform.Client.V2.Extensions;
 
 Then call the _PostToken_ extension method of _ApiClient_, leaving the redirect URI and auth code blank:
 
-```{"language":"csharp"}
+```csharp
 var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
   "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo");
 Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
@@ -154,7 +154,7 @@ Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
 
 If connecting to a Genesys Cloud environment other than mypurecloud.com (e.g. mypurecloud.ie), set the new base path before constructing any API classes. The new base path should be the base path to the Platform API for your environment.
 
-```{"language":"csharp"}
+```csharp
 PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1;
 Configuration.Default.ApiClient.setBasePath(region);
 ```
@@ -165,7 +165,8 @@ By default, the .NET SDK does not automatically retry any failed requests.
 To enable automatic retries, provide a RetryConfiguration object with the maximum number of seconds to retry requests and the max number of retries when building the ApiClient instance.
 
 Building a `RetryConfiguration` instance:
-```{"language":"csharp"}
+
+```csharp
 var retryConfig = new ApiClient.RetryConfiguration
 {
   MaxRetryTimeSec = 10,
@@ -174,25 +175,29 @@ var retryConfig = new ApiClient.RetryConfiguration
 ```
 
 Setting `RetryConfiguration` instance to `ApiClient`:
-```{"language":"csharp"}
+
+```csharp
 Configuration.Default.ApiClient.RetryConfig = retryConfig;
 ```
+
 Set the `MaxRetryTimeSec` to the number of seconds to process retries before returning an error.  
 Set the `RetryMax` to the retries to attempt before returning an error.  
 When the retry time is a positive integer, the SDK will follow the recommended backoff logic using the provided configuration.
-The best practices are documented in the [Rate Limiting](https://developer.mypurecloud.com/api/rest/rate_limits.html) Developer Center article.
+The best practices are documented in the [Rate Limiting](https://developer.genesys.cloud/platform/api/rate-limits) Developer Center article.
 
 #### SDK Logging
 
 Logging of API requests and responses can be controlled by several parameters on the `Configuration`'s `Logger` instance.
 
 `LogLevel` values:
+
 1. LogLevel.LTrace (HTTP Method, URL, Request Body, HTTP Status Code, Request Headers, Response Headers)
 2. LogLevel.LDebug (HTTP Method, URL, Request Body, HTTP Status Code, Request Headers)
 3. LogLevel.LError (HTTP Method, URL, Request Body, Response Body, HTTP Status Code, Request Headers, Response Headers)
 4. LogLevel.LNone - default
 
 `LogFormat` values:
+
 1. JSON
 2. Text - default
 
@@ -200,7 +205,8 @@ By default, the request and response bodies are not logged because these can con
 To log to a file, provide a `LogFilePath` value. SDK users are responsible for the rotation of the log file.
 
 Example logging configuration:
-```{"language":"csharp"}
+
+```csharp
 Configuration.Default.Logger.Level = LogLevel.LTrace;
 Configuration.Default.Logger.Format = LogFormat.JSON;
 Configuration.Default.Logger.LogRequestBody = true;
@@ -220,7 +226,7 @@ The SDK will take an event-driven approach to monitor for config file changes an
 INI and JSON formats are supported. See below for examples of configuration values in both formats:
 
 INI:
-```{"language":"ini"}
+```ini
 [logging]
 log_level = trace
 log_format = text
@@ -241,7 +247,7 @@ host = https://api.mypurecloud.com
 ```
 
 JSON:
-```{"language":"json"}
+```json
 {
     "logging": {
         "log_level": "trace",
@@ -276,7 +282,7 @@ There are two steps to making requests:
 
 Example of getting the authenticated user's information:
 
-```{"language":"csharp"}
+```csharp
 // Instantiate instance of the Users API
 var usersApi = new UsersApi();
 
@@ -297,25 +303,25 @@ The helper uses [WebSocketSharp](https://www.nuget.org/packages/WebSocketSharp)'
 
 Create a new instance:
 
-```{"language":"csharp"}
+```csharp
 var handler = new NotificationHandler();
 ```
 
 If you're using a proxy server, use the following constructor:
 
-```{"language":"csharp"}
+```csharp
 var handler = new NotificationHandler("YOUR_PROXY_URL");
 ```
 
 If your proxy server requires authentication, use the following constructor:
 
-```{"language":"csharp"}
+```csharp
 var handler = new NotificationHandler("YOUR_PROXY_URL", "YOUR_PROXY_USERNAME", "YOUR_PROXY_PASSWORD");
 ```
 
 Add a subscription:
 
-```{"language":"csharp"}
+```csharp
 // Single
 handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(PresenceEventUserPresence));
 
@@ -328,13 +334,13 @@ handler.AddSubscriptions(subscriptions);
 
 Remove a subscription:
 
-```{"language":"csharp"}
+```csharp
 handler.RemoveSubscription($"v2.users.{_me.Id}.conversations");
 ```
 
 Handle incoming notification:
 
-```{"language":"csharp"}
+```csharp
 handler.NotificationReceived += (data) =>
 {
     Console.WriteLine(JsonConvert.SerializeObject(data, Formatting.Indented));
@@ -349,7 +355,7 @@ handler.NotificationReceived += (data) =>
 
 Full example:
 
-```{"language":"csharp"}
+```csharp
 var handler = new NotificationHandler();
 handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(PresenceEventUserPresence));
 handler.AddSubscription($"v2.users.{_me.Id}.conversations", typeof(ConversationNotification));
@@ -416,4 +422,4 @@ The SDK's version is incremented according to the [Semantic Versioning Specifica
 
 This package is intended to be forwards compatible with v2 of Genesys Cloud's Platform API. While the general policy for the API is not to introduce breaking changes, there are certain additions and changes to the API that cause breaking changes for the SDK, often due to the way the API is expressed in its swagger definition. Because of this, the SDK can have a major version bump while the API remains at major version 2. While the SDK is intended to be forward compatible, patches will only be released to the latest version. For these reasons, it is strongly recommended that all applications using this SDK are kept up to date and use the latest version of the SDK.
 
-For any issues, questions, or suggestions for the SDK, visit the [Genesys Cloud Developer Forum](https://developer.mypurecloud.com/forum/).
+For any issues, questions, or suggestions for the SDK, visit the [Genesys Cloud Developer Forum](https://developer.genesys.cloud/forum/).

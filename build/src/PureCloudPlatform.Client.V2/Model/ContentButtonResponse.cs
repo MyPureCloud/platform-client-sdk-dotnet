@@ -86,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ContentButtonResponse" /> class.
         /// </summary>
         /// <param name="Id">An ID assigned to the button response (Deprecated)..</param>
-        /// <param name="Type">Describes the button that resulted in the Button Response..</param>
+        /// <param name="Type">Describes the button that resulted in the Button Response. (required).</param>
         /// <param name="Text">The response text from the button click. (required).</param>
         /// <param name="Payload">The response payload associated with the clicked button. (required).</param>
         public ContentButtonResponse(string Id = null, TypeEnum? Type = null, string Text = null, string Payload = null)

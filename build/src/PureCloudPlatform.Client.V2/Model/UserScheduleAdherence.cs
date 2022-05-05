@@ -361,7 +361,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Ignored for "Ignored"
             /// </summary>
             [EnumMember(Value = "Ignored")]
-            Ignored
+            Ignored,
+            
+            /// <summary>
+            /// Enum Explained for "Explained"
+            /// </summary>
+            [EnumMember(Value = "Explained")]
+            Explained
         }
         
         

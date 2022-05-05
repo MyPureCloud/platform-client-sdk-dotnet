@@ -56,6 +56,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Status of asynchronous create operation
         /// </summary>
@@ -124,6 +127,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Status of asynchronous create operation
         /// </summary>
@@ -148,6 +153,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the LINE Integration (required).</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
+        /// <param name="MessagingSetting">MessagingSetting.</param>
         /// <param name="ChannelId">The Channel Id from LINE messenger (required).</param>
         /// <param name="WebhookUri">The Webhook URI to be updated in LINE platform (required).</param>
         /// <param name="Status">The status of the LINE Integration.</param>
@@ -156,10 +162,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedBy">User reference that created this Integration.</param>
         /// <param name="ModifiedBy">User reference that last modified this Integration.</param>
         /// <param name="Version">Version number required for updates. (required).</param>
-        public LineIntegration(string Name = null, SupportedContentReference SupportedContent = null, string ChannelId = null, string WebhookUri = null, string Status = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, int? Version = null)
+        public LineIntegration(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, string ChannelId = null, string WebhookUri = null, string Status = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, int? Version = null)
         {
             this.Name = Name;
             this.SupportedContent = SupportedContent;
+            this.MessagingSetting = MessagingSetting;
             this.ChannelId = ChannelId;
             this.WebhookUri = WebhookUri;
             this.Status = Status;
@@ -197,6 +204,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Defines the SupportedContent profile configured for an integration</value>
         [DataMember(Name="supportedContent", EmitDefaultValue=false)]
         public SupportedContentReference SupportedContent { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets MessagingSetting
+        /// </summary>
+        [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
+        public MessagingSettingReference MessagingSetting { get; set; }
         
         
         
@@ -312,6 +327,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
+            sb.Append("  MessagingSetting: ").Append(MessagingSetting).Append("\n");
             sb.Append("  ChannelId: ").Append(ChannelId).Append("\n");
             sb.Append("  WebhookUri: ").Append(WebhookUri).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -378,6 +394,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SupportedContent == other.SupportedContent ||
                     this.SupportedContent != null &&
                     this.SupportedContent.Equals(other.SupportedContent)
+                ) &&
+                (
+                    this.MessagingSetting == other.MessagingSetting ||
+                    this.MessagingSetting != null &&
+                    this.MessagingSetting.Equals(other.MessagingSetting)
                 ) &&
                 (
                     this.ChannelId == other.ChannelId ||
@@ -461,6 +482,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SupportedContent != null)
                     hash = hash * 59 + this.SupportedContent.GetHashCode();
+                
+                if (this.MessagingSetting != null)
+                    hash = hash * 59 + this.MessagingSetting.GetHashCode();
                 
                 if (this.ChannelId != null)
                     hash = hash * 59 + this.ChannelId.GetHashCode();

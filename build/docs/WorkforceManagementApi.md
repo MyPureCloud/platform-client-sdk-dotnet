@@ -580,7 +580,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast
 
@@ -603,7 +603,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
+| **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
 {: class="table table-striped"}
@@ -771,7 +771,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
             var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time off limit object to delete
 
             try
@@ -793,7 +793,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit. |  |
+| **managementUnitId** | **string**| The ID of the management unit. |  |
 | **timeOffLimitId** | **string**| The ID of the time off limit object to delete |  |
 {: class="table table-striped"}
 
@@ -837,7 +837,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
             var timeOffPlanId = timeOffPlanId_example;  // string | The ID of the time off plan to delete
 
             try
@@ -859,7 +859,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID. |  |
+| **managementUnitId** | **string**| The ID of the management unit |  |
 | **timeOffPlanId** | **string**| The ID of the time off plan to delete |  |
 {: class="table table-striped"}
 
@@ -1670,7 +1670,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var date = 2013-10-20;  // String | yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
             try
@@ -1693,7 +1693,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **businessUnitId** | **string**| The business unit ID of the business unit |  |
+| **businessUnitId** | **string**| The ID of the business unit |  |
 | **date** | **String**| yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 {: class="table table-striped"}
 
@@ -2640,7 +2640,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast
             var expand = new List<string>(); // List<string> |  (optional) 
@@ -2665,7 +2665,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
+| **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
 | **expand** | [**List<string>**](string.html)|  | [optional] <br />**Values**: planningGroups, generationResults |
@@ -2711,7 +2711,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast
             var weekNumber = 56;  // int? | The week number to fetch (for multi-week forecasts) (optional) 
@@ -2737,7 +2737,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
+| **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
 | **weekNumber** | **int?**| The week number to fetch (for multi-week forecasts) | [optional]  |
@@ -2784,7 +2784,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast
 
@@ -2808,7 +2808,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
+| **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
 {: class="table table-striped"}
@@ -2853,7 +2853,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
@@ -2878,7 +2878,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
+| **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
 | **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
@@ -2926,7 +2926,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast
 
@@ -2950,7 +2950,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
+| **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
 {: class="table table-striped"}
@@ -2996,7 +2996,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format or 'recent' (without quotes) to fetch recent forecasts
 
             try
@@ -3019,7 +3019,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
+| **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **string**| The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts |  |
 {: class="table table-striped"}
 
@@ -3662,7 +3662,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
 
             try
@@ -3685,7 +3685,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit. |  |
+| **managementUnitId** | **string**| The ID of the management unit |  |
 | **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
 {: class="table table-striped"}
 
@@ -3729,7 +3729,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The id of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var agentId = agentId_example;  // string | The agent id
             var excludeCapabilities = true;  // bool? | Excludes all capabilities of the agent such as queues, languages, and skills (optional) 
 
@@ -3753,7 +3753,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **agentId** | **string**| The agent id |  |
 | **excludeCapabilities** | **bool?**| Excludes all capabilities of the agent such as queues, languages, and skills | [optional]  |
 {: class="table table-striped"}
@@ -3799,7 +3799,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The id of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var agentId = agentId_example;  // string | The agent id
 
             try
@@ -3822,7 +3822,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **agentId** | **string**| The agent id |  |
 {: class="table table-striped"}
 
@@ -3867,7 +3867,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
             try
             { 
@@ -3889,7 +3889,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3932,7 +3932,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
             try
             { 
@@ -3954,7 +3954,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3997,7 +3997,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
             var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time off limit to fetch
 
             try
@@ -4020,7 +4020,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit. |  |
+| **managementUnitId** | **string**| The ID of the management unit. |  |
 | **timeOffLimitId** | **string**| The ID of the time off limit to fetch |  |
 {: class="table table-striped"}
 
@@ -4065,7 +4065,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
 
             try
             { 
@@ -4087,7 +4087,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit. |  |
+| **managementUnitId** | **string**| The ID of the management unit. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4130,7 +4130,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
             var timeOffPlanId = timeOffPlanId_example;  // string | The ID of the time off plan to fetch
 
             try
@@ -4153,7 +4153,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID. |  |
+| **managementUnitId** | **string**| The ID of the management unit |  |
 | **timeOffPlanId** | **string**| The ID of the time off plan to fetch |  |
 {: class="table table-striped"}
 
@@ -4197,7 +4197,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
 
             try
             { 
@@ -4219,7 +4219,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID. |  |
+| **managementUnitId** | **string**| The ID of the management unit |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4262,7 +4262,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var userId = userId_example;  // string | The userId to whom the Time Off Request applies.
             var timeOffRequestId = timeOffRequestId_example;  // string | Time Off Request Id
 
@@ -4286,7 +4286,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **userId** | **string**| The userId to whom the Time Off Request applies. |  |
 | **timeOffRequestId** | **string**| Time Off Request Id |  |
 {: class="table table-striped"}
@@ -4332,7 +4332,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
             var userId = userId_example;  // string | The userId to whom the time off request applies.
             var timeOffRequestId = timeOffRequestId_example;  // string | The ID of the time off request, which dates and activityCodeId determine limit values to retrieve
 
@@ -4356,7 +4356,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit. |  |
+| **managementUnitId** | **string**| The ID of the management unit. |  |
 | **userId** | **string**| The userId to whom the time off request applies. |  |
 | **timeOffRequestId** | **string**| The ID of the time off request, which dates and activityCodeId determine limit values to retrieve |  |
 {: class="table table-striped"}
@@ -4401,7 +4401,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var userId = userId_example;  // string | The userId to whom the Time Off Request applies.
             var recentlyReviewed = true;  // bool? | Limit results to requests that have been reviewed within the preceding 30 days (optional)  (default to false)
 
@@ -4425,7 +4425,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **userId** | **string**| The userId to whom the Time Off Request applies. |  |
 | **recentlyReviewed** | **bool?**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false] |
 {: class="table table-striped"}
@@ -4477,7 +4477,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
             try
             { 
@@ -4499,7 +4499,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4691,7 +4691,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var evaluateMatches = true;  // bool? | Whether to evaluate the matches for violations (optional)  (default to true)
 
@@ -4715,7 +4715,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **evaluateMatches** | **bool?**| Whether to evaluate the matches for violations | [optional] [default to true] |
 {: class="table table-striped"}
@@ -5361,7 +5361,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var timeOffRequestId = timeOffRequestId_example;  // string | Time Off Request Id
+            var timeOffRequestId = timeOffRequestId_example;  // string | The ID of the time off request
 
             try
             { 
@@ -5383,7 +5383,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **timeOffRequestId** | **string**| Time Off Request Id |  |
+| **timeOffRequestId** | **string**| The ID of the time off request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5426,7 +5426,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var timeOffRequestId = timeOffRequestId_example;  // string | Time Off Request Id
+            var timeOffRequestId = timeOffRequestId_example;  // string | The ID of the time off request
 
             try
             { 
@@ -5448,7 +5448,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **timeOffRequestId** | **string**| Time Off Request Id |  |
+| **timeOffRequestId** | **string**| The ID of the time off request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5966,7 +5966,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
             var timeOffLimitId = timeOffLimitId_example;  // string | The id of time off limit object to update
             var body = new UpdateTimeOffLimitRequest(); // UpdateTimeOffLimitRequest | body (optional) 
 
@@ -5990,7 +5990,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit. |  |
+| **managementUnitId** | **string**| The ID of the management unit. |  |
 | **timeOffLimitId** | **string**| The id of time off limit object to update |  |
 | **body** | [**UpdateTimeOffLimitRequest**](UpdateTimeOffLimitRequest.html)| body | [optional]  |
 {: class="table table-striped"}
@@ -6035,7 +6035,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
             var timeOffPlanId = timeOffPlanId_example;  // string | The ID of the time off plan to update
             var body = new UpdateTimeOffPlanRequest(); // UpdateTimeOffPlanRequest | body (optional) 
 
@@ -6059,7 +6059,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID. |  |
+| **managementUnitId** | **string**| The ID of the management unit |  |
 | **timeOffPlanId** | **string**| The ID of the time off plan to update |  |
 | **body** | [**UpdateTimeOffPlanRequest**](UpdateTimeOffPlanRequest.html)| body | [optional]  |
 {: class="table table-striped"}
@@ -6104,7 +6104,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var userId = userId_example;  // string | The id of the user the requested time off request belongs to
             var timeOffRequestId = timeOffRequestId_example;  // string | The id of the time off request to update
             var body = new AdminTimeOffRequestPatch(); // AdminTimeOffRequestPatch | body (optional) 
@@ -6129,7 +6129,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **userId** | **string**| The id of the user the requested time off request belongs to |  |
 | **timeOffRequestId** | **string**| The id of the time off request to update |  |
 | **body** | [**AdminTimeOffRequestPatch**](AdminTimeOffRequestPatch.html)| body | [optional]  |
@@ -6175,7 +6175,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new PatchShiftTradeRequest(); // PatchShiftTradeRequest | body
             var tradeId = tradeId_example;  // string | The ID of the shift trade to update
@@ -6200,7 +6200,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**PatchShiftTradeRequest**](PatchShiftTradeRequest.html)| body |  |
 | **tradeId** | **string**| The ID of the shift trade to update |  |
@@ -6386,7 +6386,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var timeOffRequestId = timeOffRequestId_example;  // string | Time Off Request Id
+            var timeOffRequestId = timeOffRequestId_example;  // string | The ID of the time off request
             var body = new AgentTimeOffRequestPatch(); // AgentTimeOffRequestPatch | body (optional) 
 
             try
@@ -6409,7 +6409,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **timeOffRequestId** | **string**| Time Off Request Id |  |
+| **timeOffRequestId** | **string**| The ID of the time off request |  |
 | **body** | [**AgentTimeOffRequestPatch**](AgentTimeOffRequestPatch.html)| body | [optional]  |
 {: class="table table-striped"}
 
@@ -6722,7 +6722,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
             var body = new IntradayPlanningGroupRequest(); // IntradayPlanningGroupRequest | body (optional) 
 
@@ -6746,7 +6746,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **businessUnitId** | **string**| The business unit ID of the business unit |  |
+| **businessUnitId** | **string**| The ID of the business unit |  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
 | **body** | [**IntradayPlanningGroupRequest**](IntradayPlanningGroupRequest.html)| body | [optional]  |
 {: class="table table-striped"}
@@ -7561,7 +7561,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast to copy
             var body = new CopyBuForecastRequest(); // CopyBuForecastRequest | body
@@ -7587,7 +7587,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
+| **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast to copy |  |
 | **body** | [**CopyBuForecastRequest**](CopyBuForecastRequest.html)| body |  |
@@ -7634,7 +7634,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new GenerateBuForecastRequest(); // GenerateBuForecastRequest | 
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
@@ -7659,7 +7659,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
+| **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**GenerateBuForecastRequest**](GenerateBuForecastRequest.html)|  |  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
@@ -7705,7 +7705,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = 2013-10-20;  // String | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new WfmProcessUploadRequest(); // WfmProcessUploadRequest | 
 
@@ -7729,7 +7729,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
+| **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest.html)|  |  |
 {: class="table table-striped"}
@@ -7774,7 +7774,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var businessUnitId = businessUnitId_example;  // string | The business unit ID of the business unit to which the forecast belongs
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = 2013-10-20;  // String | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new UploadUrlRequestBody(); // UploadUrlRequestBody | body
 
@@ -7798,7 +7798,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **businessUnitId** | **string**| The business unit ID of the business unit to which the forecast belongs |  |
+| **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody.html)| body |  |
 {: class="table table-striped"}
@@ -8099,7 +8099,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var body = new BuSearchAgentSchedulesRequest(); // BuSearchAgentSchedulesRequest | body (optional) 
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
@@ -8124,7 +8124,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional]  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
 | **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
@@ -8170,7 +8170,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
             var body = new WfmHistoricalAdherenceQuery(); // WfmHistoricalAdherenceQuery | body (optional) 
 
             try
@@ -8193,7 +8193,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit |  |
+| **managementUnitId** | **string**| The ID of the management unit |  |
 | **body** | [**WfmHistoricalAdherenceQuery**](WfmHistoricalAdherenceQuery.html)| body | [optional]  |
 {: class="table table-striped"}
 
@@ -8305,7 +8305,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var body = new UserListScheduleRequestBody(); // UserListScheduleRequestBody | body (optional) 
 
             try
@@ -8328,7 +8328,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody.html)| body | [optional]  |
 {: class="table table-striped"}
 
@@ -8372,7 +8372,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
             var body = new CreateTimeOffLimitRequest(); // CreateTimeOffLimitRequest | body (optional) 
 
             try
@@ -8395,7 +8395,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit. |  |
+| **managementUnitId** | **string**| The ID of the management unit. |  |
 | **body** | [**CreateTimeOffLimitRequest**](CreateTimeOffLimitRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
@@ -8439,7 +8439,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
             var body = new QueryTimeOffLimitValuesRequest(); // QueryTimeOffLimitValuesRequest | body (optional) 
 
             try
@@ -8462,7 +8462,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit. |  |
+| **managementUnitId** | **string**| The ID of the management unit. |  |
 | **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
@@ -8506,7 +8506,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
             var body = new CreateTimeOffPlanRequest(); // CreateTimeOffPlanRequest | body (optional) 
 
             try
@@ -8529,7 +8529,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID. |  |
+| **managementUnitId** | **string**| The ID of the management unit |  |
 | **body** | [**CreateTimeOffPlanRequest**](CreateTimeOffPlanRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
@@ -8573,7 +8573,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var body = new CreateAdminTimeOffRequest(); // CreateAdminTimeOffRequest | body (optional) 
 
             try
@@ -8596,7 +8596,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **body** | [**CreateAdminTimeOffRequest**](CreateAdminTimeOffRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
@@ -8640,7 +8640,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var body = new TimeOffRequestQueryBody(); // TimeOffRequestQueryBody | body (optional) 
 
             try
@@ -8663,7 +8663,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **body** | [**TimeOffRequestQueryBody**](TimeOffRequestQueryBody.html)| body | [optional]  |
 {: class="table table-striped"}
 
@@ -8707,7 +8707,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
             var body = new QueryWaitlistPositionsRequest(); // QueryWaitlistPositionsRequest | body (optional) 
 
             try
@@ -8730,7 +8730,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit. |  |
+| **managementUnitId** | **string**| The ID of the management unit. |  |
 | **body** | [**QueryWaitlistPositionsRequest**](QueryWaitlistPositionsRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
@@ -8774,7 +8774,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new MatchShiftTradeRequest(); // MatchShiftTradeRequest | body
             var tradeId = tradeId_example;  // string | The ID of the shift trade to update
@@ -8799,7 +8799,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**MatchShiftTradeRequest**](MatchShiftTradeRequest.html)| body |  |
 | **tradeId** | **string**| The ID of the shift trade to update |  |
@@ -8845,7 +8845,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new AddShiftTradeRequest(); // AddShiftTradeRequest | body
 
@@ -8869,7 +8869,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**AddShiftTradeRequest**](AddShiftTradeRequest.html)| body |  |
 {: class="table table-striped"}
@@ -8914,7 +8914,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new SearchShiftTradesRequest(); // SearchShiftTradesRequest | body
 
@@ -8938,7 +8938,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**SearchShiftTradesRequest**](SearchShiftTradesRequest.html)| body |  |
 {: class="table table-striped"}
@@ -8984,7 +8984,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var body = new BulkShiftTradeStateUpdateRequest(); // BulkShiftTradeStateUpdateRequest | body
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
@@ -9009,7 +9009,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **body** | [**BulkShiftTradeStateUpdateRequest**](BulkShiftTradeStateUpdateRequest.html)| body |  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
@@ -9725,7 +9725,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit.
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
             var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time off limit object to set values for
             var body = new SetTimeOffLimitValuesRequest(); // SetTimeOffLimitValuesRequest | body (optional) 
 
@@ -9749,7 +9749,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit. |  |
+| **managementUnitId** | **string**| The ID of the management unit. |  |
 | **timeOffLimitId** | **string**| The ID of the time off limit object to set values for |  |
 | **body** | [**SetTimeOffLimitValuesRequest**](SetTimeOffLimitValuesRequest.html)| body | [optional]  |
 {: class="table table-striped"}

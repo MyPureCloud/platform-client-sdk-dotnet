@@ -1,7 +1,7 @@
 ---
-title: FlowMetricsTopicConversationProposedAgent
+title: FlowMetricsTopicFlowProposedAgent
 ---
-## ININ.PureCloudApi.Model.FlowMetricsTopicConversationProposedAgent
+## ININ.PureCloudApi.Model.FlowMetricsTopicFlowProposedAgent
 
 ## Properties
 

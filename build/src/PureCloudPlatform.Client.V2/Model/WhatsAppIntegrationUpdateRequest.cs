@@ -29,6 +29,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The action used to activate and then confirm a WhatsApp Integration.
         /// </summary>
@@ -104,6 +107,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
         /// <summary>
         /// The action used to activate and then confirm a WhatsApp Integration.
         /// </summary>
@@ -125,20 +133,28 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WhatsAppIntegrationUpdateRequest" /> class.
         /// </summary>
+        /// <param name="Name">WhatsApp Integration name.</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
+        /// <param name="MessagingSetting">MessagingSetting.</param>
         /// <param name="Action">The action used to activate and then confirm a WhatsApp Integration..</param>
         /// <param name="AuthenticationMethod">The authentication method used to confirm a WhatsApp Integration activation. If action is set to Activate, then authenticationMethod is a required field. .</param>
         /// <param name="ConfirmationCode">The confirmation code sent by Whatsapp to you during the activation step. If action is set to Confirm, then confirmationCode is a required field..</param>
-        public WhatsAppIntegrationUpdateRequest(SupportedContentReference SupportedContent = null, ActionEnum? Action = null, AuthenticationMethodEnum? AuthenticationMethod = null, string ConfirmationCode = null)
+        /// <param name="PhoneNumber">Phone number to associate with the WhatsApp integration.</param>
+        public WhatsAppIntegrationUpdateRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, ActionEnum? Action = null, AuthenticationMethodEnum? AuthenticationMethod = null, string ConfirmationCode = null, string PhoneNumber = null)
         {
+            this.Name = Name;
             this.SupportedContent = SupportedContent;
+            this.MessagingSetting = MessagingSetting;
             this.Action = Action;
             this.AuthenticationMethod = AuthenticationMethod;
             this.ConfirmationCode = ConfirmationCode;
+            this.PhoneNumber = PhoneNumber;
             
         }
         
@@ -158,7 +174,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>WhatsApp Integration name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; private set; }
+        public string Name { get; set; }
         
         
         
@@ -168,6 +184,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Defines the SupportedContent profile configured for an integration</value>
         [DataMember(Name="supportedContent", EmitDefaultValue=false)]
         public SupportedContentReference SupportedContent { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets MessagingSetting
+        /// </summary>
+        [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
+        public MessagingSettingReference MessagingSetting { get; set; }
         
         
         
@@ -181,6 +205,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The confirmation code sent by Whatsapp to you during the activation step. If action is set to Confirm, then confirmationCode is a required field.</value>
         [DataMember(Name="confirmationCode", EmitDefaultValue=false)]
         public string ConfirmationCode { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Phone number to associate with the WhatsApp integration
+        /// </summary>
+        /// <value>Phone number to associate with the WhatsApp integration</value>
+        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
+        public string PhoneNumber { get; set; }
         
         
         
@@ -204,9 +237,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
+            sb.Append("  MessagingSetting: ").Append(MessagingSetting).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  AuthenticationMethod: ").Append(AuthenticationMethod).Append("\n");
             sb.Append("  ConfirmationCode: ").Append(ConfirmationCode).Append("\n");
+            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -264,6 +299,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SupportedContent.Equals(other.SupportedContent)
                 ) &&
                 (
+                    this.MessagingSetting == other.MessagingSetting ||
+                    this.MessagingSetting != null &&
+                    this.MessagingSetting.Equals(other.MessagingSetting)
+                ) &&
+                (
                     this.Action == other.Action ||
                     this.Action != null &&
                     this.Action.Equals(other.Action)
@@ -277,6 +317,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConfirmationCode == other.ConfirmationCode ||
                     this.ConfirmationCode != null &&
                     this.ConfirmationCode.Equals(other.ConfirmationCode)
+                ) &&
+                (
+                    this.PhoneNumber == other.PhoneNumber ||
+                    this.PhoneNumber != null &&
+                    this.PhoneNumber.Equals(other.PhoneNumber)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -306,6 +351,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SupportedContent != null)
                     hash = hash * 59 + this.SupportedContent.GetHashCode();
                 
+                if (this.MessagingSetting != null)
+                    hash = hash * 59 + this.MessagingSetting.GetHashCode();
+                
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
                 
@@ -314,6 +362,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ConfirmationCode != null)
                     hash = hash * 59 + this.ConfirmationCode.GetHashCode();
+                
+                if (this.PhoneNumber != null)
+                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -11,7 +11,7 @@ title: ContentGeneric
 | **Description** | **string** | Text to show in the description. | [optional] |
 | **Image** | **string** | URL of an image. | [optional] |
 | **Video** | **string** | URL of a video. | [optional] |
-| **Actions** | [**ContentActions**](ContentActions.html) | Actions to be taken. | [optional] |
+| **Actions** | [**ContentActions**](ContentActions.html) | Actions to be taken (Deprecated). | [optional] |
 | **Components** | [**List&lt;ButtonComponent&gt;**](ButtonComponent.html) | An array of component objects. | [optional] |
 {: class="table table-striped"}
 

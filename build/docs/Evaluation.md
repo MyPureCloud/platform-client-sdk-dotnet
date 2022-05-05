@@ -9,7 +9,7 @@ title: Evaluation
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Conversation** | [**Conversation**](Conversation.html) |  | [optional] |
+| **Conversation** | [**ConversationReference**](ConversationReference.html) |  | [optional] |
 | **EvaluationForm** | [**EvaluationForm**](EvaluationForm.html) | Evaluation form used for evaluation. | [optional] |
 | **Evaluator** | [**User**](User.html) |  | [optional] |
 | **Agent** | [**User**](User.html) |  | [optional] |

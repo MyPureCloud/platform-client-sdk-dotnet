@@ -167,7 +167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Must not be tied to any schedules
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns></returns>
@@ -180,7 +180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Must not be tied to any schedules
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -235,7 +235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns></returns>
         void DeleteWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId);
@@ -247,7 +247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId);
@@ -259,7 +259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns></returns>
         void DeleteWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId);
@@ -271,7 +271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId);
@@ -487,7 +487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>WfmIntradayPlanningGroupListing</returns>
         WfmIntradayPlanningGroupListing GetWorkforcemanagementBusinessunitIntradayPlanninggroups (string businessUnitId, String date);
@@ -499,7 +499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of WfmIntradayPlanningGroupListing</returns>
         ApiResponse<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsWithHttpInfo (string businessUnitId, String date);
@@ -841,7 +841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
@@ -855,7 +855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
@@ -869,7 +869,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
@@ -884,7 +884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
@@ -899,7 +899,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>BuForecastGenerationResult</returns>
@@ -912,7 +912,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of BuForecastGenerationResult</returns>
@@ -925,7 +925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -939,7 +939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -953,7 +953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ForecastPlanningGroupsResponse</returns>
@@ -966,7 +966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of ForecastPlanningGroupsResponse</returns>
@@ -979,7 +979,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>BuShortTermForecastListing</returns>
         BuShortTermForecastListing GetWorkforcemanagementBusinessunitWeekShorttermforecasts (string businessUnitId, string weekDateId);
@@ -991,7 +991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>ApiResponse of BuShortTermForecastListing</returns>
         ApiResponse<BuShortTermForecastListing> GetWorkforcemanagementBusinessunitWeekShorttermforecastsWithHttpInfo (string businessUnitId, string weekDateId);
@@ -1177,7 +1177,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>UserScheduleAdherenceListing</returns>
         UserScheduleAdherenceListing GetWorkforcemanagementManagementunitAdherence (string managementUnitId, bool? forceDownloadService = null);
@@ -1189,7 +1189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of UserScheduleAdherenceListing</returns>
         ApiResponse<UserScheduleAdherenceListing> GetWorkforcemanagementManagementunitAdherenceWithHttpInfo (string managementUnitId, bool? forceDownloadService = null);
@@ -1201,7 +1201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>WfmAgent</returns>
@@ -1214,7 +1214,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>ApiResponse of WfmAgent</returns>
@@ -1227,7 +1227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <returns>ShiftTradeListResponse</returns>
         ShiftTradeListResponse GetWorkforcemanagementManagementunitAgentShifttrades (string managementUnitId, string agentId);
@@ -1239,7 +1239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <returns>ApiResponse of ShiftTradeListResponse</returns>
         ApiResponse<ShiftTradeListResponse> GetWorkforcemanagementManagementunitAgentShifttradesWithHttpInfo (string managementUnitId, string agentId);
@@ -1251,7 +1251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ShiftTradeMatchesSummaryResponse</returns>
         ShiftTradeMatchesSummaryResponse GetWorkforcemanagementManagementunitShifttradesMatched (string managementUnitId);
 
@@ -1262,7 +1262,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of ShiftTradeMatchesSummaryResponse</returns>
         ApiResponse<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo (string managementUnitId);
         
@@ -1273,7 +1273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
         WfmUserEntityListing GetWorkforcemanagementManagementunitShifttradesUsers (string managementUnitId);
 
@@ -1284,7 +1284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
         ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo (string managementUnitId);
         
@@ -1295,7 +1295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns properties of time off limit object, but not daily values.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>TimeOffLimit</returns>
         TimeOffLimit GetWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId);
@@ -1307,7 +1307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns properties of time off limit object, but not daily values.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
         ApiResponse<TimeOffLimit> GetWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId);
@@ -1319,7 +1319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>TimeOffLimitListing</returns>
         TimeOffLimitListing GetWorkforcemanagementManagementunitTimeofflimits (string managementUnitId);
 
@@ -1330,7 +1330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>ApiResponse of TimeOffLimitListing</returns>
         ApiResponse<TimeOffLimitListing> GetWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId);
         
@@ -1341,7 +1341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>TimeOffPlan</returns>
         TimeOffPlan GetWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId);
@@ -1353,7 +1353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
         ApiResponse<TimeOffPlan> GetWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId);
@@ -1365,7 +1365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>TimeOffPlanListing</returns>
         TimeOffPlanListing GetWorkforcemanagementManagementunitTimeoffplans (string managementUnitId);
 
@@ -1376,7 +1376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>ApiResponse of TimeOffPlanListing</returns>
         ApiResponse<TimeOffPlanListing> GetWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId);
         
@@ -1387,7 +1387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>TimeOffRequestResponse</returns>
@@ -1400,7 +1400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
@@ -1413,7 +1413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>QueryTimeOffLimitValuesResponse</returns>
@@ -1426,7 +1426,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
@@ -1439,7 +1439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
@@ -1452,7 +1452,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
@@ -1465,7 +1465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
         WfmUserEntityListing GetWorkforcemanagementManagementunitUsers (string managementUnitId);
 
@@ -1476,7 +1476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
         ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersWithHttpInfo (string managementUnitId);
         
@@ -1547,7 +1547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>WeekShiftTradeListResponse</returns>
@@ -1560,7 +1560,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>ApiResponse of WeekShiftTradeListResponse</returns>
@@ -1785,7 +1785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>TimeOffRequestResponse</returns>
         TimeOffRequestResponse GetWorkforcemanagementTimeoffrequest (string timeOffRequestId);
 
@@ -1796,7 +1796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
         ApiResponse<TimeOffRequestResponse> GetWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId);
         
@@ -1807,7 +1807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>WaitlistPositionListing</returns>
         WaitlistPositionListing GetWorkforcemanagementTimeoffrequestWaitlistpositions (string timeOffRequestId);
 
@@ -1818,7 +1818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>ApiResponse of WaitlistPositionListing</returns>
         ApiResponse<WaitlistPositionListing> GetWorkforcemanagementTimeoffrequestWaitlistpositionsWithHttpInfo (string timeOffRequestId);
         
@@ -2003,7 +2003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates time off limit object properties, but not daily values.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The id of time off limit object to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffLimit</returns>
@@ -2016,7 +2016,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates time off limit object properties, but not daily values.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The id of time off limit object to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
@@ -2029,7 +2029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffPlan</returns>
@@ -2042,7 +2042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
@@ -2055,7 +2055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
@@ -2069,7 +2069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
@@ -2083,7 +2083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -2097,7 +2097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -2165,7 +2165,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestResponse</returns>
         TimeOffRequestResponse PatchWorkforcemanagementTimeoffrequest (string timeOffRequestId, AgentTimeOffRequestPatch body = null);
@@ -2177,7 +2177,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
         ApiResponse<TimeOffRequestResponse> PatchWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId, AgentTimeOffRequestPatch body = null);
@@ -2285,7 +2285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>AsyncIntradayResponse</returns>
@@ -2298,7 +2298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of AsyncIntradayResponse</returns>
@@ -2607,7 +2607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast to copy</param>
         /// <param name="body">body</param>
@@ -2622,7 +2622,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast to copy</param>
         /// <param name="body">body</param>
@@ -2637,7 +2637,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -2651,7 +2651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -2665,7 +2665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Call after uploading the forecast data to the url supplied by the /import/uploadurl route
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <returns>ImportForecastResponse</returns>
@@ -2678,7 +2678,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Call after uploading the forecast data to the url supplied by the /import/uploadurl route
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of ImportForecastResponse</returns>
@@ -2691,7 +2691,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Once the upload is complete, call the /import route to start the short term forecast import process
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ImportForecastUploadResponse</returns>
@@ -2704,7 +2704,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Once the upload is complete, call the /import route to start the short term forecast import process
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ImportForecastUploadResponse</returns>
@@ -2803,7 +2803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -2817,7 +2817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -2831,7 +2831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
         WfmHistoricalAdherenceResponse PostWorkforcemanagementManagementunitHistoricaladherencequery (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
@@ -2843,7 +2843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
         ApiResponse<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
@@ -2879,7 +2879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>UserScheduleContainer</returns>
         UserScheduleContainer PostWorkforcemanagementManagementunitSchedulesSearch (string managementUnitId, UserListScheduleRequestBody body = null);
@@ -2891,7 +2891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
         ApiResponse<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null);
@@ -2903,7 +2903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Only one limit object is allowed under management unit, so an attempt to create second object will fail.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffLimit</returns>
         TimeOffLimit PostWorkforcemanagementManagementunitTimeofflimits (string managementUnitId, CreateTimeOffLimitRequest body = null);
@@ -2915,7 +2915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Only one limit object is allowed under management unit, so an attempt to create second object will fail.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
         ApiResponse<TimeOffLimit> PostWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null);
@@ -2927,7 +2927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>QueryTimeOffLimitValuesResponse</returns>
         QueryTimeOffLimitValuesResponse PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
@@ -2939,7 +2939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
         ApiResponse<QueryTimeOffLimitValuesResponse> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
@@ -2951,7 +2951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffPlan</returns>
         TimeOffPlan PostWorkforcemanagementManagementunitTimeoffplans (string managementUnitId, CreateTimeOffPlanRequest body = null);
@@ -2963,7 +2963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
         ApiResponse<TimeOffPlan> PostWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null);
@@ -2975,7 +2975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestList</returns>
         TimeOffRequestList PostWorkforcemanagementManagementunitTimeoffrequests (string managementUnitId, CreateAdminTimeOffRequest body = null);
@@ -2987,7 +2987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
         ApiResponse<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null);
@@ -2999,7 +2999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestListing</returns>
         TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, TimeOffRequestQueryBody body = null);
@@ -3011,7 +3011,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestListing</returns>
         ApiResponse<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null);
@@ -3023,7 +3023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WaitlistPositionListing</returns>
         WaitlistPositionListing PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery (string managementUnitId, QueryWaitlistPositionsRequest body = null);
@@ -3035,7 +3035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WaitlistPositionListing</returns>
         ApiResponse<WaitlistPositionListing> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null);
@@ -3047,7 +3047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -3061,7 +3061,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -3075,7 +3075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ShiftTradeResponse</returns>
@@ -3088,7 +3088,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ShiftTradeResponse</returns>
@@ -3101,7 +3101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>SearchShiftTradesResponse</returns>
@@ -3114,7 +3114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of SearchShiftTradesResponse</returns>
@@ -3127,7 +3127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Admin functionality is not supported with \&quot;mine\&quot;.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -3141,7 +3141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Admin functionality is not supported with \&quot;mine\&quot;.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -3395,7 +3395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffLimit</returns>
@@ -3408,7 +3408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
@@ -3569,7 +3569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Must not be tied to any schedules
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of void</returns>
@@ -3582,7 +3582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Must not be tied to any schedules
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3637,7 +3637,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId);
@@ -3649,7 +3649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId);
@@ -3661,7 +3661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId);
@@ -3673,7 +3673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId);
@@ -3889,7 +3889,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of WfmIntradayPlanningGroupListing</returns>
         System.Threading.Tasks.Task<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsync (string businessUnitId, String date);
@@ -3901,7 +3901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (WfmIntradayPlanningGroupListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmIntradayPlanningGroupListing>> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String date);
@@ -4243,7 +4243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
@@ -4257,7 +4257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
@@ -4271,7 +4271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
@@ -4286,7 +4286,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
@@ -4301,7 +4301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of BuForecastGenerationResult</returns>
@@ -4314,7 +4314,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (BuForecastGenerationResult)</returns>
@@ -4327,7 +4327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -4341,7 +4341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -4355,7 +4355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ForecastPlanningGroupsResponse</returns>
@@ -4368,7 +4368,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (ForecastPlanningGroupsResponse)</returns>
@@ -4381,7 +4381,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>Task of BuShortTermForecastListing</returns>
         System.Threading.Tasks.Task<BuShortTermForecastListing> GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsync (string businessUnitId, string weekDateId);
@@ -4393,7 +4393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>Task of ApiResponse (BuShortTermForecastListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuShortTermForecastListing>> GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsyncWithHttpInfo (string businessUnitId, string weekDateId);
@@ -4579,7 +4579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of UserScheduleAdherenceListing</returns>
         System.Threading.Tasks.Task<UserScheduleAdherenceListing> GetWorkforcemanagementManagementunitAdherenceAsync (string managementUnitId, bool? forceDownloadService = null);
@@ -4591,7 +4591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleAdherenceListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserScheduleAdherenceListing>> GetWorkforcemanagementManagementunitAdherenceAsyncWithHttpInfo (string managementUnitId, bool? forceDownloadService = null);
@@ -4603,7 +4603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>Task of WfmAgent</returns>
@@ -4616,7 +4616,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>Task of ApiResponse (WfmAgent)</returns>
@@ -4629,7 +4629,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <returns>Task of ShiftTradeListResponse</returns>
         System.Threading.Tasks.Task<ShiftTradeListResponse> GetWorkforcemanagementManagementunitAgentShifttradesAsync (string managementUnitId, string agentId);
@@ -4641,7 +4641,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <returns>Task of ApiResponse (ShiftTradeListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementManagementunitAgentShifttradesAsyncWithHttpInfo (string managementUnitId, string agentId);
@@ -4653,7 +4653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ShiftTradeMatchesSummaryResponse</returns>
         System.Threading.Tasks.Task<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedAsync (string managementUnitId);
 
@@ -4664,7 +4664,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (ShiftTradeMatchesSummaryResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ShiftTradeMatchesSummaryResponse>> GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo (string managementUnitId);
         
@@ -4675,7 +4675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
         System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersAsync (string managementUnitId);
 
@@ -4686,7 +4686,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo (string managementUnitId);
         
@@ -4697,7 +4697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns properties of time off limit object, but not daily values.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>Task of TimeOffLimit</returns>
         System.Threading.Tasks.Task<TimeOffLimit> GetWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId);
@@ -4709,7 +4709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns properties of time off limit object, but not daily values.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> GetWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId);
@@ -4721,7 +4721,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>Task of TimeOffLimitListing</returns>
         System.Threading.Tasks.Task<TimeOffLimitListing> GetWorkforcemanagementManagementunitTimeofflimitsAsync (string managementUnitId);
 
@@ -4732,7 +4732,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>Task of ApiResponse (TimeOffLimitListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffLimitListing>> GetWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId);
         
@@ -4743,7 +4743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>Task of TimeOffPlan</returns>
         System.Threading.Tasks.Task<TimeOffPlan> GetWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId);
@@ -4755,7 +4755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> GetWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId);
@@ -4767,7 +4767,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>Task of TimeOffPlanListing</returns>
         System.Threading.Tasks.Task<TimeOffPlanListing> GetWorkforcemanagementManagementunitTimeoffplansAsync (string managementUnitId);
 
@@ -4778,7 +4778,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>Task of ApiResponse (TimeOffPlanListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffPlanListing>> GetWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId);
         
@@ -4789,7 +4789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
@@ -4802,7 +4802,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
@@ -4815,7 +4815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>Task of QueryTimeOffLimitValuesResponse</returns>
@@ -4828,7 +4828,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
@@ -4841,7 +4841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
@@ -4854,7 +4854,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
@@ -4867,7 +4867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
         System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersAsync (string managementUnitId);
 
@@ -4878,7 +4878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo (string managementUnitId);
         
@@ -4949,7 +4949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>Task of WeekShiftTradeListResponse</returns>
@@ -4962,7 +4962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>Task of ApiResponse (WeekShiftTradeListResponse)</returns>
@@ -5187,7 +5187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
         System.Threading.Tasks.Task<TimeOffRequestResponse> GetWorkforcemanagementTimeoffrequestAsync (string timeOffRequestId);
 
@@ -5198,7 +5198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId);
         
@@ -5209,7 +5209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of WaitlistPositionListing</returns>
         System.Threading.Tasks.Task<WaitlistPositionListing> GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsync (string timeOffRequestId);
 
@@ -5220,7 +5220,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsyncWithHttpInfo (string timeOffRequestId);
         
@@ -5405,7 +5405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates time off limit object properties, but not daily values.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The id of time off limit object to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffLimit</returns>
@@ -5418,7 +5418,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates time off limit object properties, but not daily values.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The id of time off limit object to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
@@ -5431,7 +5431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffPlan</returns>
@@ -5444,7 +5444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
@@ -5457,7 +5457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
@@ -5471,7 +5471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
@@ -5485,7 +5485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -5499,7 +5499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -5567,7 +5567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
         System.Threading.Tasks.Task<TimeOffRequestResponse> PatchWorkforcemanagementTimeoffrequestAsync (string timeOffRequestId, AgentTimeOffRequestPatch body = null);
@@ -5579,7 +5579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PatchWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId, AgentTimeOffRequestPatch body = null);
@@ -5687,7 +5687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of AsyncIntradayResponse</returns>
@@ -5700,7 +5700,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (AsyncIntradayResponse)</returns>
@@ -6009,7 +6009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast to copy</param>
         /// <param name="body">body</param>
@@ -6024,7 +6024,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast to copy</param>
         /// <param name="body">body</param>
@@ -6039,7 +6039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -6053,7 +6053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -6067,7 +6067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Call after uploading the forecast data to the url supplied by the /import/uploadurl route
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <returns>Task of ImportForecastResponse</returns>
@@ -6080,7 +6080,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Call after uploading the forecast data to the url supplied by the /import/uploadurl route
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ImportForecastResponse)</returns>
@@ -6093,7 +6093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Once the upload is complete, call the /import route to start the short term forecast import process
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ImportForecastUploadResponse</returns>
@@ -6106,7 +6106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Once the upload is complete, call the /import route to start the short term forecast import process
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ImportForecastUploadResponse)</returns>
@@ -6205,7 +6205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -6219,7 +6219,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -6233,7 +6233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
         System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsync (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
@@ -6245,7 +6245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
@@ -6281,7 +6281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of UserScheduleContainer</returns>
         System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchAsync (string managementUnitId, UserListScheduleRequestBody body = null);
@@ -6293,7 +6293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null);
@@ -6305,7 +6305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Only one limit object is allowed under management unit, so an attempt to create second object will fail.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffLimit</returns>
         System.Threading.Tasks.Task<TimeOffLimit> PostWorkforcemanagementManagementunitTimeofflimitsAsync (string managementUnitId, CreateTimeOffLimitRequest body = null);
@@ -6317,7 +6317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Only one limit object is allowed under management unit, so an attempt to create second object will fail.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PostWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null);
@@ -6329,7 +6329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of QueryTimeOffLimitValuesResponse</returns>
         System.Threading.Tasks.Task<QueryTimeOffLimitValuesResponse> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsync (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
@@ -6341,7 +6341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueryTimeOffLimitValuesResponse>> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsyncWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
@@ -6353,7 +6353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffPlan</returns>
         System.Threading.Tasks.Task<TimeOffPlan> PostWorkforcemanagementManagementunitTimeoffplansAsync (string managementUnitId, CreateTimeOffPlanRequest body = null);
@@ -6365,7 +6365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> PostWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null);
@@ -6377,7 +6377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestList</returns>
         System.Threading.Tasks.Task<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsAsync (string managementUnitId, CreateAdminTimeOffRequest body = null);
@@ -6389,7 +6389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null);
@@ -6401,7 +6401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestListing</returns>
         System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string managementUnitId, TimeOffRequestQueryBody body = null);
@@ -6413,7 +6413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null);
@@ -6425,7 +6425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WaitlistPositionListing</returns>
         System.Threading.Tasks.Task<WaitlistPositionListing> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsync (string managementUnitId, QueryWaitlistPositionsRequest body = null);
@@ -6437,7 +6437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsyncWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null);
@@ -6449,7 +6449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -6463,7 +6463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -6477,7 +6477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ShiftTradeResponse</returns>
@@ -6490,7 +6490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
@@ -6503,7 +6503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of SearchShiftTradesResponse</returns>
@@ -6516,7 +6516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (SearchShiftTradesResponse)</returns>
@@ -6529,7 +6529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Admin functionality is not supported with \&quot;mine\&quot;.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -6543,7 +6543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Admin functionality is not supported with \&quot;mine\&quot;.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -6797,7 +6797,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffLimit</returns>
@@ -6810,7 +6810,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
@@ -8138,7 +8138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a short term forecast Must not be tied to any schedules
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns></returns>
@@ -8151,7 +8151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a short term forecast Must not be tied to any schedules
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -8244,7 +8244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a short term forecast Must not be tied to any schedules
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of void</returns>
@@ -8258,7 +8258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a short term forecast Must not be tied to any schedules
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8724,7 +8724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deletes a time off limit object 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns></returns>
         public void DeleteWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId)
@@ -8736,7 +8736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deletes a time off limit object 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId)
@@ -8824,7 +8824,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deletes a time off limit object 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId)
@@ -8837,7 +8837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deletes a time off limit object 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId)
@@ -8928,7 +8928,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deletes a time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns></returns>
         public void DeleteWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId)
@@ -8940,7 +8940,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deletes a time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId)
@@ -9028,7 +9028,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deletes a time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId)
@@ -9041,7 +9041,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deletes a time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId)
@@ -10897,7 +10897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday planning groups for the given date 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>WfmIntradayPlanningGroupListing</returns>
         public WfmIntradayPlanningGroupListing GetWorkforcemanagementBusinessunitIntradayPlanninggroups (string businessUnitId, String date)
@@ -10910,7 +10910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday planning groups for the given date 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of WfmIntradayPlanningGroupListing</returns>
         public ApiResponse< WfmIntradayPlanningGroupListing > GetWorkforcemanagementBusinessunitIntradayPlanninggroupsWithHttpInfo (string businessUnitId, String date)
@@ -10998,7 +10998,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday planning groups for the given date 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of WfmIntradayPlanningGroupListing</returns>
         public async System.Threading.Tasks.Task<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsync (string businessUnitId, String date)
@@ -11012,7 +11012,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday planning groups for the given date 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (WfmIntradayPlanningGroupListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WfmIntradayPlanningGroupListing>> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String date)
@@ -13856,7 +13856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a short term forecast 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
@@ -13871,7 +13871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a short term forecast 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
@@ -13966,7 +13966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a short term forecast 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
@@ -13982,7 +13982,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a short term forecast 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand"> (optional)</param>
@@ -14081,7 +14081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the result of a short term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
@@ -14097,7 +14097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the result of a short term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
@@ -14194,7 +14194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the result of a short term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
@@ -14211,7 +14211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the result of a short term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
@@ -14312,7 +14312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets the forecast generation results 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>BuForecastGenerationResult</returns>
@@ -14326,7 +14326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets the forecast generation results 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of BuForecastGenerationResult</returns>
@@ -14419,7 +14419,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets the forecast generation results 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of BuForecastGenerationResult</returns>
@@ -14434,7 +14434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets the forecast generation results 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (BuForecastGenerationResult)</returns>
@@ -14531,7 +14531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the result of a long term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -14546,7 +14546,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the result of a long term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -14641,7 +14641,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the result of a long term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -14657,7 +14657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the result of a long term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -14756,7 +14756,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets the forecast planning group snapshot 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ForecastPlanningGroupsResponse</returns>
@@ -14770,7 +14770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets the forecast planning group snapshot 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of ForecastPlanningGroupsResponse</returns>
@@ -14863,7 +14863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets the forecast planning group snapshot 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ForecastPlanningGroupsResponse</returns>
@@ -14878,7 +14878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets the forecast planning group snapshot 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (ForecastPlanningGroupsResponse)</returns>
@@ -14975,7 +14975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get short term forecasts Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>BuShortTermForecastListing</returns>
         public BuShortTermForecastListing GetWorkforcemanagementBusinessunitWeekShorttermforecasts (string businessUnitId, string weekDateId)
@@ -14988,7 +14988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get short term forecasts Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>ApiResponse of BuShortTermForecastListing</returns>
         public ApiResponse< BuShortTermForecastListing > GetWorkforcemanagementBusinessunitWeekShorttermforecastsWithHttpInfo (string businessUnitId, string weekDateId)
@@ -15076,7 +15076,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get short term forecasts Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>Task of BuShortTermForecastListing</returns>
         public async System.Threading.Tasks.Task<BuShortTermForecastListing> GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsync (string businessUnitId, string weekDateId)
@@ -15090,7 +15090,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get short term forecasts Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>Task of ApiResponse (BuShortTermForecastListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<BuShortTermForecastListing>> GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsyncWithHttpInfo (string businessUnitId, string weekDateId)
@@ -16672,7 +16672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of user schedule adherence records for the requested management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>UserScheduleAdherenceListing</returns>
         public UserScheduleAdherenceListing GetWorkforcemanagementManagementunitAdherence (string managementUnitId, bool? forceDownloadService = null)
@@ -16685,7 +16685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of user schedule adherence records for the requested management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of UserScheduleAdherenceListing</returns>
         public ApiResponse< UserScheduleAdherenceListing > GetWorkforcemanagementManagementunitAdherenceWithHttpInfo (string managementUnitId, bool? forceDownloadService = null)
@@ -16770,7 +16770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of user schedule adherence records for the requested management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of UserScheduleAdherenceListing</returns>
         public async System.Threading.Tasks.Task<UserScheduleAdherenceListing> GetWorkforcemanagementManagementunitAdherenceAsync (string managementUnitId, bool? forceDownloadService = null)
@@ -16784,7 +16784,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of user schedule adherence records for the requested management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleAdherenceListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserScheduleAdherenceListing>> GetWorkforcemanagementManagementunitAdherenceAsyncWithHttpInfo (string managementUnitId, bool? forceDownloadService = null)
@@ -16871,7 +16871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get data for agent in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>WfmAgent</returns>
@@ -16885,7 +16885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get data for agent in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>ApiResponse of WfmAgent</returns>
@@ -16975,7 +16975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get data for agent in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>Task of WfmAgent</returns>
@@ -16990,7 +16990,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get data for agent in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>Task of ApiResponse (WfmAgent)</returns>
@@ -17083,7 +17083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets all the shift trades for a given agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <returns>ShiftTradeListResponse</returns>
         public ShiftTradeListResponse GetWorkforcemanagementManagementunitAgentShifttrades (string managementUnitId, string agentId)
@@ -17096,7 +17096,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets all the shift trades for a given agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <returns>ApiResponse of ShiftTradeListResponse</returns>
         public ApiResponse< ShiftTradeListResponse > GetWorkforcemanagementManagementunitAgentShifttradesWithHttpInfo (string managementUnitId, string agentId)
@@ -17184,7 +17184,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets all the shift trades for a given agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <returns>Task of ShiftTradeListResponse</returns>
         public async System.Threading.Tasks.Task<ShiftTradeListResponse> GetWorkforcemanagementManagementunitAgentShifttradesAsync (string managementUnitId, string agentId)
@@ -17198,7 +17198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets all the shift trades for a given agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <returns>Task of ApiResponse (ShiftTradeListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementManagementunitAgentShifttradesAsyncWithHttpInfo (string managementUnitId, string agentId)
@@ -17289,7 +17289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a summary of all shift trades in the matched state 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ShiftTradeMatchesSummaryResponse</returns>
         public ShiftTradeMatchesSummaryResponse GetWorkforcemanagementManagementunitShifttradesMatched (string managementUnitId)
         {
@@ -17301,7 +17301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a summary of all shift trades in the matched state 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of ShiftTradeMatchesSummaryResponse</returns>
         public ApiResponse< ShiftTradeMatchesSummaryResponse > GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo (string managementUnitId)
         { 
@@ -17384,7 +17384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a summary of all shift trades in the matched state 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ShiftTradeMatchesSummaryResponse</returns>
         public async System.Threading.Tasks.Task<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedAsync (string managementUnitId)
         {
@@ -17397,7 +17397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a summary of all shift trades in the matched state 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (ShiftTradeMatchesSummaryResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeMatchesSummaryResponse>> GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo (string managementUnitId)
         { 
@@ -17482,7 +17482,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets list of users available for whom you can send direct shift trade requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
         public WfmUserEntityListing GetWorkforcemanagementManagementunitShifttradesUsers (string managementUnitId)
         {
@@ -17494,7 +17494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets list of users available for whom you can send direct shift trade requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
         public ApiResponse< WfmUserEntityListing > GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo (string managementUnitId)
         { 
@@ -17577,7 +17577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets list of users available for whom you can send direct shift trade requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
         public async System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersAsync (string managementUnitId)
         {
@@ -17590,7 +17590,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets list of users available for whom you can send direct shift trade requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo (string managementUnitId)
         { 
@@ -17675,7 +17675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a time off limit object Returns properties of time off limit object, but not daily values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>TimeOffLimit</returns>
         public TimeOffLimit GetWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId)
@@ -17688,7 +17688,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a time off limit object Returns properties of time off limit object, but not daily values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
         public ApiResponse< TimeOffLimit > GetWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId)
@@ -17776,7 +17776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a time off limit object Returns properties of time off limit object, but not daily values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>Task of TimeOffLimit</returns>
         public async System.Threading.Tasks.Task<TimeOffLimit> GetWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId)
@@ -17790,7 +17790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a time off limit object Returns properties of time off limit object, but not daily values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> GetWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId)
@@ -17881,7 +17881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a list of time off limit objects under management unit. Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>TimeOffLimitListing</returns>
         public TimeOffLimitListing GetWorkforcemanagementManagementunitTimeofflimits (string managementUnitId)
         {
@@ -17893,7 +17893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a list of time off limit objects under management unit. Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>ApiResponse of TimeOffLimitListing</returns>
         public ApiResponse< TimeOffLimitListing > GetWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId)
         { 
@@ -17976,7 +17976,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a list of time off limit objects under management unit. Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>Task of TimeOffLimitListing</returns>
         public async System.Threading.Tasks.Task<TimeOffLimitListing> GetWorkforcemanagementManagementunitTimeofflimitsAsync (string managementUnitId)
         {
@@ -17989,7 +17989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a list of time off limit objects under management unit. Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>Task of ApiResponse (TimeOffLimitListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffLimitListing>> GetWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId)
         { 
@@ -18074,7 +18074,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>TimeOffPlan</returns>
         public TimeOffPlan GetWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId)
@@ -18087,7 +18087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
         public ApiResponse< TimeOffPlan > GetWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId)
@@ -18175,7 +18175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>Task of TimeOffPlan</returns>
         public async System.Threading.Tasks.Task<TimeOffPlan> GetWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId)
@@ -18189,7 +18189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> GetWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId)
@@ -18280,7 +18280,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a list of time off plans 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>TimeOffPlanListing</returns>
         public TimeOffPlanListing GetWorkforcemanagementManagementunitTimeoffplans (string managementUnitId)
         {
@@ -18292,7 +18292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a list of time off plans 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>ApiResponse of TimeOffPlanListing</returns>
         public ApiResponse< TimeOffPlanListing > GetWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId)
         { 
@@ -18375,7 +18375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a list of time off plans 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>Task of TimeOffPlanListing</returns>
         public async System.Threading.Tasks.Task<TimeOffPlanListing> GetWorkforcemanagementManagementunitTimeoffplansAsync (string managementUnitId)
         {
@@ -18388,7 +18388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a list of time off plans 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>Task of ApiResponse (TimeOffPlanListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffPlanListing>> GetWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId)
         { 
@@ -18473,7 +18473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>TimeOffRequestResponse</returns>
@@ -18487,7 +18487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
@@ -18580,7 +18580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
@@ -18595,7 +18595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
@@ -18692,7 +18692,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves time off limit, allocated and waitlisted values according to specific time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>QueryTimeOffLimitValuesResponse</returns>
@@ -18706,7 +18706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves time off limit, allocated and waitlisted values according to specific time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
@@ -18799,7 +18799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves time off limit, allocated and waitlisted values according to specific time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>Task of QueryTimeOffLimitValuesResponse</returns>
@@ -18814,7 +18814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves time off limit, allocated and waitlisted values according to specific time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
@@ -18911,7 +18911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of time off requests for a given user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
@@ -18925,7 +18925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of time off requests for a given user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
@@ -19015,7 +19015,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of time off requests for a given user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
@@ -19030,7 +19030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of time off requests for a given user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
@@ -19123,7 +19123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get users in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
         public WfmUserEntityListing GetWorkforcemanagementManagementunitUsers (string managementUnitId)
         {
@@ -19135,7 +19135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get users in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
         public ApiResponse< WfmUserEntityListing > GetWorkforcemanagementManagementunitUsersWithHttpInfo (string managementUnitId)
         { 
@@ -19218,7 +19218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get users in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
         public async System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersAsync (string managementUnitId)
         {
@@ -19231,7 +19231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get users in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo (string managementUnitId)
         { 
@@ -19771,7 +19771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets all the shift trades for a given week 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>WeekShiftTradeListResponse</returns>
@@ -19785,7 +19785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets all the shift trades for a given week 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>ApiResponse of WeekShiftTradeListResponse</returns>
@@ -19875,7 +19875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets all the shift trades for a given week 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>Task of WeekShiftTradeListResponse</returns>
@@ -19890,7 +19890,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets all the shift trades for a given week 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>Task of ApiResponse (WeekShiftTradeListResponse)</returns>
@@ -21748,7 +21748,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>TimeOffRequestResponse</returns>
         public TimeOffRequestResponse GetWorkforcemanagementTimeoffrequest (string timeOffRequestId)
         {
@@ -21760,7 +21760,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
         public ApiResponse< TimeOffRequestResponse > GetWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId)
         { 
@@ -21843,7 +21843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
         public async System.Threading.Tasks.Task<TimeOffRequestResponse> GetWorkforcemanagementTimeoffrequestAsync (string timeOffRequestId)
         {
@@ -21856,7 +21856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId)
         { 
@@ -21941,7 +21941,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the daily waitlist positions of a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>WaitlistPositionListing</returns>
         public WaitlistPositionListing GetWorkforcemanagementTimeoffrequestWaitlistpositions (string timeOffRequestId)
         {
@@ -21953,7 +21953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the daily waitlist positions of a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>ApiResponse of WaitlistPositionListing</returns>
         public ApiResponse< WaitlistPositionListing > GetWorkforcemanagementTimeoffrequestWaitlistpositionsWithHttpInfo (string timeOffRequestId)
         { 
@@ -22036,7 +22036,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the daily waitlist positions of a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of WaitlistPositionListing</returns>
         public async System.Threading.Tasks.Task<WaitlistPositionListing> GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsync (string timeOffRequestId)
         {
@@ -22049,7 +22049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the daily waitlist positions of a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsyncWithHttpInfo (string timeOffRequestId)
         { 
@@ -23612,7 +23612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a time off limit object. Updates time off limit object properties, but not daily values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The id of time off limit object to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffLimit</returns>
@@ -23626,7 +23626,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a time off limit object. Updates time off limit object properties, but not daily values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The id of time off limit object to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
@@ -23720,7 +23720,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a time off limit object. Updates time off limit object properties, but not daily values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The id of time off limit object to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffLimit</returns>
@@ -23735,7 +23735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a time off limit object. Updates time off limit object properties, but not daily values.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The id of time off limit object to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
@@ -23832,7 +23832,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffPlan</returns>
@@ -23846,7 +23846,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
@@ -23940,7 +23940,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffPlan</returns>
@@ -23955,7 +23955,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
@@ -24052,7 +24052,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
@@ -24067,7 +24067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
@@ -24166,7 +24166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
@@ -24182,7 +24182,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The id of the user the requested time off request belongs to</param>
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
@@ -24285,7 +24285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a shift trade. This route can only be called by the initiating agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -24300,7 +24300,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a shift trade. This route can only be called by the initiating agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -24402,7 +24402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a shift trade. This route can only be called by the initiating agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -24418,7 +24418,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a shift trade. This route can only be called by the initiating agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -24971,7 +24971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestResponse</returns>
         public TimeOffRequestResponse PatchWorkforcemanagementTimeoffrequest (string timeOffRequestId, AgentTimeOffRequestPatch body = null)
@@ -24984,7 +24984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
         public ApiResponse< TimeOffRequestResponse > PatchWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId, AgentTimeOffRequestPatch body = null)
@@ -25073,7 +25073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
         public async System.Threading.Tasks.Task<TimeOffRequestResponse> PatchWorkforcemanagementTimeoffrequestAsync (string timeOffRequestId, AgentTimeOffRequestPatch body = null)
@@ -25087,7 +25087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timeOffRequestId">Time Off Request Id</param>
+        /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PatchWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId, AgentTimeOffRequestPatch body = null)
@@ -25992,7 +25992,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday data for the given date for the requested planningGroupIds 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>AsyncIntradayResponse</returns>
@@ -26006,7 +26006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday data for the given date for the requested planningGroupIds 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of AsyncIntradayResponse</returns>
@@ -26097,7 +26097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday data for the given date for the requested planningGroupIds 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of AsyncIntradayResponse</returns>
@@ -26112,7 +26112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday data for the given date for the requested planningGroupIds 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit</param>
+        /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (AsyncIntradayResponse)</returns>
@@ -28739,7 +28739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Copy a short term forecast 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast to copy</param>
         /// <param name="body">body</param>
@@ -28755,7 +28755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Copy a short term forecast 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast to copy</param>
         /// <param name="body">body</param>
@@ -28859,7 +28859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Copy a short term forecast 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast to copy</param>
         /// <param name="body">body</param>
@@ -28876,7 +28876,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Copy a short term forecast 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast to copy</param>
         /// <param name="body">body</param>
@@ -28985,7 +28985,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Generate a short term forecast 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -29000,7 +29000,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Generate a short term forecast 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -29099,7 +29099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Generate a short term forecast 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -29115,7 +29115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Generate a short term forecast 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -29218,7 +29218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Starts importing the uploaded short term forecast Call after uploading the forecast data to the url supplied by the /import/uploadurl route
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <returns>ImportForecastResponse</returns>
@@ -29232,7 +29232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Starts importing the uploaded short term forecast Call after uploading the forecast data to the url supplied by the /import/uploadurl route
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of ImportForecastResponse</returns>
@@ -29329,7 +29329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Starts importing the uploaded short term forecast Call after uploading the forecast data to the url supplied by the /import/uploadurl route
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <returns>Task of ImportForecastResponse</returns>
@@ -29344,7 +29344,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Starts importing the uploaded short term forecast Call after uploading the forecast data to the url supplied by the /import/uploadurl route
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ImportForecastResponse)</returns>
@@ -29445,7 +29445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a signed upload URL for importing a short term forecast Once the upload is complete, call the /import route to start the short term forecast import process
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ImportForecastUploadResponse</returns>
@@ -29459,7 +29459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a signed upload URL for importing a short term forecast Once the upload is complete, call the /import route to start the short term forecast import process
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ImportForecastUploadResponse</returns>
@@ -29556,7 +29556,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a signed upload URL for importing a short term forecast Once the upload is complete, call the /import route to start the short term forecast import process
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ImportForecastUploadResponse</returns>
@@ -29571,7 +29571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a signed upload URL for importing a short term forecast Once the upload is complete, call the /import route to start the short term forecast import process
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The business unit ID of the business unit to which the forecast belongs</param>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ImportForecastUploadResponse)</returns>
@@ -30424,7 +30424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -30439,7 +30439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -30532,7 +30532,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -30548,7 +30548,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
@@ -30643,7 +30643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request a historical adherence report The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
         public WfmHistoricalAdherenceResponse PostWorkforcemanagementManagementunitHistoricaladherencequery (string managementUnitId, WfmHistoricalAdherenceQuery body = null)
@@ -30656,7 +30656,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request a historical adherence report The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
         public ApiResponse< WfmHistoricalAdherenceResponse > PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null)
@@ -30745,7 +30745,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request a historical adherence report The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
         public async System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsync (string managementUnitId, WfmHistoricalAdherenceQuery body = null)
@@ -30759,7 +30759,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request a historical adherence report The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null)
@@ -31057,7 +31057,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>UserScheduleContainer</returns>
         public UserScheduleContainer PostWorkforcemanagementManagementunitSchedulesSearch (string managementUnitId, UserListScheduleRequestBody body = null)
@@ -31070,7 +31070,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
         public ApiResponse< UserScheduleContainer > PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null)
@@ -31159,7 +31159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of UserScheduleContainer</returns>
         public async System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchAsync (string managementUnitId, UserListScheduleRequestBody body = null)
@@ -31173,7 +31173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null)
@@ -31264,7 +31264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new time off limit object under management unit. Only one limit object is allowed under management unit, so an attempt to create second object will fail.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffLimit</returns>
         public TimeOffLimit PostWorkforcemanagementManagementunitTimeofflimits (string managementUnitId, CreateTimeOffLimitRequest body = null)
@@ -31277,7 +31277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new time off limit object under management unit. Only one limit object is allowed under management unit, so an attempt to create second object will fail.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
         public ApiResponse< TimeOffLimit > PostWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null)
@@ -31366,7 +31366,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new time off limit object under management unit. Only one limit object is allowed under management unit, so an attempt to create second object will fail.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffLimit</returns>
         public async System.Threading.Tasks.Task<TimeOffLimit> PostWorkforcemanagementManagementunitTimeofflimitsAsync (string managementUnitId, CreateTimeOffLimitRequest body = null)
@@ -31380,7 +31380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new time off limit object under management unit. Only one limit object is allowed under management unit, so an attempt to create second object will fail.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PostWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null)
@@ -31471,7 +31471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves time off limit related values based on a given set of filters. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>QueryTimeOffLimitValuesResponse</returns>
         public QueryTimeOffLimitValuesResponse PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery (string managementUnitId, QueryTimeOffLimitValuesRequest body = null)
@@ -31484,7 +31484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves time off limit related values based on a given set of filters. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
         public ApiResponse< QueryTimeOffLimitValuesResponse > PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null)
@@ -31573,7 +31573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves time off limit related values based on a given set of filters. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of QueryTimeOffLimitValuesResponse</returns>
         public async System.Threading.Tasks.Task<QueryTimeOffLimitValuesResponse> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsync (string managementUnitId, QueryTimeOffLimitValuesRequest body = null)
@@ -31587,7 +31587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves time off limit related values based on a given set of filters. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<QueryTimeOffLimitValuesResponse>> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsyncWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null)
@@ -31678,7 +31678,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffPlan</returns>
         public TimeOffPlan PostWorkforcemanagementManagementunitTimeoffplans (string managementUnitId, CreateTimeOffPlanRequest body = null)
@@ -31691,7 +31691,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
         public ApiResponse< TimeOffPlan > PostWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null)
@@ -31780,7 +31780,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffPlan</returns>
         public async System.Threading.Tasks.Task<TimeOffPlan> PostWorkforcemanagementManagementunitTimeoffplansAsync (string managementUnitId, CreateTimeOffPlanRequest body = null)
@@ -31794,7 +31794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new time off plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID.</param>
+        /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> PostWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null)
@@ -31885,7 +31885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestList</returns>
         public TimeOffRequestList PostWorkforcemanagementManagementunitTimeoffrequests (string managementUnitId, CreateAdminTimeOffRequest body = null)
@@ -31898,7 +31898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
         public ApiResponse< TimeOffRequestList > PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null)
@@ -31987,7 +31987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestList</returns>
         public async System.Threading.Tasks.Task<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsAsync (string managementUnitId, CreateAdminTimeOffRequest body = null)
@@ -32001,7 +32001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null)
@@ -32092,7 +32092,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Fetches time off requests matching the conditions specified in the request body Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestListing</returns>
         public TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, TimeOffRequestQueryBody body = null)
@@ -32105,7 +32105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Fetches time off requests matching the conditions specified in the request body Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestListing</returns>
         public ApiResponse< TimeOffRequestListing > PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null)
@@ -32194,7 +32194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Fetches time off requests matching the conditions specified in the request body Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestListing</returns>
         public async System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string managementUnitId, TimeOffRequestQueryBody body = null)
@@ -32208,7 +32208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Fetches time off requests matching the conditions specified in the request body Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null)
@@ -32299,7 +32299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves daily waitlist position for a list of time off requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WaitlistPositionListing</returns>
         public WaitlistPositionListing PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery (string managementUnitId, QueryWaitlistPositionsRequest body = null)
@@ -32312,7 +32312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves daily waitlist position for a list of time off requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WaitlistPositionListing</returns>
         public ApiResponse< WaitlistPositionListing > PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null)
@@ -32401,7 +32401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves daily waitlist position for a list of time off requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WaitlistPositionListing</returns>
         public async System.Threading.Tasks.Task<WaitlistPositionListing> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsync (string managementUnitId, QueryWaitlistPositionsRequest body = null)
@@ -32415,7 +32415,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves daily waitlist position for a list of time off requests 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsyncWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null)
@@ -32506,7 +32506,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Matches a shift trade. This route can only be called by the receiving agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -32521,7 +32521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Matches a shift trade. This route can only be called by the receiving agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -32623,7 +32623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Matches a shift trade. This route can only be called by the receiving agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -32639,7 +32639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Matches a shift trade. This route can only be called by the receiving agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
@@ -32746,7 +32746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Adds a shift trade 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ShiftTradeResponse</returns>
@@ -32760,7 +32760,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Adds a shift trade 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ShiftTradeResponse</returns>
@@ -32857,7 +32857,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Adds a shift trade 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ShiftTradeResponse</returns>
@@ -32872,7 +32872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Adds a shift trade 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
@@ -32973,7 +32973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Searches for potential shift trade matches for the current agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>SearchShiftTradesResponse</returns>
@@ -32987,7 +32987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Searches for potential shift trade matches for the current agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of SearchShiftTradesResponse</returns>
@@ -33084,7 +33084,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Searches for potential shift trade matches for the current agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of SearchShiftTradesResponse</returns>
@@ -33099,7 +33099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Searches for potential shift trade matches for the current agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (SearchShiftTradesResponse)</returns>
@@ -33200,7 +33200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates the state of a batch of shift trades Admin functionality is not supported with \&quot;mine\&quot;.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -33215,7 +33215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates the state of a batch of shift trades Admin functionality is not supported with \&quot;mine\&quot;.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -33314,7 +33314,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates the state of a batch of shift trades Admin functionality is not supported with \&quot;mine\&quot;.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -33330,7 +33330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates the state of a batch of shift trades Admin functionality is not supported with \&quot;mine\&quot;.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
@@ -35489,7 +35489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Sets daily values for a date range of time off limit object Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffLimit</returns>
@@ -35503,7 +35503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Sets daily values for a date range of time off limit object Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
@@ -35597,7 +35597,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Sets daily values for a date range of time off limit object Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffLimit</returns>
@@ -35612,7 +35612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Sets daily values for a date range of time off limit object Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The management unit ID of the management unit.</param>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>

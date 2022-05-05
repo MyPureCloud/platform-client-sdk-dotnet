@@ -99,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Title">Text to show in the title..</param>
         /// <param name="Description">Text to show in the description..</param>
         /// <param name="SubmitLabel">Label for Submit button..</param>
-        /// <param name="Actions">The list actions..</param>
+        /// <param name="Actions">The list actions (Deprecated)..</param>
         /// <param name="Components">An array of component objects..</param>
         public ContentList(string Id = null, ListTypeEnum? ListType = null, string Title = null, string Description = null, string SubmitLabel = null, ContentActions Actions = null, List<ListItemComponent> Components = null)
         {
@@ -154,9 +154,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The list actions.
+        /// The list actions (Deprecated).
         /// </summary>
-        /// <value>The list actions.</value>
+        /// <value>The list actions (Deprecated).</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public ContentActions Actions { get; set; }
         

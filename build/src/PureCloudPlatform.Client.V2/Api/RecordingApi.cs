@@ -473,8 +473,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>PolicyEntityListing</returns>
-        PolicyEntityListing GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        PolicyEntityListing GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
 
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
@@ -493,8 +494,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
-        ApiResponse<PolicyEntityListing> GetRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        ApiResponse<PolicyEntityListing> GetRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
         
         /// <summary>
         /// Get a media retention policy
@@ -607,6 +609,48 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<RecordingJobEntityListing> GetRecordingJobsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null);
         
         /// <summary>
+        /// Get the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <returns>RecordingEncryptionConfiguration</returns>
+        RecordingEncryptionConfiguration GetRecordingKeyconfiguration (string keyConfigurationId);
+
+        /// <summary>
+        /// Get the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        ApiResponse<RecordingEncryptionConfiguration> GetRecordingKeyconfigurationWithHttpInfo (string keyConfigurationId);
+        
+        /// <summary>
+        /// Get a list of key configurations data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>RecordingEncryptionConfigurationListing</returns>
+        RecordingEncryptionConfigurationListing GetRecordingKeyconfigurations ();
+
+        /// <summary>
+        /// Get a list of key configurations data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of RecordingEncryptionConfigurationListing</returns>
+        ApiResponse<RecordingEncryptionConfigurationListing> GetRecordingKeyconfigurationsWithHttpInfo ();
+        
+        /// <summary>
         /// Get the local encryption settings
         /// </summary>
         /// <remarks>
@@ -665,8 +709,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>PolicyEntityListing</returns>
-        PolicyEntityListing GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        PolicyEntityListing GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
 
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
@@ -685,8 +730,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
-        ApiResponse<PolicyEntityListing> GetRecordingMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        ApiResponse<PolicyEntityListing> GetRecordingMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
         
         /// <summary>
         /// Get a media retention policy
@@ -943,10 +989,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CrossPlatformPolicy> PostRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (CrossPlatformPolicyCreate body);
         
         /// <summary>
-        /// Create a recording bulk job
+        /// Create a recording bulk job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -954,15 +1000,59 @@ namespace PureCloudPlatform.Client.V2.Api
         RecordingJob PostRecordingJobs (RecordingJobsQuery body);
 
         /// <summary>
-        /// Create a recording bulk job
+        /// Create a recording bulk job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of RecordingJob</returns>
         ApiResponse<RecordingJob> PostRecordingJobsWithHttpInfo (RecordingJobsQuery body);
+        
+        /// <summary>
+        /// Setup configurations for encryption key creation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>RecordingEncryptionConfiguration</returns>
+        RecordingEncryptionConfiguration PostRecordingKeyconfigurations (RecordingEncryptionConfiguration body);
+
+        /// <summary>
+        /// Setup configurations for encryption key creation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        ApiResponse<RecordingEncryptionConfiguration> PostRecordingKeyconfigurationsWithHttpInfo (RecordingEncryptionConfiguration body);
+        
+        /// <summary>
+        /// Validate encryption key configurations without saving it
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>RecordingEncryptionConfiguration</returns>
+        RecordingEncryptionConfiguration PostRecordingKeyconfigurationsValidate (RecordingEncryptionConfiguration body);
+
+        /// <summary>
+        /// Validate encryption key configurations without saving it
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        ApiResponse<RecordingEncryptionConfiguration> PostRecordingKeyconfigurationsValidateWithHttpInfo (RecordingEncryptionConfiguration body);
         
         /// <summary>
         /// create a local recording key
@@ -1241,6 +1331,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of RecordingJob</returns>
         ApiResponse<RecordingJob> PutRecordingJobWithHttpInfo (string jobId, ExecuteRecordingJobsQuery body);
+        
+        /// <summary>
+        /// Update the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>RecordingEncryptionConfiguration</returns>
+        RecordingEncryptionConfiguration PutRecordingKeyconfiguration (string keyConfigurationId, RecordingEncryptionConfiguration body);
+
+        /// <summary>
+        /// Update the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        ApiResponse<RecordingEncryptionConfiguration> PutRecordingKeyconfigurationWithHttpInfo (string keyConfigurationId, RecordingEncryptionConfiguration body);
         
         /// <summary>
         /// Update the local encryption settings
@@ -1819,8 +1933,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
-        System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingCrossplatformMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingCrossplatformMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
 
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
@@ -1839,8 +1954,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
         
         /// <summary>
         /// Get a media retention policy
@@ -1953,6 +2069,48 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<RecordingJobEntityListing>> GetRecordingJobsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null);
         
         /// <summary>
+        /// Get the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        System.Threading.Tasks.Task<RecordingEncryptionConfiguration> GetRecordingKeyconfigurationAsync (string keyConfigurationId);
+
+        /// <summary>
+        /// Get the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> GetRecordingKeyconfigurationAsyncWithHttpInfo (string keyConfigurationId);
+        
+        /// <summary>
+        /// Get a list of key configurations data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of RecordingEncryptionConfigurationListing</returns>
+        System.Threading.Tasks.Task<RecordingEncryptionConfigurationListing> GetRecordingKeyconfigurationsAsync ();
+
+        /// <summary>
+        /// Get a list of key configurations data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (RecordingEncryptionConfigurationListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfigurationListing>> GetRecordingKeyconfigurationsAsyncWithHttpInfo ();
+        
+        /// <summary>
         /// Get the local encryption settings
         /// </summary>
         /// <remarks>
@@ -2011,8 +2169,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
-        System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
 
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
@@ -2031,8 +2190,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
         
         /// <summary>
         /// Get a media retention policy
@@ -2289,10 +2449,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PostRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (CrossPlatformPolicyCreate body);
         
         /// <summary>
-        /// Create a recording bulk job
+        /// Create a recording bulk job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -2300,15 +2460,59 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<RecordingJob> PostRecordingJobsAsync (RecordingJobsQuery body);
 
         /// <summary>
-        /// Create a recording bulk job
+        /// Create a recording bulk job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (RecordingJob)</returns>
         System.Threading.Tasks.Task<ApiResponse<RecordingJob>> PostRecordingJobsAsyncWithHttpInfo (RecordingJobsQuery body);
+        
+        /// <summary>
+        /// Setup configurations for encryption key creation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        System.Threading.Tasks.Task<RecordingEncryptionConfiguration> PostRecordingKeyconfigurationsAsync (RecordingEncryptionConfiguration body);
+
+        /// <summary>
+        /// Setup configurations for encryption key creation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PostRecordingKeyconfigurationsAsyncWithHttpInfo (RecordingEncryptionConfiguration body);
+        
+        /// <summary>
+        /// Validate encryption key configurations without saving it
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        System.Threading.Tasks.Task<RecordingEncryptionConfiguration> PostRecordingKeyconfigurationsValidateAsync (RecordingEncryptionConfiguration body);
+
+        /// <summary>
+        /// Validate encryption key configurations without saving it
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PostRecordingKeyconfigurationsValidateAsyncWithHttpInfo (RecordingEncryptionConfiguration body);
         
         /// <summary>
         /// create a local recording key
@@ -2587,6 +2791,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (RecordingJob)</returns>
         System.Threading.Tasks.Task<ApiResponse<RecordingJob>> PutRecordingJobAsyncWithHttpInfo (string jobId, ExecuteRecordingJobsQuery body);
+        
+        /// <summary>
+        /// Update the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        System.Threading.Tasks.Task<RecordingEncryptionConfiguration> PutRecordingKeyconfigurationAsync (string keyConfigurationId, RecordingEncryptionConfiguration body);
+
+        /// <summary>
+        /// Update the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PutRecordingKeyconfigurationAsyncWithHttpInfo (string keyConfigurationId, RecordingEncryptionConfiguration body);
         
         /// <summary>
         /// Update the local encryption settings
@@ -6319,10 +6547,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>PolicyEntityListing</returns>
-        public PolicyEntityListing GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public PolicyEntityListing GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         {
-             ApiResponse<PolicyEntityListing> localVarResponse = GetRecordingCrossplatformMediaretentionpoliciesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
+             ApiResponse<PolicyEntityListing> localVarResponse = GetRecordingCrossplatformMediaretentionpoliciesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors, deleteDaysThreshold);
              return localVarResponse.Data;
         }
 
@@ -6340,8 +6569,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
-        public ApiResponse< PolicyEntityListing > GetRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public ApiResponse< PolicyEntityListing > GetRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         { 
 
             var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies";
@@ -6387,6 +6617,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (enabled != null) localVarQueryParams.Add(new Tuple<string, string>("enabled", this.Configuration.ApiClient.ParameterToString(enabled)));
             if (summary != null) localVarQueryParams.Add(new Tuple<string, string>("summary", this.Configuration.ApiClient.ParameterToString(summary)));
             if (hasErrors != null) localVarQueryParams.Add(new Tuple<string, string>("hasErrors", this.Configuration.ApiClient.ParameterToString(hasErrors)));
+            if (deleteDaysThreshold != null) localVarQueryParams.Add(new Tuple<string, string>("deleteDaysThreshold", this.Configuration.ApiClient.ParameterToString(deleteDaysThreshold)));
 
             // Header params
 
@@ -6438,10 +6669,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
-        public async System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingCrossplatformMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public async System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingCrossplatformMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         {
-             ApiResponse<PolicyEntityListing> localVarResponse = await GetRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
+             ApiResponse<PolicyEntityListing> localVarResponse = await GetRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors, deleteDaysThreshold);
              return localVarResponse.Data;
 
         }
@@ -6460,8 +6692,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         { 
 
             var localVarPath = "/api/v2/recording/crossplatform/mediaretentionpolicies";
@@ -6507,6 +6740,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (enabled != null) localVarQueryParams.Add(new Tuple<string, string>("enabled", this.Configuration.ApiClient.ParameterToString(enabled)));
             if (summary != null) localVarQueryParams.Add(new Tuple<string, string>("summary", this.Configuration.ApiClient.ParameterToString(summary)));
             if (hasErrors != null) localVarQueryParams.Add(new Tuple<string, string>("hasErrors", this.Configuration.ApiClient.ParameterToString(hasErrors)));
+            if (deleteDaysThreshold != null) localVarQueryParams.Add(new Tuple<string, string>("deleteDaysThreshold", this.Configuration.ApiClient.ParameterToString(deleteDaysThreshold)));
 
             // Header params
 
@@ -7377,6 +7611,379 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <returns>RecordingEncryptionConfiguration</returns>
+        public RecordingEncryptionConfiguration GetRecordingKeyconfiguration (string keyConfigurationId)
+        {
+             ApiResponse<RecordingEncryptionConfiguration> localVarResponse = GetRecordingKeyconfigurationWithHttpInfo(keyConfigurationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        public ApiResponse< RecordingEncryptionConfiguration > GetRecordingKeyconfigurationWithHttpInfo (string keyConfigurationId)
+        { 
+            // verify the required parameter 'keyConfigurationId' is set
+            if (keyConfigurationId == null)
+                throw new ApiException(400, "Missing required parameter 'keyConfigurationId' when calling RecordingApi->GetRecordingKeyconfiguration");
+
+            var localVarPath = "/api/v2/recording/keyconfigurations/{keyConfigurationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (keyConfigurationId != null) localVarPathParams.Add("keyConfigurationId", this.Configuration.ApiClient.ParameterToString(keyConfigurationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingKeyconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingKeyconfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingEncryptionConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        public async System.Threading.Tasks.Task<RecordingEncryptionConfiguration> GetRecordingKeyconfigurationAsync (string keyConfigurationId)
+        {
+             ApiResponse<RecordingEncryptionConfiguration> localVarResponse = await GetRecordingKeyconfigurationAsyncWithHttpInfo(keyConfigurationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> GetRecordingKeyconfigurationAsyncWithHttpInfo (string keyConfigurationId)
+        { 
+            // verify the required parameter 'keyConfigurationId' is set
+            if (keyConfigurationId == null)
+                throw new ApiException(400, "Missing required parameter 'keyConfigurationId' when calling RecordingApi->GetRecordingKeyconfiguration");
+            
+
+            var localVarPath = "/api/v2/recording/keyconfigurations/{keyConfigurationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (keyConfigurationId != null) localVarPathParams.Add("keyConfigurationId", this.Configuration.ApiClient.ParameterToString(keyConfigurationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingKeyconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingKeyconfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingEncryptionConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a list of key configurations data 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>RecordingEncryptionConfigurationListing</returns>
+        public RecordingEncryptionConfigurationListing GetRecordingKeyconfigurations ()
+        {
+             ApiResponse<RecordingEncryptionConfigurationListing> localVarResponse = GetRecordingKeyconfigurationsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of key configurations data 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of RecordingEncryptionConfigurationListing</returns>
+        public ApiResponse< RecordingEncryptionConfigurationListing > GetRecordingKeyconfigurationsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/recording/keyconfigurations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingKeyconfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingKeyconfigurations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingEncryptionConfigurationListing>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingEncryptionConfigurationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingEncryptionConfigurationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a list of key configurations data 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of RecordingEncryptionConfigurationListing</returns>
+        public async System.Threading.Tasks.Task<RecordingEncryptionConfigurationListing> GetRecordingKeyconfigurationsAsync ()
+        {
+             ApiResponse<RecordingEncryptionConfigurationListing> localVarResponse = await GetRecordingKeyconfigurationsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of key configurations data 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (RecordingEncryptionConfigurationListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfigurationListing>> GetRecordingKeyconfigurationsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/recording/keyconfigurations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingKeyconfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingKeyconfigurations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingEncryptionConfigurationListing>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingEncryptionConfigurationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingEncryptionConfigurationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get the local encryption settings 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7763,10 +8370,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>PolicyEntityListing</returns>
-        public PolicyEntityListing GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public PolicyEntityListing GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         {
-             ApiResponse<PolicyEntityListing> localVarResponse = GetRecordingMediaretentionpoliciesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
+             ApiResponse<PolicyEntityListing> localVarResponse = GetRecordingMediaretentionpoliciesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors, deleteDaysThreshold);
              return localVarResponse.Data;
         }
 
@@ -7784,8 +8392,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
-        public ApiResponse< PolicyEntityListing > GetRecordingMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public ApiResponse< PolicyEntityListing > GetRecordingMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         { 
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";
@@ -7831,6 +8440,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (enabled != null) localVarQueryParams.Add(new Tuple<string, string>("enabled", this.Configuration.ApiClient.ParameterToString(enabled)));
             if (summary != null) localVarQueryParams.Add(new Tuple<string, string>("summary", this.Configuration.ApiClient.ParameterToString(summary)));
             if (hasErrors != null) localVarQueryParams.Add(new Tuple<string, string>("hasErrors", this.Configuration.ApiClient.ParameterToString(hasErrors)));
+            if (deleteDaysThreshold != null) localVarQueryParams.Add(new Tuple<string, string>("deleteDaysThreshold", this.Configuration.ApiClient.ParameterToString(deleteDaysThreshold)));
 
             // Header params
 
@@ -7882,10 +8492,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
-        public async System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public async System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         {
-             ApiResponse<PolicyEntityListing> localVarResponse = await GetRecordingMediaretentionpoliciesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
+             ApiResponse<PolicyEntityListing> localVarResponse = await GetRecordingMediaretentionpoliciesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors, deleteDaysThreshold);
              return localVarResponse.Data;
 
         }
@@ -7904,8 +8515,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
+        /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         { 
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";
@@ -7951,6 +8563,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (enabled != null) localVarQueryParams.Add(new Tuple<string, string>("enabled", this.Configuration.ApiClient.ParameterToString(enabled)));
             if (summary != null) localVarQueryParams.Add(new Tuple<string, string>("summary", this.Configuration.ApiClient.ParameterToString(summary)));
             if (hasErrors != null) localVarQueryParams.Add(new Tuple<string, string>("hasErrors", this.Configuration.ApiClient.ParameterToString(hasErrors)));
+            if (deleteDaysThreshold != null) localVarQueryParams.Add(new Tuple<string, string>("deleteDaysThreshold", this.Configuration.ApiClient.ParameterToString(deleteDaysThreshold)));
 
             // Header params
 
@@ -10195,7 +10808,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create a recording bulk job 
+        /// Create a recording bulk job. Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -10207,7 +10820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a recording bulk job 
+        /// Create a recording bulk job. Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -10294,7 +10907,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Create a recording bulk job 
+        /// Create a recording bulk job. Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -10307,7 +10920,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a recording bulk job 
+        /// Create a recording bulk job. Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -10389,6 +11002,408 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<RecordingJob>(localVarStatusCode,
                 localVarHeaders,
                 (RecordingJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Setup configurations for encryption key creation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>RecordingEncryptionConfiguration</returns>
+        public RecordingEncryptionConfiguration PostRecordingKeyconfigurations (RecordingEncryptionConfiguration body)
+        {
+             ApiResponse<RecordingEncryptionConfiguration> localVarResponse = PostRecordingKeyconfigurationsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Setup configurations for encryption key creation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        public ApiResponse< RecordingEncryptionConfiguration > PostRecordingKeyconfigurationsWithHttpInfo (RecordingEncryptionConfiguration body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingKeyconfigurations");
+
+            var localVarPath = "/api/v2/recording/keyconfigurations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingKeyconfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingKeyconfigurations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingEncryptionConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Setup configurations for encryption key creation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        public async System.Threading.Tasks.Task<RecordingEncryptionConfiguration> PostRecordingKeyconfigurationsAsync (RecordingEncryptionConfiguration body)
+        {
+             ApiResponse<RecordingEncryptionConfiguration> localVarResponse = await PostRecordingKeyconfigurationsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Setup configurations for encryption key creation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PostRecordingKeyconfigurationsAsyncWithHttpInfo (RecordingEncryptionConfiguration body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingKeyconfigurations");
+            
+
+            var localVarPath = "/api/v2/recording/keyconfigurations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingKeyconfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingKeyconfigurations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingEncryptionConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Validate encryption key configurations without saving it 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>RecordingEncryptionConfiguration</returns>
+        public RecordingEncryptionConfiguration PostRecordingKeyconfigurationsValidate (RecordingEncryptionConfiguration body)
+        {
+             ApiResponse<RecordingEncryptionConfiguration> localVarResponse = PostRecordingKeyconfigurationsValidateWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate encryption key configurations without saving it 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        public ApiResponse< RecordingEncryptionConfiguration > PostRecordingKeyconfigurationsValidateWithHttpInfo (RecordingEncryptionConfiguration body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingKeyconfigurationsValidate");
+
+            var localVarPath = "/api/v2/recording/keyconfigurations/validate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingKeyconfigurationsValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingKeyconfigurationsValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingEncryptionConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Validate encryption key configurations without saving it 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        public async System.Threading.Tasks.Task<RecordingEncryptionConfiguration> PostRecordingKeyconfigurationsValidateAsync (RecordingEncryptionConfiguration body)
+        {
+             ApiResponse<RecordingEncryptionConfiguration> localVarResponse = await PostRecordingKeyconfigurationsValidateAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate encryption key configurations without saving it 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PostRecordingKeyconfigurationsValidateAsyncWithHttpInfo (RecordingEncryptionConfiguration body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingKeyconfigurationsValidate");
+            
+
+            var localVarPath = "/api/v2/recording/keyconfigurations/validate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingKeyconfigurationsValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingKeyconfigurationsValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingEncryptionConfiguration)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -12873,6 +13888,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<RecordingJob>(localVarStatusCode,
                 localVarHeaders,
                 (RecordingJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>RecordingEncryptionConfiguration</returns>
+        public RecordingEncryptionConfiguration PutRecordingKeyconfiguration (string keyConfigurationId, RecordingEncryptionConfiguration body)
+        {
+             ApiResponse<RecordingEncryptionConfiguration> localVarResponse = PutRecordingKeyconfigurationWithHttpInfo(keyConfigurationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        public ApiResponse< RecordingEncryptionConfiguration > PutRecordingKeyconfigurationWithHttpInfo (string keyConfigurationId, RecordingEncryptionConfiguration body)
+        { 
+            // verify the required parameter 'keyConfigurationId' is set
+            if (keyConfigurationId == null)
+                throw new ApiException(400, "Missing required parameter 'keyConfigurationId' when calling RecordingApi->PutRecordingKeyconfiguration");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingKeyconfiguration");
+
+            var localVarPath = "/api/v2/recording/keyconfigurations/{keyConfigurationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (keyConfigurationId != null) localVarPathParams.Add("keyConfigurationId", this.Configuration.ApiClient.ParameterToString(keyConfigurationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingKeyconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingKeyconfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingEncryptionConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        public async System.Threading.Tasks.Task<RecordingEncryptionConfiguration> PutRecordingKeyconfigurationAsync (string keyConfigurationId, RecordingEncryptionConfiguration body)
+        {
+             ApiResponse<RecordingEncryptionConfiguration> localVarResponse = await PutRecordingKeyconfigurationAsyncWithHttpInfo(keyConfigurationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyConfigurationId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PutRecordingKeyconfigurationAsyncWithHttpInfo (string keyConfigurationId, RecordingEncryptionConfiguration body)
+        { 
+            // verify the required parameter 'keyConfigurationId' is set
+            if (keyConfigurationId == null)
+                throw new ApiException(400, "Missing required parameter 'keyConfigurationId' when calling RecordingApi->PutRecordingKeyconfiguration");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingKeyconfiguration");
+            
+
+            var localVarPath = "/api/v2/recording/keyconfigurations/{keyConfigurationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (keyConfigurationId != null) localVarPathParams.Add("keyConfigurationId", this.Configuration.ApiClient.ParameterToString(keyConfigurationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingKeyconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingKeyconfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingEncryptionConfiguration)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

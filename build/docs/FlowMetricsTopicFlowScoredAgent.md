@@ -1,7 +1,7 @@
 ---
-title: FlowMetricsTopicConversationScoredAgent
+title: FlowMetricsTopicFlowScoredAgent
 ---
-## ININ.PureCloudApi.Model.FlowMetricsTopicConversationScoredAgent
+## ININ.PureCloudApi.Model.FlowMetricsTopicFlowScoredAgent
 
 ## Properties
 

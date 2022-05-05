@@ -80,6 +80,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Contentmanagement,
             
             /// <summary>
+            /// Enum Directory for "Directory"
+            /// </summary>
+            [EnumMember(Value = "Directory")]
+            Directory,
+            
+            /// <summary>
             /// Enum Employeeperformance for "EmployeePerformance"
             /// </summary>
             [EnumMember(Value = "EmployeePerformance")]
@@ -1086,6 +1092,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "TrunkBase")]
             Trunkbase,
+            
+            /// <summary>
+            /// Enum User for "User"
+            /// </summary>
+            [EnumMember(Value = "User")]
+            User,
             
             /// <summary>
             /// Enum Userpresence for "UserPresence"

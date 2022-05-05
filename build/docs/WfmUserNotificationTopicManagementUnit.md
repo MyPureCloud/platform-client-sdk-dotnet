@@ -1,12 +1,13 @@
 ---
-title: UserRoutingStatusObject
+title: WfmUserNotificationTopicManagementUnit
 ---
-## ININ.PureCloudApi.Model.UserRoutingStatusObject
+## ININ.PureCloudApi.Model.WfmUserNotificationTopicManagementUnit
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Id** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

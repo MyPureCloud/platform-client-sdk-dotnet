@@ -1813,7 +1813,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PatchConversationParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
         
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants
+        /// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
         /// </summary>
         /// <remarks>
         /// 
@@ -1825,7 +1825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Conversation PatchConversationsCall (string conversationId, Conversation body);
 
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants
+        /// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
         /// </summary>
         /// <remarks>
         /// 
@@ -2557,10 +2557,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TwitterIntegration> PatchConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, TwitterIntegrationRequest body);
         
         /// <summary>
-        /// Update or activate a WhatsApp messaging integration.
+        /// Update or activate a WhatsApp messaging integration
         /// </summary>
         /// <remarks>
-        /// The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+        /// The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -2569,10 +2569,10 @@ namespace PureCloudPlatform.Client.V2.Api
         WhatsAppIntegration PatchConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId, WhatsAppIntegrationUpdateRequest body);
 
         /// <summary>
-        /// Update or activate a WhatsApp messaging integration.
+        /// Update or activate a WhatsApp messaging integration
         /// </summary>
         /// <remarks>
-        /// The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+        /// The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -5639,7 +5639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
         
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants
+        /// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
         /// </summary>
         /// <remarks>
         /// 
@@ -5651,7 +5651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Conversation> PatchConversationsCallAsync (string conversationId, Conversation body);
 
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants
+        /// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
         /// </summary>
         /// <remarks>
         /// 
@@ -6383,10 +6383,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PatchConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, TwitterIntegrationRequest body);
         
         /// <summary>
-        /// Update or activate a WhatsApp messaging integration.
+        /// Update or activate a WhatsApp messaging integration
         /// </summary>
         /// <remarks>
-        /// The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+        /// The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -6395,10 +6395,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<WhatsAppIntegration> PatchConversationsMessagingIntegrationsWhatsappIntegrationIdAsync (string integrationId, WhatsAppIntegrationUpdateRequest body);
 
         /// <summary>
-        /// Update or activate a WhatsApp messaging integration.
+        /// Update or activate a WhatsApp messaging integration
         /// </summary>
         /// <remarks>
-        /// The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+        /// The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -22859,7 +22859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants 
+        /// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -22872,7 +22872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants 
+        /// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -22964,7 +22964,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants 
+        /// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -22978,7 +22978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants 
+        /// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -29325,7 +29325,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update or activate a WhatsApp messaging integration. The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+        /// Update or activate a WhatsApp messaging integration The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -29338,7 +29338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update or activate a WhatsApp messaging integration. The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+        /// Update or activate a WhatsApp messaging integration The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -29430,7 +29430,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update or activate a WhatsApp messaging integration. The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+        /// Update or activate a WhatsApp messaging integration The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -29444,7 +29444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update or activate a WhatsApp messaging integration. The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+        /// Update or activate a WhatsApp messaging integration The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>

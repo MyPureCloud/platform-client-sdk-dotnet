@@ -54,7 +54,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Group for "GROUP"
             /// </summary>
             [EnumMember(Value = "GROUP")]
-            Group
+            Group,
+            
+            /// <summary>
+            /// Enum Skillgroup for "SKILLGROUP"
+            /// </summary>
+            [EnumMember(Value = "SKILLGROUP")]
+            Skillgroup
         }
         
         

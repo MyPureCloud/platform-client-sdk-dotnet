@@ -124,7 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Evaluators">Evaluators.</param>
         /// <param name="ScoringIndex">ScoringIndex.</param>
         /// <param name="ExpertEvaluator">ExpertEvaluator.</param>
-        public CalibrationCreate(string Name = null, User Calibrator = null, User Agent = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, string ContextId = null, int? AverageScore = null, int? HighScore = null, int? LowScore = null, DateTime? CreatedDate = null, List<Evaluation> Evaluations = null, List<User> Evaluators = null, Evaluation ScoringIndex = null, User ExpertEvaluator = null)
+        public CalibrationCreate(string Name = null, User Calibrator = null, User Agent = null, ConversationReference Conversation = null, EvaluationForm EvaluationForm = null, string ContextId = null, int? AverageScore = null, int? HighScore = null, int? LowScore = null, DateTime? CreatedDate = null, List<Evaluation> Evaluations = null, List<User> Evaluators = null, Evaluation ScoringIndex = null, User ExpertEvaluator = null)
         {
             this.Name = Name;
             this.Calibrator = Calibrator;
@@ -183,7 +183,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The conversation to use for the calibration.</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
-        public Conversation Conversation { get; set; }
+        public ConversationReference Conversation { get; set; }
         
         
         

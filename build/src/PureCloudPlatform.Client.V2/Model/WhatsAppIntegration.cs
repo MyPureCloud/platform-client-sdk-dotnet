@@ -32,6 +32,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The status of the WhatsApp Integration
         /// </summary>
@@ -221,6 +227,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
         /// <summary>
         /// The status of the WhatsApp Integration
         /// </summary>
@@ -277,17 +287,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the WhatsApp integration. (required).</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
-        /// <param name="PhoneNumber">The phone number associated to the whatsApp integration. (required).</param>
+        /// <param name="MessagingSetting">MessagingSetting.</param>
+        /// <param name="PhoneNumber">The phone number associated to the WhatsApp integration. (required).</param>
         /// <param name="Status">The status of the WhatsApp Integration.</param>
         /// <param name="DateCreated">Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Date this Integration was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreatedBy">User reference that created this Integration.</param>
         /// <param name="ModifiedBy">User reference that last modified this Integration.</param>
         /// <param name="Version">Version number required for updates. (required).</param>
-        public WhatsAppIntegration(string Name = null, SupportedContentReference SupportedContent = null, string PhoneNumber = null, StatusEnum? Status = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, int? Version = null)
+        public WhatsAppIntegration(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, string PhoneNumber = null, StatusEnum? Status = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, int? Version = null)
         {
             this.Name = Name;
             this.SupportedContent = SupportedContent;
+            this.MessagingSetting = MessagingSetting;
             this.PhoneNumber = PhoneNumber;
             this.Status = Status;
             this.DateCreated = DateCreated;
@@ -328,11 +340,28 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The phone number associated to the whatsApp integration.
+        /// Gets or Sets MessagingSetting
         /// </summary>
-        /// <value>The phone number associated to the whatsApp integration.</value>
+        [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
+        public MessagingSettingReference MessagingSetting { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The phone number associated to the WhatsApp integration.
+        /// </summary>
+        /// <value>The phone number associated to the WhatsApp integration.</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of available WhatsApp phone numbers for this account. Please select one phone number from this list to use with the created integration.
+        /// </summary>
+        /// <value>The list of available WhatsApp phone numbers for this account. Please select one phone number from this list to use with the created integration.</value>
+        [DataMember(Name="availablePhoneNumbers", EmitDefaultValue=false)]
+        public WhatsAppAvailablePhoneNumberDetailsListing AvailablePhoneNumbers { get; private set; }
         
         
         
@@ -434,7 +463,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
+            sb.Append("  MessagingSetting: ").Append(MessagingSetting).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+            sb.Append("  AvailablePhoneNumbers: ").Append(AvailablePhoneNumbers).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Recipient: ").Append(Recipient).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -503,9 +534,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SupportedContent.Equals(other.SupportedContent)
                 ) &&
                 (
+                    this.MessagingSetting == other.MessagingSetting ||
+                    this.MessagingSetting != null &&
+                    this.MessagingSetting.Equals(other.MessagingSetting)
+                ) &&
+                (
                     this.PhoneNumber == other.PhoneNumber ||
                     this.PhoneNumber != null &&
                     this.PhoneNumber.Equals(other.PhoneNumber)
+                ) &&
+                (
+                    this.AvailablePhoneNumbers == other.AvailablePhoneNumbers ||
+                    this.AvailablePhoneNumbers != null &&
+                    this.AvailablePhoneNumbers.Equals(other.AvailablePhoneNumbers)
                 ) &&
                 (
                     this.Status == other.Status ||
@@ -590,8 +631,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SupportedContent != null)
                     hash = hash * 59 + this.SupportedContent.GetHashCode();
                 
+                if (this.MessagingSetting != null)
+                    hash = hash * 59 + this.MessagingSetting.GetHashCode();
+                
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
+                
+                if (this.AvailablePhoneNumbers != null)
+                    hash = hash * 59 + this.AvailablePhoneNumbers.GetHashCode();
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();

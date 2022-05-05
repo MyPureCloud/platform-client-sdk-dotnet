@@ -264,7 +264,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Scim for "SCIM"
             /// </summary>
             [EnumMember(Value = "SCIM")]
-            Scim
+            Scim,
+            
+            /// <summary>
+            /// Enum Numberpurchasing for "NumberPurchasing"
+            /// </summary>
+            [EnumMember(Value = "NumberPurchasing")]
+            Numberpurchasing
         }
         
         
@@ -1775,6 +1781,43 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Status of the event being audited
+        /// </summary>
+        /// <value>Status of the event being audited</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Success for "SUCCESS"
+            /// </summary>
+            [EnumMember(Value = "SUCCESS")]
+            Success,
+            
+            /// <summary>
+            /// Enum Failure for "FAILURE"
+            /// </summary>
+            [EnumMember(Value = "FAILURE")]
+            Failure,
+            
+            /// <summary>
+            /// Enum Warning for "WARNING"
+            /// </summary>
+            [EnumMember(Value = "WARNING")]
+            Warning
+        }
+        
+        
+        
+        
         
         
         
@@ -1825,6 +1868,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Status of the event being audited
+        /// </summary>
+        /// <value>Status of the event being audited</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+        
+        
+        
         
         
         
@@ -1843,9 +1895,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Action">Action that took place..</param>
         /// <param name="Entity">Entity that was impacted..</param>
         /// <param name="EntityType">Type of the entity that was impacted..</param>
+        /// <param name="Status">Status of the event being audited.</param>
         /// <param name="PropertyChanges">List of properties that were changed and changes made to those properties..</param>
         /// <param name="Context">Additional context for this message..</param>
-        public AuditLogMessage(string Id = null, string UserHomeOrgId = null, DomainEntityRef User = null, AddressableEntityRef Client = null, List<string> RemoteIp = null, ServiceNameEnum? ServiceName = null, DateTime? EventDate = null, MessageInfo Message = null, ActionEnum? Action = null, DomainEntityRef Entity = null, EntityTypeEnum? EntityType = null, List<PropertyChange> PropertyChanges = null, Dictionary<string, string> Context = null)
+        public AuditLogMessage(string Id = null, string UserHomeOrgId = null, DomainEntityRef User = null, AddressableEntityRef Client = null, List<string> RemoteIp = null, ServiceNameEnum? ServiceName = null, DateTime? EventDate = null, MessageInfo Message = null, ActionEnum? Action = null, DomainEntityRef Entity = null, EntityTypeEnum? EntityType = null, StatusEnum? Status = null, List<PropertyChange> PropertyChanges = null, Dictionary<string, string> Context = null)
         {
             this.Id = Id;
             this.UserHomeOrgId = UserHomeOrgId;
@@ -1858,6 +1911,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Action = Action;
             this.Entity = Entity;
             this.EntityType = EntityType;
+            this.Status = Status;
             this.PropertyChanges = PropertyChanges;
             this.Context = Context;
             
@@ -1943,6 +1997,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// List of properties that were changed and changes made to those properties.
         /// </summary>
@@ -1980,6 +2036,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  PropertyChanges: ").Append(PropertyChanges).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("}\n");
@@ -2078,6 +2135,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EntityType.Equals(other.EntityType)
                 ) &&
                 (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
                     this.PropertyChanges == other.PropertyChanges ||
                     this.PropertyChanges != null &&
                     this.PropertyChanges.SequenceEqual(other.PropertyChanges)
@@ -2133,6 +2195,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();
+                
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.PropertyChanges != null)
                     hash = hash * 59 + this.PropertyChanges.GetHashCode();

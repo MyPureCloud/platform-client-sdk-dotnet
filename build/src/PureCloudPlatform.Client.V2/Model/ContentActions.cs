@@ -41,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Url">A URL of a web page to direct the user to..</param>
         /// <param name="UrlTarget">The target window in which to open the URL. If empty will open a blank page or tab..</param>
-        /// <param name="Textback">Text to be sent back in reply when the item is selected..</param>
+        /// <param name="Textback">Text to be returned as the payload from a ButtonResponse when a button is clicked. The textback and title are a combination which will have to be unique across each card and carousel in order to determine which button was clicked in that card or carousel..</param>
         public ContentActions(string Url = null, string UrlTarget = null, string Textback = null)
         {
             this.Url = Url;
@@ -71,9 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Text to be sent back in reply when the item is selected.
+        /// Text to be returned as the payload from a ButtonResponse when a button is clicked. The textback and title are a combination which will have to be unique across each card and carousel in order to determine which button was clicked in that card or carousel.
         /// </summary>
-        /// <value>Text to be sent back in reply when the item is selected.</value>
+        /// <value>Text to be returned as the payload from a ButtonResponse when a button is clicked. The textback and title are a combination which will have to be unique across each card and carousel in order to determine which button was clicked in that card or carousel.</value>
         [DataMember(Name="textback", EmitDefaultValue=false)]
         public string Textback { get; set; }
         

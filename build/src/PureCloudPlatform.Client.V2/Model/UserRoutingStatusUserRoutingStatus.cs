@@ -39,10 +39,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRoutingStatusUserRoutingStatus" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
+        /// <param name="Id">The unique identifier of the user..</param>
         /// <param name="RoutingStatus">RoutingStatus.</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
-        public UserRoutingStatusUserRoutingStatus(UserRoutingStatusObject Id = null, UserRoutingStatusRoutingStatus RoutingStatus = null, UserRoutingStatusErrorInfo ErrorInfo = null)
+        public UserRoutingStatusUserRoutingStatus(string Id = null, UserRoutingStatusRoutingStatus RoutingStatus = null, UserRoutingStatusErrorInfo ErrorInfo = null)
         {
             this.Id = Id;
             this.RoutingStatus = RoutingStatus;
@@ -53,10 +53,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The unique identifier of the user.
         /// </summary>
+        /// <value>The unique identifier of the user.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public UserRoutingStatusObject Id { get; set; }
+        public string Id { get; set; }
         
         
         

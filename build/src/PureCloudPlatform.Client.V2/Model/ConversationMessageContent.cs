@@ -75,8 +75,26 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Generictemplate for "GenericTemplate"
             /// </summary>
             [EnumMember(Value = "GenericTemplate")]
-            Generictemplate
+            Generictemplate,
+            
+            /// <summary>
+            /// Enum Card for "Card"
+            /// </summary>
+            [EnumMember(Value = "Card")]
+            Card,
+            
+            /// <summary>
+            /// Enum Carousel for "Carousel"
+            /// </summary>
+            [EnumMember(Value = "Carousel")]
+            Carousel
         }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -125,6 +143,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMessageContent" /> class.
@@ -143,7 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Template">Template notification content..</param>
         /// <param name="ButtonResponse">Button response content..</param>
         /// <param name="Generic">Generic Template Object.</param>
-        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentStory Story = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentNotificationTemplate Template = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentGeneric Generic = null)
+        /// <param name="Card">Card (Generic Template) Object.</param>
+        /// <param name="Carousel">Carousel (Multiple Generic Template) Object.</param>
+        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentStory Story = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentNotificationTemplate Template = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentGeneric Generic = null, ConversationContentCard Card = null, ConversationContentCarousel Carousel = null)
         {
             this.ContentType = ContentType;
             this.Location = Location;
@@ -153,6 +177,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Template = Template;
             this.ButtonResponse = ButtonResponse;
             this.Generic = Generic;
+            this.Card = Card;
+            this.Carousel = Carousel;
             
         }
         
@@ -222,6 +248,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationContentGeneric Generic { get; set; }
         
         
+        
+        /// <summary>
+        /// Card (Generic Template) Object
+        /// </summary>
+        /// <value>Card (Generic Template) Object</value>
+        [DataMember(Name="card", EmitDefaultValue=false)]
+        public ConversationContentCard Card { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Carousel (Multiple Generic Template) Object
+        /// </summary>
+        /// <value>Carousel (Multiple Generic Template) Object</value>
+        [DataMember(Name="carousel", EmitDefaultValue=false)]
+        public ConversationContentCarousel Carousel { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -239,6 +283,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Template: ").Append(Template).Append("\n");
             sb.Append("  ButtonResponse: ").Append(ButtonResponse).Append("\n");
             sb.Append("  Generic: ").Append(Generic).Append("\n");
+            sb.Append("  Card: ").Append(Card).Append("\n");
+            sb.Append("  Carousel: ").Append(Carousel).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -318,6 +364,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Generic == other.Generic ||
                     this.Generic != null &&
                     this.Generic.Equals(other.Generic)
+                ) &&
+                (
+                    this.Card == other.Card ||
+                    this.Card != null &&
+                    this.Card.Equals(other.Card)
+                ) &&
+                (
+                    this.Carousel == other.Carousel ||
+                    this.Carousel != null &&
+                    this.Carousel.Equals(other.Carousel)
                 );
         }
 
@@ -356,6 +412,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Generic != null)
                     hash = hash * 59 + this.Generic.GetHashCode();
+                
+                if (this.Card != null)
+                    hash = hash * 59 + this.Card.GetHashCode();
+                
+                if (this.Carousel != null)
+                    hash = hash * 59 + this.Carousel.GetHashCode();
                 
                 return hash;
             }

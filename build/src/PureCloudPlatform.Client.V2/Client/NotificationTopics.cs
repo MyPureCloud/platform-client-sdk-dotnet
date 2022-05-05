@@ -15,7 +15,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.analytics.conversation.{id}.metrics", typeof(ConversationMetricsTopicConversationMetricRecord)},
               {"v2.analytics.conversations.details.jobs.availability", typeof(ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification)},
               {"v2.analytics.flow.{id}.aggregates", typeof(StatEventFlowTopicStatsNotification)},
-              {"v2.analytics.flow.{id}.metrics", typeof(FlowMetricsTopicConversationMetricRecord)},
+              {"v2.analytics.flow.{id}.metrics", typeof(FlowMetricsTopicFlowMetricRecord)},
               {"v2.analytics.flowoutcome.{id}.aggregates", typeof(StatEventFlowOutcomeTopicStatsNotification)},
               {"v2.analytics.queues.{id}.observations", typeof(StatEventQueueTopicStatsNotification)},
               {"v2.analytics.users.details.jobs.availability", typeof(UserDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification)},

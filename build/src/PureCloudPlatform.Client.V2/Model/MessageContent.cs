@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Message content element.
+    /// Message content element. If contentType = \&quot;Attachment\&quot; only one item is allowed.
     /// </summary>
     [DataContract]
     public partial class MessageContent :  IEquatable<MessageContent>
@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.
+        /// Type of this content element.
         /// </summary>
-        /// <value>Type of this content element. If contentType = \"Attachment\" only one item is allowed.</value>
+        /// <value>Type of this content element.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ContentTypeEnum
         {
@@ -93,7 +93,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Buttonresponse for "ButtonResponse"
             /// </summary>
             [EnumMember(Value = "ButtonResponse")]
-            Buttonresponse
+            Buttonresponse,
+            
+            /// <summary>
+            /// Enum Story for "Story"
+            /// </summary>
+            [EnumMember(Value = "Story")]
+            Story,
+            
+            /// <summary>
+            /// Enum Card for "Card"
+            /// </summary>
+            [EnumMember(Value = "Card")]
+            Card,
+            
+            /// <summary>
+            /// Enum Carousel for "Carousel"
+            /// </summary>
+            [EnumMember(Value = "Carousel")]
+            Carousel
         }
         
         
@@ -130,12 +148,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
-        /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.
+        /// Type of this content element.
         /// </summary>
-        /// <value>Type of this content element. If contentType = \"Attachment\" only one item is allowed.</value>
+        /// <value>Type of this content element.</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public ContentTypeEnum? ContentType { get; set; }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -168,18 +201,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageContent" /> class.
         /// </summary>
-        /// <param name="ContentType">Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. (required).</param>
+        /// <param name="ContentType">Type of this content element. (required).</param>
         /// <param name="Location">Location content..</param>
         /// <param name="Attachment">Attachment content..</param>
         /// <param name="QuickReply">Quick reply content..</param>
         /// <param name="ButtonResponse">Button response content..</param>
-        /// <param name="Generic">Generic content..</param>
-        /// <param name="List">List content..</param>
+        /// <param name="Generic">Generic content (Deprecated)..</param>
+        /// <param name="List">List content (Deprecated)..</param>
         /// <param name="Template">Template notification content..</param>
         /// <param name="Reactions">A set of reactions to a message..</param>
         /// <param name="Mention">Mention content..</param>
         /// <param name="Postback">Structured message postback (Deprecated)..</param>
-        public MessageContent(ContentTypeEnum? ContentType = null, ContentLocation Location = null, ContentAttachment Attachment = null, ContentQuickReply QuickReply = null, ContentButtonResponse ButtonResponse = null, ContentGeneric Generic = null, ContentList List = null, ContentNotificationTemplate Template = null, List<ContentReaction> Reactions = null, MessagingRecipient Mention = null, ContentPostback Postback = null)
+        /// <param name="Story">Ephemeral story content..</param>
+        /// <param name="Card">Card content.</param>
+        /// <param name="Carousel">Carousel content.</param>
+        public MessageContent(ContentTypeEnum? ContentType = null, ContentLocation Location = null, ContentAttachment Attachment = null, ContentQuickReply QuickReply = null, ContentButtonResponse ButtonResponse = null, ContentGeneric Generic = null, ContentList List = null, ContentNotificationTemplate Template = null, List<ContentReaction> Reactions = null, MessagingRecipient Mention = null, ContentPostback Postback = null, ContentStory Story = null, ContentCard Card = null, ContentCarousel Carousel = null)
         {
             this.ContentType = ContentType;
             this.Location = Location;
@@ -192,6 +228,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Reactions = Reactions;
             this.Mention = Mention;
             this.Postback = Postback;
+            this.Story = Story;
+            this.Card = Card;
+            this.Carousel = Carousel;
             
         }
         
@@ -236,18 +275,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Generic content.
+        /// Generic content (Deprecated).
         /// </summary>
-        /// <value>Generic content.</value>
+        /// <value>Generic content (Deprecated).</value>
         [DataMember(Name="generic", EmitDefaultValue=false)]
         public ContentGeneric Generic { get; set; }
         
         
         
         /// <summary>
-        /// List content.
+        /// List content (Deprecated).
         /// </summary>
-        /// <value>List content.</value>
+        /// <value>List content (Deprecated).</value>
         [DataMember(Name="list", EmitDefaultValue=false)]
         public ContentList List { get; set; }
         
@@ -288,6 +327,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public ContentPostback Postback { get; set; }
         
         
+        
+        /// <summary>
+        /// Ephemeral story content.
+        /// </summary>
+        /// <value>Ephemeral story content.</value>
+        [DataMember(Name="story", EmitDefaultValue=false)]
+        public ContentStory Story { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Card content
+        /// </summary>
+        /// <value>Card content</value>
+        [DataMember(Name="card", EmitDefaultValue=false)]
+        public ContentCard Card { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Carousel content
+        /// </summary>
+        /// <value>Carousel content</value>
+        [DataMember(Name="carousel", EmitDefaultValue=false)]
+        public ContentCarousel Carousel { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -308,6 +374,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Reactions: ").Append(Reactions).Append("\n");
             sb.Append("  Mention: ").Append(Mention).Append("\n");
             sb.Append("  Postback: ").Append(Postback).Append("\n");
+            sb.Append("  Story: ").Append(Story).Append("\n");
+            sb.Append("  Card: ").Append(Card).Append("\n");
+            sb.Append("  Carousel: ").Append(Carousel).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -402,6 +471,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Postback == other.Postback ||
                     this.Postback != null &&
                     this.Postback.Equals(other.Postback)
+                ) &&
+                (
+                    this.Story == other.Story ||
+                    this.Story != null &&
+                    this.Story.Equals(other.Story)
+                ) &&
+                (
+                    this.Card == other.Card ||
+                    this.Card != null &&
+                    this.Card.Equals(other.Card)
+                ) &&
+                (
+                    this.Carousel == other.Carousel ||
+                    this.Carousel != null &&
+                    this.Carousel.Equals(other.Carousel)
                 );
         }
 
@@ -449,6 +533,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Postback != null)
                     hash = hash * 59 + this.Postback.GetHashCode();
+                
+                if (this.Story != null)
+                    hash = hash * 59 + this.Story.GetHashCode();
+                
+                if (this.Card != null)
+                    hash = hash * 59 + this.Card.GetHashCode();
+                
+                if (this.Carousel != null)
+                    hash = hash * 59 + this.Carousel.GetHashCode();
                 
                 return hash;
             }

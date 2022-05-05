@@ -218,10 +218,34 @@ namespace PureCloudPlatform.Client.V2.Model
             Getresponseaction,
             
             /// <summary>
-            /// Enum Jumptotaskaction for "JumpToTaskAction"
+            /// Enum Extractsecuredataaction for "ExtractSecureDataAction"
             /// </summary>
-            [EnumMember(Value = "JumpToTaskAction")]
-            Jumptotaskaction,
+            [EnumMember(Value = "ExtractSecureDataAction")]
+            Extractsecuredataaction,
+            
+            /// <summary>
+            /// Enum Secureaction for "SecureAction"
+            /// </summary>
+            [EnumMember(Value = "SecureAction")]
+            Secureaction,
+            
+            /// <summary>
+            /// Enum Transfertaskaction for "TransferTaskAction"
+            /// </summary>
+            [EnumMember(Value = "TransferTaskAction")]
+            Transfertaskaction,
+            
+            /// <summary>
+            /// Enum Digitalmenuaction for "DigitalMenuAction"
+            /// </summary>
+            [EnumMember(Value = "DigitalMenuAction")]
+            Digitalmenuaction,
+            
+            /// <summary>
+            /// Enum Waitforinputaction for "WaitForInputAction"
+            /// </summary>
+            [EnumMember(Value = "WaitForInputAction")]
+            Waitforinputaction,
             
             /// <summary>
             /// Enum Unknown for "Unknown"

@@ -117,11 +117,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets CampaignStatus
         /// </summary>
         [DataMember(Name="campaignStatus", EmitDefaultValue=false)]
         public CampaignStatusEnum? CampaignStatus { get; set; }
+        
+        
         
         
         
@@ -168,16 +173,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AlwaysRunning">Whether this messaging campaign is always running..</param>
         /// <param name="ContactSorts">The order in which to sort contacts for dialing, based on up to four columns..</param>
         /// <param name="MessagesPerMinute">How many messages this messaging campaign will send per minute..</param>
+        /// <param name="RuleSets">RuleSets.</param>
         /// <param name="SmsConfig">SmsConfig.</param>
         /// <param name="EmailConfig">EmailConfig.</param>
         /// <param name="Errors">A list of current error conditions associated with this messaging campaign.</param>
         /// <param name="Id">The globally unique identifier for the object..</param>
-        /// <param name="Division">A UriReference for a resource.</param>
         /// <param name="Name">The UI-visible name of the object.</param>
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        public OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign(CampaignStatusEnum? CampaignStatus = null, OutboundMessagingMessagingCampaignConfigChangeUriReference CallableTimeSet = null, OutboundMessagingMessagingCampaignConfigChangeUriReference ContactList = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> DncLists = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> ContactListFilters = null, bool? AlwaysRunning = null, List<OutboundMessagingMessagingCampaignConfigChangeContactSort> ContactSorts = null, int? MessagesPerMinute = null, OutboundMessagingMessagingCampaignConfigChangeSmsConfig SmsConfig = null, OutboundMessagingMessagingCampaignConfigChangeEmailConfig EmailConfig = null, List<OutboundMessagingMessagingCampaignConfigChangeErrorDetail> Errors = null, string Id = null, OutboundMessagingMessagingCampaignConfigChangeUriReference Division = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
+        /// <param name="Division">A UriReference for a resource.</param>
+        public OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign(CampaignStatusEnum? CampaignStatus = null, OutboundMessagingMessagingCampaignConfigChangeUriReference CallableTimeSet = null, OutboundMessagingMessagingCampaignConfigChangeUriReference ContactList = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> DncLists = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> ContactListFilters = null, bool? AlwaysRunning = null, List<OutboundMessagingMessagingCampaignConfigChangeContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<OutboundMessagingMessagingCampaignConfigChangeUriReference> RuleSets = null, OutboundMessagingMessagingCampaignConfigChangeSmsConfig SmsConfig = null, OutboundMessagingMessagingCampaignConfigChangeEmailConfig EmailConfig = null, List<OutboundMessagingMessagingCampaignConfigChangeErrorDetail> Errors = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, OutboundMessagingMessagingCampaignConfigChangeUriReference Division = null)
         {
             this.CampaignStatus = CampaignStatus;
             this.CallableTimeSet = CallableTimeSet;
@@ -187,15 +193,16 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AlwaysRunning = AlwaysRunning;
             this.ContactSorts = ContactSorts;
             this.MessagesPerMinute = MessagesPerMinute;
+            this.RuleSets = RuleSets;
             this.SmsConfig = SmsConfig;
             this.EmailConfig = EmailConfig;
             this.Errors = Errors;
             this.Id = Id;
-            this.Division = Division;
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.Version = Version;
+            this.Division = Division;
             
         }
         
@@ -266,6 +273,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets RuleSets
+        /// </summary>
+        [DataMember(Name="ruleSets", EmitDefaultValue=false)]
+        public List<OutboundMessagingMessagingCampaignConfigChangeUriReference> RuleSets { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets SmsConfig
         /// </summary>
         [DataMember(Name="smsConfig", EmitDefaultValue=false)]
@@ -296,15 +311,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        /// <summary>
-        /// A UriReference for a resource
-        /// </summary>
-        /// <value>A UriReference for a resource</value>
-        [DataMember(Name="division", EmitDefaultValue=false)]
-        public OutboundMessagingMessagingCampaignConfigChangeUriReference Division { get; set; }
         
         
         
@@ -343,6 +349,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? Version { get; set; }
         
         
+        
+        /// <summary>
+        /// A UriReference for a resource
+        /// </summary>
+        /// <value>A UriReference for a resource</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public OutboundMessagingMessagingCampaignConfigChangeUriReference Division { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -360,15 +375,16 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AlwaysRunning: ").Append(AlwaysRunning).Append("\n");
             sb.Append("  ContactSorts: ").Append(ContactSorts).Append("\n");
             sb.Append("  MessagesPerMinute: ").Append(MessagesPerMinute).Append("\n");
+            sb.Append("  RuleSets: ").Append(RuleSets).Append("\n");
             sb.Append("  SmsConfig: ").Append(SmsConfig).Append("\n");
             sb.Append("  EmailConfig: ").Append(EmailConfig).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -450,6 +466,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessagesPerMinute.Equals(other.MessagesPerMinute)
                 ) &&
                 (
+                    this.RuleSets == other.RuleSets ||
+                    this.RuleSets != null &&
+                    this.RuleSets.SequenceEqual(other.RuleSets)
+                ) &&
+                (
                     this.SmsConfig == other.SmsConfig ||
                     this.SmsConfig != null &&
                     this.SmsConfig.Equals(other.SmsConfig)
@@ -470,11 +491,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Division == other.Division ||
-                    this.Division != null &&
-                    this.Division.Equals(other.Division)
-                ) &&
-                (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
@@ -493,6 +509,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 );
         }
 
@@ -532,6 +553,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.MessagesPerMinute != null)
                     hash = hash * 59 + this.MessagesPerMinute.GetHashCode();
                 
+                if (this.RuleSets != null)
+                    hash = hash * 59 + this.RuleSets.GetHashCode();
+                
                 if (this.SmsConfig != null)
                     hash = hash * 59 + this.SmsConfig.GetHashCode();
                 
@@ -544,9 +568,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.Division != null)
-                    hash = hash * 59 + this.Division.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
@@ -558,6 +579,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 return hash;
             }

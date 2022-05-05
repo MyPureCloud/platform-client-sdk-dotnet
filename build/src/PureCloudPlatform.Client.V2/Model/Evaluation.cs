@@ -311,7 +311,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation.</param>
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
         /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: edit, editScore, editAgentSignoff, delete, viewAudit.</param>
-        public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null)
+        public Evaluation(string Name = null, ConversationReference Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -362,7 +362,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Conversation
         /// </summary>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
-        public Conversation Conversation { get; set; }
+        public ConversationReference Conversation { get; set; }
         
         
         

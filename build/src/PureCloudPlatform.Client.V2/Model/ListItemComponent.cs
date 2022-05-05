@@ -100,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Image">URL of an image..</param>
         /// <param name="Title">The main headline of the list item..</param>
         /// <param name="Description">Text to show in the list item description..</param>
-        /// <param name="Actions">The list item actions..</param>
+        /// <param name="Actions">The list item actions (Deprecated)..</param>
         public ListItemComponent(string Id = null, string Rmid = null, TypeEnum? Type = null, string Image = null, string Title = null, string Description = null, ContentActions Actions = null)
         {
             this.Id = Id;
@@ -163,9 +163,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The list item actions.
+        /// The list item actions (Deprecated).
         /// </summary>
-        /// <value>The list item actions.</value>
+        /// <value>The list item actions (Deprecated).</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public ContentActions Actions { get; set; }
         

@@ -1,7 +1,7 @@
 ---
-title: FlowMetricsTopicConversationMetricRecord
+title: FlowMetricsTopicFlowMetricRecord
 ---
-## ININ.PureCloudApi.Model.FlowMetricsTopicConversationMetricRecord
+## ININ.PureCloudApi.Model.FlowMetricsTopicFlowMetricRecord
 
 ## Properties
 
@@ -33,15 +33,24 @@ title: FlowMetricsTopicConversationMetricRecord
 | **Dnis** | **string** | Dialed number identification service (number dialed by the calling party) | [optional] |
 | **EdgeId** | **string** | Unique identifier of the edge device | [optional] |
 | **EligibleAgentCounts** | **List&lt;int?&gt;** | Number of eligible agents for each predictive routing attempt | [optional] |
-| **ExtendedDeliveryStatus** | **string** | Extended email delivery status | [optional] |
+| **EndingLanguage** | **string** | Flow ending language, e.g. en-us | [optional] |
+| **EntryReason** | **string** | The particular entry reason for this flow, e.g. an address, userId, or flowId | [optional] |
+| **EntryType** | **string** | The entry type for this flow, e.g. dnis, dialer, agent, flow, or direct | [optional] |
+| **ExitReason** | **string** | The exit reason for this flow, e.g. DISCONNECT | [optional] |
+| **ExtendedDeliveryStatus** | **string** | Extended delivery status | [optional] |
 | **ExternalContactId** | **string** | External contact identifier | [optional] |
 | **ExternalMediaCount** | **int?** | Count of any media (images, files, etc) included on the external session | [optional] |
 | **ExternalOrganizationId** | **string** | External organization identifier | [optional] |
 | **ExternalTag** | **string** | External tag for the conversation | [optional] |
 | **FirstQueue** | **bool?** | Marker that is set if the current queue is the first queue in a conversation | [optional] |
 | **FlaggedReason** | **string** | Reason for which participant flagged conversation | [optional] |
+| **FlowId** | **string** | The unique identifier of this flow | [optional] |
 | **FlowInType** | **string** | Type of flow in that occurred when entering ACD. | [optional] |
+| **FlowMilestoneIds** | **List&lt;string&gt;** | The ID of a flow outcome milestone | [optional] |
+| **FlowName** | **string** | The name of this flow at the time of flow execution | [optional] |
 | **FlowOutType** | **string** | Type of flow out that occurred when emitting tFlowOut. | [optional] |
+| **FlowType** | **string** | The type of this flow | [optional] |
+| **FlowVersion** | **string** | The version of this flow | [optional] |
 | **GroupId** | **string** | Unique identifier for a PureCloud group | [optional] |
 | **InteractionType** | **string** | The interaction type (enterprise or contactCenter) | [optional] |
 | **JourneyActionId** | **string** | Identifier of the journey action. | [optional] |
@@ -51,7 +60,7 @@ title: FlowMetricsTopicConversationMetricRecord
 | **JourneyCustomerIdType** | **string** | Type of primary identifier of the journey customer (e.g. cookie). | [optional] |
 | **JourneyCustomerSessionId** | **string** | Unique identifier of the journey session. | [optional] |
 | **JourneyCustomerSessionIdType** | **string** | Type or category of journey sessions (e.g. web, ticket, delivery, atm). | [optional] |
-| **KnowledgeBaseIds** | **List&lt;string&gt;** | The unique identifier(s) of the knowledge base(s) used | [optional] |
+| **KnowledgeBaseId** | **string** | The unique identifier of the knowledge base used | [optional] |
 | **MediaCount** | **int?** | Count of any media (images, files, etc) included in this session | [optional] |
 | **MediaType** | **string** | The session media type | [optional] |
 | **MessageType** | **string** | Message type for messaging services. E.g.: sms, facebook, twitter, line | [optional] |
@@ -64,6 +73,7 @@ title: FlowMetricsTopicConversationMetricRecord
 | **Provider** | **string** | The source provider for the communication. | [optional] |
 | **Purpose** | **string** | The participant&#39;s purpose | [optional] |
 | **QueueId** | **string** | Queue identifier | [optional] |
+| **RecognitionFailureReason** | **string** | The recognition failure reason causing to exit/disconnect | [optional] |
 | **Remote** | **string** | Name, phone number, or email address of the remote party. | [optional] |
 | **RemovedSkillIds** | **List&lt;string&gt;** | ID(s) of Skill(s) that have been removed by bullseye routing | [optional] |
 | **Reoffered** | **bool?** | Marker for an interaction that got reoffered to the same queue by an in-queue flow | [optional] |
@@ -75,17 +85,22 @@ title: FlowMetricsTopicConversationMetricRecord
 | **RoutingRing** | **int?** | Routing ring for bullseye or preferred agent routing | [optional] |
 | **SelectedAgentId** | **string** | Selected agent ID | [optional] |
 | **SelectedAgentRank** | **int?** | Selected agent GPR rank | [optional] |
-| **SelfServed** | **bool?** | Indicates whether all flow sessions were self serviced | [optional] |
+| **SelfServed** | **bool?** | Indicates whether the flow session was self serviced | [optional] |
 | **SessionDnis** | **string** | Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred | [optional] |
 | **SessionId** | **string** | The unique identifier of this session | [optional] |
+| **StartingLanguage** | **string** | Flow starting language, e.g. en-us | [optional] |
 | **StationId** | **string** | Unique identifier for a phone | [optional] |
 | **TeamId** | **string** | The team ID the user is a member of | [optional] |
+| **TransferTargetAddress** | **string** | The address of a flow transfer target, e.g. a phone number, an email address, or a queueId | [optional] |
+| **TransferTargetName** | **string** | The name of a flow transfer target | [optional] |
+| **TransferType** | **string** | The type of transfer for flows that ended with a transfer | [optional] |
 | **UsedRouting** | **string** | Complete routing method | [optional] |
 | **UserId** | **string** | Unique identifier for the user | [optional] |
 | **WaitingInteractionCounts** | **List&lt;int?&gt;** | Number of waiting interactions for each predictive routing attempt | [optional] |
 | **WrapUpCode** | **string** | Wrap up code | [optional] |
-| **ProposedAgents** | [**List&lt;FlowMetricsTopicConversationProposedAgent&gt;**](FlowMetricsTopicConversationProposedAgent.html) | Proposed agents | [optional] |
-| **ScoredAgents** | [**List&lt;FlowMetricsTopicConversationScoredAgent&gt;**](FlowMetricsTopicConversationScoredAgent.html) | Scored agents | [optional] |
+| **ProposedAgents** | [**List&lt;FlowMetricsTopicFlowProposedAgent&gt;**](FlowMetricsTopicFlowProposedAgent.html) | Proposed agents | [optional] |
+| **Outcomes** | [**List&lt;FlowMetricsTopicFlowOutcome&gt;**](FlowMetricsTopicFlowOutcome.html) | Flow outcomes | [optional] |
+| **ScoredAgents** | [**List&lt;FlowMetricsTopicFlowScoredAgent&gt;**](FlowMetricsTopicFlowScoredAgent.html) | Scored agents | [optional] |
 {: class="table table-striped"}
 
 

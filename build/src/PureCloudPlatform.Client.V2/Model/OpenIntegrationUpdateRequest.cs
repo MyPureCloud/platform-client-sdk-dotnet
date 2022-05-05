@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenIntegrationUpdateRequest" /> class.
@@ -67,13 +72,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the Open messaging integration. (required).</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
+        /// <param name="MessagingSetting">MessagingSetting.</param>
         /// <param name="OutboundNotificationWebhookUrl">The outbound notification webhook URL for the Open messaging integration..</param>
         /// <param name="OutboundNotificationWebhookSignatureSecretToken">The outbound notification webhook signature secret token..</param>
         /// <param name="WebhookHeaders">The user specified headers for the Open messaging integration..</param>
-        public OpenIntegrationUpdateRequest(string Name = null, SupportedContentReference SupportedContent = null, string OutboundNotificationWebhookUrl = null, string OutboundNotificationWebhookSignatureSecretToken = null, Dictionary<string, string> WebhookHeaders = null)
+        public OpenIntegrationUpdateRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, string OutboundNotificationWebhookUrl = null, string OutboundNotificationWebhookSignatureSecretToken = null, Dictionary<string, string> WebhookHeaders = null)
         {
             this.Name = Name;
             this.SupportedContent = SupportedContent;
+            this.MessagingSetting = MessagingSetting;
             this.OutboundNotificationWebhookUrl = OutboundNotificationWebhookUrl;
             this.OutboundNotificationWebhookSignatureSecretToken = OutboundNotificationWebhookSignatureSecretToken;
             this.WebhookHeaders = WebhookHeaders;
@@ -106,6 +113,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Defines the SupportedContent profile configured for an integration</value>
         [DataMember(Name="supportedContent", EmitDefaultValue=false)]
         public SupportedContentReference SupportedContent { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets MessagingSetting
+        /// </summary>
+        [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
+        public MessagingSettingReference MessagingSetting { get; set; }
         
         
         
@@ -156,6 +171,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
+            sb.Append("  MessagingSetting: ").Append(MessagingSetting).Append("\n");
             sb.Append("  OutboundNotificationWebhookUrl: ").Append(OutboundNotificationWebhookUrl).Append("\n");
             sb.Append("  OutboundNotificationWebhookSignatureSecretToken: ").Append(OutboundNotificationWebhookSignatureSecretToken).Append("\n");
             sb.Append("  WebhookHeaders: ").Append(WebhookHeaders).Append("\n");
@@ -216,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SupportedContent.Equals(other.SupportedContent)
                 ) &&
                 (
+                    this.MessagingSetting == other.MessagingSetting ||
+                    this.MessagingSetting != null &&
+                    this.MessagingSetting.Equals(other.MessagingSetting)
+                ) &&
+                (
                     this.OutboundNotificationWebhookUrl == other.OutboundNotificationWebhookUrl ||
                     this.OutboundNotificationWebhookUrl != null &&
                     this.OutboundNotificationWebhookUrl.Equals(other.OutboundNotificationWebhookUrl)
@@ -257,6 +278,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SupportedContent != null)
                     hash = hash * 59 + this.SupportedContent.GetHashCode();
+                
+                if (this.MessagingSetting != null)
+                    hash = hash * 59 + this.MessagingSetting.GetHashCode();
                 
                 if (this.OutboundNotificationWebhookUrl != null)
                     hash = hash * 59 + this.OutboundNotificationWebhookUrl.GetHashCode();

@@ -35,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ButtonComponent" /> class.
         /// </summary>
         /// <param name="Title">Text to show inside the button..</param>
-        /// <param name="Actions">The button actions..</param>
+        /// <param name="Actions">The button actions (Deprecated)..</param>
         public ButtonComponent(string Title = null, ContentActions Actions = null)
         {
             this.Title = Title;
@@ -55,9 +55,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The button actions.
+        /// The button actions (Deprecated).
         /// </summary>
-        /// <value>The button actions.</value>
+        /// <value>The button actions (Deprecated).</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public ContentActions Actions { get; set; }
         

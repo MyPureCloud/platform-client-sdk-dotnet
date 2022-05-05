@@ -249,7 +249,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Scim for "SCIM"
             /// </summary>
             [EnumMember(Value = "SCIM")]
-            Scim
+            Scim,
+            
+            /// <summary>
+            /// Enum Numberpurchasing for "NumberPurchasing"
+            /// </summary>
+            [EnumMember(Value = "NumberPurchasing")]
+            Numberpurchasing
         }
         
         

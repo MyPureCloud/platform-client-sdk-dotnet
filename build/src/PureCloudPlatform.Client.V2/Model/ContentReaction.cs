@@ -111,8 +111,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentReaction" /> class.
         /// </summary>
-        /// <param name="ReactionType">Type of reaction..</param>
-        /// <param name="Count">Number of users that reacted this way to the message..</param>
+        [JsonConstructorAttribute]
+        protected ContentReaction() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ContentReaction" /> class.
+        /// </summary>
+        /// <param name="ReactionType">Type of reaction. (required).</param>
+        /// <param name="Count">Number of users that reacted this way to the message. (required).</param>
         public ContentReaction(ReactionTypeEnum? ReactionType = null, int? Count = null)
         {
             this.ReactionType = ReactionType;

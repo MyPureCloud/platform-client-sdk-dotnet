@@ -10,7 +10,9 @@ title: WhatsAppIntegration
 | **Id** | **string** | A unique Integration Id. | |
 | **Name** | **string** | The name of the WhatsApp integration. | |
 | **SupportedContent** | [**SupportedContentReference**](SupportedContentReference.html) | Defines the SupportedContent profile configured for an integration | [optional] |
-| **PhoneNumber** | **string** | The phone number associated to the whatsApp integration. | |
+| **MessagingSetting** | [**MessagingSettingReference**](MessagingSettingReference.html) |  | [optional] |
+| **PhoneNumber** | **string** | The phone number associated to the WhatsApp integration. | |
+| **AvailablePhoneNumbers** | [**WhatsAppAvailablePhoneNumberDetailsListing**](WhatsAppAvailablePhoneNumberDetailsListing.html) | The list of available WhatsApp phone numbers for this account. Please select one phone number from this list to use with the created integration. | [optional] |
 | **Status** | **string** | The status of the WhatsApp Integration | [optional] |
 | **Recipient** | [**DomainEntityRef**](DomainEntityRef.html) | The recipient associated to the WhatsApp Integration. This recipient is used to associate a flow to an integration | [optional] |
 | **DateCreated** | **DateTime?** | Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |

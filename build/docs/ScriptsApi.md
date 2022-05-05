@@ -11,7 +11,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetScriptPage**](ScriptsApi.html#getscriptpage) | **GET** /api/v2/scripts/{scriptId}/pages/{pageId} | Get a page |
 | [**GetScriptPages**](ScriptsApi.html#getscriptpages) | **GET** /api/v2/scripts/{scriptId}/pages | Get the list of pages |
 | [**GetScripts**](ScriptsApi.html#getscripts) | **GET** /api/v2/scripts | Get the list of scripts |
+| [**GetScriptsDivisionviews**](ScriptsApi.html#getscriptsdivisionviews) | **GET** /api/v2/scripts/divisionviews | Get the metadata for a list of scripts |
 | [**GetScriptsPublished**](ScriptsApi.html#getscriptspublished) | **GET** /api/v2/scripts/published | Get the published scripts. |
+| [**GetScriptsPublishedDivisionviews**](ScriptsApi.html#getscriptspublisheddivisionviews) | **GET** /api/v2/scripts/published/divisionviews | Get the published scripts metadata. |
 | [**GetScriptsPublishedScriptId**](ScriptsApi.html#getscriptspublishedscriptid) | **GET** /api/v2/scripts/published/{scriptId} | Get the published script. |
 | [**GetScriptsPublishedScriptIdPage**](ScriptsApi.html#getscriptspublishedscriptidpage) | **GET** /api/v2/scripts/published/{scriptId}/pages/{pageId} | Get the published page. |
 | [**GetScriptsPublishedScriptIdPages**](ScriptsApi.html#getscriptspublishedscriptidpages) | **GET** /api/v2/scripts/published/{scriptId}/pages | Get the list of published pages |
@@ -223,7 +225,7 @@ namespace Example
 
 <a name="getscripts"></a>
 
-## [**ScriptEntityListing**](ScriptEntityListing.html) GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null)
+## [**ScriptEntityListing**](ScriptEntityListing.html) GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
 
 
 
@@ -266,11 +268,12 @@ namespace Example
             var sortBy = sortBy_example;  // string | SortBy (optional) 
             var sortOrder = sortOrder_example;  // string | SortOrder (optional) 
             var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+            var divisionIds = divisionIds_example;  // string | Filters scripts to requested divisionIds (optional) 
 
             try
             { 
                 // Get the list of scripts
-                ScriptEntityListing result = apiInstance.GetScripts(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion);
+                ScriptEntityListing result = apiInstance.GetScripts(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion, divisionIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -296,6 +299,90 @@ namespace Example
 | **sortBy** | **string**| SortBy | [optional] <br />**Values**: modifiedDate, createdDate |
 | **sortOrder** | **string**| SortOrder | [optional] <br />**Values**: ascending, descending |
 | **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
+| **divisionIds** | **string**| Filters scripts to requested divisionIds | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScriptEntityListing**](ScriptEntityListing.html)
+
+<a name="getscriptsdivisionviews"></a>
+
+## [**ScriptEntityListing**](ScriptEntityListing.html) GetScriptsDivisionviews (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
+
+
+
+Get the metadata for a list of scripts
+
+
+
+Requires ANY permissions: 
+
+* scripter:script:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetScriptsDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ScriptsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var expand = expand_example;  // string | Expand (optional) 
+            var name = name_example;  // string | Name filter (optional) 
+            var feature = feature_example;  // string | Feature filter (optional) 
+            var flowId = flowId_example;  // string | Secure flow id filter (optional) 
+            var sortBy = sortBy_example;  // string | SortBy (optional) 
+            var sortOrder = sortOrder_example;  // string | SortOrder (optional) 
+            var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+            var divisionIds = divisionIds_example;  // string | Filters scripts to requested divisionIds (optional) 
+
+            try
+            { 
+                // Get the metadata for a list of scripts
+                ScriptEntityListing result = apiInstance.GetScriptsDivisionviews(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion, divisionIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ScriptsApi.GetScriptsDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **expand** | **string**| Expand | [optional]  |
+| **name** | **string**| Name filter | [optional]  |
+| **feature** | **string**| Feature filter | [optional]  |
+| **flowId** | **string**| Secure flow id filter | [optional]  |
+| **sortBy** | **string**| SortBy | [optional] <br />**Values**: modifiedDate, createdDate |
+| **sortOrder** | **string**| SortOrder | [optional] <br />**Values**: ascending, descending |
+| **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
+| **divisionIds** | **string**| Filters scripts to requested divisionIds | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -304,7 +391,7 @@ namespace Example
 
 <a name="getscriptspublished"></a>
 
-## [**ScriptEntityListing**](ScriptEntityListing.html) GetScriptsPublished (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
+## [**ScriptEntityListing**](ScriptEntityListing.html) GetScriptsPublished (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
 
 
 
@@ -345,11 +432,12 @@ namespace Example
             var feature = feature_example;  // string | Feature filter (optional) 
             var flowId = flowId_example;  // string | Secure flow id filter (optional) 
             var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+            var divisionIds = divisionIds_example;  // string | Filters scripts to requested divisionIds (optional) 
 
             try
             { 
                 // Get the published scripts.
-                ScriptEntityListing result = apiInstance.GetScriptsPublished(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion);
+                ScriptEntityListing result = apiInstance.GetScriptsPublished(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion, divisionIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -373,6 +461,86 @@ namespace Example
 | **feature** | **string**| Feature filter | [optional]  |
 | **flowId** | **string**| Secure flow id filter | [optional]  |
 | **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
+| **divisionIds** | **string**| Filters scripts to requested divisionIds | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScriptEntityListing**](ScriptEntityListing.html)
+
+<a name="getscriptspublisheddivisionviews"></a>
+
+## [**ScriptEntityListing**](ScriptEntityListing.html) GetScriptsPublishedDivisionviews (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
+
+
+
+Get the published scripts metadata.
+
+
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetScriptsPublishedDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ScriptsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var expand = expand_example;  // string | Expand (optional) 
+            var name = name_example;  // string | Name filter (optional) 
+            var feature = feature_example;  // string | Feature filter (optional) 
+            var flowId = flowId_example;  // string | Secure flow id filter (optional) 
+            var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+            var divisionIds = divisionIds_example;  // string | Filters scripts to requested divisionIds (optional) 
+
+            try
+            { 
+                // Get the published scripts metadata.
+                ScriptEntityListing result = apiInstance.GetScriptsPublishedDivisionviews(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion, divisionIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ScriptsApi.GetScriptsPublishedDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **expand** | **string**| Expand | [optional]  |
+| **name** | **string**| Name filter | [optional]  |
+| **feature** | **string**| Feature filter | [optional]  |
+| **flowId** | **string**| Secure flow id filter | [optional]  |
+| **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
+| **divisionIds** | **string**| Filters scripts to requested divisionIds | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -667,7 +835,7 @@ Get the upload status of an imported script
 
 Requires ANY permissions: 
 
-* scripter:script:view
+* scripter:script:search
 
 ### Example
 ```{"language":"csharp"}

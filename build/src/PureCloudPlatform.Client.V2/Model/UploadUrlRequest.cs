@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="UploadUrlRequest" /> class.
         /// </summary>
         /// <param name="FileName">Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\&quot;&gt;[~&lt;#|.</param>
-        /// <param name="ContentMd5">Content MD-5 of the file to upload.</param>
+        /// <param name="ContentMd5">Content MD5 of the file to upload.</param>
         /// <param name="SignedUrlTimeoutSeconds">The number of seconds the presigned URL is valid for (from 1 to 604800 seconds). If none provided, defaults to 600 seconds.</param>
         /// <param name="ServerSideEncryption">ServerSideEncryption.</param>
         public UploadUrlRequest(string FileName = null, string ContentMd5 = null, int? SignedUrlTimeoutSeconds = null, ServerSideEncryptionEnum? ServerSideEncryption = null)
@@ -96,9 +96,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Content MD-5 of the file to upload
+        /// Content MD5 of the file to upload
         /// </summary>
-        /// <value>Content MD-5 of the file to upload</value>
+        /// <value>Content MD5 of the file to upload</value>
         [DataMember(Name="contentMd5", EmitDefaultValue=false)]
         public string ContentMd5 { get; set; }
         

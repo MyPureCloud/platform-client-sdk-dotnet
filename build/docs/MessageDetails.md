@@ -14,6 +14,7 @@ title: MessageDetails
 | **MessageTime** | **DateTime?** | The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Media** | [**List&lt;MessageMedia&gt;**](MessageMedia.html) | The media (images, files, etc) associated with this message, if any | [optional] |
 | **Stickers** | [**List&lt;MessageSticker&gt;**](MessageSticker.html) | One or more stickers associated with this message, if any | [optional] |
+| **ErrorInfo** | [**ErrorBody**](ErrorBody.html) | Provider specific error information for a communication. | [optional] |
 {: class="table table-striped"}
 
 

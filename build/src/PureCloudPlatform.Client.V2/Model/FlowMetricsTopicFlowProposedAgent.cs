@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// FlowMetricsTopicConversationProposedAgent
+    /// FlowMetricsTopicFlowProposedAgent
     /// </summary>
     [DataContract]
-    public partial class FlowMetricsTopicConversationProposedAgent :  IEquatable<FlowMetricsTopicConversationProposedAgent>
+    public partial class FlowMetricsTopicFlowProposedAgent :  IEquatable<FlowMetricsTopicFlowProposedAgent>
     {
         
         
@@ -32,11 +32,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowMetricsTopicConversationProposedAgent" /> class.
+        /// Initializes a new instance of the <see cref="FlowMetricsTopicFlowProposedAgent" /> class.
         /// </summary>
         /// <param name="AgentRank">Proposed agent rank for this conversation from predictive routing (lower is better).</param>
         /// <param name="ProposedAgentId">Unique identifier for the agent that was proposed by predictive routing.</param>
-        public FlowMetricsTopicConversationProposedAgent(int? AgentRank = null, string ProposedAgentId = null)
+        public FlowMetricsTopicFlowProposedAgent(int? AgentRank = null, string ProposedAgentId = null)
         {
             this.AgentRank = AgentRank;
             this.ProposedAgentId = ProposedAgentId;
@@ -69,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FlowMetricsTopicConversationProposedAgent {\n");
+            sb.Append("class FlowMetricsTopicFlowProposedAgent {\n");
             
             sb.Append("  AgentRank: ").Append(AgentRank).Append("\n");
             sb.Append("  ProposedAgentId: ").Append(ProposedAgentId).Append("\n");
@@ -98,15 +98,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FlowMetricsTopicConversationProposedAgent);
+            return this.Equals(obj as FlowMetricsTopicFlowProposedAgent);
         }
 
         /// <summary>
-        /// Returns true if FlowMetricsTopicConversationProposedAgent instances are equal
+        /// Returns true if FlowMetricsTopicFlowProposedAgent instances are equal
         /// </summary>
-        /// <param name="other">Instance of FlowMetricsTopicConversationProposedAgent to be compared</param>
+        /// <param name="other">Instance of FlowMetricsTopicFlowProposedAgent to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FlowMetricsTopicConversationProposedAgent other)
+        public bool Equals(FlowMetricsTopicFlowProposedAgent other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -83,7 +83,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagingThreadingtimeline**](ConversationsApi.html#getconversationsmessagingthreadingtimeline) | **GET** /api/v2/conversations/messaging/threadingtimeline | Get conversation threading window timeline for each messaging type |
 | [**PatchConversationParticipant**](ConversationsApi.html#patchconversationparticipant) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](ConversationsApi.html#patchconversationparticipantattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationsCall**](ConversationsApi.html#patchconversationscall) | **PATCH** /api/v2/conversations/calls/{conversationId} | Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
+| [**PatchConversationsCall**](ConversationsApi.html#patchconversationscall) | **PATCH** /api/v2/conversations/calls/{conversationId} | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
 | [**PatchConversationsCallParticipant**](ConversationsApi.html#patchconversationscallparticipant) | **PATCH** /api/v2/conversations/calls/{conversationId}/participants/{participantId} | Update conversation participant |
 | [**PatchConversationsCallParticipantAttributes**](ConversationsApi.html#patchconversationscallparticipantattributes) | **PATCH** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsCallParticipantCommunication**](ConversationsApi.html#patchconversationscallparticipantcommunication) | **PATCH** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
@@ -112,7 +112,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationsfacebookintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Update Facebook messaging integration |
 | [**PatchConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationsopenintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/open/{integrationId} | Update an Open messaging integration |
 | [**PatchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationstwitterintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Update Twitter messaging integration |
-| [**PatchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationswhatsappintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Update or activate a WhatsApp messaging integration. |
+| [**PatchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationswhatsappintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Update or activate a WhatsApp messaging integration |
 | [**PatchConversationsMessagingSupportedcontentSupportedContentId**](ConversationsApi.html#patchconversationsmessagingsupportedcontentsupportedcontentid) | **PATCH** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Update a supported content profile |
 | [**PostAnalyticsConversationDetailsProperties**](ConversationsApi.html#postanalyticsconversationdetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
 | [**PostAnalyticsConversationsAggregatesQuery**](ConversationsApi.html#postanalyticsconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
@@ -4757,7 +4757,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **messengerType** | **string**| Messenger Type |  |
+| **messengerType** | **string**| Messenger Type | <br />**Values**: line |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
@@ -5158,7 +5158,7 @@ void (empty response body)
 
 
 
-Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
+Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
 
 
 
@@ -5193,7 +5193,7 @@ namespace Example
 
             try
             { 
-                // Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
+                // Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
                 Conversation result = apiInstance.PatchConversationsCall(conversationId, body);
                 Debug.WriteLine(result);
             }
@@ -7118,9 +7118,9 @@ namespace Example
 
 
 
-Update or activate a WhatsApp messaging integration.
+Update or activate a WhatsApp messaging integration
 
-The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
 
 Requires ALL permissions: 
 
@@ -7153,7 +7153,7 @@ namespace Example
 
             try
             { 
-                // Update or activate a WhatsApp messaging integration.
+                // Update or activate a WhatsApp messaging integration
                 WhatsAppIntegration result = apiInstance.PatchConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId, body);
                 Debug.WriteLine(result);
             }

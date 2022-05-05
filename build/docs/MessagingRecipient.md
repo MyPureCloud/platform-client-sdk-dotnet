@@ -14,6 +14,7 @@ title: MessagingRecipient
 | **FirstName** | **string** | First name of the recipient. | [optional] |
 | **LastName** | **string** | Last name of the recipient. | [optional] |
 | **Email** | **string** | E-mail address of the recipient. | [optional] |
+| **AdditionalIds** | [**List&lt;RecipientAdditionalIdentifier&gt;**](RecipientAdditionalIdentifier.html) | List of recipient additional identifiers | [optional] |
 {: class="table table-striped"}
 
 

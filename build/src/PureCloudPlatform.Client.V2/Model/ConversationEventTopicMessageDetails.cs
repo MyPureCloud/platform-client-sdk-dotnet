@@ -101,12 +101,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates the delivery status of the message.
         /// </summary>
         /// <value>Indicates the delivery status of the message.</value>
         [DataMember(Name="messageStatus", EmitDefaultValue=false)]
         public MessageStatusEnum? MessageStatus { get; set; }
+        
+        
         
         
         
@@ -124,14 +129,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageStatus">Indicates the delivery status of the message..</param>
         /// <param name="MessageSegmentCount">The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits..</param>
         /// <param name="Media">The media (images, files, etc) associated with this message, if any.</param>
+        /// <param name="ErrorInfo">Detailed information about an error response..</param>
         /// <param name="Stickers">A list of stickers included in the message.</param>
-        public ConversationEventTopicMessageDetails(string MessageId = null, DateTime? MessageTime = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, List<ConversationEventTopicMessageMedia> Media = null, List<ConversationEventTopicMessageSticker> Stickers = null)
+        public ConversationEventTopicMessageDetails(string MessageId = null, DateTime? MessageTime = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, List<ConversationEventTopicMessageMedia> Media = null, ConversationEventTopicErrorDetails ErrorInfo = null, List<ConversationEventTopicMessageSticker> Stickers = null)
         {
             this.MessageId = MessageId;
             this.MessageTime = MessageTime;
             this.MessageStatus = MessageStatus;
             this.MessageSegmentCount = MessageSegmentCount;
             this.Media = Media;
+            this.ErrorInfo = ErrorInfo;
             this.Stickers = Stickers;
             
         }
@@ -177,6 +184,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Detailed information about an error response.
+        /// </summary>
+        /// <value>Detailed information about an error response.</value>
+        [DataMember(Name="errorInfo", EmitDefaultValue=false)]
+        public ConversationEventTopicErrorDetails ErrorInfo { get; set; }
+        
+        
+        
+        /// <summary>
         /// A list of stickers included in the message
         /// </summary>
         /// <value>A list of stickers included in the message</value>
@@ -198,6 +214,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessageStatus: ").Append(MessageStatus).Append("\n");
             sb.Append("  MessageSegmentCount: ").Append(MessageSegmentCount).Append("\n");
             sb.Append("  Media: ").Append(Media).Append("\n");
+            sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  Stickers: ").Append(Stickers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -265,6 +282,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Media.SequenceEqual(other.Media)
                 ) &&
                 (
+                    this.ErrorInfo == other.ErrorInfo ||
+                    this.ErrorInfo != null &&
+                    this.ErrorInfo.Equals(other.ErrorInfo)
+                ) &&
+                (
                     this.Stickers == other.Stickers ||
                     this.Stickers != null &&
                     this.Stickers.SequenceEqual(other.Stickers)
@@ -297,6 +319,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Media != null)
                     hash = hash * 59 + this.Media.GetHashCode();
+                
+                if (this.ErrorInfo != null)
+                    hash = hash * 59 + this.ErrorInfo.GetHashCode();
                 
                 if (this.Stickers != null)
                     hash = hash * 59 + this.Stickers.GetHashCode();

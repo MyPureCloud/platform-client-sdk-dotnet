@@ -1685,7 +1685,7 @@ namespace Example
 
 <a name="getroutingemaildomains"></a>
 
-## [**InboundDomainEntityListing**](InboundDomainEntityListing.html) GetRoutingEmailDomains ()
+## [**InboundDomainEntityListing**](InboundDomainEntityListing.html) GetRoutingEmailDomains (bool? excludeStatus = null)
 
 
 
@@ -1719,11 +1719,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
+            var excludeStatus = true;  // bool? | Exclude MX record data (optional)  (default to false)
 
             try
             { 
                 // Get domains
-                InboundDomainEntityListing result = apiInstance.GetRoutingEmailDomains();
+                InboundDomainEntityListing result = apiInstance.GetRoutingEmailDomains(excludeStatus);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1736,8 +1737,12 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does require any parameters.
 
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **excludeStatus** | **bool?**| Exclude MX record data | [optional] [default to false] |
+{: class="table table-striped"}
 
 ### Return type
 

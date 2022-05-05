@@ -19,8 +19,8 @@ title: UserQueue
 | **UserMemberCount** | **int?** | The number of user members (i.e., non-group members) in the queue. | [optional] |
 | **JoinedMemberCount** | **int?** | The number of joined members in the queue. | [optional] |
 | **MediaSettings** | [**Dictionary&lt;string, MediaSetting&gt;**](MediaSetting.html) | The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM | [optional] |
-| **RoutingRules** | [**List&lt;RoutingRule&gt;**](RoutingRule.html) | The routing rules for the queue, used for routing to known or preferred agents. | [optional] |
-| **Bullseye** | [**Bullseye**](Bullseye.html) | The bulls-eye settings for the queue. | [optional] |
+| **RoutingRules** | [**List&lt;RoutingRule&gt;**](RoutingRule.html) | The routing rules for the queue, used for Preferred Agent Routing. | [optional] |
+| **Bullseye** | [**Bullseye**](Bullseye.html) | The bullseye settings for the queue. | [optional] |
 | **AcwSettings** | [**AcwSettings**](AcwSettings.html) | The ACW settings for the queue. | [optional] |
 | **SkillEvaluationMethod** | **string** | The skill evaluation method to use when routing conversations. | [optional] |
 | **QueueFlow** | [**DomainEntityRef**](DomainEntityRef.html) | The in-queue flow to use for call conversations waiting in queue. | [optional] |

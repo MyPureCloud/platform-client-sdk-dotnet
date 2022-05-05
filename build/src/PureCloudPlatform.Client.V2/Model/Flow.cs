@@ -131,6 +131,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Surveyinvite,
             
             /// <summary>
+            /// Enum Voice for "VOICE"
+            /// </summary>
+            [EnumMember(Value = "VOICE")]
+            Voice,
+            
+            /// <summary>
             /// Enum Voicemail for "VOICEMAIL"
             /// </summary>
             [EnumMember(Value = "VOICEMAIL")]
@@ -296,6 +302,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "SURVEYINVITE")]
             Surveyinvite,
+            
+            /// <summary>
+            /// Enum Voice for "VOICE"
+            /// </summary>
+            [EnumMember(Value = "VOICE")]
+            Voice,
             
             /// <summary>
             /// Enum Voicemail for "VOICEMAIL"

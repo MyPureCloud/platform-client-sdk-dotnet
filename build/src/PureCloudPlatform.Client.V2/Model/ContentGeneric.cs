@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Generic content object.
+    /// Deprecated, should use Card.
     /// </summary>
     [DataContract]
     public partial class ContentGeneric :  IEquatable<ContentGeneric>
@@ -58,7 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Text to show in the description..</param>
         /// <param name="Image">URL of an image..</param>
         /// <param name="Video">URL of a video..</param>
-        /// <param name="Actions">Actions to be taken..</param>
+        /// <param name="Actions">Actions to be taken (Deprecated)..</param>
         /// <param name="Components">An array of component objects..</param>
         public ContentGeneric(string Title = null, string Description = null, string Image = null, string Video = null, ContentActions Actions = null, List<ButtonComponent> Components = null)
         {
@@ -110,9 +110,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Actions to be taken.
+        /// Actions to be taken (Deprecated).
         /// </summary>
-        /// <value>Actions to be taken.</value>
+        /// <value>Actions to be taken (Deprecated).</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public ContentActions Actions { get; set; }
         

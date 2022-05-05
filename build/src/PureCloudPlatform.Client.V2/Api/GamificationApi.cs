@@ -215,9 +215,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>PerformanceProfile</returns>
-        PerformanceProfile GetGamificationProfile (string performanceProfileId);
+        PerformanceProfile GetGamificationProfile (string profileId);
 
         /// <summary>
         /// Performance profile by id
@@ -226,9 +226,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
-        ApiResponse<PerformanceProfile> GetGamificationProfileWithHttpInfo (string performanceProfileId);
+        ApiResponse<PerformanceProfile> GetGamificationProfileWithHttpInfo (string profileId);
         
         /// <summary>
         /// Members of a given performance profile
@@ -915,9 +915,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>PerformanceProfile</returns>
-        PerformanceProfile PostGamificationProfileActivate (string performanceProfileId);
+        PerformanceProfile PostGamificationProfileActivate (string profileId);
 
         /// <summary>
         /// Activate a performance profile
@@ -926,9 +926,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
-        ApiResponse<PerformanceProfile> PostGamificationProfileActivateWithHttpInfo (string performanceProfileId);
+        ApiResponse<PerformanceProfile> PostGamificationProfileActivateWithHttpInfo (string profileId);
         
         /// <summary>
         /// Deactivate a performance profile
@@ -937,9 +937,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>PerformanceProfile</returns>
-        PerformanceProfile PostGamificationProfileDeactivate (string performanceProfileId);
+        PerformanceProfile PostGamificationProfileDeactivate (string profileId);
 
         /// <summary>
         /// Deactivate a performance profile
@@ -948,9 +948,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
-        ApiResponse<PerformanceProfile> PostGamificationProfileDeactivateWithHttpInfo (string performanceProfileId);
+        ApiResponse<PerformanceProfile> PostGamificationProfileDeactivateWithHttpInfo (string profileId);
         
         /// <summary>
         /// Assign members to a given performance profile
@@ -1107,10 +1107,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>PerformanceProfile</returns>
-        PerformanceProfile PutGamificationProfile (string performanceProfileId, PerformanceProfile body = null);
+        PerformanceProfile PutGamificationProfile (string profileId, PerformanceProfile body = null);
 
         /// <summary>
         /// Updates a performance profile
@@ -1119,10 +1119,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
-        ApiResponse<PerformanceProfile> PutGamificationProfileWithHttpInfo (string performanceProfileId, PerformanceProfile body = null);
+        ApiResponse<PerformanceProfile> PutGamificationProfileWithHttpInfo (string profileId, PerformanceProfile body = null);
         
         /// <summary>
         /// Updates a metric in performance profile
@@ -1375,9 +1375,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of PerformanceProfile</returns>
-        System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfileAsync (string performanceProfileId);
+        System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfileAsync (string profileId);
 
         /// <summary>
         /// Performance profile by id
@@ -1386,9 +1386,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfileAsyncWithHttpInfo (string performanceProfileId);
+        System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfileAsyncWithHttpInfo (string profileId);
         
         /// <summary>
         /// Members of a given performance profile
@@ -2075,9 +2075,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of PerformanceProfile</returns>
-        System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileActivateAsync (string performanceProfileId);
+        System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileActivateAsync (string profileId);
 
         /// <summary>
         /// Activate a performance profile
@@ -2086,9 +2086,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileActivateAsyncWithHttpInfo (string performanceProfileId);
+        System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileActivateAsyncWithHttpInfo (string profileId);
         
         /// <summary>
         /// Deactivate a performance profile
@@ -2097,9 +2097,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of PerformanceProfile</returns>
-        System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileDeactivateAsync (string performanceProfileId);
+        System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileDeactivateAsync (string profileId);
 
         /// <summary>
         /// Deactivate a performance profile
@@ -2108,9 +2108,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileDeactivateAsyncWithHttpInfo (string performanceProfileId);
+        System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileDeactivateAsyncWithHttpInfo (string profileId);
         
         /// <summary>
         /// Assign members to a given performance profile
@@ -2267,10 +2267,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>Task of PerformanceProfile</returns>
-        System.Threading.Tasks.Task<PerformanceProfile> PutGamificationProfileAsync (string performanceProfileId, PerformanceProfile body = null);
+        System.Threading.Tasks.Task<PerformanceProfile> PutGamificationProfileAsync (string profileId, PerformanceProfile body = null);
 
         /// <summary>
         /// Updates a performance profile
@@ -2279,10 +2279,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PutGamificationProfileAsyncWithHttpInfo (string performanceProfileId, PerformanceProfile body = null);
+        System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PutGamificationProfileAsyncWithHttpInfo (string profileId, PerformanceProfile body = null);
         
         /// <summary>
         /// Updates a metric in performance profile
@@ -4034,11 +4034,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Performance profile by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>PerformanceProfile</returns>
-        public PerformanceProfile GetGamificationProfile (string performanceProfileId)
+        public PerformanceProfile GetGamificationProfile (string profileId)
         {
-             ApiResponse<PerformanceProfile> localVarResponse = GetGamificationProfileWithHttpInfo(performanceProfileId);
+             ApiResponse<PerformanceProfile> localVarResponse = GetGamificationProfileWithHttpInfo(profileId);
              return localVarResponse.Data;
         }
 
@@ -4046,15 +4046,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Performance profile by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
-        public ApiResponse< PerformanceProfile > GetGamificationProfileWithHttpInfo (string performanceProfileId)
+        public ApiResponse< PerformanceProfile > GetGamificationProfileWithHttpInfo (string profileId)
         { 
-            // verify the required parameter 'performanceProfileId' is set
-            if (performanceProfileId == null)
-                throw new ApiException(400, "Missing required parameter 'performanceProfileId' when calling GamificationApi->GetGamificationProfile");
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfile");
 
-            var localVarPath = "/api/v2/gamification/profiles/{performanceProfileId}";
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4085,7 +4085,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (performanceProfileId != null) localVarPathParams.Add("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId));
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
 
             // Query params
 
@@ -4129,11 +4129,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Performance profile by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of PerformanceProfile</returns>
-        public async System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfileAsync (string performanceProfileId)
+        public async System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfileAsync (string profileId)
         {
-             ApiResponse<PerformanceProfile> localVarResponse = await GetGamificationProfileAsyncWithHttpInfo(performanceProfileId);
+             ApiResponse<PerformanceProfile> localVarResponse = await GetGamificationProfileAsyncWithHttpInfo(profileId);
              return localVarResponse.Data;
 
         }
@@ -4142,16 +4142,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Performance profile by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfileAsyncWithHttpInfo (string performanceProfileId)
+        public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfileAsyncWithHttpInfo (string profileId)
         { 
-            // verify the required parameter 'performanceProfileId' is set
-            if (performanceProfileId == null)
-                throw new ApiException(400, "Missing required parameter 'performanceProfileId' when calling GamificationApi->GetGamificationProfile");
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfile");
             
 
-            var localVarPath = "/api/v2/gamification/profiles/{performanceProfileId}";
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4182,7 +4182,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (performanceProfileId != null) localVarPathParams.Add("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId));
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
 
             // Query params
 
@@ -9923,11 +9923,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Activate a performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>PerformanceProfile</returns>
-        public PerformanceProfile PostGamificationProfileActivate (string performanceProfileId)
+        public PerformanceProfile PostGamificationProfileActivate (string profileId)
         {
-             ApiResponse<PerformanceProfile> localVarResponse = PostGamificationProfileActivateWithHttpInfo(performanceProfileId);
+             ApiResponse<PerformanceProfile> localVarResponse = PostGamificationProfileActivateWithHttpInfo(profileId);
              return localVarResponse.Data;
         }
 
@@ -9935,15 +9935,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Activate a performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
-        public ApiResponse< PerformanceProfile > PostGamificationProfileActivateWithHttpInfo (string performanceProfileId)
+        public ApiResponse< PerformanceProfile > PostGamificationProfileActivateWithHttpInfo (string profileId)
         { 
-            // verify the required parameter 'performanceProfileId' is set
-            if (performanceProfileId == null)
-                throw new ApiException(400, "Missing required parameter 'performanceProfileId' when calling GamificationApi->PostGamificationProfileActivate");
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PostGamificationProfileActivate");
 
-            var localVarPath = "/api/v2/gamification/profiles/{performanceProfileId}/activate";
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/activate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -9974,7 +9974,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (performanceProfileId != null) localVarPathParams.Add("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId));
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
 
             // Query params
 
@@ -10018,11 +10018,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Activate a performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of PerformanceProfile</returns>
-        public async System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileActivateAsync (string performanceProfileId)
+        public async System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileActivateAsync (string profileId)
         {
-             ApiResponse<PerformanceProfile> localVarResponse = await PostGamificationProfileActivateAsyncWithHttpInfo(performanceProfileId);
+             ApiResponse<PerformanceProfile> localVarResponse = await PostGamificationProfileActivateAsyncWithHttpInfo(profileId);
              return localVarResponse.Data;
 
         }
@@ -10031,16 +10031,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Activate a performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileActivateAsyncWithHttpInfo (string performanceProfileId)
+        public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileActivateAsyncWithHttpInfo (string profileId)
         { 
-            // verify the required parameter 'performanceProfileId' is set
-            if (performanceProfileId == null)
-                throw new ApiException(400, "Missing required parameter 'performanceProfileId' when calling GamificationApi->PostGamificationProfileActivate");
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PostGamificationProfileActivate");
             
 
-            var localVarPath = "/api/v2/gamification/profiles/{performanceProfileId}/activate";
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/activate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10071,7 +10071,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (performanceProfileId != null) localVarPathParams.Add("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId));
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
 
             // Query params
 
@@ -10116,11 +10116,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deactivate a performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>PerformanceProfile</returns>
-        public PerformanceProfile PostGamificationProfileDeactivate (string performanceProfileId)
+        public PerformanceProfile PostGamificationProfileDeactivate (string profileId)
         {
-             ApiResponse<PerformanceProfile> localVarResponse = PostGamificationProfileDeactivateWithHttpInfo(performanceProfileId);
+             ApiResponse<PerformanceProfile> localVarResponse = PostGamificationProfileDeactivateWithHttpInfo(profileId);
              return localVarResponse.Data;
         }
 
@@ -10128,15 +10128,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deactivate a performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
-        public ApiResponse< PerformanceProfile > PostGamificationProfileDeactivateWithHttpInfo (string performanceProfileId)
+        public ApiResponse< PerformanceProfile > PostGamificationProfileDeactivateWithHttpInfo (string profileId)
         { 
-            // verify the required parameter 'performanceProfileId' is set
-            if (performanceProfileId == null)
-                throw new ApiException(400, "Missing required parameter 'performanceProfileId' when calling GamificationApi->PostGamificationProfileDeactivate");
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PostGamificationProfileDeactivate");
 
-            var localVarPath = "/api/v2/gamification/profiles/{performanceProfileId}/deactivate";
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/deactivate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10167,7 +10167,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (performanceProfileId != null) localVarPathParams.Add("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId));
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
 
             // Query params
 
@@ -10211,11 +10211,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deactivate a performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of PerformanceProfile</returns>
-        public async System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileDeactivateAsync (string performanceProfileId)
+        public async System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileDeactivateAsync (string profileId)
         {
-             ApiResponse<PerformanceProfile> localVarResponse = await PostGamificationProfileDeactivateAsyncWithHttpInfo(performanceProfileId);
+             ApiResponse<PerformanceProfile> localVarResponse = await PostGamificationProfileDeactivateAsyncWithHttpInfo(profileId);
              return localVarResponse.Data;
 
         }
@@ -10224,16 +10224,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Deactivate a performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileDeactivateAsyncWithHttpInfo (string performanceProfileId)
+        public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileDeactivateAsyncWithHttpInfo (string profileId)
         { 
-            // verify the required parameter 'performanceProfileId' is set
-            if (performanceProfileId == null)
-                throw new ApiException(400, "Missing required parameter 'performanceProfileId' when calling GamificationApi->PostGamificationProfileDeactivate");
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PostGamificationProfileDeactivate");
             
 
-            var localVarPath = "/api/v2/gamification/profiles/{performanceProfileId}/deactivate";
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}/deactivate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10264,7 +10264,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (performanceProfileId != null) localVarPathParams.Add("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId));
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
 
             // Query params
 
@@ -11605,12 +11605,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>PerformanceProfile</returns>
-        public PerformanceProfile PutGamificationProfile (string performanceProfileId, PerformanceProfile body = null)
+        public PerformanceProfile PutGamificationProfile (string profileId, PerformanceProfile body = null)
         {
-             ApiResponse<PerformanceProfile> localVarResponse = PutGamificationProfileWithHttpInfo(performanceProfileId, body);
+             ApiResponse<PerformanceProfile> localVarResponse = PutGamificationProfileWithHttpInfo(profileId, body);
              return localVarResponse.Data;
         }
 
@@ -11618,16 +11618,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
-        public ApiResponse< PerformanceProfile > PutGamificationProfileWithHttpInfo (string performanceProfileId, PerformanceProfile body = null)
+        public ApiResponse< PerformanceProfile > PutGamificationProfileWithHttpInfo (string profileId, PerformanceProfile body = null)
         { 
-            // verify the required parameter 'performanceProfileId' is set
-            if (performanceProfileId == null)
-                throw new ApiException(400, "Missing required parameter 'performanceProfileId' when calling GamificationApi->PutGamificationProfile");
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PutGamificationProfile");
 
-            var localVarPath = "/api/v2/gamification/profiles/{performanceProfileId}";
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11658,7 +11658,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (performanceProfileId != null) localVarPathParams.Add("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId));
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
 
             // Query params
 
@@ -11707,12 +11707,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>Task of PerformanceProfile</returns>
-        public async System.Threading.Tasks.Task<PerformanceProfile> PutGamificationProfileAsync (string performanceProfileId, PerformanceProfile body = null)
+        public async System.Threading.Tasks.Task<PerformanceProfile> PutGamificationProfileAsync (string profileId, PerformanceProfile body = null)
         {
-             ApiResponse<PerformanceProfile> localVarResponse = await PutGamificationProfileAsyncWithHttpInfo(performanceProfileId, body);
+             ApiResponse<PerformanceProfile> localVarResponse = await PutGamificationProfileAsyncWithHttpInfo(profileId, body);
              return localVarResponse.Data;
 
         }
@@ -11721,17 +11721,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="performanceProfileId">Performance Profile Id</param>
+        /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PutGamificationProfileAsyncWithHttpInfo (string performanceProfileId, PerformanceProfile body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PutGamificationProfileAsyncWithHttpInfo (string profileId, PerformanceProfile body = null)
         { 
-            // verify the required parameter 'performanceProfileId' is set
-            if (performanceProfileId == null)
-                throw new ApiException(400, "Missing required parameter 'performanceProfileId' when calling GamificationApi->PutGamificationProfile");
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PutGamificationProfile");
             
 
-            var localVarPath = "/api/v2/gamification/profiles/{performanceProfileId}";
+            var localVarPath = "/api/v2/gamification/profiles/{profileId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11762,7 +11762,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (performanceProfileId != null) localVarPathParams.Add("performanceProfileId", this.Configuration.ApiClient.ParameterToString(performanceProfileId));
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
 
             // Query params
 

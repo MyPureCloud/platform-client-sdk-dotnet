@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// FlowMetricsTopicConversationMetricRecord
+    /// FlowMetricsTopicFlowMetricRecord
     /// </summary>
     [DataContract]
-    public partial class FlowMetricsTopicConversationMetricRecord :  IEquatable<FlowMetricsTopicConversationMetricRecord>
+    public partial class FlowMetricsTopicFlowMetricRecord :  IEquatable<FlowMetricsTopicFlowMetricRecord>
     {
         
         
@@ -36,250 +36,58 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Nblindtransferred for "nBlindTransferred"
+            /// Enum Nflow for "nFlow"
             /// </summary>
-            [EnumMember(Value = "nBlindTransferred")]
-            Nblindtransferred,
+            [EnumMember(Value = "nFlow")]
+            Nflow,
             
             /// <summary>
-            /// Enum Ncobrowsesessions for "nCobrowseSessions"
+            /// Enum Nflowmilestone for "nFlowMilestone"
             /// </summary>
-            [EnumMember(Value = "nCobrowseSessions")]
-            Ncobrowsesessions,
+            [EnumMember(Value = "nFlowMilestone")]
+            Nflowmilestone,
             
             /// <summary>
-            /// Enum Nconnected for "nConnected"
+            /// Enum Nflowoutcome for "nFlowOutcome"
             /// </summary>
-            [EnumMember(Value = "nConnected")]
-            Nconnected,
+            [EnumMember(Value = "nFlowOutcome")]
+            Nflowoutcome,
             
             /// <summary>
-            /// Enum Nconsult for "nConsult"
+            /// Enum Nflowoutcomefailed for "nFlowOutcomeFailed"
             /// </summary>
-            [EnumMember(Value = "nConsult")]
-            Nconsult,
+            [EnumMember(Value = "nFlowOutcomeFailed")]
+            Nflowoutcomefailed,
             
             /// <summary>
-            /// Enum Nconsulttransferred for "nConsultTransferred"
+            /// Enum Oflowmilestone for "oFlowMilestone"
             /// </summary>
-            [EnumMember(Value = "nConsultTransferred")]
-            Nconsulttransferred,
+            [EnumMember(Value = "oFlowMilestone")]
+            Oflowmilestone,
             
             /// <summary>
-            /// Enum Nerror for "nError"
+            /// Enum Tflow for "tFlow"
             /// </summary>
-            [EnumMember(Value = "nError")]
-            Nerror,
+            [EnumMember(Value = "tFlow")]
+            Tflow,
             
             /// <summary>
-            /// Enum Noffered for "nOffered"
+            /// Enum Tflowdisconnect for "tFlowDisconnect"
             /// </summary>
-            [EnumMember(Value = "nOffered")]
-            Noffered,
+            [EnumMember(Value = "tFlowDisconnect")]
+            Tflowdisconnect,
             
             /// <summary>
-            /// Enum Noutbound for "nOutbound"
+            /// Enum Tflowexit for "tFlowExit"
             /// </summary>
-            [EnumMember(Value = "nOutbound")]
-            Noutbound,
+            [EnumMember(Value = "tFlowExit")]
+            Tflowexit,
             
             /// <summary>
-            /// Enum Noutboundabandoned for "nOutboundAbandoned"
+            /// Enum Tflowoutcome for "tFlowOutcome"
             /// </summary>
-            [EnumMember(Value = "nOutboundAbandoned")]
-            Noutboundabandoned,
-            
-            /// <summary>
-            /// Enum Noutboundattempted for "nOutboundAttempted"
-            /// </summary>
-            [EnumMember(Value = "nOutboundAttempted")]
-            Noutboundattempted,
-            
-            /// <summary>
-            /// Enum Noutboundconnected for "nOutboundConnected"
-            /// </summary>
-            [EnumMember(Value = "nOutboundConnected")]
-            Noutboundconnected,
-            
-            /// <summary>
-            /// Enum Noversla for "nOverSla"
-            /// </summary>
-            [EnumMember(Value = "nOverSla")]
-            Noversla,
-            
-            /// <summary>
-            /// Enum Ntransferred for "nTransferred"
-            /// </summary>
-            [EnumMember(Value = "nTransferred")]
-            Ntransferred,
-            
-            /// <summary>
-            /// Enum Oexternalmediacount for "oExternalMediaCount"
-            /// </summary>
-            [EnumMember(Value = "oExternalMediaCount")]
-            Oexternalmediacount,
-            
-            /// <summary>
-            /// Enum Omediacount for "oMediaCount"
-            /// </summary>
-            [EnumMember(Value = "oMediaCount")]
-            Omediacount,
-            
-            /// <summary>
-            /// Enum Omessageturn for "oMessageTurn"
-            /// </summary>
-            [EnumMember(Value = "oMessageTurn")]
-            Omessageturn,
-            
-            /// <summary>
-            /// Enum Tabandon for "tAbandon"
-            /// </summary>
-            [EnumMember(Value = "tAbandon")]
-            Tabandon,
-            
-            /// <summary>
-            /// Enum Tacd for "tAcd"
-            /// </summary>
-            [EnumMember(Value = "tAcd")]
-            Tacd,
-            
-            /// <summary>
-            /// Enum Tacw for "tAcw"
-            /// </summary>
-            [EnumMember(Value = "tAcw")]
-            Tacw,
-            
-            /// <summary>
-            /// Enum Tagentresponsetime for "tAgentResponseTime"
-            /// </summary>
-            [EnumMember(Value = "tAgentResponseTime")]
-            Tagentresponsetime,
-            
-            /// <summary>
-            /// Enum Talert for "tAlert"
-            /// </summary>
-            [EnumMember(Value = "tAlert")]
-            Talert,
-            
-            /// <summary>
-            /// Enum Tanswered for "tAnswered"
-            /// </summary>
-            [EnumMember(Value = "tAnswered")]
-            Tanswered,
-            
-            /// <summary>
-            /// Enum Tcallback for "tCallback"
-            /// </summary>
-            [EnumMember(Value = "tCallback")]
-            Tcallback,
-            
-            /// <summary>
-            /// Enum Tcallbackcomplete for "tCallbackComplete"
-            /// </summary>
-            [EnumMember(Value = "tCallbackComplete")]
-            Tcallbackcomplete,
-            
-            /// <summary>
-            /// Enum Tcoaching for "tCoaching"
-            /// </summary>
-            [EnumMember(Value = "tCoaching")]
-            Tcoaching,
-            
-            /// <summary>
-            /// Enum Tcoachingcomplete for "tCoachingComplete"
-            /// </summary>
-            [EnumMember(Value = "tCoachingComplete")]
-            Tcoachingcomplete,
-            
-            /// <summary>
-            /// Enum Tconnected for "tConnected"
-            /// </summary>
-            [EnumMember(Value = "tConnected")]
-            Tconnected,
-            
-            /// <summary>
-            /// Enum Tcontacting for "tContacting"
-            /// </summary>
-            [EnumMember(Value = "tContacting")]
-            Tcontacting,
-            
-            /// <summary>
-            /// Enum Tdialing for "tDialing"
-            /// </summary>
-            [EnumMember(Value = "tDialing")]
-            Tdialing,
-            
-            /// <summary>
-            /// Enum Tflowout for "tFlowOut"
-            /// </summary>
-            [EnumMember(Value = "tFlowOut")]
-            Tflowout,
-            
-            /// <summary>
-            /// Enum Thandle for "tHandle"
-            /// </summary>
-            [EnumMember(Value = "tHandle")]
-            Thandle,
-            
-            /// <summary>
-            /// Enum Theld for "tHeld"
-            /// </summary>
-            [EnumMember(Value = "tHeld")]
-            Theld,
-            
-            /// <summary>
-            /// Enum Theldcomplete for "tHeldComplete"
-            /// </summary>
-            [EnumMember(Value = "tHeldComplete")]
-            Theldcomplete,
-            
-            /// <summary>
-            /// Enum Tivr for "tIvr"
-            /// </summary>
-            [EnumMember(Value = "tIvr")]
-            Tivr,
-            
-            /// <summary>
-            /// Enum Tmonitoring for "tMonitoring"
-            /// </summary>
-            [EnumMember(Value = "tMonitoring")]
-            Tmonitoring,
-            
-            /// <summary>
-            /// Enum Tmonitoringcomplete for "tMonitoringComplete"
-            /// </summary>
-            [EnumMember(Value = "tMonitoringComplete")]
-            Tmonitoringcomplete,
-            
-            /// <summary>
-            /// Enum Tnotresponding for "tNotResponding"
-            /// </summary>
-            [EnumMember(Value = "tNotResponding")]
-            Tnotresponding,
-            
-            /// <summary>
-            /// Enum Ttalk for "tTalk"
-            /// </summary>
-            [EnumMember(Value = "tTalk")]
-            Ttalk,
-            
-            /// <summary>
-            /// Enum Ttalkcomplete for "tTalkComplete"
-            /// </summary>
-            [EnumMember(Value = "tTalkComplete")]
-            Ttalkcomplete,
-            
-            /// <summary>
-            /// Enum Tuserresponsetime for "tUserResponseTime"
-            /// </summary>
-            [EnumMember(Value = "tUserResponseTime")]
-            Tuserresponsetime,
-            
-            /// <summary>
-            /// Enum Tvoicemail for "tVoicemail"
-            /// </summary>
-            [EnumMember(Value = "tVoicemail")]
-            Tvoicemail
+            [EnumMember(Value = "tFlowOutcome")]
+            Tflowoutcome
         }
         
         
@@ -688,6 +496,64 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The entry type for this flow, e.g. dnis, dialer, agent, flow, or direct
+        /// </summary>
+        /// <value>The entry type for this flow, e.g. dnis, dialer, agent, flow, or direct</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum EntryTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Agent for "agent"
+            /// </summary>
+            [EnumMember(Value = "agent")]
+            Agent,
+            
+            /// <summary>
+            /// Enum Direct for "direct"
+            /// </summary>
+            [EnumMember(Value = "direct")]
+            Direct,
+            
+            /// <summary>
+            /// Enum Dnis for "dnis"
+            /// </summary>
+            [EnumMember(Value = "dnis")]
+            Dnis,
+            
+            /// <summary>
+            /// Enum Flow for "flow"
+            /// </summary>
+            [EnumMember(Value = "flow")]
+            Flow,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -724,6 +590,121 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The type of this flow
+        /// </summary>
+        /// <value>The type of this flow</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlowTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Bot for "bot"
+            /// </summary>
+            [EnumMember(Value = "bot")]
+            Bot,
+            
+            /// <summary>
+            /// Enum Commonmodule for "commonmodule"
+            /// </summary>
+            [EnumMember(Value = "commonmodule")]
+            Commonmodule,
+            
+            /// <summary>
+            /// Enum Inboundcall for "inboundcall"
+            /// </summary>
+            [EnumMember(Value = "inboundcall")]
+            Inboundcall,
+            
+            /// <summary>
+            /// Enum Inboundchat for "inboundchat"
+            /// </summary>
+            [EnumMember(Value = "inboundchat")]
+            Inboundchat,
+            
+            /// <summary>
+            /// Enum Inboundemail for "inboundemail"
+            /// </summary>
+            [EnumMember(Value = "inboundemail")]
+            Inboundemail,
+            
+            /// <summary>
+            /// Enum Inboundshortmessage for "inboundshortmessage"
+            /// </summary>
+            [EnumMember(Value = "inboundshortmessage")]
+            Inboundshortmessage,
+            
+            /// <summary>
+            /// Enum Inqueuecall for "inqueuecall"
+            /// </summary>
+            [EnumMember(Value = "inqueuecall")]
+            Inqueuecall,
+            
+            /// <summary>
+            /// Enum Inqueueemail for "inqueueemail"
+            /// </summary>
+            [EnumMember(Value = "inqueueemail")]
+            Inqueueemail,
+            
+            /// <summary>
+            /// Enum Inqueueshortmessage for "inqueueshortmessage"
+            /// </summary>
+            [EnumMember(Value = "inqueueshortmessage")]
+            Inqueueshortmessage,
+            
+            /// <summary>
+            /// Enum Outboundcall for "outboundcall"
+            /// </summary>
+            [EnumMember(Value = "outboundcall")]
+            Outboundcall,
+            
+            /// <summary>
+            /// Enum Securecall for "securecall"
+            /// </summary>
+            [EnumMember(Value = "securecall")]
+            Securecall,
+            
+            /// <summary>
+            /// Enum Speech for "speech"
+            /// </summary>
+            [EnumMember(Value = "speech")]
+            Speech,
+            
+            /// <summary>
+            /// Enum Surveyinvite for "surveyinvite"
+            /// </summary>
+            [EnumMember(Value = "surveyinvite")]
+            Surveyinvite,
+            
+            /// <summary>
+            /// Enum Workflow for "workflow"
+            /// </summary>
+            [EnumMember(Value = "workflow")]
+            Workflow
+        }
         
         
         
@@ -1036,6 +1017,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets RequestedRoutings
         /// </summary>
@@ -1092,6 +1076,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Standard")]
             Standard
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1203,6 +1199,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Metric name
         /// </summary>
@@ -1294,6 +1293,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The entry type for this flow, e.g. dnis, dialer, agent, flow, or direct
+        /// </summary>
+        /// <value>The entry type for this flow, e.g. dnis, dialer, agent, flow, or direct</value>
+        [DataMember(Name="entryType", EmitDefaultValue=false)]
+        public EntryTypeEnum? EntryType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1310,6 +1324,23 @@ namespace PureCloudPlatform.Client.V2.Model
         public FlaggedReasonEnum? FlaggedReason { get; set; }
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The type of this flow
+        /// </summary>
+        /// <value>The type of this flow</value>
+        [DataMember(Name="flowType", EmitDefaultValue=false)]
+        public FlowTypeEnum? FlowType { get; set; }
         
         
         
@@ -1412,6 +1443,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Complete routing method
         /// </summary>
@@ -1430,9 +1471,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowMetricsTopicConversationMetricRecord" /> class.
+        /// Initializes a new instance of the <see cref="FlowMetricsTopicFlowMetricRecord" /> class.
         /// </summary>
         /// <param name="Metric">Metric name.</param>
         /// <param name="MetricDate">The date and time of metric creation.</param>
@@ -1460,15 +1503,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Dnis">Dialed number identification service (number dialed by the calling party).</param>
         /// <param name="EdgeId">Unique identifier of the edge device.</param>
         /// <param name="EligibleAgentCounts">Number of eligible agents for each predictive routing attempt.</param>
-        /// <param name="ExtendedDeliveryStatus">Extended email delivery status.</param>
+        /// <param name="EndingLanguage">Flow ending language, e.g. en-us.</param>
+        /// <param name="EntryReason">The particular entry reason for this flow, e.g. an address, userId, or flowId.</param>
+        /// <param name="EntryType">The entry type for this flow, e.g. dnis, dialer, agent, flow, or direct.</param>
+        /// <param name="ExitReason">The exit reason for this flow, e.g. DISCONNECT.</param>
+        /// <param name="ExtendedDeliveryStatus">Extended delivery status.</param>
         /// <param name="ExternalContactId">External contact identifier.</param>
         /// <param name="ExternalMediaCount">Count of any media (images, files, etc) included on the external session.</param>
         /// <param name="ExternalOrganizationId">External organization identifier.</param>
         /// <param name="ExternalTag">External tag for the conversation.</param>
         /// <param name="FirstQueue">Marker that is set if the current queue is the first queue in a conversation.</param>
         /// <param name="FlaggedReason">Reason for which participant flagged conversation.</param>
+        /// <param name="FlowId">The unique identifier of this flow.</param>
         /// <param name="FlowInType">Type of flow in that occurred when entering ACD..</param>
+        /// <param name="FlowMilestoneIds">The ID of a flow outcome milestone.</param>
+        /// <param name="FlowName">The name of this flow at the time of flow execution.</param>
         /// <param name="FlowOutType">Type of flow out that occurred when emitting tFlowOut..</param>
+        /// <param name="FlowType">The type of this flow.</param>
+        /// <param name="FlowVersion">The version of this flow.</param>
         /// <param name="GroupId">Unique identifier for a PureCloud group.</param>
         /// <param name="InteractionType">The interaction type (enterprise or contactCenter).</param>
         /// <param name="JourneyActionId">Identifier of the journey action..</param>
@@ -1478,7 +1530,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="JourneyCustomerIdType">Type of primary identifier of the journey customer (e.g. cookie)..</param>
         /// <param name="JourneyCustomerSessionId">Unique identifier of the journey session..</param>
         /// <param name="JourneyCustomerSessionIdType">Type or category of journey sessions (e.g. web, ticket, delivery, atm)..</param>
-        /// <param name="KnowledgeBaseIds">The unique identifier(s) of the knowledge base(s) used.</param>
+        /// <param name="KnowledgeBaseId">The unique identifier of the knowledge base used.</param>
         /// <param name="MediaCount">Count of any media (images, files, etc) included in this session.</param>
         /// <param name="MediaType">The session media type.</param>
         /// <param name="MessageType">Message type for messaging services. E.g.: sms, facebook, twitter, line.</param>
@@ -1491,6 +1543,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Provider">The source provider for the communication..</param>
         /// <param name="Purpose">The participant&#39;s purpose.</param>
         /// <param name="QueueId">Queue identifier.</param>
+        /// <param name="RecognitionFailureReason">The recognition failure reason causing to exit/disconnect.</param>
         /// <param name="Remote">Name, phone number, or email address of the remote party..</param>
         /// <param name="RemovedSkillIds">ID(s) of Skill(s) that have been removed by bullseye routing.</param>
         /// <param name="Reoffered">Marker for an interaction that got reoffered to the same queue by an in-queue flow.</param>
@@ -1502,18 +1555,23 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoutingRing">Routing ring for bullseye or preferred agent routing.</param>
         /// <param name="SelectedAgentId">Selected agent ID.</param>
         /// <param name="SelectedAgentRank">Selected agent GPR rank.</param>
-        /// <param name="SelfServed">Indicates whether all flow sessions were self serviced.</param>
+        /// <param name="SelfServed">Indicates whether the flow session was self serviced.</param>
         /// <param name="SessionDnis">Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred.</param>
         /// <param name="SessionId">The unique identifier of this session.</param>
+        /// <param name="StartingLanguage">Flow starting language, e.g. en-us.</param>
         /// <param name="StationId">Unique identifier for a phone.</param>
         /// <param name="TeamId">The team ID the user is a member of.</param>
+        /// <param name="TransferTargetAddress">The address of a flow transfer target, e.g. a phone number, an email address, or a queueId.</param>
+        /// <param name="TransferTargetName">The name of a flow transfer target.</param>
+        /// <param name="TransferType">The type of transfer for flows that ended with a transfer.</param>
         /// <param name="UsedRouting">Complete routing method.</param>
         /// <param name="UserId">Unique identifier for the user.</param>
         /// <param name="WaitingInteractionCounts">Number of waiting interactions for each predictive routing attempt.</param>
         /// <param name="WrapUpCode">Wrap up code.</param>
         /// <param name="ProposedAgents">Proposed agents.</param>
+        /// <param name="Outcomes">Flow outcomes.</param>
         /// <param name="ScoredAgents">Scored agents.</param>
-        public FlowMetricsTopicConversationMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowInType = null, string FlowOutType = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, List<string> KnowledgeBaseIds = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string Remote = null, List<string> RemovedSkillIds = null, bool? Reoffered = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StationId = null, string TeamId = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<FlowMetricsTopicConversationProposedAgent> ProposedAgents = null, List<FlowMetricsTopicConversationScoredAgent> ScoredAgents = null)
+        public FlowMetricsTopicFlowMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string EndingLanguage = null, string EntryReason = null, EntryTypeEnum? EntryType = null, string ExitReason = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowId = null, string FlowInType = null, List<string> FlowMilestoneIds = null, string FlowName = null, string FlowOutType = null, FlowTypeEnum? FlowType = null, string FlowVersion = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string KnowledgeBaseId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string RecognitionFailureReason = null, string Remote = null, List<string> RemovedSkillIds = null, bool? Reoffered = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StartingLanguage = null, string StationId = null, string TeamId = null, string TransferTargetAddress = null, string TransferTargetName = null, string TransferType = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<FlowMetricsTopicFlowProposedAgent> ProposedAgents = null, List<FlowMetricsTopicFlowOutcome> Outcomes = null, List<FlowMetricsTopicFlowScoredAgent> ScoredAgents = null)
         {
             this.Metric = Metric;
             this.MetricDate = MetricDate;
@@ -1541,6 +1599,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Dnis = Dnis;
             this.EdgeId = EdgeId;
             this.EligibleAgentCounts = EligibleAgentCounts;
+            this.EndingLanguage = EndingLanguage;
+            this.EntryReason = EntryReason;
+            this.EntryType = EntryType;
+            this.ExitReason = ExitReason;
             this.ExtendedDeliveryStatus = ExtendedDeliveryStatus;
             this.ExternalContactId = ExternalContactId;
             this.ExternalMediaCount = ExternalMediaCount;
@@ -1548,8 +1610,13 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalTag = ExternalTag;
             this.FirstQueue = FirstQueue;
             this.FlaggedReason = FlaggedReason;
+            this.FlowId = FlowId;
             this.FlowInType = FlowInType;
+            this.FlowMilestoneIds = FlowMilestoneIds;
+            this.FlowName = FlowName;
             this.FlowOutType = FlowOutType;
+            this.FlowType = FlowType;
+            this.FlowVersion = FlowVersion;
             this.GroupId = GroupId;
             this.InteractionType = InteractionType;
             this.JourneyActionId = JourneyActionId;
@@ -1559,7 +1626,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.JourneyCustomerIdType = JourneyCustomerIdType;
             this.JourneyCustomerSessionId = JourneyCustomerSessionId;
             this.JourneyCustomerSessionIdType = JourneyCustomerSessionIdType;
-            this.KnowledgeBaseIds = KnowledgeBaseIds;
+            this.KnowledgeBaseId = KnowledgeBaseId;
             this.MediaCount = MediaCount;
             this.MediaType = MediaType;
             this.MessageType = MessageType;
@@ -1572,6 +1639,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Provider = Provider;
             this.Purpose = Purpose;
             this.QueueId = QueueId;
+            this.RecognitionFailureReason = RecognitionFailureReason;
             this.Remote = Remote;
             this.RemovedSkillIds = RemovedSkillIds;
             this.Reoffered = Reoffered;
@@ -1586,13 +1654,18 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SelfServed = SelfServed;
             this.SessionDnis = SessionDnis;
             this.SessionId = SessionId;
+            this.StartingLanguage = StartingLanguage;
             this.StationId = StationId;
             this.TeamId = TeamId;
+            this.TransferTargetAddress = TransferTargetAddress;
+            this.TransferTargetName = TransferTargetName;
+            this.TransferType = TransferType;
             this.UsedRouting = UsedRouting;
             this.UserId = UserId;
             this.WaitingInteractionCounts = WaitingInteractionCounts;
             this.WrapUpCode = WrapUpCode;
             this.ProposedAgents = ProposedAgents;
+            this.Outcomes = Outcomes;
             this.ScoredAgents = ScoredAgents;
             
         }
@@ -1799,9 +1872,38 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Extended email delivery status
+        /// Flow ending language, e.g. en-us
         /// </summary>
-        /// <value>Extended email delivery status</value>
+        /// <value>Flow ending language, e.g. en-us</value>
+        [DataMember(Name="endingLanguage", EmitDefaultValue=false)]
+        public string EndingLanguage { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The particular entry reason for this flow, e.g. an address, userId, or flowId
+        /// </summary>
+        /// <value>The particular entry reason for this flow, e.g. an address, userId, or flowId</value>
+        [DataMember(Name="entryReason", EmitDefaultValue=false)]
+        public string EntryReason { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The exit reason for this flow, e.g. DISCONNECT
+        /// </summary>
+        /// <value>The exit reason for this flow, e.g. DISCONNECT</value>
+        [DataMember(Name="exitReason", EmitDefaultValue=false)]
+        public string ExitReason { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Extended delivery status
+        /// </summary>
+        /// <value>Extended delivery status</value>
         [DataMember(Name="extendedDeliveryStatus", EmitDefaultValue=false)]
         public string ExtendedDeliveryStatus { get; set; }
         
@@ -1855,6 +1957,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The unique identifier of this flow
+        /// </summary>
+        /// <value>The unique identifier of this flow</value>
+        [DataMember(Name="flowId", EmitDefaultValue=false)]
+        public string FlowId { get; set; }
+        
+        
+        
+        /// <summary>
         /// Type of flow in that occurred when entering ACD.
         /// </summary>
         /// <value>Type of flow in that occurred when entering ACD.</value>
@@ -1864,11 +1975,40 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The ID of a flow outcome milestone
+        /// </summary>
+        /// <value>The ID of a flow outcome milestone</value>
+        [DataMember(Name="flowMilestoneIds", EmitDefaultValue=false)]
+        public List<string> FlowMilestoneIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The name of this flow at the time of flow execution
+        /// </summary>
+        /// <value>The name of this flow at the time of flow execution</value>
+        [DataMember(Name="flowName", EmitDefaultValue=false)]
+        public string FlowName { get; set; }
+        
+        
+        
+        /// <summary>
         /// Type of flow out that occurred when emitting tFlowOut.
         /// </summary>
         /// <value>Type of flow out that occurred when emitting tFlowOut.</value>
         [DataMember(Name="flowOutType", EmitDefaultValue=false)]
         public string FlowOutType { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The version of this flow
+        /// </summary>
+        /// <value>The version of this flow</value>
+        [DataMember(Name="flowVersion", EmitDefaultValue=false)]
+        public string FlowVersion { get; set; }
         
         
         
@@ -1954,11 +2094,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The unique identifier(s) of the knowledge base(s) used
+        /// The unique identifier of the knowledge base used
         /// </summary>
-        /// <value>The unique identifier(s) of the knowledge base(s) used</value>
-        [DataMember(Name="knowledgeBaseIds", EmitDefaultValue=false)]
-        public List<string> KnowledgeBaseIds { get; set; }
+        /// <value>The unique identifier of the knowledge base used</value>
+        [DataMember(Name="knowledgeBaseId", EmitDefaultValue=false)]
+        public string KnowledgeBaseId { get; set; }
         
         
         
@@ -2046,6 +2186,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Queue identifier</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The recognition failure reason causing to exit/disconnect
+        /// </summary>
+        /// <value>The recognition failure reason causing to exit/disconnect</value>
+        [DataMember(Name="recognitionFailureReason", EmitDefaultValue=false)]
+        public string RecognitionFailureReason { get; set; }
         
         
         
@@ -2149,9 +2298,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Indicates whether all flow sessions were self serviced
+        /// Indicates whether the flow session was self serviced
         /// </summary>
-        /// <value>Indicates whether all flow sessions were self serviced</value>
+        /// <value>Indicates whether the flow session was self serviced</value>
         [DataMember(Name="selfServed", EmitDefaultValue=false)]
         public bool? SelfServed { get; set; }
         
@@ -2176,6 +2325,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Flow starting language, e.g. en-us
+        /// </summary>
+        /// <value>Flow starting language, e.g. en-us</value>
+        [DataMember(Name="startingLanguage", EmitDefaultValue=false)]
+        public string StartingLanguage { get; set; }
+        
+        
+        
+        /// <summary>
         /// Unique identifier for a phone
         /// </summary>
         /// <value>Unique identifier for a phone</value>
@@ -2190,6 +2348,33 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The team ID the user is a member of</value>
         [DataMember(Name="teamId", EmitDefaultValue=false)]
         public string TeamId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The address of a flow transfer target, e.g. a phone number, an email address, or a queueId
+        /// </summary>
+        /// <value>The address of a flow transfer target, e.g. a phone number, an email address, or a queueId</value>
+        [DataMember(Name="transferTargetAddress", EmitDefaultValue=false)]
+        public string TransferTargetAddress { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The name of a flow transfer target
+        /// </summary>
+        /// <value>The name of a flow transfer target</value>
+        [DataMember(Name="transferTargetName", EmitDefaultValue=false)]
+        public string TransferTargetName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The type of transfer for flows that ended with a transfer
+        /// </summary>
+        /// <value>The type of transfer for flows that ended with a transfer</value>
+        [DataMember(Name="transferType", EmitDefaultValue=false)]
+        public string TransferType { get; set; }
         
         
         
@@ -2227,7 +2412,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Proposed agents</value>
         [DataMember(Name="proposedAgents", EmitDefaultValue=false)]
-        public List<FlowMetricsTopicConversationProposedAgent> ProposedAgents { get; set; }
+        public List<FlowMetricsTopicFlowProposedAgent> ProposedAgents { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Flow outcomes
+        /// </summary>
+        /// <value>Flow outcomes</value>
+        [DataMember(Name="outcomes", EmitDefaultValue=false)]
+        public List<FlowMetricsTopicFlowOutcome> Outcomes { get; set; }
         
         
         
@@ -2236,7 +2430,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Scored agents</value>
         [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
-        public List<FlowMetricsTopicConversationScoredAgent> ScoredAgents { get; set; }
+        public List<FlowMetricsTopicFlowScoredAgent> ScoredAgents { get; set; }
         
         
         /// <summary>
@@ -2246,7 +2440,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FlowMetricsTopicConversationMetricRecord {\n");
+            sb.Append("class FlowMetricsTopicFlowMetricRecord {\n");
             
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  MetricDate: ").Append(MetricDate).Append("\n");
@@ -2274,6 +2468,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
             sb.Append("  EdgeId: ").Append(EdgeId).Append("\n");
             sb.Append("  EligibleAgentCounts: ").Append(EligibleAgentCounts).Append("\n");
+            sb.Append("  EndingLanguage: ").Append(EndingLanguage).Append("\n");
+            sb.Append("  EntryReason: ").Append(EntryReason).Append("\n");
+            sb.Append("  EntryType: ").Append(EntryType).Append("\n");
+            sb.Append("  ExitReason: ").Append(ExitReason).Append("\n");
             sb.Append("  ExtendedDeliveryStatus: ").Append(ExtendedDeliveryStatus).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  ExternalMediaCount: ").Append(ExternalMediaCount).Append("\n");
@@ -2281,8 +2479,13 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("  FirstQueue: ").Append(FirstQueue).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
+            sb.Append("  FlowId: ").Append(FlowId).Append("\n");
             sb.Append("  FlowInType: ").Append(FlowInType).Append("\n");
+            sb.Append("  FlowMilestoneIds: ").Append(FlowMilestoneIds).Append("\n");
+            sb.Append("  FlowName: ").Append(FlowName).Append("\n");
             sb.Append("  FlowOutType: ").Append(FlowOutType).Append("\n");
+            sb.Append("  FlowType: ").Append(FlowType).Append("\n");
+            sb.Append("  FlowVersion: ").Append(FlowVersion).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  InteractionType: ").Append(InteractionType).Append("\n");
             sb.Append("  JourneyActionId: ").Append(JourneyActionId).Append("\n");
@@ -2292,7 +2495,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  JourneyCustomerIdType: ").Append(JourneyCustomerIdType).Append("\n");
             sb.Append("  JourneyCustomerSessionId: ").Append(JourneyCustomerSessionId).Append("\n");
             sb.Append("  JourneyCustomerSessionIdType: ").Append(JourneyCustomerSessionIdType).Append("\n");
-            sb.Append("  KnowledgeBaseIds: ").Append(KnowledgeBaseIds).Append("\n");
+            sb.Append("  KnowledgeBaseId: ").Append(KnowledgeBaseId).Append("\n");
             sb.Append("  MediaCount: ").Append(MediaCount).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  MessageType: ").Append(MessageType).Append("\n");
@@ -2305,6 +2508,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
+            sb.Append("  RecognitionFailureReason: ").Append(RecognitionFailureReason).Append("\n");
             sb.Append("  Remote: ").Append(Remote).Append("\n");
             sb.Append("  RemovedSkillIds: ").Append(RemovedSkillIds).Append("\n");
             sb.Append("  Reoffered: ").Append(Reoffered).Append("\n");
@@ -2319,13 +2523,18 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SelfServed: ").Append(SelfServed).Append("\n");
             sb.Append("  SessionDnis: ").Append(SessionDnis).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
+            sb.Append("  StartingLanguage: ").Append(StartingLanguage).Append("\n");
             sb.Append("  StationId: ").Append(StationId).Append("\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
+            sb.Append("  TransferTargetAddress: ").Append(TransferTargetAddress).Append("\n");
+            sb.Append("  TransferTargetName: ").Append(TransferTargetName).Append("\n");
+            sb.Append("  TransferType: ").Append(TransferType).Append("\n");
             sb.Append("  UsedRouting: ").Append(UsedRouting).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  WaitingInteractionCounts: ").Append(WaitingInteractionCounts).Append("\n");
             sb.Append("  WrapUpCode: ").Append(WrapUpCode).Append("\n");
             sb.Append("  ProposedAgents: ").Append(ProposedAgents).Append("\n");
+            sb.Append("  Outcomes: ").Append(Outcomes).Append("\n");
             sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -2352,15 +2561,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FlowMetricsTopicConversationMetricRecord);
+            return this.Equals(obj as FlowMetricsTopicFlowMetricRecord);
         }
 
         /// <summary>
-        /// Returns true if FlowMetricsTopicConversationMetricRecord instances are equal
+        /// Returns true if FlowMetricsTopicFlowMetricRecord instances are equal
         /// </summary>
-        /// <param name="other">Instance of FlowMetricsTopicConversationMetricRecord to be compared</param>
+        /// <param name="other">Instance of FlowMetricsTopicFlowMetricRecord to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FlowMetricsTopicConversationMetricRecord other)
+        public bool Equals(FlowMetricsTopicFlowMetricRecord other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -2498,6 +2707,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EligibleAgentCounts.SequenceEqual(other.EligibleAgentCounts)
                 ) &&
                 (
+                    this.EndingLanguage == other.EndingLanguage ||
+                    this.EndingLanguage != null &&
+                    this.EndingLanguage.Equals(other.EndingLanguage)
+                ) &&
+                (
+                    this.EntryReason == other.EntryReason ||
+                    this.EntryReason != null &&
+                    this.EntryReason.Equals(other.EntryReason)
+                ) &&
+                (
+                    this.EntryType == other.EntryType ||
+                    this.EntryType != null &&
+                    this.EntryType.Equals(other.EntryType)
+                ) &&
+                (
+                    this.ExitReason == other.ExitReason ||
+                    this.ExitReason != null &&
+                    this.ExitReason.Equals(other.ExitReason)
+                ) &&
+                (
                     this.ExtendedDeliveryStatus == other.ExtendedDeliveryStatus ||
                     this.ExtendedDeliveryStatus != null &&
                     this.ExtendedDeliveryStatus.Equals(other.ExtendedDeliveryStatus)
@@ -2533,14 +2762,39 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlaggedReason.Equals(other.FlaggedReason)
                 ) &&
                 (
+                    this.FlowId == other.FlowId ||
+                    this.FlowId != null &&
+                    this.FlowId.Equals(other.FlowId)
+                ) &&
+                (
                     this.FlowInType == other.FlowInType ||
                     this.FlowInType != null &&
                     this.FlowInType.Equals(other.FlowInType)
                 ) &&
                 (
+                    this.FlowMilestoneIds == other.FlowMilestoneIds ||
+                    this.FlowMilestoneIds != null &&
+                    this.FlowMilestoneIds.SequenceEqual(other.FlowMilestoneIds)
+                ) &&
+                (
+                    this.FlowName == other.FlowName ||
+                    this.FlowName != null &&
+                    this.FlowName.Equals(other.FlowName)
+                ) &&
+                (
                     this.FlowOutType == other.FlowOutType ||
                     this.FlowOutType != null &&
                     this.FlowOutType.Equals(other.FlowOutType)
+                ) &&
+                (
+                    this.FlowType == other.FlowType ||
+                    this.FlowType != null &&
+                    this.FlowType.Equals(other.FlowType)
+                ) &&
+                (
+                    this.FlowVersion == other.FlowVersion ||
+                    this.FlowVersion != null &&
+                    this.FlowVersion.Equals(other.FlowVersion)
                 ) &&
                 (
                     this.GroupId == other.GroupId ||
@@ -2588,9 +2842,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.JourneyCustomerSessionIdType.Equals(other.JourneyCustomerSessionIdType)
                 ) &&
                 (
-                    this.KnowledgeBaseIds == other.KnowledgeBaseIds ||
-                    this.KnowledgeBaseIds != null &&
-                    this.KnowledgeBaseIds.SequenceEqual(other.KnowledgeBaseIds)
+                    this.KnowledgeBaseId == other.KnowledgeBaseId ||
+                    this.KnowledgeBaseId != null &&
+                    this.KnowledgeBaseId.Equals(other.KnowledgeBaseId)
                 ) &&
                 (
                     this.MediaCount == other.MediaCount ||
@@ -2651,6 +2905,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueueId == other.QueueId ||
                     this.QueueId != null &&
                     this.QueueId.Equals(other.QueueId)
+                ) &&
+                (
+                    this.RecognitionFailureReason == other.RecognitionFailureReason ||
+                    this.RecognitionFailureReason != null &&
+                    this.RecognitionFailureReason.Equals(other.RecognitionFailureReason)
                 ) &&
                 (
                     this.Remote == other.Remote ||
@@ -2723,6 +2982,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SessionId.Equals(other.SessionId)
                 ) &&
                 (
+                    this.StartingLanguage == other.StartingLanguage ||
+                    this.StartingLanguage != null &&
+                    this.StartingLanguage.Equals(other.StartingLanguage)
+                ) &&
+                (
                     this.StationId == other.StationId ||
                     this.StationId != null &&
                     this.StationId.Equals(other.StationId)
@@ -2731,6 +2995,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TeamId == other.TeamId ||
                     this.TeamId != null &&
                     this.TeamId.Equals(other.TeamId)
+                ) &&
+                (
+                    this.TransferTargetAddress == other.TransferTargetAddress ||
+                    this.TransferTargetAddress != null &&
+                    this.TransferTargetAddress.Equals(other.TransferTargetAddress)
+                ) &&
+                (
+                    this.TransferTargetName == other.TransferTargetName ||
+                    this.TransferTargetName != null &&
+                    this.TransferTargetName.Equals(other.TransferTargetName)
+                ) &&
+                (
+                    this.TransferType == other.TransferType ||
+                    this.TransferType != null &&
+                    this.TransferType.Equals(other.TransferType)
                 ) &&
                 (
                     this.UsedRouting == other.UsedRouting ||
@@ -2756,6 +3035,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ProposedAgents == other.ProposedAgents ||
                     this.ProposedAgents != null &&
                     this.ProposedAgents.SequenceEqual(other.ProposedAgents)
+                ) &&
+                (
+                    this.Outcomes == other.Outcomes ||
+                    this.Outcomes != null &&
+                    this.Outcomes.SequenceEqual(other.Outcomes)
                 ) &&
                 (
                     this.ScoredAgents == other.ScoredAgents ||
@@ -2854,6 +3138,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.EligibleAgentCounts != null)
                     hash = hash * 59 + this.EligibleAgentCounts.GetHashCode();
                 
+                if (this.EndingLanguage != null)
+                    hash = hash * 59 + this.EndingLanguage.GetHashCode();
+                
+                if (this.EntryReason != null)
+                    hash = hash * 59 + this.EntryReason.GetHashCode();
+                
+                if (this.EntryType != null)
+                    hash = hash * 59 + this.EntryType.GetHashCode();
+                
+                if (this.ExitReason != null)
+                    hash = hash * 59 + this.ExitReason.GetHashCode();
+                
                 if (this.ExtendedDeliveryStatus != null)
                     hash = hash * 59 + this.ExtendedDeliveryStatus.GetHashCode();
                 
@@ -2875,11 +3171,26 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.FlaggedReason != null)
                     hash = hash * 59 + this.FlaggedReason.GetHashCode();
                 
+                if (this.FlowId != null)
+                    hash = hash * 59 + this.FlowId.GetHashCode();
+                
                 if (this.FlowInType != null)
                     hash = hash * 59 + this.FlowInType.GetHashCode();
                 
+                if (this.FlowMilestoneIds != null)
+                    hash = hash * 59 + this.FlowMilestoneIds.GetHashCode();
+                
+                if (this.FlowName != null)
+                    hash = hash * 59 + this.FlowName.GetHashCode();
+                
                 if (this.FlowOutType != null)
                     hash = hash * 59 + this.FlowOutType.GetHashCode();
+                
+                if (this.FlowType != null)
+                    hash = hash * 59 + this.FlowType.GetHashCode();
+                
+                if (this.FlowVersion != null)
+                    hash = hash * 59 + this.FlowVersion.GetHashCode();
                 
                 if (this.GroupId != null)
                     hash = hash * 59 + this.GroupId.GetHashCode();
@@ -2908,8 +3219,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.JourneyCustomerSessionIdType != null)
                     hash = hash * 59 + this.JourneyCustomerSessionIdType.GetHashCode();
                 
-                if (this.KnowledgeBaseIds != null)
-                    hash = hash * 59 + this.KnowledgeBaseIds.GetHashCode();
+                if (this.KnowledgeBaseId != null)
+                    hash = hash * 59 + this.KnowledgeBaseId.GetHashCode();
                 
                 if (this.MediaCount != null)
                     hash = hash * 59 + this.MediaCount.GetHashCode();
@@ -2946,6 +3257,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
+                
+                if (this.RecognitionFailureReason != null)
+                    hash = hash * 59 + this.RecognitionFailureReason.GetHashCode();
                 
                 if (this.Remote != null)
                     hash = hash * 59 + this.Remote.GetHashCode();
@@ -2989,11 +3303,23 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
                 
+                if (this.StartingLanguage != null)
+                    hash = hash * 59 + this.StartingLanguage.GetHashCode();
+                
                 if (this.StationId != null)
                     hash = hash * 59 + this.StationId.GetHashCode();
                 
                 if (this.TeamId != null)
                     hash = hash * 59 + this.TeamId.GetHashCode();
+                
+                if (this.TransferTargetAddress != null)
+                    hash = hash * 59 + this.TransferTargetAddress.GetHashCode();
+                
+                if (this.TransferTargetName != null)
+                    hash = hash * 59 + this.TransferTargetName.GetHashCode();
+                
+                if (this.TransferType != null)
+                    hash = hash * 59 + this.TransferType.GetHashCode();
                 
                 if (this.UsedRouting != null)
                     hash = hash * 59 + this.UsedRouting.GetHashCode();
@@ -3009,6 +3335,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ProposedAgents != null)
                     hash = hash * 59 + this.ProposedAgents.GetHashCode();
+                
+                if (this.Outcomes != null)
+                    hash = hash * 59 + this.Outcomes.GetHashCode();
                 
                 if (this.ScoredAgents != null)
                     hash = hash * 59 + this.ScoredAgents.GetHashCode();

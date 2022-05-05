@@ -532,7 +532,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ConfigureAlertRuleView for "CONFIGURE_ALERT_RULE_VIEW"
             /// </summary>
             [EnumMember(Value = "CONFIGURE_ALERT_RULE_VIEW")]
-            ConfigureAlertRuleView
+            ConfigureAlertRuleView,
+            
+            /// <summary>
+            /// Enum PredictiveRoutingView for "PREDICTIVE_ROUTING_VIEW"
+            /// </summary>
+            [EnumMember(Value = "PREDICTIVE_ROUTING_VIEW")]
+            PredictiveRoutingView,
+            
+            /// <summary>
+            /// Enum PredictiveRoutingQueueOverview for "PREDICTIVE_ROUTING_QUEUE_OVERVIEW"
+            /// </summary>
+            [EnumMember(Value = "PREDICTIVE_ROUTING_QUEUE_OVERVIEW")]
+            PredictiveRoutingQueueOverview,
+            
+            /// <summary>
+            /// Enum PredictiveRoutingModelView for "PREDICTIVE_ROUTING_MODEL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "PREDICTIVE_ROUTING_MODEL_VIEW")]
+            PredictiveRoutingModelView
         }
         
         

@@ -11,7 +11,7 @@ title: CalibrationCreate
 | **Name** | **string** |  | [optional] |
 | **Calibrator** | [**User**](User.html) |  | [optional] |
 | **Agent** | [**User**](User.html) |  | [optional] |
-| **Conversation** | [**Conversation**](Conversation.html) | The conversation to use for the calibration. | |
+| **Conversation** | [**ConversationReference**](ConversationReference.html) | The conversation to use for the calibration. | |
 | **EvaluationForm** | [**EvaluationForm**](EvaluationForm.html) |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
 | **AverageScore** | **int?** |  | [optional] |

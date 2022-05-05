@@ -13,11 +13,16 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// FlowMetricsTopicConversationScoredAgent
+    /// WhatsAppAvailablePhoneNumberDetails
     /// </summary>
     [DataContract]
-    public partial class FlowMetricsTopicConversationScoredAgent :  IEquatable<FlowMetricsTopicConversationScoredAgent>
+    public partial class WhatsAppAvailablePhoneNumberDetails :  IEquatable<WhatsAppAvailablePhoneNumberDetails>
     {
+        
+        
+        
+        
+        
         
         
         
@@ -32,34 +37,39 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowMetricsTopicConversationScoredAgent" /> class.
+        /// Initializes a new instance of the <see cref="WhatsAppAvailablePhoneNumberDetails" /> class.
         /// </summary>
-        /// <param name="AgentScore">Assigned agent score for this conversation (0 - 100, higher being better).</param>
-        /// <param name="ScoredAgentId">Unique identifier for the agent that was scored for this conversation.</param>
-        public FlowMetricsTopicConversationScoredAgent(int? AgentScore = null, string ScoredAgentId = null)
+        public WhatsAppAvailablePhoneNumberDetails()
         {
-            this.AgentScore = AgentScore;
-            this.ScoredAgentId = ScoredAgentId;
             
         }
         
         
         
         /// <summary>
-        /// Assigned agent score for this conversation (0 - 100, higher being better)
+        /// The verified name associated with this phone number.
         /// </summary>
-        /// <value>Assigned agent score for this conversation (0 - 100, higher being better)</value>
-        [DataMember(Name="agentScore", EmitDefaultValue=false)]
-        public int? AgentScore { get; set; }
+        /// <value>The verified name associated with this phone number.</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; private set; }
         
         
         
         /// <summary>
-        /// Unique identifier for the agent that was scored for this conversation
+        /// The display name associated with this phone number. It&#39;s typically the E.164 representation of the number.
         /// </summary>
-        /// <value>Unique identifier for the agent that was scored for this conversation</value>
-        [DataMember(Name="scoredAgentId", EmitDefaultValue=false)]
-        public string ScoredAgentId { get; set; }
+        /// <value>The display name associated with this phone number. It&#39;s typically the E.164 representation of the number.</value>
+        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
+        public string PhoneNumber { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The status of this phone number.
+        /// </summary>
+        /// <value>The status of this phone number.</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public string Status { get; private set; }
         
         
         /// <summary>
@@ -69,10 +79,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FlowMetricsTopicConversationScoredAgent {\n");
+            sb.Append("class WhatsAppAvailablePhoneNumberDetails {\n");
             
-            sb.Append("  AgentScore: ").Append(AgentScore).Append("\n");
-            sb.Append("  ScoredAgentId: ").Append(ScoredAgentId).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,15 +109,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FlowMetricsTopicConversationScoredAgent);
+            return this.Equals(obj as WhatsAppAvailablePhoneNumberDetails);
         }
 
         /// <summary>
-        /// Returns true if FlowMetricsTopicConversationScoredAgent instances are equal
+        /// Returns true if WhatsAppAvailablePhoneNumberDetails instances are equal
         /// </summary>
-        /// <param name="other">Instance of FlowMetricsTopicConversationScoredAgent to be compared</param>
+        /// <param name="other">Instance of WhatsAppAvailablePhoneNumberDetails to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FlowMetricsTopicConversationScoredAgent other)
+        public bool Equals(WhatsAppAvailablePhoneNumberDetails other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -114,14 +125,19 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.AgentScore == other.AgentScore ||
-                    this.AgentScore != null &&
-                    this.AgentScore.Equals(other.AgentScore)
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this.ScoredAgentId == other.ScoredAgentId ||
-                    this.ScoredAgentId != null &&
-                    this.ScoredAgentId.Equals(other.ScoredAgentId)
+                    this.PhoneNumber == other.PhoneNumber ||
+                    this.PhoneNumber != null &&
+                    this.PhoneNumber.Equals(other.PhoneNumber)
+                ) &&
+                (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
                 );
         }
 
@@ -137,11 +153,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.AgentScore != null)
-                    hash = hash * 59 + this.AgentScore.GetHashCode();
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this.ScoredAgentId != null)
-                    hash = hash * 59 + this.ScoredAgentId.GetHashCode();
+                if (this.PhoneNumber != null)
+                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
+                
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 return hash;
             }

@@ -13,7 +13,7 @@ title: ListItemComponent
 | **Image** | **string** | URL of an image. | [optional] |
 | **Title** | **string** | The main headline of the list item. | [optional] |
 | **Description** | **string** | Text to show in the list item description. | [optional] |
-| **Actions** | [**ContentActions**](ContentActions.html) | The list item actions. | [optional] |
+| **Actions** | [**ContentActions**](ContentActions.html) | The list item actions (Deprecated). | [optional] |
 {: class="table table-striped"}
 
 

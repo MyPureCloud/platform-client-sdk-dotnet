@@ -69,8 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AssistanceCondition" /> class.
         /// </summary>
-        public AssistanceCondition()
+        /// <param name="_Operator">The operator for the assistance condition. The operator defines whether the listed topicIds should EXIST or NOTEXIST for the condition to be evaluated as true..</param>
+        /// <param name="TopicIds">List of topicIds within the assistance condition which would be combined together using logical OR operator. Eg ( topicId_1 || topicId_2 ) ..</param>
+        public AssistanceCondition(OperatorEnum? _Operator = null, List<string> TopicIds = null)
         {
+            this._Operator = _Operator;
+            this.TopicIds = TopicIds;
             
         }
         
@@ -83,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of topicIds within the assistance condition which would be combined together using logical OR operator. Eg ( topicId_1 || topicId_2 ) .</value>
         [DataMember(Name="topicIds", EmitDefaultValue=false)]
-        public List<string> TopicIds { get; private set; }
+        public List<string> TopicIds { get; set; }
         
         
         /// <summary>

@@ -104,8 +104,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">SortBy (optional)</param>
         /// <param name="sortOrder">SortOrder (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>ScriptEntityListing</returns>
-        ScriptEntityListing GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null);
+        ScriptEntityListing GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null);
 
         /// <summary>
         /// Get the list of scripts
@@ -123,8 +124,49 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">SortBy (optional)</param>
         /// <param name="sortOrder">SortOrder (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>ApiResponse of ScriptEntityListing</returns>
-        ApiResponse<ScriptEntityListing> GetScriptsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null);
+        ApiResponse<ScriptEntityListing> GetScriptsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null);
+        
+        /// <summary>
+        /// Get the metadata for a list of scripts
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="sortBy">SortBy (optional)</param>
+        /// <param name="sortOrder">SortOrder (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>ScriptEntityListing</returns>
+        ScriptEntityListing GetScriptsDivisionviews (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null);
+
+        /// <summary>
+        /// Get the metadata for a list of scripts
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="sortBy">SortBy (optional)</param>
+        /// <param name="sortOrder">SortOrder (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>ApiResponse of ScriptEntityListing</returns>
+        ApiResponse<ScriptEntityListing> GetScriptsDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null);
         
         /// <summary>
         /// Get the published scripts.
@@ -140,8 +182,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature">Feature filter (optional)</param>
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>ScriptEntityListing</returns>
-        ScriptEntityListing GetScriptsPublished (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null);
+        ScriptEntityListing GetScriptsPublished (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null);
 
         /// <summary>
         /// Get the published scripts.
@@ -157,8 +200,45 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature">Feature filter (optional)</param>
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>ApiResponse of ScriptEntityListing</returns>
-        ApiResponse<ScriptEntityListing> GetScriptsPublishedWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null);
+        ApiResponse<ScriptEntityListing> GetScriptsPublishedWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null);
+        
+        /// <summary>
+        /// Get the published scripts metadata.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>ScriptEntityListing</returns>
+        ScriptEntityListing GetScriptsPublishedDivisionviews (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null);
+
+        /// <summary>
+        /// Get the published scripts metadata.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>ApiResponse of ScriptEntityListing</returns>
+        ApiResponse<ScriptEntityListing> GetScriptsPublishedDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null);
         
         /// <summary>
         /// Get the published script.
@@ -404,8 +484,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">SortBy (optional)</param>
         /// <param name="sortOrder">SortOrder (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>Task of ScriptEntityListing</returns>
-        System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null);
+        System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null);
 
         /// <summary>
         /// Get the list of scripts
@@ -423,8 +504,49 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">SortBy (optional)</param>
         /// <param name="sortOrder">SortOrder (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null);
+        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null);
+        
+        /// <summary>
+        /// Get the metadata for a list of scripts
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="sortBy">SortBy (optional)</param>
+        /// <param name="sortOrder">SortOrder (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>Task of ScriptEntityListing</returns>
+        System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null);
+
+        /// <summary>
+        /// Get the metadata for a list of scripts
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="sortBy">SortBy (optional)</param>
+        /// <param name="sortOrder">SortOrder (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null);
         
         /// <summary>
         /// Get the published scripts.
@@ -440,8 +562,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature">Feature filter (optional)</param>
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>Task of ScriptEntityListing</returns>
-        System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsPublishedAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null);
+        System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsPublishedAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null);
 
         /// <summary>
         /// Get the published scripts.
@@ -457,8 +580,45 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature">Feature filter (optional)</param>
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null);
+        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null);
+        
+        /// <summary>
+        /// Get the published scripts metadata.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>Task of ScriptEntityListing</returns>
+        System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsPublishedDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null);
+
+        /// <summary>
+        /// Get the published scripts metadata.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null);
         
         /// <summary>
         /// Get the published script.
@@ -1321,10 +1481,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">SortBy (optional)</param>
         /// <param name="sortOrder">SortOrder (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>ScriptEntityListing</returns>
-        public ScriptEntityListing GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null)
+        public ScriptEntityListing GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
         {
-             ApiResponse<ScriptEntityListing> localVarResponse = GetScriptsWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion);
+             ApiResponse<ScriptEntityListing> localVarResponse = GetScriptsWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion, divisionIds);
              return localVarResponse.Data;
         }
 
@@ -1341,8 +1502,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">SortBy (optional)</param>
         /// <param name="sortOrder">SortOrder (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>ApiResponse of ScriptEntityListing</returns>
-        public ApiResponse< ScriptEntityListing > GetScriptsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null)
+        public ApiResponse< ScriptEntityListing > GetScriptsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
         { 
 
             var localVarPath = "/api/v2/scripts";
@@ -1387,6 +1549,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (scriptDataVersion != null) localVarQueryParams.Add(new Tuple<string, string>("scriptDataVersion", this.Configuration.ApiClient.ParameterToString(scriptDataVersion)));
+            if (divisionIds != null) localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(divisionIds)));
 
             // Header params
 
@@ -1437,10 +1600,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">SortBy (optional)</param>
         /// <param name="sortOrder">SortOrder (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>Task of ScriptEntityListing</returns>
-        public async System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null)
+        public async System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
         {
-             ApiResponse<ScriptEntityListing> localVarResponse = await GetScriptsAsyncWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion);
+             ApiResponse<ScriptEntityListing> localVarResponse = await GetScriptsAsyncWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion, divisionIds);
              return localVarResponse.Data;
 
         }
@@ -1458,8 +1622,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">SortBy (optional)</param>
         /// <param name="sortOrder">SortOrder (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
         { 
 
             var localVarPath = "/api/v2/scripts";
@@ -1504,6 +1669,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (scriptDataVersion != null) localVarQueryParams.Add(new Tuple<string, string>("scriptDataVersion", this.Configuration.ApiClient.ParameterToString(scriptDataVersion)));
+            if (divisionIds != null) localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(divisionIds)));
 
             // Header params
 
@@ -1543,6 +1709,246 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get the metadata for a list of scripts 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="sortBy">SortBy (optional)</param>
+        /// <param name="sortOrder">SortOrder (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>ScriptEntityListing</returns>
+        public ScriptEntityListing GetScriptsDivisionviews (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
+        {
+             ApiResponse<ScriptEntityListing> localVarResponse = GetScriptsDivisionviewsWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion, divisionIds);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the metadata for a list of scripts 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="sortBy">SortBy (optional)</param>
+        /// <param name="sortOrder">SortOrder (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>ApiResponse of ScriptEntityListing</returns>
+        public ApiResponse< ScriptEntityListing > GetScriptsDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
+        { 
+
+            var localVarPath = "/api/v2/scripts/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (feature != null) localVarQueryParams.Add(new Tuple<string, string>("feature", this.Configuration.ApiClient.ParameterToString(feature)));
+            if (flowId != null) localVarQueryParams.Add(new Tuple<string, string>("flowId", this.Configuration.ApiClient.ParameterToString(flowId)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (scriptDataVersion != null) localVarQueryParams.Add(new Tuple<string, string>("scriptDataVersion", this.Configuration.ApiClient.ParameterToString(scriptDataVersion)));
+            if (divisionIds != null) localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(divisionIds)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScriptsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScriptsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScriptEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ScriptEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScriptEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the metadata for a list of scripts 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="sortBy">SortBy (optional)</param>
+        /// <param name="sortOrder">SortOrder (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>Task of ScriptEntityListing</returns>
+        public async System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
+        {
+             ApiResponse<ScriptEntityListing> localVarResponse = await GetScriptsDivisionviewsAsyncWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion, divisionIds);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the metadata for a list of scripts 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="sortBy">SortBy (optional)</param>
+        /// <param name="sortOrder">SortOrder (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
+        { 
+
+            var localVarPath = "/api/v2/scripts/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (feature != null) localVarQueryParams.Add(new Tuple<string, string>("feature", this.Configuration.ApiClient.ParameterToString(feature)));
+            if (flowId != null) localVarQueryParams.Add(new Tuple<string, string>("flowId", this.Configuration.ApiClient.ParameterToString(flowId)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (scriptDataVersion != null) localVarQueryParams.Add(new Tuple<string, string>("scriptDataVersion", this.Configuration.ApiClient.ParameterToString(scriptDataVersion)));
+            if (divisionIds != null) localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(divisionIds)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScriptsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScriptsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScriptEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ScriptEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScriptEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get the published scripts. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1553,10 +1959,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature">Feature filter (optional)</param>
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>ScriptEntityListing</returns>
-        public ScriptEntityListing GetScriptsPublished (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
+        public ScriptEntityListing GetScriptsPublished (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
         {
-             ApiResponse<ScriptEntityListing> localVarResponse = GetScriptsPublishedWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion);
+             ApiResponse<ScriptEntityListing> localVarResponse = GetScriptsPublishedWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion, divisionIds);
              return localVarResponse.Data;
         }
 
@@ -1571,8 +1978,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature">Feature filter (optional)</param>
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>ApiResponse of ScriptEntityListing</returns>
-        public ApiResponse< ScriptEntityListing > GetScriptsPublishedWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
+        public ApiResponse< ScriptEntityListing > GetScriptsPublishedWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
         { 
 
             var localVarPath = "/api/v2/scripts/published";
@@ -1615,6 +2023,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (feature != null) localVarQueryParams.Add(new Tuple<string, string>("feature", this.Configuration.ApiClient.ParameterToString(feature)));
             if (flowId != null) localVarQueryParams.Add(new Tuple<string, string>("flowId", this.Configuration.ApiClient.ParameterToString(flowId)));
             if (scriptDataVersion != null) localVarQueryParams.Add(new Tuple<string, string>("scriptDataVersion", this.Configuration.ApiClient.ParameterToString(scriptDataVersion)));
+            if (divisionIds != null) localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(divisionIds)));
 
             // Header params
 
@@ -1663,10 +2072,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature">Feature filter (optional)</param>
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>Task of ScriptEntityListing</returns>
-        public async System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsPublishedAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
+        public async System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsPublishedAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
         {
-             ApiResponse<ScriptEntityListing> localVarResponse = await GetScriptsPublishedAsyncWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion);
+             ApiResponse<ScriptEntityListing> localVarResponse = await GetScriptsPublishedAsyncWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion, divisionIds);
              return localVarResponse.Data;
 
         }
@@ -1682,8 +2092,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature">Feature filter (optional)</param>
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
         { 
 
             var localVarPath = "/api/v2/scripts/published";
@@ -1726,6 +2137,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (feature != null) localVarQueryParams.Add(new Tuple<string, string>("feature", this.Configuration.ApiClient.ParameterToString(feature)));
             if (flowId != null) localVarQueryParams.Add(new Tuple<string, string>("flowId", this.Configuration.ApiClient.ParameterToString(flowId)));
             if (scriptDataVersion != null) localVarQueryParams.Add(new Tuple<string, string>("scriptDataVersion", this.Configuration.ApiClient.ParameterToString(scriptDataVersion)));
+            if (divisionIds != null) localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(divisionIds)));
 
             // Header params
 
@@ -1754,6 +2166,234 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling GetScriptsPublished: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetScriptsPublished: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScriptEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ScriptEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScriptEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the published scripts metadata. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>ScriptEntityListing</returns>
+        public ScriptEntityListing GetScriptsPublishedDivisionviews (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
+        {
+             ApiResponse<ScriptEntityListing> localVarResponse = GetScriptsPublishedDivisionviewsWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion, divisionIds);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the published scripts metadata. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>ApiResponse of ScriptEntityListing</returns>
+        public ApiResponse< ScriptEntityListing > GetScriptsPublishedDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
+        { 
+
+            var localVarPath = "/api/v2/scripts/published/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (feature != null) localVarQueryParams.Add(new Tuple<string, string>("feature", this.Configuration.ApiClient.ParameterToString(feature)));
+            if (flowId != null) localVarQueryParams.Add(new Tuple<string, string>("flowId", this.Configuration.ApiClient.ParameterToString(flowId)));
+            if (scriptDataVersion != null) localVarQueryParams.Add(new Tuple<string, string>("scriptDataVersion", this.Configuration.ApiClient.ParameterToString(scriptDataVersion)));
+            if (divisionIds != null) localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(divisionIds)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScriptsPublishedDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScriptsPublishedDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScriptEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ScriptEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScriptEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the published scripts metadata. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>Task of ScriptEntityListing</returns>
+        public async System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsPublishedDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
+        {
+             ApiResponse<ScriptEntityListing> localVarResponse = await GetScriptsPublishedDivisionviewsAsyncWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion, divisionIds);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the published scripts metadata. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand (optional)</param>
+        /// <param name="name">Name filter (optional)</param>
+        /// <param name="feature">Feature filter (optional)</param>
+        /// <param name="flowId">Secure flow id filter (optional)</param>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="divisionIds">Filters scripts to requested divisionIds (optional)</param>
+        /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
+        { 
+
+            var localVarPath = "/api/v2/scripts/published/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (feature != null) localVarQueryParams.Add(new Tuple<string, string>("feature", this.Configuration.ApiClient.ParameterToString(feature)));
+            if (flowId != null) localVarQueryParams.Add(new Tuple<string, string>("flowId", this.Configuration.ApiClient.ParameterToString(flowId)));
+            if (scriptDataVersion != null) localVarQueryParams.Add(new Tuple<string, string>("scriptDataVersion", this.Configuration.ApiClient.ParameterToString(scriptDataVersion)));
+            if (divisionIds != null) localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(divisionIds)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScriptsPublishedDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScriptsPublishedDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ScriptEntityListing>(localVarStatusCode,
                 localVarHeaders,

@@ -90,11 +90,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Script" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
+        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="VersionId">VersionId.</param>
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -106,9 +112,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Variables">Variables.</param>
         /// <param name="CustomActions">CustomActions.</param>
         /// <param name="Pages">Pages.</param>
-        public Script(string Name = null, string VersionId = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, DateTime? PublishedDate = null, DateTime? VersionDate = null, string StartPageId = null, string StartPageName = null, Object Features = null, Object Variables = null, Object CustomActions = null, List<Page> Pages = null)
+        public Script(string Name = null, Division Division = null, string VersionId = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, DateTime? PublishedDate = null, DateTime? VersionDate = null, string StartPageId = null, string StartPageName = null, Object Features = null, Object Variables = null, Object CustomActions = null, List<Page> Pages = null)
         {
             this.Name = Name;
+            this.Division = Division;
             this.VersionId = VersionId;
             this.CreatedDate = CreatedDate;
             this.ModifiedDate = ModifiedDate;
@@ -139,6 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public Division Division { get; set; }
         
         
         
@@ -253,6 +269,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  VersionId: ").Append(VersionId).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
@@ -314,6 +331,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 ) &&
                 (
                     this.VersionId == other.VersionId ||
@@ -394,6 +416,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.VersionId != null)
                     hash = hash * 59 + this.VersionId.GetHashCode();

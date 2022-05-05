@@ -234,8 +234,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">The ID of the user that last modified the queue..</param>
         /// <param name="CreatedBy">The ID of the user that created the queue..</param>
         /// <param name="MediaSettings">The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM.</param>
-        /// <param name="RoutingRules">The routing rules for the queue, used for routing to known or preferred agents..</param>
-        /// <param name="Bullseye">The bulls-eye settings for the queue..</param>
+        /// <param name="RoutingRules">The routing rules for the queue, used for Preferred Agent Routing..</param>
+        /// <param name="Bullseye">The bullseye settings for the queue..</param>
         /// <param name="AcwSettings">The ACW settings for the queue..</param>
         /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations..</param>
         /// <param name="QueueFlow">The in-queue flow to use for call conversations waiting in queue..</param>
@@ -394,18 +394,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The routing rules for the queue, used for routing to known or preferred agents.
+        /// The routing rules for the queue, used for Preferred Agent Routing.
         /// </summary>
-        /// <value>The routing rules for the queue, used for routing to known or preferred agents.</value>
+        /// <value>The routing rules for the queue, used for Preferred Agent Routing.</value>
         [DataMember(Name="routingRules", EmitDefaultValue=false)]
         public List<RoutingRule> RoutingRules { get; set; }
         
         
         
         /// <summary>
-        /// The bulls-eye settings for the queue.
+        /// The bullseye settings for the queue.
         /// </summary>
-        /// <value>The bulls-eye settings for the queue.</value>
+        /// <value>The bullseye settings for the queue.</value>
         [DataMember(Name="bullseye", EmitDefaultValue=false)]
         public Bullseye Bullseye { get; set; }
         

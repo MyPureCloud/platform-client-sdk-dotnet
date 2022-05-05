@@ -13,21 +13,37 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// The unique identifier of the user.
+    /// ConditionalGroupRouting
     /// </summary>
     [DataContract]
-    public partial class UserRoutingStatusObject :  IEquatable<UserRoutingStatusObject>
+    public partial class ConditionalGroupRouting :  IEquatable<ConditionalGroupRouting>
     {
+        
+        
+        
+        
+        
         
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserRoutingStatusObject" /> class.
+        /// Initializes a new instance of the <see cref="ConditionalGroupRouting" /> class.
         /// </summary>
-        public UserRoutingStatusObject()
+        /// <param name="Rules">The set of rules that defines Conditional Group Routing for this queue.</param>
+        public ConditionalGroupRouting(List<ConditionalGroupRoutingRule> Rules = null)
         {
+            this.Rules = Rules;
             
         }
+        
+        
+        
+        /// <summary>
+        /// The set of rules that defines Conditional Group Routing for this queue
+        /// </summary>
+        /// <value>The set of rules that defines Conditional Group Routing for this queue</value>
+        [DataMember(Name="rules", EmitDefaultValue=false)]
+        public List<ConditionalGroupRoutingRule> Rules { get; set; }
         
         
         /// <summary>
@@ -37,8 +53,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UserRoutingStatusObject {\n");
+            sb.Append("class ConditionalGroupRouting {\n");
             
+            sb.Append("  Rules: ").Append(Rules).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -64,21 +81,26 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UserRoutingStatusObject);
+            return this.Equals(obj as ConditionalGroupRouting);
         }
 
         /// <summary>
-        /// Returns true if UserRoutingStatusObject instances are equal
+        /// Returns true if ConditionalGroupRouting instances are equal
         /// </summary>
-        /// <param name="other">Instance of UserRoutingStatusObject to be compared</param>
+        /// <param name="other">Instance of ConditionalGroupRouting to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UserRoutingStatusObject other)
+        public bool Equals(ConditionalGroupRouting other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.Rules == other.Rules ||
+                    this.Rules != null &&
+                    this.Rules.SequenceEqual(other.Rules)
+                );
         }
 
         /// <summary>
@@ -92,6 +114,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Rules != null)
+                    hash = hash * 59 + this.Rules.GetHashCode();
                 
                 return hash;
             }

@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WhatsAppIntegrationRequest" /> class.
@@ -62,12 +67,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the WhatsApp Integration (required).</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
+        /// <param name="MessagingSetting">MessagingSetting.</param>
         /// <param name="PhoneNumber">The phone number associated to the whatsApp integration (required).</param>
         /// <param name="WabaCertificate">The waba(WhatsApp Business Manager) certificate associated to the WhatsApp integration phone number (required).</param>
-        public WhatsAppIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, string PhoneNumber = null, string WabaCertificate = null)
+        public WhatsAppIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, string PhoneNumber = null, string WabaCertificate = null)
         {
             this.Name = Name;
             this.SupportedContent = SupportedContent;
+            this.MessagingSetting = MessagingSetting;
             this.PhoneNumber = PhoneNumber;
             this.WabaCertificate = WabaCertificate;
             
@@ -99,6 +106,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Defines the SupportedContent profile configured for an integration</value>
         [DataMember(Name="supportedContent", EmitDefaultValue=false)]
         public SupportedContentReference SupportedContent { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets MessagingSetting
+        /// </summary>
+        [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
+        public MessagingSettingReference MessagingSetting { get; set; }
         
         
         
@@ -140,6 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
+            sb.Append("  MessagingSetting: ").Append(MessagingSetting).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  WabaCertificate: ").Append(WabaCertificate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -199,6 +215,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SupportedContent.Equals(other.SupportedContent)
                 ) &&
                 (
+                    this.MessagingSetting == other.MessagingSetting ||
+                    this.MessagingSetting != null &&
+                    this.MessagingSetting.Equals(other.MessagingSetting)
+                ) &&
+                (
                     this.PhoneNumber == other.PhoneNumber ||
                     this.PhoneNumber != null &&
                     this.PhoneNumber.Equals(other.PhoneNumber)
@@ -235,6 +256,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SupportedContent != null)
                     hash = hash * 59 + this.SupportedContent.GetHashCode();
+                
+                if (this.MessagingSetting != null)
+                    hash = hash * 59 + this.MessagingSetting.GetHashCode();
                 
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();

@@ -1460,7 +1460,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Dnis">Dialed number identification service (number dialed by the calling party).</param>
         /// <param name="EdgeId">Unique identifier of the edge device.</param>
         /// <param name="EligibleAgentCounts">Number of eligible agents for each predictive routing attempt.</param>
-        /// <param name="ExtendedDeliveryStatus">Extended email delivery status.</param>
+        /// <param name="ExtendedDeliveryStatus">Extended delivery status.</param>
         /// <param name="ExternalContactId">External contact identifier.</param>
         /// <param name="ExternalMediaCount">Count of any media (images, files, etc) included on the external session.</param>
         /// <param name="ExternalOrganizationId">External organization identifier.</param>
@@ -1799,9 +1799,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Extended email delivery status
+        /// Extended delivery status
         /// </summary>
-        /// <value>Extended email delivery status</value>
+        /// <value>Extended delivery status</value>
         [DataMember(Name="extendedDeliveryStatus", EmitDefaultValue=false)]
         public string ExtendedDeliveryStatus { get; set; }
         

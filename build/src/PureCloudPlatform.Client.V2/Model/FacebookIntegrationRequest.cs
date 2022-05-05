@@ -65,6 +65,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="FacebookIntegrationRequest" /> class.
@@ -77,15 +82,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the Facebook Integration (required).</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
+        /// <param name="MessagingSetting">MessagingSetting.</param>
         /// <param name="PageAccessToken">The long-lived Page Access Token of Facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When a pageAccessToken is provided, pageId and userAccessToken are not required..</param>
         /// <param name="UserAccessToken">The short-lived User Access Token of the Facebook user logged into the Facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When userAccessToken is provided, pageId is mandatory.  When userAccessToken/pageId combination is provided, pageAccessToken is not required..</param>
         /// <param name="PageId">The page Id of Facebook page. The pageId is required when userAccessToken is provided..</param>
         /// <param name="AppId">The app Id of Facebook app. The appId is required when a customer wants to use their own approved Facebook app..</param>
         /// <param name="AppSecret">The app Secret of Facebook app. The appSecret is required when appId is provided..</param>
-        public FacebookIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, string PageAccessToken = null, string UserAccessToken = null, string PageId = null, string AppId = null, string AppSecret = null)
+        public FacebookIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, string PageAccessToken = null, string UserAccessToken = null, string PageId = null, string AppId = null, string AppSecret = null)
         {
             this.Name = Name;
             this.SupportedContent = SupportedContent;
+            this.MessagingSetting = MessagingSetting;
             this.PageAccessToken = PageAccessToken;
             this.UserAccessToken = UserAccessToken;
             this.PageId = PageId;
@@ -120,6 +127,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Defines the SupportedContent profile configured for an integration</value>
         [DataMember(Name="supportedContent", EmitDefaultValue=false)]
         public SupportedContentReference SupportedContent { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets MessagingSetting
+        /// </summary>
+        [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
+        public MessagingSettingReference MessagingSetting { get; set; }
         
         
         
@@ -188,6 +203,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
+            sb.Append("  MessagingSetting: ").Append(MessagingSetting).Append("\n");
             sb.Append("  PageAccessToken: ").Append(PageAccessToken).Append("\n");
             sb.Append("  UserAccessToken: ").Append(UserAccessToken).Append("\n");
             sb.Append("  PageId: ").Append(PageId).Append("\n");
@@ -250,6 +266,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SupportedContent.Equals(other.SupportedContent)
                 ) &&
                 (
+                    this.MessagingSetting == other.MessagingSetting ||
+                    this.MessagingSetting != null &&
+                    this.MessagingSetting.Equals(other.MessagingSetting)
+                ) &&
+                (
                     this.PageAccessToken == other.PageAccessToken ||
                     this.PageAccessToken != null &&
                     this.PageAccessToken.Equals(other.PageAccessToken)
@@ -301,6 +322,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SupportedContent != null)
                     hash = hash * 59 + this.SupportedContent.GetHashCode();
+                
+                if (this.MessagingSetting != null)
+                    hash = hash * 59 + this.MessagingSetting.GetHashCode();
                 
                 if (this.PageAccessToken != null)
                     hash = hash * 59 + this.PageAccessToken.GetHashCode();

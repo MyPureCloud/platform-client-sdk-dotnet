@@ -15,6 +15,8 @@ title: ConversationMessageContent
 | **Template** | [**ConversationContentNotificationTemplate**](ConversationContentNotificationTemplate.html) | Template notification content. | [optional] |
 | **ButtonResponse** | [**ConversationContentButtonResponse**](ConversationContentButtonResponse.html) | Button response content. | [optional] |
 | **Generic** | [**ConversationContentGeneric**](ConversationContentGeneric.html) | Generic Template Object | [optional] |
+| **Card** | [**ConversationContentCard**](ConversationContentCard.html) | Card (Generic Template) Object | [optional] |
+| **Carousel** | [**ConversationContentCarousel**](ConversationContentCarousel.html) | Carousel (Multiple Generic Template) Object | [optional] |
 {: class="table table-striped"}
 
 

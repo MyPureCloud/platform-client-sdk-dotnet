@@ -102,11 +102,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets MessageStatus
         /// </summary>
         [DataMember(Name="messageStatus", EmitDefaultValue=false)]
         public MessageStatusEnum? MessageStatus { get; set; }
+        
+        
         
         
         
@@ -123,7 +128,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageStatus">MessageStatus.</param>
         /// <param name="Media">Media.</param>
         /// <param name="Stickers">Stickers.</param>
-        public ConversationMessageEventTopicMessageDetails(ConversationMessageEventTopicUriReference Message = null, DateTime? MessageTime = null, int? MessageSegmentCount = null, MessageStatusEnum? MessageStatus = null, List<ConversationMessageEventTopicMessageMedia> Media = null, List<ConversationMessageEventTopicMessageSticker> Stickers = null)
+        /// <param name="ErrorInfo">ErrorInfo.</param>
+        public ConversationMessageEventTopicMessageDetails(ConversationMessageEventTopicUriReference Message = null, DateTime? MessageTime = null, int? MessageSegmentCount = null, MessageStatusEnum? MessageStatus = null, List<ConversationMessageEventTopicMessageMedia> Media = null, List<ConversationMessageEventTopicMessageSticker> Stickers = null, ConversationMessageEventTopicErrorDetails ErrorInfo = null)
         {
             this.Message = Message;
             this.MessageTime = MessageTime;
@@ -131,6 +137,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessageStatus = MessageStatus;
             this.Media = Media;
             this.Stickers = Stickers;
+            this.ErrorInfo = ErrorInfo;
             
         }
         
@@ -177,6 +184,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ConversationMessageEventTopicMessageSticker> Stickers { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets ErrorInfo
+        /// </summary>
+        [DataMember(Name="errorInfo", EmitDefaultValue=false)]
+        public ConversationMessageEventTopicErrorDetails ErrorInfo { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,6 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessageStatus: ").Append(MessageStatus).Append("\n");
             sb.Append("  Media: ").Append(Media).Append("\n");
             sb.Append("  Stickers: ").Append(Stickers).Append("\n");
+            sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -261,6 +277,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Stickers == other.Stickers ||
                     this.Stickers != null &&
                     this.Stickers.SequenceEqual(other.Stickers)
+                ) &&
+                (
+                    this.ErrorInfo == other.ErrorInfo ||
+                    this.ErrorInfo != null &&
+                    this.ErrorInfo.Equals(other.ErrorInfo)
                 );
         }
 
@@ -293,6 +314,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Stickers != null)
                     hash = hash * 59 + this.Stickers.GetHashCode();
+                
+                if (this.ErrorInfo != null)
+                    hash = hash * 59 + this.ErrorInfo.GetHashCode();
                 
                 return hash;
             }

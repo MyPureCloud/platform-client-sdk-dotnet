@@ -18,6 +18,7 @@ title: AuditLogMessage
 | **Action** | **string** | Action that took place. | [optional] |
 | **Entity** | [**DomainEntityRef**](DomainEntityRef.html) | Entity that was impacted. | [optional] |
 | **EntityType** | **string** | Type of the entity that was impacted. | [optional] |
+| **Status** | **string** | Status of the event being audited | [optional] |
 | **PropertyChanges** | [**List&lt;PropertyChange&gt;**](PropertyChange.html) | List of properties that were changed and changes made to those properties. | [optional] |
 | **Context** | **Dictionary&lt;string, string&gt;** | Additional context for this message. | [optional] |
 {: class="table table-striped"}

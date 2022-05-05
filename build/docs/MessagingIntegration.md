@@ -10,6 +10,7 @@ title: MessagingIntegration
 | **Id** | **string** | A unique Integration Id | |
 | **Name** | **string** | The name of the Integration | |
 | **SupportedContent** | [**SupportedContentReference**](SupportedContentReference.html) | Defines the SupportedContent profile configured for an integration | [optional] |
+| **MessagingSetting** | [**MessagingSettingReference**](MessagingSettingReference.html) |  | [optional] |
 | **Status** | **string** | The status of the Integration | [optional] |
 | **MessengerType** | **string** | The type of Messaging Integration | |
 | **Recipient** | [**DomainEntityRef**](DomainEntityRef.html) | The recipient associated to the Integration. This recipient is used to associate a flow to an integration | [optional] |

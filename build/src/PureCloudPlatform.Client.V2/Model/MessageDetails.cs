@@ -104,12 +104,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates the delivery status of the message.
         /// </summary>
         /// <value>Indicates the delivery status of the message.</value>
         [DataMember(Name="messageStatus", EmitDefaultValue=false)]
         public MessageStatusEnum? MessageStatus { get; set; }
+        
+        
         
         
         
@@ -131,7 +136,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageTime">The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Media">The media (images, files, etc) associated with this message, if any.</param>
         /// <param name="Stickers">One or more stickers associated with this message, if any.</param>
-        public MessageDetails(string MessageId = null, string MessageURI = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, DateTime? MessageTime = null, List<MessageMedia> Media = null, List<MessageSticker> Stickers = null)
+        /// <param name="ErrorInfo">Provider specific error information for a communication..</param>
+        public MessageDetails(string MessageId = null, string MessageURI = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, DateTime? MessageTime = null, List<MessageMedia> Media = null, List<MessageSticker> Stickers = null, ErrorBody ErrorInfo = null)
         {
             this.MessageId = MessageId;
             this.MessageURI = MessageURI;
@@ -140,6 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessageTime = MessageTime;
             this.Media = Media;
             this.Stickers = Stickers;
+            this.ErrorInfo = ErrorInfo;
             
         }
         
@@ -200,6 +207,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<MessageSticker> Stickers { get; set; }
         
         
+        
+        /// <summary>
+        /// Provider specific error information for a communication.
+        /// </summary>
+        /// <value>Provider specific error information for a communication.</value>
+        [DataMember(Name="errorInfo", EmitDefaultValue=false)]
+        public ErrorBody ErrorInfo { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -216,6 +232,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessageTime: ").Append(MessageTime).Append("\n");
             sb.Append("  Media: ").Append(Media).Append("\n");
             sb.Append("  Stickers: ").Append(Stickers).Append("\n");
+            sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -290,6 +307,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Stickers == other.Stickers ||
                     this.Stickers != null &&
                     this.Stickers.SequenceEqual(other.Stickers)
+                ) &&
+                (
+                    this.ErrorInfo == other.ErrorInfo ||
+                    this.ErrorInfo != null &&
+                    this.ErrorInfo.Equals(other.ErrorInfo)
                 );
         }
 
@@ -325,6 +347,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Stickers != null)
                     hash = hash * 59 + this.Stickers.GetHashCode();
+                
+                if (this.ErrorInfo != null)
+                    hash = hash * 59 + this.ErrorInfo.GetHashCode();
                 
                 return hash;
             }

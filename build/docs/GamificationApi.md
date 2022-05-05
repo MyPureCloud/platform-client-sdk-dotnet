@@ -15,7 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGamificationMetricdefinition**](GamificationApi.html#getgamificationmetricdefinition) | **GET** /api/v2/gamification/metricdefinitions/{metricDefinitionId} | Metric definition by id |
 | [**GetGamificationMetricdefinitions**](GamificationApi.html#getgamificationmetricdefinitions) | **GET** /api/v2/gamification/metricdefinitions | All metric definitions |
 | [**GetGamificationMetrics**](GamificationApi.html#getgamificationmetrics) | **GET** /api/v2/gamification/metrics | All gamified metrics for a given profile |
-| [**GetGamificationProfile**](GamificationApi.html#getgamificationprofile) | **GET** /api/v2/gamification/profiles/{performanceProfileId} | Performance profile by id |
+| [**GetGamificationProfile**](GamificationApi.html#getgamificationprofile) | **GET** /api/v2/gamification/profiles/{profileId} | Performance profile by id |
 | [**GetGamificationProfileMembers**](GamificationApi.html#getgamificationprofilemembers) | **GET** /api/v2/gamification/profiles/{performanceProfileId}/members | Members of a given performance profile |
 | [**GetGamificationProfileMetric**](GamificationApi.html#getgamificationprofilemetric) | **GET** /api/v2/gamification/profiles/{profileId}/metrics/{metricId} | Performance profile gamified metric by id |
 | [**GetGamificationProfileMetrics**](GamificationApi.html#getgamificationprofilemetrics) | **GET** /api/v2/gamification/profiles/{profileId}/metrics | All gamified metrics for a given performance profile |
@@ -44,15 +44,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGamificationTemplate**](GamificationApi.html#getgamificationtemplate) | **GET** /api/v2/gamification/templates/{templateId} | Objective template by id |
 | [**GetGamificationTemplates**](GamificationApi.html#getgamificationtemplates) | **GET** /api/v2/gamification/templates | All objective templates |
 | [**PostGamificationMetrics**](GamificationApi.html#postgamificationmetrics) | **POST** /api/v2/gamification/metrics | Creates a gamified metric with a given metric definition and metric objective |
-| [**PostGamificationProfileActivate**](GamificationApi.html#postgamificationprofileactivate) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/activate | Activate a performance profile |
-| [**PostGamificationProfileDeactivate**](GamificationApi.html#postgamificationprofiledeactivate) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/deactivate | Deactivate a performance profile |
+| [**PostGamificationProfileActivate**](GamificationApi.html#postgamificationprofileactivate) | **POST** /api/v2/gamification/profiles/{profileId}/activate | Activate a performance profile |
+| [**PostGamificationProfileDeactivate**](GamificationApi.html#postgamificationprofiledeactivate) | **POST** /api/v2/gamification/profiles/{profileId}/deactivate | Deactivate a performance profile |
 | [**PostGamificationProfileMembers**](GamificationApi.html#postgamificationprofilemembers) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/members | Assign members to a given performance profile |
 | [**PostGamificationProfileMembersValidate**](GamificationApi.html#postgamificationprofilemembersvalidate) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/members/validate | Validate member assignment |
 | [**PostGamificationProfileMetricLink**](GamificationApi.html#postgamificationprofilemetriclink) | **POST** /api/v2/gamification/profiles/{sourceProfileId}/metrics/{sourceMetricId}/link | Creates a linked metric |
 | [**PostGamificationProfileMetrics**](GamificationApi.html#postgamificationprofilemetrics) | **POST** /api/v2/gamification/profiles/{profileId}/metrics | Creates a gamified metric with a given metric definition and metric objective under in a performance profile |
 | [**PostGamificationProfiles**](GamificationApi.html#postgamificationprofiles) | **POST** /api/v2/gamification/profiles | Create a new custom performance profile |
 | [**PutGamificationMetric**](GamificationApi.html#putgamificationmetric) | **PUT** /api/v2/gamification/metrics/{metricId} | Updates a metric |
-| [**PutGamificationProfile**](GamificationApi.html#putgamificationprofile) | **PUT** /api/v2/gamification/profiles/{performanceProfileId} | Updates a performance profile |
+| [**PutGamificationProfile**](GamificationApi.html#putgamificationprofile) | **PUT** /api/v2/gamification/profiles/{profileId} | Updates a performance profile |
 | [**PutGamificationProfileMetric**](GamificationApi.html#putgamificationprofilemetric) | **PUT** /api/v2/gamification/profiles/{profileId}/metrics/{metricId} | Updates a metric in performance profile |
 | [**PutGamificationStatus**](GamificationApi.html#putgamificationstatus) | **PUT** /api/v2/gamification/status | Update gamification activation status |
 {: class="table table-striped"}
@@ -593,7 +593,7 @@ namespace Example
 
 <a name="getgamificationprofile"></a>
 
-## [**PerformanceProfile**](PerformanceProfile.html) GetGamificationProfile (string performanceProfileId)
+## [**PerformanceProfile**](PerformanceProfile.html) GetGamificationProfile (string profileId)
 
 
 
@@ -629,12 +629,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new GamificationApi();
-            var performanceProfileId = performanceProfileId_example;  // string | Performance Profile Id
+            var profileId = profileId_example;  // string | performanceProfileId
 
             try
             { 
                 // Performance profile by id
-                PerformanceProfile result = apiInstance.GetGamificationProfile(performanceProfileId);
+                PerformanceProfile result = apiInstance.GetGamificationProfile(profileId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -651,7 +651,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **performanceProfileId** | **string**| Performance Profile Id |  |
+| **profileId** | **string**| performanceProfileId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2541,7 +2541,7 @@ namespace Example
 
 <a name="postgamificationprofileactivate"></a>
 
-## [**PerformanceProfile**](PerformanceProfile.html) PostGamificationProfileActivate (string performanceProfileId)
+## [**PerformanceProfile**](PerformanceProfile.html) PostGamificationProfileActivate (string profileId)
 
 
 
@@ -2575,12 +2575,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new GamificationApi();
-            var performanceProfileId = performanceProfileId_example;  // string | Performance Profile Id
+            var profileId = profileId_example;  // string | performanceProfileId
 
             try
             { 
                 // Activate a performance profile
-                PerformanceProfile result = apiInstance.PostGamificationProfileActivate(performanceProfileId);
+                PerformanceProfile result = apiInstance.PostGamificationProfileActivate(profileId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2597,7 +2597,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **performanceProfileId** | **string**| Performance Profile Id |  |
+| **profileId** | **string**| performanceProfileId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2606,7 +2606,7 @@ namespace Example
 
 <a name="postgamificationprofiledeactivate"></a>
 
-## [**PerformanceProfile**](PerformanceProfile.html) PostGamificationProfileDeactivate (string performanceProfileId)
+## [**PerformanceProfile**](PerformanceProfile.html) PostGamificationProfileDeactivate (string profileId)
 
 
 
@@ -2640,12 +2640,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new GamificationApi();
-            var performanceProfileId = performanceProfileId_example;  // string | Performance Profile Id
+            var profileId = profileId_example;  // string | performanceProfileId
 
             try
             { 
                 // Deactivate a performance profile
-                PerformanceProfile result = apiInstance.PostGamificationProfileDeactivate(performanceProfileId);
+                PerformanceProfile result = apiInstance.PostGamificationProfileDeactivate(profileId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2662,7 +2662,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **performanceProfileId** | **string**| Performance Profile Id |  |
+| **profileId** | **string**| performanceProfileId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3077,7 +3077,7 @@ namespace Example
 
 <a name="putgamificationprofile"></a>
 
-## [**PerformanceProfile**](PerformanceProfile.html) PutGamificationProfile (string performanceProfileId, PerformanceProfile body = null)
+## [**PerformanceProfile**](PerformanceProfile.html) PutGamificationProfile (string profileId, PerformanceProfile body = null)
 
 
 
@@ -3111,13 +3111,13 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new GamificationApi();
-            var performanceProfileId = performanceProfileId_example;  // string | Performance Profile Id
+            var profileId = profileId_example;  // string | performanceProfileId
             var body = new PerformanceProfile(); // PerformanceProfile | performanceProfile (optional) 
 
             try
             { 
                 // Updates a performance profile
-                PerformanceProfile result = apiInstance.PutGamificationProfile(performanceProfileId, body);
+                PerformanceProfile result = apiInstance.PutGamificationProfile(profileId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3134,7 +3134,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **performanceProfileId** | **string**| Performance Profile Id |  |
+| **profileId** | **string**| performanceProfileId |  |
 | **body** | [**PerformanceProfile**](PerformanceProfile.html)| performanceProfile | [optional]  |
 {: class="table table-striped"}
 

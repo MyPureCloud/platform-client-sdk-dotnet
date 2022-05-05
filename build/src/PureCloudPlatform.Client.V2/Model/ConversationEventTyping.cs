@@ -46,12 +46,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Describes the type of Typing event.
         /// </summary>
         /// <value>Describes the type of Typing event.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
         
         
     
@@ -74,6 +79,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// The duration of the Typing event in milliseconds.
+        /// </summary>
+        /// <value>The duration of the Typing event in milliseconds.</value>
+        [DataMember(Name="duration", EmitDefaultValue=false)]
+        public long? Duration { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConversationEventTyping {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Duration: ").Append(Duration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -128,6 +143,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.Duration == other.Duration ||
+                    this.Duration != null &&
+                    this.Duration.Equals(other.Duration)
                 );
         }
 
@@ -145,6 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
+                if (this.Duration != null)
+                    hash = hash * 59 + this.Duration.GetHashCode();
                 
                 return hash;
             }

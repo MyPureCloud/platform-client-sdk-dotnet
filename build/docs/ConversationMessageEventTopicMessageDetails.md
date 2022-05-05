@@ -13,6 +13,7 @@ title: ConversationMessageEventTopicMessageDetails
 | **MessageStatus** | **string** |  | [optional] |
 | **Media** | [**List&lt;ConversationMessageEventTopicMessageMedia&gt;**](ConversationMessageEventTopicMessageMedia.html) |  | [optional] |
 | **Stickers** | [**List&lt;ConversationMessageEventTopicMessageSticker&gt;**](ConversationMessageEventTopicMessageSticker.html) |  | [optional] |
+| **ErrorInfo** | [**ConversationMessageEventTopicErrorDetails**](ConversationMessageEventTopicErrorDetails.html) |  | [optional] |
 {: class="table table-striped"}
 
 
