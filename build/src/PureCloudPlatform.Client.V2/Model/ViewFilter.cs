@@ -1405,7 +1405,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Genesysbyob for "GenesysByob"
             /// </summary>
             [EnumMember(Value = "GenesysByob")]
-            Genesysbyob
+            Genesysbyob,
+            
+            /// <summary>
+            /// Enum Amazonlexv2 for "AmazonLexV2"
+            /// </summary>
+            [EnumMember(Value = "AmazonLexV2")]
+            Amazonlexv2,
+            
+            /// <summary>
+            /// Enum Googledialogflowcxresell for "GoogleDialogFlowCxResell"
+            /// </summary>
+            [EnumMember(Value = "GoogleDialogFlowCxResell")]
+            Googledialogflowcxresell,
+            
+            /// <summary>
+            /// Enum Microsoftsttbotflow for "MicrosoftSttBotFlow"
+            /// </summary>
+            [EnumMember(Value = "MicrosoftSttBotFlow")]
+            Microsoftsttbotflow
         }
         
         

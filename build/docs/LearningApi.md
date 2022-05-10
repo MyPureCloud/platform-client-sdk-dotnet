@@ -217,7 +217,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **assignmentId** | **string**| The ID of Learning Assignment |  |
-| **expand** | [**List<string>**](string.html)| Fields to expand in response | [optional] <br />**Values**: module, assessment, assessmentForm |
+| **expand** | [**List<string>**](string.html)| Fields to expand in response | [optional] <br />**Values**: module, assessment, assessmentForm, module.coverArt |
 {: class="table table-striped"}
 
 ### Return type
@@ -467,7 +467,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **moduleId** | **string**| The ID of the learning module |  |
-| **expand** | [**List<string>**](string.html)| Fields to expand in response(case insensitive) | [optional] <br />**Values**: assessmentForm |
+| **expand** | [**List<string>**](string.html)| Fields to expand in response(case insensitive) | [optional] <br />**Values**: assessmentForm, coverArt |
 {: class="table table-striped"}
 
 ### Return type
@@ -601,7 +601,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **moduleId** | **string**| The ID of the learning module |  |
 | **versionId** | **string**| The version of learning module |  |
-| **expand** | [**List<string>**](string.html)| Fields to expand in response(case insensitive) | [optional] <br />**Values**: assessmentForm |
+| **expand** | [**List<string>**](string.html)| Fields to expand in response(case insensitive) | [optional] <br />**Values**: assessmentForm, coverArt |
 {: class="table table-striped"}
 
 ### Return type

@@ -66,6 +66,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowsDatatablesDivisionviews**](ArchitectApi.html#getflowsdatatablesdivisionviews) | **GET** /api/v2/flows/datatables/divisionviews | Retrieve a list of datatables for the org |
 | [**GetFlowsDivisionviews**](ArchitectApi.html#getflowsdivisionviews) | **GET** /api/v2/flows/divisionviews | Get a pageable list of basic flow information objects filterable by query parameters. |
 | [**GetFlowsExecution**](ArchitectApi.html#getflowsexecution) | **GET** /api/v2/flows/executions/{flowExecutionId} | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
+| [**GetFlowsJob**](ArchitectApi.html#getflowsjob) | **GET** /api/v2/flows/jobs/{jobId} | Fetch Architect Job Status |
 | [**GetFlowsMilestone**](ArchitectApi.html#getflowsmilestone) | **GET** /api/v2/flows/milestones/{milestoneId} | Get a flow milestone |
 | [**GetFlowsMilestones**](ArchitectApi.html#getflowsmilestones) | **GET** /api/v2/flows/milestones | Get a pageable list of flow milestones, filtered by query parameters |
 | [**GetFlowsMilestonesDivisionviews**](ArchitectApi.html#getflowsmilestonesdivisionviews) | **GET** /api/v2/flows/milestones/divisionviews | Get a pageable list of basic flow milestone information objects filterable by query parameters. |
@@ -96,6 +97,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostFlowsDatatableRows**](ArchitectApi.html#postflowsdatatablerows) | **POST** /api/v2/flows/datatables/{datatableId}/rows | Create a new row entry for the datatable. |
 | [**PostFlowsDatatables**](ArchitectApi.html#postflowsdatatables) | **POST** /api/v2/flows/datatables | Create a new datatable with the specified json-schema definition |
 | [**PostFlowsExecutions**](ArchitectApi.html#postflowsexecutions) | **POST** /api/v2/flows/executions | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
+| [**PostFlowsJobs**](ArchitectApi.html#postflowsjobs) | **POST** /api/v2/flows/jobs | Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job. |
 | [**PostFlowsMilestones**](ArchitectApi.html#postflowsmilestones) | **POST** /api/v2/flows/milestones | Create a flow milestone |
 | [**PostFlowsOutcomes**](ArchitectApi.html#postflowsoutcomes) | **POST** /api/v2/flows/outcomes | Create a flow outcome |
 | [**PutArchitectEmergencygroup**](ArchitectApi.html#putarchitectemergencygroup) | **PUT** /api/v2/architect/emergencygroups/{emergencyGroupId} | Updates a emergency group by ID |
@@ -4259,6 +4261,73 @@ namespace Example
 
 [**FlowRuntimeExecution**](FlowRuntimeExecution.html)
 
+<a name="getflowsjob"></a>
+
+## [**ArchitectJobStateResponse**](ArchitectJobStateResponse.html) GetFlowsJob (string jobId, List<string> expand = null)
+
+
+
+Fetch Architect Job Status
+
+
+
+Requires ALL permissions: 
+
+* architect:job:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var jobId = jobId_example;  // string | Job ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+
+            try
+            { 
+                // Fetch Architect Job Status
+                ArchitectJobStateResponse result = apiInstance.GetFlowsJob(jobId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| Job ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: messages |
+{: class="table table-striped"}
+
+### Return type
+
+[**ArchitectJobStateResponse**](ArchitectJobStateResponse.html)
+
 <a name="getflowsmilestone"></a>
 
 ## [**FlowMilestone**](FlowMilestone.html) GetFlowsMilestone (string milestoneId)
@@ -6277,6 +6346,66 @@ namespace Example
 ### Return type
 
 [**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse.html)
+
+<a name="postflowsjobs"></a>
+
+## [**RegisterArchitectJobResponse**](RegisterArchitectJobResponse.html) PostFlowsJobs ()
+
+
+
+Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
+
+
+
+Requires ALL permissions: 
+
+* architect:job:create
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+
+            try
+            { 
+                // Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
+                RegisterArchitectJobResponse result = apiInstance.PostFlowsJobs();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**RegisterArchitectJobResponse**](RegisterArchitectJobResponse.html)
 
 <a name="postflowsmilestones"></a>
 

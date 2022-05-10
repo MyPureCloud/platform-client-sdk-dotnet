@@ -98,6 +98,39 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The type of contact
+        /// </summary>
+        /// <value>The type of contact</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Ephemeral for "Ephemeral"
+            /// </summary>
+            [EnumMember(Value = "Ephemeral")]
+            Ephemeral,
+            
+            /// <summary>
+            /// Enum Identified for "Identified"
+            /// </summary>
+            [EnumMember(Value = "Identified")]
+            Identified,
+            
+            /// <summary>
+            /// Enum Curated for "Curated"
+            /// </summary>
+            [EnumMember(Value = "Curated")]
+            Curated
+        }
         
         
         
@@ -145,6 +178,34 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The type of contact
+        /// </summary>
+        /// <value>The type of contact</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
         
         
         
@@ -439,6 +500,35 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        /// <summary>
+        /// The contact at the head of the merge tree. If null, this contact is not a part of any merge.
+        /// </summary>
+        /// <value>The contact at the head of the merge tree. If null, this contact is not a part of any merge.</value>
+        [DataMember(Name="canonicalContact", EmitDefaultValue=false)]
+        public ContactAddressableEntityRef CanonicalContact { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The set of all contacts that are a part of the merge tree. If null, this contact is not a part of any merge.
+        /// </summary>
+        /// <value>The set of all contacts that are a part of the merge tree. If null, this contact is not a part of any merge.</value>
+        [DataMember(Name="mergeSet", EmitDefaultValue=false)]
+        public List<ContactAddressableEntityRef> MergeSet { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Information about the merge history of this contact. If null, this contact is not a part of any merge.
+        /// </summary>
+        /// <value>Information about the merge history of this contact. If null, this contact is not a part of any merge.</value>
+        [DataMember(Name="mergeOperation", EmitDefaultValue=false)]
+        public MergeOperation MergeOperation { get; private set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -482,6 +572,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  CanonicalContact: ").Append(CanonicalContact).Append("\n");
+            sb.Append("  MergeSet: ").Append(MergeSet).Append("\n");
+            sb.Append("  MergeOperation: ").Append(MergeOperation).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -654,6 +748,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalDataSources.SequenceEqual(other.ExternalDataSources)
                 ) &&
                 (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.CanonicalContact == other.CanonicalContact ||
+                    this.CanonicalContact != null &&
+                    this.CanonicalContact.Equals(other.CanonicalContact)
+                ) &&
+                (
+                    this.MergeSet == other.MergeSet ||
+                    this.MergeSet != null &&
+                    this.MergeSet.SequenceEqual(other.MergeSet)
+                ) &&
+                (
+                    this.MergeOperation == other.MergeOperation ||
+                    this.MergeOperation != null &&
+                    this.MergeOperation.Equals(other.MergeOperation)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -749,6 +863,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ExternalDataSources != null)
                     hash = hash * 59 + this.ExternalDataSources.GetHashCode();
+                
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
+                
+                if (this.CanonicalContact != null)
+                    hash = hash * 59 + this.CanonicalContact.GetHashCode();
+                
+                if (this.MergeSet != null)
+                    hash = hash * 59 + this.MergeSet.GetHashCode();
+                
+                if (this.MergeOperation != null)
+                    hash = hash * 59 + this.MergeOperation.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

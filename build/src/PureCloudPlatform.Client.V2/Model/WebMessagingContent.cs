@@ -57,8 +57,26 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Generictemplate for "GenericTemplate"
             /// </summary>
             [EnumMember(Value = "GenericTemplate")]
-            Generictemplate
+            Generictemplate,
+            
+            /// <summary>
+            /// Enum Card for "Card"
+            /// </summary>
+            [EnumMember(Value = "Card")]
+            Card,
+            
+            /// <summary>
+            /// Enum Carousel for "Carousel"
+            /// </summary>
+            [EnumMember(Value = "Carousel")]
+            Carousel
         }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -92,6 +110,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WebMessagingContent" /> class.
@@ -99,11 +121,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QuickReply">Quick reply content..</param>
         /// <param name="ButtonResponse">Button response content..</param>
         /// <param name="Generic">Generic content..</param>
-        public WebMessagingContent(WebMessagingQuickReply QuickReply = null, WebMessagingButtonResponse ButtonResponse = null, WebMessagingGeneric Generic = null)
+        /// <param name="Card">Card content.</param>
+        /// <param name="Carousel">Carousel content.</param>
+        public WebMessagingContent(WebMessagingQuickReply QuickReply = null, WebMessagingButtonResponse ButtonResponse = null, WebMessagingGeneric Generic = null, ContentCard Card = null, ContentCarousel Carousel = null)
         {
             this.QuickReply = QuickReply;
             this.ButtonResponse = ButtonResponse;
             this.Generic = Generic;
+            this.Card = Card;
+            this.Carousel = Carousel;
             
         }
         
@@ -146,6 +172,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public WebMessagingGeneric Generic { get; set; }
         
         
+        
+        /// <summary>
+        /// Card content
+        /// </summary>
+        /// <value>Card content</value>
+        [DataMember(Name="card", EmitDefaultValue=false)]
+        public ContentCard Card { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Carousel content
+        /// </summary>
+        /// <value>Carousel content</value>
+        [DataMember(Name="carousel", EmitDefaultValue=false)]
+        public ContentCarousel Carousel { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -160,6 +204,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QuickReply: ").Append(QuickReply).Append("\n");
             sb.Append("  ButtonResponse: ").Append(ButtonResponse).Append("\n");
             sb.Append("  Generic: ").Append(Generic).Append("\n");
+            sb.Append("  Card: ").Append(Card).Append("\n");
+            sb.Append("  Carousel: ").Append(Carousel).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -224,6 +270,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Generic == other.Generic ||
                     this.Generic != null &&
                     this.Generic.Equals(other.Generic)
+                ) &&
+                (
+                    this.Card == other.Card ||
+                    this.Card != null &&
+                    this.Card.Equals(other.Card)
+                ) &&
+                (
+                    this.Carousel == other.Carousel ||
+                    this.Carousel != null &&
+                    this.Carousel.Equals(other.Carousel)
                 );
         }
 
@@ -253,6 +309,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Generic != null)
                     hash = hash * 59 + this.Generic.GetHashCode();
+                
+                if (this.Card != null)
+                    hash = hash * 59 + this.Card.GetHashCode();
+                
+                if (this.Carousel != null)
+                    hash = hash * 59 + this.Carousel.GetHashCode();
                 
                 return hash;
             }

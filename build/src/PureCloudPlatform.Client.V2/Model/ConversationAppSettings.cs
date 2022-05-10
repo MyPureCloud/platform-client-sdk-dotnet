@@ -65,12 +65,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Deprecated. The auto start type for the messenger conversation
         /// </summary>
         /// <value>Deprecated. The auto start type for the messenger conversation</value>
         [DataMember(Name="autoStartType", EmitDefaultValue=false)]
         public AutoStartTypeEnum? AutoStartType { get; set; }
+        
+        
         
         
         
@@ -83,12 +88,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShowUserTypingIndicator">The toggle to enable or disable typing indicator for messenger.</param>
         /// <param name="AutoStartType">Deprecated. The auto start type for the messenger conversation.</param>
         /// <param name="AutoStart">The auto start for the messenger conversation.</param>
-        public ConversationAppSettings(bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null, AutoStartTypeEnum? AutoStartType = null, AutoStart AutoStart = null)
+        /// <param name="Markdown">The markdown for the messenger app.</param>
+        public ConversationAppSettings(bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null, AutoStartTypeEnum? AutoStartType = null, AutoStart AutoStart = null, Markdown Markdown = null)
         {
             this.ShowAgentTypingIndicator = ShowAgentTypingIndicator;
             this.ShowUserTypingIndicator = ShowUserTypingIndicator;
             this.AutoStartType = AutoStartType;
             this.AutoStart = AutoStart;
+            this.Markdown = Markdown;
             
         }
         
@@ -122,6 +129,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public AutoStart AutoStart { get; set; }
         
         
+        
+        /// <summary>
+        /// The markdown for the messenger app
+        /// </summary>
+        /// <value>The markdown for the messenger app</value>
+        [DataMember(Name="markdown", EmitDefaultValue=false)]
+        public Markdown Markdown { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -135,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ShowUserTypingIndicator: ").Append(ShowUserTypingIndicator).Append("\n");
             sb.Append("  AutoStartType: ").Append(AutoStartType).Append("\n");
             sb.Append("  AutoStart: ").Append(AutoStart).Append("\n");
+            sb.Append("  Markdown: ").Append(Markdown).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -194,6 +211,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AutoStart == other.AutoStart ||
                     this.AutoStart != null &&
                     this.AutoStart.Equals(other.AutoStart)
+                ) &&
+                (
+                    this.Markdown == other.Markdown ||
+                    this.Markdown != null &&
+                    this.Markdown.Equals(other.Markdown)
                 );
         }
 
@@ -220,6 +242,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AutoStart != null)
                     hash = hash * 59 + this.AutoStart.GetHashCode();
+                
+                if (this.Markdown != null)
+                    hash = hash * 59 + this.Markdown.GetHashCode();
                 
                 return hash;
             }

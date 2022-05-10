@@ -2474,6 +2474,25 @@
     "return": "FlowRuntimeExecution",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetFlowsExecutionExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ArchitectApi();\n            var flowExecutionId = \"flowExecutionId_example\";  // string | flow execution ID\n\n            try\n            { \n                // Get a flow execution's details. Flow execution details are available for several days after the flow is started.\n                FlowRuntimeExecution result = apiInstance.GetFlowsExecution(flowExecutionId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Architect.GetFlowsExecution: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getflowsjob": {
+    "operationId": "getflowsjob",
+    "functionName": "GetFlowsJob",
+    "signature": "GetFlowsJob(jobId, expand)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "List<string>",
+        "required": "false"
+      }
+    ],
+    "return": "ArchitectJobStateResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetFlowsJobExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ArchitectApi();\n            var jobId = \"jobId_example\";  // string | Job ID\n            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) \n\n            try\n            { \n                // Fetch Architect Job Status\n                ArchitectJobStateResponse result = apiInstance.GetFlowsJob(jobId, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Architect.GetFlowsJob: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getflowsmilestone": {
     "operationId": "getflowsmilestone",
     "functionName": "GetFlowsMilestone",
@@ -3060,6 +3079,13 @@
     ],
     "return": "FlowExecutionLaunchResponse",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostFlowsExecutionsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ArchitectApi();\n            var flowLaunchRequest = new FlowExecutionLaunchRequest(); // FlowExecutionLaunchRequest | \n\n            try\n            { \n                // Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.\n                FlowExecutionLaunchResponse result = apiInstance.PostFlowsExecutions(flowLaunchRequest);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Architect.PostFlowsExecutions: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postflowsjobs": {
+    "operationId": "postflowsjobs",
+    "functionName": "PostFlowsJobs",
+    "signature": "PostFlowsJobs()",
+    "return": "RegisterArchitectJobResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostFlowsJobsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ArchitectApi();\n\n            try\n            { \n                // Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.\n                RegisterArchitectJobResponse result = apiInstance.PostFlowsJobs();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Architect.PostFlowsJobs: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postflowsmilestones": {
     "operationId": "postflowsmilestones",
@@ -17218,6 +17244,32 @@
     ],
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteOutboundSchedulesCampaignExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var campaignId = \"campaignId_example\";  // string | Campaign ID\n\n            try\n            { \n                // Delete a dialer campaign schedule.\n                apiInstance.DeleteOutboundSchedulesCampaign(campaignId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.DeleteOutboundSchedulesCampaign: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "deleteoutboundschedulesemailcampaign": {
+    "operationId": "deleteoutboundschedulesemailcampaign",
+    "functionName": "DeleteOutboundSchedulesEmailcampaign",
+    "signature": "DeleteOutboundSchedulesEmailcampaign(emailCampaignId)",
+    "parameters": [
+      {
+        "name": "emailCampaignId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteOutboundSchedulesEmailcampaignExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var emailCampaignId = \"emailCampaignId_example\";  // string | Email Campaign ID\n\n            try\n            { \n                // Delete an email campaign schedule.\n                apiInstance.DeleteOutboundSchedulesEmailcampaign(emailCampaignId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.DeleteOutboundSchedulesEmailcampaign: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "deleteoutboundschedulesmessagingcampaign": {
+    "operationId": "deleteoutboundschedulesmessagingcampaign",
+    "functionName": "DeleteOutboundSchedulesMessagingcampaign",
+    "signature": "DeleteOutboundSchedulesMessagingcampaign(messagingCampaignId)",
+    "parameters": [
+      {
+        "name": "messagingCampaignId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteOutboundSchedulesMessagingcampaignExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var messagingCampaignId = \"messagingCampaignId_example\";  // string | Messaging Campaign ID\n\n            try\n            { \n                // Delete a messaging campaign schedule.\n                apiInstance.DeleteOutboundSchedulesMessagingcampaign(messagingCampaignId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.DeleteOutboundSchedulesMessagingcampaign: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "deleteoutboundschedulessequence": {
     "operationId": "deleteoutboundschedulessequence",
     "functionName": "DeleteOutboundSchedulesSequence",
@@ -18561,6 +18613,48 @@
     "return": "List<CampaignSchedule>",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOutboundSchedulesCampaignsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n\n            try\n            { \n                // Query for a list of dialer campaign schedules.\n                List<CampaignSchedule> result = apiInstance.GetOutboundSchedulesCampaigns();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.GetOutboundSchedulesCampaigns: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getoutboundschedulesemailcampaign": {
+    "operationId": "getoutboundschedulesemailcampaign",
+    "functionName": "GetOutboundSchedulesEmailcampaign",
+    "signature": "GetOutboundSchedulesEmailcampaign(emailCampaignId)",
+    "parameters": [
+      {
+        "name": "emailCampaignId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "EmailCampaignSchedule",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOutboundSchedulesEmailcampaignExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var emailCampaignId = \"emailCampaignId_example\";  // string | Email Campaign ID\n\n            try\n            { \n                // Get an email campaign schedule.\n                EmailCampaignSchedule result = apiInstance.GetOutboundSchedulesEmailcampaign(emailCampaignId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.GetOutboundSchedulesEmailcampaign: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getoutboundschedulesemailcampaigns": {
+    "operationId": "getoutboundschedulesemailcampaigns",
+    "functionName": "GetOutboundSchedulesEmailcampaigns",
+    "signature": "GetOutboundSchedulesEmailcampaigns()",
+    "return": "MessagingCampaignScheduleEntityListing",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOutboundSchedulesEmailcampaignsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n\n            try\n            { \n                // Query for a list of email campaign schedules.\n                MessagingCampaignScheduleEntityListing result = apiInstance.GetOutboundSchedulesEmailcampaigns();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.GetOutboundSchedulesEmailcampaigns: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getoutboundschedulesmessagingcampaign": {
+    "operationId": "getoutboundschedulesmessagingcampaign",
+    "functionName": "GetOutboundSchedulesMessagingcampaign",
+    "signature": "GetOutboundSchedulesMessagingcampaign(messagingCampaignId)",
+    "parameters": [
+      {
+        "name": "messagingCampaignId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "MessagingCampaignSchedule",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOutboundSchedulesMessagingcampaignExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var messagingCampaignId = \"messagingCampaignId_example\";  // string | Messaging Campaign ID\n\n            try\n            { \n                // Get a messaging campaign schedule.\n                MessagingCampaignSchedule result = apiInstance.GetOutboundSchedulesMessagingcampaign(messagingCampaignId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.GetOutboundSchedulesMessagingcampaign: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getoutboundschedulesmessagingcampaigns": {
+    "operationId": "getoutboundschedulesmessagingcampaigns",
+    "functionName": "GetOutboundSchedulesMessagingcampaigns",
+    "signature": "GetOutboundSchedulesMessagingcampaigns()",
+    "return": "MessagingCampaignScheduleEntityListing",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOutboundSchedulesMessagingcampaignsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n\n            try\n            { \n                // Query for a list of messaging campaign schedules.\n                MessagingCampaignScheduleEntityListing result = apiInstance.GetOutboundSchedulesMessagingcampaigns();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.GetOutboundSchedulesMessagingcampaigns: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getoutboundschedulessequence": {
     "operationId": "getoutboundschedulessequence",
     "functionName": "GetOutboundSchedulesSequence",
@@ -19321,6 +19415,44 @@
     ],
     "return": "CampaignSchedule",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutOutboundSchedulesCampaignExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var campaignId = \"campaignId_example\";  // string | Campaign ID\n            var body = new CampaignSchedule(); // CampaignSchedule | CampaignSchedule\n\n            try\n            { \n                // Update a new campaign schedule.\n                CampaignSchedule result = apiInstance.PutOutboundSchedulesCampaign(campaignId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.PutOutboundSchedulesCampaign: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "putoutboundschedulesemailcampaign": {
+    "operationId": "putoutboundschedulesemailcampaign",
+    "functionName": "PutOutboundSchedulesEmailcampaign",
+    "signature": "PutOutboundSchedulesEmailcampaign(emailCampaignId, body)",
+    "parameters": [
+      {
+        "name": "emailCampaignId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "EmailCampaignSchedule",
+        "required": "true"
+      }
+    ],
+    "return": "EmailCampaignSchedule",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutOutboundSchedulesEmailcampaignExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var emailCampaignId = \"emailCampaignId_example\";  // string | Email Campaign ID\n            var body = new EmailCampaignSchedule(); // EmailCampaignSchedule | EmailCampaignSchedule\n\n            try\n            { \n                // Update an email campaign schedule.\n                EmailCampaignSchedule result = apiInstance.PutOutboundSchedulesEmailcampaign(emailCampaignId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.PutOutboundSchedulesEmailcampaign: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "putoutboundschedulesmessagingcampaign": {
+    "operationId": "putoutboundschedulesmessagingcampaign",
+    "functionName": "PutOutboundSchedulesMessagingcampaign",
+    "signature": "PutOutboundSchedulesMessagingcampaign(messagingCampaignId, body)",
+    "parameters": [
+      {
+        "name": "messagingCampaignId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "MessagingCampaignSchedule",
+        "required": "true"
+      }
+    ],
+    "return": "MessagingCampaignSchedule",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutOutboundSchedulesMessagingcampaignExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var messagingCampaignId = \"messagingCampaignId_example\";  // string | Messaging Campaign ID\n            var body = new MessagingCampaignSchedule(); // MessagingCampaignSchedule | MessagingCampaignSchedule\n\n            try\n            { \n                // Update a new messaging campaign schedule.\n                MessagingCampaignSchedule result = apiInstance.PutOutboundSchedulesMessagingcampaign(messagingCampaignId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.PutOutboundSchedulesMessagingcampaign: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "putoutboundschedulessequence": {
     "operationId": "putoutboundschedulessequence",

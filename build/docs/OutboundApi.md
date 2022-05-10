@@ -23,6 +23,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteOutboundMessagingcampaignProgress**](OutboundApi.html#deleteoutboundmessagingcampaignprogress) | **DELETE** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress | Reset messaging campaign progress and recycle the messaging campaign |
 | [**DeleteOutboundRuleset**](OutboundApi.html#deleteoutboundruleset) | **DELETE** /api/v2/outbound/rulesets/{ruleSetId} | Delete a Rule Set. |
 | [**DeleteOutboundSchedulesCampaign**](OutboundApi.html#deleteoutboundschedulescampaign) | **DELETE** /api/v2/outbound/schedules/campaigns/{campaignId} | Delete a dialer campaign schedule. |
+| [**DeleteOutboundSchedulesEmailcampaign**](OutboundApi.html#deleteoutboundschedulesemailcampaign) | **DELETE** /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId} | Delete an email campaign schedule. |
+| [**DeleteOutboundSchedulesMessagingcampaign**](OutboundApi.html#deleteoutboundschedulesmessagingcampaign) | **DELETE** /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId} | Delete a messaging campaign schedule. |
 | [**DeleteOutboundSchedulesSequence**](OutboundApi.html#deleteoutboundschedulessequence) | **DELETE** /api/v2/outbound/schedules/sequences/{sequenceId} | Delete a dialer sequence schedule. |
 | [**DeleteOutboundSequence**](OutboundApi.html#deleteoutboundsequence) | **DELETE** /api/v2/outbound/sequences/{sequenceId} | Delete a dialer campaign sequence. |
 | [**GetOutboundAttemptlimit**](OutboundApi.html#getoutboundattemptlimit) | **GET** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Get attempt limits |
@@ -71,6 +73,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundRulesets**](OutboundApi.html#getoutboundrulesets) | **GET** /api/v2/outbound/rulesets | Query a list of Rule Sets. |
 | [**GetOutboundSchedulesCampaign**](OutboundApi.html#getoutboundschedulescampaign) | **GET** /api/v2/outbound/schedules/campaigns/{campaignId} | Get a dialer campaign schedule. |
 | [**GetOutboundSchedulesCampaigns**](OutboundApi.html#getoutboundschedulescampaigns) | **GET** /api/v2/outbound/schedules/campaigns | Query for a list of dialer campaign schedules. |
+| [**GetOutboundSchedulesEmailcampaign**](OutboundApi.html#getoutboundschedulesemailcampaign) | **GET** /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId} | Get an email campaign schedule. |
+| [**GetOutboundSchedulesEmailcampaigns**](OutboundApi.html#getoutboundschedulesemailcampaigns) | **GET** /api/v2/outbound/schedules/emailcampaigns | Query for a list of email campaign schedules. |
+| [**GetOutboundSchedulesMessagingcampaign**](OutboundApi.html#getoutboundschedulesmessagingcampaign) | **GET** /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId} | Get a messaging campaign schedule. |
+| [**GetOutboundSchedulesMessagingcampaigns**](OutboundApi.html#getoutboundschedulesmessagingcampaigns) | **GET** /api/v2/outbound/schedules/messagingcampaigns | Query for a list of messaging campaign schedules. |
 | [**GetOutboundSchedulesSequence**](OutboundApi.html#getoutboundschedulessequence) | **GET** /api/v2/outbound/schedules/sequences/{sequenceId} | Get a dialer sequence schedule. |
 | [**GetOutboundSchedulesSequences**](OutboundApi.html#getoutboundschedulessequences) | **GET** /api/v2/outbound/schedules/sequences | Query for a list of dialer sequence schedules. |
 | [**GetOutboundSequence**](OutboundApi.html#getoutboundsequence) | **GET** /api/v2/outbound/sequences/{sequenceId} | Get a dialer campaign sequence. |
@@ -115,6 +121,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutOutboundMessagingcampaign**](OutboundApi.html#putoutboundmessagingcampaign) | **PUT** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Update an Outbound Messaging Campaign |
 | [**PutOutboundRuleset**](OutboundApi.html#putoutboundruleset) | **PUT** /api/v2/outbound/rulesets/{ruleSetId} | Update a Rule Set. |
 | [**PutOutboundSchedulesCampaign**](OutboundApi.html#putoutboundschedulescampaign) | **PUT** /api/v2/outbound/schedules/campaigns/{campaignId} | Update a new campaign schedule. |
+| [**PutOutboundSchedulesEmailcampaign**](OutboundApi.html#putoutboundschedulesemailcampaign) | **PUT** /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId} | Update an email campaign schedule. |
+| [**PutOutboundSchedulesMessagingcampaign**](OutboundApi.html#putoutboundschedulesmessagingcampaign) | **PUT** /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId} | Update a new messaging campaign schedule. |
 | [**PutOutboundSchedulesSequence**](OutboundApi.html#putoutboundschedulessequence) | **PUT** /api/v2/outbound/schedules/sequences/{sequenceId} | Update a new sequence schedule. |
 | [**PutOutboundSequence**](OutboundApi.html#putoutboundsequence) | **PUT** /api/v2/outbound/sequences/{sequenceId} | Update a new campaign sequence. |
 | [**PutOutboundWrapupcodemappings**](OutboundApi.html#putoutboundwrapupcodemappings) | **PUT** /api/v2/outbound/wrapupcodemappings | Update the Dialer wrap up code mapping. |
@@ -1146,6 +1154,134 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteoutboundschedulesemailcampaign"></a>
+
+## void DeleteOutboundSchedulesEmailcampaign (string emailCampaignId)
+
+
+
+Delete an email campaign schedule.
+
+
+
+Requires ANY permissions: 
+
+* outbound:emailCampaignSchedule:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundSchedulesEmailcampaignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var emailCampaignId = emailCampaignId_example;  // string | Email Campaign ID
+
+            try
+            { 
+                // Delete an email campaign schedule.
+                apiInstance.DeleteOutboundSchedulesEmailcampaign(emailCampaignId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundSchedulesEmailcampaign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emailCampaignId** | **string**| Email Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteoutboundschedulesmessagingcampaign"></a>
+
+## void DeleteOutboundSchedulesMessagingcampaign (string messagingCampaignId)
+
+
+
+Delete a messaging campaign schedule.
+
+
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaignSchedule:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundSchedulesMessagingcampaignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var messagingCampaignId = messagingCampaignId_example;  // string | Messaging Campaign ID
+
+            try
+            { 
+                // Delete a messaging campaign schedule.
+                apiInstance.DeleteOutboundSchedulesMessagingcampaign(messagingCampaignId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundSchedulesMessagingcampaign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messagingCampaignId** | **string**| Messaging Campaign ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4550,6 +4686,256 @@ This endpoint does require any parameters.
 
 [**List<CampaignSchedule>**](CampaignSchedule.html)
 
+<a name="getoutboundschedulesemailcampaign"></a>
+
+## [**EmailCampaignSchedule**](EmailCampaignSchedule.html) GetOutboundSchedulesEmailcampaign (string emailCampaignId)
+
+
+
+Get an email campaign schedule.
+
+
+
+Requires ANY permissions: 
+
+* outbound:emailCampaignSchedule:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundSchedulesEmailcampaignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var emailCampaignId = emailCampaignId_example;  // string | Email Campaign ID
+
+            try
+            { 
+                // Get an email campaign schedule.
+                EmailCampaignSchedule result = apiInstance.GetOutboundSchedulesEmailcampaign(emailCampaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundSchedulesEmailcampaign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emailCampaignId** | **string**| Email Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmailCampaignSchedule**](EmailCampaignSchedule.html)
+
+<a name="getoutboundschedulesemailcampaigns"></a>
+
+## [**MessagingCampaignScheduleEntityListing**](MessagingCampaignScheduleEntityListing.html) GetOutboundSchedulesEmailcampaigns ()
+
+
+
+Query for a list of email campaign schedules.
+
+
+
+Requires ANY permissions: 
+
+* outbound:emailCampaignSchedule:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundSchedulesEmailcampaignsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+
+            try
+            { 
+                // Query for a list of email campaign schedules.
+                MessagingCampaignScheduleEntityListing result = apiInstance.GetOutboundSchedulesEmailcampaigns();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundSchedulesEmailcampaigns: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**MessagingCampaignScheduleEntityListing**](MessagingCampaignScheduleEntityListing.html)
+
+<a name="getoutboundschedulesmessagingcampaign"></a>
+
+## [**MessagingCampaignSchedule**](MessagingCampaignSchedule.html) GetOutboundSchedulesMessagingcampaign (string messagingCampaignId)
+
+
+
+Get a messaging campaign schedule.
+
+
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaignSchedule:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundSchedulesMessagingcampaignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var messagingCampaignId = messagingCampaignId_example;  // string | Messaging Campaign ID
+
+            try
+            { 
+                // Get a messaging campaign schedule.
+                MessagingCampaignSchedule result = apiInstance.GetOutboundSchedulesMessagingcampaign(messagingCampaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundSchedulesMessagingcampaign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messagingCampaignId** | **string**| Messaging Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingCampaignSchedule**](MessagingCampaignSchedule.html)
+
+<a name="getoutboundschedulesmessagingcampaigns"></a>
+
+## [**MessagingCampaignScheduleEntityListing**](MessagingCampaignScheduleEntityListing.html) GetOutboundSchedulesMessagingcampaigns ()
+
+
+
+Query for a list of messaging campaign schedules.
+
+
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaignSchedule:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundSchedulesMessagingcampaignsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+
+            try
+            { 
+                // Query for a list of messaging campaign schedules.
+                MessagingCampaignScheduleEntityListing result = apiInstance.GetOutboundSchedulesMessagingcampaigns();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundSchedulesMessagingcampaigns: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**MessagingCampaignScheduleEntityListing**](MessagingCampaignScheduleEntityListing.html)
+
 <a name="getoutboundschedulessequence"></a>
 
 ## [**SequenceSchedule**](SequenceSchedule.html) GetOutboundSchedulesSequence (string sequenceId)
@@ -7463,6 +7849,140 @@ namespace Example
 ### Return type
 
 [**CampaignSchedule**](CampaignSchedule.html)
+
+<a name="putoutboundschedulesemailcampaign"></a>
+
+## [**EmailCampaignSchedule**](EmailCampaignSchedule.html) PutOutboundSchedulesEmailcampaign (string emailCampaignId, EmailCampaignSchedule body)
+
+
+
+Update an email campaign schedule.
+
+
+
+Requires ANY permissions: 
+
+* outbound:emailCampaignSchedule:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOutboundSchedulesEmailcampaignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var emailCampaignId = emailCampaignId_example;  // string | Email Campaign ID
+            var body = new EmailCampaignSchedule(); // EmailCampaignSchedule | EmailCampaignSchedule
+
+            try
+            { 
+                // Update an email campaign schedule.
+                EmailCampaignSchedule result = apiInstance.PutOutboundSchedulesEmailcampaign(emailCampaignId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutOutboundSchedulesEmailcampaign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emailCampaignId** | **string**| Email Campaign ID |  |
+| **body** | [**EmailCampaignSchedule**](EmailCampaignSchedule.html)| EmailCampaignSchedule |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmailCampaignSchedule**](EmailCampaignSchedule.html)
+
+<a name="putoutboundschedulesmessagingcampaign"></a>
+
+## [**MessagingCampaignSchedule**](MessagingCampaignSchedule.html) PutOutboundSchedulesMessagingcampaign (string messagingCampaignId, MessagingCampaignSchedule body)
+
+
+
+Update a new messaging campaign schedule.
+
+
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaignSchedule:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOutboundSchedulesMessagingcampaignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var messagingCampaignId = messagingCampaignId_example;  // string | Messaging Campaign ID
+            var body = new MessagingCampaignSchedule(); // MessagingCampaignSchedule | MessagingCampaignSchedule
+
+            try
+            { 
+                // Update a new messaging campaign schedule.
+                MessagingCampaignSchedule result = apiInstance.PutOutboundSchedulesMessagingcampaign(messagingCampaignId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutOutboundSchedulesMessagingcampaign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messagingCampaignId** | **string**| Messaging Campaign ID |  |
+| **body** | [**MessagingCampaignSchedule**](MessagingCampaignSchedule.html)| MessagingCampaignSchedule |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingCampaignSchedule**](MessagingCampaignSchedule.html)
 
 <a name="putoutboundschedulessequence"></a>
 

@@ -373,6 +373,50 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteOutboundSchedulesCampaignWithHttpInfo (string campaignId);
         
         /// <summary>
+        /// Delete an email campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns></returns>
+        void DeleteOutboundSchedulesEmailcampaign (string emailCampaignId);
+
+        /// <summary>
+        /// Delete an email campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundSchedulesEmailcampaignWithHttpInfo (string emailCampaignId);
+        
+        /// <summary>
+        /// Delete a messaging campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns></returns>
+        void DeleteOutboundSchedulesMessagingcampaign (string messagingCampaignId);
+
+        /// <summary>
+        /// Delete a messaging campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundSchedulesMessagingcampaignWithHttpInfo (string messagingCampaignId);
+        
+        /// <summary>
         /// Delete a dialer sequence schedule.
         /// </summary>
         /// <remarks>
@@ -1699,6 +1743,90 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<CampaignSchedule>> GetOutboundSchedulesCampaignsWithHttpInfo ();
         
         /// <summary>
+        /// Get an email campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>EmailCampaignSchedule</returns>
+        EmailCampaignSchedule GetOutboundSchedulesEmailcampaign (string emailCampaignId);
+
+        /// <summary>
+        /// Get an email campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>ApiResponse of EmailCampaignSchedule</returns>
+        ApiResponse<EmailCampaignSchedule> GetOutboundSchedulesEmailcampaignWithHttpInfo (string emailCampaignId);
+        
+        /// <summary>
+        /// Query for a list of email campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>MessagingCampaignScheduleEntityListing</returns>
+        MessagingCampaignScheduleEntityListing GetOutboundSchedulesEmailcampaigns ();
+
+        /// <summary>
+        /// Query for a list of email campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of MessagingCampaignScheduleEntityListing</returns>
+        ApiResponse<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesEmailcampaignsWithHttpInfo ();
+        
+        /// <summary>
+        /// Get a messaging campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>MessagingCampaignSchedule</returns>
+        MessagingCampaignSchedule GetOutboundSchedulesMessagingcampaign (string messagingCampaignId);
+
+        /// <summary>
+        /// Get a messaging campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>ApiResponse of MessagingCampaignSchedule</returns>
+        ApiResponse<MessagingCampaignSchedule> GetOutboundSchedulesMessagingcampaignWithHttpInfo (string messagingCampaignId);
+        
+        /// <summary>
+        /// Query for a list of messaging campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>MessagingCampaignScheduleEntityListing</returns>
+        MessagingCampaignScheduleEntityListing GetOutboundSchedulesMessagingcampaigns ();
+
+        /// <summary>
+        /// Query for a list of messaging campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of MessagingCampaignScheduleEntityListing</returns>
+        ApiResponse<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesMessagingcampaignsWithHttpInfo ();
+        
+        /// <summary>
         /// Get a dialer sequence schedule.
         /// </summary>
         /// <remarks>
@@ -2729,6 +2857,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CampaignSchedule> PutOutboundSchedulesCampaignWithHttpInfo (string campaignId, CampaignSchedule body);
         
         /// <summary>
+        /// Update an email campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <param name="body">EmailCampaignSchedule</param>
+        /// <returns>EmailCampaignSchedule</returns>
+        EmailCampaignSchedule PutOutboundSchedulesEmailcampaign (string emailCampaignId, EmailCampaignSchedule body);
+
+        /// <summary>
+        /// Update an email campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <param name="body">EmailCampaignSchedule</param>
+        /// <returns>ApiResponse of EmailCampaignSchedule</returns>
+        ApiResponse<EmailCampaignSchedule> PutOutboundSchedulesEmailcampaignWithHttpInfo (string emailCampaignId, EmailCampaignSchedule body);
+        
+        /// <summary>
+        /// Update a new messaging campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <param name="body">MessagingCampaignSchedule</param>
+        /// <returns>MessagingCampaignSchedule</returns>
+        MessagingCampaignSchedule PutOutboundSchedulesMessagingcampaign (string messagingCampaignId, MessagingCampaignSchedule body);
+
+        /// <summary>
+        /// Update a new messaging campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <param name="body">MessagingCampaignSchedule</param>
+        /// <returns>ApiResponse of MessagingCampaignSchedule</returns>
+        ApiResponse<MessagingCampaignSchedule> PutOutboundSchedulesMessagingcampaignWithHttpInfo (string messagingCampaignId, MessagingCampaignSchedule body);
+        
+        /// <summary>
         /// Update a new sequence schedule.
         /// </summary>
         /// <remarks>
@@ -3157,6 +3333,50 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesCampaignAsyncWithHttpInfo (string campaignId);
+        
+        /// <summary>
+        /// Delete an email campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundSchedulesEmailcampaignAsync (string emailCampaignId);
+
+        /// <summary>
+        /// Delete an email campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesEmailcampaignAsyncWithHttpInfo (string emailCampaignId);
+        
+        /// <summary>
+        /// Delete a messaging campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundSchedulesMessagingcampaignAsync (string messagingCampaignId);
+
+        /// <summary>
+        /// Delete a messaging campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId);
         
         /// <summary>
         /// Delete a dialer sequence schedule.
@@ -4485,6 +4705,90 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<CampaignSchedule>>> GetOutboundSchedulesCampaignsAsyncWithHttpInfo ();
         
         /// <summary>
+        /// Get an email campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>Task of EmailCampaignSchedule</returns>
+        System.Threading.Tasks.Task<EmailCampaignSchedule> GetOutboundSchedulesEmailcampaignAsync (string emailCampaignId);
+
+        /// <summary>
+        /// Get an email campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>Task of ApiResponse (EmailCampaignSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailCampaignSchedule>> GetOutboundSchedulesEmailcampaignAsyncWithHttpInfo (string emailCampaignId);
+        
+        /// <summary>
+        /// Query for a list of email campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of MessagingCampaignScheduleEntityListing</returns>
+        System.Threading.Tasks.Task<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesEmailcampaignsAsync ();
+
+        /// <summary>
+        /// Query for a list of email campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (MessagingCampaignScheduleEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MessagingCampaignScheduleEntityListing>> GetOutboundSchedulesEmailcampaignsAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Get a messaging campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>Task of MessagingCampaignSchedule</returns>
+        System.Threading.Tasks.Task<MessagingCampaignSchedule> GetOutboundSchedulesMessagingcampaignAsync (string messagingCampaignId);
+
+        /// <summary>
+        /// Get a messaging campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>Task of ApiResponse (MessagingCampaignSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MessagingCampaignSchedule>> GetOutboundSchedulesMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId);
+        
+        /// <summary>
+        /// Query for a list of messaging campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of MessagingCampaignScheduleEntityListing</returns>
+        System.Threading.Tasks.Task<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesMessagingcampaignsAsync ();
+
+        /// <summary>
+        /// Query for a list of messaging campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (MessagingCampaignScheduleEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MessagingCampaignScheduleEntityListing>> GetOutboundSchedulesMessagingcampaignsAsyncWithHttpInfo ();
+        
+        /// <summary>
         /// Get a dialer sequence schedule.
         /// </summary>
         /// <remarks>
@@ -5513,6 +5817,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CampaignSchedule</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
         System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> PutOutboundSchedulesCampaignAsyncWithHttpInfo (string campaignId, CampaignSchedule body);
+        
+        /// <summary>
+        /// Update an email campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <param name="body">EmailCampaignSchedule</param>
+        /// <returns>Task of EmailCampaignSchedule</returns>
+        System.Threading.Tasks.Task<EmailCampaignSchedule> PutOutboundSchedulesEmailcampaignAsync (string emailCampaignId, EmailCampaignSchedule body);
+
+        /// <summary>
+        /// Update an email campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <param name="body">EmailCampaignSchedule</param>
+        /// <returns>Task of ApiResponse (EmailCampaignSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailCampaignSchedule>> PutOutboundSchedulesEmailcampaignAsyncWithHttpInfo (string emailCampaignId, EmailCampaignSchedule body);
+        
+        /// <summary>
+        /// Update a new messaging campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <param name="body">MessagingCampaignSchedule</param>
+        /// <returns>Task of MessagingCampaignSchedule</returns>
+        System.Threading.Tasks.Task<MessagingCampaignSchedule> PutOutboundSchedulesMessagingcampaignAsync (string messagingCampaignId, MessagingCampaignSchedule body);
+
+        /// <summary>
+        /// Update a new messaging campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <param name="body">MessagingCampaignSchedule</param>
+        /// <returns>Task of ApiResponse (MessagingCampaignSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MessagingCampaignSchedule>> PutOutboundSchedulesMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId, MessagingCampaignSchedule body);
         
         /// <summary>
         /// Update a new sequence schedule.
@@ -8752,6 +9104,388 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesCampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesCampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete an email campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns></returns>
+        public void DeleteOutboundSchedulesEmailcampaign (string emailCampaignId)
+        {
+             DeleteOutboundSchedulesEmailcampaignWithHttpInfo(emailCampaignId);
+        }
+
+        /// <summary>
+        /// Delete an email campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundSchedulesEmailcampaignWithHttpInfo (string emailCampaignId)
+        { 
+            // verify the required parameter 'emailCampaignId' is set
+            if (emailCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'emailCampaignId' when calling OutboundApi->DeleteOutboundSchedulesEmailcampaign");
+
+            var localVarPath = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emailCampaignId != null) localVarPathParams.Add("emailCampaignId", this.Configuration.ApiClient.ParameterToString(emailCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesEmailcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesEmailcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete an email campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundSchedulesEmailcampaignAsync (string emailCampaignId)
+        {
+             await DeleteOutboundSchedulesEmailcampaignAsyncWithHttpInfo(emailCampaignId);
+
+        }
+
+        /// <summary>
+        /// Delete an email campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesEmailcampaignAsyncWithHttpInfo (string emailCampaignId)
+        { 
+            // verify the required parameter 'emailCampaignId' is set
+            if (emailCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'emailCampaignId' when calling OutboundApi->DeleteOutboundSchedulesEmailcampaign");
+            
+
+            var localVarPath = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emailCampaignId != null) localVarPathParams.Add("emailCampaignId", this.Configuration.ApiClient.ParameterToString(emailCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesEmailcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesEmailcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete a messaging campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns></returns>
+        public void DeleteOutboundSchedulesMessagingcampaign (string messagingCampaignId)
+        {
+             DeleteOutboundSchedulesMessagingcampaignWithHttpInfo(messagingCampaignId);
+        }
+
+        /// <summary>
+        /// Delete a messaging campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundSchedulesMessagingcampaignWithHttpInfo (string messagingCampaignId)
+        { 
+            // verify the required parameter 'messagingCampaignId' is set
+            if (messagingCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->DeleteOutboundSchedulesMessagingcampaign");
+
+            var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (messagingCampaignId != null) localVarPathParams.Add("messagingCampaignId", this.Configuration.ApiClient.ParameterToString(messagingCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesMessagingcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesMessagingcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete a messaging campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundSchedulesMessagingcampaignAsync (string messagingCampaignId)
+        {
+             await DeleteOutboundSchedulesMessagingcampaignAsyncWithHttpInfo(messagingCampaignId);
+
+        }
+
+        /// <summary>
+        /// Delete a messaging campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId)
+        { 
+            // verify the required parameter 'messagingCampaignId' is set
+            if (messagingCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->DeleteOutboundSchedulesMessagingcampaign");
+            
+
+            var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (messagingCampaignId != null) localVarPathParams.Add("messagingCampaignId", this.Configuration.ApiClient.ParameterToString(messagingCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesMessagingcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesMessagingcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -18714,6 +19448,752 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get an email campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>EmailCampaignSchedule</returns>
+        public EmailCampaignSchedule GetOutboundSchedulesEmailcampaign (string emailCampaignId)
+        {
+             ApiResponse<EmailCampaignSchedule> localVarResponse = GetOutboundSchedulesEmailcampaignWithHttpInfo(emailCampaignId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an email campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>ApiResponse of EmailCampaignSchedule</returns>
+        public ApiResponse< EmailCampaignSchedule > GetOutboundSchedulesEmailcampaignWithHttpInfo (string emailCampaignId)
+        { 
+            // verify the required parameter 'emailCampaignId' is set
+            if (emailCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'emailCampaignId' when calling OutboundApi->GetOutboundSchedulesEmailcampaign");
+
+            var localVarPath = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emailCampaignId != null) localVarPathParams.Add("emailCampaignId", this.Configuration.ApiClient.ParameterToString(emailCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesEmailcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesEmailcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailCampaignSchedule>(localVarStatusCode,
+                localVarHeaders,
+                (EmailCampaignSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailCampaignSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get an email campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>Task of EmailCampaignSchedule</returns>
+        public async System.Threading.Tasks.Task<EmailCampaignSchedule> GetOutboundSchedulesEmailcampaignAsync (string emailCampaignId)
+        {
+             ApiResponse<EmailCampaignSchedule> localVarResponse = await GetOutboundSchedulesEmailcampaignAsyncWithHttpInfo(emailCampaignId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an email campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <returns>Task of ApiResponse (EmailCampaignSchedule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailCampaignSchedule>> GetOutboundSchedulesEmailcampaignAsyncWithHttpInfo (string emailCampaignId)
+        { 
+            // verify the required parameter 'emailCampaignId' is set
+            if (emailCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'emailCampaignId' when calling OutboundApi->GetOutboundSchedulesEmailcampaign");
+            
+
+            var localVarPath = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emailCampaignId != null) localVarPathParams.Add("emailCampaignId", this.Configuration.ApiClient.ParameterToString(emailCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesEmailcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesEmailcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailCampaignSchedule>(localVarStatusCode,
+                localVarHeaders,
+                (EmailCampaignSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailCampaignSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Query for a list of email campaign schedules. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>MessagingCampaignScheduleEntityListing</returns>
+        public MessagingCampaignScheduleEntityListing GetOutboundSchedulesEmailcampaigns ()
+        {
+             ApiResponse<MessagingCampaignScheduleEntityListing> localVarResponse = GetOutboundSchedulesEmailcampaignsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for a list of email campaign schedules. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of MessagingCampaignScheduleEntityListing</returns>
+        public ApiResponse< MessagingCampaignScheduleEntityListing > GetOutboundSchedulesEmailcampaignsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/outbound/schedules/emailcampaigns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesEmailcampaigns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesEmailcampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MessagingCampaignScheduleEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (MessagingCampaignScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingCampaignScheduleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Query for a list of email campaign schedules. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of MessagingCampaignScheduleEntityListing</returns>
+        public async System.Threading.Tasks.Task<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesEmailcampaignsAsync ()
+        {
+             ApiResponse<MessagingCampaignScheduleEntityListing> localVarResponse = await GetOutboundSchedulesEmailcampaignsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for a list of email campaign schedules. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (MessagingCampaignScheduleEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignScheduleEntityListing>> GetOutboundSchedulesEmailcampaignsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/outbound/schedules/emailcampaigns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesEmailcampaigns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesEmailcampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MessagingCampaignScheduleEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (MessagingCampaignScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingCampaignScheduleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a messaging campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>MessagingCampaignSchedule</returns>
+        public MessagingCampaignSchedule GetOutboundSchedulesMessagingcampaign (string messagingCampaignId)
+        {
+             ApiResponse<MessagingCampaignSchedule> localVarResponse = GetOutboundSchedulesMessagingcampaignWithHttpInfo(messagingCampaignId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a messaging campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>ApiResponse of MessagingCampaignSchedule</returns>
+        public ApiResponse< MessagingCampaignSchedule > GetOutboundSchedulesMessagingcampaignWithHttpInfo (string messagingCampaignId)
+        { 
+            // verify the required parameter 'messagingCampaignId' is set
+            if (messagingCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->GetOutboundSchedulesMessagingcampaign");
+
+            var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (messagingCampaignId != null) localVarPathParams.Add("messagingCampaignId", this.Configuration.ApiClient.ParameterToString(messagingCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesMessagingcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesMessagingcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MessagingCampaignSchedule>(localVarStatusCode,
+                localVarHeaders,
+                (MessagingCampaignSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingCampaignSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a messaging campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>Task of MessagingCampaignSchedule</returns>
+        public async System.Threading.Tasks.Task<MessagingCampaignSchedule> GetOutboundSchedulesMessagingcampaignAsync (string messagingCampaignId)
+        {
+             ApiResponse<MessagingCampaignSchedule> localVarResponse = await GetOutboundSchedulesMessagingcampaignAsyncWithHttpInfo(messagingCampaignId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a messaging campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <returns>Task of ApiResponse (MessagingCampaignSchedule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignSchedule>> GetOutboundSchedulesMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId)
+        { 
+            // verify the required parameter 'messagingCampaignId' is set
+            if (messagingCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->GetOutboundSchedulesMessagingcampaign");
+            
+
+            var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (messagingCampaignId != null) localVarPathParams.Add("messagingCampaignId", this.Configuration.ApiClient.ParameterToString(messagingCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesMessagingcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesMessagingcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MessagingCampaignSchedule>(localVarStatusCode,
+                localVarHeaders,
+                (MessagingCampaignSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingCampaignSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Query for a list of messaging campaign schedules. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>MessagingCampaignScheduleEntityListing</returns>
+        public MessagingCampaignScheduleEntityListing GetOutboundSchedulesMessagingcampaigns ()
+        {
+             ApiResponse<MessagingCampaignScheduleEntityListing> localVarResponse = GetOutboundSchedulesMessagingcampaignsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for a list of messaging campaign schedules. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of MessagingCampaignScheduleEntityListing</returns>
+        public ApiResponse< MessagingCampaignScheduleEntityListing > GetOutboundSchedulesMessagingcampaignsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesMessagingcampaigns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesMessagingcampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MessagingCampaignScheduleEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (MessagingCampaignScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingCampaignScheduleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Query for a list of messaging campaign schedules. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of MessagingCampaignScheduleEntityListing</returns>
+        public async System.Threading.Tasks.Task<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesMessagingcampaignsAsync ()
+        {
+             ApiResponse<MessagingCampaignScheduleEntityListing> localVarResponse = await GetOutboundSchedulesMessagingcampaignsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for a list of messaging campaign schedules. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (MessagingCampaignScheduleEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignScheduleEntityListing>> GetOutboundSchedulesMessagingcampaignsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesMessagingcampaigns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesMessagingcampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MessagingCampaignScheduleEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (MessagingCampaignScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingCampaignScheduleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get a dialer sequence schedule. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -27746,6 +29226,434 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CampaignSchedule>(localVarStatusCode,
                 localVarHeaders,
                 (CampaignSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update an email campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <param name="body">EmailCampaignSchedule</param>
+        /// <returns>EmailCampaignSchedule</returns>
+        public EmailCampaignSchedule PutOutboundSchedulesEmailcampaign (string emailCampaignId, EmailCampaignSchedule body)
+        {
+             ApiResponse<EmailCampaignSchedule> localVarResponse = PutOutboundSchedulesEmailcampaignWithHttpInfo(emailCampaignId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an email campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <param name="body">EmailCampaignSchedule</param>
+        /// <returns>ApiResponse of EmailCampaignSchedule</returns>
+        public ApiResponse< EmailCampaignSchedule > PutOutboundSchedulesEmailcampaignWithHttpInfo (string emailCampaignId, EmailCampaignSchedule body)
+        { 
+            // verify the required parameter 'emailCampaignId' is set
+            if (emailCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'emailCampaignId' when calling OutboundApi->PutOutboundSchedulesEmailcampaign");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesEmailcampaign");
+
+            var localVarPath = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emailCampaignId != null) localVarPathParams.Add("emailCampaignId", this.Configuration.ApiClient.ParameterToString(emailCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundSchedulesEmailcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundSchedulesEmailcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailCampaignSchedule>(localVarStatusCode,
+                localVarHeaders,
+                (EmailCampaignSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailCampaignSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update an email campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <param name="body">EmailCampaignSchedule</param>
+        /// <returns>Task of EmailCampaignSchedule</returns>
+        public async System.Threading.Tasks.Task<EmailCampaignSchedule> PutOutboundSchedulesEmailcampaignAsync (string emailCampaignId, EmailCampaignSchedule body)
+        {
+             ApiResponse<EmailCampaignSchedule> localVarResponse = await PutOutboundSchedulesEmailcampaignAsyncWithHttpInfo(emailCampaignId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an email campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailCampaignId">Email Campaign ID</param>
+        /// <param name="body">EmailCampaignSchedule</param>
+        /// <returns>Task of ApiResponse (EmailCampaignSchedule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailCampaignSchedule>> PutOutboundSchedulesEmailcampaignAsyncWithHttpInfo (string emailCampaignId, EmailCampaignSchedule body)
+        { 
+            // verify the required parameter 'emailCampaignId' is set
+            if (emailCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'emailCampaignId' when calling OutboundApi->PutOutboundSchedulesEmailcampaign");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesEmailcampaign");
+            
+
+            var localVarPath = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emailCampaignId != null) localVarPathParams.Add("emailCampaignId", this.Configuration.ApiClient.ParameterToString(emailCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundSchedulesEmailcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundSchedulesEmailcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailCampaignSchedule>(localVarStatusCode,
+                localVarHeaders,
+                (EmailCampaignSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailCampaignSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update a new messaging campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <param name="body">MessagingCampaignSchedule</param>
+        /// <returns>MessagingCampaignSchedule</returns>
+        public MessagingCampaignSchedule PutOutboundSchedulesMessagingcampaign (string messagingCampaignId, MessagingCampaignSchedule body)
+        {
+             ApiResponse<MessagingCampaignSchedule> localVarResponse = PutOutboundSchedulesMessagingcampaignWithHttpInfo(messagingCampaignId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a new messaging campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <param name="body">MessagingCampaignSchedule</param>
+        /// <returns>ApiResponse of MessagingCampaignSchedule</returns>
+        public ApiResponse< MessagingCampaignSchedule > PutOutboundSchedulesMessagingcampaignWithHttpInfo (string messagingCampaignId, MessagingCampaignSchedule body)
+        { 
+            // verify the required parameter 'messagingCampaignId' is set
+            if (messagingCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->PutOutboundSchedulesMessagingcampaign");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesMessagingcampaign");
+
+            var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (messagingCampaignId != null) localVarPathParams.Add("messagingCampaignId", this.Configuration.ApiClient.ParameterToString(messagingCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundSchedulesMessagingcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundSchedulesMessagingcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MessagingCampaignSchedule>(localVarStatusCode,
+                localVarHeaders,
+                (MessagingCampaignSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingCampaignSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update a new messaging campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <param name="body">MessagingCampaignSchedule</param>
+        /// <returns>Task of MessagingCampaignSchedule</returns>
+        public async System.Threading.Tasks.Task<MessagingCampaignSchedule> PutOutboundSchedulesMessagingcampaignAsync (string messagingCampaignId, MessagingCampaignSchedule body)
+        {
+             ApiResponse<MessagingCampaignSchedule> localVarResponse = await PutOutboundSchedulesMessagingcampaignAsyncWithHttpInfo(messagingCampaignId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a new messaging campaign schedule. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messagingCampaignId">Messaging Campaign ID</param>
+        /// <param name="body">MessagingCampaignSchedule</param>
+        /// <returns>Task of ApiResponse (MessagingCampaignSchedule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignSchedule>> PutOutboundSchedulesMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId, MessagingCampaignSchedule body)
+        { 
+            // verify the required parameter 'messagingCampaignId' is set
+            if (messagingCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->PutOutboundSchedulesMessagingcampaign");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesMessagingcampaign");
+            
+
+            var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (messagingCampaignId != null) localVarPathParams.Add("messagingCampaignId", this.Configuration.ApiClient.ParameterToString(messagingCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundSchedulesMessagingcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundSchedulesMessagingcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MessagingCampaignSchedule>(localVarStatusCode,
+                localVarHeaders,
+                (MessagingCampaignSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingCampaignSchedule)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

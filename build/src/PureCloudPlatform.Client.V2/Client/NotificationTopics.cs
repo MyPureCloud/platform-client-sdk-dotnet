@@ -45,6 +45,8 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.detail.events.conversation.{id}.voicemail.end", typeof(VoicemailEndDetailEventTopicVoicemailEndEvent)},
               {"v2.detail.events.conversation.{id}.voicemail.start", typeof(VoicemailStartDetailEventTopicVoicemailStartEvent)},
               {"v2.detail.events.conversation.{id}.wrapup", typeof(WrapupDetailEventTopicWrapupEvent)},
+              {"v2.externalcontacts.contacts.{id}", typeof(ExternalContactsContactChangedTopicEntity)},
+              {"v2.externalcontacts.contacts.{id}.unresolved", typeof(ExternalContactsUnresolvedContactChangedTopicEntity)},
               {"v2.flows.outcomes.{id}", typeof(ArchitectFlowOutcomeNotificationFlowOutcomeNotification)},
               {"v2.flows.{id}", typeof(ArchitectFlowNotificationFlowNotification)},
               {"v2.gamification.scorecards.users.{id}", typeof(GamificationScorecardChangeTopicScorecardChange)},

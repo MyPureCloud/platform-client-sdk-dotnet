@@ -81,12 +81,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The type for the learning module
         /// </summary>
         /// <value>The type for the learning module</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
         
         
         
@@ -107,7 +112,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InformSteps">The list of inform steps in a learning module.</param>
         /// <param name="Type">The type for the learning module.</param>
         /// <param name="AssessmentForm">The assessment form for learning module.</param>
-        public LearningModuleRequest(string Name = null, string Description = null, int? CompletionTimeInDays = null, List<LearningModuleInformStepRequest> InformSteps = null, TypeEnum? Type = null, AssessmentForm AssessmentForm = null)
+        /// <param name="CoverArt">The cover art for the learning module.</param>
+        public LearningModuleRequest(string Name = null, string Description = null, int? CompletionTimeInDays = null, List<LearningModuleInformStepRequest> InformSteps = null, TypeEnum? Type = null, AssessmentForm AssessmentForm = null, LearningModuleCoverArtRequest CoverArt = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -115,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.InformSteps = InformSteps;
             this.Type = Type;
             this.AssessmentForm = AssessmentForm;
+            this.CoverArt = CoverArt;
             
         }
         
@@ -166,6 +173,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public AssessmentForm AssessmentForm { get; set; }
         
         
+        
+        /// <summary>
+        /// The cover art for the learning module
+        /// </summary>
+        /// <value>The cover art for the learning module</value>
+        [DataMember(Name="coverArt", EmitDefaultValue=false)]
+        public LearningModuleCoverArtRequest CoverArt { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -181,6 +197,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InformSteps: ").Append(InformSteps).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  AssessmentForm: ").Append(AssessmentForm).Append("\n");
+            sb.Append("  CoverArt: ").Append(CoverArt).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -250,6 +267,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AssessmentForm == other.AssessmentForm ||
                     this.AssessmentForm != null &&
                     this.AssessmentForm.Equals(other.AssessmentForm)
+                ) &&
+                (
+                    this.CoverArt == other.CoverArt ||
+                    this.CoverArt != null &&
+                    this.CoverArt.Equals(other.CoverArt)
                 );
         }
 
@@ -282,6 +304,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AssessmentForm != null)
                     hash = hash * 59 + this.AssessmentForm.GetHashCode();
+                
+                if (this.CoverArt != null)
+                    hash = hash * 59 + this.CoverArt.GetHashCode();
                 
                 return hash;
             }

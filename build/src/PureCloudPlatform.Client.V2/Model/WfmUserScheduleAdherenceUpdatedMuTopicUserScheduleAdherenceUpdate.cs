@@ -194,6 +194,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets RoutingStatus
         /// </summary>
@@ -225,6 +228,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate" /> class.
@@ -241,12 +246,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsOutOfOffice">IsOutOfOffice.</param>
         /// <param name="AdherenceState">AdherenceState.</param>
         /// <param name="Impact">Impact.</param>
+        /// <param name="AdherenceExplanation">AdherenceExplanation.</param>
         /// <param name="AdherenceChangeTime">AdherenceChangeTime.</param>
         /// <param name="PresenceUpdateTime">PresenceUpdateTime.</param>
         /// <param name="ActiveQueues">ActiveQueues.</param>
         /// <param name="ActiveQueuesModifiedTime">ActiveQueuesModifiedTime.</param>
         /// <param name="RemovedFromManagementUnit">RemovedFromManagementUnit.</param>
-        public WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate(WfmUserScheduleAdherenceUpdatedMuTopicUserReference User = null, string ManagementUnitId = null, WfmUserScheduleAdherenceUpdatedMuTopicUriReference Team = null, string ScheduledActivityCategory = null, WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference ScheduledActivityCode = null, string SystemPresence = null, string OrganizationSecondaryPresenceId = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, DateTime? AdherenceChangeTime = null, DateTime? PresenceUpdateTime = null, List<WfmUserScheduleAdherenceUpdatedMuTopicQueueReference> ActiveQueues = null, DateTime? ActiveQueuesModifiedTime = null, bool? RemovedFromManagementUnit = null)
+        public WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate(WfmUserScheduleAdherenceUpdatedMuTopicUserReference User = null, string ManagementUnitId = null, WfmUserScheduleAdherenceUpdatedMuTopicUriReference Team = null, string ScheduledActivityCategory = null, WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference ScheduledActivityCode = null, string SystemPresence = null, string OrganizationSecondaryPresenceId = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation AdherenceExplanation = null, DateTime? AdherenceChangeTime = null, DateTime? PresenceUpdateTime = null, List<WfmUserScheduleAdherenceUpdatedMuTopicQueueReference> ActiveQueues = null, DateTime? ActiveQueuesModifiedTime = null, bool? RemovedFromManagementUnit = null)
         {
             this.User = User;
             this.ManagementUnitId = ManagementUnitId;
@@ -260,6 +266,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IsOutOfOffice = IsOutOfOffice;
             this.AdherenceState = AdherenceState;
             this.Impact = Impact;
+            this.AdherenceExplanation = AdherenceExplanation;
             this.AdherenceChangeTime = AdherenceChangeTime;
             this.PresenceUpdateTime = PresenceUpdateTime;
             this.ActiveQueues = ActiveQueues;
@@ -355,6 +362,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets AdherenceExplanation
+        /// </summary>
+        [DataMember(Name="adherenceExplanation", EmitDefaultValue=false)]
+        public WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation AdherenceExplanation { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdherenceChangeTime
         /// </summary>
         [DataMember(Name="adherenceChangeTime", EmitDefaultValue=false)]
@@ -414,6 +429,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsOutOfOffice: ").Append(IsOutOfOffice).Append("\n");
             sb.Append("  AdherenceState: ").Append(AdherenceState).Append("\n");
             sb.Append("  Impact: ").Append(Impact).Append("\n");
+            sb.Append("  AdherenceExplanation: ").Append(AdherenceExplanation).Append("\n");
             sb.Append("  AdherenceChangeTime: ").Append(AdherenceChangeTime).Append("\n");
             sb.Append("  PresenceUpdateTime: ").Append(PresenceUpdateTime).Append("\n");
             sb.Append("  ActiveQueues: ").Append(ActiveQueues).Append("\n");
@@ -520,6 +536,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Impact.Equals(other.Impact)
                 ) &&
                 (
+                    this.AdherenceExplanation == other.AdherenceExplanation ||
+                    this.AdherenceExplanation != null &&
+                    this.AdherenceExplanation.Equals(other.AdherenceExplanation)
+                ) &&
+                (
                     this.AdherenceChangeTime == other.AdherenceChangeTime ||
                     this.AdherenceChangeTime != null &&
                     this.AdherenceChangeTime.Equals(other.AdherenceChangeTime)
@@ -593,6 +614,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Impact != null)
                     hash = hash * 59 + this.Impact.GetHashCode();
+                
+                if (this.AdherenceExplanation != null)
+                    hash = hash * 59 + this.AdherenceExplanation.GetHashCode();
                 
                 if (this.AdherenceChangeTime != null)
                     hash = hash * 59 + this.AdherenceChangeTime.GetHashCode();

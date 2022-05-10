@@ -19,6 +19,7 @@ title: WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate
 | **IsOutOfOffice** | **bool?** |  | [optional] |
 | **AdherenceState** | **string** |  | [optional] |
 | **Impact** | **string** |  | [optional] |
+| **AdherenceExplanation** | [**WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation**](WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation.html) |  | [optional] |
 | **AdherenceChangeTime** | **DateTime?** |  | [optional] |
 | **PresenceUpdateTime** | **DateTime?** |  | [optional] |
 | **ActiveQueues** | [**List&lt;WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference&gt;**](WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference.html) |  | [optional] |

@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="GamificationStatus" /> class.
@@ -42,11 +47,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsActive">Gamification status of the organization..</param>
         /// <param name="DateStart">Gamification start date. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="AutomaticUserAssignment">Automatic assignment of users to the default profile.</param>
-        public GamificationStatus(bool? IsActive = null, String DateStart = null, bool? AutomaticUserAssignment = null)
+        /// <param name="DateStartPersonalBest">Personal best aggregation starting date. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
+        public GamificationStatus(bool? IsActive = null, String DateStart = null, bool? AutomaticUserAssignment = null, String DateStartPersonalBest = null)
         {
             this.IsActive = IsActive;
             this.DateStart = DateStart;
             this.AutomaticUserAssignment = AutomaticUserAssignment;
+            this.DateStartPersonalBest = DateStartPersonalBest;
             
         }
         
@@ -78,6 +85,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AutomaticUserAssignment { get; set; }
         
         
+        
+        /// <summary>
+        /// Personal best aggregation starting date. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// </summary>
+        /// <value>Personal best aggregation starting date. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        [DataMember(Name="dateStartPersonalBest", EmitDefaultValue=false)]
+        public String DateStartPersonalBest { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
             sb.Append("  AutomaticUserAssignment: ").Append(AutomaticUserAssignment).Append("\n");
+            sb.Append("  DateStartPersonalBest: ").Append(DateStartPersonalBest).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -144,6 +161,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AutomaticUserAssignment == other.AutomaticUserAssignment ||
                     this.AutomaticUserAssignment != null &&
                     this.AutomaticUserAssignment.Equals(other.AutomaticUserAssignment)
+                ) &&
+                (
+                    this.DateStartPersonalBest == other.DateStartPersonalBest ||
+                    this.DateStartPersonalBest != null &&
+                    this.DateStartPersonalBest.Equals(other.DateStartPersonalBest)
                 );
         }
 
@@ -167,6 +189,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AutomaticUserAssignment != null)
                     hash = hash * 59 + this.AutomaticUserAssignment.GetHashCode();
+                
+                if (this.DateStartPersonalBest != null)
+                    hash = hash * 59 + this.DateStartPersonalBest.GetHashCode();
                 
                 return hash;
             }

@@ -156,6 +156,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The source of the learning module
         /// </summary>
@@ -191,6 +194,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModule" /> class.
@@ -208,7 +213,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InformSteps">The list of inform steps in a learning module.</param>
         /// <param name="AssessmentForm">The assessment form for learning module.</param>
         /// <param name="SummaryData">The learning module summary data.</param>
-        public LearningModule(string Name = null, string Description = null, int? CompletionTimeInDays = null, TypeEnum? Type = null, List<LearningModuleInformStep> InformSteps = null, AssessmentForm AssessmentForm = null, LearningModuleSummary SummaryData = null)
+        /// <param name="CoverArt">The cover art for the learning module.</param>
+        public LearningModule(string Name = null, string Description = null, int? CompletionTimeInDays = null, TypeEnum? Type = null, List<LearningModuleInformStep> InformSteps = null, AssessmentForm AssessmentForm = null, LearningModuleSummary SummaryData = null, LearningModuleCoverArtResponse CoverArt = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -217,6 +223,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.InformSteps = InformSteps;
             this.AssessmentForm = AssessmentForm;
             this.SummaryData = SummaryData;
+            this.CoverArt = CoverArt;
             
         }
         
@@ -378,6 +385,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public LearningModuleSummary SummaryData { get; set; }
         
         
+        
+        /// <summary>
+        /// The cover art for the learning module
+        /// </summary>
+        /// <value>The cover art for the learning module</value>
+        [DataMember(Name="coverArt", EmitDefaultValue=false)]
+        public LearningModuleCoverArtResponse CoverArt { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -406,6 +422,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InformSteps: ").Append(InformSteps).Append("\n");
             sb.Append("  AssessmentForm: ").Append(AssessmentForm).Append("\n");
             sb.Append("  SummaryData: ").Append(SummaryData).Append("\n");
+            sb.Append("  CoverArt: ").Append(CoverArt).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -540,6 +557,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SummaryData == other.SummaryData ||
                     this.SummaryData != null &&
                     this.SummaryData.Equals(other.SummaryData)
+                ) &&
+                (
+                    this.CoverArt == other.CoverArt ||
+                    this.CoverArt != null &&
+                    this.CoverArt.Equals(other.CoverArt)
                 );
         }
 
@@ -611,6 +633,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SummaryData != null)
                     hash = hash * 59 + this.SummaryData.GetHashCode();
+                
+                if (this.CoverArt != null)
+                    hash = hash * 59 + this.CoverArt.GetHashCode();
                 
                 return hash;
             }
