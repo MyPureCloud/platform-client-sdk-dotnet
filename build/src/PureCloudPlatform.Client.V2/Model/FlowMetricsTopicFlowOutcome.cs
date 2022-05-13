@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FlowMetricsTopicFlowOutcome :  IEquatable<FlowMetricsTopicFlowOutcome>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowMetricsTopicFlowOutcome" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Combination of unique flow outcome identifier and its value separated by colon
         /// </summary>
         /// <value>Combination of unique flow outcome identifier and its value separated by colon</value>
         [DataMember(Name="flowOutcome", EmitDefaultValue=false)]
         public string FlowOutcome { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier of a flow outcome
         /// </summary>
         /// <value>Unique identifier of a flow outcome</value>
         [DataMember(Name="flowOutcomeId", EmitDefaultValue=false)]
         public string FlowOutcomeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Flow outcome value, e.g. SUCCESS
         /// </summary>
         /// <value>Flow outcome value, e.g. SUCCESS</value>
         [DataMember(Name="flowOutcomeValue", EmitDefaultValue=false)]
         public string FlowOutcomeValue { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FlowMetricsTopicFlowOutcome {\n");
-            
+
             sb.Append("  FlowOutcome: ").Append(FlowOutcome).Append("\n");
             sb.Append("  FlowOutcomeId: ").Append(FlowOutcomeId).Append("\n");
             sb.Append("  FlowOutcomeValue: ").Append(FlowOutcomeValue).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FlowOutcome != null)
                     hash = hash * 59 + this.FlowOutcome.GetHashCode();
-                
+
                 if (this.FlowOutcomeId != null)
                     hash = hash * 59 + this.FlowOutcomeId.GetHashCode();
-                
+
                 if (this.FlowOutcomeValue != null)
                     hash = hash * 59 + this.FlowOutcomeValue.GetHashCode();
-                
+
                 return hash;
             }
         }

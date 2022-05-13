@@ -18,64 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EvaluatorActivity :  IEquatable<EvaluatorActivity>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluatorActivity" /> class.
         /// </summary>
@@ -102,97 +44,97 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Evaluator
         /// </summary>
         [DataMember(Name="evaluator", EmitDefaultValue=false)]
         public User Evaluator { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NumEvaluationsAssigned
         /// </summary>
         [DataMember(Name="numEvaluationsAssigned", EmitDefaultValue=false)]
         public int? NumEvaluationsAssigned { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NumEvaluationsStarted
         /// </summary>
         [DataMember(Name="numEvaluationsStarted", EmitDefaultValue=false)]
         public int? NumEvaluationsStarted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NumEvaluationsCompleted
         /// </summary>
         [DataMember(Name="numEvaluationsCompleted", EmitDefaultValue=false)]
         public int? NumEvaluationsCompleted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NumCalibrationsAssigned
         /// </summary>
         [DataMember(Name="numCalibrationsAssigned", EmitDefaultValue=false)]
         public int? NumCalibrationsAssigned { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NumCalibrationsStarted
         /// </summary>
         [DataMember(Name="numCalibrationsStarted", EmitDefaultValue=false)]
         public int? NumCalibrationsStarted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NumCalibrationsCompleted
         /// </summary>
         [DataMember(Name="numCalibrationsCompleted", EmitDefaultValue=false)]
         public int? NumCalibrationsCompleted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NumEvaluationsWithoutViewPermission
         /// </summary>
         [DataMember(Name="numEvaluationsWithoutViewPermission", EmitDefaultValue=false)]
         public int? NumEvaluationsWithoutViewPermission { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -201,7 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EvaluatorActivity {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Evaluator: ").Append(Evaluator).Append("\n");
@@ -321,40 +263,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Evaluator != null)
                     hash = hash * 59 + this.Evaluator.GetHashCode();
-                
+
                 if (this.NumEvaluationsAssigned != null)
                     hash = hash * 59 + this.NumEvaluationsAssigned.GetHashCode();
-                
+
                 if (this.NumEvaluationsStarted != null)
                     hash = hash * 59 + this.NumEvaluationsStarted.GetHashCode();
-                
+
                 if (this.NumEvaluationsCompleted != null)
                     hash = hash * 59 + this.NumEvaluationsCompleted.GetHashCode();
-                
+
                 if (this.NumCalibrationsAssigned != null)
                     hash = hash * 59 + this.NumCalibrationsAssigned.GetHashCode();
-                
+
                 if (this.NumCalibrationsStarted != null)
                     hash = hash * 59 + this.NumCalibrationsStarted.GetHashCode();
-                
+
                 if (this.NumCalibrationsCompleted != null)
                     hash = hash * 59 + this.NumCalibrationsCompleted.GetHashCode();
-                
+
                 if (this.NumEvaluationsWithoutViewPermission != null)
                     hash = hash * 59 + this.NumEvaluationsWithoutViewPermission.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

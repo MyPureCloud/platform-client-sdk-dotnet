@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LexBotAlias :  IEquatable<LexBotAlias>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the Lex bot alias
         /// </summary>
@@ -71,13 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NOT_BUILT")]
             NotBuilt
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The target language of the Lex bot
         /// </summary>
@@ -99,55 +78,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "en-US")]
             Enus
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the Lex bot alias
         /// </summary>
         /// <value>The status of the Lex bot alias</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// The target language of the Lex bot
         /// </summary>
         /// <value>The target language of the Lex bot</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public LanguageEnum? Language { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LexBotAlias" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LexBotAlias() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LexBotAlias" /> class.
         /// </summary>
@@ -170,73 +118,73 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Lex bot this is an alias for
         /// </summary>
         /// <value>The Lex bot this is an alias for</value>
         [DataMember(Name="bot", EmitDefaultValue=false)]
         public LexBot Bot { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The version of the Lex bot this alias points at
         /// </summary>
         /// <value>The version of the Lex bot this alias points at</value>
         [DataMember(Name="botVersion", EmitDefaultValue=false)]
         public string BotVersion { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// If the status is FAILED, Amazon Lex explains why it failed to build the bot
         /// </summary>
         /// <value>If the status is FAILED, Amazon Lex explains why it failed to build the bot</value>
         [DataMember(Name="failureReason", EmitDefaultValue=false)]
         public string FailureReason { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// An array of Intents associated with this bot alias
         /// </summary>
         /// <value>An array of Intents associated with this bot alias</value>
         [DataMember(Name="intents", EmitDefaultValue=false)]
         public List<LexIntent> Intents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -245,7 +193,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LexBotAlias {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Bot: ").Append(Bot).Append("\n");
@@ -353,34 +301,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Bot != null)
                     hash = hash * 59 + this.Bot.GetHashCode();
-                
+
                 if (this.BotVersion != null)
                     hash = hash * 59 + this.BotVersion.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.FailureReason != null)
                     hash = hash * 59 + this.FailureReason.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.Intents != null)
                     hash = hash * 59 + this.Intents.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

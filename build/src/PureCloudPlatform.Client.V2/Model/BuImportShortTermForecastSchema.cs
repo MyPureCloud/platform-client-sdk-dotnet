@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuImportShortTermForecastSchema :  IEquatable<BuImportShortTermForecastSchema>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BuImportShortTermForecastSchema" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BuImportShortTermForecastSchema() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuImportShortTermForecastSchema" /> class.
         /// </summary>
@@ -70,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The description for the forecast
         /// </summary>
         /// <value>The description for the forecast</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of weeks covered by the forecast
         /// </summary>
         /// <value>The number of weeks covered by the forecast</value>
         [DataMember(Name="weekCount", EmitDefaultValue=false)]
         public int? WeekCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The short term planning group data
         /// </summary>
         /// <value>The short term planning group data</value>
         [DataMember(Name="planningGroups", EmitDefaultValue=false)]
         public List<ForecastPlanningGroupData> PlanningGroups { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The long term planning group data
         /// </summary>
         /// <value>The long term planning group data</value>
         [DataMember(Name="longTermPlanningGroups", EmitDefaultValue=false)]
         public List<LongTermForecastPlanningGroupData> LongTermPlanningGroups { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this forecast can be used for scheduling
         /// </summary>
         /// <value>Whether this forecast can be used for scheduling</value>
         [DataMember(Name="canUseForScheduling", EmitDefaultValue=false)]
         public bool? CanUseForScheduling { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuImportShortTermForecastSchema {\n");
-            
+
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  WeekCount: ").Append(WeekCount).Append("\n");
             sb.Append("  PlanningGroups: ").Append(PlanningGroups).Append("\n");
@@ -208,22 +180,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.WeekCount != null)
                     hash = hash * 59 + this.WeekCount.GetHashCode();
-                
+
                 if (this.PlanningGroups != null)
                     hash = hash * 59 + this.PlanningGroups.GetHashCode();
-                
+
                 if (this.LongTermPlanningGroups != null)
                     hash = hash * 59 + this.LongTermPlanningGroups.GetHashCode();
-                
+
                 if (this.CanUseForScheduling != null)
                     hash = hash * 59 + this.CanUseForScheduling.GetHashCode();
-                
+
                 return hash;
             }
         }

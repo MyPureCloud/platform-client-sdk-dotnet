@@ -18,34 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotFlowMilestone :  IEquatable<TextBotFlowMilestone>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotFlowMilestone" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotFlowMilestone() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotFlowMilestone" /> class.
         /// </summary>
-        /// <param name="Id">The Milestone&#39;s ID. (required).</param>
+        /// <param name="Id">The Milestone's ID. (required).</param>
         /// <param name="DateReached">The timestamp of when the milestone was reached. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="Sequence">The sequence number of the milestone. (required).</param>
         public TextBotFlowMilestone(string Id = null, DateTime? DateReached = null, long? Sequence = null)
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The Milestone&#39;s ID.
+        /// The Milestone's ID.
         /// </summary>
-        /// <value>The Milestone&#39;s ID.</value>
+        /// <value>The Milestone's ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp of when the milestone was reached. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp of when the milestone was reached. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateReached", EmitDefaultValue=false)]
         public DateTime? DateReached { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The sequence number of the milestone.
         /// </summary>
         /// <value>The sequence number of the milestone.</value>
         [DataMember(Name="sequence", EmitDefaultValue=false)]
         public long? Sequence { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotFlowMilestone {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DateReached: ").Append(DateReached).Append("\n");
             sb.Append("  Sequence: ").Append(Sequence).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.DateReached != null)
                     hash = hash * 59 + this.DateReached.GetHashCode();
-                
+
                 if (this.Sequence != null)
                     hash = hash * 59 + this.Sequence.GetHashCode();
-                
+
                 return hash;
             }
         }

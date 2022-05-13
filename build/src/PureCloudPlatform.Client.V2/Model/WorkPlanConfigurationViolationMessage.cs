@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkPlanConfigurationViolationMessage :  IEquatable<WorkPlanConfigurationViolationMessage>
     {
-        
-        
         /// <summary>
         /// Type of configuration violation message for this work plan
         /// </summary>
@@ -239,13 +237,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "WeeklyExactPaidMinutes")]
             Weeklyexactpaidminutes
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Severity of the message. A message with Error severity indicates the scheduler won't be able to produce schedules and thus the work plan is invalid.
         /// </summary>
@@ -279,37 +270,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of configuration violation message for this work plan
         /// </summary>
         /// <value>Type of configuration violation message for this work plan</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Severity of the message. A message with Error severity indicates the scheduler won't be able to produce schedules and thus the work plan is invalid.
         /// </summary>
         /// <value>Severity of the message. A message with Error severity indicates the scheduler won't be able to produce schedules and thus the work plan is invalid.</value>
         [DataMember(Name="severity", EmitDefaultValue=false)]
         public SeverityEnum? Severity { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanConfigurationViolationMessage" /> class.
         /// </summary>
         /// <param name="Type">Type of configuration violation message for this work plan.</param>
         /// <param name="Arguments">Arguments of the message that provide information about the misconfigured value or the threshold that is exceeded by the misconfigured value.</param>
-        /// <param name="Severity">Severity of the message. A message with Error severity indicates the scheduler won&#39;t be able to produce schedules and thus the work plan is invalid..</param>
+        /// <param name="Severity">Severity of the message. A message with Error severity indicates the scheduler won't be able to produce schedules and thus the work plan is invalid..</param>
         public WorkPlanConfigurationViolationMessage(TypeEnum? Type = null, List<WorkPlanValidationMessageArgument> Arguments = null, SeverityEnum? Severity = null)
         {
             this.Type = Type;
@@ -318,20 +296,20 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Arguments of the message that provide information about the misconfigured value or the threshold that is exceeded by the misconfigured value
         /// </summary>
         /// <value>Arguments of the message that provide information about the misconfigured value or the threshold that is exceeded by the misconfigured value</value>
         [DataMember(Name="arguments", EmitDefaultValue=false)]
         public List<WorkPlanValidationMessageArgument> Arguments { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -340,7 +318,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkPlanConfigurationViolationMessage {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Arguments: ").Append(Arguments).Append("\n");
             sb.Append("  Severity: ").Append(Severity).Append("\n");
@@ -412,16 +390,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Arguments != null)
                     hash = hash * 59 + this.Arguments.GetHashCode();
-                
+
                 if (this.Severity != null)
                     hash = hash * 59 + this.Severity.GetHashCode();
-                
+
                 return hash;
             }
         }

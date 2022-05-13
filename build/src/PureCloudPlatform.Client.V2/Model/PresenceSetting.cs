@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PresenceSetting :  IEquatable<PresenceSetting>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PresenceSetting" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Should Presence Events be sent
         /// </summary>
         /// <value>Should Presence Events be sent</value>
         [DataMember(Name="join", EmitDefaultValue=false)]
         public SettingDirection Join { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PresenceSetting {\n");
-            
+
             sb.Append("  Join: ").Append(Join).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Join != null)
                     hash = hash * 59 + this.Join.GetHashCode();
-                
+
                 return hash;
             }
         }

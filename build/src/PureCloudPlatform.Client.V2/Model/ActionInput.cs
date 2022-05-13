@@ -18,29 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActionInput :  IEquatable<ActionInput>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionInput" /> class.
         /// </summary>
-        /// <param name="InputSchema">JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both..</param>
-        /// <param name="InputSchemaFlattened">JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both..</param>
+        /// <param name="InputSchema">JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. If the 'flatten' query parameter is omitted or false, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both..</param>
+        /// <param name="InputSchemaFlattened">JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. The schema is transformed based on Architect's flattened format. If the 'flatten' query parameter is supplied as true, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both..</param>
         /// <param name="InputSchemaUri">The URI of the input schema.</param>
         public ActionInput(JsonSchemaDocument InputSchema = null, JsonSchemaDocument InputSchemaFlattened = null, string InputSchemaUri = null)
         {
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.
+        /// JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. If the 'flatten' query parameter is omitted or false, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.
         /// </summary>
-        /// <value>JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.</value>
+        /// <value>JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. If the 'flatten' query parameter is omitted or false, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.</value>
         [DataMember(Name="inputSchema", EmitDefaultValue=false)]
         public JsonSchemaDocument InputSchema { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.
+        /// JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. The schema is transformed based on Architect's flattened format. If the 'flatten' query parameter is supplied as true, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.
         /// </summary>
-        /// <value>JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.</value>
+        /// <value>JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. The schema is transformed based on Architect's flattened format. If the 'flatten' query parameter is supplied as true, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both.</value>
         [DataMember(Name="inputSchemaFlattened", EmitDefaultValue=false)]
         public JsonSchemaDocument InputSchemaFlattened { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI of the input schema
         /// </summary>
         /// <value>The URI of the input schema</value>
         [DataMember(Name="inputSchemaUri", EmitDefaultValue=false)]
         public string InputSchemaUri { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActionInput {\n");
-            
+
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
             sb.Append("  InputSchemaFlattened: ").Append(InputSchemaFlattened).Append("\n");
             sb.Append("  InputSchemaUri: ").Append(InputSchemaUri).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.InputSchema != null)
                     hash = hash * 59 + this.InputSchema.GetHashCode();
-                
+
                 if (this.InputSchemaFlattened != null)
                     hash = hash * 59 + this.InputSchemaFlattened.GetHashCode();
-                
+
                 if (this.InputSchemaUri != null)
                     hash = hash * 59 + this.InputSchemaUri.GetHashCode();
-                
+
                 return hash;
             }
         }

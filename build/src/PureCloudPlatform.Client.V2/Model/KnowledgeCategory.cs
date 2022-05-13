@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KnowledgeCategory :  IEquatable<KnowledgeCategory>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Actual language of the category
         /// </summary>
@@ -107,49 +93,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "it-IT")]
             Itit
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Actual language of the category
         /// </summary>
         /// <value>Actual language of the category</value>
         [DataMember(Name="languageCode", EmitDefaultValue=false)]
-        public LanguageCodeEnum? LanguageCode { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public LanguageCodeEnum? LanguageCode { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeCategory" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected KnowledgeCategory() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeCategory" /> class.
         /// </summary>
@@ -162,72 +117,72 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Category name
         /// </summary>
         /// <value>Category name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Category description
         /// </summary>
         /// <value>Category description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Knowledge base which category does belong to
         /// </summary>
         /// <value>Knowledge base which category does belong to</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
         public KnowledgeBase KnowledgeBase { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Category creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Category creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Category last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Category last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -236,7 +191,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class KnowledgeCategory {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -338,31 +293,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.KnowledgeBase != null)
                     hash = hash * 59 + this.KnowledgeBase.GetHashCode();
-                
+
                 if (this.LanguageCode != null)
                     hash = hash * 59 + this.LanguageCode.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

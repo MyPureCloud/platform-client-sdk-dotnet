@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ShiftTradeMatchViolation :  IEquatable<ShiftTradeMatchViolation>
     {
-        
-        
         /// <summary>
         /// The type of constraint violation
         /// </summary>
@@ -221,49 +219,36 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "WeekScheduleUnpublished")]
             Weekscheduleunpublished
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of constraint violation
         /// </summary>
         /// <value>The type of constraint violation</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradeMatchViolation" /> class.
         /// </summary>
         /// <param name="Type">The type of constraint violation.</param>
-        /// <param name="_Params">Clarifying user params for constructing helpful error messages.</param>
-        public ShiftTradeMatchViolation(TypeEnum? Type = null, Dictionary<string, string> _Params = null)
+        /// <param name="Params">Clarifying user params for constructing helpful error messages.</param>
+        public ShiftTradeMatchViolation(TypeEnum? Type = null, Dictionary<string, string> Params = null)
         {
             this.Type = Type;
-            this._Params = _Params;
+            this.Params = Params;
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Clarifying user params for constructing helpful error messages
         /// </summary>
         /// <value>Clarifying user params for constructing helpful error messages</value>
         [DataMember(Name="params", EmitDefaultValue=false)]
-        public Dictionary<string, string> _Params { get; set; }
-        
-        
+        public Dictionary<string, string> Params { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -272,9 +257,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ShiftTradeMatchViolation {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  _Params: ").Append(_Params).Append("\n");
+            sb.Append("  Params: ").Append(Params).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -321,9 +306,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
-                    this._Params == other._Params ||
-                    this._Params != null &&
-                    this._Params.SequenceEqual(other._Params)
+                    this.Params == other.Params ||
+                    this.Params != null &&
+                    this.Params.SequenceEqual(other.Params)
                 );
         }
 
@@ -338,13 +323,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
-                if (this._Params != null)
-                    hash = hash * 59 + this._Params.GetHashCode();
-                
+
+                if (this.Params != null)
+                    hash = hash * 59 + this.Params.GetHashCode();
+
                 return hash;
             }
         }

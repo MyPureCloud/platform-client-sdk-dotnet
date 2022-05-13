@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ImportStatusRequest :  IEquatable<ImportStatusRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportStatusRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ImportStatusRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportStatusRequest" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// New status for existing import operation
         /// </summary>
         /// <value>New status for existing import operation</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ImportStatusRequest {\n");
-            
+
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 return hash;
             }
         }

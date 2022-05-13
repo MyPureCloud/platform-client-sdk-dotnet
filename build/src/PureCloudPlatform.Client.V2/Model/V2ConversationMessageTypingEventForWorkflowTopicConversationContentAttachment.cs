@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class V2ConversationMessageTypingEventForWorkflowTopicConversationContentAttachment :  IEquatable<V2ConversationMessageTypingEventForWorkflowTopicConversationContentAttachment>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
@@ -67,46 +62,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Link")]
             Link
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="V2ConversationMessageTypingEventForWorkflowTopicConversationContentAttachment" /> class.
         /// </summary>
@@ -129,57 +89,57 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Mime
         /// </summary>
         [DataMember(Name="mime", EmitDefaultValue=false)]
         public string Mime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Text
         /// </summary>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Sha256
         /// </summary>
         [DataMember(Name="sha256", EmitDefaultValue=false)]
         public string Sha256 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Filename
         /// </summary>
         [DataMember(Name="filename", EmitDefaultValue=false)]
         public string Filename { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,7 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class V2ConversationMessageTypingEventForWorkflowTopicConversationContentAttachment {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
@@ -284,28 +244,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.Mime != null)
                     hash = hash * 59 + this.Mime.GetHashCode();
-                
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Sha256 != null)
                     hash = hash * 59 + this.Sha256.GetHashCode();
-                
+
                 if (this.Filename != null)
                     hash = hash * 59 + this.Filename.GetHashCode();
-                
+
                 return hash;
             }
         }

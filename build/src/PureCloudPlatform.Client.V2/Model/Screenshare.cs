@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Screenshare :  IEquatable<Screenshare>
     {
-        
-        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -83,22 +81,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "none")]
             None
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
@@ -210,82 +192,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "uncallable")]
             Uncallable
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
         /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Screenshare" /> class.
         /// </summary>
@@ -300,7 +218,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Provider">The source provider for the screen share..</param>
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
-        /// <param name="Segments">The time line of the participant&#39;s call, divided into activity segments..</param>
+        /// <param name="Segments">The time line of the participant's call, divided into activity segments..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">After-call work for the communication..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
@@ -324,128 +242,128 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// A globally unique identifier for this communication.
         /// </summary>
         /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The room id context (xmpp jid) for the conference session.
         /// </summary>
         /// <value>The room id context (xmpp jid) for the conference session.</value>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public string Context { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether this participant is sharing their screen.
         /// </summary>
         /// <value>Indicates whether this participant is sharing their screen.</value>
         [DataMember(Name="sharing", EmitDefaultValue=false)]
         public bool? Sharing { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of peer participants from the perspective of the participant in the conference.
         /// </summary>
         /// <value>The number of peer participants from the perspective of the participant in the conference.</value>
         [DataMember(Name="peerCount", EmitDefaultValue=false)]
         public int? PeerCount { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startAlertingTime", EmitDefaultValue=false)]
         public DateTime? StartAlertingTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The source provider for the screen share.
         /// </summary>
         /// <value>The source provider for the screen share.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the peer communication corresponding to a matching leg for this communication.
         /// </summary>
         /// <value>The id of the peer communication corresponding to a matching leg for this communication.</value>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The time line of the participant&#39;s call, divided into activity segments.
+        /// The time line of the participant's call, divided into activity segments.
         /// </summary>
-        /// <value>The time line of the participant&#39;s call, divided into activity segments.</value>
+        /// <value>The time line of the participant's call, divided into activity segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Call wrap up or disposition data.
         /// </summary>
         /// <value>Call wrap up or disposition data.</value>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public Wrapup Wrapup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// After-call work for the communication.
         /// </summary>
         /// <value>After-call work for the communication.</value>
         [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
         public AfterCallWork AfterCallWork { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested.
         /// </summary>
         /// <value>Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested.</value>
         [DataMember(Name="afterCallWorkRequired", EmitDefaultValue=false)]
         public bool? AfterCallWorkRequired { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -454,7 +372,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Screenshare {\n");
-            
+
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
@@ -598,52 +516,51 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
-                
+
                 if (this.Sharing != null)
                     hash = hash * 59 + this.Sharing.GetHashCode();
-                
+
                 if (this.PeerCount != null)
                     hash = hash * 59 + this.PeerCount.GetHashCode();
-                
+
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
+
                 if (this.StartAlertingTime != null)
                     hash = hash * 59 + this.StartAlertingTime.GetHashCode();
-                
+
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
-                
+
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
-                
+
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                
+
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
-                
+
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
-                
+
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
-                
+
                 if (this.AfterCallWork != null)
                     hash = hash * 59 + this.AfterCallWork.GetHashCode();
-                
+
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
-                
+
                 return hash;
             }
         }

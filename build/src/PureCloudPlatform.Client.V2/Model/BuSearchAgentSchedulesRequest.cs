@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuSearchAgentSchedulesRequest :  IEquatable<BuSearchAgentSchedulesRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BuSearchAgentSchedulesRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BuSearchAgentSchedulesRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuSearchAgentSchedulesRequest" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Start date of the range to search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Start date of the range to search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// End date of the range to search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>End date of the range to search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// IDs of the users for whose schedules to search
         /// </summary>
         /// <value>IDs of the users for whose schedules to search</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuSearchAgentSchedulesRequest {\n");
-            
+
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
-                
+
                 return hash;
             }
         }

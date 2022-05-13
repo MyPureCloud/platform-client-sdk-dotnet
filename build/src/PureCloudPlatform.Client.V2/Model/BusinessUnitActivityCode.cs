@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BusinessUnitActivityCode :  IEquatable<BusinessUnitActivityCode>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The category of the activity code
         /// </summary>
@@ -101,58 +87,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unscheduled")]
             Unscheduled
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The category of the activity code
         /// </summary>
         /// <value>The category of the activity code</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessUnitActivityCode" /> class.
         /// </summary>
@@ -163,7 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LengthInMinutes">The default length of the activity in minutes.</param>
         /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity.</param>
         /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints.</param>
-        /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off..</param>
+        /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off..</param>
         /// <param name="Metadata">Version metadata of this activity code.</param>
         public BusinessUnitActivityCode(string Name = null, bool? Active = null, bool? DefaultCode = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, WfmVersionedEntityMetadata Metadata = null)
         {
@@ -179,98 +119,98 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this activity code is active or has been deleted
         /// </summary>
         /// <value>Whether this activity code is active or has been deleted</value>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this is a default activity code
         /// </summary>
         /// <value>Whether this is a default activity code</value>
         [DataMember(Name="defaultCode", EmitDefaultValue=false)]
         public bool? DefaultCode { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The default length of the activity in minutes
         /// </summary>
         /// <value>The default length of the activity in minutes</value>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether an agent is paid while performing this activity
         /// </summary>
         /// <value>Whether an agent is paid while performing this activity</value>
         [DataMember(Name="countsAsPaidTime", EmitDefaultValue=false)]
         public bool? CountsAsPaidTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints
         /// </summary>
         /// <value>Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints</value>
         [DataMember(Name="countsAsWorkTime", EmitDefaultValue=false)]
         public bool? CountsAsWorkTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off.
+        /// Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off.
         /// </summary>
-        /// <value>Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off.</value>
+        /// <value>Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off.</value>
         [DataMember(Name="agentTimeOffSelectable", EmitDefaultValue=false)]
         public bool? AgentTimeOffSelectable { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version metadata of this activity code
         /// </summary>
         /// <value>Version metadata of this activity code</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -279,7 +219,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessUnitActivityCode {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
@@ -399,40 +339,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
-                
+
                 if (this.DefaultCode != null)
                     hash = hash * 59 + this.DefaultCode.GetHashCode();
-                
+
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
-                
+
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
-                
+
                 if (this.CountsAsPaidTime != null)
                     hash = hash * 59 + this.CountsAsPaidTime.GetHashCode();
-                
+
                 if (this.CountsAsWorkTime != null)
                     hash = hash * 59 + this.CountsAsWorkTime.GetHashCode();
-                
+
                 if (this.AgentTimeOffSelectable != null)
                     hash = hash * 59 + this.AgentTimeOffSelectable.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

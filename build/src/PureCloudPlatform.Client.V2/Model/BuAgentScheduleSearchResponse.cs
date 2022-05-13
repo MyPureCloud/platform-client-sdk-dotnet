@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuAgentScheduleSearchResponse :  IEquatable<BuAgentScheduleSearchResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAgentScheduleSearchResponse" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The user to whom this agent schedule applies
         /// </summary>
         /// <value>The user to whom this agent schedule applies</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UserReference User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The shift definitions for this agent schedule
         /// </summary>
         /// <value>The shift definitions for this agent schedule</value>
         [DataMember(Name="shifts", EmitDefaultValue=false)]
         public List<BuAgentScheduleShift> Shifts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Full day time off markers which apply to this agent schedule
         /// </summary>
         /// <value>Full day time off markers which apply to this agent schedule</value>
         [DataMember(Name="fullDayTimeOffMarkers", EmitDefaultValue=false)]
         public List<BuFullDayTimeOffMarker> FullDayTimeOffMarkers { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuAgentScheduleSearchResponse {\n");
-            
+
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Shifts: ").Append(Shifts).Append("\n");
             sb.Append("  FullDayTimeOffMarkers: ").Append(FullDayTimeOffMarkers).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Shifts != null)
                     hash = hash * 59 + this.Shifts.GetHashCode();
-                
+
                 if (this.FullDayTimeOffMarkers != null)
                     hash = hash * 59 + this.FullDayTimeOffMarkers.GetHashCode();
-                
+
                 return hash;
             }
         }

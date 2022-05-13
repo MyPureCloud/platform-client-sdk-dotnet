@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerResponsesetConfigChangeReaction :  IEquatable<DialerResponsesetConfigChangeReaction>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ReactionType
         /// </summary>
@@ -64,23 +56,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "play_file")]
             PlayFile
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ReactionType
         /// </summary>
         [DataMember(Name="reactionType", EmitDefaultValue=false)]
         public ReactionTypeEnum? ReactionType { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerResponsesetConfigChangeReaction" /> class.
         /// </summary>
@@ -95,25 +75,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public string Data { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,7 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerResponsesetConfigChangeReaction {\n");
-            
+
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ReactionType: ").Append(ReactionType).Append("\n");
@@ -194,16 +174,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ReactionType != null)
                     hash = hash * 59 + this.ReactionType.GetHashCode();
-                
+
                 return hash;
             }
         }

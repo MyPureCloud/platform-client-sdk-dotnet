@@ -18,25 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WrapUpCodeMapping :  IEquatable<WrapUpCodeMapping>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets DefaultSet
         /// </summary>
@@ -69,33 +50,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "RIGHT_PARTY_CONTACT")]
             RightPartyContact
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WrapUpCodeMapping" /> class.
         /// </summary>
@@ -112,78 +66,78 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The default set of wrap-up flags. These will be used if there is no entry for a given wrap-up code in the mapping.
         /// </summary>
         /// <value>The default set of wrap-up flags. These will be used if there is no entry for a given wrap-up code in the mapping.</value>
         [DataMember(Name="defaultSet", EmitDefaultValue=false)]
         public List<DefaultSetEnum> DefaultSet { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A map from wrap-up code identifiers to a set of wrap-up flags.
         /// </summary>
         /// <value>A map from wrap-up code identifiers to a set of wrap-up flags.</value>
         [DataMember(Name="mapping", EmitDefaultValue=false)]
         public Dictionary<string, List<string>> Mapping { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,7 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WrapUpCodeMapping {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -294,31 +248,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.DefaultSet != null)
                     hash = hash * 59 + this.DefaultSet.GetHashCode();
-                
+
                 if (this.Mapping != null)
                     hash = hash * 59 + this.Mapping.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

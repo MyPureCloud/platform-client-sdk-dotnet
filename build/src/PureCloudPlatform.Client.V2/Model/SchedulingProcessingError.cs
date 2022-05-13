@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SchedulingProcessingError :  IEquatable<SchedulingProcessingError>
     {
-        
-        
         /// <summary>
         /// An internal code representing the type of error. BadJson for 'Unable to parse json.' NotFound for 'Resource not found.' Fail for 'An unexpected server error occured.'
         /// </summary>
@@ -53,25 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Fail")]
             Fail
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// An internal code representing the type of error. BadJson for 'Unable to parse json.' NotFound for 'Resource not found.' Fail for 'An unexpected server error occured.'
         /// </summary>
         /// <value>An internal code representing the type of error. BadJson for 'Unable to parse json.' NotFound for 'Resource not found.' Fail for 'An unexpected server error occured.'</value>
         [DataMember(Name="internalErrorCode", EmitDefaultValue=false)]
-        public InternalErrorCodeEnum? InternalErrorCode { get; set; }
-        
-        
-        
-        
-    
+        public InternalErrorCodeEnum? InternalErrorCode { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulingProcessingError" /> class.
         /// </summary>
@@ -80,18 +65,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// A text description of the error
         /// </summary>
         /// <value>A text description of the error</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SchedulingProcessingError {\n");
-            
+
             sb.Append("  InternalErrorCode: ").Append(InternalErrorCode).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("}\n");
@@ -166,13 +151,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.InternalErrorCode != null)
                     hash = hash * 59 + this.InternalErrorCode.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 return hash;
             }
         }

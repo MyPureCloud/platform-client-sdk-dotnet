@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimEmail :  IEquatable<ScimEmail>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of email address. \"value\" is immutable if \"type\" is set to \"other\".
         /// </summary>
@@ -50,32 +45,17 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "other")]
             Other
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of email address. \"value\" is immutable if \"type\" is set to \"other\".
         /// </summary>
         /// <value>The type of email address. \"value\" is immutable if \"type\" is set to \"other\".</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimEmail" /> class.
         /// </summary>
-        /// <param name="Value">The email address. Is immutable if \&quot;type\&quot; is set to \&quot;other\&quot;..</param>
-        /// <param name="Type">The type of email address. \&quot;value\&quot; is immutable if \&quot;type\&quot; is set to \&quot;other\&quot;..</param>
+        /// <param name="Value">The email address. Is immutable if \"type\" is set to \"other\"..</param>
+        /// <param name="Type">The type of email address. \"value\" is immutable if \"type\" is set to \"other\"..</param>
         /// <param name="Primary">Indicates whether the email address is the primary email address..</param>
         public ScimEmail(string Value = null, TypeEnum? Type = null, bool? Primary = null)
         {
@@ -85,27 +65,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The email address. Is immutable if \&quot;type\&quot; is set to \&quot;other\&quot;.
+        /// The email address. Is immutable if \"type\" is set to \"other\".
         /// </summary>
-        /// <value>The email address. Is immutable if \&quot;type\&quot; is set to \&quot;other\&quot;.</value>
+        /// <value>The email address. Is immutable if \"type\" is set to \"other\".</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Indicates whether the email address is the primary email address.
         /// </summary>
         /// <value>Indicates whether the email address is the primary email address.</value>
         [DataMember(Name="primary", EmitDefaultValue=false)]
         public bool? Primary { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -114,7 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimEmail {\n");
-            
+
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Primary: ").Append(Primary).Append("\n");
@@ -186,16 +166,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Primary != null)
                     hash = hash * 59 + this.Primary.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OutboundMessagingMessagingCampaignConfigChangeSmsConfig :  IEquatable<OutboundMessagingMessagingCampaignConfigChangeSmsConfig>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeSmsConfig" /> class.
         /// </summary>
@@ -57,41 +34,41 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The Contact List column specifying the message to send to the contact.
         /// </summary>
         /// <value>The Contact List column specifying the message to send to the contact.</value>
         [DataMember(Name="messageColumn", EmitDefaultValue=false)]
         public string MessageColumn { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Contact List column specifying the phone number to send a message to.
         /// </summary>
         /// <value>The Contact List column specifying the phone number to send a message to.</value>
         [DataMember(Name="phoneColumn", EmitDefaultValue=false)]
         public string PhoneColumn { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SenderSmsPhoneNumber
         /// </summary>
         [DataMember(Name="senderSmsPhoneNumber", EmitDefaultValue=false)]
         public OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef SenderSmsPhoneNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ContentTemplate
         /// </summary>
         [DataMember(Name="contentTemplate", EmitDefaultValue=false)]
         public OutboundMessagingMessagingCampaignConfigChangeResponseRef ContentTemplate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OutboundMessagingMessagingCampaignConfigChangeSmsConfig {\n");
-            
+
             sb.Append("  MessageColumn: ").Append(MessageColumn).Append("\n");
             sb.Append("  PhoneColumn: ").Append(PhoneColumn).Append("\n");
             sb.Append("  SenderSmsPhoneNumber: ").Append(SenderSmsPhoneNumber).Append("\n");
@@ -178,19 +155,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MessageColumn != null)
                     hash = hash * 59 + this.MessageColumn.GetHashCode();
-                
+
                 if (this.PhoneColumn != null)
                     hash = hash * 59 + this.PhoneColumn.GetHashCode();
-                
+
                 if (this.SenderSmsPhoneNumber != null)
                     hash = hash * 59 + this.SenderSmsPhoneNumber.GetHashCode();
-                
+
                 if (this.ContentTemplate != null)
                     hash = hash * 59 + this.ContentTemplate.GetHashCode();
-                
+
                 return hash;
             }
         }

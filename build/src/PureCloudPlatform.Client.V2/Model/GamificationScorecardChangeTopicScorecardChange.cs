@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GamificationScorecardChangeTopicScorecardChange :  IEquatable<GamificationScorecardChangeTopicScorecardChange>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GamificationScorecardChangeTopicScorecardChange" /> class.
         /// </summary>
@@ -71,55 +38,55 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Workday
         /// </summary>
         [DataMember(Name="workday", EmitDefaultValue=false)]
         public string Workday { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DivisionId
         /// </summary>
         [DataMember(Name="divisionId", EmitDefaultValue=false)]
         public string DivisionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TeamId
         /// </summary>
         [DataMember(Name="teamId", EmitDefaultValue=false)]
         public string TeamId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PerformanceProfileId
         /// </summary>
         [DataMember(Name="performanceProfileId", EmitDefaultValue=false)]
         public string PerformanceProfileId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PerformanceMetrics
         /// </summary>
         [DataMember(Name="performanceMetrics", EmitDefaultValue=false)]
         public List<GamificationScorecardChangeTopicPerformanceMetric> PerformanceMetrics { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GamificationScorecardChangeTopicScorecardChange {\n");
-            
+
             sb.Append("  Workday: ").Append(Workday).Append("\n");
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
@@ -218,25 +185,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Workday != null)
                     hash = hash * 59 + this.Workday.GetHashCode();
-                
+
                 if (this.DivisionId != null)
                     hash = hash * 59 + this.DivisionId.GetHashCode();
-                
+
                 if (this.TeamId != null)
                     hash = hash * 59 + this.TeamId.GetHashCode();
-                
+
                 if (this.PerformanceProfileId != null)
                     hash = hash * 59 + this.PerformanceProfileId.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.PerformanceMetrics != null)
                     hash = hash * 59 + this.PerformanceMetrics.GetHashCode();
-                
+
                 return hash;
             }
         }

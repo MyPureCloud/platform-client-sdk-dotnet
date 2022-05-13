@@ -18,32 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OrgUser :  IEquatable<OrgUser>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current state for this user.
         /// </summary>
@@ -77,177 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public StateEnum? State { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OrgUser" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected OrgUser() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OrgUser" /> class.
         /// </summary>
@@ -290,311 +105,311 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The division to which this entity belongs.
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public Division Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Chat
         /// </summary>
         [DataMember(Name="chat", EmitDefaultValue=false)]
         public Chat Chat { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Department
         /// </summary>
         [DataMember(Name="department", EmitDefaultValue=false)]
         public string Department { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Auto populated from addresses.
         /// </summary>
         /// <value>Auto populated from addresses.</value>
         [DataMember(Name="primaryContactInfo", EmitDefaultValue=false)]
         public List<Contact> PrimaryContactInfo { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Email addresses and phone numbers for this user
         /// </summary>
         /// <value>Email addresses and phone numbers for this user</value>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<Contact> Addresses { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Username
         /// </summary>
         [DataMember(Name="username", EmitDefaultValue=false)]
         public string Username { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Manager
         /// </summary>
         [DataMember(Name="manager", EmitDefaultValue=false)]
         public User Manager { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Images
         /// </summary>
         [DataMember(Name="images", EmitDefaultValue=false)]
         public List<UserImage> Images { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH.
         /// </summary>
         /// <value>Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Certifications
         /// </summary>
         [DataMember(Name="certifications", EmitDefaultValue=false)]
         public List<string> Certifications { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Biography
         /// </summary>
         [DataMember(Name="biography", EmitDefaultValue=false)]
         public Biography Biography { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EmployerInfo
         /// </summary>
         [DataMember(Name="employerInfo", EmitDefaultValue=false)]
         public EmployerInfo EmployerInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ACD routing status
         /// </summary>
         /// <value>ACD routing status</value>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public RoutingStatus RoutingStatus { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Active presence
         /// </summary>
         /// <value>Active presence</value>
         [DataMember(Name="presence", EmitDefaultValue=false)]
         public UserPresence Presence { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Integration presence
         /// </summary>
         /// <value>Integration presence</value>
         [DataMember(Name="integrationPresence", EmitDefaultValue=false)]
         public UserPresence IntegrationPresence { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Summary of conversion statistics for conversation types.
         /// </summary>
         /// <value>Summary of conversion statistics for conversation types.</value>
         [DataMember(Name="conversationSummary", EmitDefaultValue=false)]
         public UserConversationSummary ConversationSummary { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Determine if out of office is enabled
         /// </summary>
         /// <value>Determine if out of office is enabled</value>
         [DataMember(Name="outOfOffice", EmitDefaultValue=false)]
         public OutOfOffice OutOfOffice { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current geolocation position
         /// </summary>
         /// <value>Current geolocation position</value>
         [DataMember(Name="geolocation", EmitDefaultValue=false)]
         public Geolocation Geolocation { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Effective, default, and last station information
         /// </summary>
         /// <value>Effective, default, and last station information</value>
         [DataMember(Name="station", EmitDefaultValue=false)]
         public UserStations Station { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Roles and permissions assigned to the user
         /// </summary>
         /// <value>Roles and permissions assigned to the user</value>
         [DataMember(Name="authorization", EmitDefaultValue=false)]
         public UserAuthorization Authorization { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Profile skills possessed by the user
         /// </summary>
         /// <value>Profile skills possessed by the user</value>
         [DataMember(Name="profileSkills", EmitDefaultValue=false)]
         public List<string> ProfileSkills { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user placement at each site location.
         /// </summary>
         /// <value>The user placement at each site location.</value>
         [DataMember(Name="locations", EmitDefaultValue=false)]
         public List<Location> Locations { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The groups the user is a member of
         /// </summary>
         /// <value>The groups the user is a member of</value>
         [DataMember(Name="groups", EmitDefaultValue=false)]
         public List<Group> Groups { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The team the user is a member of
         /// </summary>
         /// <value>The team the user is a member of</value>
         [DataMember(Name="team", EmitDefaultValue=false)]
         public Team Team { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Routing (ACD) skills possessed by the user
         /// </summary>
         /// <value>Routing (ACD) skills possessed by the user</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
         public List<UserRoutingSkill> Skills { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Routing (ACD) languages possessed by the user
         /// </summary>
         /// <value>Routing (ACD) languages possessed by the user</value>
         [DataMember(Name="languages", EmitDefaultValue=false)]
         public List<UserRoutingLanguage> Languages { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// acd auto answer
         /// </summary>
         /// <value>acd auto answer</value>
         [DataMember(Name="acdAutoAnswer", EmitDefaultValue=false)]
         public bool? AcdAutoAnswer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// preferred language by the user
         /// </summary>
         /// <value>preferred language by the user</value>
         [DataMember(Name="languagePreference", EmitDefaultValue=false)]
         public string LanguagePreference { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LastTokenIssued
         /// </summary>
         [DataMember(Name="lastTokenIssued", EmitDefaultValue=false)]
         public OAuthLastTokenIssued LastTokenIssued { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The last time the user logged in using username and password. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The last time the user logged in using username and password. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateLastLogin", EmitDefaultValue=false)]
         public DateTime? DateLastLogin { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Organization
         /// </summary>
         [DataMember(Name="organization", EmitDefaultValue=false)]
         public Organization Organization { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -603,7 +418,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OrgUser {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
@@ -873,115 +688,114 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.Chat != null)
                     hash = hash * 59 + this.Chat.GetHashCode();
-                
+
                 if (this.Department != null)
                     hash = hash * 59 + this.Department.GetHashCode();
-                
+
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
+
                 if (this.PrimaryContactInfo != null)
                     hash = hash * 59 + this.PrimaryContactInfo.GetHashCode();
-                
+
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Username != null)
                     hash = hash * 59 + this.Username.GetHashCode();
-                
+
                 if (this.Manager != null)
                     hash = hash * 59 + this.Manager.GetHashCode();
-                
+
                 if (this.Images != null)
                     hash = hash * 59 + this.Images.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.Certifications != null)
                     hash = hash * 59 + this.Certifications.GetHashCode();
-                
+
                 if (this.Biography != null)
                     hash = hash * 59 + this.Biography.GetHashCode();
-                
+
                 if (this.EmployerInfo != null)
                     hash = hash * 59 + this.EmployerInfo.GetHashCode();
-                
+
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
-                
+
                 if (this.Presence != null)
                     hash = hash * 59 + this.Presence.GetHashCode();
-                
+
                 if (this.IntegrationPresence != null)
                     hash = hash * 59 + this.IntegrationPresence.GetHashCode();
-                
+
                 if (this.ConversationSummary != null)
                     hash = hash * 59 + this.ConversationSummary.GetHashCode();
-                
+
                 if (this.OutOfOffice != null)
                     hash = hash * 59 + this.OutOfOffice.GetHashCode();
-                
+
                 if (this.Geolocation != null)
                     hash = hash * 59 + this.Geolocation.GetHashCode();
-                
+
                 if (this.Station != null)
                     hash = hash * 59 + this.Station.GetHashCode();
-                
+
                 if (this.Authorization != null)
                     hash = hash * 59 + this.Authorization.GetHashCode();
-                
+
                 if (this.ProfileSkills != null)
                     hash = hash * 59 + this.ProfileSkills.GetHashCode();
-                
+
                 if (this.Locations != null)
                     hash = hash * 59 + this.Locations.GetHashCode();
-                
+
                 if (this.Groups != null)
                     hash = hash * 59 + this.Groups.GetHashCode();
-                
+
                 if (this.Team != null)
                     hash = hash * 59 + this.Team.GetHashCode();
-                
+
                 if (this.Skills != null)
                     hash = hash * 59 + this.Skills.GetHashCode();
-                
+
                 if (this.Languages != null)
                     hash = hash * 59 + this.Languages.GetHashCode();
-                
+
                 if (this.AcdAutoAnswer != null)
                     hash = hash * 59 + this.AcdAutoAnswer.GetHashCode();
-                
+
                 if (this.LanguagePreference != null)
                     hash = hash * 59 + this.LanguagePreference.GetHashCode();
-                
+
                 if (this.LastTokenIssued != null)
                     hash = hash * 59 + this.LastTokenIssued.GetHashCode();
-                
+
                 if (this.DateLastLogin != null)
                     hash = hash * 59 + this.DateLastLogin.GetHashCode();
-                
+
                 if (this.Organization != null)
                     hash = hash * 59 + this.Organization.GetHashCode();
-                
+
                 return hash;
             }
         }

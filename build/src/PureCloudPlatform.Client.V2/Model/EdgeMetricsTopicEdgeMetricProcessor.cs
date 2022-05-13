@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeMetricsTopicEdgeMetricProcessor :  IEquatable<EdgeMetricsTopicEdgeMetricProcessor>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsTopicEdgeMetricProcessor" /> class.
         /// </summary>
@@ -64,47 +36,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets CpuId
         /// </summary>
         [DataMember(Name="cpuId", EmitDefaultValue=false)]
         public string CpuId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IdleTimePct
         /// </summary>
         [DataMember(Name="idleTimePct", EmitDefaultValue=false)]
         public int? IdleTimePct { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActiveTimePct
         /// </summary>
         [DataMember(Name="activeTimePct", EmitDefaultValue=false)]
         public int? ActiveTimePct { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PrivilegedTimePct
         /// </summary>
         [DataMember(Name="privilegedTimePct", EmitDefaultValue=false)]
         public int? PrivilegedTimePct { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserTimePct
         /// </summary>
         [DataMember(Name="userTimePct", EmitDefaultValue=false)]
         public int? UserTimePct { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeMetricsTopicEdgeMetricProcessor {\n");
-            
+
             sb.Append("  CpuId: ").Append(CpuId).Append("\n");
             sb.Append("  IdleTimePct: ").Append(IdleTimePct).Append("\n");
             sb.Append("  ActiveTimePct: ").Append(ActiveTimePct).Append("\n");
@@ -197,22 +169,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CpuId != null)
                     hash = hash * 59 + this.CpuId.GetHashCode();
-                
+
                 if (this.IdleTimePct != null)
                     hash = hash * 59 + this.IdleTimePct.GetHashCode();
-                
+
                 if (this.ActiveTimePct != null)
                     hash = hash * 59 + this.ActiveTimePct.GetHashCode();
-                
+
                 if (this.PrivilegedTimePct != null)
                     hash = hash * 59 + this.PrivilegedTimePct.GetHashCode();
-                
+
                 if (this.UserTimePct != null)
                     hash = hash * 59 + this.UserTimePct.GetHashCode();
-                
+
                 return hash;
             }
         }

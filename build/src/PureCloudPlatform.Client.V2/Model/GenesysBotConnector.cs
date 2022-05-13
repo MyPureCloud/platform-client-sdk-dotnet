@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GenesysBotConnector :  IEquatable<GenesysBotConnector>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GenesysBotConnector" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// User defined name/value parameters passed to the BotConnector bot.
         /// </summary>
         /// <value>User defined name/value parameters passed to the BotConnector bot.</value>
         [DataMember(Name="queryParameters", EmitDefaultValue=false)]
         public Dictionary<string, string> QueryParameters { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GenesysBotConnector {\n");
-            
+
             sb.Append("  QueryParameters: ").Append(QueryParameters).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QueryParameters != null)
                     hash = hash * 59 + this.QueryParameters.GetHashCode();
-                
+
                 return hash;
             }
         }

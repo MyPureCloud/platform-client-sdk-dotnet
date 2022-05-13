@@ -18,172 +18,119 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MessagingSettingReference :  IEquatable<MessagingSettingReference>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagingSettingReference" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected MessagingSettingReference() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagingSettingReference" /> class.
         /// </summary>
         /// <param name="Id">The messaging Setting unique identifier associated with this integration (required).</param>
         /// <param name="Version">Version number.</param>
         /// <param name="Content">Settings relating to message contents.</param>
-        /// <param name="_Event">Settings relating to events which may occur.</param>
-        public MessagingSettingReference(string Id = null, string Version = null, ContentSetting Content = null, EventSetting _Event = null)
+        /// <param name="Event">Settings relating to events which may occur.</param>
+        public MessagingSettingReference(string Id = null, string Version = null, ContentSetting Content = null, EventSetting Event = null)
         {
             this.Id = Id;
             this.Version = Version;
             this.Content = Content;
-            this._Event = _Event;
+            this.Event = Event;
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The messaging Setting unique identifier associated with this integration
         /// </summary>
         /// <value>The messaging Setting unique identifier associated with this integration</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The messaging Setting profile name
         /// </summary>
         /// <value>The messaging Setting profile name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The messaging Setting profile URI
         /// </summary>
         /// <value>The messaging Setting profile URI</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date this messaging Setting was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date this messaging Setting was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date this messaging Setting was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date this messaging Setting was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version number
         /// </summary>
         /// <value>Version number</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User reference that created this Setting
         /// </summary>
         /// <value>User reference that created this Setting</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public DomainEntityRef CreatedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User reference that modified this Setting
         /// </summary>
         /// <value>User reference that modified this Setting</value>
         [DataMember(Name="updatedBy", EmitDefaultValue=false)]
         public DomainEntityRef UpdatedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Settings relating to message contents
         /// </summary>
         /// <value>Settings relating to message contents</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public ContentSetting Content { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Settings relating to events which may occur
         /// </summary>
         /// <value>Settings relating to events which may occur</value>
         [DataMember(Name="event", EmitDefaultValue=false)]
-        public EventSetting _Event { get; set; }
-        
-        
+        public EventSetting Event { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,7 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MessagingSettingReference {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -202,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  UpdatedBy: ").Append(UpdatedBy).Append("\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
-            sb.Append("  _Event: ").Append(_Event).Append("\n");
+            sb.Append("  Event: ").Append(Event).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -289,9 +236,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Content.Equals(other.Content)
                 ) &&
                 (
-                    this._Event == other._Event ||
-                    this._Event != null &&
-                    this._Event.Equals(other._Event)
+                    this.Event == other.Event ||
+                    this.Event != null &&
+                    this.Event.Equals(other.Event)
                 );
         }
 
@@ -306,37 +253,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.UpdatedBy != null)
                     hash = hash * 59 + this.UpdatedBy.GetHashCode();
-                
+
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
-                
-                if (this._Event != null)
-                    hash = hash * 59 + this._Event.GetHashCode();
-                
+
+                if (this.Event != null)
+                    hash = hash * 59 + this.Event.GetHashCode();
+
                 return hash;
             }
         }

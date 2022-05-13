@@ -8,7 +8,7 @@ title: Manager
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Value** | **string** | The ID of the manager. | [optional] |
-| **_Ref** | **string** | The reference URI of the manager&#39;s user record. | [optional] |
+| **Ref** | **string** | The reference URI of the manager&#39;s user record. | [optional] |
 {: class="table table-striped"}
 
 

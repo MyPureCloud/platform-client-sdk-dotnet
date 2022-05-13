@@ -18,59 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyWebEventsNotificationBrowser :  IEquatable<JourneyWebEventsNotificationBrowser>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyWebEventsNotificationBrowser" /> class.
         /// </summary>
@@ -99,87 +46,87 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Family
         /// </summary>
         [DataMember(Name="family", EmitDefaultValue=false)]
         public string Family { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Lang
         /// </summary>
         [DataMember(Name="lang", EmitDefaultValue=false)]
         public string Lang { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Fingerprint
         /// </summary>
         [DataMember(Name="fingerprint", EmitDefaultValue=false)]
         public string Fingerprint { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ViewHeight
         /// </summary>
         [DataMember(Name="viewHeight", EmitDefaultValue=false)]
         public int? ViewHeight { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ViewWidth
         /// </summary>
         [DataMember(Name="viewWidth", EmitDefaultValue=false)]
         public int? ViewWidth { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FeaturesFlash
         /// </summary>
         [DataMember(Name="featuresFlash", EmitDefaultValue=false)]
         public bool? FeaturesFlash { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FeaturesJava
         /// </summary>
         [DataMember(Name="featuresJava", EmitDefaultValue=false)]
         public bool? FeaturesJava { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FeaturesPdf
         /// </summary>
         [DataMember(Name="featuresPdf", EmitDefaultValue=false)]
         public bool? FeaturesPdf { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FeaturesWebrtc
         /// </summary>
         [DataMember(Name="featuresWebrtc", EmitDefaultValue=false)]
         public bool? FeaturesWebrtc { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,7 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyWebEventsNotificationBrowser {\n");
-            
+
             sb.Append("  Family: ").Append(Family).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Lang: ").Append(Lang).Append("\n");
@@ -302,37 +249,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Family != null)
                     hash = hash * 59 + this.Family.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.Lang != null)
                     hash = hash * 59 + this.Lang.GetHashCode();
-                
+
                 if (this.Fingerprint != null)
                     hash = hash * 59 + this.Fingerprint.GetHashCode();
-                
+
                 if (this.ViewHeight != null)
                     hash = hash * 59 + this.ViewHeight.GetHashCode();
-                
+
                 if (this.ViewWidth != null)
                     hash = hash * 59 + this.ViewWidth.GetHashCode();
-                
+
                 if (this.FeaturesFlash != null)
                     hash = hash * 59 + this.FeaturesFlash.GetHashCode();
-                
+
                 if (this.FeaturesJava != null)
                     hash = hash * 59 + this.FeaturesJava.GetHashCode();
-                
+
                 if (this.FeaturesPdf != null)
                     hash = hash * 59 + this.FeaturesPdf.GetHashCode();
-                
+
                 if (this.FeaturesWebrtc != null)
                     hash = hash * 59 + this.FeaturesWebrtc.GetHashCode();
-                
+
                 return hash;
             }
         }

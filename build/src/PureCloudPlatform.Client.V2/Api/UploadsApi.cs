@@ -8,14 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
-    
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IUploadsApi : IApiAccessor
     {
         #region Synchronous Operations
-        
+
         /// <summary>
         /// Creates a presigned URL for uploading a knowledge import file with a set of documents
         /// </summary>
@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
         ApiResponse<UploadUrlResponse> PostKnowledgeDocumentuploadsWithHttpInfo (UploadUrlRequest body);
-        
+
         /// <summary>
         /// Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner
         /// </summary>
@@ -48,7 +48,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
-        UploadUrlResponse PostLanguageunderstandingMinerUploads (string minerId, Empty body);
+        UploadUrlResponse PostLanguageunderstandingMinerUploads (string minerId, Object body);
 
         /// <summary>
         /// Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner
@@ -60,8 +60,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
-        ApiResponse<UploadUrlResponse> PostLanguageunderstandingMinerUploadsWithHttpInfo (string minerId, Empty body);
-        
+        ApiResponse<UploadUrlResponse> PostLanguageunderstandingMinerUploadsWithHttpInfo (string minerId, Object body);
+
         /// <summary>
         /// Creates presigned url for uploading a public asset image
         /// </summary>
@@ -83,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
         ApiResponse<UploadUrlResponse> PostUploadsPublicassetsImagesWithHttpInfo (UploadUrlRequest body);
-        
+
         /// <summary>
         /// Creates presigned url for uploading a recording file
         /// </summary>
@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
         ApiResponse<UploadUrlResponse> PostUploadsRecordingsWithHttpInfo (UploadUrlRequest body);
-        
+
         /// <summary>
         /// Creates presigned url for uploading WFM historical data file. Requires data in csv format.
         /// </summary>
@@ -127,11 +127,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
         ApiResponse<UploadUrlResponse> PostUploadsWorkforcemanagementHistoricaldataCsvWithHttpInfo (UploadUrlRequest body);
-        
+
         #endregion Synchronous Operations
-        
+
         #region Asynchronous Operations
-        
+
         /// <summary>
         /// Creates a presigned URL for uploading a knowledge import file with a set of documents
         /// </summary>
@@ -153,7 +153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostKnowledgeDocumentuploadsAsyncWithHttpInfo (UploadUrlRequest body);
-        
+
         /// <summary>
         /// Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner
         /// </summary>
@@ -164,7 +164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
-        System.Threading.Tasks.Task<UploadUrlResponse> PostLanguageunderstandingMinerUploadsAsync (string minerId, Empty body);
+        System.Threading.Tasks.Task<UploadUrlResponse> PostLanguageunderstandingMinerUploadsAsync (string minerId, Object body);
 
         /// <summary>
         /// Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner
@@ -176,8 +176,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostLanguageunderstandingMinerUploadsAsyncWithHttpInfo (string minerId, Empty body);
-        
+        System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostLanguageunderstandingMinerUploadsAsyncWithHttpInfo (string minerId, Object body);
+
         /// <summary>
         /// Creates presigned url for uploading a public asset image
         /// </summary>
@@ -199,7 +199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostUploadsPublicassetsImagesAsyncWithHttpInfo (UploadUrlRequest body);
-        
+
         /// <summary>
         /// Creates presigned url for uploading a recording file
         /// </summary>
@@ -221,7 +221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostUploadsRecordingsAsyncWithHttpInfo (UploadUrlRequest body);
-        
+
         /// <summary>
         /// Creates presigned url for uploading WFM historical data file. Requires data in csv format.
         /// </summary>
@@ -243,9 +243,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostUploadsWorkforcemanagementHistoricaldataCsvAsyncWithHttpInfo (UploadUrlRequest body);
-        
+
         #endregion Asynchronous Operations
-        
+
     }
 
     /// <summary>
@@ -335,7 +335,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
-        
+
         /// <summary>
         /// Creates a presigned URL for uploading a knowledge import file with a set of documents 
         /// </summary>
@@ -370,7 +370,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -378,9 +377,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -403,9 +403,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -434,7 +434,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates a presigned URL for uploading a knowledge import file with a set of documents 
         /// </summary>
@@ -471,7 +471,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -479,8 +478,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -504,9 +504,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -535,8 +535,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner 
         /// </summary>
@@ -544,7 +544,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
-        public UploadUrlResponse PostLanguageunderstandingMinerUploads (string minerId, Empty body)
+        public UploadUrlResponse PostLanguageunderstandingMinerUploads (string minerId, Object body)
         {
              ApiResponse<UploadUrlResponse> localVarResponse = PostLanguageunderstandingMinerUploadsWithHttpInfo(minerId, body);
              return localVarResponse.Data;
@@ -557,7 +557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
-        public ApiResponse< UploadUrlResponse > PostLanguageunderstandingMinerUploadsWithHttpInfo (string minerId, Empty body)
+        public ApiResponse< UploadUrlResponse > PostLanguageunderstandingMinerUploadsWithHttpInfo (string minerId, Object body)
         { 
             // verify the required parameter 'minerId' is set
             if (minerId == null)
@@ -576,7 +576,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -584,9 +583,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -610,9 +610,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -641,7 +641,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner 
         /// </summary>
@@ -649,7 +649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
-        public async System.Threading.Tasks.Task<UploadUrlResponse> PostLanguageunderstandingMinerUploadsAsync (string minerId, Empty body)
+        public async System.Threading.Tasks.Task<UploadUrlResponse> PostLanguageunderstandingMinerUploadsAsync (string minerId, Object body)
         {
              ApiResponse<UploadUrlResponse> localVarResponse = await PostLanguageunderstandingMinerUploadsAsyncWithHttpInfo(minerId, body);
              return localVarResponse.Data;
@@ -663,7 +663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostLanguageunderstandingMinerUploadsAsyncWithHttpInfo (string minerId, Empty body)
+        public async System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostLanguageunderstandingMinerUploadsAsyncWithHttpInfo (string minerId, Object body)
         { 
             // verify the required parameter 'minerId' is set
             if (minerId == null)
@@ -684,7 +684,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -692,8 +691,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -718,9 +718,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -749,8 +749,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates presigned url for uploading a public asset image 
         /// </summary>
@@ -785,7 +785,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -793,9 +792,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -818,9 +818,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -849,7 +849,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates presigned url for uploading a public asset image 
         /// </summary>
@@ -886,7 +886,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -894,8 +893,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -919,9 +919,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -950,8 +950,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates presigned url for uploading a recording file 
         /// </summary>
@@ -986,7 +986,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -994,9 +993,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1019,9 +1019,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1050,7 +1050,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates presigned url for uploading a recording file 
         /// </summary>
@@ -1087,7 +1087,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -1095,8 +1094,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1120,9 +1120,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1151,8 +1151,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates presigned url for uploading WFM historical data file. Requires data in csv format. 
         /// </summary>
@@ -1187,7 +1187,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -1195,9 +1194,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1220,9 +1220,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1251,7 +1251,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates presigned url for uploading WFM historical data file. Requires data in csv format. 
         /// </summary>
@@ -1288,7 +1288,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -1296,8 +1295,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1321,9 +1321,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1352,8 +1352,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
     }
-    
+
 }

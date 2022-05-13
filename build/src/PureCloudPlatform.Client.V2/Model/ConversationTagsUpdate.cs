@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationTagsUpdate :  IEquatable<ConversationTagsUpdate>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationTagsUpdate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConversationTagsUpdate() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationTagsUpdate" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The external tag associated with the conversation.
         /// </summary>
         /// <value>The external tag associated with the conversation.</value>
         [DataMember(Name="externalTag", EmitDefaultValue=false)]
         public string ExternalTag { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationTagsUpdate {\n");
-            
+
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ExternalTag != null)
                     hash = hash * 59 + this.ExternalTag.GetHashCode();
-                
+
                 return hash;
             }
         }

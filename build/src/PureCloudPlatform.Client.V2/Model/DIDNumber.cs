@@ -18,26 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DIDNumber :  IEquatable<DIDNumber>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of the entity that owns this DID.  If the DID is unassigned, this will be NULL.
         /// </summary>
@@ -77,37 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "GROUP")]
             Group
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of the entity that owns this DID.  If the DID is unassigned, this will be NULL.
         /// </summary>
         /// <value>The type of the entity that owns this DID.  If the DID is unassigned, this will be NULL.</value>
         [DataMember(Name="ownerType", EmitDefaultValue=false)]
         public OwnerTypeEnum? OwnerType { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DIDNumber" /> class.
         /// </summary>
@@ -115,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Number">The number of the DID formatted as E164..</param>
         /// <param name="Assigned">True if this DID is assigned to an entity.  False otherwise..</param>
         /// <param name="DidPool">A Uri reference to the DID Pool this DID is a part of..</param>
-        /// <param name="Owner">A Uri reference to the owner of this DID.  The owner&#39;s type can be found in ownerType.  If the DID is unassigned, this will be NULL..</param>
+        /// <param name="Owner">A Uri reference to the owner of this DID.  The owner's type can be found in ownerType.  If the DID is unassigned, this will be NULL..</param>
         /// <param name="OwnerType">The type of the entity that owns this DID.  If the DID is unassigned, this will be NULL..</param>
         public DIDNumber(string Name = null, string Number = null, bool? Assigned = null, AddressableEntityRef DidPool = null, DomainEntityRef Owner = null, OwnerTypeEnum? OwnerType = null)
         {
@@ -128,71 +83,71 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of the DID formatted as E164.
         /// </summary>
         /// <value>The number of the DID formatted as E164.</value>
         [DataMember(Name="number", EmitDefaultValue=false)]
         public string Number { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if this DID is assigned to an entity.  False otherwise.
         /// </summary>
         /// <value>True if this DID is assigned to an entity.  False otherwise.</value>
         [DataMember(Name="assigned", EmitDefaultValue=false)]
         public bool? Assigned { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A Uri reference to the DID Pool this DID is a part of.
         /// </summary>
         /// <value>A Uri reference to the DID Pool this DID is a part of.</value>
         [DataMember(Name="didPool", EmitDefaultValue=false)]
         public AddressableEntityRef DidPool { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// A Uri reference to the owner of this DID.  The owner&#39;s type can be found in ownerType.  If the DID is unassigned, this will be NULL.
+        /// A Uri reference to the owner of this DID.  The owner's type can be found in ownerType.  If the DID is unassigned, this will be NULL.
         /// </summary>
-        /// <value>A Uri reference to the owner of this DID.  The owner&#39;s type can be found in ownerType.  If the DID is unassigned, this will be NULL.</value>
+        /// <value>A Uri reference to the owner of this DID.  The owner's type can be found in ownerType.  If the DID is unassigned, this will be NULL.</value>
         [DataMember(Name="owner", EmitDefaultValue=false)]
         public DomainEntityRef Owner { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -201,7 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DIDNumber {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
@@ -303,31 +258,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Number != null)
                     hash = hash * 59 + this.Number.GetHashCode();
-                
+
                 if (this.Assigned != null)
                     hash = hash * 59 + this.Assigned.GetHashCode();
-                
+
                 if (this.DidPool != null)
                     hash = hash * 59 + this.DidPool.GetHashCode();
-                
+
                 if (this.Owner != null)
                     hash = hash * 59 + this.Owner.GetHashCode();
-                
+
                 if (this.OwnerType != null)
                     hash = hash * 59 + this.OwnerType.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

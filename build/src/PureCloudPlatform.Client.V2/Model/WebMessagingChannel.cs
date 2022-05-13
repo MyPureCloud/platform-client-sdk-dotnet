@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebMessagingChannel :  IEquatable<WebMessagingChannel>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WebMessagingChannel" /> class.
         /// </summary>
@@ -49,43 +26,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Information about the recipient the message is received from.
         /// </summary>
         /// <value>Information about the recipient the message is received from.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public WebMessagingRecipient From { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Information about the recipient the message is sent to.
         /// </summary>
         /// <value>Information about the recipient the message is sent to.</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public WebMessagingRecipient To { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// When the message was processed by Genesys Cloud. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>When the message was processed by Genesys Cloud. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique provider ID of the message.
         /// </summary>
         /// <value>Unique provider ID of the message.</value>
         [DataMember(Name="messageId", EmitDefaultValue=false)]
         public string MessageId { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -94,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebMessagingChannel {\n");
-            
+
             sb.Append("  From: ").Append(From).Append("\n");
             sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
@@ -172,19 +149,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
-                
+
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
-                
+
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
-                
+
                 if (this.MessageId != null)
                     hash = hash * 59 + this.MessageId.GetHashCode();
-                
+
                 return hash;
             }
         }

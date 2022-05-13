@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PredictiveRouting :  IEquatable<PredictiveRouting>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PredictiveRouting" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A switch used to determine if agent skills will be considered.
         /// </summary>
         /// <value>A switch used to determine if agent skills will be considered.</value>
         [DataMember(Name="respectSkills", EmitDefaultValue=false)]
         public bool? RespectSkills { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PredictiveRouting {\n");
-            
+
             sb.Append("  RespectSkills: ").Append(RespectSkills).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RespectSkills != null)
                     hash = hash * 59 + this.RespectSkills.GetHashCode();
-                
+
                 return hash;
             }
         }

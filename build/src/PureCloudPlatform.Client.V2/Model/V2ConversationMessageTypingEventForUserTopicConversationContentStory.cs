@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class V2ConversationMessageTypingEventForUserTopicConversationContentStory :  IEquatable<V2ConversationMessageTypingEventForUserTopicConversationContentStory>
     {
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -46,29 +44,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Reply")]
             Reply
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="V2ConversationMessageTypingEventForUserTopicConversationContentStory" /> class.
         /// </summary>
@@ -83,25 +63,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ReplyToId
         /// </summary>
         [DataMember(Name="replyToId", EmitDefaultValue=false)]
         public string ReplyToId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class V2ConversationMessageTypingEventForUserTopicConversationContentStory {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  ReplyToId: ").Append(ReplyToId).Append("\n");
@@ -182,16 +162,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.ReplyToId != null)
                     hash = hash * 59 + this.ReplyToId.GetHashCode();
-                
+
                 return hash;
             }
         }

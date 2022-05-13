@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TimeOffLimitRange :  IEquatable<TimeOffLimitRange>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Granularity choice for the time off limit
         /// </summary>
@@ -44,39 +39,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Daily")]
             Daily
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Granularity choice for the time off limit
         /// </summary>
         /// <value>Granularity choice for the time off limit</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public GranularityEnum? Granularity { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffLimitRange" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TimeOffLimitRange() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffLimitRange" /> class.
         /// </summary>
-        /// <param name="StartDate">Start date of the range. The end date is determined by &#39;granularity&#39; and the size of &#39;limitMinutesPerInterval&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
+        /// <param name="StartDate">Start date of the range. The end date is determined by 'granularity' and the size of 'limitMinutesPerInterval'. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="Granularity">Granularity choice for the time off limit (required).</param>
-        /// <param name="LimitMinutesPerInterval">The list of time off limit values in minutes per granularity interval. If &#39;null&#39; is specified, then interval specific value is cleared. Such interval will have &#39;defaultLimitMinutes&#39; value (required).</param>
+        /// <param name="LimitMinutesPerInterval">The list of time off limit values in minutes per granularity interval. If 'null' is specified, then interval specific value is cleared. Such interval will have 'defaultLimitMinutes' value (required).</param>
         public TimeOffLimitRange(String StartDate = null, GranularityEnum? Granularity = null, List<int?> LimitMinutesPerInterval = null)
         {
             this.StartDate = StartDate;
@@ -85,27 +65,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// Start date of the range. The end date is determined by &#39;granularity&#39; and the size of &#39;limitMinutesPerInterval&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// Start date of the range. The end date is determined by 'granularity' and the size of 'limitMinutesPerInterval'. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
-        /// <value>Start date of the range. The end date is determined by &#39;granularity&#39; and the size of &#39;limitMinutesPerInterval&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        /// <value>Start date of the range. The end date is determined by 'granularity' and the size of 'limitMinutesPerInterval'. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public String StartDate { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
-        /// The list of time off limit values in minutes per granularity interval. If &#39;null&#39; is specified, then interval specific value is cleared. Such interval will have &#39;defaultLimitMinutes&#39; value
+        /// The list of time off limit values in minutes per granularity interval. If 'null' is specified, then interval specific value is cleared. Such interval will have 'defaultLimitMinutes' value
         /// </summary>
-        /// <value>The list of time off limit values in minutes per granularity interval. If &#39;null&#39; is specified, then interval specific value is cleared. Such interval will have &#39;defaultLimitMinutes&#39; value</value>
+        /// <value>The list of time off limit values in minutes per granularity interval. If 'null' is specified, then interval specific value is cleared. Such interval will have 'defaultLimitMinutes' value</value>
         [DataMember(Name="limitMinutesPerInterval", EmitDefaultValue=false)]
         public List<int?> LimitMinutesPerInterval { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -114,7 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimeOffLimitRange {\n");
-            
+
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  Granularity: ").Append(Granularity).Append("\n");
             sb.Append("  LimitMinutesPerInterval: ").Append(LimitMinutesPerInterval).Append("\n");
@@ -186,16 +166,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.Granularity != null)
                     hash = hash * 59 + this.Granularity.GetHashCode();
-                
+
                 if (this.LimitMinutesPerInterval != null)
                     hash = hash * 59 + this.LimitMinutesPerInterval.GetHashCode();
-                
+
                 return hash;
             }
         }

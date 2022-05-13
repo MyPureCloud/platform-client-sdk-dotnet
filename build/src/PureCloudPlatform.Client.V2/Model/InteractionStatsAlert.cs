@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class InteractionStatsAlert :  IEquatable<InteractionStatsAlert>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The dimension of concern.
         /// </summary>
@@ -53,13 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "userId")]
             Userid
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The metric to be assessed.
         /// </summary>
@@ -135,10 +120,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "tAcw")]
             Tacw
         }
-        
-        
-        
-        
         /// <summary>
         /// The media type.
         /// </summary>
@@ -184,10 +165,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "message")]
             Message
         }
-        
-        
-        
-        
         /// <summary>
         /// The comparison descriptor used against the metric's value.
         /// </summary>
@@ -239,10 +216,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ne")]
             Ne
         }
-        
-        
-        
-        
         /// <summary>
         /// The statistic of concern for the metric.
         /// </summary>
@@ -282,30 +255,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "max")]
             Max
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
@@ -338,92 +287,42 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The dimension of concern.
         /// </summary>
         /// <value>The dimension of concern.</value>
         [DataMember(Name="dimension", EmitDefaultValue=false)]
-        public DimensionEnum? Dimension { get; set; }
-        
-        
-        
-        
-        
+        public DimensionEnum? Dimension { get; private set; }
         /// <summary>
         /// The metric to be assessed.
         /// </summary>
         /// <value>The metric to be assessed.</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
-        public MetricEnum? Metric { get; set; }
-        
-        
-        
+        public MetricEnum? Metric { get; private set; }
         /// <summary>
         /// The media type.
         /// </summary>
         /// <value>The media type.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
-        public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
+        public MediaTypeEnum? MediaType { get; private set; }
         /// <summary>
         /// The comparison descriptor used against the metric's value.
         /// </summary>
         /// <value>The comparison descriptor used against the metric's value.</value>
         [DataMember(Name="numericRange", EmitDefaultValue=false)]
-        public NumericRangeEnum? NumericRange { get; set; }
-        
-        
-        
+        public NumericRangeEnum? NumericRange { get; private set; }
         /// <summary>
         /// The statistic of concern for the metric.
         /// </summary>
         /// <value>The statistic of concern for the metric.</value>
         [DataMember(Name="statistic", EmitDefaultValue=false)]
-        public StatisticEnum? Statistic { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public StatisticEnum? Statistic { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="InteractionStatsAlert" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected InteractionStatsAlert() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="InteractionStatsAlert" /> class.
         /// </summary>
@@ -436,124 +335,124 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of the rule that generated the alert
         /// </summary>
         /// <value>Name of the rule that generated the alert</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The value of the dimension.
         /// </summary>
         /// <value>The value of the dimension.</value>
         [DataMember(Name="dimensionValue", EmitDefaultValue=false)]
         public string DimensionValue { get; private set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// The threshold value.
         /// </summary>
         /// <value>The threshold value.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public double? Value { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the rule.
         /// </summary>
         /// <value>The id of the rule.</value>
         [DataMember(Name="ruleId", EmitDefaultValue=false)]
         public string RuleId { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if the alert has been read.
         /// </summary>
         /// <value>Indicates if the alert has been read.</value>
         [DataMember(Name="unread", EmitDefaultValue=false)]
         public bool? Unread { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date/time the alert was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date/time the alert was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date/time the owning rule exiting in alarm status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date/time the owning rule exiting in alarm status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ids of users who were notified of alarm state change.
         /// </summary>
         /// <value>The ids of users who were notified of alarm state change.</value>
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
         public List<User> NotificationUsers { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A collection of notification methods.
         /// </summary>
         /// <value>A collection of notification methods.</value>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
         public List<AlertTypesEnum> AlertTypes { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RuleUri
         /// </summary>
         [DataMember(Name="ruleUri", EmitDefaultValue=false)]
         public string RuleUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -562,7 +461,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InteractionStatsAlert {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
@@ -718,58 +617,57 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Dimension != null)
                     hash = hash * 59 + this.Dimension.GetHashCode();
-                
+
                 if (this.DimensionValue != null)
                     hash = hash * 59 + this.DimensionValue.GetHashCode();
-                
+
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.NumericRange != null)
                     hash = hash * 59 + this.NumericRange.GetHashCode();
-                
+
                 if (this.Statistic != null)
                     hash = hash * 59 + this.Statistic.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.RuleId != null)
                     hash = hash * 59 + this.RuleId.GetHashCode();
-                
+
                 if (this.Unread != null)
                     hash = hash * 59 + this.Unread.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 if (this.NotificationUsers != null)
                     hash = hash * 59 + this.NotificationUsers.GetHashCode();
-                
+
                 if (this.AlertTypes != null)
                     hash = hash * 59 + this.AlertTypes.GetHashCode();
-                
+
                 if (this.RuleUri != null)
                     hash = hash * 59 + this.RuleUri.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

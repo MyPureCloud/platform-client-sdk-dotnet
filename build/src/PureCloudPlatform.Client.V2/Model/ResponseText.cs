@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResponseText :  IEquatable<ResponseText>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Response text content type.
         /// </summary>
@@ -39,39 +34,29 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Textplain for "text/plain"
+            /// Enum Plain for "text/plain"
             /// </summary>
             [EnumMember(Value = "text/plain")]
-            Textplain,
+            Plain,
             
             /// <summary>
-            /// Enum Texthtml for "text/html"
+            /// Enum Html for "text/html"
             /// </summary>
             [EnumMember(Value = "text/html")]
-            Texthtml
+            Html
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Response text content type.
         /// </summary>
         /// <value>Response text content type.</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public ContentTypeEnum? ContentType { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseText" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ResponseText() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseText" /> class.
         /// </summary>
@@ -84,18 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Response text content.
         /// </summary>
         /// <value>Response text content.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public string Content { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResponseText {\n");
-            
+
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("}\n");
@@ -170,13 +155,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
-                
+
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerCallabletimesetConfigChangeCallableTime :  IEquatable<DialerCallabletimesetConfigChangeCallableTime>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCallabletimesetConfigChangeCallableTime" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The time slots
         /// </summary>
         /// <value>The time slots</value>
         [DataMember(Name="timeSlots", EmitDefaultValue=false)]
         public List<DialerCallabletimesetConfigChangeTimeSlot> TimeSlots { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ISO ID for the timezone
         /// </summary>
         /// <value>The ISO ID for the timezone</value>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerCallabletimesetConfigChangeCallableTime {\n");
-            
+
             sb.Append("  TimeSlots: ").Append(TimeSlots).Append("\n");
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeSlots != null)
                     hash = hash * 59 + this.TimeSlots.GetHashCode();
-                
+
                 if (this.TimeZoneId != null)
                     hash = hash * 59 + this.TimeZoneId.GetHashCode();
-                
+
                 return hash;
             }
         }

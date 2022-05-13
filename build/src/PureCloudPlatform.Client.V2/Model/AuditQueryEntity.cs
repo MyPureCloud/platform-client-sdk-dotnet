@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuditQueryEntity :  IEquatable<AuditQueryEntity>
     {
-        
-        
         /// <summary>
         /// Name of the Entity
         /// </summary>
@@ -1025,12 +1023,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Participant")]
             Participant
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Actions
         /// </summary>
@@ -1513,22 +1505,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Reset")]
             Reset
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// Name of the Entity
         /// </summary>
         /// <value>Name of the Entity</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public NameEnum? Name { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditQueryEntity" /> class.
         /// </summary>
@@ -1541,18 +1523,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// List of Actions
         /// </summary>
         /// <value>List of Actions</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public List<ActionsEnum> Actions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1561,7 +1543,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuditQueryEntity {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("}\n");
@@ -1627,13 +1609,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
+
                 return hash;
             }
         }

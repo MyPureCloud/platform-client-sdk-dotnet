@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserScheduleShift :  IEquatable<UserScheduleShift>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleShift" /> class.
         /// </summary>
@@ -72,70 +34,70 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The schedule to which this shift belongs
         /// </summary>
         /// <value>The schedule to which this shift belongs</value>
         [DataMember(Name="weekSchedule", EmitDefaultValue=false)]
         public WeekScheduleReference WeekSchedule { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ID of the schedule shift. This is only for the case of updating and deleting an existing shift
         /// </summary>
         /// <value>ID of the schedule shift. This is only for the case of updating and deleting an existing shift</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Start time in UTC for this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Start time in UTC for this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Length of this shift in minutes
         /// </summary>
         /// <value>Length of this shift in minutes</value>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of activities in this shift
         /// </summary>
         /// <value>List of activities in this shift</value>
         [DataMember(Name="activities", EmitDefaultValue=false)]
         public List<UserScheduleActivity> Activities { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If marked true for updating this schedule shift, it will be deleted
         /// </summary>
         /// <value>If marked true for updating this schedule shift, it will be deleted</value>
         [DataMember(Name="delete", EmitDefaultValue=false)]
         public bool? Delete { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the shift was set as manually edited
         /// </summary>
         /// <value>Whether the shift was set as manually edited</value>
         [DataMember(Name="manuallyEdited", EmitDefaultValue=false)]
         public bool? ManuallyEdited { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -144,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserScheduleShift {\n");
-            
+
             sb.Append("  WeekSchedule: ").Append(WeekSchedule).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
@@ -240,28 +202,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WeekSchedule != null)
                     hash = hash * 59 + this.WeekSchedule.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
-                
+
                 if (this.Activities != null)
                     hash = hash * 59 + this.Activities.GetHashCode();
-                
+
                 if (this.Delete != null)
                     hash = hash * 59 + this.Delete.GetHashCode();
-                
+
                 if (this.ManuallyEdited != null)
                     hash = hash * 59 + this.ManuallyEdited.GetHashCode();
-                
+
                 return hash;
             }
         }

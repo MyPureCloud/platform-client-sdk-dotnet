@@ -18,23 +18,10 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ExportScriptRequest :  IEquatable<ExportScriptRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ExportScriptRequest" /> class.
         /// </summary>
-        /// <param name="FileName">The final file name (no extension) of the script download: &lt;fileName&gt;.script.</param>
+        /// <param name="FileName">The final file name (no extension) of the script download: <fileName>.script.</param>
         /// <param name="VersionId">The UUID version of the script to be exported.  Defaults to the current editable version..</param>
         public ExportScriptRequest(string FileName = null, string VersionId = null)
         {
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The final file name (no extension) of the script download: &lt;fileName&gt;.script
+        /// The final file name (no extension) of the script download: <fileName>.script
         /// </summary>
-        /// <value>The final file name (no extension) of the script download: &lt;fileName&gt;.script</value>
+        /// <value>The final file name (no extension) of the script download: <fileName>.script</value>
         [DataMember(Name="fileName", EmitDefaultValue=false)]
         public string FileName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The UUID version of the script to be exported.  Defaults to the current editable version.
         /// </summary>
         /// <value>The UUID version of the script to be exported.  Defaults to the current editable version.</value>
         [DataMember(Name="versionId", EmitDefaultValue=false)]
         public string VersionId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ExportScriptRequest {\n");
-            
+
             sb.Append("  FileName: ").Append(FileName).Append("\n");
             sb.Append("  VersionId: ").Append(VersionId).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FileName != null)
                     hash = hash * 59 + this.FileName.GetHashCode();
-                
+
                 if (this.VersionId != null)
                     hash = hash * 59 + this.VersionId.GetHashCode();
-                
+
                 return hash;
             }
         }

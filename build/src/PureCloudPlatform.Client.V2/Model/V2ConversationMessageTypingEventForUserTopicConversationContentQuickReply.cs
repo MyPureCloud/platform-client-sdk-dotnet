@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class V2ConversationMessageTypingEventForUserTopicConversationContentQuickReply :  IEquatable<V2ConversationMessageTypingEventForUserTopicConversationContentQuickReply>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
@@ -49,25 +38,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Message")]
             Message
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="V2ConversationMessageTypingEventForUserTopicConversationContentQuickReply" /> class.
         /// </summary>
@@ -84,33 +59,33 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Text
         /// </summary>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Payload
         /// </summary>
         [DataMember(Name="payload", EmitDefaultValue=false)]
         public string Payload { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Image
         /// </summary>
         [DataMember(Name="image", EmitDefaultValue=false)]
         public string Image { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -119,7 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class V2ConversationMessageTypingEventForUserTopicConversationContentQuickReply {\n");
-            
+
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Payload: ").Append(Payload).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
@@ -197,19 +172,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Payload != null)
                     hash = hash * 59 + this.Payload.GetHashCode();
-                
+
                 if (this.Image != null)
                     hash = hash * 59 + this.Image.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 return hash;
             }
         }

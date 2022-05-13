@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NotificationTemplateBody :  IEquatable<NotificationTemplateBody>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationTemplateBody" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected NotificationTemplateBody() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationTemplateBody" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Body text. For WhatsApp, ignored.
         /// </summary>
         /// <value>Body text. For WhatsApp, ignored.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Template parameters for placeholders in template.
         /// </summary>
         /// <value>Template parameters for placeholders in template.</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public List<NotificationTemplateParameter> Parameters { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NotificationTemplateBody {\n");
-            
+
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Parameters != null)
                     hash = hash * 59 + this.Parameters.GetHashCode();
-                
+
                 return hash;
             }
         }

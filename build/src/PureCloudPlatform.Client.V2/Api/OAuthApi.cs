@@ -8,14 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
-    
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IOAuthApi : IApiAccessor
     {
         #region Synchronous Operations
-        
+
         /// <summary>
         /// Delete OAuth Client
         /// </summary>
@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOauthClientWithHttpInfo (string clientId);
-        
+
         /// <summary>
         /// Get a client that is authorized by the resource owner
         /// </summary>
@@ -46,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>OAuthAuthorization</returns>
         OAuthAuthorization GetOauthAuthorization (string clientId, string acceptLanguage = null);
 
@@ -58,10 +58,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthAuthorization</returns>
         ApiResponse<OAuthAuthorization> GetOauthAuthorizationWithHttpInfo (string clientId, string acceptLanguage = null);
-        
+
         /// <summary>
         /// List clients that have been authorized, requested, or revoked by the resource owner
         /// </summary>
@@ -69,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>OAuthAuthorizationListing</returns>
         OAuthAuthorizationListing GetOauthAuthorizations (string acceptLanguage = null);
 
@@ -80,10 +80,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthAuthorizationListing</returns>
         ApiResponse<OAuthAuthorizationListing> GetOauthAuthorizationsWithHttpInfo (string acceptLanguage = null);
-        
+
         /// <summary>
         /// Get OAuth Client
         /// </summary>
@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of OAuthClient</returns>
         ApiResponse<OAuthClient> GetOauthClientWithHttpInfo (string clientId);
-        
+
         /// <summary>
         /// Get the results of a usage query
         /// </summary>
@@ -129,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
         ApiResponse<ApiUsageQueryResult> GetOauthClientUsageQueryResultWithHttpInfo (string executionId, string clientId);
-        
+
         /// <summary>
         /// Get a summary of OAuth client API usage
         /// </summary>
@@ -138,7 +138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="days">Previous number of days to query (optional, default to 7)</param>
+        /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>UsageExecutionResult</returns>
         UsageExecutionResult GetOauthClientUsageSummary (string clientId, string days = null);
 
@@ -150,10 +150,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="days">Previous number of days to query (optional, default to 7)</param>
+        /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         ApiResponse<UsageExecutionResult> GetOauthClientUsageSummaryWithHttpInfo (string clientId, string days = null);
-        
+
         /// <summary>
         /// The list of OAuth clients
         /// </summary>
@@ -173,7 +173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OAuthClientEntityListing</returns>
         ApiResponse<OAuthClientEntityListing> GetOauthClientsWithHttpInfo ();
-        
+
         /// <summary>
         /// An OAuth scope
         /// </summary>
@@ -182,7 +182,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scopeId">Scope ID</param>
-        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>OAuthScope</returns>
         OAuthScope GetOauthScope (string scopeId, string acceptLanguage = null);
 
@@ -194,10 +194,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scopeId">Scope ID</param>
-        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthScope</returns>
         ApiResponse<OAuthScope> GetOauthScopeWithHttpInfo (string scopeId, string acceptLanguage = null);
-        
+
         /// <summary>
         /// The list of OAuth scopes
         /// </summary>
@@ -205,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>OAuthScopeListing</returns>
         OAuthScopeListing GetOauthScopes (string acceptLanguage = null);
 
@@ -216,10 +216,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthScopeListing</returns>
         ApiResponse<OAuthScopeListing> GetOauthScopesWithHttpInfo (string acceptLanguage = null);
-        
+
         /// <summary>
         /// Regenerate Client Secret
         /// </summary>
@@ -241,7 +241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of OAuthClient</returns>
         ApiResponse<OAuthClient> PostOauthClientSecretWithHttpInfo (string clientId);
-        
+
         /// <summary>
         /// Query for OAuth client API usage
         /// </summary>
@@ -265,12 +265,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         ApiResponse<UsageExecutionResult> PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageQuery body);
-        
+
         /// <summary>
         /// Create OAuth client
         /// </summary>
         /// <remarks>
-        /// The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
+        /// The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is 'CODE' which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the 'TOKEN' grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the 'CLIENT-CREDENTIALS' grant may be used. In this case the client must be granted roles  via the 'roleIds' field.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
@@ -281,13 +281,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create OAuth client
         /// </summary>
         /// <remarks>
-        /// The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
+        /// The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is 'CODE' which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the 'TOKEN' grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the 'CLIENT-CREDENTIALS' grant may be used. In this case the client must be granted roles  via the 'roleIds' field.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
         ApiResponse<OAuthClient> PostOauthClientsWithHttpInfo (OAuthClientRequest body);
-        
+
         /// <summary>
         /// Update OAuth Client
         /// </summary>
@@ -311,11 +311,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
         ApiResponse<OAuthClient> PutOauthClientWithHttpInfo (string clientId, OAuthClientRequest body);
-        
+
         #endregion Synchronous Operations
-        
+
         #region Asynchronous Operations
-        
+
         /// <summary>
         /// Delete OAuth Client
         /// </summary>
@@ -337,7 +337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOauthClientAsyncWithHttpInfo (string clientId);
-        
+
         /// <summary>
         /// Get a client that is authorized by the resource owner
         /// </summary>
@@ -346,7 +346,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthAuthorization</returns>
         System.Threading.Tasks.Task<OAuthAuthorization> GetOauthAuthorizationAsync (string clientId, string acceptLanguage = null);
 
@@ -358,10 +358,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthAuthorization)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthAuthorization>> GetOauthAuthorizationAsyncWithHttpInfo (string clientId, string acceptLanguage = null);
-        
+
         /// <summary>
         /// List clients that have been authorized, requested, or revoked by the resource owner
         /// </summary>
@@ -369,7 +369,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthAuthorizationListing</returns>
         System.Threading.Tasks.Task<OAuthAuthorizationListing> GetOauthAuthorizationsAsync (string acceptLanguage = null);
 
@@ -380,10 +380,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthAuthorizationListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthAuthorizationListing>> GetOauthAuthorizationsAsyncWithHttpInfo (string acceptLanguage = null);
-        
+
         /// <summary>
         /// Get OAuth Client
         /// </summary>
@@ -405,7 +405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthClient>> GetOauthClientAsyncWithHttpInfo (string clientId);
-        
+
         /// <summary>
         /// Get the results of a usage query
         /// </summary>
@@ -429,7 +429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetOauthClientUsageQueryResultAsyncWithHttpInfo (string executionId, string clientId);
-        
+
         /// <summary>
         /// Get a summary of OAuth client API usage
         /// </summary>
@@ -438,7 +438,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="days">Previous number of days to query (optional, default to 7)</param>
+        /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of UsageExecutionResult</returns>
         System.Threading.Tasks.Task<UsageExecutionResult> GetOauthClientUsageSummaryAsync (string clientId, string days = null);
 
@@ -450,10 +450,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="days">Previous number of days to query (optional, default to 7)</param>
+        /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> GetOauthClientUsageSummaryAsyncWithHttpInfo (string clientId, string days = null);
-        
+
         /// <summary>
         /// The list of OAuth clients
         /// </summary>
@@ -473,7 +473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OAuthClientEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthClientEntityListing>> GetOauthClientsAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// An OAuth scope
         /// </summary>
@@ -482,7 +482,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scopeId">Scope ID</param>
-        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthScope</returns>
         System.Threading.Tasks.Task<OAuthScope> GetOauthScopeAsync (string scopeId, string acceptLanguage = null);
 
@@ -494,10 +494,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scopeId">Scope ID</param>
-        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthScope)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthScope>> GetOauthScopeAsyncWithHttpInfo (string scopeId, string acceptLanguage = null);
-        
+
         /// <summary>
         /// The list of OAuth scopes
         /// </summary>
@@ -505,7 +505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthScopeListing</returns>
         System.Threading.Tasks.Task<OAuthScopeListing> GetOauthScopesAsync (string acceptLanguage = null);
 
@@ -516,10 +516,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthScopeListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthScopeListing>> GetOauthScopesAsyncWithHttpInfo (string acceptLanguage = null);
-        
+
         /// <summary>
         /// Regenerate Client Secret
         /// </summary>
@@ -541,7 +541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostOauthClientSecretAsyncWithHttpInfo (string clientId);
-        
+
         /// <summary>
         /// Query for OAuth client API usage
         /// </summary>
@@ -565,12 +565,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageQuery body);
-        
+
         /// <summary>
         /// Create OAuth client
         /// </summary>
         /// <remarks>
-        /// The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
+        /// The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is 'CODE' which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the 'TOKEN' grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the 'CLIENT-CREDENTIALS' grant may be used. In this case the client must be granted roles  via the 'roleIds' field.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
@@ -581,13 +581,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create OAuth client
         /// </summary>
         /// <remarks>
-        /// The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
+        /// The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is 'CODE' which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the 'TOKEN' grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the 'CLIENT-CREDENTIALS' grant may be used. In this case the client must be granted roles  via the 'roleIds' field.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostOauthClientsAsyncWithHttpInfo (OAuthClientRequest body);
-        
+
         /// <summary>
         /// Update OAuth Client
         /// </summary>
@@ -611,9 +611,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutOauthClientAsyncWithHttpInfo (string clientId, OAuthClientRequest body);
-        
+
         #endregion Asynchronous Operations
-        
+
     }
 
     /// <summary>
@@ -703,7 +703,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
-        
+
         /// <summary>
         /// Delete OAuth Client 
         /// </summary>
@@ -737,17 +737,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -768,7 +767,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -797,7 +796,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete OAuth Client 
         /// </summary>
@@ -833,16 +832,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -864,7 +862,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -893,14 +891,14 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a client that is authorized by the resource owner 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>OAuthAuthorization</returns>
         public OAuthAuthorization GetOauthAuthorization (string clientId, string acceptLanguage = null)
         {
@@ -913,7 +911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthAuthorization</returns>
         public ApiResponse< OAuthAuthorization > GetOauthAuthorizationWithHttpInfo (string clientId, string acceptLanguage = null)
         { 
@@ -931,17 +929,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -963,7 +960,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -992,13 +989,13 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a client that is authorized by the resource owner 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthAuthorization</returns>
         public async System.Threading.Tasks.Task<OAuthAuthorization> GetOauthAuthorizationAsync (string clientId, string acceptLanguage = null)
         {
@@ -1012,7 +1009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of client</param>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthAuthorization)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OAuthAuthorization>> GetOauthAuthorizationAsyncWithHttpInfo (string clientId, string acceptLanguage = null)
         { 
@@ -1031,16 +1028,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1063,7 +1059,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1092,13 +1088,13 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// List clients that have been authorized, requested, or revoked by the resource owner 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>OAuthAuthorizationListing</returns>
         public OAuthAuthorizationListing GetOauthAuthorizations (string acceptLanguage = null)
         {
@@ -1110,7 +1106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// List clients that have been authorized, requested, or revoked by the resource owner 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthAuthorizationListing</returns>
         public ApiResponse< OAuthAuthorizationListing > GetOauthAuthorizationsWithHttpInfo (string acceptLanguage = null)
         { 
@@ -1125,17 +1121,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1156,7 +1151,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1185,12 +1180,12 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// List clients that have been authorized, requested, or revoked by the resource owner 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthAuthorizationListing</returns>
         public async System.Threading.Tasks.Task<OAuthAuthorizationListing> GetOauthAuthorizationsAsync (string acceptLanguage = null)
         {
@@ -1203,7 +1198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// List clients that have been authorized, requested, or revoked by the resource owner 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthAuthorizationListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OAuthAuthorizationListing>> GetOauthAuthorizationsAsyncWithHttpInfo (string acceptLanguage = null)
         { 
@@ -1218,16 +1213,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1249,7 +1243,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1278,8 +1272,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get OAuth Client 
         /// </summary>
@@ -1314,17 +1308,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1345,7 +1338,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1374,7 +1367,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get OAuth Client 
         /// </summary>
@@ -1411,16 +1404,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1442,7 +1434,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1471,8 +1463,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the results of a usage query 
         /// </summary>
@@ -1512,17 +1504,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1544,7 +1535,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1573,7 +1564,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the results of a usage query 
         /// </summary>
@@ -1616,16 +1607,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1648,7 +1638,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1677,14 +1667,14 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a summary of OAuth client API usage After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="days">Previous number of days to query (optional, default to 7)</param>
+        /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>UsageExecutionResult</returns>
         public UsageExecutionResult GetOauthClientUsageSummary (string clientId, string days = null)
         {
@@ -1697,7 +1687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="days">Previous number of days to query (optional, default to 7)</param>
+        /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         public ApiResponse< UsageExecutionResult > GetOauthClientUsageSummaryWithHttpInfo (string clientId, string days = null)
         { 
@@ -1715,17 +1705,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1747,7 +1736,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1776,13 +1765,13 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a summary of OAuth client API usage After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="days">Previous number of days to query (optional, default to 7)</param>
+        /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of UsageExecutionResult</returns>
         public async System.Threading.Tasks.Task<UsageExecutionResult> GetOauthClientUsageSummaryAsync (string clientId, string days = null)
         {
@@ -1796,7 +1785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="days">Previous number of days to query (optional, default to 7)</param>
+        /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> GetOauthClientUsageSummaryAsyncWithHttpInfo (string clientId, string days = null)
         { 
@@ -1815,16 +1804,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1847,7 +1835,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1876,8 +1864,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// The list of OAuth clients 
         /// </summary>
@@ -1907,17 +1895,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1937,7 +1924,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1966,7 +1953,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// The list of OAuth clients 
         /// </summary>
@@ -1997,16 +1984,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2027,7 +2013,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2056,14 +2042,14 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// An OAuth scope 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scopeId">Scope ID</param>
-        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>OAuthScope</returns>
         public OAuthScope GetOauthScope (string scopeId, string acceptLanguage = null)
         {
@@ -2076,7 +2062,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scopeId">Scope ID</param>
-        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthScope</returns>
         public ApiResponse< OAuthScope > GetOauthScopeWithHttpInfo (string scopeId, string acceptLanguage = null)
         { 
@@ -2094,17 +2080,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2126,7 +2111,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2155,13 +2140,13 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// An OAuth scope 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scopeId">Scope ID</param>
-        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthScope</returns>
         public async System.Threading.Tasks.Task<OAuthScope> GetOauthScopeAsync (string scopeId, string acceptLanguage = null)
         {
@@ -2175,7 +2160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scopeId">Scope ID</param>
-        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthScope)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OAuthScope>> GetOauthScopeAsyncWithHttpInfo (string scopeId, string acceptLanguage = null)
         { 
@@ -2194,16 +2179,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2226,7 +2210,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2255,13 +2239,13 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// The list of OAuth scopes 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>OAuthScopeListing</returns>
         public OAuthScopeListing GetOauthScopes (string acceptLanguage = null)
         {
@@ -2273,7 +2257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The list of OAuth scopes 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthScopeListing</returns>
         public ApiResponse< OAuthScopeListing > GetOauthScopesWithHttpInfo (string acceptLanguage = null)
         { 
@@ -2288,17 +2272,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2319,7 +2302,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2348,12 +2331,12 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// The list of OAuth scopes 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthScopeListing</returns>
         public async System.Threading.Tasks.Task<OAuthScopeListing> GetOauthScopesAsync (string acceptLanguage = null)
         {
@@ -2366,7 +2349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The list of OAuth scopes 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthScopeListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OAuthScopeListing>> GetOauthScopesAsyncWithHttpInfo (string acceptLanguage = null)
         { 
@@ -2381,16 +2364,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2412,7 +2394,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2441,8 +2423,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Regenerate Client Secret This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
         /// </summary>
@@ -2477,17 +2459,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2508,7 +2489,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2537,7 +2518,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Regenerate Client Secret This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
         /// </summary>
@@ -2574,16 +2555,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2605,7 +2585,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2634,8 +2614,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Query for OAuth client API usage After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
@@ -2675,7 +2655,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -2683,9 +2662,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2709,9 +2689,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2740,7 +2720,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Query for OAuth client API usage After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
@@ -2783,7 +2763,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -2791,8 +2770,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2817,9 +2797,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2848,10 +2828,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Create OAuth client The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
+        /// Create OAuth client The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is 'CODE' which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the 'TOKEN' grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the 'CLIENT-CREDENTIALS' grant may be used. In this case the client must be granted roles  via the 'roleIds' field.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
@@ -2863,7 +2843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create OAuth client The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
+        /// Create OAuth client The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is 'CODE' which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the 'TOKEN' grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the 'CLIENT-CREDENTIALS' grant may be used. In this case the client must be granted roles  via the 'roleIds' field.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
@@ -2884,7 +2864,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -2892,9 +2871,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2917,9 +2897,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2948,9 +2928,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Create OAuth client The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
+        /// Create OAuth client The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is 'CODE' which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the 'TOKEN' grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the 'CLIENT-CREDENTIALS' grant may be used. In this case the client must be granted roles  via the 'roleIds' field.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
@@ -2963,7 +2943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create OAuth client The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
+        /// Create OAuth client The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is 'CODE' which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the 'TOKEN' grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the 'CLIENT-CREDENTIALS' grant may be used. In this case the client must be granted roles  via the 'roleIds' field.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
@@ -2985,7 +2965,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -2993,8 +2972,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3018,9 +2998,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3049,8 +3029,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update OAuth Client 
         /// </summary>
@@ -3090,7 +3070,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -3098,9 +3077,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3124,9 +3104,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3155,7 +3135,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update OAuth Client 
         /// </summary>
@@ -3198,7 +3178,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -3206,8 +3185,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3232,9 +3212,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3263,8 +3243,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
     }
-    
+
 }

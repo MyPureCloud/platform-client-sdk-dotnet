@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NluDetectionResponse :  IEquatable<NluDetectionResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDetectionResponse" /> class.
         /// </summary>
@@ -48,32 +30,32 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The NLU domain version which performed the detection.
         /// </summary>
         /// <value>The NLU domain version which performed the detection.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public NluDomainVersion Version { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Output
         /// </summary>
         [DataMember(Name="output", EmitDefaultValue=false)]
         public NluDetectionOutput Output { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Input
         /// </summary>
         [DataMember(Name="input", EmitDefaultValue=false)]
         public NluDetectionInput Input { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -82,7 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NluDetectionResponse {\n");
-            
+
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Output: ").Append(Output).Append("\n");
             sb.Append("  Input: ").Append(Input).Append("\n");
@@ -154,16 +136,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.Output != null)
                     hash = hash * 59 + this.Output.GetHashCode();
-                
+
                 if (this.Input != null)
                     hash = hash * 59 + this.Input.GetHashCode();
-                
+
                 return hash;
             }
         }

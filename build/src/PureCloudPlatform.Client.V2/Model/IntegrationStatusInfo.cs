@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntegrationStatusInfo :  IEquatable<IntegrationStatusInfo>
     {
-        
-        
         /// <summary>
         /// Machine-readable status as reported by the integration.
         /// </summary>
@@ -65,35 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ERROR")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Machine-readable status as reported by the integration.
         /// </summary>
         /// <value>Machine-readable status as reported by the integration.</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
-        public CodeEnum? Code { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public CodeEnum? Code { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationStatusInfo" /> class.
         /// </summary>
@@ -102,36 +77,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Localized, human-readable, effective status of the integration.
         /// </summary>
         /// <value>Localized, human-readable, effective status of the integration.</value>
         [DataMember(Name="effective", EmitDefaultValue=false)]
         public string Effective { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Localizable status details for the integration.
         /// </summary>
         /// <value>Localizable status details for the integration.</value>
         [DataMember(Name="detail", EmitDefaultValue=false)]
         public MessageInfo Detail { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date and time (in UTC) when the integration status (i.e. the code field) was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date and time (in UTC) when the integration status (i.e. the code field) was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="lastUpdated", EmitDefaultValue=false)]
         public DateTime? LastUpdated { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -140,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntegrationStatusInfo {\n");
-            
+
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Effective: ").Append(Effective).Append("\n");
             sb.Append("  Detail: ").Append(Detail).Append("\n");
@@ -218,19 +193,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
-                
+
                 if (this.Effective != null)
                     hash = hash * 59 + this.Effective.GetHashCode();
-                
+
                 if (this.Detail != null)
                     hash = hash * 59 + this.Detail.GetHashCode();
-                
+
                 if (this.LastUpdated != null)
                     hash = hash * 59 + this.LastUpdated.GetHashCode();
-                
+
                 return hash;
             }
         }

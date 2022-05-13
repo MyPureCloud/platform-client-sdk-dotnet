@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MoveManagementUnitResponse :  IEquatable<MoveManagementUnitResponse>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the move.  Will always be 'Processing' unless the Management Unit is already in the requested Business Unit in which case it will be 'Complete'
         /// </summary>
@@ -62,27 +57,17 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the move.  Will always be 'Processing' unless the Management Unit is already in the requested Business Unit in which case it will be 'Complete'
         /// </summary>
         /// <value>The status of the move.  Will always be 'Processing' unless the Management Unit is already in the requested Business Unit in which case it will be 'Complete'</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MoveManagementUnitResponse" /> class.
         /// </summary>
         /// <param name="BusinessUnit">The new business unit.</param>
-        /// <param name="Status">The status of the move.  Will always be &#39;Processing&#39; unless the Management Unit is already in the requested Business Unit in which case it will be &#39;Complete&#39;.</param>
+        /// <param name="Status">The status of the move.  Will always be 'Processing' unless the Management Unit is already in the requested Business Unit in which case it will be 'Complete'.</param>
         public MoveManagementUnitResponse(BusinessUnitReference BusinessUnit = null, StatusEnum? Status = null)
         {
             this.BusinessUnit = BusinessUnit;
@@ -90,18 +75,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The new business unit
         /// </summary>
         /// <value>The new business unit</value>
         [DataMember(Name="businessUnit", EmitDefaultValue=false)]
         public BusinessUnitReference BusinessUnit { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MoveManagementUnitResponse {\n");
-            
+
             sb.Append("  BusinessUnit: ").Append(BusinessUnit).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("}\n");
@@ -176,13 +161,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.BusinessUnit != null)
                     hash = hash * 59 + this.BusinessUnit.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 return hash;
             }
         }

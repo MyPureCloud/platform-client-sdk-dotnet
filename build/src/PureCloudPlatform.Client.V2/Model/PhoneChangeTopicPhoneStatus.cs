@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PhoneChangeTopicPhoneStatus :  IEquatable<PhoneChangeTopicPhoneStatus>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets OperationalStatus
         /// </summary>
@@ -55,36 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OFFLINE")]
             Offline
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets OperationalStatus
         /// </summary>
         [DataMember(Name="operationalStatus", EmitDefaultValue=false)]
         public OperationalStatusEnum? OperationalStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneChangeTopicPhoneStatus" /> class.
         /// </summary>
@@ -93,51 +63,61 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Edge">Edge.</param>
         /// <param name="Provision">Provision.</param>
         /// <param name="LineStatuses">LineStatuses.</param>
-        public PhoneChangeTopicPhoneStatus(string Id = null, OperationalStatusEnum? OperationalStatus = null, PhoneChangeTopicEdgeReference Edge = null, PhoneChangeTopicProvisionInfo Provision = null, List<PhoneChangeTopicLineStatus> LineStatuses = null)
+        /// <param name="EventCreationTime">EventCreationTime.</param>
+        public PhoneChangeTopicPhoneStatus(string Id = null, OperationalStatusEnum? OperationalStatus = null, PhoneChangeTopicEdgeReference Edge = null, PhoneChangeTopicProvisionInfo Provision = null, List<PhoneChangeTopicLineStatus> LineStatuses = null, DateTime? EventCreationTime = null)
         {
             this.Id = Id;
             this.OperationalStatus = OperationalStatus;
             this.Edge = Edge;
             this.Provision = Provision;
             this.LineStatuses = LineStatuses;
+            this.EventCreationTime = EventCreationTime;
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Edge
         /// </summary>
         [DataMember(Name="edge", EmitDefaultValue=false)]
         public PhoneChangeTopicEdgeReference Edge { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Provision
         /// </summary>
         [DataMember(Name="provision", EmitDefaultValue=false)]
         public PhoneChangeTopicProvisionInfo Provision { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LineStatuses
         /// </summary>
         [DataMember(Name="lineStatuses", EmitDefaultValue=false)]
         public List<PhoneChangeTopicLineStatus> LineStatuses { get; set; }
-        
-        
+
+
+
+        /// <summary>
+        /// Gets or Sets EventCreationTime
+        /// </summary>
+        [DataMember(Name="eventCreationTime", EmitDefaultValue=false)]
+        public DateTime? EventCreationTime { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,12 +126,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneChangeTopicPhoneStatus {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  OperationalStatus: ").Append(OperationalStatus).Append("\n");
             sb.Append("  Edge: ").Append(Edge).Append("\n");
             sb.Append("  Provision: ").Append(Provision).Append("\n");
             sb.Append("  LineStatuses: ").Append(LineStatuses).Append("\n");
+            sb.Append("  EventCreationTime: ").Append(EventCreationTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -216,6 +197,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LineStatuses == other.LineStatuses ||
                     this.LineStatuses != null &&
                     this.LineStatuses.SequenceEqual(other.LineStatuses)
+                ) &&
+                (
+                    this.EventCreationTime == other.EventCreationTime ||
+                    this.EventCreationTime != null &&
+                    this.EventCreationTime.Equals(other.EventCreationTime)
                 );
         }
 
@@ -230,22 +216,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.OperationalStatus != null)
                     hash = hash * 59 + this.OperationalStatus.GetHashCode();
-                
+
                 if (this.Edge != null)
                     hash = hash * 59 + this.Edge.GetHashCode();
-                
+
                 if (this.Provision != null)
                     hash = hash * 59 + this.Provision.GetHashCode();
-                
+
                 if (this.LineStatuses != null)
                     hash = hash * 59 + this.LineStatuses.GetHashCode();
-                
+
+                if (this.EventCreationTime != null)
+                    hash = hash * 59 + this.EventCreationTime.GetHashCode();
+
                 return hash;
             }
         }

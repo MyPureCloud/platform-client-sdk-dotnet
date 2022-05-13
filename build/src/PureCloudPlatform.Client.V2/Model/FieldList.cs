@@ -18,59 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FieldList :  IEquatable<FieldList>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldList" /> class.
         /// </summary>
@@ -78,19 +25,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InstructionText">InstructionText.</param>
         /// <param name="Key">Key.</param>
         /// <param name="LabelKeys">LabelKeys.</param>
-        /// <param name="_Params">_Params.</param>
+        /// <param name="Params">Params.</param>
         /// <param name="Repeatable">Repeatable.</param>
         /// <param name="State">State.</param>
         /// <param name="Type">Type.</param>
         /// <param name="Required">Required.</param>
         /// <param name="Gdpr">Gdpr.</param>
-        public FieldList(bool? CustomLabels = null, string InstructionText = null, string Key = null, List<string> LabelKeys = null, Dictionary<string, Object> _Params = null, bool? Repeatable = null, string State = null, string Type = null, bool? Required = null, bool? Gdpr = null)
+        public FieldList(bool? CustomLabels = null, string InstructionText = null, string Key = null, List<string> LabelKeys = null, Dictionary<string, Object> Params = null, bool? Repeatable = null, string State = null, string Type = null, bool? Required = null, bool? Gdpr = null)
         {
             this.CustomLabels = CustomLabels;
             this.InstructionText = InstructionText;
             this.Key = Key;
             this.LabelKeys = LabelKeys;
-            this._Params = _Params;
+            this.Params = Params;
             this.Repeatable = Repeatable;
             this.State = State;
             this.Type = Type;
@@ -99,87 +46,87 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets CustomLabels
         /// </summary>
         [DataMember(Name="customLabels", EmitDefaultValue=false)]
         public bool? CustomLabels { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets InstructionText
         /// </summary>
         [DataMember(Name="instructionText", EmitDefaultValue=false)]
         public string InstructionText { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Key
         /// </summary>
         [DataMember(Name="key", EmitDefaultValue=false)]
         public string Key { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LabelKeys
         /// </summary>
         [DataMember(Name="labelKeys", EmitDefaultValue=false)]
         public List<string> LabelKeys { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Gets or Sets _Params
+        /// Gets or Sets Params
         /// </summary>
         [DataMember(Name="params", EmitDefaultValue=false)]
-        public Dictionary<string, Object> _Params { get; set; }
-        
-        
-        
+        public Dictionary<string, Object> Params { get; set; }
+
+
+
         /// <summary>
         /// Gets or Sets Repeatable
         /// </summary>
         [DataMember(Name="repeatable", EmitDefaultValue=false)]
         public bool? Repeatable { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public string State { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Required
         /// </summary>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public bool? Required { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Gdpr
         /// </summary>
         [DataMember(Name="gdpr", EmitDefaultValue=false)]
         public bool? Gdpr { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,12 +135,12 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FieldList {\n");
-            
+
             sb.Append("  CustomLabels: ").Append(CustomLabels).Append("\n");
             sb.Append("  InstructionText: ").Append(InstructionText).Append("\n");
             sb.Append("  Key: ").Append(Key).Append("\n");
             sb.Append("  LabelKeys: ").Append(LabelKeys).Append("\n");
-            sb.Append("  _Params: ").Append(_Params).Append("\n");
+            sb.Append("  Params: ").Append(Params).Append("\n");
             sb.Append("  Repeatable: ").Append(Repeatable).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -260,9 +207,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LabelKeys.SequenceEqual(other.LabelKeys)
                 ) &&
                 (
-                    this._Params == other._Params ||
-                    this._Params != null &&
-                    this._Params.SequenceEqual(other._Params)
+                    this.Params == other.Params ||
+                    this.Params != null &&
+                    this.Params.SequenceEqual(other.Params)
                 ) &&
                 (
                     this.Repeatable == other.Repeatable ||
@@ -302,37 +249,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CustomLabels != null)
                     hash = hash * 59 + this.CustomLabels.GetHashCode();
-                
+
                 if (this.InstructionText != null)
                     hash = hash * 59 + this.InstructionText.GetHashCode();
-                
+
                 if (this.Key != null)
                     hash = hash * 59 + this.Key.GetHashCode();
-                
+
                 if (this.LabelKeys != null)
                     hash = hash * 59 + this.LabelKeys.GetHashCode();
-                
-                if (this._Params != null)
-                    hash = hash * 59 + this._Params.GetHashCode();
-                
+
+                if (this.Params != null)
+                    hash = hash * 59 + this.Params.GetHashCode();
+
                 if (this.Repeatable != null)
                     hash = hash * 59 + this.Repeatable.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Required != null)
                     hash = hash * 59 + this.Required.GetHashCode();
-                
+
                 if (this.Gdpr != null)
                     hash = hash * 59 + this.Gdpr.GetHashCode();
-                
+
                 return hash;
             }
         }

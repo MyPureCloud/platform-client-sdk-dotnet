@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OutOfOfficeEventOutOfOffice :  IEquatable<OutOfOfficeEventOutOfOffice>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OutOfOfficeEventOutOfOffice" /> class.
         /// </summary>
@@ -64,47 +36,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public OutOfOfficeEventUser User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Indefinite
         /// </summary>
         [DataMember(Name="indefinite", EmitDefaultValue=false)]
         public bool? Indefinite { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EndDate
         /// </summary>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OutOfOfficeEventOutOfOffice {\n");
-            
+
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  Indefinite: ").Append(Indefinite).Append("\n");
@@ -197,22 +169,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
-                
+
                 if (this.Indefinite != null)
                     hash = hash * 59 + this.Indefinite.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 return hash;
             }
         }

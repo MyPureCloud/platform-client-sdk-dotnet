@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContentCarousel :  IEquatable<ContentCarousel>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentCarousel" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ContentCarousel() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentCarousel" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// An array of card objects.
         /// </summary>
         /// <value>An array of card objects.</value>
         [DataMember(Name="cards", EmitDefaultValue=false)]
         public List<ContentCard> Cards { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContentCarousel {\n");
-            
+
             sb.Append("  Cards: ").Append(Cards).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Cards != null)
                     hash = hash * 59 + this.Cards.GetHashCode();
-                
+
                 return hash;
             }
         }

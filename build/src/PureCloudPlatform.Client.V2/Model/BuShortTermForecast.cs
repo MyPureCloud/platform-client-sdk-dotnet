@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuShortTermForecast :  IEquatable<BuShortTermForecast>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The method by which this forecast was created
         /// </summary>
@@ -68,86 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Advanced")]
             Advanced
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The method by which this forecast was created
         /// </summary>
         /// <value>The method by which this forecast was created</value>
         [DataMember(Name="creationMethod", EmitDefaultValue=false)]
         public CreationMethodEnum? CreationMethod { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuShortTermForecast" /> class.
         /// </summary>
@@ -182,144 +97,144 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The start week date of this forecast in yyyy-MM-dd.  Must fall on the start day of week for the associated business unit. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>The start week date of this forecast in yyyy-MM-dd.  Must fall on the start day of week for the associated business unit. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
         public String WeekDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of weeks this forecast covers
         /// </summary>
         /// <value>The number of weeks this forecast covers</value>
         [DataMember(Name="weekCount", EmitDefaultValue=false)]
         public int? WeekCount { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The description of this forecast
         /// </summary>
         /// <value>The description of this forecast</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this forecast contains modifications on legacy metrics
         /// </summary>
         /// <value>Whether this forecast contains modifications on legacy metrics</value>
         [DataMember(Name="legacy", EmitDefaultValue=false)]
         public bool? Legacy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Metadata for this forecast
         /// </summary>
         /// <value>Metadata for this forecast</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this forecast can be used for scheduling
         /// </summary>
         /// <value>Whether this forecast can be used for scheduling</value>
         [DataMember(Name="canUseForScheduling", EmitDefaultValue=false)]
         public bool? CanUseForScheduling { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="referenceStartDate", EmitDefaultValue=false)]
         public DateTime? ReferenceStartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The source day pointers for this forecast
         /// </summary>
         /// <value>The source day pointers for this forecast</value>
         [DataMember(Name="sourceDays", EmitDefaultValue=false)]
         public List<ForecastSourceDayPointer> SourceDays { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Any manual modifications applied to this forecast
         /// </summary>
         /// <value>Any manual modifications applied to this forecast</value>
         [DataMember(Name="modifications", EmitDefaultValue=false)]
         public List<BuForecastModification> Modifications { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Generation result metadata
         /// </summary>
         /// <value>Generation result metadata</value>
         [DataMember(Name="generationResults", EmitDefaultValue=false)]
         public BuForecastGenerationResult GenerationResults { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time zone for this forecast
         /// </summary>
         /// <value>The time zone for this forecast</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The version of the planning groups that was used for this forecast
         /// </summary>
         /// <value>The version of the planning groups that was used for this forecast</value>
         [DataMember(Name="planningGroupsVersion", EmitDefaultValue=false)]
         public int? PlanningGroupsVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A snapshot of the planning groups used for this forecast as of the version number indicated
         /// </summary>
         /// <value>A snapshot of the planning groups used for this forecast as of the version number indicated</value>
         [DataMember(Name="planningGroups", EmitDefaultValue=false)]
         public ForecastPlanningGroupsResponse PlanningGroups { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -328,7 +243,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuShortTermForecast {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("  WeekCount: ").Append(WeekCount).Append("\n");
@@ -478,55 +393,54 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.WeekDate != null)
                     hash = hash * 59 + this.WeekDate.GetHashCode();
-                
+
                 if (this.WeekCount != null)
                     hash = hash * 59 + this.WeekCount.GetHashCode();
-                
+
                 if (this.CreationMethod != null)
                     hash = hash * 59 + this.CreationMethod.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Legacy != null)
                     hash = hash * 59 + this.Legacy.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 if (this.CanUseForScheduling != null)
                     hash = hash * 59 + this.CanUseForScheduling.GetHashCode();
-                
+
                 if (this.ReferenceStartDate != null)
                     hash = hash * 59 + this.ReferenceStartDate.GetHashCode();
-                
+
                 if (this.SourceDays != null)
                     hash = hash * 59 + this.SourceDays.GetHashCode();
-                
+
                 if (this.Modifications != null)
                     hash = hash * 59 + this.Modifications.GetHashCode();
-                
+
                 if (this.GenerationResults != null)
                     hash = hash * 59 + this.GenerationResults.GetHashCode();
-                
+
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
+
                 if (this.PlanningGroupsVersion != null)
                     hash = hash * 59 + this.PlanningGroupsVersion.GetHashCode();
-                
+
                 if (this.PlanningGroups != null)
                     hash = hash * 59 + this.PlanningGroups.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

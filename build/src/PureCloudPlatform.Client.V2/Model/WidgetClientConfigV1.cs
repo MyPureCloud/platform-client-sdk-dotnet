@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WidgetClientConfigV1 :  IEquatable<WidgetClientConfigV1>
     {
-        
-        
         /// <summary>
         /// Gets or Sets WebChatSkin
         /// </summary>
@@ -46,24 +44,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "modern-caret-skin")]
             Moderncaretskin
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets WebChatSkin
         /// </summary>
         [DataMember(Name="webChatSkin", EmitDefaultValue=false)]
         public WebChatSkinEnum? WebChatSkin { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WidgetClientConfigV1" /> class.
         /// </summary>
@@ -76,17 +61,17 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets AuthenticationUrl
         /// </summary>
         [DataMember(Name="authenticationUrl", EmitDefaultValue=false)]
         public string AuthenticationUrl { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -95,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WidgetClientConfigV1 {\n");
-            
+
             sb.Append("  WebChatSkin: ").Append(WebChatSkin).Append("\n");
             sb.Append("  AuthenticationUrl: ").Append(AuthenticationUrl).Append("\n");
             sb.Append("}\n");
@@ -161,13 +146,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WebChatSkin != null)
                     hash = hash * 59 + this.WebChatSkin.GetHashCode();
-                
+
                 if (this.AuthenticationUrl != null)
                     hash = hash * 59 + this.AuthenticationUrl.GetHashCode();
-                
+
                 return hash;
             }
         }

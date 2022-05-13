@@ -8,16 +8,16 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
-    
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IGamificationApi : IApiAccessor
     {
         #region Synchronous Operations
-        
+
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division or performance profile
+        /// Leaderboard of the requesting user's division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Leaderboard GetGamificationLeaderboard (String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division or performance profile
+        /// Leaderboard of the requesting user's division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -41,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Leaderboard</returns>
         ApiResponse<Leaderboard> GetGamificationLeaderboardWithHttpInfo (String startWorkday, String endWorkday, string metricId = null);
-        
+
         /// <summary>
         /// Leaderboard by filter type
         /// </summary>
@@ -71,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Leaderboard</returns>
         ApiResponse<Leaderboard> GetGamificationLeaderboardAllWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null);
-        
+
         /// <summary>
         /// Best Points by division or performance profile
         /// </summary>
@@ -95,9 +95,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>ApiResponse of OverallBestPoints</returns>
         ApiResponse<OverallBestPoints> GetGamificationLeaderboardAllBestpointsWithHttpInfo (string filterType, string filterId);
-        
+
         /// <summary>
-        /// Best Points of the requesting user&#39;s current performance profile or division
+        /// Best Points of the requesting user's current performance profile or division
         /// </summary>
         /// <remarks>
         /// 
@@ -107,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         OverallBestPoints GetGamificationLeaderboardBestpoints ();
 
         /// <summary>
-        /// Best Points of the requesting user&#39;s current performance profile or division
+        /// Best Points of the requesting user's current performance profile or division
         /// </summary>
         /// <remarks>
         /// 
@@ -115,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OverallBestPoints</returns>
         ApiResponse<OverallBestPoints> GetGamificationLeaderboardBestpointsWithHttpInfo ();
-        
+
         /// <summary>
         /// Gamified metric by id
         /// </summary>
@@ -141,7 +141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Metric</returns>
         ApiResponse<Metric> GetGamificationMetricWithHttpInfo (string metricId, String workday = null, string performanceProfileId = null);
-        
+
         /// <summary>
         /// Metric definition by id
         /// </summary>
@@ -163,7 +163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricDefinitionId">metric definition id</param>
         /// <returns>ApiResponse of MetricDefinition</returns>
         ApiResponse<MetricDefinition> GetGamificationMetricdefinitionWithHttpInfo (string metricDefinitionId);
-        
+
         /// <summary>
         /// All metric definitions
         /// </summary>
@@ -183,7 +183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetMetricDefinitionsResponse</returns>
         ApiResponse<GetMetricDefinitionsResponse> GetGamificationMetricdefinitionsWithHttpInfo ();
-        
+
         /// <summary>
         /// All gamified metrics for a given profile
         /// </summary>
@@ -207,7 +207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of GetMetricsResponse</returns>
         ApiResponse<GetMetricsResponse> GetGamificationMetricsWithHttpInfo (string performanceProfileId = null, String workday = null);
-        
+
         /// <summary>
         /// Performance profile by id
         /// </summary>
@@ -229,7 +229,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
         ApiResponse<PerformanceProfile> GetGamificationProfileWithHttpInfo (string profileId);
-        
+
         /// <summary>
         /// Members of a given performance profile
         /// </summary>
@@ -251,7 +251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="performanceProfileId">Performance Profile Id</param>
         /// <returns>ApiResponse of MemberListing</returns>
         ApiResponse<MemberListing> GetGamificationProfileMembersWithHttpInfo (string performanceProfileId);
-        
+
         /// <summary>
         /// Performance profile gamified metric by id
         /// </summary>
@@ -277,7 +277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of Metric</returns>
         ApiResponse<Metric> GetGamificationProfileMetricWithHttpInfo (string profileId, string metricId, String workday = null);
-        
+
         /// <summary>
         /// All gamified metrics for a given performance profile
         /// </summary>
@@ -303,7 +303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of GetMetricResponse</returns>
         ApiResponse<GetMetricResponse> GetGamificationProfileMetricsWithHttpInfo (string profileId, List<string> expand = null, String workday = null);
-        
+
         /// <summary>
         /// All metrics for a given performance profile with objective details such as order and maxPoints
         /// </summary>
@@ -327,7 +327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of GetMetricsResponse</returns>
         ApiResponse<GetMetricsResponse> GetGamificationProfileMetricsObjectivedetailsWithHttpInfo (string profileId, String workday = null);
-        
+
         /// <summary>
         /// All performance profiles
         /// </summary>
@@ -347,7 +347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetProfilesResponse</returns>
         ApiResponse<GetProfilesResponse> GetGamificationProfilesWithHttpInfo ();
-        
+
         /// <summary>
         /// Performance profile of a user
         /// </summary>
@@ -371,7 +371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
         ApiResponse<PerformanceProfile> GetGamificationProfilesUserWithHttpInfo (string userId, String workday = null);
-        
+
         /// <summary>
         /// Performance profile of the requesting user
         /// </summary>
@@ -393,7 +393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
         ApiResponse<PerformanceProfile> GetGamificationProfilesUsersMeWithHttpInfo (String workday = null);
-        
+
         /// <summary>
         /// Workday performance metrics of the requesting user
         /// </summary>
@@ -417,7 +417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkdayMetricListing</returns>
         ApiResponse<WorkdayMetricListing> GetGamificationScorecardsWithHttpInfo (String workday, List<string> expand = null);
-        
+
         /// <summary>
         /// Attendance status metrics of the requesting user
         /// </summary>
@@ -441,7 +441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AttendanceStatusListing</returns>
         ApiResponse<AttendanceStatusListing> GetGamificationScorecardsAttendanceWithHttpInfo (String startWorkday, String endWorkday);
-        
+
         /// <summary>
         /// Best points of the requesting user
         /// </summary>
@@ -461,7 +461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of UserBestPoints</returns>
         ApiResponse<UserBestPoints> GetGamificationScorecardsBestpointsWithHttpInfo ();
-        
+
         /// <summary>
         /// All-time points of the requesting user
         /// </summary>
@@ -483,9 +483,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AllTimePoints</returns>
         ApiResponse<AllTimePoints> GetGamificationScorecardsPointsAlltimeWithHttpInfo (String endWorkday);
-        
+
         /// <summary>
-        /// Average points of the requesting user&#39;s division or performance profile
+        /// Average points of the requesting user's division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -496,7 +496,7 @@ namespace PureCloudPlatform.Client.V2.Api
         SingleWorkdayAveragePoints GetGamificationScorecardsPointsAverage (String workday);
 
         /// <summary>
-        /// Average points of the requesting user&#39;s division or performance profile
+        /// Average points of the requesting user's division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -505,7 +505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of SingleWorkdayAveragePoints</returns>
         ApiResponse<SingleWorkdayAveragePoints> GetGamificationScorecardsPointsAverageWithHttpInfo (String workday);
-        
+
         /// <summary>
         /// Points trends of the requesting user
         /// </summary>
@@ -531,7 +531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>ApiResponse of WorkdayPointsTrend</returns>
         ApiResponse<WorkdayPointsTrend> GetGamificationScorecardsPointsTrendsWithHttpInfo (String startWorkday, String endWorkday, string dayOfWeek = null);
-        
+
         /// <summary>
         /// Workday performance metrics for a user
         /// </summary>
@@ -557,7 +557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkdayMetricListing</returns>
         ApiResponse<WorkdayMetricListing> GetGamificationScorecardsUserWithHttpInfo (string userId, String workday, List<string> expand = null);
-        
+
         /// <summary>
         /// Attendance status metrics for a user
         /// </summary>
@@ -583,7 +583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AttendanceStatusListing</returns>
         ApiResponse<AttendanceStatusListing> GetGamificationScorecardsUserAttendanceWithHttpInfo (string userId, String startWorkday, String endWorkday);
-        
+
         /// <summary>
         /// Best points of a user
         /// </summary>
@@ -605,7 +605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <returns>ApiResponse of UserBestPoints</returns>
         ApiResponse<UserBestPoints> GetGamificationScorecardsUserBestpointsWithHttpInfo (string userId);
-        
+
         /// <summary>
         /// All-time points for a user
         /// </summary>
@@ -629,7 +629,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AllTimePoints</returns>
         ApiResponse<AllTimePoints> GetGamificationScorecardsUserPointsAlltimeWithHttpInfo (string userId, String endWorkday);
-        
+
         /// <summary>
         /// Points trend for a user
         /// </summary>
@@ -657,7 +657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>ApiResponse of WorkdayPointsTrend</returns>
         ApiResponse<WorkdayPointsTrend> GetGamificationScorecardsUserPointsTrendsWithHttpInfo (string userId, String startWorkday, String endWorkday, string dayOfWeek = null);
-        
+
         /// <summary>
         /// Values trends of a user
         /// </summary>
@@ -668,7 +668,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>WorkdayValuesTrend</returns>
         WorkdayValuesTrend GetGamificationScorecardsUserValuesTrends (string userId, String startWorkday, String endWorkday, string timeZone = null);
 
@@ -682,10 +682,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
         ApiResponse<WorkdayValuesTrend> GetGamificationScorecardsUserValuesTrendsWithHttpInfo (string userId, String startWorkday, String endWorkday, string timeZone = null);
-        
+
         /// <summary>
         /// Workday average points by target group
         /// </summary>
@@ -711,7 +711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of SingleWorkdayAveragePoints</returns>
         ApiResponse<SingleWorkdayAveragePoints> GetGamificationScorecardsUsersPointsAverageWithHttpInfo (string filterType, string filterId, String workday);
-        
+
         /// <summary>
         /// Workday average values by target group
         /// </summary>
@@ -722,7 +722,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>SingleWorkdayAverageValues</returns>
         SingleWorkdayAverageValues GetGamificationScorecardsUsersValuesAverage (string filterType, string filterId, String workday, string timeZone = null);
 
@@ -736,10 +736,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of SingleWorkdayAverageValues</returns>
         ApiResponse<SingleWorkdayAverageValues> GetGamificationScorecardsUsersValuesAverageWithHttpInfo (string filterType, string filterId, String workday, string timeZone = null);
-        
+
         /// <summary>
         /// Values trend by target group
         /// </summary>
@@ -751,7 +751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>WorkdayValuesTrend</returns>
         WorkdayValuesTrend GetGamificationScorecardsUsersValuesTrends (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
 
@@ -766,34 +766,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
         ApiResponse<WorkdayValuesTrend> GetGamificationScorecardsUsersValuesTrendsWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
-        
+
         /// <summary>
-        /// Average values of the requesting user&#39;s division or performance profile
+        /// Average values of the requesting user's division or performance profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>SingleWorkdayAverageValues</returns>
         SingleWorkdayAverageValues GetGamificationScorecardsValuesAverage (String workday, string timeZone = null);
 
         /// <summary>
-        /// Average values of the requesting user&#39;s division or performance profile
+        /// Average values of the requesting user's division or performance profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of SingleWorkdayAverageValues</returns>
         ApiResponse<SingleWorkdayAverageValues> GetGamificationScorecardsValuesAverageWithHttpInfo (String workday, string timeZone = null);
-        
+
         /// <summary>
         /// Values trends of the requesting user or group
         /// </summary>
@@ -805,7 +805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>WorkdayValuesTrend</returns>
         WorkdayValuesTrend GetGamificationScorecardsValuesTrends (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
 
@@ -820,10 +820,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
         ApiResponse<WorkdayValuesTrend> GetGamificationScorecardsValuesTrendsWithHttpInfo (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
-        
+
         /// <summary>
         /// Gamification activation status
         /// </summary>
@@ -843,7 +843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GamificationStatus</returns>
         ApiResponse<GamificationStatus> GetGamificationStatusWithHttpInfo ();
-        
+
         /// <summary>
         /// Objective template by id
         /// </summary>
@@ -865,7 +865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="templateId">template id</param>
         /// <returns>ApiResponse of ObjectiveTemplate</returns>
         ApiResponse<ObjectiveTemplate> GetGamificationTemplateWithHttpInfo (string templateId);
-        
+
         /// <summary>
         /// All objective templates
         /// </summary>
@@ -885,7 +885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetTemplatesResponse</returns>
         ApiResponse<GetTemplatesResponse> GetGamificationTemplatesWithHttpInfo ();
-        
+
         /// <summary>
         /// Creates a gamified metric with a given metric definition and metric objective
         /// </summary>
@@ -907,7 +907,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Metric</param>
         /// <returns>ApiResponse of Metric</returns>
         ApiResponse<Metric> PostGamificationMetricsWithHttpInfo (CreateMetric body);
-        
+
         /// <summary>
         /// Activate a performance profile
         /// </summary>
@@ -929,7 +929,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
         ApiResponse<PerformanceProfile> PostGamificationProfileActivateWithHttpInfo (string profileId);
-        
+
         /// <summary>
         /// Deactivate a performance profile
         /// </summary>
@@ -951,7 +951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
         ApiResponse<PerformanceProfile> PostGamificationProfileDeactivateWithHttpInfo (string profileId);
-        
+
         /// <summary>
         /// Assign members to a given performance profile
         /// </summary>
@@ -975,7 +975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">assignUsers</param>
         /// <returns>ApiResponse of Assignment</returns>
         ApiResponse<Assignment> PostGamificationProfileMembersWithHttpInfo (string performanceProfileId, AssignUsers body);
-        
+
         /// <summary>
         /// Validate member assignment
         /// </summary>
@@ -999,7 +999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">memberAssignments</param>
         /// <returns>ApiResponse of AssignmentValidation</returns>
         ApiResponse<AssignmentValidation> PostGamificationProfileMembersValidateWithHttpInfo (string performanceProfileId, ValidateAssignUsers body);
-        
+
         /// <summary>
         /// Creates a linked metric
         /// </summary>
@@ -1025,7 +1025,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">linkedMetric</param>
         /// <returns>ApiResponse of Metric</returns>
         ApiResponse<Metric> PostGamificationProfileMetricLinkWithHttpInfo (string sourceProfileId, string sourceMetricId, TargetPerformanceProfile body);
-        
+
         /// <summary>
         /// Creates a gamified metric with a given metric definition and metric objective under in a performance profile
         /// </summary>
@@ -1049,7 +1049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Metric</param>
         /// <returns>ApiResponse of Metric</returns>
         ApiResponse<Metric> PostGamificationProfileMetricsWithHttpInfo (string profileId, CreateMetric body);
-        
+
         /// <summary>
         /// Create a new custom performance profile
         /// </summary>
@@ -1073,7 +1073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
         ApiResponse<PerformanceProfile> PostGamificationProfilesWithHttpInfo (CreatePerformanceProfile body, bool? copyMetrics = null);
-        
+
         /// <summary>
         /// Updates a metric
         /// </summary>
@@ -1099,7 +1099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Metric</returns>
         ApiResponse<Metric> PutGamificationMetricWithHttpInfo (string metricId, CreateMetric body, string performanceProfileId = null);
-        
+
         /// <summary>
         /// Updates a performance profile
         /// </summary>
@@ -1123,7 +1123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
         ApiResponse<PerformanceProfile> PutGamificationProfileWithHttpInfo (string profileId, PerformanceProfile body = null);
-        
+
         /// <summary>
         /// Updates a metric in performance profile
         /// </summary>
@@ -1149,7 +1149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Metric</param>
         /// <returns>ApiResponse of Metric</returns>
         ApiResponse<Metric> PutGamificationProfileMetricWithHttpInfo (string profileId, string metricId, CreateMetric body);
-        
+
         /// <summary>
         /// Update gamification activation status
         /// </summary>
@@ -1171,13 +1171,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="status">Gamification status</param>
         /// <returns>ApiResponse of GamificationStatus</returns>
         ApiResponse<GamificationStatus> PutGamificationStatusWithHttpInfo (GamificationStatus status);
-        
+
         #endregion Synchronous Operations
-        
+
         #region Asynchronous Operations
-        
+
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division or performance profile
+        /// Leaderboard of the requesting user's division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -1190,7 +1190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Leaderboard> GetGamificationLeaderboardAsync (String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division or performance profile
+        /// Leaderboard of the requesting user's division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -1201,7 +1201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Leaderboard)</returns>
         System.Threading.Tasks.Task<ApiResponse<Leaderboard>> GetGamificationLeaderboardAsyncWithHttpInfo (String startWorkday, String endWorkday, string metricId = null);
-        
+
         /// <summary>
         /// Leaderboard by filter type
         /// </summary>
@@ -1231,7 +1231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Leaderboard)</returns>
         System.Threading.Tasks.Task<ApiResponse<Leaderboard>> GetGamificationLeaderboardAllAsyncWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null);
-        
+
         /// <summary>
         /// Best Points by division or performance profile
         /// </summary>
@@ -1255,9 +1255,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>Task of ApiResponse (OverallBestPoints)</returns>
         System.Threading.Tasks.Task<ApiResponse<OverallBestPoints>> GetGamificationLeaderboardAllBestpointsAsyncWithHttpInfo (string filterType, string filterId);
-        
+
         /// <summary>
-        /// Best Points of the requesting user&#39;s current performance profile or division
+        /// Best Points of the requesting user's current performance profile or division
         /// </summary>
         /// <remarks>
         /// 
@@ -1267,7 +1267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<OverallBestPoints> GetGamificationLeaderboardBestpointsAsync ();
 
         /// <summary>
-        /// Best Points of the requesting user&#39;s current performance profile or division
+        /// Best Points of the requesting user's current performance profile or division
         /// </summary>
         /// <remarks>
         /// 
@@ -1275,7 +1275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OverallBestPoints)</returns>
         System.Threading.Tasks.Task<ApiResponse<OverallBestPoints>> GetGamificationLeaderboardBestpointsAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Gamified metric by id
         /// </summary>
@@ -1301,7 +1301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
         System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationMetricAsyncWithHttpInfo (string metricId, String workday = null, string performanceProfileId = null);
-        
+
         /// <summary>
         /// Metric definition by id
         /// </summary>
@@ -1323,7 +1323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricDefinitionId">metric definition id</param>
         /// <returns>Task of ApiResponse (MetricDefinition)</returns>
         System.Threading.Tasks.Task<ApiResponse<MetricDefinition>> GetGamificationMetricdefinitionAsyncWithHttpInfo (string metricDefinitionId);
-        
+
         /// <summary>
         /// All metric definitions
         /// </summary>
@@ -1343,7 +1343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetMetricDefinitionsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetMetricDefinitionsResponse>> GetGamificationMetricdefinitionsAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// All gamified metrics for a given profile
         /// </summary>
@@ -1367,7 +1367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (GetMetricsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetMetricsResponse>> GetGamificationMetricsAsyncWithHttpInfo (string performanceProfileId = null, String workday = null);
-        
+
         /// <summary>
         /// Performance profile by id
         /// </summary>
@@ -1389,7 +1389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfileAsyncWithHttpInfo (string profileId);
-        
+
         /// <summary>
         /// Members of a given performance profile
         /// </summary>
@@ -1411,7 +1411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="performanceProfileId">Performance Profile Id</param>
         /// <returns>Task of ApiResponse (MemberListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<MemberListing>> GetGamificationProfileMembersAsyncWithHttpInfo (string performanceProfileId);
-        
+
         /// <summary>
         /// Performance profile gamified metric by id
         /// </summary>
@@ -1437,7 +1437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
         System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationProfileMetricAsyncWithHttpInfo (string profileId, string metricId, String workday = null);
-        
+
         /// <summary>
         /// All gamified metrics for a given performance profile
         /// </summary>
@@ -1463,7 +1463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (GetMetricResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetMetricResponse>> GetGamificationProfileMetricsAsyncWithHttpInfo (string profileId, List<string> expand = null, String workday = null);
-        
+
         /// <summary>
         /// All metrics for a given performance profile with objective details such as order and maxPoints
         /// </summary>
@@ -1487,7 +1487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (GetMetricsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetMetricsResponse>> GetGamificationProfileMetricsObjectivedetailsAsyncWithHttpInfo (string profileId, String workday = null);
-        
+
         /// <summary>
         /// All performance profiles
         /// </summary>
@@ -1507,7 +1507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetProfilesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetProfilesResponse>> GetGamificationProfilesAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Performance profile of a user
         /// </summary>
@@ -1531,7 +1531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfilesUserAsyncWithHttpInfo (string userId, String workday = null);
-        
+
         /// <summary>
         /// Performance profile of the requesting user
         /// </summary>
@@ -1553,7 +1553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfilesUsersMeAsyncWithHttpInfo (String workday = null);
-        
+
         /// <summary>
         /// Workday performance metrics of the requesting user
         /// </summary>
@@ -1577,7 +1577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayMetricListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayMetricListing>> GetGamificationScorecardsAsyncWithHttpInfo (String workday, List<string> expand = null);
-        
+
         /// <summary>
         /// Attendance status metrics of the requesting user
         /// </summary>
@@ -1601,7 +1601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AttendanceStatusListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttendanceStatusListing>> GetGamificationScorecardsAttendanceAsyncWithHttpInfo (String startWorkday, String endWorkday);
-        
+
         /// <summary>
         /// Best points of the requesting user
         /// </summary>
@@ -1621,7 +1621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UserBestPoints)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserBestPoints>> GetGamificationScorecardsBestpointsAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// All-time points of the requesting user
         /// </summary>
@@ -1643,9 +1643,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AllTimePoints)</returns>
         System.Threading.Tasks.Task<ApiResponse<AllTimePoints>> GetGamificationScorecardsPointsAlltimeAsyncWithHttpInfo (String endWorkday);
-        
+
         /// <summary>
-        /// Average points of the requesting user&#39;s division or performance profile
+        /// Average points of the requesting user's division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -1656,7 +1656,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<SingleWorkdayAveragePoints> GetGamificationScorecardsPointsAverageAsync (String workday);
 
         /// <summary>
-        /// Average points of the requesting user&#39;s division or performance profile
+        /// Average points of the requesting user's division or performance profile
         /// </summary>
         /// <remarks>
         /// 
@@ -1665,7 +1665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAveragePoints)</returns>
         System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAveragePoints>> GetGamificationScorecardsPointsAverageAsyncWithHttpInfo (String workday);
-        
+
         /// <summary>
         /// Points trends of the requesting user
         /// </summary>
@@ -1691,7 +1691,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayPointsTrend)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayPointsTrend>> GetGamificationScorecardsPointsTrendsAsyncWithHttpInfo (String startWorkday, String endWorkday, string dayOfWeek = null);
-        
+
         /// <summary>
         /// Workday performance metrics for a user
         /// </summary>
@@ -1717,7 +1717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayMetricListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayMetricListing>> GetGamificationScorecardsUserAsyncWithHttpInfo (string userId, String workday, List<string> expand = null);
-        
+
         /// <summary>
         /// Attendance status metrics for a user
         /// </summary>
@@ -1743,7 +1743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AttendanceStatusListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttendanceStatusListing>> GetGamificationScorecardsUserAttendanceAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday);
-        
+
         /// <summary>
         /// Best points of a user
         /// </summary>
@@ -1765,7 +1765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <returns>Task of ApiResponse (UserBestPoints)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserBestPoints>> GetGamificationScorecardsUserBestpointsAsyncWithHttpInfo (string userId);
-        
+
         /// <summary>
         /// All-time points for a user
         /// </summary>
@@ -1789,7 +1789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AllTimePoints)</returns>
         System.Threading.Tasks.Task<ApiResponse<AllTimePoints>> GetGamificationScorecardsUserPointsAlltimeAsyncWithHttpInfo (string userId, String endWorkday);
-        
+
         /// <summary>
         /// Points trend for a user
         /// </summary>
@@ -1817,7 +1817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayPointsTrend)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayPointsTrend>> GetGamificationScorecardsUserPointsTrendsAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday, string dayOfWeek = null);
-        
+
         /// <summary>
         /// Values trends of a user
         /// </summary>
@@ -1828,7 +1828,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
         System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsUserValuesTrendsAsync (string userId, String startWorkday, String endWorkday, string timeZone = null);
 
@@ -1842,10 +1842,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsUserValuesTrendsAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday, string timeZone = null);
-        
+
         /// <summary>
         /// Workday average points by target group
         /// </summary>
@@ -1871,7 +1871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAveragePoints)</returns>
         System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAveragePoints>> GetGamificationScorecardsUsersPointsAverageAsyncWithHttpInfo (string filterType, string filterId, String workday);
-        
+
         /// <summary>
         /// Workday average values by target group
         /// </summary>
@@ -1882,7 +1882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of SingleWorkdayAverageValues</returns>
         System.Threading.Tasks.Task<SingleWorkdayAverageValues> GetGamificationScorecardsUsersValuesAverageAsync (string filterType, string filterId, String workday, string timeZone = null);
 
@@ -1896,10 +1896,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAverageValues)</returns>
         System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAverageValues>> GetGamificationScorecardsUsersValuesAverageAsyncWithHttpInfo (string filterType, string filterId, String workday, string timeZone = null);
-        
+
         /// <summary>
         /// Values trend by target group
         /// </summary>
@@ -1911,7 +1911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
         System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsUsersValuesTrendsAsync (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
 
@@ -1926,34 +1926,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsUsersValuesTrendsAsyncWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
-        
+
         /// <summary>
-        /// Average values of the requesting user&#39;s division or performance profile
+        /// Average values of the requesting user's division or performance profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of SingleWorkdayAverageValues</returns>
         System.Threading.Tasks.Task<SingleWorkdayAverageValues> GetGamificationScorecardsValuesAverageAsync (String workday, string timeZone = null);
 
         /// <summary>
-        /// Average values of the requesting user&#39;s division or performance profile
+        /// Average values of the requesting user's division or performance profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAverageValues)</returns>
         System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAverageValues>> GetGamificationScorecardsValuesAverageAsyncWithHttpInfo (String workday, string timeZone = null);
-        
+
         /// <summary>
         /// Values trends of the requesting user or group
         /// </summary>
@@ -1965,7 +1965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
         System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsValuesTrendsAsync (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
 
@@ -1980,10 +1980,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsValuesTrendsAsyncWithHttpInfo (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
-        
+
         /// <summary>
         /// Gamification activation status
         /// </summary>
@@ -2003,7 +2003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GamificationStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<GamificationStatus>> GetGamificationStatusAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Objective template by id
         /// </summary>
@@ -2025,7 +2025,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="templateId">template id</param>
         /// <returns>Task of ApiResponse (ObjectiveTemplate)</returns>
         System.Threading.Tasks.Task<ApiResponse<ObjectiveTemplate>> GetGamificationTemplateAsyncWithHttpInfo (string templateId);
-        
+
         /// <summary>
         /// All objective templates
         /// </summary>
@@ -2045,7 +2045,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetTemplatesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetTemplatesResponse>> GetGamificationTemplatesAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Creates a gamified metric with a given metric definition and metric objective
         /// </summary>
@@ -2067,7 +2067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Metric</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
         System.Threading.Tasks.Task<ApiResponse<Metric>> PostGamificationMetricsAsyncWithHttpInfo (CreateMetric body);
-        
+
         /// <summary>
         /// Activate a performance profile
         /// </summary>
@@ -2089,7 +2089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileActivateAsyncWithHttpInfo (string profileId);
-        
+
         /// <summary>
         /// Deactivate a performance profile
         /// </summary>
@@ -2111,7 +2111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileDeactivateAsyncWithHttpInfo (string profileId);
-        
+
         /// <summary>
         /// Assign members to a given performance profile
         /// </summary>
@@ -2135,7 +2135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">assignUsers</param>
         /// <returns>Task of ApiResponse (Assignment)</returns>
         System.Threading.Tasks.Task<ApiResponse<Assignment>> PostGamificationProfileMembersAsyncWithHttpInfo (string performanceProfileId, AssignUsers body);
-        
+
         /// <summary>
         /// Validate member assignment
         /// </summary>
@@ -2159,7 +2159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">memberAssignments</param>
         /// <returns>Task of ApiResponse (AssignmentValidation)</returns>
         System.Threading.Tasks.Task<ApiResponse<AssignmentValidation>> PostGamificationProfileMembersValidateAsyncWithHttpInfo (string performanceProfileId, ValidateAssignUsers body);
-        
+
         /// <summary>
         /// Creates a linked metric
         /// </summary>
@@ -2185,7 +2185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">linkedMetric</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
         System.Threading.Tasks.Task<ApiResponse<Metric>> PostGamificationProfileMetricLinkAsyncWithHttpInfo (string sourceProfileId, string sourceMetricId, TargetPerformanceProfile body);
-        
+
         /// <summary>
         /// Creates a gamified metric with a given metric definition and metric objective under in a performance profile
         /// </summary>
@@ -2209,7 +2209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Metric</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
         System.Threading.Tasks.Task<ApiResponse<Metric>> PostGamificationProfileMetricsAsyncWithHttpInfo (string profileId, CreateMetric body);
-        
+
         /// <summary>
         /// Create a new custom performance profile
         /// </summary>
@@ -2233,7 +2233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfilesAsyncWithHttpInfo (CreatePerformanceProfile body, bool? copyMetrics = null);
-        
+
         /// <summary>
         /// Updates a metric
         /// </summary>
@@ -2259,7 +2259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
         System.Threading.Tasks.Task<ApiResponse<Metric>> PutGamificationMetricAsyncWithHttpInfo (string metricId, CreateMetric body, string performanceProfileId = null);
-        
+
         /// <summary>
         /// Updates a performance profile
         /// </summary>
@@ -2283,7 +2283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PutGamificationProfileAsyncWithHttpInfo (string profileId, PerformanceProfile body = null);
-        
+
         /// <summary>
         /// Updates a metric in performance profile
         /// </summary>
@@ -2309,7 +2309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Metric</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
         System.Threading.Tasks.Task<ApiResponse<Metric>> PutGamificationProfileMetricAsyncWithHttpInfo (string profileId, string metricId, CreateMetric body);
-        
+
         /// <summary>
         /// Update gamification activation status
         /// </summary>
@@ -2331,9 +2331,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="status">Gamification status</param>
         /// <returns>Task of ApiResponse (GamificationStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<GamificationStatus>> PutGamificationStatusAsyncWithHttpInfo (GamificationStatus status);
-        
+
         #endregion Asynchronous Operations
-        
+
     }
 
     /// <summary>
@@ -2423,9 +2423,9 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
-        
+
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division or performance profile 
+        /// Leaderboard of the requesting user's division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
@@ -2439,7 +2439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division or performance profile 
+        /// Leaderboard of the requesting user's division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
@@ -2465,17 +2465,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2498,7 +2497,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2527,9 +2526,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division or performance profile 
+        /// Leaderboard of the requesting user's division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
@@ -2544,7 +2543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Leaderboard of the requesting user&#39;s division or performance profile 
+        /// Leaderboard of the requesting user's division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startWorkday">Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
@@ -2572,16 +2571,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2605,7 +2603,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2634,8 +2632,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Leaderboard by filter type 
         /// </summary>
@@ -2687,17 +2685,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2722,7 +2719,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2751,7 +2748,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Leaderboard by filter type 
         /// </summary>
@@ -2808,16 +2805,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2843,7 +2839,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2872,8 +2868,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Best Points by division or performance profile 
         /// </summary>
@@ -2913,17 +2909,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2945,7 +2940,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2974,7 +2969,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Best Points by division or performance profile 
         /// </summary>
@@ -3017,16 +3012,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3049,7 +3043,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3078,10 +3072,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Best Points of the requesting user&#39;s current performance profile or division 
+        /// Best Points of the requesting user's current performance profile or division 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OverallBestPoints</returns>
@@ -3092,7 +3086,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Best Points of the requesting user&#39;s current performance profile or division 
+        /// Best Points of the requesting user's current performance profile or division 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OverallBestPoints</returns>
@@ -3109,17 +3103,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3139,7 +3132,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3168,9 +3161,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Best Points of the requesting user&#39;s current performance profile or division 
+        /// Best Points of the requesting user's current performance profile or division 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OverallBestPoints</returns>
@@ -3182,7 +3175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Best Points of the requesting user&#39;s current performance profile or division 
+        /// Best Points of the requesting user's current performance profile or division 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OverallBestPoints)</returns>
@@ -3199,16 +3192,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3229,7 +3221,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3258,8 +3250,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gamified metric by id 
         /// </summary>
@@ -3298,17 +3290,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3331,7 +3322,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3360,7 +3351,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gamified metric by id 
         /// </summary>
@@ -3401,16 +3392,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3434,7 +3424,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3463,8 +3453,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Metric definition by id 
         /// </summary>
@@ -3499,17 +3489,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3530,7 +3519,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3559,7 +3548,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Metric definition by id 
         /// </summary>
@@ -3596,16 +3585,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3627,7 +3615,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3656,8 +3644,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// All metric definitions Retrieves the metric definitions and their corresponding default objectives used to create a gamified metric
         /// </summary>
@@ -3687,17 +3675,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3717,7 +3704,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3746,7 +3733,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// All metric definitions Retrieves the metric definitions and their corresponding default objectives used to create a gamified metric
         /// </summary>
@@ -3777,16 +3764,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3807,7 +3793,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3836,8 +3822,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// All gamified metrics for a given profile 
         /// </summary>
@@ -3871,17 +3857,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3903,7 +3888,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3932,7 +3917,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// All gamified metrics for a given profile 
         /// </summary>
@@ -3967,16 +3952,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3999,7 +3983,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4028,8 +4012,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Performance profile by id 
         /// </summary>
@@ -4064,17 +4048,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4095,7 +4078,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4124,7 +4107,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Performance profile by id 
         /// </summary>
@@ -4161,16 +4144,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4192,7 +4174,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4221,8 +4203,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Members of a given performance profile 
         /// </summary>
@@ -4257,17 +4239,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4288,7 +4269,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4317,7 +4298,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Members of a given performance profile 
         /// </summary>
@@ -4354,16 +4335,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4385,7 +4365,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4414,8 +4394,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Performance profile gamified metric by id 
         /// </summary>
@@ -4457,17 +4437,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4490,7 +4469,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4519,7 +4498,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Performance profile gamified metric by id 
         /// </summary>
@@ -4564,16 +4543,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4597,7 +4575,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4626,8 +4604,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// All gamified metrics for a given performance profile 
         /// </summary>
@@ -4666,17 +4644,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4699,7 +4676,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4728,7 +4705,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// All gamified metrics for a given performance profile 
         /// </summary>
@@ -4769,16 +4746,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4802,7 +4778,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4831,8 +4807,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// All metrics for a given performance profile with objective details such as order and maxPoints 
         /// </summary>
@@ -4869,17 +4845,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4901,7 +4876,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4930,7 +4905,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// All metrics for a given performance profile with objective details such as order and maxPoints 
         /// </summary>
@@ -4969,16 +4944,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5001,7 +4975,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5030,8 +5004,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// All performance profiles 
         /// </summary>
@@ -5061,17 +5035,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5091,7 +5064,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5120,7 +5093,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// All performance profiles 
         /// </summary>
@@ -5151,16 +5124,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5181,7 +5153,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5210,8 +5182,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Performance profile of a user 
         /// </summary>
@@ -5248,17 +5220,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5280,7 +5251,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5309,7 +5280,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Performance profile of a user 
         /// </summary>
@@ -5348,16 +5319,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5380,7 +5350,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5409,8 +5379,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Performance profile of the requesting user 
         /// </summary>
@@ -5442,17 +5412,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5473,7 +5442,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5502,7 +5471,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Performance profile of the requesting user 
         /// </summary>
@@ -5535,16 +5504,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5566,7 +5534,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5595,8 +5563,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Workday performance metrics of the requesting user 
         /// </summary>
@@ -5633,17 +5601,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5665,7 +5632,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5694,7 +5661,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Workday performance metrics of the requesting user 
         /// </summary>
@@ -5733,16 +5700,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5765,7 +5731,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5794,8 +5760,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Attendance status metrics of the requesting user 
         /// </summary>
@@ -5835,17 +5801,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5867,7 +5832,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5896,7 +5861,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Attendance status metrics of the requesting user 
         /// </summary>
@@ -5939,16 +5904,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5971,7 +5935,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6000,8 +5964,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Best points of the requesting user 
         /// </summary>
@@ -6031,17 +5995,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6061,7 +6024,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6090,7 +6053,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Best points of the requesting user 
         /// </summary>
@@ -6121,16 +6084,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6151,7 +6113,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6180,8 +6142,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// All-time points of the requesting user 
         /// </summary>
@@ -6216,17 +6178,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6247,7 +6208,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6276,7 +6237,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// All-time points of the requesting user 
         /// </summary>
@@ -6313,16 +6274,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6344,7 +6304,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6373,10 +6333,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Average points of the requesting user&#39;s division or performance profile 
+        /// Average points of the requesting user's division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
@@ -6388,7 +6348,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Average points of the requesting user&#39;s division or performance profile 
+        /// Average points of the requesting user's division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
@@ -6409,17 +6369,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6440,7 +6399,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6469,9 +6428,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Average points of the requesting user&#39;s division or performance profile 
+        /// Average points of the requesting user's division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
@@ -6484,7 +6443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Average points of the requesting user&#39;s division or performance profile 
+        /// Average points of the requesting user's division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
@@ -6506,16 +6465,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6537,7 +6495,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6566,8 +6524,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Points trends of the requesting user 
         /// </summary>
@@ -6609,17 +6567,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6642,7 +6599,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6671,7 +6628,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Points trends of the requesting user 
         /// </summary>
@@ -6716,16 +6673,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6749,7 +6705,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6778,8 +6734,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Workday performance metrics for a user 
         /// </summary>
@@ -6821,17 +6777,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6854,7 +6809,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6883,7 +6838,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Workday performance metrics for a user 
         /// </summary>
@@ -6928,16 +6883,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6961,7 +6915,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6990,8 +6944,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Attendance status metrics for a user 
         /// </summary>
@@ -7036,17 +6990,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7069,7 +7022,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7098,7 +7051,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Attendance status metrics for a user 
         /// </summary>
@@ -7147,16 +7100,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7180,7 +7132,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7209,8 +7161,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Best points of a user 
         /// </summary>
@@ -7245,17 +7197,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7276,7 +7227,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7305,7 +7256,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Best points of a user 
         /// </summary>
@@ -7342,16 +7293,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7373,7 +7323,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7402,8 +7352,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// All-time points for a user 
         /// </summary>
@@ -7443,17 +7393,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7475,7 +7424,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7504,7 +7453,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// All-time points for a user 
         /// </summary>
@@ -7547,16 +7496,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7579,7 +7527,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7608,8 +7556,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Points trend for a user 
         /// </summary>
@@ -7656,17 +7604,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7690,7 +7637,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7719,7 +7666,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Points trend for a user 
         /// </summary>
@@ -7770,16 +7717,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7804,7 +7750,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7833,8 +7779,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Values trends of a user 
         /// </summary>
@@ -7842,7 +7788,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>WorkdayValuesTrend</returns>
         public WorkdayValuesTrend GetGamificationScorecardsUserValuesTrends (string userId, String startWorkday, String endWorkday, string timeZone = null)
         {
@@ -7857,7 +7803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
         public ApiResponse< WorkdayValuesTrend > GetGamificationScorecardsUserValuesTrendsWithHttpInfo (string userId, String startWorkday, String endWorkday, string timeZone = null)
         { 
@@ -7881,17 +7827,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7915,7 +7860,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7944,7 +7889,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Values trends of a user 
         /// </summary>
@@ -7952,7 +7897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
         public async System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsUserValuesTrendsAsync (string userId, String startWorkday, String endWorkday, string timeZone = null)
         {
@@ -7968,7 +7913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsUserValuesTrendsAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday, string timeZone = null)
         { 
@@ -7995,16 +7940,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8029,7 +7973,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8058,8 +8002,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Workday average points by target group 
         /// </summary>
@@ -8104,17 +8048,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8137,7 +8080,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8166,7 +8109,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Workday average points by target group 
         /// </summary>
@@ -8215,16 +8158,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8248,7 +8190,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8277,8 +8219,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Workday average values by target group 
         /// </summary>
@@ -8286,7 +8228,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>SingleWorkdayAverageValues</returns>
         public SingleWorkdayAverageValues GetGamificationScorecardsUsersValuesAverage (string filterType, string filterId, String workday, string timeZone = null)
         {
@@ -8301,7 +8243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of SingleWorkdayAverageValues</returns>
         public ApiResponse< SingleWorkdayAverageValues > GetGamificationScorecardsUsersValuesAverageWithHttpInfo (string filterType, string filterId, String workday, string timeZone = null)
         { 
@@ -8325,17 +8267,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8359,7 +8300,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8388,7 +8329,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Workday average values by target group 
         /// </summary>
@@ -8396,7 +8337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of SingleWorkdayAverageValues</returns>
         public async System.Threading.Tasks.Task<SingleWorkdayAverageValues> GetGamificationScorecardsUsersValuesAverageAsync (string filterType, string filterId, String workday, string timeZone = null)
         {
@@ -8412,7 +8353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAverageValues)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAverageValues>> GetGamificationScorecardsUsersValuesAverageAsyncWithHttpInfo (string filterType, string filterId, String workday, string timeZone = null)
         { 
@@ -8439,16 +8380,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8473,7 +8413,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8502,8 +8442,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Values trend by target group 
         /// </summary>
@@ -8512,7 +8452,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>WorkdayValuesTrend</returns>
         public WorkdayValuesTrend GetGamificationScorecardsUsersValuesTrends (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null)
         {
@@ -8528,7 +8468,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
         public ApiResponse< WorkdayValuesTrend > GetGamificationScorecardsUsersValuesTrendsWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null)
         { 
@@ -8555,17 +8495,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8590,7 +8529,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8619,7 +8558,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Values trend by target group 
         /// </summary>
@@ -8628,7 +8567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
         public async System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsUsersValuesTrendsAsync (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null)
         {
@@ -8645,7 +8584,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsUsersValuesTrendsAsyncWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null)
         { 
@@ -8676,16 +8615,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8711,7 +8649,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8740,14 +8678,14 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Average values of the requesting user&#39;s division or performance profile 
+        /// Average values of the requesting user's division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>SingleWorkdayAverageValues</returns>
         public SingleWorkdayAverageValues GetGamificationScorecardsValuesAverage (String workday, string timeZone = null)
         {
@@ -8756,11 +8694,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Average values of the requesting user&#39;s division or performance profile 
+        /// Average values of the requesting user's division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of SingleWorkdayAverageValues</returns>
         public ApiResponse< SingleWorkdayAverageValues > GetGamificationScorecardsValuesAverageWithHttpInfo (String workday, string timeZone = null)
         { 
@@ -8778,17 +8716,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8810,7 +8747,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8839,13 +8776,13 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Average values of the requesting user&#39;s division or performance profile 
+        /// Average values of the requesting user's division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of SingleWorkdayAverageValues</returns>
         public async System.Threading.Tasks.Task<SingleWorkdayAverageValues> GetGamificationScorecardsValuesAverageAsync (String workday, string timeZone = null)
         {
@@ -8855,11 +8792,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Average values of the requesting user&#39;s division or performance profile 
+        /// Average values of the requesting user's division or performance profile 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAverageValues)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAverageValues>> GetGamificationScorecardsValuesAverageAsyncWithHttpInfo (String workday, string timeZone = null)
         { 
@@ -8878,16 +8815,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8910,7 +8846,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8939,8 +8875,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Values trends of the requesting user or group 
         /// </summary>
@@ -8949,7 +8885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>WorkdayValuesTrend</returns>
         public WorkdayValuesTrend GetGamificationScorecardsValuesTrends (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
         {
@@ -8965,7 +8901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
         public ApiResponse< WorkdayValuesTrend > GetGamificationScorecardsValuesTrendsWithHttpInfo (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
         { 
@@ -8986,17 +8922,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9021,7 +8956,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9050,7 +8985,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Values trends of the requesting user or group 
         /// </summary>
@@ -9059,7 +8994,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
         public async System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsValuesTrendsAsync (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
         {
@@ -9076,7 +9011,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="filterType">Filter type for the query request. If not set, then the request is for the requesting user. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
-        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to UTC)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsValuesTrendsAsyncWithHttpInfo (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
         { 
@@ -9099,16 +9034,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9134,7 +9068,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9163,8 +9097,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gamification activation status 
         /// </summary>
@@ -9194,17 +9128,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9224,7 +9157,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9253,7 +9186,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gamification activation status 
         /// </summary>
@@ -9284,16 +9217,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9314,7 +9246,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9343,8 +9275,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Objective template by id 
         /// </summary>
@@ -9379,17 +9311,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9410,7 +9341,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9439,7 +9370,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Objective template by id 
         /// </summary>
@@ -9476,16 +9407,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9507,7 +9437,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9536,8 +9466,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// All objective templates 
         /// </summary>
@@ -9567,17 +9497,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9597,7 +9526,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9626,7 +9555,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// All objective templates 
         /// </summary>
@@ -9657,16 +9586,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9687,7 +9615,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9716,8 +9644,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates a gamified metric with a given metric definition and metric objective 
         /// </summary>
@@ -9752,7 +9680,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -9760,9 +9687,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9785,9 +9713,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9816,7 +9744,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates a gamified metric with a given metric definition and metric objective 
         /// </summary>
@@ -9853,7 +9781,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -9861,8 +9788,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9886,9 +9814,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9917,8 +9845,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Activate a performance profile 
         /// </summary>
@@ -9953,17 +9881,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9984,7 +9911,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10013,7 +9940,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Activate a performance profile 
         /// </summary>
@@ -10050,16 +9977,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10081,7 +10007,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10110,8 +10036,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Deactivate a performance profile 
         /// </summary>
@@ -10146,17 +10072,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10177,7 +10102,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10206,7 +10131,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Deactivate a performance profile 
         /// </summary>
@@ -10243,16 +10168,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10274,7 +10198,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10303,8 +10227,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Assign members to a given performance profile 
         /// </summary>
@@ -10344,7 +10268,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10352,9 +10275,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10378,9 +10302,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10409,7 +10333,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Assign members to a given performance profile 
         /// </summary>
@@ -10452,7 +10376,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10460,8 +10383,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10486,9 +10410,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10517,8 +10441,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Validate member assignment 
         /// </summary>
@@ -10558,7 +10482,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10566,9 +10489,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10592,9 +10516,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10623,7 +10547,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Validate member assignment 
         /// </summary>
@@ -10666,7 +10590,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10674,8 +10597,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10700,9 +10624,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10731,8 +10655,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates a linked metric 
         /// </summary>
@@ -10777,7 +10701,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10785,9 +10708,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10812,9 +10736,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10843,7 +10767,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates a linked metric 
         /// </summary>
@@ -10892,7 +10816,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10900,8 +10823,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10927,9 +10851,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10958,8 +10882,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates a gamified metric with a given metric definition and metric objective under in a performance profile 
         /// </summary>
@@ -10999,7 +10923,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11007,9 +10930,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11033,9 +10957,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11064,7 +10988,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates a gamified metric with a given metric definition and metric objective under in a performance profile 
         /// </summary>
@@ -11107,7 +11031,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11115,8 +11038,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11141,9 +11065,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11172,8 +11096,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a new custom performance profile 
         /// </summary>
@@ -11210,7 +11134,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11218,9 +11141,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11244,9 +11168,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11275,7 +11199,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a new custom performance profile 
         /// </summary>
@@ -11314,7 +11238,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11322,8 +11245,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11348,9 +11272,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11379,8 +11303,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates a metric 
         /// </summary>
@@ -11422,7 +11346,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11430,9 +11353,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11457,9 +11381,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11488,7 +11412,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates a metric 
         /// </summary>
@@ -11533,7 +11457,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11541,8 +11464,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11568,9 +11492,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11599,8 +11523,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates a performance profile 
         /// </summary>
@@ -11637,7 +11561,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11645,9 +11568,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11671,9 +11595,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11702,7 +11626,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates a performance profile 
         /// </summary>
@@ -11741,7 +11665,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11749,8 +11672,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11775,9 +11699,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11806,8 +11730,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates a metric in performance profile 
         /// </summary>
@@ -11852,7 +11776,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11860,9 +11783,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11887,9 +11811,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11918,7 +11842,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates a metric in performance profile 
         /// </summary>
@@ -11967,7 +11891,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11975,8 +11898,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12002,9 +11926,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12033,8 +11957,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update gamification activation status 
         /// </summary>
@@ -12069,7 +11993,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -12077,9 +12000,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12102,9 +12026,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(status); // http body (model) parameter
             else
                 localVarPostBody = status; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12133,7 +12057,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update gamification activation status 
         /// </summary>
@@ -12170,7 +12094,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -12178,8 +12101,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12203,9 +12127,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(status); // http body (model) parameter
             else
                 localVarPostBody = status; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12234,8 +12158,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
     }
-    
+
 }

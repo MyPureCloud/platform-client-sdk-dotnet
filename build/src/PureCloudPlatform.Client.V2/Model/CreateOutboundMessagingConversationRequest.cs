@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateOutboundMessagingConversationRequest :  IEquatable<CreateOutboundMessagingConversationRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The messaging address messenger type.
         /// </summary>
@@ -47,40 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "sms")]
             Sms
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The messaging address messenger type.
         /// </summary>
         /// <value>The messaging address messenger type.</value>
         [DataMember(Name="toAddressMessengerType", EmitDefaultValue=false)]
         public ToAddressMessengerTypeEnum? ToAddressMessengerType { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateOutboundMessagingConversationRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateOutboundMessagingConversationRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateOutboundMessagingConversationRequest" /> class.
         /// </summary>
@@ -99,45 +69,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the queue to be associated with the message. This will determine the fromAddress of the message.
         /// </summary>
         /// <value>The ID of the queue to be associated with the message. This will determine the fromAddress of the message.</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234
         /// </summary>
         /// <value>The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234</value>
         [DataMember(Name="toAddress", EmitDefaultValue=false)]
         public string ToAddress { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// An override to use an existing conversation.  If set to true, an existing conversation will be used if there is one within the conversation window.  If set to false, create request fails if there is a conversation within the conversation window.
         /// </summary>
         /// <value>An override to use an existing conversation.  If set to true, an existing conversation will be used if there is one within the conversation window.  If set to false, create request fails if there is a conversation within the conversation window.</value>
         [DataMember(Name="useExistingConversation", EmitDefaultValue=false)]
         public bool? UseExistingConversation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The external contact with which the message will be associated.
         /// </summary>
         /// <value>The external contact with which the message will be associated.</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateOutboundMessagingConversationRequest {\n");
-            
+
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
             sb.Append("  ToAddressMessengerType: ").Append(ToAddressMessengerType).Append("\n");
@@ -230,22 +200,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
+
                 if (this.ToAddress != null)
                     hash = hash * 59 + this.ToAddress.GetHashCode();
-                
+
                 if (this.ToAddressMessengerType != null)
                     hash = hash * 59 + this.ToAddressMessengerType.GetHashCode();
-                
+
                 if (this.UseExistingConversation != null)
                     hash = hash * 59 + this.UseExistingConversation.GetHashCode();
-                
+
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
-                
+
                 return hash;
             }
         }

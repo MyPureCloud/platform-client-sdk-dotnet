@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotUserAgent :  IEquatable<TextBotUserAgent>
     {
-        
-        
         /// <summary>
         /// The name of the user agent.
         /// </summary>
@@ -125,26 +123,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unknown")]
             Unknown
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// The name of the user agent.
         /// </summary>
         /// <value>The name of the user agent.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public NameEnum? Name { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotUserAgent" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotUserAgent() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotUserAgent" /> class.
         /// </summary>
@@ -155,9 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -166,7 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotUserAgent {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -226,10 +216,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 return hash;
             }
         }

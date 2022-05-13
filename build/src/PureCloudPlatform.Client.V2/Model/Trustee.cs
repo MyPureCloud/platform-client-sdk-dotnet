@@ -18,55 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Trustee :  IEquatable<Trustee>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Trustee" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Trustee() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Trustee" /> class.
         /// </summary>
@@ -81,79 +38,79 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Organization Id for this trust.
         /// </summary>
         /// <value>Organization Id for this trust.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If disabled no trustee user will have access, even if they were previously added.
         /// </summary>
         /// <value>If disabled no trustee user will have access, even if they were previously added.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Denotes if trustee uses admin role by default.
         /// </summary>
         /// <value>Denotes if trustee uses admin role by default.</value>
         [DataMember(Name="usesDefaultRole", EmitDefaultValue=false)]
         public bool? UsesDefaultRole { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date Trust was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date Trust was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateExpired", EmitDefaultValue=false)]
         public DateTime? DateExpired { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User that created trust.
         /// </summary>
         /// <value>User that created trust.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public OrgUser CreatedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Organization associated with this trust.
         /// </summary>
         /// <value>Organization associated with this trust.</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
         public Organization Organization { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -162,7 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Trustee {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  UsesDefaultRole: ").Append(UsesDefaultRole).Append("\n");
@@ -264,31 +221,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.UsesDefaultRole != null)
                     hash = hash * 59 + this.UsesDefaultRole.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateExpired != null)
                     hash = hash * 59 + this.DateExpired.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.Organization != null)
                     hash = hash * 59 + this.Organization.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

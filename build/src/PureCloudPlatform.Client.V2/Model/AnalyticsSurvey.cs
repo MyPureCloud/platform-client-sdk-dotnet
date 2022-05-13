@@ -18,64 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsSurvey :  IEquatable<AnalyticsSurvey>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSurvey" /> class.
         /// </summary>
@@ -106,105 +48,105 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Specifies when an event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Specifies when an event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
         public DateTime? EventTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the associated queue
         /// </summary>
         /// <value>The ID of the associated queue</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Completion datetime of the survey in ISO 8601 format
         /// </summary>
         /// <value>Completion datetime of the survey in ISO 8601 format</value>
         [DataMember(Name="surveyCompletedDate", EmitDefaultValue=false)]
         public DateTime? SurveyCompletedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for the survey form, regardless of version
         /// </summary>
         /// <value>Unique identifier for the survey form, regardless of version</value>
         [DataMember(Name="surveyFormContextId", EmitDefaultValue=false)]
         public string SurveyFormContextId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ID of the survey form used
         /// </summary>
         /// <value>ID of the survey form used</value>
         [DataMember(Name="surveyFormId", EmitDefaultValue=false)]
         public string SurveyFormId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of the survey form used
         /// </summary>
         /// <value>Name of the survey form used</value>
         [DataMember(Name="surveyFormName", EmitDefaultValue=false)]
         public string SurveyFormName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ID of the survey
         /// </summary>
         /// <value>ID of the survey</value>
         [DataMember(Name="surveyId", EmitDefaultValue=false)]
         public string SurveyId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Score of the survey used with NPS
         /// </summary>
         /// <value>Score of the survey used with NPS</value>
         [DataMember(Name="surveyPromoterScore", EmitDefaultValue=false)]
         public int? SurveyPromoterScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The status of the survey
         /// </summary>
         /// <value>The status of the survey</value>
         [DataMember(Name="surveyStatus", EmitDefaultValue=false)]
         public string SurveyStatus { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ID of the agent the survey was performed against
         /// </summary>
         /// <value>ID of the agent the survey was performed against</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OSurveyTotalScore
         /// </summary>
         [DataMember(Name="oSurveyTotalScore", EmitDefaultValue=false)]
         public long? OSurveyTotalScore { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -213,7 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsSurvey {\n");
-            
+
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  SurveyCompletedDate: ").Append(SurveyCompletedDate).Append("\n");
@@ -333,40 +275,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EventTime != null)
                     hash = hash * 59 + this.EventTime.GetHashCode();
-                
+
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
+
                 if (this.SurveyCompletedDate != null)
                     hash = hash * 59 + this.SurveyCompletedDate.GetHashCode();
-                
+
                 if (this.SurveyFormContextId != null)
                     hash = hash * 59 + this.SurveyFormContextId.GetHashCode();
-                
+
                 if (this.SurveyFormId != null)
                     hash = hash * 59 + this.SurveyFormId.GetHashCode();
-                
+
                 if (this.SurveyFormName != null)
                     hash = hash * 59 + this.SurveyFormName.GetHashCode();
-                
+
                 if (this.SurveyId != null)
                     hash = hash * 59 + this.SurveyId.GetHashCode();
-                
+
                 if (this.SurveyPromoterScore != null)
                     hash = hash * 59 + this.SurveyPromoterScore.GetHashCode();
-                
+
                 if (this.SurveyStatus != null)
                     hash = hash * 59 + this.SurveyStatus.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.OSurveyTotalScore != null)
                     hash = hash * 59 + this.OSurveyTotalScore.GetHashCode();
-                
+
                 return hash;
             }
         }

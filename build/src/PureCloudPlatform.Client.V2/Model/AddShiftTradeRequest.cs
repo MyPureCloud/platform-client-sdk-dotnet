@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AddShiftTradeRequest :  IEquatable<AddShiftTradeRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AddShiftTradeRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AddShiftTradeRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AddShiftTradeRequest" /> class.
         /// </summary>
@@ -70,51 +42,51 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the schedule to which the initiating and receiving shifts belong
         /// </summary>
         /// <value>The ID of the schedule to which the initiating and receiving shifts belong</value>
         [DataMember(Name="scheduleId", EmitDefaultValue=false)]
         public string ScheduleId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the shift that the initiating user wants to give up
         /// </summary>
         /// <value>The ID of the shift that the initiating user wants to give up</value>
         [DataMember(Name="initiatingShiftId", EmitDefaultValue=false)]
         public string InitiatingShiftId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the user to whom to send the request (for use in direct trade requests)
         /// </summary>
         /// <value>The ID of the user to whom to send the request (for use in direct trade requests)</value>
         [DataMember(Name="receivingUserId", EmitDefaultValue=false)]
         public string ReceivingUserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// When this shift trade request should expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>When this shift trade request should expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="expiration", EmitDefaultValue=false)]
         public DateTime? Expiration { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AcceptableIntervals
         /// </summary>
         [DataMember(Name="acceptableIntervals", EmitDefaultValue=false)]
         public List<string> AcceptableIntervals { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -123,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AddShiftTradeRequest {\n");
-            
+
             sb.Append("  ScheduleId: ").Append(ScheduleId).Append("\n");
             sb.Append("  InitiatingShiftId: ").Append(InitiatingShiftId).Append("\n");
             sb.Append("  ReceivingUserId: ").Append(ReceivingUserId).Append("\n");
@@ -207,22 +179,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ScheduleId != null)
                     hash = hash * 59 + this.ScheduleId.GetHashCode();
-                
+
                 if (this.InitiatingShiftId != null)
                     hash = hash * 59 + this.InitiatingShiftId.GetHashCode();
-                
+
                 if (this.ReceivingUserId != null)
                     hash = hash * 59 + this.ReceivingUserId.GetHashCode();
-                
+
                 if (this.Expiration != null)
                     hash = hash * 59 + this.Expiration.GetHashCode();
-                
+
                 if (this.AcceptableIntervals != null)
                     hash = hash * 59 + this.AcceptableIntervals.GetHashCode();
-                
+
                 return hash;
             }
         }

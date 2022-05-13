@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuIntradayForecastData :  IEquatable<BuIntradayForecastData>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuIntradayForecastData" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The number of interactions routed into the queues in the selected planning groups for the given media type for an agent to answer
         /// </summary>
         /// <value>The number of interactions routed into the queues in the selected planning groups for the given media type for an agent to answer</value>
         [DataMember(Name="offered", EmitDefaultValue=false)]
         public double? Offered { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The average handle time in seconds an agent spent handling interactions
         /// </summary>
         /// <value>The average handle time in seconds an agent spent handling interactions</value>
         [DataMember(Name="averageHandleTimeSeconds", EmitDefaultValue=false)]
         public double? AverageHandleTimeSeconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuIntradayForecastData {\n");
-            
+
             sb.Append("  Offered: ").Append(Offered).Append("\n");
             sb.Append("  AverageHandleTimeSeconds: ").Append(AverageHandleTimeSeconds).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Offered != null)
                     hash = hash * 59 + this.Offered.GetHashCode();
-                
+
                 if (this.AverageHandleTimeSeconds != null)
                     hash = hash * 59 + this.AverageHandleTimeSeconds.GetHashCode();
-                
+
                 return hash;
             }
         }

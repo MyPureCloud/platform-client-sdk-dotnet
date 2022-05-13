@@ -18,59 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimServiceProviderConfig :  IEquatable<ScimServiceProviderConfig>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfig" /> class.
         /// </summary>
@@ -79,97 +26,97 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of supported schemas.
         /// </summary>
         /// <value>The list of supported schemas.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
         public List<string> Schemas { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The HTTP-addressable URL that points to the service provider&#39;s documentation.
+        /// The HTTP-addressable URL that points to the service provider's documentation.
         /// </summary>
-        /// <value>The HTTP-addressable URL that points to the service provider&#39;s documentation.</value>
+        /// <value>The HTTP-addressable URL that points to the service provider's documentation.</value>
         [DataMember(Name="documentationUri", EmitDefaultValue=false)]
         public string DocumentationUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The \&quot;patch\&quot; configuration options.
+        /// The \"patch\" configuration options.
         /// </summary>
-        /// <value>The \&quot;patch\&quot; configuration options.</value>
+        /// <value>The \"patch\" configuration options.</value>
         [DataMember(Name="patch", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature Patch { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The \&quot;filter\&quot; configuration options.
+        /// The \"filter\" configuration options.
         /// </summary>
-        /// <value>The \&quot;filter\&quot; configuration options.</value>
+        /// <value>The \"filter\" configuration options.</value>
         [DataMember(Name="filter", EmitDefaultValue=false)]
         public ScimServiceProviderConfigFilterFeature Filter { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The \&quot;etag\&quot; configuration options.
+        /// The \"etag\" configuration options.
         /// </summary>
-        /// <value>The \&quot;etag\&quot; configuration options.</value>
+        /// <value>The \"etag\" configuration options.</value>
         [DataMember(Name="etag", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature Etag { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The \&quot;sort\&quot; configuration options.
+        /// The \"sort\" configuration options.
         /// </summary>
-        /// <value>The \&quot;sort\&quot; configuration options.</value>
+        /// <value>The \"sort\" configuration options.</value>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature Sort { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The \&quot;bulk\&quot; configuration options.
+        /// The \"bulk\" configuration options.
         /// </summary>
-        /// <value>The \&quot;bulk\&quot; configuration options.</value>
+        /// <value>The \"bulk\" configuration options.</value>
         [DataMember(Name="bulk", EmitDefaultValue=false)]
         public ScimServiceProviderConfigBulkFeature Bulk { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The \&quot;changePassword\&quot; configuration options.
+        /// The \"changePassword\" configuration options.
         /// </summary>
-        /// <value>The \&quot;changePassword\&quot; configuration options.</value>
+        /// <value>The \"changePassword\" configuration options.</value>
         [DataMember(Name="changePassword", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature ChangePassword { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of supported authentication schemes.
         /// </summary>
         /// <value>The list of supported authentication schemes.</value>
         [DataMember(Name="authenticationSchemes", EmitDefaultValue=false)]
         public List<ScimServiceProviderConfigAuthenticationScheme> AuthenticationSchemes { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The metadata of the SCIM resource.
         /// </summary>
         /// <value>The metadata of the SCIM resource.</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
         public ScimMetadata Meta { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -178,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimServiceProviderConfig {\n");
-            
+
             sb.Append("  Schemas: ").Append(Schemas).Append("\n");
             sb.Append("  DocumentationUri: ").Append(DocumentationUri).Append("\n");
             sb.Append("  Patch: ").Append(Patch).Append("\n");
@@ -292,37 +239,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Schemas != null)
                     hash = hash * 59 + this.Schemas.GetHashCode();
-                
+
                 if (this.DocumentationUri != null)
                     hash = hash * 59 + this.DocumentationUri.GetHashCode();
-                
+
                 if (this.Patch != null)
                     hash = hash * 59 + this.Patch.GetHashCode();
-                
+
                 if (this.Filter != null)
                     hash = hash * 59 + this.Filter.GetHashCode();
-                
+
                 if (this.Etag != null)
                     hash = hash * 59 + this.Etag.GetHashCode();
-                
+
                 if (this.Sort != null)
                     hash = hash * 59 + this.Sort.GetHashCode();
-                
+
                 if (this.Bulk != null)
                     hash = hash * 59 + this.Bulk.GetHashCode();
-                
+
                 if (this.ChangePassword != null)
                     hash = hash * 59 + this.ChangePassword.GetHashCode();
-                
+
                 if (this.AuthenticationSchemes != null)
                     hash = hash * 59 + this.AuthenticationSchemes.GetHashCode();
-                
+
                 if (this.Meta != null)
                     hash = hash * 59 + this.Meta.GetHashCode();
-                
+
                 return hash;
             }
         }

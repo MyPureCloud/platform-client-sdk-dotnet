@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RecordingTranscodeCompleteTopicRecording :  IEquatable<RecordingTranscodeCompleteTopicRecording>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingTranscodeCompleteTopicRecording" /> class.
         /// </summary>
@@ -71,55 +38,55 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FileState
         /// </summary>
         [DataMember(Name="fileState", EmitDefaultValue=false)]
         public string FileState { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MediaUris
         /// </summary>
         [DataMember(Name="mediaUris", EmitDefaultValue=false)]
         public List<RecordingTranscodeCompleteTopicMediaResult> MediaUris { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EstimatedTranscodeTimeMs
         /// </summary>
         [DataMember(Name="estimatedTranscodeTimeMs", EmitDefaultValue=false)]
         public int? EstimatedTranscodeTimeMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActualTranscodeTimeMs
         /// </summary>
         [DataMember(Name="actualTranscodeTimeMs", EmitDefaultValue=false)]
         public int? ActualTranscodeTimeMs { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RecordingTranscodeCompleteTopicRecording {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  FileState: ").Append(FileState).Append("\n");
@@ -218,25 +185,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.FileState != null)
                     hash = hash * 59 + this.FileState.GetHashCode();
-                
+
                 if (this.MediaUris != null)
                     hash = hash * 59 + this.MediaUris.GetHashCode();
-                
+
                 if (this.EstimatedTranscodeTimeMs != null)
                     hash = hash * 59 + this.EstimatedTranscodeTimeMs.GetHashCode();
-                
+
                 if (this.ActualTranscodeTimeMs != null)
                     hash = hash * 59 + this.ActualTranscodeTimeMs.GetHashCode();
-                
+
                 return hash;
             }
         }

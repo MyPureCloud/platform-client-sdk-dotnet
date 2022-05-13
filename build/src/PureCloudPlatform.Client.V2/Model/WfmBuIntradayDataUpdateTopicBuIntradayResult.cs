@@ -18,22 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuIntradayDataUpdateTopicBuIntradayResult :  IEquatable<WfmBuIntradayDataUpdateTopicBuIntradayResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Categories
         /// </summary>
@@ -66,36 +50,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PerformancePredictionData")]
             Performancepredictiondata
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuIntradayDataUpdateTopicBuIntradayResult" /> class.
         /// </summary>
@@ -120,71 +74,71 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EndDate
         /// </summary>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IntervalLengthMinutes
         /// </summary>
         [DataMember(Name="intervalLengthMinutes", EmitDefaultValue=false)]
         public int? IntervalLengthMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IntradayDataGroupings
         /// </summary>
         [DataMember(Name="intradayDataGroupings", EmitDefaultValue=false)]
         public List<WfmBuIntradayDataUpdateTopicBuIntradayDataGroup> IntradayDataGroupings { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Categories
         /// </summary>
         [DataMember(Name="categories", EmitDefaultValue=false)]
         public List<CategoriesEnum> Categories { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NoDataReason
         /// </summary>
         [DataMember(Name="noDataReason", EmitDefaultValue=false)]
         public string NoDataReason { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Schedule
         /// </summary>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public WfmBuIntradayDataUpdateTopicBuScheduleReference Schedule { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ShortTermForecast
         /// </summary>
         [DataMember(Name="shortTermForecast", EmitDefaultValue=false)]
         public WfmBuIntradayDataUpdateTopicBuShortTermForecastReference ShortTermForecast { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -193,7 +147,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuIntradayDataUpdateTopicBuIntradayResult {\n");
-            
+
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  IntervalLengthMinutes: ").Append(IntervalLengthMinutes).Append("\n");
@@ -295,31 +249,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 if (this.IntervalLengthMinutes != null)
                     hash = hash * 59 + this.IntervalLengthMinutes.GetHashCode();
-                
+
                 if (this.IntradayDataGroupings != null)
                     hash = hash * 59 + this.IntradayDataGroupings.GetHashCode();
-                
+
                 if (this.Categories != null)
                     hash = hash * 59 + this.Categories.GetHashCode();
-                
+
                 if (this.NoDataReason != null)
                     hash = hash * 59 + this.NoDataReason.GetHashCode();
-                
+
                 if (this.Schedule != null)
                     hash = hash * 59 + this.Schedule.GetHashCode();
-                
+
                 if (this.ShortTermForecast != null)
                     hash = hash * 59 + this.ShortTermForecast.GetHashCode();
-                
+
                 return hash;
             }
         }

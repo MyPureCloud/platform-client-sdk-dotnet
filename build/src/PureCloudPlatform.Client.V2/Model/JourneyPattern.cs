@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyPattern :  IEquatable<JourneyPattern>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The stream type for which this pattern can be matched on.
         /// </summary>
@@ -59,40 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Conversation")]
             Conversation
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The stream type for which this pattern can be matched on.
         /// </summary>
         /// <value>The stream type for which this pattern can be matched on.</value>
         [DataMember(Name="streamType", EmitDefaultValue=false)]
         public StreamTypeEnum? StreamType { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyPattern" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected JourneyPattern() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyPattern" /> class.
         /// </summary>
@@ -111,45 +81,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A list of one or more criteria to satisfy.
         /// </summary>
         /// <value>A list of one or more criteria to satisfy.</value>
         [DataMember(Name="criteria", EmitDefaultValue=false)]
         public List<Criteria> Criteria { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of times the pattern must match.
         /// </summary>
         /// <value>The number of times the pattern must match.</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The session type for which this pattern can be matched on.
         /// </summary>
         /// <value>The session type for which this pattern can be matched on.</value>
         [DataMember(Name="sessionType", EmitDefaultValue=false)]
         public string SessionType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the event for which this pattern can be matched on.
         /// </summary>
         /// <value>The name of the event for which this pattern can be matched on.</value>
         [DataMember(Name="eventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -158,7 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyPattern {\n");
-            
+
             sb.Append("  Criteria: ").Append(Criteria).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("  StreamType: ").Append(StreamType).Append("\n");
@@ -242,22 +212,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Criteria != null)
                     hash = hash * 59 + this.Criteria.GetHashCode();
-                
+
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-                
+
                 if (this.StreamType != null)
                     hash = hash * 59 + this.StreamType.GetHashCode();
-                
+
                 if (this.SessionType != null)
                     hash = hash * 59 + this.SessionType.GetHashCode();
-                
+
                 if (this.EventName != null)
                     hash = hash * 59 + this.EventName.GetHashCode();
-                
+
                 return hash;
             }
         }

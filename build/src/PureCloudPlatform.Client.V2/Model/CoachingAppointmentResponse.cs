@@ -18,23 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CoachingAppointmentResponse :  IEquatable<CoachingAppointmentResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of coaching appointment
         /// </summary>
@@ -74,95 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "InvalidSchedule")]
             Invalidschedule
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of coaching appointment
         /// </summary>
         /// <value>The status of coaching appointment</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public StatusEnum? Status { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingAppointmentResponse" /> class.
         /// </summary>
@@ -171,171 +71,171 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of coaching appointment
         /// </summary>
         /// <value>The name of coaching appointment</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of coaching appointment
         /// </summary>
         /// <value>The description of coaching appointment</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date/time the coaching appointment starts. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date/time the coaching appointment starts. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateStart", EmitDefaultValue=false)]
         public DateTime? DateStart { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The duration of coaching appointment in minutes
         /// </summary>
         /// <value>The duration of coaching appointment in minutes</value>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The facilitator of coaching appointment
         /// </summary>
         /// <value>The facilitator of coaching appointment</value>
         [DataMember(Name="facilitator", EmitDefaultValue=false)]
         public UserReference Facilitator { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of attendees attending the coaching
         /// </summary>
         /// <value>The list of attendees attending the coaching</value>
         [DataMember(Name="attendees", EmitDefaultValue=false)]
         public List<UserReference> Attendees { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user who created the coaching appointment
         /// </summary>
         /// <value>The user who created the coaching appointment</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public UserReference CreatedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date/time the coaching appointment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date/time the coaching appointment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The last user to modify the coaching appointment
         /// </summary>
         /// <value>The last user to modify the coaching appointment</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public UserReference ModifiedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date/time the coaching appointment was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date/time the coaching appointment was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of conversations associated with coaching appointment.
         /// </summary>
         /// <value>The list of conversations associated with coaching appointment.</value>
         [DataMember(Name="conversations", EmitDefaultValue=false)]
         public List<ConversationReference> Conversations { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of documents associated with coaching appointment.
         /// </summary>
         /// <value>The list of documents associated with coaching appointment.</value>
         [DataMember(Name="documents", EmitDefaultValue=false)]
         public List<DocumentReference> Documents { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the appointment is overdue.
         /// </summary>
         /// <value>Whether the appointment is overdue.</value>
         [DataMember(Name="isOverdue", EmitDefaultValue=false)]
         public bool? IsOverdue { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Workforce Management schedule the appointment is associated with.
         /// </summary>
         /// <value>The Workforce Management schedule the appointment is associated with.</value>
         [DataMember(Name="wfmSchedule", EmitDefaultValue=false)]
         public WfmScheduleReference WfmSchedule { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date/time the coaching appointment was set to completed status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date/time the coaching appointment was set to completed status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
         public DateTime? DateCompleted { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of external links related to the appointment
         /// </summary>
         /// <value>The list of external links related to the appointment</value>
         [DataMember(Name="externalLinks", EmitDefaultValue=false)]
         public List<string> ExternalLinks { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -344,7 +244,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CoachingAppointmentResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -512,64 +412,63 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();
-                
+
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Facilitator != null)
                     hash = hash * 59 + this.Facilitator.GetHashCode();
-                
+
                 if (this.Attendees != null)
                     hash = hash * 59 + this.Attendees.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Conversations != null)
                     hash = hash * 59 + this.Conversations.GetHashCode();
-                
+
                 if (this.Documents != null)
                     hash = hash * 59 + this.Documents.GetHashCode();
-                
+
                 if (this.IsOverdue != null)
                     hash = hash * 59 + this.IsOverdue.GetHashCode();
-                
+
                 if (this.WfmSchedule != null)
                     hash = hash * 59 + this.WfmSchedule.GetHashCode();
-                
+
                 if (this.DateCompleted != null)
                     hash = hash * 59 + this.DateCompleted.GetHashCode();
-                
+
                 if (this.ExternalLinks != null)
                     hash = hash * 59 + this.ExternalLinks.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

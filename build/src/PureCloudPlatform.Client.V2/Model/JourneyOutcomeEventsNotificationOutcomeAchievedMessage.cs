@@ -18,59 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyOutcomeEventsNotificationOutcomeAchievedMessage :  IEquatable<JourneyOutcomeEventsNotificationOutcomeAchievedMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyOutcomeEventsNotificationOutcomeAchievedMessage" /> class.
         /// </summary>
@@ -99,87 +46,87 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Outcome
         /// </summary>
         [DataMember(Name="outcome", EmitDefaultValue=false)]
         public JourneyOutcomeEventsNotificationOutcome Outcome { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Browser
         /// </summary>
         [DataMember(Name="browser", EmitDefaultValue=false)]
         public JourneyOutcomeEventsNotificationBrowser Browser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets VisitCreatedDate
         /// </summary>
         [DataMember(Name="visitCreatedDate", EmitDefaultValue=false)]
         public DateTime? VisitCreatedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IpAddress
         /// </summary>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IpOrganization
         /// </summary>
         [DataMember(Name="ipOrganization", EmitDefaultValue=false)]
         public string IpOrganization { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserAgentString
         /// </summary>
         [DataMember(Name="userAgentString", EmitDefaultValue=false)]
         public string UserAgentString { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Device
         /// </summary>
         [DataMember(Name="device", EmitDefaultValue=false)]
         public JourneyOutcomeEventsNotificationDevice Device { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Geolocation
         /// </summary>
         [DataMember(Name="geolocation", EmitDefaultValue=false)]
         public JourneyOutcomeEventsNotificationGeoLocation Geolocation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MktCampaign
         /// </summary>
         [DataMember(Name="mktCampaign", EmitDefaultValue=false)]
         public JourneyOutcomeEventsNotificationMktCampaign MktCampaign { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets VisitReferrer
         /// </summary>
         [DataMember(Name="visitReferrer", EmitDefaultValue=false)]
         public JourneyOutcomeEventsNotificationReferrer VisitReferrer { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,7 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyOutcomeEventsNotificationOutcomeAchievedMessage {\n");
-            
+
             sb.Append("  Outcome: ").Append(Outcome).Append("\n");
             sb.Append("  Browser: ").Append(Browser).Append("\n");
             sb.Append("  VisitCreatedDate: ").Append(VisitCreatedDate).Append("\n");
@@ -302,37 +249,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Outcome != null)
                     hash = hash * 59 + this.Outcome.GetHashCode();
-                
+
                 if (this.Browser != null)
                     hash = hash * 59 + this.Browser.GetHashCode();
-                
+
                 if (this.VisitCreatedDate != null)
                     hash = hash * 59 + this.VisitCreatedDate.GetHashCode();
-                
+
                 if (this.IpAddress != null)
                     hash = hash * 59 + this.IpAddress.GetHashCode();
-                
+
                 if (this.IpOrganization != null)
                     hash = hash * 59 + this.IpOrganization.GetHashCode();
-                
+
                 if (this.UserAgentString != null)
                     hash = hash * 59 + this.UserAgentString.GetHashCode();
-                
+
                 if (this.Device != null)
                     hash = hash * 59 + this.Device.GetHashCode();
-                
+
                 if (this.Geolocation != null)
                     hash = hash * 59 + this.Geolocation.GetHashCode();
-                
+
                 if (this.MktCampaign != null)
                     hash = hash * 59 + this.MktCampaign.GetHashCode();
-                
+
                 if (this.VisitReferrer != null)
                     hash = hash * 59 + this.VisitReferrer.GetHashCode();
-                
+
                 return hash;
             }
         }

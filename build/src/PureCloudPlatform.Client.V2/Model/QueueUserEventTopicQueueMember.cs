@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueueUserEventTopicQueueMember :  IEquatable<QueueUserEventTopicQueueMember>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueUserEventTopicQueueMember" /> class.
         /// </summary>
@@ -54,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">QueueId.</param>
         /// <param name="Joined">Joined.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueUserEventTopicQueueMember(string Id = null, QueueUserEventTopicUserReference User = null, string QueueId = null, bool? Joined = null, Dictionary<string, QueueUserEventTopicObject> AdditionalProperties = null)
+        public QueueUserEventTopicQueueMember(string Id = null, QueueUserEventTopicUserReference User = null, string QueueId = null, bool? Joined = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Id = Id;
             this.User = User;
@@ -64,47 +36,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public QueueUserEventTopicUserReference User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets QueueId
         /// </summary>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Joined
         /// </summary>
         [DataMember(Name="joined", EmitDefaultValue=false)]
         public bool? Joined { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, QueueUserEventTopicObject> AdditionalProperties { get; set; }
-        
-        
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueueUserEventTopicQueueMember {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
@@ -197,22 +169,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
+
                 if (this.Joined != null)
                     hash = hash * 59 + this.Joined.GetHashCode();
-                
+
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
-                
+
                 return hash;
             }
         }

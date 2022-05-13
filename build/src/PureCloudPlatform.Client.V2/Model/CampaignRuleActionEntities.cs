@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignRuleActionEntities :  IEquatable<CampaignRuleActionEntities>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleActionEntities" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a campaign.
         /// </summary>
         /// <value>The list of campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a campaign.</value>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
         public List<DomainEntityRef> Campaigns { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of sequences for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a sequence.
         /// </summary>
         /// <value>The list of sequences for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a sequence.</value>
         [DataMember(Name="sequences", EmitDefaultValue=false)]
         public List<DomainEntityRef> Sequences { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If true, the CampaignRuleAction will apply to the same entity that triggered the CampaignRuleCondition.
         /// </summary>
         /// <value>If true, the CampaignRuleAction will apply to the same entity that triggered the CampaignRuleCondition.</value>
         [DataMember(Name="useTriggeringEntity", EmitDefaultValue=false)]
         public bool? UseTriggeringEntity { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleActionEntities {\n");
-            
+
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
             sb.Append("  Sequences: ").Append(Sequences).Append("\n");
             sb.Append("  UseTriggeringEntity: ").Append(UseTriggeringEntity).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Campaigns != null)
                     hash = hash * 59 + this.Campaigns.GetHashCode();
-                
+
                 if (this.Sequences != null)
                     hash = hash * 59 + this.Sequences.GetHashCode();
-                
+
                 if (this.UseTriggeringEntity != null)
                     hash = hash * 59 + this.UseTriggeringEntity.GetHashCode();
-                
+
                 return hash;
             }
         }

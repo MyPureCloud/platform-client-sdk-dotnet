@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification :  IEquatable<WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification" /> class.
         /// </summary>
@@ -71,55 +38,55 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public WfmAgentScheduleUpdateTopicUserReference User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EndDate
         /// </summary>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Shifts
         /// </summary>
         [DataMember(Name="shifts", EmitDefaultValue=false)]
         public List<WfmAgentScheduleUpdateTopicWfmScheduleShift> Shifts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FullDayTimeOffMarkers
         /// </summary>
         [DataMember(Name="fullDayTimeOffMarkers", EmitDefaultValue=false)]
         public List<WfmAgentScheduleUpdateTopicWfmFullDayTimeOffMarker> FullDayTimeOffMarkers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Updates
         /// </summary>
         [DataMember(Name="updates", EmitDefaultValue=false)]
         public List<WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate> Updates { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification {\n");
-            
+
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
@@ -218,25 +185,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 if (this.Shifts != null)
                     hash = hash * 59 + this.Shifts.GetHashCode();
-                
+
                 if (this.FullDayTimeOffMarkers != null)
                     hash = hash * 59 + this.FullDayTimeOffMarkers.GetHashCode();
-                
+
                 if (this.Updates != null)
                     hash = hash * 59 + this.Updates.GetHashCode();
-                
+
                 return hash;
             }
         }

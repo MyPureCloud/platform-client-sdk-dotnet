@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateWebChatMessageRequest :  IEquatable<CreateWebChatMessageRequest>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The purpose of the message within the conversation, such as a standard text entry versus a greeting.
         /// </summary>
@@ -68,28 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "media-request")]
             Mediarequest
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The purpose of the message within the conversation, such as a standard text entry versus a greeting.
         /// </summary>
         /// <value>The purpose of the message within the conversation, such as a standard text entry versus a greeting.</value>
         [DataMember(Name="bodyType", EmitDefaultValue=false)]
         public BodyTypeEnum? BodyType { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWebChatMessageRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateWebChatMessageRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWebChatMessageRequest" /> class.
         /// </summary>
@@ -102,18 +87,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The message body. Note that message bodies are limited to 4,000 characters.
         /// </summary>
         /// <value>The message body. Note that message bodies are limited to 4,000 characters.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public string Body { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateWebChatMessageRequest {\n");
-            
+
             sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  BodyType: ").Append(BodyType).Append("\n");
             sb.Append("}\n");
@@ -188,13 +173,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
-                
+
                 if (this.BodyType != null)
                     hash = hash * 59 + this.BodyType.GetHashCode();
-                
+
                 return hash;
             }
         }

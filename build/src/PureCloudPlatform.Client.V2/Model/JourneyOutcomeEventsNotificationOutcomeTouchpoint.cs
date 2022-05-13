@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyOutcomeEventsNotificationOutcomeTouchpoint :  IEquatable<JourneyOutcomeEventsNotificationOutcomeTouchpoint>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyOutcomeEventsNotificationOutcomeTouchpoint" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Channels
         /// </summary>
         [DataMember(Name="channels", EmitDefaultValue=false)]
         public List<JourneyOutcomeEventsNotificationOutcomeTouchpointChannel> Channels { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CreatedDate
         /// </summary>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActionMap
         /// </summary>
         [DataMember(Name="actionMap", EmitDefaultValue=false)]
         public JourneyOutcomeEventsNotificationActionMap ActionMap { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyOutcomeEventsNotificationOutcomeTouchpoint {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Channels: ").Append(Channels).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Channels != null)
                     hash = hash * 59 + this.Channels.GetHashCode();
-                
+
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
+
                 if (this.ActionMap != null)
                     hash = hash * 59 + this.ActionMap.GetHashCode();
-                
+
                 return hash;
             }
         }

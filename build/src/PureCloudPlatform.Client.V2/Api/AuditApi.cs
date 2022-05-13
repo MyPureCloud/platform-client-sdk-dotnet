@@ -8,14 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
-    
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IAuditApi : IApiAccessor
     {
         #region Synchronous Operations
-        
+
         /// <summary>
         /// Get service mapping information used in realtime audits.
         /// </summary>
@@ -35,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuditQueryServiceMapping</returns>
         ApiResponse<AuditQueryServiceMapping> GetAuditsQueryRealtimeServicemappingWithHttpInfo ();
-        
+
         /// <summary>
         /// Get service mapping information used in audits.
         /// </summary>
@@ -55,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuditQueryServiceMapping</returns>
         ApiResponse<AuditQueryServiceMapping> GetAuditsQueryServicemappingWithHttpInfo ();
-        
+
         /// <summary>
         /// Get status of audit query execution
         /// </summary>
@@ -77,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="transactionId">Transaction ID</param>
         /// <returns>ApiResponse of AuditQueryExecutionStatusResponse</returns>
         ApiResponse<AuditQueryExecutionStatusResponse> GetAuditsQueryTransactionIdWithHttpInfo (string transactionId);
-        
+
         /// <summary>
         /// Get results of audit query
         /// </summary>
@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AuditQueryExecutionResultsResponse</returns>
         ApiResponse<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
-        
+
         /// <summary>
         /// Create audit query execution
         /// </summary>
@@ -127,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AuditQueryExecutionStatusResponse</returns>
         ApiResponse<AuditQueryExecutionStatusResponse> PostAuditsQueryWithHttpInfo (AuditQueryRequest body);
-        
+
         /// <summary>
         /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
         /// </summary>
@@ -151,11 +151,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AuditRealtimeQueryResultsResponse</returns>
         ApiResponse<AuditRealtimeQueryResultsResponse> PostAuditsQueryRealtimeWithHttpInfo (AuditRealtimeQueryRequest body, List<string> expand = null);
-        
+
         #endregion Synchronous Operations
-        
+
         #region Asynchronous Operations
-        
+
         /// <summary>
         /// Get service mapping information used in realtime audits.
         /// </summary>
@@ -175,7 +175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuditQueryServiceMapping)</returns>
         System.Threading.Tasks.Task<ApiResponse<AuditQueryServiceMapping>> GetAuditsQueryRealtimeServicemappingAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Get service mapping information used in audits.
         /// </summary>
@@ -195,7 +195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuditQueryServiceMapping)</returns>
         System.Threading.Tasks.Task<ApiResponse<AuditQueryServiceMapping>> GetAuditsQueryServicemappingAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Get status of audit query execution
         /// </summary>
@@ -217,7 +217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="transactionId">Transaction ID</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionStatusResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionStatusResponse>> GetAuditsQueryTransactionIdAsyncWithHttpInfo (string transactionId);
-        
+
         /// <summary>
         /// Get results of audit query
         /// </summary>
@@ -245,7 +245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionResultsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionResultsResponse>> GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
-        
+
         /// <summary>
         /// Create audit query execution
         /// </summary>
@@ -267,7 +267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionStatusResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionStatusResponse>> PostAuditsQueryAsyncWithHttpInfo (AuditQueryRequest body);
-        
+
         /// <summary>
         /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
         /// </summary>
@@ -291,9 +291,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AuditRealtimeQueryResultsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AuditRealtimeQueryResultsResponse>> PostAuditsQueryRealtimeAsyncWithHttpInfo (AuditRealtimeQueryRequest body, List<string> expand = null);
-        
+
         #endregion Asynchronous Operations
-        
+
     }
 
     /// <summary>
@@ -383,7 +383,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
-        
+
         /// <summary>
         /// Get service mapping information used in realtime audits. 
         /// </summary>
@@ -413,17 +413,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -443,7 +442,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -472,7 +471,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get service mapping information used in realtime audits. 
         /// </summary>
@@ -503,16 +502,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -533,7 +531,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -562,8 +560,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get service mapping information used in audits. 
         /// </summary>
@@ -593,17 +591,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -623,7 +620,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -652,7 +649,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get service mapping information used in audits. 
         /// </summary>
@@ -683,16 +680,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -713,7 +709,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -742,8 +738,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get status of audit query execution 
         /// </summary>
@@ -778,17 +774,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -809,7 +804,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -838,7 +833,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get status of audit query execution 
         /// </summary>
@@ -875,16 +870,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -906,7 +900,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -935,8 +929,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get results of audit query 
         /// </summary>
@@ -977,17 +971,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1011,7 +1004,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1040,7 +1033,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get results of audit query 
         /// </summary>
@@ -1083,16 +1076,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1117,7 +1109,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1146,8 +1138,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create audit query execution 
         /// </summary>
@@ -1182,7 +1174,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -1190,9 +1181,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1215,9 +1207,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1246,7 +1238,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create audit query execution 
         /// </summary>
@@ -1283,7 +1275,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -1291,8 +1282,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1316,9 +1308,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1347,8 +1339,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
         /// </summary>
@@ -1385,7 +1377,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -1393,9 +1384,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1419,9 +1411,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1450,7 +1442,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
         /// </summary>
@@ -1489,7 +1481,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -1497,8 +1488,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1523,9 +1515,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1554,8 +1546,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
     }
-    
+
 }

@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NamedEntityTypeBinding :  IEquatable<NamedEntityTypeBinding>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NamedEntityTypeBinding" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected NamedEntityTypeBinding() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NamedEntityTypeBinding" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The named entity type of the binding. It can be a built-in one such as builtin:number or a custom entity type such as BeverageType.
         /// </summary>
         /// <value>The named entity type of the binding. It can be a built-in one such as builtin:number or a custom entity type such as BeverageType.</value>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public string EntityType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name that this named entity type is bound to.
         /// </summary>
         /// <value>The name that this named entity type is bound to.</value>
         [DataMember(Name="entityName", EmitDefaultValue=false)]
         public string EntityName { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NamedEntityTypeBinding {\n");
-            
+
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();
-                
+
                 if (this.EntityName != null)
                     hash = hash * 59 + this.EntityName.GetHashCode();
-                
+
                 return hash;
             }
         }

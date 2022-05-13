@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TranscriptionTopicTranscriptAlternative :  IEquatable<TranscriptionTopicTranscriptAlternative>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TranscriptionTopicTranscriptAlternative" /> class.
         /// </summary>
@@ -64,47 +36,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Confidence
         /// </summary>
         [DataMember(Name="confidence", EmitDefaultValue=false)]
         public double? Confidence { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OffsetMs
         /// </summary>
         [DataMember(Name="offsetMs", EmitDefaultValue=false)]
         public int? OffsetMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DurationMs
         /// </summary>
         [DataMember(Name="durationMs", EmitDefaultValue=false)]
         public int? DurationMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Transcript
         /// </summary>
         [DataMember(Name="transcript", EmitDefaultValue=false)]
         public string Transcript { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Words
         /// </summary>
         [DataMember(Name="words", EmitDefaultValue=false)]
         public List<TranscriptionTopicTranscriptWord> Words { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TranscriptionTopicTranscriptAlternative {\n");
-            
+
             sb.Append("  Confidence: ").Append(Confidence).Append("\n");
             sb.Append("  OffsetMs: ").Append(OffsetMs).Append("\n");
             sb.Append("  DurationMs: ").Append(DurationMs).Append("\n");
@@ -197,22 +169,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Confidence != null)
                     hash = hash * 59 + this.Confidence.GetHashCode();
-                
+
                 if (this.OffsetMs != null)
                     hash = hash * 59 + this.OffsetMs.GetHashCode();
-                
+
                 if (this.DurationMs != null)
                     hash = hash * 59 + this.DurationMs.GetHashCode();
-                
+
                 if (this.Transcript != null)
                     hash = hash * 59 + this.Transcript.GetHashCode();
-                
+
                 if (this.Words != null)
                     hash = hash * 59 + this.Words.GetHashCode();
-                
+
                 return hash;
             }
         }

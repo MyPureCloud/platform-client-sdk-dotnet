@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LicenseUpdateStatus :  IEquatable<LicenseUpdateStatus>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LicenseUpdateStatus" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LicenseId
         /// </summary>
         [DataMember(Name="licenseId", EmitDefaultValue=false)]
         public string LicenseId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Result
         /// </summary>
         [DataMember(Name="result", EmitDefaultValue=false)]
         public string Result { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LicenseUpdateStatus {\n");
-            
+
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
             sb.Append("  Result: ").Append(Result).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.LicenseId != null)
                     hash = hash * 59 + this.LicenseId.GetHashCode();
-                
+
                 if (this.Result != null)
                     hash = hash * 59 + this.Result.GetHashCode();
-                
+
                 return hash;
             }
         }

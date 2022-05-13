@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DraftRequest :  IEquatable<DraftRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DraftRequest" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Draft intent object.
         /// </summary>
         /// <value>Draft intent object.</value>
         [DataMember(Name="intents", EmitDefaultValue=false)]
         public List<DraftIntents> Intents { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DraftRequest {\n");
-            
+
             sb.Append("  Intents: ").Append(Intents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Intents != null)
                     hash = hash * 59 + this.Intents.GetHashCode();
-                
+
                 return hash;
             }
         }

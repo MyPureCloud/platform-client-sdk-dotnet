@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WemCoachingAppointmentTopicCoachingAppointmentNotification :  IEquatable<WemCoachingAppointmentTopicCoachingAppointmentNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -70,34 +56,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "InvalidSchedule")]
             Invalidschedule
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ChangeType
         /// </summary>
@@ -136,61 +94,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Invalidate")]
             Invalidate
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ChangeType
         /// </summary>
         [DataMember(Name="changeType", EmitDefaultValue=false)]
         public ChangeTypeEnum? ChangeType { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WemCoachingAppointmentTopicCoachingAppointmentNotification" /> class.
         /// </summary>
@@ -231,123 +144,123 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DateStart
         /// </summary>
         [DataMember(Name="dateStart", EmitDefaultValue=false)]
         public DateTime? DateStart { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LengthInMinutes
         /// </summary>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Facilitator
         /// </summary>
         [DataMember(Name="facilitator", EmitDefaultValue=false)]
         public WemCoachingAppointmentTopicUserReference Facilitator { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Attendees
         /// </summary>
         [DataMember(Name="attendees", EmitDefaultValue=false)]
         public List<WemCoachingAppointmentTopicUserReference> Attendees { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public WemCoachingAppointmentTopicUserReference CreatedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DateCreated
         /// </summary>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public WemCoachingAppointmentTopicUserReference ModifiedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DateModified
         /// </summary>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Conversations
         /// </summary>
         [DataMember(Name="conversations", EmitDefaultValue=false)]
         public List<WemCoachingAppointmentTopicCoachingAppointmentConversation> Conversations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Documents
         /// </summary>
         [DataMember(Name="documents", EmitDefaultValue=false)]
         public List<WemCoachingAppointmentTopicCoachingAppointmentDocument> Documents { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets DateCompleted
         /// </summary>
         [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
         public DateTime? DateCompleted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ExternalLinks
         /// </summary>
         [DataMember(Name="externalLinks", EmitDefaultValue=false)]
         public List<WemCoachingAppointmentTopicCoachingAppointmentExternalLink> ExternalLinks { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -356,7 +269,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WemCoachingAppointmentTopicCoachingAppointmentNotification {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
@@ -506,55 +419,54 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();
-                
+
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Facilitator != null)
                     hash = hash * 59 + this.Facilitator.GetHashCode();
-                
+
                 if (this.Attendees != null)
                     hash = hash * 59 + this.Attendees.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Conversations != null)
                     hash = hash * 59 + this.Conversations.GetHashCode();
-                
+
                 if (this.Documents != null)
                     hash = hash * 59 + this.Documents.GetHashCode();
-                
+
                 if (this.ChangeType != null)
                     hash = hash * 59 + this.ChangeType.GetHashCode();
-                
+
                 if (this.DateCompleted != null)
                     hash = hash * 59 + this.DateCompleted.GetHashCode();
-                
+
                 if (this.ExternalLinks != null)
                     hash = hash * 59 + this.ExternalLinks.GetHashCode();
-                
+
                 return hash;
             }
         }

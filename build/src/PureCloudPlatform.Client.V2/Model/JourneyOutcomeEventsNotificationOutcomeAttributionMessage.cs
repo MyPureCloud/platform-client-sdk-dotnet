@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyOutcomeEventsNotificationOutcomeAttributionMessage :  IEquatable<JourneyOutcomeEventsNotificationOutcomeAttributionMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyOutcomeEventsNotificationOutcomeAttributionMessage" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Outcome
         /// </summary>
         [DataMember(Name="outcome", EmitDefaultValue=false)]
         public JourneyOutcomeEventsNotificationOutcome Outcome { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OutcomeTouchpoints
         /// </summary>
         [DataMember(Name="outcomeTouchpoints", EmitDefaultValue=false)]
         public List<JourneyOutcomeEventsNotificationOutcomeTouchpoint> OutcomeTouchpoints { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SegmentAssignments
         /// </summary>
         [DataMember(Name="segmentAssignments", EmitDefaultValue=false)]
         public List<JourneyOutcomeEventsNotificationSegment> SegmentAssignments { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyOutcomeEventsNotificationOutcomeAttributionMessage {\n");
-            
+
             sb.Append("  Outcome: ").Append(Outcome).Append("\n");
             sb.Append("  OutcomeTouchpoints: ").Append(OutcomeTouchpoints).Append("\n");
             sb.Append("  SegmentAssignments: ").Append(SegmentAssignments).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Outcome != null)
                     hash = hash * 59 + this.Outcome.GetHashCode();
-                
+
                 if (this.OutcomeTouchpoints != null)
                     hash = hash * 59 + this.OutcomeTouchpoints.GetHashCode();
-                
+
                 if (this.SegmentAssignments != null)
                     hash = hash * 59 + this.SegmentAssignments.GetHashCode();
-                
+
                 return hash;
             }
         }

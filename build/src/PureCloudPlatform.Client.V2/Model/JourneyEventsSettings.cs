@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyEventsSettings :  IEquatable<JourneyEventsSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Controls how the pageview events are tracked.
         /// </summary>
@@ -65,60 +51,19 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Off")]
             Off
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Controls how the pageview events are tracked.
         /// </summary>
         /// <value>Controls how the pageview events are tracked.</value>
         [DataMember(Name="pageviewConfig", EmitDefaultValue=false)]
         public PageviewConfigEnum? PageviewConfig { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyEventsSettings" /> class.
         /// </summary>
         /// <param name="Enabled">Whether or not journey event collection is enabled..</param>
         /// <param name="ExcludedQueryParameters">List of parameters to be excluded from the query string..</param>
         /// <param name="ShouldKeepUrlFragment">Whether or not to keep the URL fragment..</param>
-        /// <param name="SearchQueryParameters">List of query parameters used for search (e.g. &#39;q&#39;)..</param>
+        /// <param name="SearchQueryParameters">List of query parameters used for search (e.g. 'q')..</param>
         /// <param name="PageviewConfig">Controls how the pageview events are tracked..</param>
         /// <param name="ClickEvents">Tracks when and where a visitor clicks on a webpage..</param>
         /// <param name="FormsTrackEvents">Controls how the form submitted and form abandoned events are tracked after a visitor interacts with a form element..</param>
@@ -140,90 +85,90 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether or not journey event collection is enabled.
         /// </summary>
         /// <value>Whether or not journey event collection is enabled.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of parameters to be excluded from the query string.
         /// </summary>
         /// <value>List of parameters to be excluded from the query string.</value>
         [DataMember(Name="excludedQueryParameters", EmitDefaultValue=false)]
         public List<string> ExcludedQueryParameters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not to keep the URL fragment.
         /// </summary>
         /// <value>Whether or not to keep the URL fragment.</value>
         [DataMember(Name="shouldKeepUrlFragment", EmitDefaultValue=false)]
         public bool? ShouldKeepUrlFragment { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// List of query parameters used for search (e.g. &#39;q&#39;).
+        /// List of query parameters used for search (e.g. 'q').
         /// </summary>
-        /// <value>List of query parameters used for search (e.g. &#39;q&#39;).</value>
+        /// <value>List of query parameters used for search (e.g. 'q').</value>
         [DataMember(Name="searchQueryParameters", EmitDefaultValue=false)]
         public List<string> SearchQueryParameters { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Tracks when and where a visitor clicks on a webpage.
         /// </summary>
         /// <value>Tracks when and where a visitor clicks on a webpage.</value>
         [DataMember(Name="clickEvents", EmitDefaultValue=false)]
         public List<SelectorEventTrigger> ClickEvents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Controls how the form submitted and form abandoned events are tracked after a visitor interacts with a form element.
         /// </summary>
         /// <value>Controls how the form submitted and form abandoned events are tracked after a visitor interacts with a form element.</value>
         [DataMember(Name="formsTrackEvents", EmitDefaultValue=false)]
         public List<FormsTrackTrigger> FormsTrackEvents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Tracks when and where a visitor becomes inactive on a webpage.
         /// </summary>
         /// <value>Tracks when and where a visitor becomes inactive on a webpage.</value>
         [DataMember(Name="idleEvents", EmitDefaultValue=false)]
         public List<IdleEventTrigger> IdleEvents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Tracks when elements become visible or hidden on screen.
         /// </summary>
         /// <value>Tracks when elements become visible or hidden on screen.</value>
         [DataMember(Name="inViewportEvents", EmitDefaultValue=false)]
         public List<SelectorEventTrigger> InViewportEvents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Tracks when a visitor scrolls to a specific percentage of a webpage.
         /// </summary>
         /// <value>Tracks when a visitor scrolls to a specific percentage of a webpage.</value>
         [DataMember(Name="scrollDepthEvents", EmitDefaultValue=false)]
         public List<ScrollPercentageEventTrigger> ScrollDepthEvents { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -232,7 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyEventsSettings {\n");
-            
+
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  ExcludedQueryParameters: ").Append(ExcludedQueryParameters).Append("\n");
             sb.Append("  ShouldKeepUrlFragment: ").Append(ShouldKeepUrlFragment).Append("\n");
@@ -346,37 +291,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.ExcludedQueryParameters != null)
                     hash = hash * 59 + this.ExcludedQueryParameters.GetHashCode();
-                
+
                 if (this.ShouldKeepUrlFragment != null)
                     hash = hash * 59 + this.ShouldKeepUrlFragment.GetHashCode();
-                
+
                 if (this.SearchQueryParameters != null)
                     hash = hash * 59 + this.SearchQueryParameters.GetHashCode();
-                
+
                 if (this.PageviewConfig != null)
                     hash = hash * 59 + this.PageviewConfig.GetHashCode();
-                
+
                 if (this.ClickEvents != null)
                     hash = hash * 59 + this.ClickEvents.GetHashCode();
-                
+
                 if (this.FormsTrackEvents != null)
                     hash = hash * 59 + this.FormsTrackEvents.GetHashCode();
-                
+
                 if (this.IdleEvents != null)
                     hash = hash * 59 + this.IdleEvents.GetHashCode();
-                
+
                 if (this.InViewportEvents != null)
                     hash = hash * 59 + this.InViewportEvents.GetHashCode();
-                
+
                 if (this.ScrollDepthEvents != null)
                     hash = hash * 59 + this.ScrollDepthEvents.GetHashCode();
-                
+
                 return hash;
             }
         }

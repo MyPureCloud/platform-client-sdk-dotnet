@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeMetricsNetwork :  IEquatable<EdgeMetricsNetwork>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsNetwork" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Identifier for the network adapter.
         /// </summary>
         /// <value>Identifier for the network adapter.</value>
         [DataMember(Name="ifname", EmitDefaultValue=false)]
         public string Ifname { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of byes sent per second.
         /// </summary>
         /// <value>Number of byes sent per second.</value>
         [DataMember(Name="sentBytesPerSec", EmitDefaultValue=false)]
         public int? SentBytesPerSec { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of byes received per second.
         /// </summary>
         /// <value>Number of byes received per second.</value>
         [DataMember(Name="receivedBytesPerSec", EmitDefaultValue=false)]
         public int? ReceivedBytesPerSec { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total bandwidth of the adapter in bits per second.
         /// </summary>
         /// <value>Total bandwidth of the adapter in bits per second.</value>
         [DataMember(Name="bandwidthBitsPerSec", EmitDefaultValue=false)]
         public double? BandwidthBitsPerSec { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percent utilization of the network adapter.
         /// </summary>
         /// <value>Percent utilization of the network adapter.</value>
         [DataMember(Name="utilizationPct", EmitDefaultValue=false)]
         public double? UtilizationPct { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeMetricsNetwork {\n");
-            
+
             sb.Append("  Ifname: ").Append(Ifname).Append("\n");
             sb.Append("  SentBytesPerSec: ").Append(SentBytesPerSec).Append("\n");
             sb.Append("  ReceivedBytesPerSec: ").Append(ReceivedBytesPerSec).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Ifname != null)
                     hash = hash * 59 + this.Ifname.GetHashCode();
-                
+
                 if (this.SentBytesPerSec != null)
                     hash = hash * 59 + this.SentBytesPerSec.GetHashCode();
-                
+
                 if (this.ReceivedBytesPerSec != null)
                     hash = hash * 59 + this.ReceivedBytesPerSec.GetHashCode();
-                
+
                 if (this.BandwidthBitsPerSec != null)
                     hash = hash * 59 + this.BandwidthBitsPerSec.GetHashCode();
-                
+
                 if (this.UtilizationPct != null)
                     hash = hash * 59 + this.UtilizationPct.GetHashCode();
-                
+
                 return hash;
             }
         }

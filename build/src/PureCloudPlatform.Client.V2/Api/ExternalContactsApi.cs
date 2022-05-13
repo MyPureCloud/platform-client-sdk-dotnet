@@ -8,24 +8,13 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
-    
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IExternalContactsApi : IApiAccessor
     {
         #region Synchronous Operations
-        
-        /// <summary>
-        /// Delete an external contact
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>Empty</returns>
-        Empty DeleteExternalcontactsContact (string contactId);
 
         /// <summary>
         /// Delete an external contact
@@ -35,20 +24,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>ApiResponse of Empty</returns>
-        ApiResponse<Empty> DeleteExternalcontactsContactWithHttpInfo (string contactId);
-        
+        /// <returns>Object</returns>
+        Object DeleteExternalcontactsContact (string contactId);
+
         /// <summary>
-        /// Delete a note for an external contact
+        /// Delete an external contact
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="noteId">Note Id</param>
-        /// <returns>Empty</returns>
-        Empty DeleteExternalcontactsContactNote (string contactId, string noteId);
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DeleteExternalcontactsContactWithHttpInfo (string contactId);
 
         /// <summary>
         /// Delete a note for an external contact
@@ -59,9 +47,21 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>ApiResponse of Empty</returns>
-        ApiResponse<Empty> DeleteExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId);
-        
+        /// <returns>Object</returns>
+        Object DeleteExternalcontactsContactNote (string contactId, string noteId);
+
+        /// <summary>
+        /// Delete a note for an external contact
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="noteId">Note Id</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DeleteExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId);
+
         /// <summary>
         /// Delete a schema
         /// </summary>
@@ -83,17 +83,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteExternalcontactsContactsSchemaWithHttpInfo (string schemaId);
-        
-        /// <summary>
-        /// Delete an external organization
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>Empty</returns>
-        Empty DeleteExternalcontactsOrganization (string externalOrganizationId);
 
         /// <summary>
         /// Delete an external organization
@@ -103,20 +92,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>ApiResponse of Empty</returns>
-        ApiResponse<Empty> DeleteExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId);
-        
+        /// <returns>Object</returns>
+        Object DeleteExternalcontactsOrganization (string externalOrganizationId);
+
         /// <summary>
-        /// Delete a note for an external organization
+        /// Delete an external organization
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="noteId">Note Id</param>
-        /// <returns>Empty</returns>
-        Empty DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId);
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DeleteExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId);
 
         /// <summary>
         /// Delete a note for an external organization
@@ -127,9 +115,21 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>ApiResponse of Empty</returns>
-        ApiResponse<Empty> DeleteExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId);
-        
+        /// <returns>Object</returns>
+        Object DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId);
+
+        /// <summary>
+        /// Delete a note for an external organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="noteId">Note Id</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DeleteExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId);
+
         /// <summary>
         /// Unlink the Trustor for this External Organization
         /// </summary>
@@ -151,17 +151,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteExternalcontactsOrganizationTrustorWithHttpInfo (string externalOrganizationId);
-        
-        /// <summary>
-        /// Delete a relationship
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>Empty</returns>
-        Empty DeleteExternalcontactsRelationship (string relationshipId);
 
         /// <summary>
         /// Delete a relationship
@@ -171,9 +160,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>ApiResponse of Empty</returns>
-        ApiResponse<Empty> DeleteExternalcontactsRelationshipWithHttpInfo (string relationshipId);
-        
+        /// <returns>Object</returns>
+        Object DeleteExternalcontactsRelationship (string relationshipId);
+
+        /// <summary>
+        /// Delete a relationship
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="relationshipId">Relationship Id</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DeleteExternalcontactsRelationshipWithHttpInfo (string relationshipId);
+
         /// <summary>
         /// Fetch an external contact
         /// </summary>
@@ -197,7 +197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         ApiResponse<ExternalContact> GetExternalcontactsContactWithHttpInfo (string contactId, List<string> expand = null);
-        
+
         /// <summary>
         /// Fetch a note for an external contact
         /// </summary>
@@ -223,7 +223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of Note</returns>
         ApiResponse<Note> GetExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId, List<string> expand = null);
-        
+
         /// <summary>
         /// List notes for an external contact
         /// </summary>
@@ -232,8 +232,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
@@ -247,13 +247,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
         ApiResponse<NoteListing> GetExternalcontactsContactNotesWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
-        
+
         /// <summary>
         /// Search for external contacts
         /// </summary>
@@ -261,8 +261,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -276,14 +276,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         ApiResponse<ContactListing> GetExternalcontactsContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
-        
+
         /// <summary>
         /// Get a schema
         /// </summary>
@@ -305,7 +305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
         ApiResponse<DataSchema> GetExternalcontactsContactsSchemaWithHttpInfo (string schemaId);
-        
+
         /// <summary>
         /// Get a specific version of a schema
         /// </summary>
@@ -329,9 +329,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Schema version</param>
         /// <returns>ApiResponse of DataSchema</returns>
         ApiResponse<DataSchema> GetExternalcontactsContactsSchemaVersionWithHttpInfo (string schemaId, string versionId);
-        
+
         /// <summary>
-        /// Get all versions of an external contact&#39;s schema
+        /// Get all versions of an external contact's schema
         /// </summary>
         /// <remarks>
         /// 
@@ -342,7 +342,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DataSchema GetExternalcontactsContactsSchemaVersions (string schemaId);
 
         /// <summary>
-        /// Get all versions of an external contact&#39;s schema
+        /// Get all versions of an external contact's schema
         /// </summary>
         /// <remarks>
         /// 
@@ -351,7 +351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
         ApiResponse<DataSchema> GetExternalcontactsContactsSchemaVersionsWithHttpInfo (string schemaId);
-        
+
         /// <summary>
         /// Get a list of schemas.
         /// </summary>
@@ -371,7 +371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DataSchemaListing</returns>
         ApiResponse<DataSchemaListing> GetExternalcontactsContactsSchemasWithHttpInfo ();
-        
+
         /// <summary>
         /// Fetch an external organization
         /// </summary>
@@ -397,7 +397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         ApiResponse<ExternalOrganization> GetExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
-        
+
         /// <summary>
         /// Search for external contacts in an external organization
         /// </summary>
@@ -406,8 +406,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -422,14 +422,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         ApiResponse<ContactListing> GetExternalcontactsOrganizationContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
-        
+
         /// <summary>
         /// Fetch a note for an external organization
         /// </summary>
@@ -455,7 +455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of Note</returns>
         ApiResponse<Note> GetExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId, List<string> expand = null);
-        
+
         /// <summary>
         /// List notes for an external organization
         /// </summary>
@@ -464,8 +464,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
@@ -479,13 +479,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
         ApiResponse<NoteListing> GetExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
-        
+
         /// <summary>
         /// Fetch a relationship for an external organization
         /// </summary>
@@ -494,8 +494,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>RelationshipListing</returns>
@@ -509,13 +509,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of RelationshipListing</returns>
         ApiResponse<RelationshipListing> GetExternalcontactsOrganizationRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
-        
+
         /// <summary>
         /// Search for external organizations
         /// </summary>
@@ -523,8 +523,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -540,8 +540,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -549,7 +549,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganizationListing</returns>
         ApiResponse<ExternalOrganizationListing> GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
-        
+
         /// <summary>
         /// Get a schema
         /// </summary>
@@ -571,7 +571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
         ApiResponse<DataSchema> GetExternalcontactsOrganizationsSchemaWithHttpInfo (string schemaId);
-        
+
         /// <summary>
         /// Get a specific version of a schema
         /// </summary>
@@ -595,9 +595,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Schema version</param>
         /// <returns>ApiResponse of DataSchema</returns>
         ApiResponse<DataSchema> GetExternalcontactsOrganizationsSchemaVersionWithHttpInfo (string schemaId, string versionId);
-        
+
         /// <summary>
-        /// Get all versions of an external organization&#39;s schema
+        /// Get all versions of an external organization's schema
         /// </summary>
         /// <remarks>
         /// 
@@ -608,7 +608,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DataSchema GetExternalcontactsOrganizationsSchemaVersions (string schemaId);
 
         /// <summary>
-        /// Get all versions of an external organization&#39;s schema
+        /// Get all versions of an external organization's schema
         /// </summary>
         /// <remarks>
         /// 
@@ -617,7 +617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
         ApiResponse<DataSchema> GetExternalcontactsOrganizationsSchemaVersionsWithHttpInfo (string schemaId);
-        
+
         /// <summary>
         /// Get a list of schemas.
         /// </summary>
@@ -637,7 +637,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DataSchemaListing</returns>
         ApiResponse<DataSchemaListing> GetExternalcontactsOrganizationsSchemasWithHttpInfo ();
-        
+
         /// <summary>
         /// Fetch a relationship
         /// </summary>
@@ -661,7 +661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of Relationship</returns>
         ApiResponse<Relationship> GetExternalcontactsRelationshipWithHttpInfo (string relationshipId, string expand = null);
-        
+
         /// <summary>
         /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
         /// </summary>
@@ -685,7 +685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ReverseWhitepagesLookupResult</returns>
         ApiResponse<ReverseWhitepagesLookupResult> GetExternalcontactsReversewhitepageslookupWithHttpInfo (string lookupVal, List<string> expand = null);
-        
+
         /// <summary>
         /// Scan for external contacts using paging
         /// </summary>
@@ -709,7 +709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorContactListing</returns>
         ApiResponse<CursorContactListing> GetExternalcontactsScanContactsWithHttpInfo (int? limit = null, string cursor = null);
-        
+
         /// <summary>
         /// Scan for notes using paging
         /// </summary>
@@ -733,7 +733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorNoteListing</returns>
         ApiResponse<CursorNoteListing> GetExternalcontactsScanNotesWithHttpInfo (int? limit = null, string cursor = null);
-        
+
         /// <summary>
         /// Scan for external organizations using paging
         /// </summary>
@@ -757,7 +757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorOrganizationListing</returns>
         ApiResponse<CursorOrganizationListing> GetExternalcontactsScanOrganizationsWithHttpInfo (int? limit = null, string cursor = null);
-        
+
         /// <summary>
         /// Scan for relationships
         /// </summary>
@@ -781,7 +781,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorRelationshipListing</returns>
         ApiResponse<CursorRelationshipListing> GetExternalcontactsScanRelationshipsWithHttpInfo (int? limit = null, string cursor = null);
-        
+
         /// <summary>
         /// Bulk fetch contacts
         /// </summary>
@@ -803,7 +803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact ids</param>
         /// <returns>ApiResponse of BulkFetchContactsResponse</returns>
         ApiResponse<BulkFetchContactsResponse> PostExternalcontactsBulkContactsWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk add contacts
         /// </summary>
@@ -825,7 +825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contacts</param>
         /// <returns>ApiResponse of BulkContactsResponse</returns>
         ApiResponse<BulkContactsResponse> PostExternalcontactsBulkContactsAddWithHttpInfo (BulkContactsRequest body);
-        
+
         /// <summary>
         /// Bulk remove contacts
         /// </summary>
@@ -847,7 +847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact ids</param>
         /// <returns>ApiResponse of BulkDeleteResponse</returns>
         ApiResponse<BulkDeleteResponse> PostExternalcontactsBulkContactsRemoveWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk update contacts
         /// </summary>
@@ -869,7 +869,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contacts</param>
         /// <returns>ApiResponse of BulkContactsResponse</returns>
         ApiResponse<BulkContactsResponse> PostExternalcontactsBulkContactsUpdateWithHttpInfo (BulkContactsRequest body);
-        
+
         /// <summary>
         /// Bulk fetch notes
         /// </summary>
@@ -891,7 +891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Note ids</param>
         /// <returns>ApiResponse of BulkFetchNotesResponse</returns>
         ApiResponse<BulkFetchNotesResponse> PostExternalcontactsBulkNotesWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk add notes
         /// </summary>
@@ -913,7 +913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Notes</param>
         /// <returns>ApiResponse of BulkNotesResponse</returns>
         ApiResponse<BulkNotesResponse> PostExternalcontactsBulkNotesAddWithHttpInfo (BulkNotesRequest body);
-        
+
         /// <summary>
         /// Bulk remove notes
         /// </summary>
@@ -935,7 +935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Note ids</param>
         /// <returns>ApiResponse of BulkDeleteResponse</returns>
         ApiResponse<BulkDeleteResponse> PostExternalcontactsBulkNotesRemoveWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk update notes
         /// </summary>
@@ -957,7 +957,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Notes</param>
         /// <returns>ApiResponse of BulkNotesResponse</returns>
         ApiResponse<BulkNotesResponse> PostExternalcontactsBulkNotesUpdateWithHttpInfo (BulkNotesRequest body);
-        
+
         /// <summary>
         /// Bulk fetch organizations
         /// </summary>
@@ -979,7 +979,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organizations ids</param>
         /// <returns>ApiResponse of BulkFetchOrganizationsResponse</returns>
         ApiResponse<BulkFetchOrganizationsResponse> PostExternalcontactsBulkOrganizationsWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk add organizations
         /// </summary>
@@ -1001,7 +1001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organizations</param>
         /// <returns>ApiResponse of BulkOrganizationsResponse</returns>
         ApiResponse<BulkOrganizationsResponse> PostExternalcontactsBulkOrganizationsAddWithHttpInfo (BulkOrganizationsRequest body);
-        
+
         /// <summary>
         /// Bulk remove organizations
         /// </summary>
@@ -1023,7 +1023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization ids</param>
         /// <returns>ApiResponse of BulkDeleteResponse</returns>
         ApiResponse<BulkDeleteResponse> PostExternalcontactsBulkOrganizationsRemoveWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk update organizations
         /// </summary>
@@ -1045,7 +1045,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organizations</param>
         /// <returns>ApiResponse of BulkOrganizationsResponse</returns>
         ApiResponse<BulkOrganizationsResponse> PostExternalcontactsBulkOrganizationsUpdateWithHttpInfo (BulkOrganizationsRequest body);
-        
+
         /// <summary>
         /// Bulk fetch relationships
         /// </summary>
@@ -1067,7 +1067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Relationships ids</param>
         /// <returns>ApiResponse of BulkFetchRelationshipsResponse</returns>
         ApiResponse<BulkFetchRelationshipsResponse> PostExternalcontactsBulkRelationshipsWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk add relationships
         /// </summary>
@@ -1089,7 +1089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Relationships</param>
         /// <returns>ApiResponse of BulkRelationshipsResponse</returns>
         ApiResponse<BulkRelationshipsResponse> PostExternalcontactsBulkRelationshipsAddWithHttpInfo (BulkRelationshipsRequest body);
-        
+
         /// <summary>
         /// Bulk remove relationships
         /// </summary>
@@ -1111,7 +1111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Relationships ids</param>
         /// <returns>ApiResponse of BulkDeleteResponse</returns>
         ApiResponse<BulkDeleteResponse> PostExternalcontactsBulkRelationshipsRemoveWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk update relationships
         /// </summary>
@@ -1133,7 +1133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Relationships</param>
         /// <returns>ApiResponse of BulkRelationshipsResponse</returns>
         ApiResponse<BulkRelationshipsResponse> PostExternalcontactsBulkRelationshipsUpdateWithHttpInfo (BulkRelationshipsRequest body);
-        
+
         /// <summary>
         /// Create a note for an external contact
         /// </summary>
@@ -1157,7 +1157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of Note</returns>
         ApiResponse<Note> PostExternalcontactsContactNotesWithHttpInfo (string contactId, Note body);
-        
+
         /// <summary>
         /// Create an external contact
         /// </summary>
@@ -1179,7 +1179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         ApiResponse<ExternalContact> PostExternalcontactsContactsWithHttpInfo (ExternalContact body);
-        
+
         /// <summary>
         /// Create a schema
         /// </summary>
@@ -1201,7 +1201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
         ApiResponse<DataSchema> PostExternalcontactsContactsSchemasWithHttpInfo (DataSchema body);
-        
+
         /// <summary>
         /// Create a note for an external organization
         /// </summary>
@@ -1225,7 +1225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of Note</returns>
         ApiResponse<Note> PostExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, Note body);
-        
+
         /// <summary>
         /// Create an external organization
         /// </summary>
@@ -1247,7 +1247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         ApiResponse<ExternalOrganization> PostExternalcontactsOrganizationsWithHttpInfo (ExternalOrganization body);
-        
+
         /// <summary>
         /// Create a schema
         /// </summary>
@@ -1269,7 +1269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
         ApiResponse<DataSchema> PostExternalcontactsOrganizationsSchemasWithHttpInfo (DataSchema body);
-        
+
         /// <summary>
         /// Create a relationship
         /// </summary>
@@ -1291,7 +1291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Relationship</param>
         /// <returns>ApiResponse of Relationship</returns>
         ApiResponse<Relationship> PostExternalcontactsRelationshipsWithHttpInfo (Relationship body);
-        
+
         /// <summary>
         /// Update an external contact
         /// </summary>
@@ -1315,7 +1315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         ApiResponse<ExternalContact> PutExternalcontactsContactWithHttpInfo (string contactId, ExternalContact body);
-        
+
         /// <summary>
         /// Update a note for an external contact
         /// </summary>
@@ -1341,7 +1341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Note</param>
         /// <returns>ApiResponse of Note</returns>
         ApiResponse<Note> PutExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId, Note body);
-        
+
         /// <summary>
         /// Update a schema
         /// </summary>
@@ -1365,18 +1365,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Data Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
         ApiResponse<DataSchema> PutExternalcontactsContactsSchemaWithHttpInfo (string schemaId, DataSchema body);
-        
-        /// <summary>
-        /// Associate/disassociate an external contact with a conversation
-        /// </summary>
-        /// <remarks>
-        /// To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ConversationAssociation</param>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <returns></returns>
-        void PutExternalcontactsConversation (ConversationAssociation body, string conversationId);
 
         /// <summary>
         /// Associate/disassociate an external contact with a conversation
@@ -1385,11 +1373,23 @@ namespace PureCloudPlatform.Client.V2.Api
         /// To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ConversationAssociation</param>
         /// <param name="conversationId">Conversation ID</param>
+        /// <param name="body">ConversationAssociation</param>
+        /// <returns></returns>
+        void PutExternalcontactsConversation (string conversationId, ConversationAssociation body);
+
+        /// <summary>
+        /// Associate/disassociate an external contact with a conversation
+        /// </summary>
+        /// <remarks>
+        /// To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutExternalcontactsConversationWithHttpInfo (ConversationAssociation body, string conversationId);
-        
+        ApiResponse<Object> PutExternalcontactsConversationWithHttpInfo (string conversationId, ConversationAssociation body);
+
         /// <summary>
         /// Update an external organization
         /// </summary>
@@ -1413,7 +1413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         ApiResponse<ExternalOrganization> PutExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, ExternalOrganization body);
-        
+
         /// <summary>
         /// Update a note for an external organization
         /// </summary>
@@ -1439,7 +1439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Note</param>
         /// <returns>ApiResponse of Note</returns>
         ApiResponse<Note> PutExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId, Note body);
-        
+
         /// <summary>
         /// Links a Trustor with an External Organization
         /// </summary>
@@ -1463,7 +1463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorId">Trustor ID</param>
         /// <returns>ApiResponse of ExternalOrganizationTrustorLink</returns>
         ApiResponse<ExternalOrganizationTrustorLink> PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo (string externalOrganizationId, string trustorId);
-        
+
         /// <summary>
         /// Update a schema
         /// </summary>
@@ -1487,7 +1487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Data Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
         ApiResponse<DataSchema> PutExternalcontactsOrganizationsSchemaWithHttpInfo (string schemaId, DataSchema body);
-        
+
         /// <summary>
         /// Update a relationship
         /// </summary>
@@ -1511,21 +1511,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Relationship</param>
         /// <returns>ApiResponse of Relationship</returns>
         ApiResponse<Relationship> PutExternalcontactsRelationshipWithHttpInfo (string relationshipId, Relationship body);
-        
+
         #endregion Synchronous Operations
-        
+
         #region Asynchronous Operations
-        
-        /// <summary>
-        /// Delete an external contact
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>Task of Empty</returns>
-        System.Threading.Tasks.Task<Empty> DeleteExternalcontactsContactAsync (string contactId);
 
         /// <summary>
         /// Delete an external contact
@@ -1535,20 +1524,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>Task of ApiResponse (Empty)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsContactAsyncWithHttpInfo (string contactId);
-        
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DeleteExternalcontactsContactAsync (string contactId);
+
         /// <summary>
-        /// Delete a note for an external contact
+        /// Delete an external contact
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="noteId">Note Id</param>
-        /// <returns>Task of Empty</returns>
-        System.Threading.Tasks.Task<Empty> DeleteExternalcontactsContactNoteAsync (string contactId, string noteId);
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactAsyncWithHttpInfo (string contactId);
 
         /// <summary>
         /// Delete a note for an external contact
@@ -1559,9 +1547,21 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>Task of ApiResponse (Empty)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId);
-        
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DeleteExternalcontactsContactNoteAsync (string contactId, string noteId);
+
+        /// <summary>
+        /// Delete a note for an external contact
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="noteId">Note Id</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId);
+
         /// <summary>
         /// Delete a schema
         /// </summary>
@@ -1583,17 +1583,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId);
-        
-        /// <summary>
-        /// Delete an external organization
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>Task of Empty</returns>
-        System.Threading.Tasks.Task<Empty> DeleteExternalcontactsOrganizationAsync (string externalOrganizationId);
 
         /// <summary>
         /// Delete an external organization
@@ -1603,20 +1592,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>Task of ApiResponse (Empty)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId);
-        
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DeleteExternalcontactsOrganizationAsync (string externalOrganizationId);
+
         /// <summary>
-        /// Delete a note for an external organization
+        /// Delete an external organization
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="noteId">Note Id</param>
-        /// <returns>Task of Empty</returns>
-        System.Threading.Tasks.Task<Empty> DeleteExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId);
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId);
 
         /// <summary>
         /// Delete a note for an external organization
@@ -1627,9 +1615,21 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>Task of ApiResponse (Empty)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId);
-        
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DeleteExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId);
+
+        /// <summary>
+        /// Delete a note for an external organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="noteId">Note Id</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId);
+
         /// <summary>
         /// Unlink the Trustor for this External Organization
         /// </summary>
@@ -1651,17 +1651,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationTrustorAsyncWithHttpInfo (string externalOrganizationId);
-        
-        /// <summary>
-        /// Delete a relationship
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>Task of Empty</returns>
-        System.Threading.Tasks.Task<Empty> DeleteExternalcontactsRelationshipAsync (string relationshipId);
 
         /// <summary>
         /// Delete a relationship
@@ -1671,9 +1660,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>Task of ApiResponse (Empty)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId);
-        
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DeleteExternalcontactsRelationshipAsync (string relationshipId);
+
+        /// <summary>
+        /// Delete a relationship
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="relationshipId">Relationship Id</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId);
+
         /// <summary>
         /// Fetch an external contact
         /// </summary>
@@ -1697,7 +1697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetExternalcontactsContactAsyncWithHttpInfo (string contactId, List<string> expand = null);
-        
+
         /// <summary>
         /// Fetch a note for an external contact
         /// </summary>
@@ -1723,7 +1723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> GetExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId, List<string> expand = null);
-        
+
         /// <summary>
         /// List notes for an external contact
         /// </summary>
@@ -1732,8 +1732,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
@@ -1747,13 +1747,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
-        
+
         /// <summary>
         /// Search for external contacts
         /// </summary>
@@ -1761,8 +1761,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -1776,14 +1776,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
-        
+
         /// <summary>
         /// Get a schema
         /// </summary>
@@ -1805,7 +1805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId);
-        
+
         /// <summary>
         /// Get a specific version of a schema
         /// </summary>
@@ -1829,9 +1829,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId);
-        
+
         /// <summary>
-        /// Get all versions of an external contact&#39;s schema
+        /// Get all versions of an external contact's schema
         /// </summary>
         /// <remarks>
         /// 
@@ -1842,7 +1842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaVersionsAsync (string schemaId);
 
         /// <summary>
-        /// Get all versions of an external contact&#39;s schema
+        /// Get all versions of an external contact's schema
         /// </summary>
         /// <remarks>
         /// 
@@ -1851,7 +1851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaVersionsAsyncWithHttpInfo (string schemaId);
-        
+
         /// <summary>
         /// Get a list of schemas.
         /// </summary>
@@ -1871,7 +1871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsContactsSchemasAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Fetch an external organization
         /// </summary>
@@ -1897,7 +1897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
-        
+
         /// <summary>
         /// Search for external contacts in an external organization
         /// </summary>
@@ -1906,8 +1906,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -1922,14 +1922,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsOrganizationContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
-        
+
         /// <summary>
         /// Fetch a note for an external organization
         /// </summary>
@@ -1955,7 +1955,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> GetExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId, List<string> expand = null);
-        
+
         /// <summary>
         /// List notes for an external organization
         /// </summary>
@@ -1964,8 +1964,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
@@ -1979,13 +1979,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
-        
+
         /// <summary>
         /// Fetch a relationship for an external organization
         /// </summary>
@@ -1994,8 +1994,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of RelationshipListing</returns>
@@ -2009,13 +2009,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
-        
+
         /// <summary>
         /// Search for external organizations
         /// </summary>
@@ -2023,8 +2023,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -2040,8 +2040,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -2049,7 +2049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
-        
+
         /// <summary>
         /// Get a schema
         /// </summary>
@@ -2071,7 +2071,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaAsyncWithHttpInfo (string schemaId);
-        
+
         /// <summary>
         /// Get a specific version of a schema
         /// </summary>
@@ -2095,9 +2095,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId);
-        
+
         /// <summary>
-        /// Get all versions of an external organization&#39;s schema
+        /// Get all versions of an external organization's schema
         /// </summary>
         /// <remarks>
         /// 
@@ -2108,7 +2108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaVersionsAsync (string schemaId);
 
         /// <summary>
-        /// Get all versions of an external organization&#39;s schema
+        /// Get all versions of an external organization's schema
         /// </summary>
         /// <remarks>
         /// 
@@ -2117,7 +2117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaVersionsAsyncWithHttpInfo (string schemaId);
-        
+
         /// <summary>
         /// Get a list of schemas.
         /// </summary>
@@ -2137,7 +2137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsOrganizationsSchemasAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Fetch a relationship
         /// </summary>
@@ -2161,7 +2161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
         System.Threading.Tasks.Task<ApiResponse<Relationship>> GetExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, string expand = null);
-        
+
         /// <summary>
         /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
         /// </summary>
@@ -2185,7 +2185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ReverseWhitepagesLookupResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<ReverseWhitepagesLookupResult>> GetExternalcontactsReversewhitepageslookupAsyncWithHttpInfo (string lookupVal, List<string> expand = null);
-        
+
         /// <summary>
         /// Scan for external contacts using paging
         /// </summary>
@@ -2209,7 +2209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorContactListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<CursorContactListing>> GetExternalcontactsScanContactsAsyncWithHttpInfo (int? limit = null, string cursor = null);
-        
+
         /// <summary>
         /// Scan for notes using paging
         /// </summary>
@@ -2233,7 +2233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorNoteListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<CursorNoteListing>> GetExternalcontactsScanNotesAsyncWithHttpInfo (int? limit = null, string cursor = null);
-        
+
         /// <summary>
         /// Scan for external organizations using paging
         /// </summary>
@@ -2257,7 +2257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorOrganizationListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<CursorOrganizationListing>> GetExternalcontactsScanOrganizationsAsyncWithHttpInfo (int? limit = null, string cursor = null);
-        
+
         /// <summary>
         /// Scan for relationships
         /// </summary>
@@ -2281,7 +2281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorRelationshipListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<CursorRelationshipListing>> GetExternalcontactsScanRelationshipsAsyncWithHttpInfo (int? limit = null, string cursor = null);
-        
+
         /// <summary>
         /// Bulk fetch contacts
         /// </summary>
@@ -2303,7 +2303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact ids</param>
         /// <returns>Task of ApiResponse (BulkFetchContactsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkFetchContactsResponse>> PostExternalcontactsBulkContactsAsyncWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk add contacts
         /// </summary>
@@ -2325,7 +2325,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contacts</param>
         /// <returns>Task of ApiResponse (BulkContactsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkContactsResponse>> PostExternalcontactsBulkContactsAddAsyncWithHttpInfo (BulkContactsRequest body);
-        
+
         /// <summary>
         /// Bulk remove contacts
         /// </summary>
@@ -2347,7 +2347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact ids</param>
         /// <returns>Task of ApiResponse (BulkDeleteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkDeleteResponse>> PostExternalcontactsBulkContactsRemoveAsyncWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk update contacts
         /// </summary>
@@ -2369,7 +2369,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contacts</param>
         /// <returns>Task of ApiResponse (BulkContactsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkContactsResponse>> PostExternalcontactsBulkContactsUpdateAsyncWithHttpInfo (BulkContactsRequest body);
-        
+
         /// <summary>
         /// Bulk fetch notes
         /// </summary>
@@ -2391,7 +2391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Note ids</param>
         /// <returns>Task of ApiResponse (BulkFetchNotesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkFetchNotesResponse>> PostExternalcontactsBulkNotesAsyncWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk add notes
         /// </summary>
@@ -2413,7 +2413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Notes</param>
         /// <returns>Task of ApiResponse (BulkNotesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkNotesResponse>> PostExternalcontactsBulkNotesAddAsyncWithHttpInfo (BulkNotesRequest body);
-        
+
         /// <summary>
         /// Bulk remove notes
         /// </summary>
@@ -2435,7 +2435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Note ids</param>
         /// <returns>Task of ApiResponse (BulkDeleteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkDeleteResponse>> PostExternalcontactsBulkNotesRemoveAsyncWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk update notes
         /// </summary>
@@ -2457,7 +2457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Notes</param>
         /// <returns>Task of ApiResponse (BulkNotesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkNotesResponse>> PostExternalcontactsBulkNotesUpdateAsyncWithHttpInfo (BulkNotesRequest body);
-        
+
         /// <summary>
         /// Bulk fetch organizations
         /// </summary>
@@ -2479,7 +2479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organizations ids</param>
         /// <returns>Task of ApiResponse (BulkFetchOrganizationsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkFetchOrganizationsResponse>> PostExternalcontactsBulkOrganizationsAsyncWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk add organizations
         /// </summary>
@@ -2501,7 +2501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organizations</param>
         /// <returns>Task of ApiResponse (BulkOrganizationsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkOrganizationsResponse>> PostExternalcontactsBulkOrganizationsAddAsyncWithHttpInfo (BulkOrganizationsRequest body);
-        
+
         /// <summary>
         /// Bulk remove organizations
         /// </summary>
@@ -2523,7 +2523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization ids</param>
         /// <returns>Task of ApiResponse (BulkDeleteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkDeleteResponse>> PostExternalcontactsBulkOrganizationsRemoveAsyncWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk update organizations
         /// </summary>
@@ -2545,7 +2545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organizations</param>
         /// <returns>Task of ApiResponse (BulkOrganizationsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkOrganizationsResponse>> PostExternalcontactsBulkOrganizationsUpdateAsyncWithHttpInfo (BulkOrganizationsRequest body);
-        
+
         /// <summary>
         /// Bulk fetch relationships
         /// </summary>
@@ -2567,7 +2567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Relationships ids</param>
         /// <returns>Task of ApiResponse (BulkFetchRelationshipsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkFetchRelationshipsResponse>> PostExternalcontactsBulkRelationshipsAsyncWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk add relationships
         /// </summary>
@@ -2589,7 +2589,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Relationships</param>
         /// <returns>Task of ApiResponse (BulkRelationshipsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkRelationshipsResponse>> PostExternalcontactsBulkRelationshipsAddAsyncWithHttpInfo (BulkRelationshipsRequest body);
-        
+
         /// <summary>
         /// Bulk remove relationships
         /// </summary>
@@ -2611,7 +2611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Relationships ids</param>
         /// <returns>Task of ApiResponse (BulkDeleteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkDeleteResponse>> PostExternalcontactsBulkRelationshipsRemoveAsyncWithHttpInfo (BulkIdsRequest body);
-        
+
         /// <summary>
         /// Bulk update relationships
         /// </summary>
@@ -2633,7 +2633,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Relationships</param>
         /// <returns>Task of ApiResponse (BulkRelationshipsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkRelationshipsResponse>> PostExternalcontactsBulkRelationshipsUpdateAsyncWithHttpInfo (BulkRelationshipsRequest body);
-        
+
         /// <summary>
         /// Create a note for an external contact
         /// </summary>
@@ -2657,7 +2657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, Note body);
-        
+
         /// <summary>
         /// Create an external contact
         /// </summary>
@@ -2679,7 +2679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsContactsAsyncWithHttpInfo (ExternalContact body);
-        
+
         /// <summary>
         /// Create a schema
         /// </summary>
@@ -2701,7 +2701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostExternalcontactsContactsSchemasAsyncWithHttpInfo (DataSchema body);
-        
+
         /// <summary>
         /// Create a note for an external organization
         /// </summary>
@@ -2725,7 +2725,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, Note body);
-        
+
         /// <summary>
         /// Create an external organization
         /// </summary>
@@ -2747,7 +2747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostExternalcontactsOrganizationsAsyncWithHttpInfo (ExternalOrganization body);
-        
+
         /// <summary>
         /// Create a schema
         /// </summary>
@@ -2769,7 +2769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostExternalcontactsOrganizationsSchemasAsyncWithHttpInfo (DataSchema body);
-        
+
         /// <summary>
         /// Create a relationship
         /// </summary>
@@ -2791,7 +2791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
         System.Threading.Tasks.Task<ApiResponse<Relationship>> PostExternalcontactsRelationshipsAsyncWithHttpInfo (Relationship body);
-        
+
         /// <summary>
         /// Update an external contact
         /// </summary>
@@ -2815,7 +2815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PutExternalcontactsContactAsyncWithHttpInfo (string contactId, ExternalContact body);
-        
+
         /// <summary>
         /// Update a note for an external contact
         /// </summary>
@@ -2841,7 +2841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId, Note body);
-        
+
         /// <summary>
         /// Update a schema
         /// </summary>
@@ -2865,18 +2865,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Data Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId, DataSchema body);
-        
-        /// <summary>
-        /// Associate/disassociate an external contact with a conversation
-        /// </summary>
-        /// <remarks>
-        /// To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ConversationAssociation</param>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutExternalcontactsConversationAsync (ConversationAssociation body, string conversationId);
 
         /// <summary>
         /// Associate/disassociate an external contact with a conversation
@@ -2885,11 +2873,23 @@ namespace PureCloudPlatform.Client.V2.Api
         /// To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ConversationAssociation</param>
         /// <param name="conversationId">Conversation ID</param>
+        /// <param name="body">ConversationAssociation</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PutExternalcontactsConversationAsync (string conversationId, ConversationAssociation body);
+
+        /// <summary>
+        /// Associate/disassociate an external contact with a conversation
+        /// </summary>
+        /// <remarks>
+        /// To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutExternalcontactsConversationAsyncWithHttpInfo (ConversationAssociation body, string conversationId);
-        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutExternalcontactsConversationAsyncWithHttpInfo (string conversationId, ConversationAssociation body);
+
         /// <summary>
         /// Update an external organization
         /// </summary>
@@ -2913,7 +2913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, ExternalOrganization body);
-        
+
         /// <summary>
         /// Update a note for an external organization
         /// </summary>
@@ -2939,7 +2939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body);
-        
+
         /// <summary>
         /// Links a Trustor with an External Organization
         /// </summary>
@@ -2963,7 +2963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorId">Trustor ID</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationTrustorLink)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationTrustorLink>> PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo (string externalOrganizationId, string trustorId);
-        
+
         /// <summary>
         /// Update a schema
         /// </summary>
@@ -2987,7 +2987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Data Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutExternalcontactsOrganizationsSchemaAsyncWithHttpInfo (string schemaId, DataSchema body);
-        
+
         /// <summary>
         /// Update a relationship
         /// </summary>
@@ -3011,9 +3011,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
         System.Threading.Tasks.Task<ApiResponse<Relationship>> PutExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, Relationship body);
-        
+
         #endregion Asynchronous Operations
-        
+
     }
 
     /// <summary>
@@ -3103,16 +3103,16 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
-        
+
         /// <summary>
         /// Delete an external contact 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>Empty</returns>
-        public Empty DeleteExternalcontactsContact (string contactId)
+        /// <returns>Object</returns>
+        public Object DeleteExternalcontactsContact (string contactId)
         {
-             ApiResponse<Empty> localVarResponse = DeleteExternalcontactsContactWithHttpInfo(contactId);
+             ApiResponse<Object> localVarResponse = DeleteExternalcontactsContactWithHttpInfo(contactId);
              return localVarResponse.Data;
         }
 
@@ -3121,8 +3121,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>ApiResponse of Empty</returns>
-        public ApiResponse< Empty > DeleteExternalcontactsContactWithHttpInfo (string contactId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DeleteExternalcontactsContactWithHttpInfo (string contactId)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -3138,17 +3138,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3169,7 +3168,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3191,23 +3190,23 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContact: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Empty>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete an external contact 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>Task of Empty</returns>
-        public async System.Threading.Tasks.Task<Empty> DeleteExternalcontactsContactAsync (string contactId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DeleteExternalcontactsContactAsync (string contactId)
         {
-             ApiResponse<Empty> localVarResponse = await DeleteExternalcontactsContactAsyncWithHttpInfo(contactId);
+             ApiResponse<Object> localVarResponse = await DeleteExternalcontactsContactAsyncWithHttpInfo(contactId);
              return localVarResponse.Data;
 
         }
@@ -3217,8 +3216,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>Task of ApiResponse (Empty)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsContactAsyncWithHttpInfo (string contactId)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactAsyncWithHttpInfo (string contactId)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -3235,16 +3234,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3266,7 +3264,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3288,25 +3286,25 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContact: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Empty>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete a note for an external contact 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>Empty</returns>
-        public Empty DeleteExternalcontactsContactNote (string contactId, string noteId)
+        /// <returns>Object</returns>
+        public Object DeleteExternalcontactsContactNote (string contactId, string noteId)
         {
-             ApiResponse<Empty> localVarResponse = DeleteExternalcontactsContactNoteWithHttpInfo(contactId, noteId);
+             ApiResponse<Object> localVarResponse = DeleteExternalcontactsContactNoteWithHttpInfo(contactId, noteId);
              return localVarResponse.Data;
         }
 
@@ -3316,8 +3314,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>ApiResponse of Empty</returns>
-        public ApiResponse< Empty > DeleteExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DeleteExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -3336,16 +3334,118 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactId != null) localVarPathParams.Add("contactId", this.Configuration.ApiClient.ParameterToString(contactId));
+            if (noteId != null) localVarPathParams.Add("noteId", this.Configuration.ApiClient.ParameterToString(noteId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactNote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a note for an external contact 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="noteId">Note Id</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DeleteExternalcontactsContactNoteAsync (string contactId, string noteId)
+        {
+             ApiResponse<Object> localVarResponse = await DeleteExternalcontactsContactNoteAsyncWithHttpInfo(contactId, noteId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete a note for an external contact 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="noteId">Note Id</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId)
+        { 
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->DeleteExternalcontactsContactNote");
+            
+            // verify the required parameter 'noteId' is set
+            if (noteId == null)
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteExternalcontactsContactNote");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3368,111 +3468,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactNote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Empty>(localVarStatusCode,
-                localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-        
-        /// <summary>
-        /// Delete a note for an external contact 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="noteId">Note Id</param>
-        /// <returns>Task of Empty</returns>
-        public async System.Threading.Tasks.Task<Empty> DeleteExternalcontactsContactNoteAsync (string contactId, string noteId)
-        {
-             ApiResponse<Empty> localVarResponse = await DeleteExternalcontactsContactNoteAsyncWithHttpInfo(contactId, noteId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Delete a note for an external contact 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="noteId">Note Id</param>
-        /// <returns>Task of ApiResponse (Empty)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId)
-        { 
-            // verify the required parameter 'contactId' is set
-            if (contactId == null)
-                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->DeleteExternalcontactsContactNote");
-            
-            // verify the required parameter 'noteId' is set
-            if (noteId == null)
-                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteExternalcontactsContactNote");
-            
-
-            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                
-                "application/json"
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (contactId != null) localVarPathParams.Add("contactId", this.Configuration.ApiClient.ParameterToString(contactId));
-            if (noteId != null) localVarPathParams.Add("noteId", this.Configuration.ApiClient.ParameterToString(noteId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-            
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3494,15 +3490,15 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactNote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Empty>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete a schema 
         /// </summary>
@@ -3536,17 +3532,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3567,7 +3562,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3596,7 +3591,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete a schema 
         /// </summary>
@@ -3632,16 +3627,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3663,7 +3657,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3692,17 +3686,17 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>Empty</returns>
-        public Empty DeleteExternalcontactsOrganization (string externalOrganizationId)
+        /// <returns>Object</returns>
+        public Object DeleteExternalcontactsOrganization (string externalOrganizationId)
         {
-             ApiResponse<Empty> localVarResponse = DeleteExternalcontactsOrganizationWithHttpInfo(externalOrganizationId);
+             ApiResponse<Object> localVarResponse = DeleteExternalcontactsOrganizationWithHttpInfo(externalOrganizationId);
              return localVarResponse.Data;
         }
 
@@ -3711,8 +3705,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>ApiResponse of Empty</returns>
-        public ApiResponse< Empty > DeleteExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DeleteExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -3728,17 +3722,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3759,7 +3752,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3781,23 +3774,23 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Empty>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>Task of Empty</returns>
-        public async System.Threading.Tasks.Task<Empty> DeleteExternalcontactsOrganizationAsync (string externalOrganizationId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DeleteExternalcontactsOrganizationAsync (string externalOrganizationId)
         {
-             ApiResponse<Empty> localVarResponse = await DeleteExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId);
+             ApiResponse<Object> localVarResponse = await DeleteExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId);
              return localVarResponse.Data;
 
         }
@@ -3807,8 +3800,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>Task of ApiResponse (Empty)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -3825,16 +3818,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3856,7 +3848,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3878,25 +3870,25 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Empty>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete a note for an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>Empty</returns>
-        public Empty DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId)
+        /// <returns>Object</returns>
+        public Object DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId)
         {
-             ApiResponse<Empty> localVarResponse = DeleteExternalcontactsOrganizationNoteWithHttpInfo(externalOrganizationId, noteId);
+             ApiResponse<Object> localVarResponse = DeleteExternalcontactsOrganizationNoteWithHttpInfo(externalOrganizationId, noteId);
              return localVarResponse.Data;
         }
 
@@ -3906,8 +3898,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>ApiResponse of Empty</returns>
-        public ApiResponse< Empty > DeleteExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DeleteExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -3926,16 +3918,118 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", this.Configuration.ApiClient.ParameterToString(externalOrganizationId));
+            if (noteId != null) localVarPathParams.Add("noteId", this.Configuration.ApiClient.ParameterToString(noteId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a note for an external organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="noteId">Note Id</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DeleteExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId)
+        {
+             ApiResponse<Object> localVarResponse = await DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo(externalOrganizationId, noteId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete a note for an external organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="noteId">Note Id</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId)
+        { 
+            // verify the required parameter 'externalOrganizationId' is set
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteExternalcontactsOrganizationNote");
+            
+            // verify the required parameter 'noteId' is set
+            if (noteId == null)
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteExternalcontactsOrganizationNote");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3958,111 +4052,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Empty>(localVarStatusCode,
-                localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-        
-        /// <summary>
-        /// Delete a note for an external organization 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="noteId">Note Id</param>
-        /// <returns>Task of Empty</returns>
-        public async System.Threading.Tasks.Task<Empty> DeleteExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId)
-        {
-             ApiResponse<Empty> localVarResponse = await DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo(externalOrganizationId, noteId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Delete a note for an external organization 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="noteId">Note Id</param>
-        /// <returns>Task of ApiResponse (Empty)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId)
-        { 
-            // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null)
-                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteExternalcontactsOrganizationNote");
-            
-            // verify the required parameter 'noteId' is set
-            if (noteId == null)
-                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteExternalcontactsOrganizationNote");
-            
-
-            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                
-                "application/json"
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", this.Configuration.ApiClient.ParameterToString(externalOrganizationId));
-            if (noteId != null) localVarPathParams.Add("noteId", this.Configuration.ApiClient.ParameterToString(noteId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-            
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4084,15 +4074,15 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Empty>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Unlink the Trustor for this External Organization 
         /// </summary>
@@ -4126,17 +4116,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4157,7 +4146,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4186,7 +4175,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Unlink the Trustor for this External Organization 
         /// </summary>
@@ -4222,16 +4211,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4253,7 +4241,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4282,17 +4270,17 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete a relationship 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>Empty</returns>
-        public Empty DeleteExternalcontactsRelationship (string relationshipId)
+        /// <returns>Object</returns>
+        public Object DeleteExternalcontactsRelationship (string relationshipId)
         {
-             ApiResponse<Empty> localVarResponse = DeleteExternalcontactsRelationshipWithHttpInfo(relationshipId);
+             ApiResponse<Object> localVarResponse = DeleteExternalcontactsRelationshipWithHttpInfo(relationshipId);
              return localVarResponse.Data;
         }
 
@@ -4301,8 +4289,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>ApiResponse of Empty</returns>
-        public ApiResponse< Empty > DeleteExternalcontactsRelationshipWithHttpInfo (string relationshipId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DeleteExternalcontactsRelationshipWithHttpInfo (string relationshipId)
         { 
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
@@ -4318,17 +4306,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4349,7 +4336,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4371,23 +4358,23 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsRelationship: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Empty>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete a relationship 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>Task of Empty</returns>
-        public async System.Threading.Tasks.Task<Empty> DeleteExternalcontactsRelationshipAsync (string relationshipId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DeleteExternalcontactsRelationshipAsync (string relationshipId)
         {
-             ApiResponse<Empty> localVarResponse = await DeleteExternalcontactsRelationshipAsyncWithHttpInfo(relationshipId);
+             ApiResponse<Object> localVarResponse = await DeleteExternalcontactsRelationshipAsyncWithHttpInfo(relationshipId);
              return localVarResponse.Data;
 
         }
@@ -4397,8 +4384,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>Task of ApiResponse (Empty)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId)
         { 
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
@@ -4415,16 +4402,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4446,7 +4432,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4468,15 +4454,15 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsRelationship: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Empty>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Fetch an external contact 
         /// </summary>
@@ -4513,17 +4499,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4545,7 +4530,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4574,7 +4559,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Fetch an external contact 
         /// </summary>
@@ -4613,16 +4598,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4645,7 +4629,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4674,8 +4658,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Fetch a note for an external contact 
         /// </summary>
@@ -4717,17 +4701,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4750,7 +4733,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4779,7 +4762,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Fetch a note for an external contact 
         /// </summary>
@@ -4824,16 +4807,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4857,7 +4839,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4886,15 +4868,15 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// List notes for an external contact 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
@@ -4909,8 +4891,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
@@ -4930,17 +4912,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4965,7 +4946,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4994,14 +4975,14 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// List notes for an external contact 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
@@ -5017,8 +4998,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
@@ -5039,16 +5020,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5074,7 +5054,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5103,14 +5083,14 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Search for external contacts 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -5125,8 +5105,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Search for external contacts 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -5144,17 +5124,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5179,7 +5158,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5208,13 +5187,13 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Search for external contacts 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -5230,8 +5209,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Search for external contacts 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -5249,16 +5228,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5284,7 +5262,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5313,8 +5291,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a schema 
         /// </summary>
@@ -5349,17 +5327,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5380,7 +5357,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5409,7 +5386,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a schema 
         /// </summary>
@@ -5446,16 +5423,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5477,7 +5453,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5506,8 +5482,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a specific version of a schema 
         /// </summary>
@@ -5547,17 +5523,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5579,7 +5554,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5608,7 +5583,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a specific version of a schema 
         /// </summary>
@@ -5651,16 +5626,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5683,7 +5657,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5712,10 +5686,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get all versions of an external contact&#39;s schema 
+        /// Get all versions of an external contact's schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -5727,7 +5701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get all versions of an external contact&#39;s schema 
+        /// Get all versions of an external contact's schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -5748,17 +5722,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5779,7 +5752,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5808,9 +5781,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get all versions of an external contact&#39;s schema 
+        /// Get all versions of an external contact's schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -5823,7 +5796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get all versions of an external contact&#39;s schema 
+        /// Get all versions of an external contact's schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -5845,16 +5818,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5876,7 +5848,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5905,8 +5877,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a list of schemas. 
         /// </summary>
@@ -5936,17 +5908,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5966,7 +5937,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5995,7 +5966,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a list of schemas. 
         /// </summary>
@@ -6026,16 +5997,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6056,7 +6026,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6085,8 +6055,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Fetch an external organization 
         /// </summary>
@@ -6125,17 +6095,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6158,7 +6127,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6187,7 +6156,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Fetch an external organization 
         /// </summary>
@@ -6228,16 +6197,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6261,7 +6229,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6290,15 +6258,15 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Search for external contacts in an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -6314,8 +6282,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -6336,17 +6304,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6372,7 +6339,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6401,14 +6368,14 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Search for external contacts in an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -6425,8 +6392,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -6448,16 +6415,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6484,7 +6450,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6513,8 +6479,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Fetch a note for an external organization 
         /// </summary>
@@ -6556,17 +6522,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6589,7 +6554,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6618,7 +6583,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Fetch a note for an external organization 
         /// </summary>
@@ -6663,16 +6628,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6696,7 +6660,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6725,15 +6689,15 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// List notes for an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
@@ -6748,8 +6712,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
@@ -6769,17 +6733,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6804,7 +6767,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6833,14 +6796,14 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// List notes for an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
@@ -6856,8 +6819,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
@@ -6878,16 +6841,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6913,7 +6875,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6942,15 +6904,15 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Fetch a relationship for an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>RelationshipListing</returns>
@@ -6965,8 +6927,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of RelationshipListing</returns>
@@ -6986,17 +6948,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7021,7 +6982,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7050,14 +7011,14 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Fetch a relationship for an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of RelationshipListing</returns>
@@ -7073,8 +7034,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
@@ -7095,16 +7056,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7130,7 +7090,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7159,14 +7119,14 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Search for external organizations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -7183,8 +7143,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Search for external organizations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -7204,17 +7164,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7241,7 +7200,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7270,13 +7229,13 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Search for external organizations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -7294,8 +7253,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Search for external organizations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -7315,16 +7274,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7352,7 +7310,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7381,8 +7339,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a schema 
         /// </summary>
@@ -7417,17 +7375,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7448,7 +7405,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7477,7 +7434,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a schema 
         /// </summary>
@@ -7514,16 +7471,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7545,7 +7501,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7574,8 +7530,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a specific version of a schema 
         /// </summary>
@@ -7615,17 +7571,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7647,7 +7602,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7676,7 +7631,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a specific version of a schema 
         /// </summary>
@@ -7719,16 +7674,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7751,7 +7705,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7780,10 +7734,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get all versions of an external organization&#39;s schema 
+        /// Get all versions of an external organization's schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -7795,7 +7749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get all versions of an external organization&#39;s schema 
+        /// Get all versions of an external organization's schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -7816,17 +7770,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7847,7 +7800,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7876,9 +7829,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get all versions of an external organization&#39;s schema 
+        /// Get all versions of an external organization's schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -7891,7 +7844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get all versions of an external organization&#39;s schema 
+        /// Get all versions of an external organization's schema 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -7913,16 +7866,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7944,7 +7896,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7973,8 +7925,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a list of schemas. 
         /// </summary>
@@ -8004,17 +7956,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8034,7 +7985,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8063,7 +8014,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a list of schemas. 
         /// </summary>
@@ -8094,16 +8045,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8124,7 +8074,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8153,8 +8103,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Fetch a relationship 
         /// </summary>
@@ -8191,17 +8141,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8223,7 +8172,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8252,7 +8201,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Fetch a relationship 
         /// </summary>
@@ -8291,16 +8240,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8323,7 +8271,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8352,8 +8300,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned. 
         /// </summary>
@@ -8390,17 +8338,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8422,7 +8369,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8451,7 +8398,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned. 
         /// </summary>
@@ -8490,16 +8437,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8522,7 +8468,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8551,8 +8497,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Scan for external contacts using paging 
         /// </summary>
@@ -8586,17 +8532,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8618,7 +8563,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8647,7 +8592,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Scan for external contacts using paging 
         /// </summary>
@@ -8682,16 +8627,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8714,7 +8658,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8743,8 +8687,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Scan for notes using paging 
         /// </summary>
@@ -8778,17 +8722,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8810,7 +8753,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8839,7 +8782,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Scan for notes using paging 
         /// </summary>
@@ -8874,16 +8817,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8906,7 +8848,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8935,8 +8877,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Scan for external organizations using paging 
         /// </summary>
@@ -8970,17 +8912,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9002,7 +8943,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9031,7 +8972,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Scan for external organizations using paging 
         /// </summary>
@@ -9066,16 +9007,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9098,7 +9038,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9127,8 +9067,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Scan for relationships 
         /// </summary>
@@ -9162,17 +9102,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9194,7 +9133,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9223,7 +9162,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Scan for relationships 
         /// </summary>
@@ -9258,16 +9197,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9290,7 +9228,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9319,8 +9257,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk fetch contacts 
         /// </summary>
@@ -9355,7 +9293,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -9363,9 +9300,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9388,9 +9326,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9419,7 +9357,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk fetch contacts 
         /// </summary>
@@ -9456,7 +9394,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -9464,8 +9401,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9489,9 +9427,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9520,8 +9458,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk add contacts 
         /// </summary>
@@ -9556,7 +9494,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -9564,9 +9501,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9589,9 +9527,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9620,7 +9558,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk add contacts 
         /// </summary>
@@ -9657,7 +9595,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -9665,8 +9602,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9690,9 +9628,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9721,8 +9659,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk remove contacts 
         /// </summary>
@@ -9757,7 +9695,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -9765,9 +9702,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9790,9 +9728,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9821,7 +9759,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk remove contacts 
         /// </summary>
@@ -9858,7 +9796,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -9866,8 +9803,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9891,9 +9829,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9922,8 +9860,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk update contacts 
         /// </summary>
@@ -9958,7 +9896,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -9966,9 +9903,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9991,9 +9929,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10022,7 +9960,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk update contacts 
         /// </summary>
@@ -10059,7 +9997,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10067,8 +10004,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10092,9 +10030,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10123,8 +10061,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk fetch notes 
         /// </summary>
@@ -10159,7 +10097,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10167,9 +10104,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10192,9 +10130,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10223,7 +10161,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk fetch notes 
         /// </summary>
@@ -10260,7 +10198,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10268,8 +10205,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10293,9 +10231,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10324,8 +10262,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk add notes 
         /// </summary>
@@ -10360,7 +10298,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10368,9 +10305,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10393,9 +10331,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10424,7 +10362,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk add notes 
         /// </summary>
@@ -10461,7 +10399,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10469,8 +10406,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10494,9 +10432,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10525,8 +10463,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk remove notes 
         /// </summary>
@@ -10561,7 +10499,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10569,9 +10506,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10594,9 +10532,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10625,7 +10563,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk remove notes 
         /// </summary>
@@ -10662,7 +10600,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10670,8 +10607,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10695,9 +10633,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10726,8 +10664,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk update notes 
         /// </summary>
@@ -10762,7 +10700,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10770,9 +10707,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10795,9 +10733,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10826,7 +10764,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk update notes 
         /// </summary>
@@ -10863,7 +10801,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10871,8 +10808,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10896,9 +10834,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10927,8 +10865,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk fetch organizations 
         /// </summary>
@@ -10963,7 +10901,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -10971,9 +10908,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10996,9 +10934,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11027,7 +10965,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk fetch organizations 
         /// </summary>
@@ -11064,7 +11002,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11072,8 +11009,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11097,9 +11035,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11128,8 +11066,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk add organizations 
         /// </summary>
@@ -11164,7 +11102,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11172,9 +11109,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11197,9 +11135,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11228,7 +11166,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk add organizations 
         /// </summary>
@@ -11265,7 +11203,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11273,8 +11210,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11298,9 +11236,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11329,8 +11267,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk remove organizations 
         /// </summary>
@@ -11365,7 +11303,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11373,9 +11310,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11398,9 +11336,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11429,7 +11367,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk remove organizations 
         /// </summary>
@@ -11466,7 +11404,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11474,8 +11411,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11499,9 +11437,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11530,8 +11468,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk update organizations 
         /// </summary>
@@ -11566,7 +11504,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11574,9 +11511,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11599,9 +11537,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11630,7 +11568,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk update organizations 
         /// </summary>
@@ -11667,7 +11605,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11675,8 +11612,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11700,9 +11638,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11731,8 +11669,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk fetch relationships 
         /// </summary>
@@ -11767,7 +11705,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11775,9 +11712,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11800,9 +11738,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11831,7 +11769,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk fetch relationships 
         /// </summary>
@@ -11868,7 +11806,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11876,8 +11813,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11901,9 +11839,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11932,8 +11870,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk add relationships 
         /// </summary>
@@ -11968,7 +11906,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -11976,9 +11913,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12001,9 +11939,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12032,7 +11970,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk add relationships 
         /// </summary>
@@ -12069,7 +12007,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -12077,8 +12014,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12102,9 +12040,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12133,8 +12071,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk remove relationships 
         /// </summary>
@@ -12169,7 +12107,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -12177,9 +12114,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12202,9 +12140,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12233,7 +12171,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk remove relationships 
         /// </summary>
@@ -12270,7 +12208,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -12278,8 +12215,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12303,9 +12241,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12334,8 +12272,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Bulk update relationships 
         /// </summary>
@@ -12370,7 +12308,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -12378,9 +12315,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12403,9 +12341,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12434,7 +12372,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Bulk update relationships 
         /// </summary>
@@ -12471,7 +12409,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -12479,8 +12416,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12504,9 +12442,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12535,8 +12473,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a note for an external contact 
         /// </summary>
@@ -12576,7 +12514,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -12584,9 +12521,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12610,9 +12548,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12641,7 +12579,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a note for an external contact 
         /// </summary>
@@ -12684,7 +12622,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -12692,8 +12629,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12718,9 +12656,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12749,8 +12687,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create an external contact 
         /// </summary>
@@ -12785,7 +12723,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -12793,9 +12730,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12818,9 +12756,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12849,7 +12787,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create an external contact 
         /// </summary>
@@ -12886,7 +12824,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -12894,8 +12831,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12919,9 +12857,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12950,8 +12888,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a schema 
         /// </summary>
@@ -12986,7 +12924,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -12994,9 +12931,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13019,9 +12957,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13050,7 +12988,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a schema 
         /// </summary>
@@ -13087,7 +13025,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -13095,8 +13032,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13120,9 +13058,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13151,8 +13089,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a note for an external organization 
         /// </summary>
@@ -13192,7 +13130,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -13200,9 +13137,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13226,9 +13164,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13257,7 +13195,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a note for an external organization 
         /// </summary>
@@ -13300,7 +13238,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -13308,8 +13245,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13334,9 +13272,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13365,8 +13303,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create an external organization 
         /// </summary>
@@ -13401,7 +13339,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -13409,9 +13346,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13434,9 +13372,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13465,7 +13403,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create an external organization 
         /// </summary>
@@ -13502,7 +13440,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -13510,8 +13447,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13535,9 +13473,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13566,8 +13504,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a schema 
         /// </summary>
@@ -13602,7 +13540,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -13610,9 +13547,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13635,9 +13573,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13666,7 +13604,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a schema 
         /// </summary>
@@ -13703,7 +13641,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -13711,8 +13648,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13736,9 +13674,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13767,8 +13705,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a relationship 
         /// </summary>
@@ -13803,7 +13741,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -13811,9 +13748,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13836,9 +13774,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13867,7 +13805,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a relationship 
         /// </summary>
@@ -13904,7 +13842,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -13912,8 +13849,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13937,9 +13875,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13968,8 +13906,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update an external contact 
         /// </summary>
@@ -14009,7 +13947,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -14017,9 +13954,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14043,9 +13981,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14074,7 +14012,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update an external contact 
         /// </summary>
@@ -14117,7 +14055,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -14125,8 +14062,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -14151,9 +14089,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14182,8 +14120,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update a note for an external contact 
         /// </summary>
@@ -14228,7 +14166,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -14236,9 +14173,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14263,9 +14201,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14294,7 +14232,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update a note for an external contact 
         /// </summary>
@@ -14343,7 +14281,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -14351,8 +14288,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -14378,9 +14316,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14409,8 +14347,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update a schema 
         /// </summary>
@@ -14450,7 +14388,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -14458,9 +14395,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14484,9 +14422,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14515,7 +14453,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update a schema 
         /// </summary>
@@ -14558,7 +14496,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -14566,8 +14503,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -14592,9 +14530,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14623,35 +14561,35 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Associate/disassociate an external contact with a conversation To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ConversationAssociation</param>
         /// <param name="conversationId">Conversation ID</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns></returns>
-        public void PutExternalcontactsConversation (ConversationAssociation body, string conversationId)
+        public void PutExternalcontactsConversation (string conversationId, ConversationAssociation body)
         {
-             PutExternalcontactsConversationWithHttpInfo(body, conversationId);
+             PutExternalcontactsConversationWithHttpInfo(conversationId, body);
         }
 
         /// <summary>
         /// Associate/disassociate an external contact with a conversation To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ConversationAssociation</param>
         /// <param name="conversationId">Conversation ID</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutExternalcontactsConversationWithHttpInfo (ConversationAssociation body, string conversationId)
+        public ApiResponse<Object> PutExternalcontactsConversationWithHttpInfo (string conversationId, ConversationAssociation body)
         { 
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsConversation");
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ExternalContactsApi->PutExternalcontactsConversation");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsConversation");
 
             var localVarPath = "/api/v2/externalcontacts/conversations/{conversationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -14663,7 +14601,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -14671,9 +14608,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14697,9 +14635,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14728,17 +14666,17 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Associate/disassociate an external contact with a conversation To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ConversationAssociation</param>
         /// <param name="conversationId">Conversation ID</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutExternalcontactsConversationAsync (ConversationAssociation body, string conversationId)
+        public async System.Threading.Tasks.Task PutExternalcontactsConversationAsync (string conversationId, ConversationAssociation body)
         {
-             await PutExternalcontactsConversationAsyncWithHttpInfo(body, conversationId);
+             await PutExternalcontactsConversationAsyncWithHttpInfo(conversationId, body);
 
         }
 
@@ -14746,18 +14684,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Associate/disassociate an external contact with a conversation To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ConversationAssociation</param>
         /// <param name="conversationId">Conversation ID</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutExternalcontactsConversationAsyncWithHttpInfo (ConversationAssociation body, string conversationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutExternalcontactsConversationAsyncWithHttpInfo (string conversationId, ConversationAssociation body)
         { 
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsConversation");
-            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ExternalContactsApi->PutExternalcontactsConversation");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsConversation");
             
 
             var localVarPath = "/api/v2/externalcontacts/conversations/{conversationId}";
@@ -14770,7 +14708,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -14778,8 +14715,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -14804,9 +14742,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14835,8 +14773,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update an external organization 
         /// </summary>
@@ -14876,7 +14814,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -14884,9 +14821,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14910,9 +14848,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14941,7 +14879,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update an external organization 
         /// </summary>
@@ -14984,7 +14922,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -14992,8 +14929,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15018,9 +14956,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15049,8 +14987,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update a note for an external organization 
         /// </summary>
@@ -15095,7 +15033,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -15103,9 +15040,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15130,9 +15068,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15161,7 +15099,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update a note for an external organization 
         /// </summary>
@@ -15210,7 +15148,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -15218,8 +15155,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15245,9 +15183,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15276,8 +15214,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Links a Trustor with an External Organization 
         /// </summary>
@@ -15317,17 +15255,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15349,7 +15286,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15378,7 +15315,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Links a Trustor with an External Organization 
         /// </summary>
@@ -15421,16 +15358,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15453,7 +15389,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15482,8 +15418,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update a schema 
         /// </summary>
@@ -15523,7 +15459,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -15531,9 +15466,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15557,9 +15493,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15588,7 +15524,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update a schema 
         /// </summary>
@@ -15631,7 +15567,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -15639,8 +15574,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15665,9 +15601,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15696,8 +15632,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update a relationship 
         /// </summary>
@@ -15737,7 +15673,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -15745,9 +15680,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15771,9 +15707,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15802,7 +15738,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update a relationship 
         /// </summary>
@@ -15845,7 +15781,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -15853,8 +15788,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15879,9 +15815,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15910,8 +15846,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
     }
-    
+
 }

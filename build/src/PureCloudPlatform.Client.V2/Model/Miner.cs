@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Miner :  IEquatable<Miner>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Language Localization code.
         /// </summary>
@@ -83,13 +75,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "es-es")]
             Eses
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of the miner.
         /// </summary>
@@ -213,25 +198,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Deleted")]
             Deleted
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Media type for filtering conversations.
         /// </summary>
@@ -265,85 +231,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Message")]
             Message
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Language Localization code.
         /// </summary>
         /// <value>Language Localization code.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public LanguageEnum? Language { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of the miner.
         /// </summary>
         /// <value>Status of the miner.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        public StatusEnum? Status { get; private set; }
         /// <summary>
         /// Media type for filtering conversations.
         /// </summary>
         /// <value>Media type for filtering conversations.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
-        public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public MediaTypeEnum? MediaType { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Miner" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Miner() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Miner" /> class.
         /// </summary>
@@ -356,130 +267,130 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Chat Corpus Name.
         /// </summary>
         /// <value>Chat Corpus Name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Date when the miner was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date when the miner was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Date from which the conversations need to be taken for mining. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Date from which the conversations need to be taken for mining. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="conversationsDateRangeStart", EmitDefaultValue=false)]
         public String ConversationsDateRangeStart { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date till which the conversations need to be taken for mining. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Date till which the conversations need to be taken for mining. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="conversationsDateRangeEnd", EmitDefaultValue=false)]
         public String ConversationsDateRangeEnd { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date when the mining process was completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date when the mining process was completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
         public DateTime? DateCompleted { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Mining message if present.
         /// </summary>
         /// <value>Mining message if present.</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Flag to indicate whether data file to be mined was uploaded.
         /// </summary>
         /// <value>Flag to indicate whether data file to be mined was uploaded.</value>
         [DataMember(Name="conversationDataUploaded", EmitDefaultValue=false)]
         public bool? ConversationDataUploaded { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// List of queue IDs for filtering conversations.
         /// </summary>
         /// <value>List of queue IDs for filtering conversations.</value>
         [DataMember(Name="queueIds", EmitDefaultValue=false)]
         public List<string> QueueIds { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date when the miner started execution. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date when the miner started execution. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateTriggered", EmitDefaultValue=false)]
         public DateTime? DateTriggered { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date when the miner was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date when the miner was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Latest draft details of the miner.
         /// </summary>
         /// <value>Latest draft details of the miner.</value>
         [DataMember(Name="latestDraftVersion", EmitDefaultValue=false)]
         public Draft LatestDraftVersion { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -488,7 +399,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Miner {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
@@ -638,55 +549,54 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.ConversationsDateRangeStart != null)
                     hash = hash * 59 + this.ConversationsDateRangeStart.GetHashCode();
-                
+
                 if (this.ConversationsDateRangeEnd != null)
                     hash = hash * 59 + this.ConversationsDateRangeEnd.GetHashCode();
-                
+
                 if (this.DateCompleted != null)
                     hash = hash * 59 + this.DateCompleted.GetHashCode();
-                
+
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 if (this.ConversationDataUploaded != null)
                     hash = hash * 59 + this.ConversationDataUploaded.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.QueueIds != null)
                     hash = hash * 59 + this.QueueIds.GetHashCode();
-                
+
                 if (this.DateTriggered != null)
                     hash = hash * 59 + this.DateTriggered.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.LatestDraftVersion != null)
                     hash = hash * 59 + this.LatestDraftVersion.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

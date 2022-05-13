@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebDeploymentsDeploymentTopicWebMessagingDeploymentChangeEventBody :  IEquatable<WebDeploymentsDeploymentTopicWebMessagingDeploymentChangeEventBody>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -70,23 +62,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Deleting")]
             Deleting
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WebDeploymentsDeploymentTopicWebMessagingDeploymentChangeEventBody" /> class.
         /// </summary>
@@ -101,25 +81,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Configuration
         /// </summary>
         [DataMember(Name="configuration", EmitDefaultValue=false)]
         public WebDeploymentsDeploymentTopicWebMessagingConfigChangeEventBody Configuration { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebDeploymentsDeploymentTopicWebMessagingDeploymentChangeEventBody {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Configuration: ").Append(Configuration).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -200,16 +180,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Configuration != null)
                     hash = hash * 59 + this.Configuration.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 return hash;
             }
         }

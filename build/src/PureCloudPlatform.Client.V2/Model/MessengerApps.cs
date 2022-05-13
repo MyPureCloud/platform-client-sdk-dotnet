@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MessengerApps :  IEquatable<MessengerApps>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MessengerApps" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The conversation settings that handles chats within the messenger
         /// </summary>
         /// <value>The conversation settings that handles chats within the messenger</value>
         [DataMember(Name="conversations", EmitDefaultValue=false)]
         public ConversationAppSettings Conversations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The knowledge base config for messenger
         /// </summary>
         /// <value>The knowledge base config for messenger</value>
         [DataMember(Name="knowledge", EmitDefaultValue=false)]
         public Knowledge Knowledge { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MessengerApps {\n");
-            
+
             sb.Append("  Conversations: ").Append(Conversations).Append("\n");
             sb.Append("  Knowledge: ").Append(Knowledge).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Conversations != null)
                     hash = hash * 59 + this.Conversations.GetHashCode();
-                
+
                 if (this.Knowledge != null)
                     hash = hash * 59 + this.Knowledge.GetHashCode();
-                
+
                 return hash;
             }
         }

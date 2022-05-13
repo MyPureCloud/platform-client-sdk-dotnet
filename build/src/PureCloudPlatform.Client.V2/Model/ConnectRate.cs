@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConnectRate :  IEquatable<ConnectRate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConnectRate" /> class.
         /// </summary>
@@ -44,34 +26,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Number of call attempts made
         /// </summary>
         /// <value>Number of call attempts made</value>
         [DataMember(Name="attempts", EmitDefaultValue=false)]
         public long? Attempts { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of calls with a live voice detected
         /// </summary>
         /// <value>Number of calls with a live voice detected</value>
         [DataMember(Name="connects", EmitDefaultValue=false)]
         public long? Connects { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Ratio of connects to attempts
         /// </summary>
         /// <value>Ratio of connects to attempts</value>
         [DataMember(Name="connectRatio", EmitDefaultValue=false)]
         public double? ConnectRatio { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConnectRate {\n");
-            
+
             sb.Append("  Attempts: ").Append(Attempts).Append("\n");
             sb.Append("  Connects: ").Append(Connects).Append("\n");
             sb.Append("  ConnectRatio: ").Append(ConnectRatio).Append("\n");
@@ -152,16 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Attempts != null)
                     hash = hash * 59 + this.Attempts.GetHashCode();
-                
+
                 if (this.Connects != null)
                     hash = hash * 59 + this.Connects.GetHashCode();
-                
+
                 if (this.ConnectRatio != null)
                     hash = hash * 59 + this.ConnectRatio.GetHashCode();
-                
+
                 return hash;
             }
         }

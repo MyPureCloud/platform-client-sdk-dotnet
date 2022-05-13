@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateEmailRequest :  IEquatable<CreateEmailRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based.
         /// </summary>
@@ -83,72 +45,25 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "INBOUND")]
             Inbound
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based.
         /// </summary>
         /// <value>Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateEmailRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateEmailRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateEmailRequest" /> class.
         /// </summary>
         /// <param name="QueueId">The ID of the queue to use for routing the email conversation. This field is mutually exclusive with flowId.</param>
         /// <param name="FlowId">The ID of the flow to use for routing email conversation. This field is mutually exclusive with queueId.</param>
-        /// <param name="Provider">The name of the provider that is sourcing the emails. The Provider \&quot;PureCloud Email\&quot; is reserved for native emails. (required).</param>
-        /// <param name="SkillIds">The list of skill ID&#39;s to use for routing..</param>
+        /// <param name="Provider">The name of the provider that is sourcing the emails. The Provider \"PureCloud Email\" is reserved for native emails. (required).</param>
+        /// <param name="SkillIds">The list of skill ID's to use for routing..</param>
         /// <param name="LanguageId">The ID of the language to use for routing..</param>
         /// <param name="Priority">The priority to assign to the conversation for routing..</param>
         /// <param name="Attributes">The list of attributes to associate with the customer participant..</param>
@@ -182,144 +97,144 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the queue to use for routing the email conversation. This field is mutually exclusive with flowId
         /// </summary>
         /// <value>The ID of the queue to use for routing the email conversation. This field is mutually exclusive with flowId</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the flow to use for routing email conversation. This field is mutually exclusive with queueId
         /// </summary>
         /// <value>The ID of the flow to use for routing email conversation. This field is mutually exclusive with queueId</value>
         [DataMember(Name="flowId", EmitDefaultValue=false)]
         public string FlowId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The name of the provider that is sourcing the emails. The Provider \&quot;PureCloud Email\&quot; is reserved for native emails.
+        /// The name of the provider that is sourcing the emails. The Provider \"PureCloud Email\" is reserved for native emails.
         /// </summary>
-        /// <value>The name of the provider that is sourcing the emails. The Provider \&quot;PureCloud Email\&quot; is reserved for native emails.</value>
+        /// <value>The name of the provider that is sourcing the emails. The Provider \"PureCloud Email\" is reserved for native emails.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The list of skill ID&#39;s to use for routing.
+        /// The list of skill ID's to use for routing.
         /// </summary>
-        /// <value>The list of skill ID&#39;s to use for routing.</value>
+        /// <value>The list of skill ID's to use for routing.</value>
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
         public List<string> SkillIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the language to use for routing.
         /// </summary>
         /// <value>The ID of the language to use for routing.</value>
         [DataMember(Name="languageId", EmitDefaultValue=false)]
         public string LanguageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The priority to assign to the conversation for routing.
         /// </summary>
         /// <value>The priority to assign to the conversation for routing.</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public long? Priority { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of attributes to associate with the customer participant.
         /// </summary>
         /// <value>The list of attributes to associate with the customer participant.</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The email address of the recipient of the email.
         /// </summary>
         /// <value>The email address of the recipient of the email.</value>
         [DataMember(Name="toAddress", EmitDefaultValue=false)]
         public string ToAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the recipient of the email.
         /// </summary>
         /// <value>The name of the recipient of the email.</value>
         [DataMember(Name="toName", EmitDefaultValue=false)]
         public string ToName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The email address of the sender of the email.
         /// </summary>
         /// <value>The email address of the sender of the email.</value>
         [DataMember(Name="fromAddress", EmitDefaultValue=false)]
         public string FromAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the sender of the email.
         /// </summary>
         /// <value>The name of the sender of the email.</value>
         [DataMember(Name="fromName", EmitDefaultValue=false)]
         public string FromName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The subject of the email
         /// </summary>
         /// <value>The subject of the email</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// An HTML body content of the email.
         /// </summary>
         /// <value>An HTML body content of the email.</value>
         [DataMember(Name="htmlBody", EmitDefaultValue=false)]
         public string HtmlBody { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A text body content of the email.
         /// </summary>
         /// <value>A text body content of the email.</value>
         [DataMember(Name="textBody", EmitDefaultValue=false)]
         public string TextBody { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The external contact with which the email should be associated. This field is only valid for OUTBOUND email.
         /// </summary>
         /// <value>The external contact with which the email should be associated. This field is only valid for OUTBOUND email.</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -328,7 +243,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateEmailRequest {\n");
-            
+
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  FlowId: ").Append(FlowId).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
@@ -478,55 +393,54 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
+
                 if (this.FlowId != null)
                     hash = hash * 59 + this.FlowId.GetHashCode();
-                
+
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                
+
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();
-                
+
                 if (this.LanguageId != null)
                     hash = hash * 59 + this.LanguageId.GetHashCode();
-                
+
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
-                
+
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
+
                 if (this.ToAddress != null)
                     hash = hash * 59 + this.ToAddress.GetHashCode();
-                
+
                 if (this.ToName != null)
                     hash = hash * 59 + this.ToName.GetHashCode();
-                
+
                 if (this.FromAddress != null)
                     hash = hash * 59 + this.FromAddress.GetHashCode();
-                
+
                 if (this.FromName != null)
                     hash = hash * 59 + this.FromName.GetHashCode();
-                
+
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.HtmlBody != null)
                     hash = hash * 59 + this.HtmlBody.GetHashCode();
-                
+
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
-                
+
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
-                
+
                 return hash;
             }
         }

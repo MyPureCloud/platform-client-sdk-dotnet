@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TranscriptAggregateQueryResponse :  IEquatable<TranscriptAggregateQueryResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TranscriptAggregateQueryResponse" /> class.
         /// </summary>
@@ -36,15 +28,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Results
         /// </summary>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<TranscriptAggregateDataContainer> Results { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TranscriptAggregateQueryResponse {\n");
-            
+
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -113,10 +105,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReverseWhitepagesLookupResult :  IEquatable<ReverseWhitepagesLookupResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReverseWhitepagesLookupResult" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Contacts
         /// </summary>
         [DataMember(Name="contacts", EmitDefaultValue=false)]
         public List<ExternalContact> Contacts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ExternalOrganizations
         /// </summary>
         [DataMember(Name="externalOrganizations", EmitDefaultValue=false)]
         public List<ExternalOrganization> ExternalOrganizations { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReverseWhitepagesLookupResult {\n");
-            
+
             sb.Append("  Contacts: ").Append(Contacts).Append("\n");
             sb.Append("  ExternalOrganizations: ").Append(ExternalOrganizations).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Contacts != null)
                     hash = hash * 59 + this.Contacts.GetHashCode();
-                
+
                 if (this.ExternalOrganizations != null)
                     hash = hash * 59 + this.ExternalOrganizations.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MetricDefinition :  IEquatable<MetricDefinition>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of associated metric unit
         /// </summary>
@@ -83,54 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unit")]
             Unit
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of associated metric unit
         /// </summary>
         /// <value>The type of associated metric unit</value>
         [DataMember(Name="unitType", EmitDefaultValue=false)]
         public UnitTypeEnum? UnitType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MetricDefinition" /> class.
         /// </summary>
@@ -153,80 +103,80 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// An alternate name for this metric definition, often abbreviation
         /// </summary>
         /// <value>An alternate name for this metric definition, often abbreviation</value>
         [DataMember(Name="shortName", EmitDefaultValue=false)]
         public string ShortName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Metric names used as dividend
         /// </summary>
         /// <value>Metric names used as dividend</value>
         [DataMember(Name="dividendMetrics", EmitDefaultValue=false)]
         public List<string> DividendMetrics { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Metric names used as divisor
         /// </summary>
         /// <value>Metric names used as divisor</value>
         [DataMember(Name="divisorMetrics", EmitDefaultValue=false)]
         public List<string> DivisorMetrics { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A predefined default objective for this metric
         /// </summary>
         /// <value>A predefined default objective for this metric</value>
         [DataMember(Name="defaultObjective", EmitDefaultValue=false)]
         public DefaultObjective DefaultObjective { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// An optional field to specify if this metric definition is locked to certain template. e.g. punctuality
         /// </summary>
         /// <value>An optional field to specify if this metric definition is locked to certain template. e.g. punctuality</value>
         [DataMember(Name="lockTemplateId", EmitDefaultValue=false)]
         public string LockTemplateId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -235,7 +185,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MetricDefinition {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UnitType: ").Append(UnitType).Append("\n");
@@ -343,34 +293,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.UnitType != null)
                     hash = hash * 59 + this.UnitType.GetHashCode();
-                
+
                 if (this.ShortName != null)
                     hash = hash * 59 + this.ShortName.GetHashCode();
-                
+
                 if (this.DividendMetrics != null)
                     hash = hash * 59 + this.DividendMetrics.GetHashCode();
-                
+
                 if (this.DivisorMetrics != null)
                     hash = hash * 59 + this.DivisorMetrics.GetHashCode();
-                
+
                 if (this.DefaultObjective != null)
                     hash = hash * 59 + this.DefaultObjective.GetHashCode();
-                
+
                 if (this.LockTemplateId != null)
                     hash = hash * 59 + this.LockTemplateId.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

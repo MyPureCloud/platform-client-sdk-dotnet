@@ -18,49 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerCampaignScheduleConfigChangeCampaignSchedule :  IEquatable<DialerCampaignScheduleConfigChangeCampaignSchedule>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCampaignScheduleConfigChangeCampaignSchedule" /> class.
         /// </summary>
@@ -85,78 +42,78 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// a list of start and end times
         /// </summary>
         /// <value>a list of start and end times</value>
         [DataMember(Name="intervals", EmitDefaultValue=false)]
         public List<DialerCampaignScheduleConfigChangeScheduleInterval> Intervals { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// time zone identifier to be applied to the intervals; for example Africa/Abidjan
         /// </summary>
         /// <value>time zone identifier to be applied to the intervals; for example Africa/Abidjan</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Campaign
         /// </summary>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
         public DialerCampaignScheduleConfigChangeUriReference Campaign { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The UI-visible name of the object
         /// </summary>
         /// <value>The UI-visible name of the object</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Creation time of the entity
         /// </summary>
         /// <value>Creation time of the entity</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last modified time of the entity
         /// </summary>
         /// <value>Last modified time of the entity</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -165,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerCampaignScheduleConfigChangeCampaignSchedule {\n");
-            
+
             sb.Append("  Intervals: ").Append(Intervals).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  Campaign: ").Append(Campaign).Append("\n");
@@ -267,31 +224,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Intervals != null)
                     hash = hash * 59 + this.Intervals.GetHashCode();
-                
+
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
+
                 if (this.Campaign != null)
                     hash = hash * 59 + this.Campaign.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 return hash;
             }
         }

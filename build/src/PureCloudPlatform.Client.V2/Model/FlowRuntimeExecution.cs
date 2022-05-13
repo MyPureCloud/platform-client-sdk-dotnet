@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FlowRuntimeExecution :  IEquatable<FlowRuntimeExecution>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The flow's running status, which indicates whether the flow is running normally or completed, etc.
         /// </summary>
@@ -83,64 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILED")]
             Failed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The flow's running status, which indicates whether the flow is running normally or completed, etc.
         /// </summary>
         /// <value>The flow's running status, which indicates whether the flow is running normally or completed, etc.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowRuntimeExecution" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected FlowRuntimeExecution() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowRuntimeExecution" /> class.
         /// </summary>
@@ -148,11 +88,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The flow execution name..</param>
         /// <param name="FlowVersion">The Version of the flow definition of the flow execution. (required).</param>
         /// <param name="DateLaunched">The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        /// <param name="Status">The flow&#39;s running status, which indicates whether the flow is running normally or completed, etc. (required).</param>
+        /// <param name="Status">The flow's running status, which indicates whether the flow is running normally or completed, etc. (required).</param>
         /// <param name="DateCompleted">The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CompletionReason">The completion reason set at the flow completion time, if applicable..</param>
         /// <param name="FlowErrorInfo">Additional information if the flow is in error.</param>
-        /// <param name="OutputData">List of the flow&#39;s output variables, if any. Output variables are only supplied for Completed flows..</param>
+        /// <param name="OutputData">List of the flow's output variables, if any. Output variables are only supplied for Completed flows..</param>
         /// <param name="Conversation">The conversation to which this Flow execution is related.</param>
         public FlowRuntimeExecution(string Id = null, string Name = null, FlowVersion FlowVersion = null, DateTime? DateLaunched = null, StatusEnum? Status = null, DateTime? DateCompleted = null, string CompletionReason = null, ErrorBody FlowErrorInfo = null, Dictionary<string, Object> OutputData = null, DomainEntityRef Conversation = null)
         {
@@ -169,99 +109,99 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The flow execution ID
         /// </summary>
         /// <value>The flow execution ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The flow execution name.
         /// </summary>
         /// <value>The flow execution name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Version of the flow definition of the flow execution.
         /// </summary>
         /// <value>The Version of the flow definition of the flow execution.</value>
         [DataMember(Name="flowVersion", EmitDefaultValue=false)]
         public FlowVersion FlowVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateLaunched", EmitDefaultValue=false)]
         public DateTime? DateLaunched { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
         public DateTime? DateCompleted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The completion reason set at the flow completion time, if applicable.
         /// </summary>
         /// <value>The completion reason set at the flow completion time, if applicable.</value>
         [DataMember(Name="completionReason", EmitDefaultValue=false)]
         public string CompletionReason { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Additional information if the flow is in error
         /// </summary>
         /// <value>Additional information if the flow is in error</value>
         [DataMember(Name="flowErrorInfo", EmitDefaultValue=false)]
         public ErrorBody FlowErrorInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// List of the flow&#39;s output variables, if any. Output variables are only supplied for Completed flows.
+        /// List of the flow's output variables, if any. Output variables are only supplied for Completed flows.
         /// </summary>
-        /// <value>List of the flow&#39;s output variables, if any. Output variables are only supplied for Completed flows.</value>
+        /// <value>List of the flow's output variables, if any. Output variables are only supplied for Completed flows.</value>
         [DataMember(Name="outputData", EmitDefaultValue=false)]
         public Dictionary<string, Object> OutputData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The conversation to which this Flow execution is related
         /// </summary>
         /// <value>The conversation to which this Flow execution is related</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public DomainEntityRef Conversation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -270,7 +210,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FlowRuntimeExecution {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  FlowVersion: ").Append(FlowVersion).Append("\n");
@@ -390,40 +330,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.FlowVersion != null)
                     hash = hash * 59 + this.FlowVersion.GetHashCode();
-                
+
                 if (this.DateLaunched != null)
                     hash = hash * 59 + this.DateLaunched.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.DateCompleted != null)
                     hash = hash * 59 + this.DateCompleted.GetHashCode();
-                
+
                 if (this.CompletionReason != null)
                     hash = hash * 59 + this.CompletionReason.GetHashCode();
-                
+
                 if (this.FlowErrorInfo != null)
                     hash = hash * 59 + this.FlowErrorInfo.GetHashCode();
-                
+
                 if (this.OutputData != null)
                     hash = hash * 59 + this.OutputData.GetHashCode();
-                
+
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

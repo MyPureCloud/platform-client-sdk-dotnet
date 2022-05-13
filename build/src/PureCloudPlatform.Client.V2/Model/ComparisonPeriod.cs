@@ -18,59 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ComparisonPeriod :  IEquatable<ComparisonPeriod>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ComparisonPeriod" /> class.
         /// </summary>
@@ -79,97 +26,97 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Key Performance Indicator optimised during the comparison period.
         /// </summary>
         /// <value>Key Performance Indicator optimised during the comparison period.</value>
         [DataMember(Name="kpi", EmitDefaultValue=false)]
         public string Kpi { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Start date of the comparison period. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Start date of the comparison period. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateStarted", EmitDefaultValue=false)]
         public DateTime? DateStarted { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// End date of the comparison period. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>End date of the comparison period. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateEnded", EmitDefaultValue=false)]
         public DateTime? DateEnded { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Absolute metric (in which the KPI is based) total for the interactions handled by predictive routing (GPR was on)
         /// </summary>
         /// <value>Absolute metric (in which the KPI is based) total for the interactions handled by predictive routing (GPR was on)</value>
         [DataMember(Name="kpiTotalOn", EmitDefaultValue=false)]
         public long? KpiTotalOn { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Absolute metric (in which the KPI is based) total for the interactions not routed by predictive routing (GPR was off)
         /// </summary>
         /// <value>Absolute metric (in which the KPI is based) total for the interactions not routed by predictive routing (GPR was off)</value>
         [DataMember(Name="kpiTotalOff", EmitDefaultValue=false)]
         public long? KpiTotalOff { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total interactions handled by predictive routing (GPR was on)
         /// </summary>
         /// <value>Total interactions handled by predictive routing (GPR was on)</value>
         [DataMember(Name="interactionCountOn", EmitDefaultValue=false)]
         public long? InteractionCountOn { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total interactions not routed by predictive routing (GPR was off)
         /// </summary>
         /// <value>Total interactions not routed by predictive routing (GPR was off)</value>
         [DataMember(Name="interactionCountOff", EmitDefaultValue=false)]
         public long? InteractionCountOff { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// KPI results for each metric
         /// </summary>
         /// <value>KPI results for each metric</value>
         [DataMember(Name="kpiResults", EmitDefaultValue=false)]
         public List<KpiResult> KpiResults { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -178,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ComparisonPeriod {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Kpi: ").Append(Kpi).Append("\n");
             sb.Append("  DateStarted: ").Append(DateStarted).Append("\n");
@@ -292,37 +239,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Kpi != null)
                     hash = hash * 59 + this.Kpi.GetHashCode();
-                
+
                 if (this.DateStarted != null)
                     hash = hash * 59 + this.DateStarted.GetHashCode();
-                
+
                 if (this.DateEnded != null)
                     hash = hash * 59 + this.DateEnded.GetHashCode();
-                
+
                 if (this.KpiTotalOn != null)
                     hash = hash * 59 + this.KpiTotalOn.GetHashCode();
-                
+
                 if (this.KpiTotalOff != null)
                     hash = hash * 59 + this.KpiTotalOff.GetHashCode();
-                
+
                 if (this.InteractionCountOn != null)
                     hash = hash * 59 + this.InteractionCountOn.GetHashCode();
-                
+
                 if (this.InteractionCountOff != null)
                     hash = hash * 59 + this.InteractionCountOff.GetHashCode();
-                
+
                 if (this.KpiResults != null)
                     hash = hash * 59 + this.KpiResults.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

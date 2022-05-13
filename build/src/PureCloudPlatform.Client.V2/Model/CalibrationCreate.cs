@@ -18,95 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CalibrationCreate :  IEquatable<CalibrationCreate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CalibrationCreate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CalibrationCreate() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CalibrationCreate" /> class.
         /// </summary>
@@ -143,139 +60,139 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Calibrator
         /// </summary>
         [DataMember(Name="calibrator", EmitDefaultValue=false)]
         public User Calibrator { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Agent
         /// </summary>
         [DataMember(Name="agent", EmitDefaultValue=false)]
         public User Agent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The conversation to use for the calibration.
         /// </summary>
         /// <value>The conversation to use for the calibration.</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public ConversationReference Conversation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EvaluationForm
         /// </summary>
         [DataMember(Name="evaluationForm", EmitDefaultValue=false)]
         public EvaluationForm EvaluationForm { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ContextId
         /// </summary>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AverageScore
         /// </summary>
         [DataMember(Name="averageScore", EmitDefaultValue=false)]
         public int? AverageScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets HighScore
         /// </summary>
         [DataMember(Name="highScore", EmitDefaultValue=false)]
         public int? HighScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LowScore
         /// </summary>
         [DataMember(Name="lowScore", EmitDefaultValue=false)]
         public int? LowScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Evaluations
         /// </summary>
         [DataMember(Name="evaluations", EmitDefaultValue=false)]
         public List<Evaluation> Evaluations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Evaluators
         /// </summary>
         [DataMember(Name="evaluators", EmitDefaultValue=false)]
         public List<User> Evaluators { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ScoringIndex
         /// </summary>
         [DataMember(Name="scoringIndex", EmitDefaultValue=false)]
         public Evaluation ScoringIndex { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ExpertEvaluator
         /// </summary>
         [DataMember(Name="expertEvaluator", EmitDefaultValue=false)]
         public User ExpertEvaluator { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -284,7 +201,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CalibrationCreate {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Calibrator: ").Append(Calibrator).Append("\n");
@@ -434,55 +351,54 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Calibrator != null)
                     hash = hash * 59 + this.Calibrator.GetHashCode();
-                
+
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();
-                
+
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
+
                 if (this.EvaluationForm != null)
                     hash = hash * 59 + this.EvaluationForm.GetHashCode();
-                
+
                 if (this.ContextId != null)
                     hash = hash * 59 + this.ContextId.GetHashCode();
-                
+
                 if (this.AverageScore != null)
                     hash = hash * 59 + this.AverageScore.GetHashCode();
-                
+
                 if (this.HighScore != null)
                     hash = hash * 59 + this.HighScore.GetHashCode();
-                
+
                 if (this.LowScore != null)
                     hash = hash * 59 + this.LowScore.GetHashCode();
-                
+
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
+
                 if (this.Evaluations != null)
                     hash = hash * 59 + this.Evaluations.GetHashCode();
-                
+
                 if (this.Evaluators != null)
                     hash = hash * 59 + this.Evaluators.GetHashCode();
-                
+
                 if (this.ScoringIndex != null)
                     hash = hash * 59 + this.ScoringIndex.GetHashCode();
-                
+
                 if (this.ExpertEvaluator != null)
                     hash = hash * 59 + this.ExpertEvaluator.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

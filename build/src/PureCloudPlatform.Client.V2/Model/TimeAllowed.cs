@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TimeAllowed :  IEquatable<TimeAllowed>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeAllowed" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets TimeSlots
         /// </summary>
         [DataMember(Name="timeSlots", EmitDefaultValue=false)]
         public List<TimeSlot> TimeSlots { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TimeZoneId
         /// </summary>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Empty
         /// </summary>
         [DataMember(Name="empty", EmitDefaultValue=false)]
         public bool? Empty { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimeAllowed {\n");
-            
+
             sb.Append("  TimeSlots: ").Append(TimeSlots).Append("\n");
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
             sb.Append("  Empty: ").Append(Empty).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeSlots != null)
                     hash = hash * 59 + this.TimeSlots.GetHashCode();
-                
+
                 if (this.TimeZoneId != null)
                     hash = hash * 59 + this.TimeZoneId.GetHashCode();
-                
+
                 if (this.Empty != null)
                     hash = hash * 59 + this.Empty.GetHashCode();
-                
+
                 return hash;
             }
         }

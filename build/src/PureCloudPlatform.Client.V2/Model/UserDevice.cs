@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserDevice :  IEquatable<UserDevice>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// type of the device; ios or android
         /// </summary>
@@ -68,50 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ios")]
             Ios
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// type of the device; ios or android
         /// </summary>
         /// <value>type of the device; ios or android</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UserDevice" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UserDevice() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserDevice" /> class.
         /// </summary>
@@ -136,88 +81,88 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// device token sent by mobile clients.
         /// </summary>
         /// <value>device token sent by mobile clients.</value>
         [DataMember(Name="deviceToken", EmitDefaultValue=false)]
         public string DeviceToken { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// notification id of the device.
         /// </summary>
         /// <value>notification id of the device.</value>
         [DataMember(Name="notificationId", EmitDefaultValue=false)]
         public string NotificationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// make of the device.
         /// </summary>
         /// <value>make of the device.</value>
         [DataMember(Name="make", EmitDefaultValue=false)]
         public string Make { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Device model
         /// </summary>
         /// <value>Device model</value>
         [DataMember(Name="model", EmitDefaultValue=false)]
         public string Model { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// if the device accepts notifications
         /// </summary>
         /// <value>if the device accepts notifications</value>
         [DataMember(Name="acceptNotifications", EmitDefaultValue=false)]
         public bool? AcceptNotifications { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets SessionHash
         /// </summary>
         [DataMember(Name="sessionHash", EmitDefaultValue=false)]
         public string SessionHash { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -226,7 +171,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserDevice {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DeviceToken: ").Append(DeviceToken).Append("\n");
@@ -340,37 +285,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DeviceToken != null)
                     hash = hash * 59 + this.DeviceToken.GetHashCode();
-                
+
                 if (this.NotificationId != null)
                     hash = hash * 59 + this.NotificationId.GetHashCode();
-                
+
                 if (this.Make != null)
                     hash = hash * 59 + this.Make.GetHashCode();
-                
+
                 if (this.Model != null)
                     hash = hash * 59 + this.Model.GetHashCode();
-                
+
                 if (this.AcceptNotifications != null)
                     hash = hash * 59 + this.AcceptNotifications.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.SessionHash != null)
                     hash = hash * 59 + this.SessionHash.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

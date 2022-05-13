@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DevelopmentActivityAggregateQueryResponseStatistics :  IEquatable<DevelopmentActivityAggregateQueryResponseStatistics>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DevelopmentActivityAggregateQueryResponseStatistics" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The count for this metric
         /// </summary>
         /// <value>The count for this metric</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The minimum value in this metric
         /// </summary>
         /// <value>The minimum value in this metric</value>
         [DataMember(Name="min", EmitDefaultValue=false)]
         public double? Min { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum value in this metric
         /// </summary>
         /// <value>The maximum value in this metric</value>
         [DataMember(Name="max", EmitDefaultValue=false)]
         public double? Max { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total of the values for this metric
         /// </summary>
         /// <value>The total of the values for this metric</value>
         [DataMember(Name="sum", EmitDefaultValue=false)]
         public double? Sum { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DevelopmentActivityAggregateQueryResponseStatistics {\n");
-            
+
             sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("  Min: ").Append(Min).Append("\n");
             sb.Append("  Max: ").Append(Max).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-                
+
                 if (this.Min != null)
                     hash = hash * 59 + this.Min.GetHashCode();
-                
+
                 if (this.Max != null)
                     hash = hash * 59 + this.Max.GetHashCode();
-                
+
                 if (this.Sum != null)
                     hash = hash * 59 + this.Sum.GetHashCode();
-                
+
                 return hash;
             }
         }

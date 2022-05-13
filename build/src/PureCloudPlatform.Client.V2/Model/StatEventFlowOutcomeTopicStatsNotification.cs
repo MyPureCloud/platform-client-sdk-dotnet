@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class StatEventFlowOutcomeTopicStatsNotification :  IEquatable<StatEventFlowOutcomeTopicStatsNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="StatEventFlowOutcomeTopicStatsNotification" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Group
         /// </summary>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public Dictionary<string, string> Group { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public List<StatEventFlowOutcomeTopicIntervalMetrics> Data { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StatEventFlowOutcomeTopicStatsNotification {\n");
-            
+
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
-                
+
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
-                
+
                 return hash;
             }
         }

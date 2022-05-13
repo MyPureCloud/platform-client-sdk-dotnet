@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchBuReschedulingOptionsManagementUnitRequest :  IEquatable<PatchBuReschedulingOptionsManagementUnitRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchBuReschedulingOptionsManagementUnitRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PatchBuReschedulingOptionsManagementUnitRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchBuReschedulingOptionsManagementUnitRequest" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The management unit portion of the rescheduling run to update
         /// </summary>
         /// <value>The management unit portion of the rescheduling run to update</value>
         [DataMember(Name="managementUnitId", EmitDefaultValue=false)]
         public string ManagementUnitId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to mark the run as applied.  Only applies to reschedule runs.  Once applied, a run cannot be un-marked as applied
         /// </summary>
         /// <value>Whether to mark the run as applied.  Only applies to reschedule runs.  Once applied, a run cannot be un-marked as applied</value>
         [DataMember(Name="applied", EmitDefaultValue=false)]
         public bool? Applied { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PatchBuReschedulingOptionsManagementUnitRequest {\n");
-            
+
             sb.Append("  ManagementUnitId: ").Append(ManagementUnitId).Append("\n");
             sb.Append("  Applied: ").Append(Applied).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ManagementUnitId != null)
                     hash = hash * 59 + this.ManagementUnitId.GetHashCode();
-                
+
                 if (this.Applied != null)
                     hash = hash * 59 + this.Applied.GetHashCode();
-                
+
                 return hash;
             }
         }

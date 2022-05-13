@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BulkFetchRelationshipsResponse :  IEquatable<BulkFetchRelationshipsResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BulkFetchRelationshipsResponse" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Results
         /// </summary>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<BulkResponseResultRelationshipEntity> Results { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorCount
         /// </summary>
         [DataMember(Name="errorCount", EmitDefaultValue=false)]
         public int? ErrorCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorIndexes
         /// </summary>
         [DataMember(Name="errorIndexes", EmitDefaultValue=false)]
         public List<int?> ErrorIndexes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BulkFetchRelationshipsResponse {\n");
-            
+
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("  ErrorCount: ").Append(ErrorCount).Append("\n");
             sb.Append("  ErrorIndexes: ").Append(ErrorIndexes).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
+
                 if (this.ErrorCount != null)
                     hash = hash * 59 + this.ErrorCount.GetHashCode();
-                
+
                 if (this.ErrorIndexes != null)
                     hash = hash * 59 + this.ErrorIndexes.GetHashCode();
-                
+
                 return hash;
             }
         }

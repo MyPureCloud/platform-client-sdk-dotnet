@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RoleDivision :  IEquatable<RoleDivision>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="RoleDivision" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected RoleDivision() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoleDivision" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Role to be associated with the given division which forms a grant
         /// </summary>
         /// <value>Role to be associated with the given division which forms a grant</value>
         [DataMember(Name="roleId", EmitDefaultValue=false)]
         public string RoleId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Division associated with the given role which forms a grant
         /// </summary>
         /// <value>Division associated with the given role which forms a grant</value>
         [DataMember(Name="divisionId", EmitDefaultValue=false)]
         public string DivisionId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RoleDivision {\n");
-            
+
             sb.Append("  RoleId: ").Append(RoleId).Append("\n");
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RoleId != null)
                     hash = hash * 59 + this.RoleId.GetHashCode();
-                
+
                 if (this.DivisionId != null)
                     hash = hash * 59 + this.DivisionId.GetHashCode();
-                
+
                 return hash;
             }
         }

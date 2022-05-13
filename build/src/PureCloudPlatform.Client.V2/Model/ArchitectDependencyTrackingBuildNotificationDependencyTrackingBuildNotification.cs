@@ -18,33 +18,10 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification :  IEquatable<ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification" /> class.
         /// </summary>
-        /// <param name="Status">The organization&#39;s new dependency tracking build status.</param>
+        /// <param name="Status">The organization's new dependency tracking build status.</param>
         /// <param name="User">User.</param>
         /// <param name="Client">Client.</param>
         /// <param name="StartTime">The time the last build started, in ISO 8601 format.</param>
@@ -57,41 +34,41 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The organization&#39;s new dependency tracking build status
+        /// The organization's new dependency tracking build status
         /// </summary>
-        /// <value>The organization&#39;s new dependency tracking build status</value>
+        /// <value>The organization's new dependency tracking build status</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public ArchitectDependencyTrackingBuildNotificationUser User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Client
         /// </summary>
         [DataMember(Name="client", EmitDefaultValue=false)]
         public ArchitectDependencyTrackingBuildNotificationClient Client { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time the last build started, in ISO 8601 format
         /// </summary>
         /// <value>The time the last build started, in ISO 8601 format</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification {\n");
-            
+
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Client: ").Append(Client).Append("\n");
@@ -178,19 +155,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Client != null)
                     hash = hash * 59 + this.Client.GetHashCode();
-                
+
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
+
                 return hash;
             }
         }

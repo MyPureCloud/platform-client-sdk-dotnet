@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyWebActionEventsNotificationBlockedWebActionOfferMessage :  IEquatable<JourneyWebActionEventsNotificationBlockedWebActionOfferMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets BlockingReason
         /// </summary>
@@ -97,16 +86,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OfferedOutsideSchedule")]
             Offeredoutsideschedule
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets BlockingFrequencyCapBehaviour
         /// </summary>
@@ -145,52 +124,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CapForPeriod")]
             Capforperiod
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets BlockingReason
         /// </summary>
         [DataMember(Name="blockingReason", EmitDefaultValue=false)]
         public BlockingReasonEnum? BlockingReason { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets BlockingFrequencyCapBehaviour
         /// </summary>
         [DataMember(Name="blockingFrequencyCapBehaviour", EmitDefaultValue=false)]
         public BlockingFrequencyCapBehaviourEnum? BlockingFrequencyCapBehaviour { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyWebActionEventsNotificationBlockedWebActionOfferMessage" /> class.
         /// </summary>
@@ -219,75 +162,75 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public JourneyWebActionEventsNotificationEventAction Action { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActionMap
         /// </summary>
         [DataMember(Name="actionMap", EmitDefaultValue=false)]
         public JourneyWebActionEventsNotificationActionMap ActionMap { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActionTarget
         /// </summary>
         [DataMember(Name="actionTarget", EmitDefaultValue=false)]
         public JourneyWebActionEventsNotificationActionTarget ActionTarget { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets BlockingActionMap
         /// </summary>
         [DataMember(Name="blockingActionMap", EmitDefaultValue=false)]
         public JourneyWebActionEventsNotificationActionMap BlockingActionMap { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets BlockingAction
         /// </summary>
         [DataMember(Name="blockingAction", EmitDefaultValue=false)]
         public JourneyWebActionEventsNotificationEventAction BlockingAction { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets BlockingPageUrlConditions
         /// </summary>
         [DataMember(Name="blockingPageUrlConditions", EmitDefaultValue=false)]
         public List<JourneyWebActionEventsNotificationActionMapPageUrlCondition> BlockingPageUrlConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets BlockingScheduleGroup
         /// </summary>
         [DataMember(Name="blockingScheduleGroup", EmitDefaultValue=false)]
         public JourneyWebActionEventsNotificationScheduleGroup BlockingScheduleGroup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets BlockingEmergencyScheduleGroup
         /// </summary>
         [DataMember(Name="blockingEmergencyScheduleGroup", EmitDefaultValue=false)]
         public JourneyWebActionEventsNotificationEmergencyGroup BlockingEmergencyScheduleGroup { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -296,7 +239,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyWebActionEventsNotificationBlockedWebActionOfferMessage {\n");
-            
+
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ActionMap: ").Append(ActionMap).Append("\n");
             sb.Append("  ActionTarget: ").Append(ActionTarget).Append("\n");
@@ -410,37 +353,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.ActionMap != null)
                     hash = hash * 59 + this.ActionMap.GetHashCode();
-                
+
                 if (this.ActionTarget != null)
                     hash = hash * 59 + this.ActionTarget.GetHashCode();
-                
+
                 if (this.BlockingReason != null)
                     hash = hash * 59 + this.BlockingReason.GetHashCode();
-                
+
                 if (this.BlockingActionMap != null)
                     hash = hash * 59 + this.BlockingActionMap.GetHashCode();
-                
+
                 if (this.BlockingAction != null)
                     hash = hash * 59 + this.BlockingAction.GetHashCode();
-                
+
                 if (this.BlockingFrequencyCapBehaviour != null)
                     hash = hash * 59 + this.BlockingFrequencyCapBehaviour.GetHashCode();
-                
+
                 if (this.BlockingPageUrlConditions != null)
                     hash = hash * 59 + this.BlockingPageUrlConditions.GetHashCode();
-                
+
                 if (this.BlockingScheduleGroup != null)
                     hash = hash * 59 + this.BlockingScheduleGroup.GetHashCode();
-                
+
                 if (this.BlockingEmergencyScheduleGroup != null)
                     hash = hash * 59 + this.BlockingEmergencyScheduleGroup.GetHashCode();
-                
+
                 return hash;
             }
         }

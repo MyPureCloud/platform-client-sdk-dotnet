@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CursorRelationshipListing :  IEquatable<CursorRelationshipListing>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CursorRelationshipListing" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<Relationship> Entities { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NextUri
         /// </summary>
         [DataMember(Name="nextUri", EmitDefaultValue=false)]
         public string NextUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PreviousUri
         /// </summary>
         [DataMember(Name="previousUri", EmitDefaultValue=false)]
         public string PreviousUri { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CursorRelationshipListing {\n");
-            
+
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  NextUri: ").Append(NextUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
+
                 if (this.NextUri != null)
                     hash = hash * 59 + this.NextUri.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.PreviousUri != null)
                     hash = hash * 59 + this.PreviousUri.GetHashCode();
-                
+
                 return hash;
             }
         }

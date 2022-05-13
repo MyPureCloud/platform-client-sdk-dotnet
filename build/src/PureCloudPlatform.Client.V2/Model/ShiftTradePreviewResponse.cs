@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ShiftTradePreviewResponse :  IEquatable<ShiftTradePreviewResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradePreviewResponse" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// List of activities that will make up the new shift if this shift trade is approved
         /// </summary>
         /// <value>List of activities that will make up the new shift if this shift trade is approved</value>
         [DataMember(Name="activities", EmitDefaultValue=false)]
         public List<ShiftTradeActivityPreviewResponse> Activities { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ShiftTradePreviewResponse {\n");
-            
+
             sb.Append("  Activities: ").Append(Activities).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Activities != null)
                     hash = hash * 59 + this.Activities.GetHashCode();
-                
+
                 return hash;
             }
         }

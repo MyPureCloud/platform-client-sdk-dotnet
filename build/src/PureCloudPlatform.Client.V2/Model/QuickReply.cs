@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QuickReply :  IEquatable<QuickReply>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.
         /// </summary>
@@ -50,38 +39,19 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Message")]
             Message
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.
         /// </summary>
         /// <value>Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QuickReply" /> class.
         /// </summary>
         /// <param name="Text">Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply..</param>
         /// <param name="Payload">Content of the textback payload after clicking a quick reply.</param>
         /// <param name="Url">The location of the image file associated with quick reply.</param>
-        /// <param name="Action">Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \&quot;Message\&quot; which sends a message using the quick reply text..</param>
+        /// <param name="Action">Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text..</param>
         /// <param name="IsSelected">Indicates if the quick reply option is selected by end customer.</param>
         public QuickReply(string Text = null, string Payload = null, string Url = null, ActionEnum? Action = null, bool? IsSelected = null)
         {
@@ -93,45 +63,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply.
         /// </summary>
         /// <value>Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Content of the textback payload after clicking a quick reply
         /// </summary>
         /// <value>Content of the textback payload after clicking a quick reply</value>
         [DataMember(Name="payload", EmitDefaultValue=false)]
         public string Payload { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The location of the image file associated with quick reply
         /// </summary>
         /// <value>The location of the image file associated with quick reply</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Indicates if the quick reply option is selected by end customer
         /// </summary>
         /// <value>Indicates if the quick reply option is selected by end customer</value>
         [DataMember(Name="isSelected", EmitDefaultValue=false)]
         public bool? IsSelected { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -140,7 +110,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QuickReply {\n");
-            
+
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Payload: ").Append(Payload).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
@@ -224,22 +194,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Payload != null)
                     hash = hash * 59 + this.Payload.GetHashCode();
-                
+
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.IsSelected != null)
                     hash = hash * 59 + this.IsSelected.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ApiUsageQueryResult :  IEquatable<ApiUsageQueryResult>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Query status
         /// </summary>
@@ -56,22 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Running")]
             Running
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Query status
         /// </summary>
         /// <value>Query status</value>
         [DataMember(Name="queryStatus", EmitDefaultValue=false)]
         public QueryStatusEnum? QueryStatus { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiUsageQueryResult" /> class.
         /// </summary>
@@ -84,18 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Query results
         /// </summary>
         /// <value>Query results</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<ApiUsageRow> Results { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ApiUsageQueryResult {\n");
-            
+
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("  QueryStatus: ").Append(QueryStatus).Append("\n");
             sb.Append("}\n");
@@ -170,13 +155,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
+
                 if (this.QueryStatus != null)
                     hash = hash * 59 + this.QueryStatus.GetHashCode();
-                
+
                 return hash;
             }
         }

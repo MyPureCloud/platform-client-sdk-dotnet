@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class HelpLink :  IEquatable<HelpLink>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="HelpLink" /> class.
         /// </summary>
@@ -44,34 +26,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// URI of the help resource
         /// </summary>
         /// <value>URI of the help resource</value>
         [DataMember(Name="uri", EmitDefaultValue=false)]
         public string Uri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Link text of the resource
         /// </summary>
         /// <value>Link text of the resource</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Description of the document or resource
         /// </summary>
         /// <value>Description of the document or resource</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HelpLink {\n");
-            
+
             sb.Append("  Uri: ").Append(Uri).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -152,16 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Uri != null)
                     hash = hash * 59 + this.Uri.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 return hash;
             }
         }

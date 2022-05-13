@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningAssignmentItem :  IEquatable<LearningAssignmentItem>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignmentItem" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LearningAssignmentItem() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignmentItem" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The Learning Module ID associated with this assignment
         /// </summary>
         /// <value>The Learning Module ID associated with this assignment</value>
         [DataMember(Name="moduleId", EmitDefaultValue=false)]
         public string ModuleId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The User ID associated with this assignment
         /// </summary>
         /// <value>The User ID associated with this assignment</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningAssignmentItem {\n");
-            
+
             sb.Append("  ModuleId: ").Append(ModuleId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ModuleId != null)
                     hash = hash * 59 + this.ModuleId.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 return hash;
             }
         }

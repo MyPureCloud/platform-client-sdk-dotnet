@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KnowledgeBase :  IEquatable<KnowledgeBase>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes
         /// </summary>
@@ -104,67 +93,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "it-IT")]
             Itit
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes
         /// </summary>
         /// <value>Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes</value>
         [DataMember(Name="coreLanguage", EmitDefaultValue=false)]
         public CoreLanguageEnum? CoreLanguage { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeBase" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected KnowledgeBase() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeBase" /> class.
         /// </summary>
@@ -179,98 +119,98 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Knowledge base description
         /// </summary>
         /// <value>Knowledge base description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Knowledge base creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Knowledge base creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Knowledge base last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Knowledge base last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The count representing the number of documents of type FAQ in the KnowledgeBase
         /// </summary>
         /// <value>The count representing the number of documents of type FAQ in the KnowledgeBase</value>
         [DataMember(Name="faqCount", EmitDefaultValue=false)]
         public int? FaqCount { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date representing when the last document is modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date representing when the last document is modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateDocumentLastModified", EmitDefaultValue=false)]
         public DateTime? DateDocumentLastModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The count representing the number of documents of type Article in the KnowledgeBase
         /// </summary>
         /// <value>The count representing the number of documents of type Article in the KnowledgeBase</value>
         [DataMember(Name="articleCount", EmitDefaultValue=false)]
         public int? ArticleCount { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Flag that indicates the knowledge base is published
         /// </summary>
         /// <value>Flag that indicates the knowledge base is published</value>
         [DataMember(Name="published", EmitDefaultValue=false)]
         public bool? Published { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -279,7 +219,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class KnowledgeBase {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -399,40 +339,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.CoreLanguage != null)
                     hash = hash * 59 + this.CoreLanguage.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.FaqCount != null)
                     hash = hash * 59 + this.FaqCount.GetHashCode();
-                
+
                 if (this.DateDocumentLastModified != null)
                     hash = hash * 59 + this.DateDocumentLastModified.GetHashCode();
-                
+
                 if (this.ArticleCount != null)
                     hash = hash * 59 + this.ArticleCount.GetHashCode();
-                
+
                 if (this.Published != null)
                     hash = hash * 59 + this.Published.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

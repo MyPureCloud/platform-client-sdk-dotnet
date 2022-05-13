@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ProcessScheduleUpdateUploadRequest :  IEquatable<ProcessScheduleUpdateUploadRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ProcessScheduleUpdateUploadRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ProcessScheduleUpdateUploadRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ProcessScheduleUpdateUploadRequest" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The uploadKey provided by the request to get an upload URL
         /// </summary>
         /// <value>The uploadKey provided by the request to get an upload URL</value>
         [DataMember(Name="uploadKey", EmitDefaultValue=false)]
         public string UploadKey { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of teams to which the users being modified belong. Only required if the requesting user has conditional permission to wfm:schedule:edit
         /// </summary>
         /// <value>The list of teams to which the users being modified belong. Only required if the requesting user has conditional permission to wfm:schedule:edit</value>
         [DataMember(Name="teamIds", EmitDefaultValue=false)]
         public List<string> TeamIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The set of muIds to which agents belong if agents are being newly added to the schedule, if the requesting user has conditional permission to wfm:schedule:edit
         /// </summary>
         /// <value>The set of muIds to which agents belong if agents are being newly added to the schedule, if the requesting user has conditional permission to wfm:schedule:edit</value>
         [DataMember(Name="managementUnitIdsForAddedTeamUsers", EmitDefaultValue=false)]
         public List<string> ManagementUnitIdsForAddedTeamUsers { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ProcessScheduleUpdateUploadRequest {\n");
-            
+
             sb.Append("  UploadKey: ").Append(UploadKey).Append("\n");
             sb.Append("  TeamIds: ").Append(TeamIds).Append("\n");
             sb.Append("  ManagementUnitIdsForAddedTeamUsers: ").Append(ManagementUnitIdsForAddedTeamUsers).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UploadKey != null)
                     hash = hash * 59 + this.UploadKey.GetHashCode();
-                
+
                 if (this.TeamIds != null)
                     hash = hash * 59 + this.TeamIds.GetHashCode();
-                
+
                 if (this.ManagementUnitIdsForAddedTeamUsers != null)
                     hash = hash * 59 + this.ManagementUnitIdsForAddedTeamUsers.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AllTimePoints :  IEquatable<AllTimePoints>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AllTimePoints" /> class.
         /// </summary>
@@ -44,34 +26,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Queried user
         /// </summary>
         /// <value>Queried user</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UserReference User { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Queried end workday for all time points to be collected. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Queried end workday for all time points to be collected. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateEndWorkday", EmitDefaultValue=false)]
         public String DateEndWorkday { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// All time point collected bt the user
         /// </summary>
         /// <value>All time point collected bt the user</value>
         [DataMember(Name="allTimePoints", EmitDefaultValue=false)]
         public long? _AllTimePoints { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AllTimePoints {\n");
-            
+
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  DateEndWorkday: ").Append(DateEndWorkday).Append("\n");
             sb.Append("  _AllTimePoints: ").Append(_AllTimePoints).Append("\n");
@@ -152,16 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.DateEndWorkday != null)
                     hash = hash * 59 + this.DateEndWorkday.GetHashCode();
-                
+
                 if (this._AllTimePoints != null)
                     hash = hash * 59 + this._AllTimePoints.GetHashCode();
-                
+
                 return hash;
             }
         }

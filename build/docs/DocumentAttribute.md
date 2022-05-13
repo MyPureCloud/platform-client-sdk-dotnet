@@ -7,7 +7,7 @@ title: DocumentAttribute
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Attribute** | [**PureCloudPlatform.Client.V2.Model.Attribute**](Attribute.html) |  | [optional] |
+| **Attribute** | [**PureCloudPlatform.Client.V2.Model.Attribute**](PureCloudPlatform.Client.V2.Model.Attribute.html) |  | [optional] |
 | **Values** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 

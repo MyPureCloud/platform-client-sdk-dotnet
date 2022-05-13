@@ -18,13 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CoachingAppointmentAggregateRequest :  IEquatable<CoachingAppointmentAggregateRequest>
     {
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Metrics
         /// </summary>
@@ -75,12 +68,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "nInvalidScheduleActivities")]
             Ninvalidscheduleactivities
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets GroupBy
         /// </summary>
@@ -101,28 +88,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "attendeeId")]
             Attendeeid
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingAppointmentAggregateRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CoachingAppointmentAggregateRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingAppointmentAggregateRequest" /> class.
         /// </summary>
@@ -139,43 +110,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Interval to aggregate across. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
         /// <value>Interval to aggregate across. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of metrics to aggregate.  If omitted, all metrics are returned.
         /// </summary>
         /// <value>A list of metrics to aggregate.  If omitted, all metrics are returned.</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
         public List<MetricsEnum> Metrics { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// An optional list of items by which to group the result data.
         /// </summary>
         /// <value>An optional list of items by which to group the result data.</value>
         [DataMember(Name="groupBy", EmitDefaultValue=false)]
         public List<GroupByEnum> GroupBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The filter applied to the data
         /// </summary>
         /// <value>The filter applied to the data</value>
         [DataMember(Name="filter", EmitDefaultValue=false)]
         public QueryRequestFilter Filter { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -184,7 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CoachingAppointmentAggregateRequest {\n");
-            
+
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
             sb.Append("  GroupBy: ").Append(GroupBy).Append("\n");
@@ -262,19 +233,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
+
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
-                
+
                 if (this.GroupBy != null)
                     hash = hash * 59 + this.GroupBy.GetHashCode();
-                
+
                 if (this.Filter != null)
                     hash = hash * 59 + this.Filter.GetHashCode();
-                
+
                 return hash;
             }
         }

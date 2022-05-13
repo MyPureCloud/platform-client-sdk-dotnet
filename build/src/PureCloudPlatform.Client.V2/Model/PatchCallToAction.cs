@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchCallToAction :  IEquatable<PatchCallToAction>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Where the URL should be opened when the user clicks on the call to action button.
         /// </summary>
@@ -53,24 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Self")]
             Self
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Where the URL should be opened when the user clicks on the call to action button.
         /// </summary>
         /// <value>Where the URL should be opened when the user clicks on the call to action button.</value>
         [DataMember(Name="target", EmitDefaultValue=false)]
         public TargetEnum? Target { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchCallToAction" /> class.
         /// </summary>
@@ -85,27 +65,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Text displayed on the call to action button.
         /// </summary>
         /// <value>Text displayed on the call to action button.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URL to open when user clicks on the call to action button.
         /// </summary>
         /// <value>URL to open when user clicks on the call to action button.</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -114,7 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PatchCallToAction {\n");
-            
+
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  Target: ").Append(Target).Append("\n");
@@ -186,16 +166,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.Target != null)
                     hash = hash * 59 + this.Target.GetHashCode();
-                
+
                 return hash;
             }
         }

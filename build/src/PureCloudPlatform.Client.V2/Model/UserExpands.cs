@@ -18,49 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserExpands :  IEquatable<UserExpands>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserExpands" /> class.
         /// </summary>
@@ -69,79 +26,79 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// ACD routing status
         /// </summary>
         /// <value>ACD routing status</value>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public RoutingStatus RoutingStatus { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Active presence
         /// </summary>
         /// <value>Active presence</value>
         [DataMember(Name="presence", EmitDefaultValue=false)]
         public UserPresence Presence { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Active 3rd party presence
         /// </summary>
         /// <value>Active 3rd party presence</value>
         [DataMember(Name="integrationPresence", EmitDefaultValue=false)]
         public UserPresence IntegrationPresence { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Summary of conversion statistics for conversation types.
         /// </summary>
         /// <value>Summary of conversion statistics for conversation types.</value>
         [DataMember(Name="conversationSummary", EmitDefaultValue=false)]
         public UserConversationSummary ConversationSummary { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Determine if out of office is enabled
         /// </summary>
         /// <value>Determine if out of office is enabled</value>
         [DataMember(Name="outOfOffice", EmitDefaultValue=false)]
         public OutOfOffice OutOfOffice { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current geolocation position
         /// </summary>
         /// <value>Current geolocation position</value>
         [DataMember(Name="geolocation", EmitDefaultValue=false)]
         public Geolocation Geolocation { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Effective, default, and last station information
         /// </summary>
         /// <value>Effective, default, and last station information</value>
         [DataMember(Name="station", EmitDefaultValue=false)]
         public UserStations Station { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Roles and permissions assigned to the user
         /// </summary>
         /// <value>Roles and permissions assigned to the user</value>
         [DataMember(Name="authorization", EmitDefaultValue=false)]
         public UserAuthorization Authorization { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -150,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserExpands {\n");
-            
+
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
             sb.Append("  Presence: ").Append(Presence).Append("\n");
             sb.Append("  IntegrationPresence: ").Append(IntegrationPresence).Append("\n");
@@ -252,31 +209,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
-                
+
                 if (this.Presence != null)
                     hash = hash * 59 + this.Presence.GetHashCode();
-                
+
                 if (this.IntegrationPresence != null)
                     hash = hash * 59 + this.IntegrationPresence.GetHashCode();
-                
+
                 if (this.ConversationSummary != null)
                     hash = hash * 59 + this.ConversationSummary.GetHashCode();
-                
+
                 if (this.OutOfOffice != null)
                     hash = hash * 59 + this.OutOfOffice.GetHashCode();
-                
+
                 if (this.Geolocation != null)
                     hash = hash * 59 + this.Geolocation.GetHashCode();
-                
+
                 if (this.Station != null)
                     hash = hash * 59 + this.Station.GetHashCode();
-                
+
                 if (this.Authorization != null)
                     hash = hash * 59 + this.Authorization.GetHashCode();
-                
+
                 return hash;
             }
         }

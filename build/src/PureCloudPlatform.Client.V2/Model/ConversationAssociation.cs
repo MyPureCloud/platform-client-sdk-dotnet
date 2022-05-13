@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationAssociation :  IEquatable<ConversationAssociation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Media type
         /// </summary>
@@ -98,32 +87,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SCREENSHARE")]
             Screenshare
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Media type
         /// </summary>
         /// <value>Media type</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationAssociation" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConversationAssociation() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationAssociation" /> class.
         /// </summary>
@@ -140,36 +115,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// An external contact ID.  If not supplied, implies the conversation should be disassociated with any external contact.
         /// </summary>
         /// <value>An external contact ID.  If not supplied, implies the conversation should be disassociated with any external contact.</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Conversation ID
         /// </summary>
         /// <value>Conversation ID</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Communication ID
         /// </summary>
         /// <value>Communication ID</value>
         [DataMember(Name="communicationId", EmitDefaultValue=false)]
         public string CommunicationId { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -178,7 +153,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationAssociation {\n");
-            
+
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  CommunicationId: ").Append(CommunicationId).Append("\n");
@@ -256,19 +231,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.CommunicationId != null)
                     hash = hash * 59 + this.CommunicationId.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 return hash;
             }
         }

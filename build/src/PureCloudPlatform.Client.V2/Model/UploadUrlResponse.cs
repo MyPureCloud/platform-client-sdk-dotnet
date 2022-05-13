@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UploadUrlResponse :  IEquatable<UploadUrlResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UploadUrlResponse" /> class.
         /// </summary>
@@ -44,34 +26,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Presigned URL to PUT the file to
         /// </summary>
         /// <value>Presigned URL to PUT the file to</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Key that identifies the file in the storage including the file name
         /// </summary>
         /// <value>Key that identifies the file in the storage including the file name</value>
         [DataMember(Name="uploadKey", EmitDefaultValue=false)]
         public string UploadKey { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required headers when uploading a file through PUT request to the URL
         /// </summary>
         /// <value>Required headers when uploading a file through PUT request to the URL</value>
         [DataMember(Name="headers", EmitDefaultValue=false)]
         public Dictionary<string, string> Headers { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UploadUrlResponse {\n");
-            
+
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  UploadKey: ").Append(UploadKey).Append("\n");
             sb.Append("  Headers: ").Append(Headers).Append("\n");
@@ -152,16 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.UploadKey != null)
                     hash = hash * 59 + this.UploadKey.GetHashCode();
-                
+
                 if (this.Headers != null)
                     hash = hash * 59 + this.Headers.GetHashCode();
-                
+
                 return hash;
             }
         }

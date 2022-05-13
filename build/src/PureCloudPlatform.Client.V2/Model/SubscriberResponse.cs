@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SubscriberResponse :  IEquatable<SubscriberResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriberResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SubscriberResponse() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriberResponse" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Suggested valid addresses
         /// </summary>
         /// <value>Suggested valid addresses</value>
         [DataMember(Name="messageReturned", EmitDefaultValue=false)]
         public List<string> MessageReturned { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// http status
         /// </summary>
         /// <value>http status</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SubscriberResponse {\n");
-            
+
             sb.Append("  MessageReturned: ").Append(MessageReturned).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MessageReturned != null)
                     hash = hash * 59 + this.MessageReturned.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 return hash;
             }
         }

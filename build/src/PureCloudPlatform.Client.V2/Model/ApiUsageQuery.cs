@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ApiUsageQuery :  IEquatable<ApiUsageQuery>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Date granularity of the results
         /// </summary>
@@ -56,12 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Month")]
             Month
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets GroupBy
         /// </summary>
@@ -106,12 +95,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "HttpMethod")]
             Httpmethod
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Metrics
         /// </summary>
@@ -162,32 +145,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Requests")]
             Requests
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Date granularity of the results
         /// </summary>
         /// <value>Date granularity of the results</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public GranularityEnum? Granularity { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiUsageQuery" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ApiUsageQuery() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiUsageQuery" /> class.
         /// </summary>
@@ -204,36 +173,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
         /// <value>Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group.
         /// </summary>
         /// <value>Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group.</value>
         [DataMember(Name="groupBy", EmitDefaultValue=false)]
         public List<GroupByEnum> GroupBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).
         /// </summary>
         /// <value>Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
         public List<MetricsEnum> Metrics { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -242,7 +211,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ApiUsageQuery {\n");
-            
+
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Granularity: ").Append(Granularity).Append("\n");
             sb.Append("  GroupBy: ").Append(GroupBy).Append("\n");
@@ -320,19 +289,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
+
                 if (this.Granularity != null)
                     hash = hash * 59 + this.Granularity.GetHashCode();
-                
+
                 if (this.GroupBy != null)
                     hash = hash * 59 + this.GroupBy.GetHashCode();
-                
+
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification :  IEquatable<LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<LearningAssignmentRuleRunTopicLearningAssignmentsCreated> Entities { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public int? Total { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification {\n");
-            
+
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
+
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
-                
+
                 return hash;
             }
         }

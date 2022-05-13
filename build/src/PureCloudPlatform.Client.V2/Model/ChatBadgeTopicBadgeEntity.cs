@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ChatBadgeTopicBadgeEntity :  IEquatable<ChatBadgeTopicBadgeEntity>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatBadgeTopicBadgeEntity" /> class.
         /// </summary>
@@ -36,15 +28,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets JabberId
         /// </summary>
         [DataMember(Name="jabberId", EmitDefaultValue=false)]
         public string JabberId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ChatBadgeTopicBadgeEntity {\n");
-            
+
             sb.Append("  JabberId: ").Append(JabberId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -113,10 +105,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.JabberId != null)
                     hash = hash * 59 + this.JabberId.GetHashCode();
-                
+
                 return hash;
             }
         }

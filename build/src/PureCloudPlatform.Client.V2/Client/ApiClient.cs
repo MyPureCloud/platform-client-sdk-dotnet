@@ -221,7 +221,7 @@ namespace PureCloudPlatform.Client.V2.Client
             RestClient.UserAgent = Configuration.UserAgent;
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "144.1.0");
+            request.AddHeader("purecloud-sdk", "145.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             IRestResponse response;
@@ -229,10 +229,7 @@ namespace PureCloudPlatform.Client.V2.Client
             string url = fullUrl == null ? path : fullUrl.ToString();
             do
             {
-            
                 response = RestClient.Execute(request);
-            
-            
                 Configuration.Logger.Debug(method.ToString(), url, postBody, (int)response.StatusCode, headerParams);
                 Configuration.Logger.Trace(method.ToString(), url, postBody, (int)response.StatusCode, headerParams, response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()));
             }while(retry.ShouldRetry(response));
@@ -253,7 +250,6 @@ namespace PureCloudPlatform.Client.V2.Client
 
             return (Object) response;
         }
-        
         /// <summary>
         /// Makes the asynchronous HTTP request.
         /// </summary>
@@ -584,7 +580,6 @@ namespace PureCloudPlatform.Client.V2.Client
                 return filename;
             }
         }
-        
 
         public class RetryConfiguration
         {

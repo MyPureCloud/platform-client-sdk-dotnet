@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SecureSession :  IEquatable<SecureSession>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current state of a secure session
         /// </summary>
@@ -62,47 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILED")]
             Failed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current state of a secure session
         /// </summary>
         /// <value>The current state of a secure session</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SecureSession" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SecureSession() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SecureSession" /> class.
         /// </summary>
@@ -121,63 +81,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The flow to execute securely
         /// </summary>
         /// <value>The flow to execute securely</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
         public DomainEntityRef Flow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Customer-provided data
         /// </summary>
         /// <value>Customer-provided data</value>
         [DataMember(Name="userData", EmitDefaultValue=false)]
         public string UserData { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Unique identifier for the participant initiating the secure session.
         /// </summary>
         /// <value>Unique identifier for the participant initiating the secure session.</value>
         [DataMember(Name="sourceParticipantId", EmitDefaultValue=false)]
         public string SourceParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If true, disconnect the agent after creating the session
         /// </summary>
         /// <value>If true, disconnect the agent after creating the session</value>
         [DataMember(Name="disconnect", EmitDefaultValue=false)]
         public bool? Disconnect { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -186,7 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SecureSession {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  UserData: ").Append(UserData).Append("\n");
@@ -282,28 +242,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Flow != null)
                     hash = hash * 59 + this.Flow.GetHashCode();
-                
+
                 if (this.UserData != null)
                     hash = hash * 59 + this.UserData.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.SourceParticipantId != null)
                     hash = hash * 59 + this.SourceParticipantId.GetHashCode();
-                
+
                 if (this.Disconnect != null)
                     hash = hash * 59 + this.Disconnect.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

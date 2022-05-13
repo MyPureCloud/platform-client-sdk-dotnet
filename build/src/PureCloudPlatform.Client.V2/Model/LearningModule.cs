@@ -18,32 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningModule :  IEquatable<LearningModule>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The source of the learning module
         /// </summary>
@@ -71,28 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "GenesysBeyond")]
             Genesysbeyond
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type for the learning module
         /// </summary>
@@ -126,83 +78,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Assessment")]
             Assessment
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The source of the learning module
         /// </summary>
         /// <value>The source of the learning module</value>
         [DataMember(Name="source", EmitDefaultValue=false)]
-        public SourceEnum? Source { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        public SourceEnum? Source { get; private set; }
         /// <summary>
         /// The type for the learning module
         /// </summary>
         /// <value>The type for the learning module</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LearningModule() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModule" /> class.
         /// </summary>
@@ -227,173 +120,173 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of learning module
         /// </summary>
         /// <value>The name of learning module</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user who created learning module
         /// </summary>
         /// <value>The user who created learning module</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public UserReference CreatedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date/time learning module was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date/time learning module was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user who modified learning module
         /// </summary>
         /// <value>The user who modified learning module</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public UserReference ModifiedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date/time learning module was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date/time learning module was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The version of published learning module
         /// </summary>
         /// <value>The version of published learning module</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The external ID of the learning module
         /// </summary>
         /// <value>The external ID of the learning module</value>
         [DataMember(Name="externalId", EmitDefaultValue=false)]
         public string ExternalId { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The rule for learning module; read-only, and only populated when requested via expand param.
         /// </summary>
         /// <value>The rule for learning module; read-only, and only populated when requested via expand param.</value>
         [DataMember(Name="rule", EmitDefaultValue=false)]
         public LearningModuleRule Rule { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If true, learning module is archived
         /// </summary>
         /// <value>If true, learning module is archived</value>
         [DataMember(Name="isArchived", EmitDefaultValue=false)]
         public bool? IsArchived { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If true, learning module is published
         /// </summary>
         /// <value>If true, learning module is published</value>
         [DataMember(Name="isPublished", EmitDefaultValue=false)]
         public bool? IsPublished { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of learning module
         /// </summary>
         /// <value>The description of learning module</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The completion time of learning module in days
         /// </summary>
         /// <value>The completion time of learning module in days</value>
         [DataMember(Name="completionTimeInDays", EmitDefaultValue=false)]
         public int? CompletionTimeInDays { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The list of inform steps in a learning module
         /// </summary>
         /// <value>The list of inform steps in a learning module</value>
         [DataMember(Name="informSteps", EmitDefaultValue=false)]
         public List<LearningModuleInformStep> InformSteps { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The assessment form for learning module
         /// </summary>
         /// <value>The assessment form for learning module</value>
         [DataMember(Name="assessmentForm", EmitDefaultValue=false)]
         public AssessmentForm AssessmentForm { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The learning module summary data
         /// </summary>
         /// <value>The learning module summary data</value>
         [DataMember(Name="summaryData", EmitDefaultValue=false)]
         public LearningModuleSummary SummaryData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The cover art for the learning module
         /// </summary>
         /// <value>The cover art for the learning module</value>
         [DataMember(Name="coverArt", EmitDefaultValue=false)]
         public LearningModuleCoverArtResponse CoverArt { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -402,7 +295,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningModule {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
@@ -576,67 +469,66 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.ExternalId != null)
                     hash = hash * 59 + this.ExternalId.GetHashCode();
-                
+
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
-                
+
                 if (this.Rule != null)
                     hash = hash * 59 + this.Rule.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.IsArchived != null)
                     hash = hash * 59 + this.IsArchived.GetHashCode();
-                
+
                 if (this.IsPublished != null)
                     hash = hash * 59 + this.IsPublished.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.CompletionTimeInDays != null)
                     hash = hash * 59 + this.CompletionTimeInDays.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.InformSteps != null)
                     hash = hash * 59 + this.InformSteps.GetHashCode();
-                
+
                 if (this.AssessmentForm != null)
                     hash = hash * 59 + this.AssessmentForm.GetHashCode();
-                
+
                 if (this.SummaryData != null)
                     hash = hash * 59 + this.SummaryData.GetHashCode();
-                
+
                 if (this.CoverArt != null)
                     hash = hash * 59 + this.CoverArt.GetHashCode();
-                
+
                 return hash;
             }
         }

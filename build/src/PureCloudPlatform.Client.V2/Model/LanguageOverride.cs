@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LanguageOverride :  IEquatable<LanguageOverride>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LanguageOverride" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LanguageOverride() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LanguageOverride" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The language code of the language being overridden
         /// </summary>
         /// <value>The language code of the language being overridden</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the TTS engine to use for this language override
         /// </summary>
         /// <value>The ID of the TTS engine to use for this language override</value>
         [DataMember(Name="engine", EmitDefaultValue=false)]
         public string Engine { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the voice to use for this language override. The voice must be supported by the chosen engine.
         /// </summary>
         /// <value>The ID of the voice to use for this language override. The voice must be supported by the chosen engine.</value>
         [DataMember(Name="voice", EmitDefaultValue=false)]
         public string Voice { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LanguageOverride {\n");
-            
+
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Engine: ").Append(Engine).Append("\n");
             sb.Append("  Voice: ").Append(Voice).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.Engine != null)
                     hash = hash * 59 + this.Engine.GetHashCode();
-                
+
                 if (this.Voice != null)
                     hash = hash * 59 + this.Voice.GetHashCode();
-                
+
                 return hash;
             }
         }

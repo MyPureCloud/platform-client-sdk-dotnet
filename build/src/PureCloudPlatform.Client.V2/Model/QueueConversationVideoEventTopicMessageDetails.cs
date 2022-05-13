@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueueConversationVideoEventTopicMessageDetails :  IEquatable<QueueConversationVideoEventTopicMessageDetails>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the delivery status of the message.
         /// </summary>
@@ -83,44 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "read")]
             Read
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the delivery status of the message.
         /// </summary>
         /// <value>Indicates the delivery status of the message.</value>
         [DataMember(Name="messageStatus", EmitDefaultValue=false)]
         public MessageStatusEnum? MessageStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationVideoEventTopicMessageDetails" /> class.
         /// </summary>
@@ -143,63 +103,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// UUID identifying the message media.
         /// </summary>
         /// <value>UUID identifying the message media.</value>
         [DataMember(Name="messageId", EmitDefaultValue=false)]
         public string MessageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when the message was sent or received.
         /// </summary>
         /// <value>The time when the message was sent or received.</value>
         [DataMember(Name="messageTime", EmitDefaultValue=false)]
         public DateTime? MessageTime { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits.
         /// </summary>
         /// <value>The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits.</value>
         [DataMember(Name="messageSegmentCount", EmitDefaultValue=false)]
         public int? MessageSegmentCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The media (images, files, etc) associated with this message, if any
         /// </summary>
         /// <value>The media (images, files, etc) associated with this message, if any</value>
         [DataMember(Name="media", EmitDefaultValue=false)]
         public List<QueueConversationVideoEventTopicMessageMedia> Media { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Detailed information about an error response.
         /// </summary>
         /// <value>Detailed information about an error response.</value>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public QueueConversationVideoEventTopicErrorDetails ErrorInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of stickers included in the message
         /// </summary>
         /// <value>A list of stickers included in the message</value>
         [DataMember(Name="stickers", EmitDefaultValue=false)]
         public List<QueueConversationVideoEventTopicMessageSticker> Stickers { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -208,7 +168,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueueConversationVideoEventTopicMessageDetails {\n");
-            
+
             sb.Append("  MessageId: ").Append(MessageId).Append("\n");
             sb.Append("  MessageTime: ").Append(MessageTime).Append("\n");
             sb.Append("  MessageStatus: ").Append(MessageStatus).Append("\n");
@@ -304,28 +264,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MessageId != null)
                     hash = hash * 59 + this.MessageId.GetHashCode();
-                
+
                 if (this.MessageTime != null)
                     hash = hash * 59 + this.MessageTime.GetHashCode();
-                
+
                 if (this.MessageStatus != null)
                     hash = hash * 59 + this.MessageStatus.GetHashCode();
-                
+
                 if (this.MessageSegmentCount != null)
                     hash = hash * 59 + this.MessageSegmentCount.GetHashCode();
-                
+
                 if (this.Media != null)
                     hash = hash * 59 + this.Media.GetHashCode();
-                
+
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
+
                 if (this.Stickers != null)
                     hash = hash * 59 + this.Stickers.GetHashCode();
-                
+
                 return hash;
             }
         }

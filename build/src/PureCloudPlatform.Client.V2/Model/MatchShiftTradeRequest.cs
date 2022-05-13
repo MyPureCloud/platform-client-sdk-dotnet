@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MatchShiftTradeRequest :  IEquatable<MatchShiftTradeRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MatchShiftTradeRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected MatchShiftTradeRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MatchShiftTradeRequest" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the schedule with which the shift trade is associated
         /// </summary>
         /// <value>The ID of the schedule with which the shift trade is associated</value>
         [DataMember(Name="receivingScheduleId", EmitDefaultValue=false)]
         public string ReceivingScheduleId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the shift the receiving user is giving up in trade, if applicable
         /// </summary>
         /// <value>The ID of the shift the receiving user is giving up in trade, if applicable</value>
         [DataMember(Name="receivingShiftId", EmitDefaultValue=false)]
         public string ReceivingShiftId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version metadata for the shift trade
         /// </summary>
         /// <value>Version metadata for the shift trade</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MatchShiftTradeRequest {\n");
-            
+
             sb.Append("  ReceivingScheduleId: ").Append(ReceivingScheduleId).Append("\n");
             sb.Append("  ReceivingShiftId: ").Append(ReceivingShiftId).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ReceivingScheduleId != null)
                     hash = hash * 59 + this.ReceivingScheduleId.GetHashCode();
-                
+
                 if (this.ReceivingShiftId != null)
                     hash = hash * 59 + this.ReceivingShiftId.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,41 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebDeployment :  IEquatable<WebDeployment>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current status of the deployment
         /// </summary>
@@ -98,53 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Deleting")]
             Deleting
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current status of the deployment
         /// </summary>
         /// <value>The current status of the deployment</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WebDeployment" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WebDeployment() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WebDeployment" /> class.
         /// </summary>
@@ -167,117 +97,117 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The deployment ID
         /// </summary>
         /// <value>The deployment ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The deployment name
         /// </summary>
         /// <value>The deployment name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of the config
         /// </summary>
         /// <value>The description of the config</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The config version this deployment uses
         /// </summary>
         /// <value>The config version this deployment uses</value>
         [DataMember(Name="configuration", EmitDefaultValue=false)]
         public WebDeploymentConfigurationVersionEntityRef Configuration { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Property indicates whether all domains are allowed or not. allowedDomains must be empty when this is set as true.
         /// </summary>
         /// <value>Property indicates whether all domains are allowed or not. allowedDomains must be empty when this is set as true.</value>
         [DataMember(Name="allowAllDomains", EmitDefaultValue=false)]
         public bool? AllowAllDomains { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of domains that are approved to use this deployment; the list will be added to CORS headers for ease of web use.
         /// </summary>
         /// <value>The list of domains that are approved to use this deployment; the list will be added to CORS headers for ease of web use.</value>
         [DataMember(Name="allowedDomains", EmitDefaultValue=false)]
         public List<string> AllowedDomains { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Javascript snippet used to load the config
         /// </summary>
         /// <value>Javascript snippet used to load the config</value>
         [DataMember(Name="snippet", EmitDefaultValue=false)]
         public string Snippet { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the deployment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the deployment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the deployment was most recently modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the deployment was most recently modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A reference to the user who most recently modified the deployment
         /// </summary>
         /// <value>A reference to the user who most recently modified the deployment</value>
         [DataMember(Name="lastModifiedUser", EmitDefaultValue=false)]
         public AddressableEntityRef LastModifiedUser { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A reference to the inboundshortmessage flow used by this deployment
         /// </summary>
         /// <value>A reference to the inboundshortmessage flow used by this deployment</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
         public DomainEntityRef Flow { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -286,7 +216,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebDeployment {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -418,46 +348,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Configuration != null)
                     hash = hash * 59 + this.Configuration.GetHashCode();
-                
+
                 if (this.AllowAllDomains != null)
                     hash = hash * 59 + this.AllowAllDomains.GetHashCode();
-                
+
                 if (this.AllowedDomains != null)
                     hash = hash * 59 + this.AllowedDomains.GetHashCode();
-                
+
                 if (this.Snippet != null)
                     hash = hash * 59 + this.Snippet.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.LastModifiedUser != null)
                     hash = hash * 59 + this.LastModifiedUser.GetHashCode();
-                
+
                 if (this.Flow != null)
                     hash = hash * 59 + this.Flow.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

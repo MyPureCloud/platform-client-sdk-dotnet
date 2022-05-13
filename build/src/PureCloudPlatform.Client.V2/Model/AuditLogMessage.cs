@@ -18,23 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuditLogMessage :  IEquatable<AuditLogMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Name of the service that logged this audit message.
         /// </summary>
@@ -272,16 +255,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NumberPurchasing")]
             Numberpurchasing
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Action that took place.
         /// </summary>
@@ -765,13 +738,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Reset")]
             Reset
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of the entity that was impacted.
         /// </summary>
@@ -1777,10 +1743,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Participant")]
             Participant
         }
-        
-        
-        
-        
         /// <summary>
         /// Status of the event being audited
         /// </summary>
@@ -1814,73 +1776,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "WARNING")]
             Warning
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Name of the service that logged this audit message.
         /// </summary>
         /// <value>Name of the service that logged this audit message.</value>
         [DataMember(Name="serviceName", EmitDefaultValue=false)]
         public ServiceNameEnum? ServiceName { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Action that took place.
         /// </summary>
         /// <value>Action that took place.</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of the entity that was impacted.
         /// </summary>
         /// <value>Type of the entity that was impacted.</value>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public EntityTypeEnum? EntityType { get; set; }
-        
-        
-        
         /// <summary>
         /// Status of the event being audited
         /// </summary>
         /// <value>Status of the event being audited</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditLogMessage" /> class.
         /// </summary>
@@ -1917,105 +1836,105 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Id of the audit message.
         /// </summary>
         /// <value>Id of the audit message.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Home Organization Id associated with this audit message.
         /// </summary>
         /// <value>Home Organization Id associated with this audit message.</value>
         [DataMember(Name="userHomeOrgId", EmitDefaultValue=false)]
         public string UserHomeOrgId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User associated with this audit message.
         /// </summary>
         /// <value>User associated with this audit message.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public DomainEntityRef User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Client associated with this audit message.
         /// </summary>
         /// <value>Client associated with this audit message.</value>
         [DataMember(Name="client", EmitDefaultValue=false)]
         public AddressableEntityRef Client { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of IP addresses of systems that originated or handled the request.
         /// </summary>
         /// <value>List of IP addresses of systems that originated or handled the request.</value>
         [DataMember(Name="remoteIp", EmitDefaultValue=false)]
         public List<string> RemoteIp { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="eventDate", EmitDefaultValue=false)]
         public DateTime? EventDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Message describing the event being audited.
         /// </summary>
         /// <value>Message describing the event being audited.</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public MessageInfo Message { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Entity that was impacted.
         /// </summary>
         /// <value>Entity that was impacted.</value>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public DomainEntityRef Entity { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// List of properties that were changed and changes made to those properties.
         /// </summary>
         /// <value>List of properties that were changed and changes made to those properties.</value>
         [DataMember(Name="propertyChanges", EmitDefaultValue=false)]
         public List<PropertyChange> PropertyChanges { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Additional context for this message.
         /// </summary>
         /// <value>Additional context for this message.</value>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public Dictionary<string, string> Context { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -2024,7 +1943,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuditLogMessage {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  UserHomeOrgId: ").Append(UserHomeOrgId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -2162,49 +2081,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.UserHomeOrgId != null)
                     hash = hash * 59 + this.UserHomeOrgId.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Client != null)
                     hash = hash * 59 + this.Client.GetHashCode();
-                
+
                 if (this.RemoteIp != null)
                     hash = hash * 59 + this.RemoteIp.GetHashCode();
-                
+
                 if (this.ServiceName != null)
                     hash = hash * 59 + this.ServiceName.GetHashCode();
-                
+
                 if (this.EventDate != null)
                     hash = hash * 59 + this.EventDate.GetHashCode();
-                
+
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
-                
+
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.PropertyChanges != null)
                     hash = hash * 59 + this.PropertyChanges.GetHashCode();
-                
+
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
-                
+
                 return hash;
             }
         }

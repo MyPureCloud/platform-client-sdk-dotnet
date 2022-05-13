@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchShiftTradeRequest :  IEquatable<PatchShiftTradeRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchShiftTradeRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PatchShiftTradeRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchShiftTradeRequest" /> class.
         /// </summary>
@@ -63,43 +40,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Update the ID of the receiving user to direct the request at a specific user, or set the wrapped id to null to open up a trade to be matched by any user.
         /// </summary>
         /// <value>Update the ID of the receiving user to direct the request at a specific user, or set the wrapped id to null to open up a trade to be matched by any user.</value>
         [DataMember(Name="receivingUserId", EmitDefaultValue=false)]
         public ValueWrapperString ReceivingUserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Update the expiration time for this shift trade.
         /// </summary>
         /// <value>Update the expiration time for this shift trade.</value>
         [DataMember(Name="expiration", EmitDefaultValue=false)]
         public ValueWrapperDate Expiration { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Update the acceptable intervals the initiating user is willing to accept in trade. Setting the enclosed list to empty will make this a one sided trade request
         /// </summary>
         /// <value>Update the acceptable intervals the initiating user is willing to accept in trade. Setting the enclosed list to empty will make this a one sided trade request</value>
         [DataMember(Name="acceptableIntervals", EmitDefaultValue=false)]
         public ListWrapperInterval AcceptableIntervals { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version metadata
         /// </summary>
         /// <value>Version metadata</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PatchShiftTradeRequest {\n");
-            
+
             sb.Append("  ReceivingUserId: ").Append(ReceivingUserId).Append("\n");
             sb.Append("  Expiration: ").Append(Expiration).Append("\n");
             sb.Append("  AcceptableIntervals: ").Append(AcceptableIntervals).Append("\n");
@@ -186,19 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ReceivingUserId != null)
                     hash = hash * 59 + this.ReceivingUserId.GetHashCode();
-                
+
                 if (this.Expiration != null)
                     hash = hash * 59 + this.Expiration.GetHashCode();
-                
+
                 if (this.AcceptableIntervals != null)
                     hash = hash * 59 + this.AcceptableIntervals.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

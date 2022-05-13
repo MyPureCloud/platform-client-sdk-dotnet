@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PhoneChangeTopicLineStatus :  IEquatable<PhoneChangeTopicLineStatus>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneChangeTopicLineStatus" /> class.
         /// </summary>
@@ -64,47 +36,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Reachable
         /// </summary>
         [DataMember(Name="reachable", EmitDefaultValue=false)]
         public bool? Reachable { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AddressOfRecord
         /// </summary>
         [DataMember(Name="addressOfRecord", EmitDefaultValue=false)]
         public string AddressOfRecord { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ContactAddresses
         /// </summary>
         [DataMember(Name="contactAddresses", EmitDefaultValue=false)]
         public List<string> ContactAddresses { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ReachableStateTime
         /// </summary>
         [DataMember(Name="reachableStateTime", EmitDefaultValue=false)]
         public DateTime? ReachableStateTime { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneChangeTopicLineStatus {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Reachable: ").Append(Reachable).Append("\n");
             sb.Append("  AddressOfRecord: ").Append(AddressOfRecord).Append("\n");
@@ -197,22 +169,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Reachable != null)
                     hash = hash * 59 + this.Reachable.GetHashCode();
-                
+
                 if (this.AddressOfRecord != null)
                     hash = hash * 59 + this.AddressOfRecord.GetHashCode();
-                
+
                 if (this.ContactAddresses != null)
                     hash = hash * 59 + this.ContactAddresses.GetHashCode();
-                
+
                 if (this.ReachableStateTime != null)
                     hash = hash * 59 + this.ReachableStateTime.GetHashCode();
-                
+
                 return hash;
             }
         }

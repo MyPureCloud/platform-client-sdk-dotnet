@@ -543,7 +543,7 @@ namespace Example
 
 <a name="getintegrationsaction"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) GetIntegrationsAction (string actionId, string expand = null, bool? includeConfig = null)
+## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) GetIntegrationsAction (string actionId, string expand = null, bool? includeConfig = null)
 
 
 
@@ -580,7 +580,7 @@ namespace Example
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
             var expand = expand_example;  // string | Indicates a field in the response which should be expanded. (optional) 
-            var includeConfig = true;  // bool? | Return config in response. (optional)  (default to false)
+            var includeConfig = includeConfig_example;  // bool? | Return config in response. (optional)  (default to false)
 
             try
             { 
@@ -604,16 +604,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **expand** | **string**| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: contract |
-| **includeConfig** | **bool?**| Return config in response. | [optional] [default to false] |
+| **includeConfig** | **bool?**| Return config in response. | [optional] [default to false]<br />**Values**: true, false |
 {: class="table table-striped"}
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
 
 <a name="getintegrationsactiondraft"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) GetIntegrationsActionDraft (string actionId, string expand = null, bool? includeConfig = null)
+## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) GetIntegrationsActionDraft (string actionId, string expand = null, bool? includeConfig = null)
 
 
 
@@ -650,7 +650,7 @@ namespace Example
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
             var expand = expand_example;  // string | Indicates a field in the response which should be expanded. (optional) 
-            var includeConfig = true;  // bool? | Return config in response. (optional)  (default to false)
+            var includeConfig = includeConfig_example;  // bool? | Return config in response. (optional)  (default to false)
 
             try
             { 
@@ -674,12 +674,12 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **expand** | **string**| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: contract |
-| **includeConfig** | **bool?**| Return config in response. | [optional] [default to false] |
+| **includeConfig** | **bool?**| Return config in response. | [optional] [default to false]<br />**Values**: true, false |
 {: class="table table-striped"}
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
 
 <a name="getintegrationsactiondraftschema"></a>
 
@@ -1626,6 +1626,8 @@ UC integration client application configuration.
 
 This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
 
+
+
 Requires ANY permissions: 
 
 * integration:unifiedCommunications:view
@@ -1919,8 +1921,8 @@ namespace Example
             var apiInstance = new IntegrationsApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
-            var sortOrder = sortOrder_example;  // string | Order by (optional)  (default to descending)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "timestamp")
+            var sortOrder = sortOrder_example;  // string | Order by (optional)  (default to "descending")
             var entityId = entityId_example;  // string | Include only events with this entity ID (optional) 
 
             try
@@ -1945,8 +1947,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to timestamp] |
-| **sortOrder** | **string**| Order by | [optional] [default to descending] |
+| **sortBy** | **string**| Sort by | [optional] [default to "timestamp"] |
+| **sortOrder** | **string**| Order by | [optional] [default to "descending"] |
 | **entityId** | **string**| Include only events with this entity ID | [optional]  |
 {: class="table table-striped"}
 
@@ -2630,7 +2632,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **includeVoices** | **bool?**| Include voices for the engine | [optional] [default to false] |
 | **name** | **string**| Filter on engine name | [optional]  |
-| **language** | **string**| Filter on supported language. If includeVoices=true then the voices are also filtered. | [optional]  |
+| **language** | **string**| Filter on supported language. If includeVoices&#x3D;true then the voices are also filtered. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2982,7 +2984,7 @@ namespace Example
 
 <a name="patchintegration"></a>
 
-## [**Integration**](Integration.html) PatchIntegration (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+## [**Integration**](Integration.html) PatchIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, Integration body = null)
 
 
 
@@ -3017,18 +3019,18 @@ namespace Example
 
             var apiInstance = new IntegrationsApi();
             var integrationId = integrationId_example;  // string | Integration Id
-            var body = new Integration(); // Integration | Integration Update (optional) 
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            var body = new Integration(); // Integration | Integration Update (optional) 
 
             try
             { 
                 // Update an integration.
-                Integration result = apiInstance.PatchIntegration(integrationId, body, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                Integration result = apiInstance.PatchIntegration(integrationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3046,13 +3048,13 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration Id |  |
-| **body** | [**Integration**](Integration.html)| Integration Update | [optional]  |
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
 | **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
+| **body** | [**Integration**](Integration.html)| Integration Update | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3061,7 +3063,7 @@ namespace Example
 
 <a name="patchintegrationsaction"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) PatchIntegrationsAction (string actionId, UpdateActionInput body)
+## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) PatchIntegrationsAction (string actionId, UpdateActionInput body)
 
 
 
@@ -3124,11 +3126,11 @@ namespace Example
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
 
 <a name="patchintegrationsactiondraft"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) PatchIntegrationsActionDraft (string actionId, UpdateDraftInput body)
+## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) PatchIntegrationsActionDraft (string actionId, UpdateDraftInput body)
 
 
 
@@ -3191,7 +3193,7 @@ namespace Example
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
 
 <a name="postintegrations"></a>
 
@@ -3260,7 +3262,7 @@ namespace Example
 
 <a name="postintegrationsactiondraft"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) PostIntegrationsActionDraft (string actionId)
+## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) PostIntegrationsActionDraft (string actionId)
 
 
 
@@ -3321,11 +3323,11 @@ namespace Example
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
 
 <a name="postintegrationsactiondraftpublish"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) PostIntegrationsActionDraftPublish (string actionId, PublishDraftInput body)
+## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) PostIntegrationsActionDraftPublish (string actionId, PublishDraftInput body)
 
 
 
@@ -3388,7 +3390,7 @@ namespace Example
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
 
 <a name="postintegrationsactiondrafttest"></a>
 
@@ -3427,7 +3429,7 @@ namespace Example
 
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
-            var body = ;  // Object | Map of parameters used for variable substitution.
+            var body = new Object(); // Object | Map of parameters used for variable substitution.
 
             try
             { 
@@ -3450,7 +3452,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **body** | **Object**| Map of parameters used for variable substitution. |  |
+| **body** | [**Object**](Object.html)| Map of parameters used for variable substitution. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3495,7 +3497,7 @@ namespace Example
 
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
-            var body = ;  // Object | Map of parameters used for variable substitution.
+            var body = new Object(); // Object | Map of parameters used for variable substitution.
 
             try
             { 
@@ -3518,7 +3520,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **body** | **Object**| Map of parameters used for variable substitution. |  |
+| **body** | [**Object**](Object.html)| Map of parameters used for variable substitution. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3563,7 +3565,7 @@ namespace Example
 
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
-            var body = ;  // Object | Map of parameters used for variable substitution.
+            var body = new Object(); // Object | Map of parameters used for variable substitution.
 
             try
             { 
@@ -3586,7 +3588,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **body** | **Object**| Map of parameters used for variable substitution. |  |
+| **body** | [**Object**](Object.html)| Map of parameters used for variable substitution. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3595,7 +3597,7 @@ namespace Example
 
 <a name="postintegrationsactions"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) PostIntegrationsActions (PostActionInput body)
+## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) PostIntegrationsActions (PostActionInput body)
 
 
 
@@ -3656,11 +3658,11 @@ namespace Example
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
 
 <a name="postintegrationsactionsdrafts"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) PostIntegrationsActionsDrafts (PostActionInput body)
+## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) PostIntegrationsActionsDrafts (PostActionInput body)
 
 
 
@@ -3721,7 +3723,7 @@ namespace Example
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.Action**](Action.html)
+[**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
 
 <a name="postintegrationscredentials"></a>
 

@@ -18,26 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MessageData :  IEquatable<MessageData>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the message.
         /// </summary>
@@ -65,10 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-        
-        
-        
-        
         /// <summary>
         /// Type of text messenger.
         /// </summary>
@@ -132,13 +108,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "open")]
             Open
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the message.
         /// </summary>
@@ -196,93 +165,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "read")]
             Read
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the message.
         /// </summary>
         /// <value>The direction of the message.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
         /// <summary>
         /// Type of text messenger.
         /// </summary>
         /// <value>Type of text messenger.</value>
         [DataMember(Name="messengerType", EmitDefaultValue=false)]
         public MessengerTypeEnum? MessengerType { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the message.
         /// </summary>
         /// <value>The status of the message.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageData" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected MessageData() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageData" /> class.
         /// </summary>
@@ -317,138 +223,138 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The unique identifier of the message from provider
         /// </summary>
         /// <value>The unique identifier of the message from provider</value>
         [DataMember(Name="providerMessageId", EmitDefaultValue=false)]
         public string ProviderMessageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The sender of the text message.
         /// </summary>
         /// <value>The sender of the text message.</value>
         [DataMember(Name="fromAddress", EmitDefaultValue=false)]
         public string FromAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The recipient of the text message.
         /// </summary>
         /// <value>The recipient of the text message.</value>
         [DataMember(Name="toAddress", EmitDefaultValue=false)]
         public string ToAddress { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// The body of the text message.
         /// </summary>
         /// <value>The body of the text message.</value>
         [DataMember(Name="textBody", EmitDefaultValue=false)]
         public string TextBody { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The media details associated to a message.
         /// </summary>
         /// <value>The media details associated to a message.</value>
         [DataMember(Name="media", EmitDefaultValue=false)]
         public List<MessageMedia> Media { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The sticker details associated to a message.
         /// </summary>
         /// <value>The sticker details associated to a message.</value>
         [DataMember(Name="stickers", EmitDefaultValue=false)]
         public List<MessageSticker> Stickers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The message into normalized format
         /// </summary>
         /// <value>The message into normalized format</value>
         [DataMember(Name="normalizedMessage", EmitDefaultValue=false)]
         public ConversationNormalizedMessage NormalizedMessage { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The delivery event associated with this message in normalized format, if the message direction was outbound
         /// </summary>
         /// <value>The delivery event associated with this message in normalized format, if the message direction was outbound</value>
         [DataMember(Name="normalizedReceipts", EmitDefaultValue=false)]
         public List<ConversationNormalizedMessage> NormalizedReceipts { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User who sent this message.
         /// </summary>
         /// <value>User who sent this message.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public User CreatedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the conversation of this message.
         /// </summary>
         /// <value>The id of the conversation of this message.</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -457,7 +363,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MessageData {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ProviderMessageId: ").Append(ProviderMessageId).Append("\n");
@@ -613,58 +519,57 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ProviderMessageId != null)
                     hash = hash * 59 + this.ProviderMessageId.GetHashCode();
-                
+
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
+
                 if (this.FromAddress != null)
                     hash = hash * 59 + this.FromAddress.GetHashCode();
-                
+
                 if (this.ToAddress != null)
                     hash = hash * 59 + this.ToAddress.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.MessengerType != null)
                     hash = hash * 59 + this.MessengerType.GetHashCode();
-                
+
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Media != null)
                     hash = hash * 59 + this.Media.GetHashCode();
-                
+
                 if (this.Stickers != null)
                     hash = hash * 59 + this.Stickers.GetHashCode();
-                
+
                 if (this.NormalizedMessage != null)
                     hash = hash * 59 + this.NormalizedMessage.GetHashCode();
-                
+
                 if (this.NormalizedReceipts != null)
                     hash = hash * 59 + this.NormalizedReceipts.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

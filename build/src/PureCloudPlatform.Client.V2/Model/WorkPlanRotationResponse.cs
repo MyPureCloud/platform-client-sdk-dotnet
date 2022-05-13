@@ -18,54 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkPlanRotationResponse :  IEquatable<WorkPlanRotationResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanRotationResponse" /> class.
         /// </summary>
@@ -88,87 +40,87 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the work plan rotation is enabled for scheduling
         /// </summary>
         /// <value>Whether the work plan rotation is enabled for scheduling</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date range to which this work plan rotation applies
         /// </summary>
         /// <value>The date range to which this work plan rotation applies</value>
         [DataMember(Name="dateRange", EmitDefaultValue=false)]
         public DateRangeWithOptionalEnd DateRange { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Pattern with ordered list of work plans that rotate on a weekly basis
         /// </summary>
         /// <value>Pattern with ordered list of work plans that rotate on a weekly basis</value>
         [DataMember(Name="pattern", EmitDefaultValue=false)]
         public WorkPlanPatternResponse Pattern { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of agents in this work plan rotation
         /// </summary>
         /// <value>Number of agents in this work plan rotation</value>
         [DataMember(Name="agentCount", EmitDefaultValue=false)]
         public int? AgentCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Agents in this work plan rotation. Populate with expand=agents for GET WorkPlanRotationsList (defaults to empty list)
         /// </summary>
         /// <value>Agents in this work plan rotation. Populate with expand=agents for GET WorkPlanRotationsList (defaults to empty list)</value>
         [DataMember(Name="agents", EmitDefaultValue=false)]
         public List<WorkPlanRotationAgentResponse> Agents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version metadata for this work plan rotation
         /// </summary>
         /// <value>Version metadata for this work plan rotation</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -177,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkPlanRotationResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
@@ -285,34 +237,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.DateRange != null)
                     hash = hash * 59 + this.DateRange.GetHashCode();
-                
+
                 if (this.Pattern != null)
                     hash = hash * 59 + this.Pattern.GetHashCode();
-                
+
                 if (this.AgentCount != null)
                     hash = hash * 59 + this.AgentCount.GetHashCode();
-                
+
                 if (this.Agents != null)
                     hash = hash * 59 + this.Agents.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

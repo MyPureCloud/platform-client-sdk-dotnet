@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CoachingSlotsResponse :  IEquatable<CoachingSlotsResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingSlotsResponse" /> class.
         /// </summary>
@@ -49,43 +26,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// List of slots where coaching appointment can be scheduled
         /// </summary>
         /// <value>List of slots where coaching appointment can be scheduled</value>
         [DataMember(Name="suggestedSlots", EmitDefaultValue=false)]
         public List<CoachingSlot> SuggestedSlots { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Periods of availability for attendees to schedule coaching appointment
         /// </summary>
         /// <value>Periods of availability for attendees to schedule coaching appointment</value>
         [DataMember(Name="attendeeSchedules", EmitDefaultValue=false)]
         public List<UserAvailableTimes> AttendeeSchedules { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Periods of availability for facilitators to schedule coaching appointment
         /// </summary>
         /// <value>Periods of availability for facilitators to schedule coaching appointment</value>
         [DataMember(Name="facilitatorSchedules", EmitDefaultValue=false)]
         public List<UserAvailableTimes> FacilitatorSchedules { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Detailed data for WFM scheduled activities
         /// </summary>
         /// <value>Detailed data for WFM scheduled activities</value>
         [DataMember(Name="wfmScheduleActivities", EmitDefaultValue=false)]
         public List<WfmScheduleActivity> WfmScheduleActivities { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -94,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CoachingSlotsResponse {\n");
-            
+
             sb.Append("  SuggestedSlots: ").Append(SuggestedSlots).Append("\n");
             sb.Append("  AttendeeSchedules: ").Append(AttendeeSchedules).Append("\n");
             sb.Append("  FacilitatorSchedules: ").Append(FacilitatorSchedules).Append("\n");
@@ -172,19 +149,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SuggestedSlots != null)
                     hash = hash * 59 + this.SuggestedSlots.GetHashCode();
-                
+
                 if (this.AttendeeSchedules != null)
                     hash = hash * 59 + this.AttendeeSchedules.GetHashCode();
-                
+
                 if (this.FacilitatorSchedules != null)
                     hash = hash * 59 + this.FacilitatorSchedules.GetHashCode();
-                
+
                 if (this.WfmScheduleActivities != null)
                     hash = hash * 59 + this.WfmScheduleActivities.GetHashCode();
-                
+
                 return hash;
             }
         }

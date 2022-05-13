@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportingTurnIntentSlot :  IEquatable<ReportingTurnIntentSlot>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingTurnIntentSlot" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the slot.
         /// </summary>
         /// <value>The name of the slot.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The value of the slot.
         /// </summary>
         /// <value>The value of the slot.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The NLU entity type of the slot (either builtin or user defined)
         /// </summary>
         /// <value>The NLU entity type of the slot (either builtin or user defined)</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The confidence score this slot received during detection.
         /// </summary>
         /// <value>The confidence score this slot received during detection.</value>
         [DataMember(Name="confidence", EmitDefaultValue=false)]
         public double? Confidence { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportingTurnIntentSlot {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Confidence != null)
                     hash = hash * 59 + this.Confidence.GetHashCode();
-                
+
                 return hash;
             }
         }

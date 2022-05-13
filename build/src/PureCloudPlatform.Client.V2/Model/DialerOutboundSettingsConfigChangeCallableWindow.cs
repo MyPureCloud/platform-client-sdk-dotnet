@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerOutboundSettingsConfigChangeCallableWindow :  IEquatable<DialerOutboundSettingsConfigChangeCallableWindow>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerOutboundSettingsConfigChangeCallableWindow" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Mapped
         /// </summary>
         [DataMember(Name="mapped", EmitDefaultValue=false)]
         public DialerOutboundSettingsConfigChangeAtzmTimeSlot Mapped { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Unmapped
         /// </summary>
         [DataMember(Name="unmapped", EmitDefaultValue=false)]
         public DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone Unmapped { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerOutboundSettingsConfigChangeCallableWindow {\n");
-            
+
             sb.Append("  Mapped: ").Append(Mapped).Append("\n");
             sb.Append("  Unmapped: ").Append(Unmapped).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Mapped != null)
                     hash = hash * 59 + this.Mapped.GetHashCode();
-                
+
                 if (this.Unmapped != null)
                     hash = hash * 59 + this.Unmapped.GetHashCode();
-                
+
                 return hash;
             }
         }

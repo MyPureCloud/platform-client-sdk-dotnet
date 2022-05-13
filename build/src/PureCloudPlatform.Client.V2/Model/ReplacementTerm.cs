@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReplacementTerm :  IEquatable<ReplacementTerm>
     {
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -64,29 +62,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "TWITTER")]
             Twitter
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplacementTerm" /> class.
         /// </summary>
@@ -101,25 +81,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets ExistingValue
         /// </summary>
         [DataMember(Name="existingValue", EmitDefaultValue=false)]
         public string ExistingValue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UpdatedValue
         /// </summary>
         [DataMember(Name="updatedValue", EmitDefaultValue=false)]
         public string UpdatedValue { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReplacementTerm {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ExistingValue: ").Append(ExistingValue).Append("\n");
             sb.Append("  UpdatedValue: ").Append(UpdatedValue).Append("\n");
@@ -200,16 +180,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.ExistingValue != null)
                     hash = hash * 59 + this.ExistingValue.GetHashCode();
-                
+
                 if (this.UpdatedValue != null)
                     hash = hash * 59 + this.UpdatedValue.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AgentActivityChangedTopicPresence :  IEquatable<AgentActivityChangedTopicPresence>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentActivityChangedTopicPresence" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets PresenceDefinition
         /// </summary>
         [DataMember(Name="presenceDefinition", EmitDefaultValue=false)]
         public AgentActivityChangedTopicOrganizationPresence PresenceDefinition { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PresenceMessage
         /// </summary>
         [DataMember(Name="presenceMessage", EmitDefaultValue=false)]
         public string PresenceMessage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ModifiedDate
         /// </summary>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AgentActivityChangedTopicPresence {\n");
-            
+
             sb.Append("  PresenceDefinition: ").Append(PresenceDefinition).Append("\n");
             sb.Append("  PresenceMessage: ").Append(PresenceMessage).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PresenceDefinition != null)
                     hash = hash * 59 + this.PresenceDefinition.GetHashCode();
-                
+
                 if (this.PresenceMessage != null)
                     hash = hash * 59 + this.PresenceMessage.GetHashCode();
-                
+
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
+
                 return hash;
             }
         }

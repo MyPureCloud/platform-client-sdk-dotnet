@@ -18,23 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrusteeBillingOverview :  IEquatable<TrusteeBillingOverview>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The subscription type.
         /// </summary>
@@ -98,91 +81,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DEV_ORG_PREPAY")]
             DevOrgPrepay
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The subscription type.
         /// </summary>
         /// <value>The subscription type.</value>
         [DataMember(Name="subscriptionType", EmitDefaultValue=false)]
         public SubscriptionTypeEnum? SubscriptionType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TrusteeBillingOverview" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TrusteeBillingOverview() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrusteeBillingOverview" /> class.
         /// </summary>
@@ -221,151 +131,151 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Organization
         /// </summary>
         /// <value>Organization</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
         public NamedEntity Organization { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The currency type.
         /// </summary>
         /// <value>The currency type.</value>
         [DataMember(Name="currency", EmitDefaultValue=false)]
         public string Currency { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The charge short names for products enabled during the specified period.
         /// </summary>
         /// <value>The charge short names for products enabled during the specified period.</value>
         [DataMember(Name="enabledProducts", EmitDefaultValue=false)]
         public List<string> EnabledProducts { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Date-time the ramp period starts. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date-time the ramp period starts. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="rampPeriodStartDate", EmitDefaultValue=false)]
         public DateTime? RampPeriodStartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date-time the ramp period ends. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date-time the ramp period ends. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="rampPeriodEndDate", EmitDefaultValue=false)]
         public DateTime? RampPeriodEndDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date-time the billing period started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date-time the billing period started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="billingPeriodStartDate", EmitDefaultValue=false)]
         public DateTime? BillingPeriodStartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date-time the billing period ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date-time the billing period ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="billingPeriodEndDate", EmitDefaultValue=false)]
         public DateTime? BillingPeriodEndDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Usages for the specified period.
         /// </summary>
         /// <value>Usages for the specified period.</value>
         [DataMember(Name="usages", EmitDefaultValue=false)]
         public List<SubscriptionOverviewUsage> Usages { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date-time the contract was last amended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date-time the contract was last amended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="contractAmendmentDate", EmitDefaultValue=false)]
         public DateTime? ContractAmendmentDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date-time the contract became effective. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date-time the contract became effective. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="contractEffectiveDate", EmitDefaultValue=false)]
         public DateTime? ContractEffectiveDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date-time the contract ends. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date-time the contract ends. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="contractEndDate", EmitDefaultValue=false)]
         public DateTime? ContractEndDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Minimum amount that will be charged for the month
         /// </summary>
         /// <value>Minimum amount that will be charged for the month</value>
         [DataMember(Name="minimumMonthlyAmount", EmitDefaultValue=false)]
         public string MinimumMonthlyAmount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets InRampPeriod
         /// </summary>
         [DataMember(Name="inRampPeriod", EmitDefaultValue=false)]
         public bool? InRampPeriod { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -374,7 +284,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrusteeBillingOverview {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
@@ -530,58 +440,57 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Organization != null)
                     hash = hash * 59 + this.Organization.GetHashCode();
-                
+
                 if (this.Currency != null)
                     hash = hash * 59 + this.Currency.GetHashCode();
-                
+
                 if (this.EnabledProducts != null)
                     hash = hash * 59 + this.EnabledProducts.GetHashCode();
-                
+
                 if (this.SubscriptionType != null)
                     hash = hash * 59 + this.SubscriptionType.GetHashCode();
-                
+
                 if (this.RampPeriodStartDate != null)
                     hash = hash * 59 + this.RampPeriodStartDate.GetHashCode();
-                
+
                 if (this.RampPeriodEndDate != null)
                     hash = hash * 59 + this.RampPeriodEndDate.GetHashCode();
-                
+
                 if (this.BillingPeriodStartDate != null)
                     hash = hash * 59 + this.BillingPeriodStartDate.GetHashCode();
-                
+
                 if (this.BillingPeriodEndDate != null)
                     hash = hash * 59 + this.BillingPeriodEndDate.GetHashCode();
-                
+
                 if (this.Usages != null)
                     hash = hash * 59 + this.Usages.GetHashCode();
-                
+
                 if (this.ContractAmendmentDate != null)
                     hash = hash * 59 + this.ContractAmendmentDate.GetHashCode();
-                
+
                 if (this.ContractEffectiveDate != null)
                     hash = hash * 59 + this.ContractEffectiveDate.GetHashCode();
-                
+
                 if (this.ContractEndDate != null)
                     hash = hash * 59 + this.ContractEndDate.GetHashCode();
-                
+
                 if (this.MinimumMonthlyAmount != null)
                     hash = hash * 59 + this.MinimumMonthlyAmount.GetHashCode();
-                
+
                 if (this.InRampPeriod != null)
                     hash = hash * 59 + this.InRampPeriod.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

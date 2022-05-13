@@ -36,6 +36,8 @@ Delete an existing response library.
 
 This will remove any responses associated with the library.
 
+
+
 Requires NO permissions: 
 
 
@@ -98,6 +100,8 @@ void (empty response body)
 Delete an existing response.
 
 This will remove the response from any libraries associated with it.
+
+
 
 Requires NO permissions: 
 
@@ -950,6 +954,8 @@ Update an existing response library.
 
 Fields that can be updated: name. The most recent version is required for updates.
 
+
+
 Requires NO permissions: 
 
 
@@ -1015,6 +1021,8 @@ namespace Example
 Update an existing response.
 
 Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
+
+
 
 Requires NO permissions: 
 

@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CertificateDetails :  IEquatable<CertificateDetails>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CertificateDetails" /> class.
         /// </summary>
@@ -78,68 +40,68 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Information about the issuer of the certificate.  The value of this property is a comma separated key=value format.  Each key is one of the attribute names supported by X.500.
         /// </summary>
         /// <value>Information about the issuer of the certificate.  The value of this property is a comma separated key=value format.  Each key is one of the attribute names supported by X.500.</value>
         [DataMember(Name="issuer", EmitDefaultValue=false)]
         public string Issuer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Information about the subject of the certificate.  The value of this property is a comma separated key=value format.  Each key is one of the attribute names supported by X.500.
         /// </summary>
         /// <value>Information about the subject of the certificate.  The value of this property is a comma separated key=value format.  Each key is one of the attribute names supported by X.500.</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The expiration date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The expiration date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="expirationDate", EmitDefaultValue=false)]
         public DateTime? ExpirationDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The issue date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The issue date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="issueDate", EmitDefaultValue=false)]
         public DateTime? IssueDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if the certificate is expired, false otherwise.
         /// </summary>
         /// <value>True if the certificate is expired, false otherwise.</value>
         [DataMember(Name="expired", EmitDefaultValue=false)]
         public bool? Expired { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Valid
         /// </summary>
         [DataMember(Name="valid", EmitDefaultValue=false)]
         public bool? Valid { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SignatureValid
         /// </summary>
         [DataMember(Name="signatureValid", EmitDefaultValue=false)]
         public bool? SignatureValid { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -148,7 +110,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CertificateDetails {\n");
-            
+
             sb.Append("  Issuer: ").Append(Issuer).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  ExpirationDate: ").Append(ExpirationDate).Append("\n");
@@ -244,28 +206,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Issuer != null)
                     hash = hash * 59 + this.Issuer.GetHashCode();
-                
+
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
-                
+
                 if (this.ExpirationDate != null)
                     hash = hash * 59 + this.ExpirationDate.GetHashCode();
-                
+
                 if (this.IssueDate != null)
                     hash = hash * 59 + this.IssueDate.GetHashCode();
-                
+
                 if (this.Expired != null)
                     hash = hash * 59 + this.Expired.GetHashCode();
-                
+
                 if (this.Valid != null)
                     hash = hash * 59 + this.Valid.GetHashCode();
-                
+
                 if (this.SignatureValid != null)
                     hash = hash * 59 + this.SignatureValid.GetHashCode();
-                
+
                 return hash;
             }
         }

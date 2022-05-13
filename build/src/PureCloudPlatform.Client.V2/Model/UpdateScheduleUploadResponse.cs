@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UpdateScheduleUploadResponse :  IEquatable<UpdateScheduleUploadResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateScheduleUploadResponse" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The key to pass to the secondary request to start processing of the upload
         /// </summary>
         /// <value>The key to pass to the secondary request to start processing of the upload</value>
         [DataMember(Name="uploadKey", EmitDefaultValue=false)]
         public string UploadKey { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The url to which to PUT the upload body
         /// </summary>
         /// <value>The url to which to PUT the upload body</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required headers for the PUT request to the url
         /// </summary>
         /// <value>Required headers for the PUT request to the url</value>
         [DataMember(Name="headers", EmitDefaultValue=false)]
         public Dictionary<string, string> Headers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Always null. Defines the schema of the json body to be PUT to the url. The json body should be gzip encoded before uploading
         /// </summary>
         /// <value>Always null. Defines the schema of the json body to be PUT to the url. The json body should be gzip encoded before uploading</value>
         [DataMember(Name="uploadBodySchema", EmitDefaultValue=false)]
         public UpdateScheduleUploadSchema UploadBodySchema { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UpdateScheduleUploadResponse {\n");
-            
+
             sb.Append("  UploadKey: ").Append(UploadKey).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  Headers: ").Append(Headers).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UploadKey != null)
                     hash = hash * 59 + this.UploadKey.GetHashCode();
-                
+
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.Headers != null)
                     hash = hash * 59 + this.Headers.GetHashCode();
-                
+
                 if (this.UploadBodySchema != null)
                     hash = hash * 59 + this.UploadBodySchema.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningModuleSummary :  IEquatable<LearningModuleSummary>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModuleSummary" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The total number of assignments assigned for a learning module
         /// </summary>
         /// <value>The total number of assignments assigned for a learning module</value>
         [DataMember(Name="assignedCount", EmitDefaultValue=false)]
         public int? AssignedCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of assignments completed for a learning module
         /// </summary>
         /// <value>The number of assignments completed for a learning module</value>
         [DataMember(Name="completedCount", EmitDefaultValue=false)]
         public int? CompletedCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of assignments passed for a learning module
         /// </summary>
         /// <value>The number of assignments passed for a learning module</value>
         [DataMember(Name="passedCount", EmitDefaultValue=false)]
         public int? PassedCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The sum of assignment scores for a learning module
         /// </summary>
         /// <value>The sum of assignment scores for a learning module</value>
         [DataMember(Name="completedSum", EmitDefaultValue=false)]
         public float? CompletedSum { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningModuleSummary {\n");
-            
+
             sb.Append("  AssignedCount: ").Append(AssignedCount).Append("\n");
             sb.Append("  CompletedCount: ").Append(CompletedCount).Append("\n");
             sb.Append("  PassedCount: ").Append(PassedCount).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AssignedCount != null)
                     hash = hash * 59 + this.AssignedCount.GetHashCode();
-                
+
                 if (this.CompletedCount != null)
                     hash = hash * 59 + this.CompletedCount.GetHashCode();
-                
+
                 if (this.PassedCount != null)
                     hash = hash * 59 + this.PassedCount.GetHashCode();
-                
+
                 if (this.CompletedSum != null)
                     hash = hash * 59 + this.CompletedSum.GetHashCode();
-                
+
                 return hash;
             }
         }

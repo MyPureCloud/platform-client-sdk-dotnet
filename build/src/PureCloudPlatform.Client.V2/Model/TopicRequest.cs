@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TopicRequest :  IEquatable<TopicRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The topic strictness, default value is 72
         /// </summary>
@@ -77,19 +69,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "90")]
             _90
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The topic participants, default value is All
         /// </summary>
@@ -123,50 +102,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "All")]
             All
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The topic strictness, default value is 72
         /// </summary>
         /// <value>The topic strictness, default value is 72</value>
         [DataMember(Name="strictness", EmitDefaultValue=false)]
         public StrictnessEnum? Strictness { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The topic participants, default value is All
         /// </summary>
         /// <value>The topic participants, default value is All</value>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public ParticipantsEnum? Participants { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TopicRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TopicRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TopicRequest" /> class.
         /// </summary>
@@ -191,65 +144,65 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The topic name
         /// </summary>
         /// <value>The topic name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The topic description
         /// </summary>
         /// <value>The topic description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The ids of programs associated to the topic
         /// </summary>
         /// <value>The ids of programs associated to the topic</value>
         [DataMember(Name="programIds", EmitDefaultValue=false)]
         public List<string> ProgramIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The topic tags
         /// </summary>
         /// <value>The topic tags</value>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The topic dialect
         /// </summary>
         /// <value>The topic dialect</value>
         [DataMember(Name="dialect", EmitDefaultValue=false)]
         public string Dialect { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The topic phrases
         /// </summary>
         /// <value>The topic phrases</value>
         [DataMember(Name="phrases", EmitDefaultValue=false)]
         public List<Phrase> Phrases { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -258,7 +211,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TopicRequest {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Strictness: ").Append(Strictness).Append("\n");
@@ -360,31 +313,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Strictness != null)
                     hash = hash * 59 + this.Strictness.GetHashCode();
-                
+
                 if (this.ProgramIds != null)
                     hash = hash * 59 + this.ProgramIds.GetHashCode();
-                
+
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
+
                 if (this.Dialect != null)
                     hash = hash * 59 + this.Dialect.GetHashCode();
-                
+
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
-                
+
                 if (this.Phrases != null)
                     hash = hash * 59 + this.Phrases.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -472,6 +472,8 @@ All metric definitions
 
 Retrieves the metric definitions and their corresponding default objectives used to create a gamified metric
 
+
+
 Requires ANY permissions: 
 
 * gamification:profile:view
@@ -1902,7 +1904,7 @@ namespace Example
             var userId = userId_example;  // string | 
             var startWorkday = 2013-10-20;  // String | Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var endWorkday = 2013-10-20;  // String | End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var timeZone = timeZone_example;  // string | Timezone for the workday. Defaults to UTC (optional)  (default to UTC)
+            var timeZone = timeZone_example;  // string | Timezone for the workday. Defaults to UTC (optional)  (default to "UTC")
 
             try
             { 
@@ -1927,7 +1929,7 @@ namespace Example
 | **userId** | **string**|  |  |
 | **startWorkday** | **String**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **endWorkday** | **String**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
+| **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -2042,7 +2044,7 @@ namespace Example
             var filterType = filterType_example;  // string | Filter type for the query request.
             var filterId = filterId_example;  // string | ID for the filter type. For example, division Id
             var workday = 2013-10-20;  // String | The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var timeZone = timeZone_example;  // string | Timezone for the workday. Defaults to UTC (optional)  (default to UTC)
+            var timeZone = timeZone_example;  // string | Timezone for the workday. Defaults to UTC (optional)  (default to "UTC")
 
             try
             { 
@@ -2067,7 +2069,7 @@ namespace Example
 | **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
 | **filterId** | **string**| ID for the filter type. For example, division Id |  |
 | **workday** | **String**| The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
+| **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -2114,7 +2116,7 @@ namespace Example
             var filterId = filterId_example;  // string | ID for the filter type.
             var startWorkday = 2013-10-20;  // String | Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var endWorkday = 2013-10-20;  // String | End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var timeZone = timeZone_example;  // string | Timezone for the workday. Defaults to UTC (optional)  (default to UTC)
+            var timeZone = timeZone_example;  // string | Timezone for the workday. Defaults to UTC (optional)  (default to "UTC")
 
             try
             { 
@@ -2140,7 +2142,7 @@ namespace Example
 | **filterId** | **string**| ID for the filter type. |  |
 | **startWorkday** | **String**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **endWorkday** | **String**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
+| **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -2184,7 +2186,7 @@ namespace Example
 
             var apiInstance = new GamificationApi();
             var workday = 2013-10-20;  // String | The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var timeZone = timeZone_example;  // string | Timezone for the workday. Defaults to UTC (optional)  (default to UTC)
+            var timeZone = timeZone_example;  // string | Timezone for the workday. Defaults to UTC (optional)  (default to "UTC")
 
             try
             { 
@@ -2207,7 +2209,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workday** | **String**| The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
+| **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -2254,7 +2256,7 @@ namespace Example
             var endWorkday = 2013-10-20;  // String | End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var filterType = filterType_example;  // string | Filter type for the query request. If not set, then the request is for the requesting user. (optional) 
             var referenceWorkday = 2013-10-20;  // String | Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user's current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
-            var timeZone = timeZone_example;  // string | Timezone for the workday. Defaults to UTC (optional)  (default to UTC)
+            var timeZone = timeZone_example;  // string | Timezone for the workday. Defaults to UTC (optional)  (default to "UTC")
 
             try
             { 
@@ -2280,7 +2282,7 @@ namespace Example
 | **endWorkday** | **String**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **filterType** | **string**| Filter type for the query request. If not set, then the request is for the requesting user. | [optional] <br />**Values**: PerformanceProfile, Division |
 | **referenceWorkday** | **String**| Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
-| **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
+| **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
 {: class="table table-striped"}
 
 ### Return type

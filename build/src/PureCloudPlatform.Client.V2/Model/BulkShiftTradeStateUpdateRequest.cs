@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BulkShiftTradeStateUpdateRequest :  IEquatable<BulkShiftTradeStateUpdateRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BulkShiftTradeStateUpdateRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BulkShiftTradeStateUpdateRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BulkShiftTradeStateUpdateRequest" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The shift trades to update
         /// </summary>
         /// <value>The shift trades to update</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<BulkUpdateShiftTradeStateRequestItem> Entities { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BulkShiftTradeStateUpdateRequest {\n");
-            
+
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
+
                 return hash;
             }
         }

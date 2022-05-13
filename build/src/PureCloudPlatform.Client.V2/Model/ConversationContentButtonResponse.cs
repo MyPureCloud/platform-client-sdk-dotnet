@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationContentButtonResponse :  IEquatable<ConversationContentButtonResponse>
     {
-        
-        
         /// <summary>
         /// Describes the button that resulted in the Button Response.
         /// </summary>
@@ -47,36 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "QuickReply")]
             Quickreply
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Describes the button that resulted in the Button Response.
         /// </summary>
         /// <value>Describes the button that resulted in the Button Response.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationContentButtonResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConversationContentButtonResponse() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationContentButtonResponse" /> class.
         /// </summary>
@@ -91,27 +71,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The response text from the button click.
         /// </summary>
         /// <value>The response text from the button click.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The response payload associated with the clicked button.
         /// </summary>
         /// <value>The response payload associated with the clicked button.</value>
         [DataMember(Name="payload", EmitDefaultValue=false)]
         public string Payload { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -120,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationContentButtonResponse {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Payload: ").Append(Payload).Append("\n");
@@ -192,16 +172,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Payload != null)
                     hash = hash * 59 + this.Payload.GetHashCode();
-                
+
                 return hash;
             }
         }

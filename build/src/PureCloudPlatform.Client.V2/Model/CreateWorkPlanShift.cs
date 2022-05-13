@@ -18,115 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateWorkPlanShift :  IEquatable<CreateWorkPlanShift>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWorkPlanShift" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateWorkPlanShift() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWorkPlanShift" /> class.
         /// </summary>
@@ -175,187 +72,187 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Name of the shift
         /// </summary>
         /// <value>Name of the shift</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Days of the week applicable for this shift
         /// </summary>
         /// <value>Days of the week applicable for this shift</value>
         [DataMember(Name="days", EmitDefaultValue=false)]
         public SetWrapperDayOfWeek Days { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the start time of the shift is flexible
         /// </summary>
         /// <value>Whether the start time of the shift is flexible</value>
         [DataMember(Name="flexibleStartTime", EmitDefaultValue=false)]
         public bool? FlexibleStartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Exact start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == false
         /// </summary>
         /// <value>Exact start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == false</value>
         [DataMember(Name="exactStartTimeMinutesFromMidnight", EmitDefaultValue=false)]
         public int? ExactStartTimeMinutesFromMidnight { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true
         /// </summary>
         /// <value>Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true</value>
         [DataMember(Name="earliestStartTimeMinutesFromMidnight", EmitDefaultValue=false)]
         public int? EarliestStartTimeMinutesFromMidnight { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true
         /// </summary>
         /// <value>Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true</value>
         [DataMember(Name="latestStartTimeMinutesFromMidnight", EmitDefaultValue=false)]
         public int? LatestStartTimeMinutesFromMidnight { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the latest stop time constraint for the shift is enabled.  Deprecated, use constrainLatestStopTime instead
         /// </summary>
         /// <value>Whether the latest stop time constraint for the shift is enabled.  Deprecated, use constrainLatestStopTime instead</value>
         [DataMember(Name="constrainStopTime", EmitDefaultValue=false)]
         public bool? ConstrainStopTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the latest stop time constraint for the shift is enabled
         /// </summary>
         /// <value>Whether the latest stop time constraint for the shift is enabled</value>
         [DataMember(Name="constrainLatestStopTime", EmitDefaultValue=false)]
         public bool? ConstrainLatestStopTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true
         /// </summary>
         /// <value>Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true</value>
         [DataMember(Name="latestStopTimeMinutesFromMidnight", EmitDefaultValue=false)]
         public int? LatestStopTimeMinutesFromMidnight { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the earliest stop time constraint for the shift is enabled
         /// </summary>
         /// <value>Whether the earliest stop time constraint for the shift is enabled</value>
         [DataMember(Name="constrainEarliestStopTime", EmitDefaultValue=false)]
         public bool? ConstrainEarliestStopTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// This is the earliest time a shift can end
         /// </summary>
         /// <value>This is the earliest time a shift can end</value>
         [DataMember(Name="earliestStopTimeMinutesFromMidnight", EmitDefaultValue=false)]
         public int? EarliestStopTimeMinutesFromMidnight { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Increment in offset minutes that would contribute to different possible start times for the shift. Used if flexibleStartTime == true
         /// </summary>
         /// <value>Increment in offset minutes that would contribute to different possible start times for the shift. Used if flexibleStartTime == true</value>
         [DataMember(Name="startIncrementMinutes", EmitDefaultValue=false)]
         public int? StartIncrementMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the paid time setting for the shift is flexible
         /// </summary>
         /// <value>Whether the paid time setting for the shift is flexible</value>
         [DataMember(Name="flexiblePaidTime", EmitDefaultValue=false)]
         public bool? FlexiblePaidTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Exact paid time in minutes configured for the shift. Used if flexiblePaidTime == false
         /// </summary>
         /// <value>Exact paid time in minutes configured for the shift. Used if flexiblePaidTime == false</value>
         [DataMember(Name="exactPaidTimeMinutes", EmitDefaultValue=false)]
         public int? ExactPaidTimeMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Minimum paid time in minutes configured for the shift. Used if flexiblePaidTime == true
         /// </summary>
         /// <value>Minimum paid time in minutes configured for the shift. Used if flexiblePaidTime == true</value>
         [DataMember(Name="minimumPaidTimeMinutes", EmitDefaultValue=false)]
         public int? MinimumPaidTimeMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Maximum paid time in minutes configured for the shift. Used if flexiblePaidTime == true
         /// </summary>
         /// <value>Maximum paid time in minutes configured for the shift. Used if flexiblePaidTime == true</value>
         [DataMember(Name="maximumPaidTimeMinutes", EmitDefaultValue=false)]
         public int? MaximumPaidTimeMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the contiguous time constraint for the shift is enabled
         /// </summary>
         /// <value>Whether the contiguous time constraint for the shift is enabled</value>
         [DataMember(Name="constrainContiguousWorkTime", EmitDefaultValue=false)]
         public bool? ConstrainContiguousWorkTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Minimum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime == true
         /// </summary>
         /// <value>Minimum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime == true</value>
         [DataMember(Name="minimumContiguousWorkTimeMinutes", EmitDefaultValue=false)]
         public int? MinimumContiguousWorkTimeMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Maximum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime == true
         /// </summary>
         /// <value>Maximum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime == true</value>
         [DataMember(Name="maximumContiguousWorkTimeMinutes", EmitDefaultValue=false)]
         public int? MaximumContiguousWorkTimeMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Activities configured for this shift
         /// </summary>
         /// <value>Activities configured for this shift</value>
         [DataMember(Name="activities", EmitDefaultValue=false)]
         public List<CreateWorkPlanActivity> Activities { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -364,7 +261,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateWorkPlanShift {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Days: ").Append(Days).Append("\n");
             sb.Append("  FlexibleStartTime: ").Append(FlexibleStartTime).Append("\n");
@@ -538,67 +435,66 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Days != null)
                     hash = hash * 59 + this.Days.GetHashCode();
-                
+
                 if (this.FlexibleStartTime != null)
                     hash = hash * 59 + this.FlexibleStartTime.GetHashCode();
-                
+
                 if (this.ExactStartTimeMinutesFromMidnight != null)
                     hash = hash * 59 + this.ExactStartTimeMinutesFromMidnight.GetHashCode();
-                
+
                 if (this.EarliestStartTimeMinutesFromMidnight != null)
                     hash = hash * 59 + this.EarliestStartTimeMinutesFromMidnight.GetHashCode();
-                
+
                 if (this.LatestStartTimeMinutesFromMidnight != null)
                     hash = hash * 59 + this.LatestStartTimeMinutesFromMidnight.GetHashCode();
-                
+
                 if (this.ConstrainStopTime != null)
                     hash = hash * 59 + this.ConstrainStopTime.GetHashCode();
-                
+
                 if (this.ConstrainLatestStopTime != null)
                     hash = hash * 59 + this.ConstrainLatestStopTime.GetHashCode();
-                
+
                 if (this.LatestStopTimeMinutesFromMidnight != null)
                     hash = hash * 59 + this.LatestStopTimeMinutesFromMidnight.GetHashCode();
-                
+
                 if (this.ConstrainEarliestStopTime != null)
                     hash = hash * 59 + this.ConstrainEarliestStopTime.GetHashCode();
-                
+
                 if (this.EarliestStopTimeMinutesFromMidnight != null)
                     hash = hash * 59 + this.EarliestStopTimeMinutesFromMidnight.GetHashCode();
-                
+
                 if (this.StartIncrementMinutes != null)
                     hash = hash * 59 + this.StartIncrementMinutes.GetHashCode();
-                
+
                 if (this.FlexiblePaidTime != null)
                     hash = hash * 59 + this.FlexiblePaidTime.GetHashCode();
-                
+
                 if (this.ExactPaidTimeMinutes != null)
                     hash = hash * 59 + this.ExactPaidTimeMinutes.GetHashCode();
-                
+
                 if (this.MinimumPaidTimeMinutes != null)
                     hash = hash * 59 + this.MinimumPaidTimeMinutes.GetHashCode();
-                
+
                 if (this.MaximumPaidTimeMinutes != null)
                     hash = hash * 59 + this.MaximumPaidTimeMinutes.GetHashCode();
-                
+
                 if (this.ConstrainContiguousWorkTime != null)
                     hash = hash * 59 + this.ConstrainContiguousWorkTime.GetHashCode();
-                
+
                 if (this.MinimumContiguousWorkTimeMinutes != null)
                     hash = hash * 59 + this.MinimumContiguousWorkTimeMinutes.GetHashCode();
-                
+
                 if (this.MaximumContiguousWorkTimeMinutes != null)
                     hash = hash * 59 + this.MaximumContiguousWorkTimeMinutes.GetHashCode();
-                
+
                 if (this.Activities != null)
                     hash = hash * 59 + this.Activities.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GamificationScorecardChangeTopicPerformanceMetric :  IEquatable<GamificationScorecardChangeTopicPerformanceMetric>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GamificationScorecardChangeTopicPerformanceMetric" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public GamificationScorecardChangeTopicMetric Metric { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Points
         /// </summary>
         [DataMember(Name="points", EmitDefaultValue=false)]
         public int? Points { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public double? Value { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PunctualityEvents
         /// </summary>
         [DataMember(Name="punctualityEvents", EmitDefaultValue=false)]
         public List<GamificationScorecardChangeTopicPunctualityEvent> PunctualityEvents { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GamificationScorecardChangeTopicPerformanceMetric {\n");
-            
+
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  Points: ").Append(Points).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 if (this.Points != null)
                     hash = hash * 59 + this.Points.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.PunctualityEvents != null)
                     hash = hash * 59 + this.PunctualityEvents.GetHashCode();
-                
+
                 return hash;
             }
         }

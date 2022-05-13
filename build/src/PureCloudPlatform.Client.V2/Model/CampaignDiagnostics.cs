@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignDiagnostics :  IEquatable<CampaignDiagnostics>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignDiagnostics" /> class.
         /// </summary>
@@ -54,52 +26,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Campaign properties that can impact which contacts are callable
         /// </summary>
         /// <value>Campaign properties that can impact which contacts are callable</value>
         [DataMember(Name="callableContacts", EmitDefaultValue=false)]
         public CallableContactsDiagnostic CallableContacts { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Information regarding the campaign&#39;s queue
+        /// Information regarding the campaign's queue
         /// </summary>
-        /// <value>Information regarding the campaign&#39;s queue</value>
+        /// <value>Information regarding the campaign's queue</value>
         [DataMember(Name="queueUtilizationDiagnostic", EmitDefaultValue=false)]
         public QueueUtilizationDiagnostic QueueUtilizationDiagnostic { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Information regarding the campaign&#39;s rule sets
+        /// Information regarding the campaign's rule sets
         /// </summary>
-        /// <value>Information regarding the campaign&#39;s rule sets</value>
+        /// <value>Information regarding the campaign's rule sets</value>
         [DataMember(Name="ruleSetDiagnostics", EmitDefaultValue=false)]
         public List<RuleSetDiagnostic> RuleSetDiagnostics { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current number of outstanding interactions on the campaign
         /// </summary>
         /// <value>Current number of outstanding interactions on the campaign</value>
         [DataMember(Name="outstandingInteractionsCount", EmitDefaultValue=false)]
         public int? OutstandingInteractionsCount { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current number of scheduled interactions on the campaign
         /// </summary>
         /// <value>Current number of scheduled interactions on the campaign</value>
         [DataMember(Name="scheduledInteractionsCount", EmitDefaultValue=false)]
         public int? ScheduledInteractionsCount { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignDiagnostics {\n");
-            
+
             sb.Append("  CallableContacts: ").Append(CallableContacts).Append("\n");
             sb.Append("  QueueUtilizationDiagnostic: ").Append(QueueUtilizationDiagnostic).Append("\n");
             sb.Append("  RuleSetDiagnostics: ").Append(RuleSetDiagnostics).Append("\n");
@@ -192,22 +164,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CallableContacts != null)
                     hash = hash * 59 + this.CallableContacts.GetHashCode();
-                
+
                 if (this.QueueUtilizationDiagnostic != null)
                     hash = hash * 59 + this.QueueUtilizationDiagnostic.GetHashCode();
-                
+
                 if (this.RuleSetDiagnostics != null)
                     hash = hash * 59 + this.RuleSetDiagnostics.GetHashCode();
-                
+
                 if (this.OutstandingInteractionsCount != null)
                     hash = hash * 59 + this.OutstandingInteractionsCount.GetHashCode();
-                
+
                 if (this.ScheduledInteractionsCount != null)
                     hash = hash * 59 + this.ScheduledInteractionsCount.GetHashCode();
-                
+
                 return hash;
             }
         }

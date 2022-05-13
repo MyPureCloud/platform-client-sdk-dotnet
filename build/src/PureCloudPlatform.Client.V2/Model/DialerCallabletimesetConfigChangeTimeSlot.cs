@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerCallabletimesetConfigChangeTimeSlot :  IEquatable<DialerCallabletimesetConfigChangeTimeSlot>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCallabletimesetConfigChangeTimeSlot" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The start time of this time slot
         /// </summary>
         /// <value>The start time of this time slot</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The stop time of this time slot
         /// </summary>
         /// <value>The stop time of this time slot</value>
         [DataMember(Name="stopTime", EmitDefaultValue=false)]
         public string StopTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The day this time slot applies
         /// </summary>
         /// <value>The day this time slot applies</value>
         [DataMember(Name="day", EmitDefaultValue=false)]
         public int? Day { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerCallabletimesetConfigChangeTimeSlot {\n");
-            
+
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  StopTime: ").Append(StopTime).Append("\n");
             sb.Append("  Day: ").Append(Day).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
+
                 if (this.StopTime != null)
                     hash = hash * 59 + this.StopTime.GetHashCode();
-                
+
                 if (this.Day != null)
                     hash = hash * 59 + this.Day.GetHashCode();
-                
+
                 return hash;
             }
         }

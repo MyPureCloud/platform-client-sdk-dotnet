@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrustRequest :  IEquatable<TrustRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustRequest" /> class.
         /// </summary>
@@ -64,70 +26,70 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User who created this request.
         /// </summary>
         /// <value>User who created this request.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public OrgUser CreatedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date request was created. There is a 48 hour expiration on all requests. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date request was created. There is a 48 hour expiration on all requests. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Trustee organization who generated this request.
         /// </summary>
         /// <value>Trustee organization who generated this request.</value>
         [DataMember(Name="trustee", EmitDefaultValue=false)]
         public Organization Trustee { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of trustee users that are requesting access.
         /// </summary>
         /// <value>The list of trustee users that are requesting access.</value>
         [DataMember(Name="users", EmitDefaultValue=false)]
         public List<OrgUser> Users { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of trustee groups that are requesting access.
         /// </summary>
         /// <value>The list of trustee groups that are requesting access.</value>
         [DataMember(Name="groups", EmitDefaultValue=false)]
         public List<TrustGroup> Groups { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -136,7 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrustRequest {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -232,28 +194,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.Trustee != null)
                     hash = hash * 59 + this.Trustee.GetHashCode();
-                
+
                 if (this.Users != null)
                     hash = hash * 59 + this.Users.GetHashCode();
-                
+
                 if (this.Groups != null)
                     hash = hash * 59 + this.Groups.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

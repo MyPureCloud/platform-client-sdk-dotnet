@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ChangeMyPasswordRequest :  IEquatable<ChangeMyPasswordRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeMyPasswordRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ChangeMyPasswordRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeMyPasswordRequest" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The new password
         /// </summary>
         /// <value>The new password</value>
         [DataMember(Name="newPassword", EmitDefaultValue=false)]
         public string NewPassword { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Your current password
         /// </summary>
         /// <value>Your current password</value>
         [DataMember(Name="oldPassword", EmitDefaultValue=false)]
         public string OldPassword { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ChangeMyPasswordRequest {\n");
-            
+
             sb.Append("  NewPassword: ").Append(NewPassword).Append("\n");
             sb.Append("  OldPassword: ").Append(OldPassword).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.NewPassword != null)
                     hash = hash * 59 + this.NewPassword.GetHashCode();
-                
+
                 if (this.OldPassword != null)
                     hash = hash * 59 + this.OldPassword.GetHashCode();
-                
+
                 return hash;
             }
         }

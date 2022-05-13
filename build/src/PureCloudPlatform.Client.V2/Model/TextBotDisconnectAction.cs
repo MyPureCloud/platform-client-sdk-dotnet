@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotDisconnectAction :  IEquatable<TextBotDisconnectAction>
     {
-        
-        
         /// <summary>
         /// The reason for the disconnect.
         /// </summary>
@@ -65,41 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "RecognitionFailure")]
             Recognitionfailure
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reason for the disconnect.
         /// </summary>
         /// <value>The reason for the disconnect.</value>
         [DataMember(Name="reason", EmitDefaultValue=false)]
         public ReasonEnum? Reason { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotDisconnectAction" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotDisconnectAction() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotDisconnectAction" /> class.
         /// </summary>
@@ -116,36 +91,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Extended information related to the reason, if available.
         /// </summary>
         /// <value>Extended information related to the reason, if available.</value>
         [DataMember(Name="reasonExtendedInfo", EmitDefaultValue=false)]
         public string ReasonExtendedInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Describes where in the Bot Flow the user was when the disconnect occurred.
         /// </summary>
         /// <value>Describes where in the Bot Flow the user was when the disconnect occurred.</value>
         [DataMember(Name="flowLocation", EmitDefaultValue=false)]
         public TextBotFlowLocation FlowLocation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of Flow Outcomes for the bot flow and their details.
         /// </summary>
         /// <value>The list of Flow Outcomes for the bot flow and their details.</value>
         [DataMember(Name="flowOutcomes", EmitDefaultValue=false)]
         public List<TextBotFlowOutcome> FlowOutcomes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -154,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotDisconnectAction {\n");
-            
+
             sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("  ReasonExtendedInfo: ").Append(ReasonExtendedInfo).Append("\n");
             sb.Append("  FlowLocation: ").Append(FlowLocation).Append("\n");
@@ -232,19 +207,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Reason != null)
                     hash = hash * 59 + this.Reason.GetHashCode();
-                
+
                 if (this.ReasonExtendedInfo != null)
                     hash = hash * 59 + this.ReasonExtendedInfo.GetHashCode();
-                
+
                 if (this.FlowLocation != null)
                     hash = hash * 59 + this.FlowLocation.GetHashCode();
-                
+
                 if (this.FlowOutcomes != null)
                     hash = hash * 59 + this.FlowOutcomes.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,32 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationChatEventTopicChatMediaParticipant :  IEquatable<ConversationChatEventTopicChatMediaParticipant>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -130,10 +104,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "none")]
             None
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
@@ -160,10 +130,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
@@ -274,67 +240,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "uncallable")]
             Uncallable
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets FlaggedReason
         /// </summary>
@@ -355,122 +260,26 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "general")]
             General
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets FlaggedReason
         /// </summary>
         [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
         public FlaggedReasonEnum? FlaggedReason { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationChatEventTopicChatMediaParticipant" /> class.
         /// </summary>
@@ -551,271 +360,271 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets StartTime
         /// </summary>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EndTime
         /// </summary>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets StartHoldTime
         /// </summary>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Purpose
         /// </summary>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public string Purpose { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Held
         /// </summary>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets WrapupRequired
         /// </summary>
         [DataMember(Name="wrapupRequired", EmitDefaultValue=false)]
         public bool? WrapupRequired { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets WrapupPrompt
         /// </summary>
         [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
         public string WrapupPrompt { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public ConversationChatEventTopicUriReference User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public ConversationChatEventTopicUriReference Queue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Team
         /// </summary>
         [DataMember(Name="team", EmitDefaultValue=false)]
         public ConversationChatEventTopicUriReference Team { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ConversationChatEventTopicErrorBody ErrorInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Script
         /// </summary>
         [DataMember(Name="script", EmitDefaultValue=false)]
         public ConversationChatEventTopicUriReference Script { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
         public int? WrapupTimeoutMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets WrapupSkipped
         /// </summary>
         [DataMember(Name="wrapupSkipped", EmitDefaultValue=false)]
         public bool? WrapupSkipped { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AlertingTimeoutMs
         /// </summary>
         [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
         public int? AlertingTimeoutMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Provider
         /// </summary>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ExternalContact
         /// </summary>
         [DataMember(Name="externalContact", EmitDefaultValue=false)]
         public ConversationChatEventTopicUriReference ExternalContact { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ExternalOrganization
         /// </summary>
         [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
         public ConversationChatEventTopicUriReference ExternalOrganization { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Wrapup
         /// </summary>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public ConversationChatEventTopicWrapup Wrapup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConversationRoutingData
         /// </summary>
         [DataMember(Name="conversationRoutingData", EmitDefaultValue=false)]
         public ConversationChatEventTopicConversationRoutingData ConversationRoutingData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Peer
         /// </summary>
         [DataMember(Name="peer", EmitDefaultValue=false)]
         public string Peer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ScreenRecordingState
         /// </summary>
         [DataMember(Name="screenRecordingState", EmitDefaultValue=false)]
         public string ScreenRecordingState { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets JourneyContext
         /// </summary>
         [DataMember(Name="journeyContext", EmitDefaultValue=false)]
         public ConversationChatEventTopicJourneyContext JourneyContext { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets StartAcwTime
         /// </summary>
         [DataMember(Name="startAcwTime", EmitDefaultValue=false)]
         public DateTime? StartAcwTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EndAcwTime
         /// </summary>
         [DataMember(Name="endAcwTime", EmitDefaultValue=false)]
         public DateTime? EndAcwTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RoomId
         /// </summary>
         [DataMember(Name="roomId", EmitDefaultValue=false)]
         public string RoomId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AvatarImageUrl
         /// </summary>
         [DataMember(Name="avatarImageUrl", EmitDefaultValue=false)]
         public string AvatarImageUrl { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -824,7 +633,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationChatEventTopicChatMediaParticipant {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
@@ -1094,115 +903,114 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
+
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
+
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
-                
+
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
+
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
-                
+
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
+
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
-                
+
                 if (this.WrapupRequired != null)
                     hash = hash * 59 + this.WrapupRequired.GetHashCode();
-                
+
                 if (this.WrapupPrompt != null)
                     hash = hash * 59 + this.WrapupPrompt.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
+
                 if (this.Team != null)
                     hash = hash * 59 + this.Team.GetHashCode();
-                
+
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
+
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
+
                 if (this.Script != null)
                     hash = hash * 59 + this.Script.GetHashCode();
-                
+
                 if (this.WrapupTimeoutMs != null)
                     hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
-                
+
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
-                
+
                 if (this.AlertingTimeoutMs != null)
                     hash = hash * 59 + this.AlertingTimeoutMs.GetHashCode();
-                
+
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                
+
                 if (this.ExternalContact != null)
                     hash = hash * 59 + this.ExternalContact.GetHashCode();
-                
+
                 if (this.ExternalOrganization != null)
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
-                
+
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
-                
+
                 if (this.ConversationRoutingData != null)
                     hash = hash * 59 + this.ConversationRoutingData.GetHashCode();
-                
+
                 if (this.Peer != null)
                     hash = hash * 59 + this.Peer.GetHashCode();
-                
+
                 if (this.ScreenRecordingState != null)
                     hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
-                
+
                 if (this.FlaggedReason != null)
                     hash = hash * 59 + this.FlaggedReason.GetHashCode();
-                
+
                 if (this.JourneyContext != null)
                     hash = hash * 59 + this.JourneyContext.GetHashCode();
-                
+
                 if (this.StartAcwTime != null)
                     hash = hash * 59 + this.StartAcwTime.GetHashCode();
-                
+
                 if (this.EndAcwTime != null)
                     hash = hash * 59 + this.EndAcwTime.GetHashCode();
-                
+
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
-                
+
                 if (this.AvatarImageUrl != null)
                     hash = hash * 59 + this.AvatarImageUrl.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,60 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DraftTopics :  IEquatable<DraftTopics>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DraftTopics" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DraftTopics() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DraftTopics" /> class.
         /// </summary>
@@ -86,88 +38,88 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Id for a topic.
         /// </summary>
         /// <value>Id for a topic.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Topic name.
         /// </summary>
         /// <value>Topic name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The miner to which the topic belongs.
         /// </summary>
         /// <value>The miner to which the topic belongs.</value>
         [DataMember(Name="miner", EmitDefaultValue=false)]
         public Miner Miner { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of conversations where a topic has occurred.
         /// </summary>
         /// <value>Number of conversations where a topic has occurred.</value>
         [DataMember(Name="conversationCount", EmitDefaultValue=false)]
         public int? ConversationCount { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percentage of conversations where a topic has occurred.
         /// </summary>
         /// <value>Percentage of conversations where a topic has occurred.</value>
         [DataMember(Name="conversationPercent", EmitDefaultValue=false)]
         public float? ConversationPercent { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of unique utterances where a topic has occurred.
         /// </summary>
         /// <value>Number of unique utterances where a topic has occurred.</value>
         [DataMember(Name="utteranceCount", EmitDefaultValue=false)]
         public int? UtteranceCount { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of unique phrases (sub-utterances) where a topic has occurred.
         /// </summary>
         /// <value>Number of unique phrases (sub-utterances) where a topic has occurred.</value>
         [DataMember(Name="phraseCount", EmitDefaultValue=false)]
         public int? PhraseCount { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The phrases that are extracted for a topic.
         /// </summary>
         /// <value>The phrases that are extracted for a topic.</value>
         [DataMember(Name="phrases", EmitDefaultValue=false)]
         public List<string> Phrases { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -176,7 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DraftTopics {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Miner: ").Append(Miner).Append("\n");
@@ -284,34 +236,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Miner != null)
                     hash = hash * 59 + this.Miner.GetHashCode();
-                
+
                 if (this.ConversationCount != null)
                     hash = hash * 59 + this.ConversationCount.GetHashCode();
-                
+
                 if (this.ConversationPercent != null)
                     hash = hash * 59 + this.ConversationPercent.GetHashCode();
-                
+
                 if (this.UtteranceCount != null)
                     hash = hash * 59 + this.UtteranceCount.GetHashCode();
-                
+
                 if (this.PhraseCount != null)
                     hash = hash * 59 + this.PhraseCount.GetHashCode();
-                
+
                 if (this.Phrases != null)
                     hash = hash * 59 + this.Phrases.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

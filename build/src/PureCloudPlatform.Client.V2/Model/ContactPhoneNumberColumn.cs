@@ -18,36 +18,18 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactPhoneNumberColumn :  IEquatable<ContactPhoneNumberColumn>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactPhoneNumberColumn" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ContactPhoneNumberColumn() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactPhoneNumberColumn" /> class.
         /// </summary>
         /// <param name="ColumnName">The name of the phone column. (required).</param>
-        /// <param name="Type">Indicates the type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;. (required).</param>
-        /// <param name="CallableTimeColumn">A column that indicates the timezone to use for a given contact when checking callable times. Not allowed if &#39;automaticTimeZoneMapping&#39; is set to true..</param>
+        /// <param name="Type">Indicates the type of the phone column. For example, 'cell' or 'home'. (required).</param>
+        /// <param name="CallableTimeColumn">A column that indicates the timezone to use for a given contact when checking callable times. Not allowed if 'automaticTimeZoneMapping' is set to true..</param>
         public ContactPhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumn = null)
         {
             this.ColumnName = ColumnName;
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the phone column.
         /// </summary>
         /// <value>The name of the phone column.</value>
         [DataMember(Name="columnName", EmitDefaultValue=false)]
         public string ColumnName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Indicates the type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;.
+        /// Indicates the type of the phone column. For example, 'cell' or 'home'.
         /// </summary>
-        /// <value>Indicates the type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;.</value>
+        /// <value>Indicates the type of the phone column. For example, 'cell' or 'home'.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// A column that indicates the timezone to use for a given contact when checking callable times. Not allowed if &#39;automaticTimeZoneMapping&#39; is set to true.
+        /// A column that indicates the timezone to use for a given contact when checking callable times. Not allowed if 'automaticTimeZoneMapping' is set to true.
         /// </summary>
-        /// <value>A column that indicates the timezone to use for a given contact when checking callable times. Not allowed if &#39;automaticTimeZoneMapping&#39; is set to true.</value>
+        /// <value>A column that indicates the timezone to use for a given contact when checking callable times. Not allowed if 'automaticTimeZoneMapping' is set to true.</value>
         [DataMember(Name="callableTimeColumn", EmitDefaultValue=false)]
         public string CallableTimeColumn { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactPhoneNumberColumn {\n");
-            
+
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  CallableTimeColumn: ").Append(CallableTimeColumn).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ColumnName != null)
                     hash = hash * 59 + this.ColumnName.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.CallableTimeColumn != null)
                     hash = hash * 59 + this.CallableTimeColumn.GetHashCode();
-                
+
                 return hash;
             }
         }

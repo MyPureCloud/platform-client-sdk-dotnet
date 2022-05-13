@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DraftIntents :  IEquatable<DraftIntents>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DraftIntents" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DraftIntents() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DraftIntents" /> class.
         /// </summary>
@@ -61,43 +38,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Id for an intent.
         /// </summary>
         /// <value>Id for an intent.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name/Label for an intent.
         /// </summary>
         /// <value>Name/Label for an intent.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The utterances that are extracted for an Intent.
         /// </summary>
         /// <value>The utterances that are extracted for an Intent.</value>
         [DataMember(Name="utterances", EmitDefaultValue=false)]
         public List<string> Utterances { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -106,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DraftIntents {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Utterances: ").Append(Utterances).Append("\n");
@@ -184,19 +161,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Utterances != null)
                     hash = hash * 59 + this.Utterances.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

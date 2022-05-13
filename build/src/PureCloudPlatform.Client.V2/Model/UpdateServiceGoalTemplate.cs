@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UpdateServiceGoalTemplate :  IEquatable<UpdateServiceGoalTemplate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateServiceGoalTemplate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UpdateServiceGoalTemplate() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateServiceGoalTemplate" /> class.
         /// </summary>
@@ -70,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the service goal template.
         /// </summary>
         /// <value>The name of the service goal template.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Service level targets for this service goal template
         /// </summary>
         /// <value>Service level targets for this service goal template</value>
         [DataMember(Name="serviceLevel", EmitDefaultValue=false)]
         public BuServiceLevel ServiceLevel { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Average speed of answer targets for this service goal template
         /// </summary>
         /// <value>Average speed of answer targets for this service goal template</value>
         [DataMember(Name="averageSpeedOfAnswer", EmitDefaultValue=false)]
         public BuAverageSpeedOfAnswer AverageSpeedOfAnswer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Abandon rate targets for this service goal template
         /// </summary>
         /// <value>Abandon rate targets for this service goal template</value>
         [DataMember(Name="abandonRate", EmitDefaultValue=false)]
         public BuAbandonRate AbandonRate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version metadata for the service goal template
         /// </summary>
         /// <value>Version metadata for the service goal template</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UpdateServiceGoalTemplate {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
             sb.Append("  AverageSpeedOfAnswer: ").Append(AverageSpeedOfAnswer).Append("\n");
@@ -208,22 +180,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ServiceLevel != null)
                     hash = hash * 59 + this.ServiceLevel.GetHashCode();
-                
+
                 if (this.AverageSpeedOfAnswer != null)
                     hash = hash * 59 + this.AverageSpeedOfAnswer.GetHashCode();
-                
+
                 if (this.AbandonRate != null)
                     hash = hash * 59 + this.AbandonRate.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

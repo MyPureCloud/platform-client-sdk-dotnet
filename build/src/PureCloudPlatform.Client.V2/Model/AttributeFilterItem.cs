@@ -18,13 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AttributeFilterItem :  IEquatable<AttributeFilterItem>
     {
-        
-        
-        
-        
-        
         /// <summary>
-        /// Gets or Sets _Operator
+        /// Gets or Sets Operator
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
@@ -91,59 +86,44 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CONTAINS")]
             Contains
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
-        /// Gets or Sets _Operator
+        /// Gets or Sets Operator
         /// </summary>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public OperatorEnum? _Operator { get; set; }
-        
-        
-        
-        
-    
+        public OperatorEnum? Operator { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AttributeFilterItem" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        /// <param name="_Operator">_Operator.</param>
+        /// <param name="Operator">Operator.</param>
         /// <param name="Values">Values.</param>
-        public AttributeFilterItem(string Id = null, OperatorEnum? _Operator = null, List<string> Values = null)
+        public AttributeFilterItem(string Id = null, OperatorEnum? Operator = null, List<string> Values = null)
         {
             this.Id = Id;
-            this._Operator = _Operator;
+            this.Operator = Operator;
             this.Values = Values;
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Values
         /// </summary>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,9 +132,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AttributeFilterItem {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -202,9 +182,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this._Operator == other._Operator ||
-                    this._Operator != null &&
-                    this._Operator.Equals(other._Operator)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
                 ) &&
                 (
                     this.Values == other.Values ||
@@ -224,16 +204,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this._Operator != null)
-                    hash = hash * 59 + this._Operator.GetHashCode();
-                
+
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
+
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
+
                 return hash;
             }
         }

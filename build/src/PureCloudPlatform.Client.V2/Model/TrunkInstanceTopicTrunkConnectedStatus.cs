@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkInstanceTopicTrunkConnectedStatus :  IEquatable<TrunkInstanceTopicTrunkConnectedStatus>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkInstanceTopicTrunkConnectedStatus" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Connected
         /// </summary>
         [DataMember(Name="connected", EmitDefaultValue=false)]
         public bool? Connected { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConnectedStateTime
         /// </summary>
         [DataMember(Name="connectedStateTime", EmitDefaultValue=false)]
         public DateTime? ConnectedStateTime { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkInstanceTopicTrunkConnectedStatus {\n");
-            
+
             sb.Append("  Connected: ").Append(Connected).Append("\n");
             sb.Append("  ConnectedStateTime: ").Append(ConnectedStateTime).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Connected != null)
                     hash = hash * 59 + this.Connected.GetHashCode();
-                
+
                 if (this.ConnectedStateTime != null)
                     hash = hash * 59 + this.ConnectedStateTime.GetHashCode();
-                
+
                 return hash;
             }
         }

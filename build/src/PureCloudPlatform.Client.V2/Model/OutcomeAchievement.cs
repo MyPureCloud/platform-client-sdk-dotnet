@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OutcomeAchievement :  IEquatable<OutcomeAchievement>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OutcomeAchievement" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The outcome that was achieved.
         /// </summary>
         /// <value>The outcome that was achieved.</value>
         [DataMember(Name="outcome", EmitDefaultValue=false)]
         public AchievedOutcome Outcome { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp indicating when the outcome was achieved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the outcome was achieved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="achievedDate", EmitDefaultValue=false)]
         public DateTime? AchievedDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OutcomeAchievement {\n");
-            
+
             sb.Append("  Outcome: ").Append(Outcome).Append("\n");
             sb.Append("  AchievedDate: ").Append(AchievedDate).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Outcome != null)
                     hash = hash * 59 + this.Outcome.GetHashCode();
-                
+
                 if (this.AchievedDate != null)
                     hash = hash * 59 + this.AchievedDate.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerContactlistfilterConfigChangeFilterClause :  IEquatable<DialerContactlistfilterConfigChangeFilterClause>
     {
-        
-        
         /// <summary>
         /// Contact list filter type
         /// </summary>
@@ -47,25 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OR")]
             Or
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Contact list filter type
         /// </summary>
         /// <value>Contact list filter type</value>
         [DataMember(Name="filterType", EmitDefaultValue=false)]
         public FilterTypeEnum? FilterType { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContactlistfilterConfigChangeFilterClause" /> class.
         /// </summary>
@@ -78,18 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The list of predicates in that clause
         /// </summary>
         /// <value>The list of predicates in that clause</value>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<DialerContactlistfilterConfigChangeFilterPredicate> Predicates { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerContactlistfilterConfigChangeFilterClause {\n");
-            
+
             sb.Append("  FilterType: ").Append(FilterType).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
             sb.Append("}\n");
@@ -164,13 +149,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FilterType != null)
                     hash = hash * 59 + this.FilterType.GetHashCode();
-                
+
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SurveyQuestionGroupScore :  IEquatable<SurveyQuestionGroupScore>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyQuestionGroupScore" /> class.
         /// </summary>
@@ -64,49 +36,49 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets QuestionGroupId
         /// </summary>
         [DataMember(Name="questionGroupId", EmitDefaultValue=false)]
         public string QuestionGroupId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Score of all questions in the group
         /// </summary>
         /// <value>Score of all questions in the group</value>
         [DataMember(Name="totalScore", EmitDefaultValue=false)]
         public float? TotalScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Maximum possible score of all questions in the group
         /// </summary>
         /// <value>Maximum possible score of all questions in the group</value>
         [DataMember(Name="maxTotalScore", EmitDefaultValue=false)]
         public float? MaxTotalScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MarkedNA
         /// </summary>
         [DataMember(Name="markedNA", EmitDefaultValue=false)]
         public bool? MarkedNA { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets QuestionScores
         /// </summary>
         [DataMember(Name="questionScores", EmitDefaultValue=false)]
         public List<SurveyQuestionScore> QuestionScores { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -115,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SurveyQuestionGroupScore {\n");
-            
+
             sb.Append("  QuestionGroupId: ").Append(QuestionGroupId).Append("\n");
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
             sb.Append("  MaxTotalScore: ").Append(MaxTotalScore).Append("\n");
@@ -199,22 +171,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QuestionGroupId != null)
                     hash = hash * 59 + this.QuestionGroupId.GetHashCode();
-                
+
                 if (this.TotalScore != null)
                     hash = hash * 59 + this.TotalScore.GetHashCode();
-                
+
                 if (this.MaxTotalScore != null)
                     hash = hash * 59 + this.MaxTotalScore.GetHashCode();
-                
+
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
-                
+
                 if (this.QuestionScores != null)
                     hash = hash * 59 + this.QuestionScores.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LocationUpdateDefinition :  IEquatable<LocationUpdateDefinition>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Current activity status of the location.
         /// </summary>
@@ -53,55 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Current activity status of the location.
         /// </summary>
         /// <value>Current activity status of the location.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationUpdateDefinition" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LocationUpdateDefinition() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationUpdateDefinition" /> class.
         /// </summary>
@@ -126,72 +81,72 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the Location. Required for creates, not required for updates
         /// </summary>
         /// <value>The name of the Location. Required for creates, not required for updates</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current version of the location
         /// </summary>
         /// <value>Current version of the location</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// A list of ancestor ids
         /// </summary>
         /// <value>A list of ancestor ids</value>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public List<string> Path { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Notes for the location
         /// </summary>
         /// <value>Notes for the location</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user id of the location contact
         /// </summary>
         /// <value>The user id of the location contact</value>
         [DataMember(Name="contactUser", EmitDefaultValue=false)]
         public string ContactUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Emergency number for the location
         /// </summary>
         /// <value>Emergency number for the location</value>
         [DataMember(Name="emergencyNumber", EmitDefaultValue=false)]
         public LocationEmergencyNumber EmergencyNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Address of the location
         /// </summary>
         /// <value>Address of the location</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public LocationAddress Address { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -200,7 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LocationUpdateDefinition {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
@@ -302,31 +257,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Path != null)
                     hash = hash * 59 + this.Path.GetHashCode();
-                
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 if (this.ContactUser != null)
                     hash = hash * 59 + this.ContactUser.GetHashCode();
-                
+
                 if (this.EmergencyNumber != null)
                     hash = hash * 59 + this.EmergencyNumber.GetHashCode();
-                
+
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
+
                 return hash;
             }
         }

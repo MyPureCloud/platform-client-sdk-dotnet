@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuditEntity :  IEquatable<AuditEntity>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditEntity" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AuditEntity() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditEntity" /> class.
         /// </summary>
@@ -63,43 +40,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The type of the entity the action of this AuditEntity targeted.
         /// </summary>
         /// <value>The type of the entity the action of this AuditEntity targeted.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the entity the action of this AuditEntity targeted.
         /// </summary>
         /// <value>The id of the entity the action of this AuditEntity targeted.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the entity the action of this AuditEntity targeted.
         /// </summary>
         /// <value>The name of the entity the action of this AuditEntity targeted.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The selfUri for this entity.
         /// </summary>
         /// <value>The selfUri for this entity.</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuditEntity {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -186,19 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserAgentInfo :  IEquatable<UserAgentInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAgentInfo" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The firmware version of the phone.
         /// </summary>
         /// <value>The firmware version of the phone.</value>
         [DataMember(Name="firmwareVersion", EmitDefaultValue=false)]
         public string FirmwareVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The manufacturer of the phone.
         /// </summary>
         /// <value>The manufacturer of the phone.</value>
         [DataMember(Name="manufacturer", EmitDefaultValue=false)]
         public string Manufacturer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The model of the phone.
         /// </summary>
         /// <value>The model of the phone.</value>
         [DataMember(Name="model", EmitDefaultValue=false)]
         public string Model { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserAgentInfo {\n");
-            
+
             sb.Append("  FirmwareVersion: ").Append(FirmwareVersion).Append("\n");
             sb.Append("  Manufacturer: ").Append(Manufacturer).Append("\n");
             sb.Append("  Model: ").Append(Model).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FirmwareVersion != null)
                     hash = hash * 59 + this.FirmwareVersion.GetHashCode();
-                
+
                 if (this.Manufacturer != null)
                     hash = hash * 59 + this.Manufacturer.GetHashCode();
-                
+
                 if (this.Model != null)
                     hash = hash * 59 + this.Model.GetHashCode();
-                
+
                 return hash;
             }
         }

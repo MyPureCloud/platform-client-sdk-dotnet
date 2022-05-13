@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeNetworkDiagnosticRequest :  IEquatable<EdgeNetworkDiagnosticRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeNetworkDiagnosticRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected EdgeNetworkDiagnosticRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeNetworkDiagnosticRequest" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// IPv4/6 address or host to be probed for connectivity. No port allowed.
         /// </summary>
         /// <value>IPv4/6 address or host to be probed for connectivity. No port allowed.</value>
         [DataMember(Name="host", EmitDefaultValue=false)]
         public string Host { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeNetworkDiagnosticRequest {\n");
-            
+
             sb.Append("  Host: ").Append(Host).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Host != null)
                     hash = hash * 59 + this.Host.GetHashCode();
-                
+
                 return hash;
             }
         }

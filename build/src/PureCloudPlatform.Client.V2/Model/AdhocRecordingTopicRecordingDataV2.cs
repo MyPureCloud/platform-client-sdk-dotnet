@@ -18,94 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AdhocRecordingTopicRecordingDataV2 :  IEquatable<AdhocRecordingTopicRecordingDataV2>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AdhocRecordingTopicRecordingDataV2" /> class.
         /// </summary>
@@ -148,143 +60,143 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DateCreated
         /// </summary>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DateModified
         /// </summary>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public AdhocRecordingTopicWorkspaceData Workspace { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public AdhocRecordingTopicUserData CreatedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ContentType
         /// </summary>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ContentLength
         /// </summary>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
         public int? ContentLength { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Filename
         /// </summary>
         [DataMember(Name="filename", EmitDefaultValue=false)]
         public string Filename { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ChangeNumber
         /// </summary>
         [DataMember(Name="changeNumber", EmitDefaultValue=false)]
         public int? ChangeNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DateUploaded
         /// </summary>
         [DataMember(Name="dateUploaded", EmitDefaultValue=false)]
         public DateTime? DateUploaded { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UploadedBy
         /// </summary>
         [DataMember(Name="uploadedBy", EmitDefaultValue=false)]
         public AdhocRecordingTopicUserData UploadedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LockInfo
         /// </summary>
         [DataMember(Name="lockInfo", EmitDefaultValue=false)]
         public AdhocRecordingTopicLockData LockInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DurationMillieconds
         /// </summary>
         [DataMember(Name="durationMillieconds", EmitDefaultValue=false)]
         public int? DurationMillieconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Conversation
         /// </summary>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public AdhocRecordingTopicConversationData Conversation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Read
         /// </summary>
         [DataMember(Name="read", EmitDefaultValue=false)]
         public bool? Read { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -293,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AdhocRecordingTopicRecordingDataV2 {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -449,58 +361,57 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
+
                 if (this.ContentLength != null)
                     hash = hash * 59 + this.ContentLength.GetHashCode();
-                
+
                 if (this.Filename != null)
                     hash = hash * 59 + this.Filename.GetHashCode();
-                
+
                 if (this.ChangeNumber != null)
                     hash = hash * 59 + this.ChangeNumber.GetHashCode();
-                
+
                 if (this.DateUploaded != null)
                     hash = hash * 59 + this.DateUploaded.GetHashCode();
-                
+
                 if (this.UploadedBy != null)
                     hash = hash * 59 + this.UploadedBy.GetHashCode();
-                
+
                 if (this.LockInfo != null)
                     hash = hash * 59 + this.LockInfo.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.DurationMillieconds != null)
                     hash = hash * 59 + this.DurationMillieconds.GetHashCode();
-                
+
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
+
                 if (this.Read != null)
                     hash = hash * 59 + this.Read.GetHashCode();
-                
+
                 return hash;
             }
         }

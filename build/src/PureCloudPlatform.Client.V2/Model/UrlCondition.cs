@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UrlCondition :  IEquatable<UrlCondition>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The comparison operator.
         /// </summary>
@@ -110,52 +105,42 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "endsWith")]
             Endswith
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The comparison operator.
         /// </summary>
         /// <value>The comparison operator.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public OperatorEnum? _Operator { get; set; }
-        
-        
-    
+        public OperatorEnum? Operator { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UrlCondition" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UrlCondition() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UrlCondition" /> class.
         /// </summary>
         /// <param name="Values">The URL condition value. (required).</param>
-        /// <param name="_Operator">The comparison operator. (required).</param>
-        public UrlCondition(List<string> Values = null, OperatorEnum? _Operator = null)
+        /// <param name="Operator">The comparison operator. (required).</param>
+        public UrlCondition(List<string> Values = null, OperatorEnum? Operator = null)
         {
             this.Values = Values;
-            this._Operator = _Operator;
+            this.Operator = Operator;
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The URL condition value.
         /// </summary>
         /// <value>The URL condition value.</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -164,9 +149,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UrlCondition {\n");
-            
+
             sb.Append("  Values: ").Append(Values).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -213,9 +198,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Values.SequenceEqual(other.Values)
                 ) &&
                 (
-                    this._Operator == other._Operator ||
-                    this._Operator != null &&
-                    this._Operator.Equals(other._Operator)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
                 );
         }
 
@@ -230,13 +215,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
-                if (this._Operator != null)
-                    hash = hash * 59 + this._Operator.GetHashCode();
-                
+
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
+
                 return hash;
             }
         }

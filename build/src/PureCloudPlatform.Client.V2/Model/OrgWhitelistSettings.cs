@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OrgWhitelistSettings :  IEquatable<OrgWhitelistSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OrgWhitelistSettings" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets EnableWhitelist
         /// </summary>
         [DataMember(Name="enableWhitelist", EmitDefaultValue=false)]
         public bool? EnableWhitelist { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DomainWhitelist
         /// </summary>
         [DataMember(Name="domainWhitelist", EmitDefaultValue=false)]
         public List<string> DomainWhitelist { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OrgWhitelistSettings {\n");
-            
+
             sb.Append("  EnableWhitelist: ").Append(EnableWhitelist).Append("\n");
             sb.Append("  DomainWhitelist: ").Append(DomainWhitelist).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EnableWhitelist != null)
                     hash = hash * 59 + this.EnableWhitelist.GetHashCode();
-                
+
                 if (this.DomainWhitelist != null)
                     hash = hash * 59 + this.DomainWhitelist.GetHashCode();
-                
+
                 return hash;
             }
         }

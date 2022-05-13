@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerDnclistConfigChangeDncList :  IEquatable<DialerDnclistConfigChangeDncList>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// the type of dnc list being created, rds (csv file), gryphon, or dnc.com
         /// </summary>
@@ -59,19 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "gryphon")]
             Gryphon
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ContactMethod
         /// </summary>
@@ -98,68 +77,17 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PHONE")]
             Phone
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// the type of dnc list being created, rds (csv file), gryphon, or dnc.com
         /// </summary>
         /// <value>the type of dnc list being created, rds (csv file), gryphon, or dnc.com</value>
         [DataMember(Name="dncSourceType", EmitDefaultValue=false)]
         public DncSourceTypeEnum? DncSourceType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ContactMethod
         /// </summary>
         [DataMember(Name="contactMethod", EmitDefaultValue=false)]
         public ContactMethodEnum? ContactMethod { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerDnclistConfigChangeDncList" /> class.
         /// </summary>
@@ -194,108 +122,108 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ImportStatus
         /// </summary>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
         public DialerDnclistConfigChangeImportStatus ImportStatus { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// the number of phone numbers in the do not call list
         /// </summary>
         /// <value>the number of phone numbers in the do not call list</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public int? Size { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// the loginId if the dncSourceType is dnc.com
         /// </summary>
         /// <value>the loginId if the dncSourceType is dnc.com</value>
         [DataMember(Name="loginId", EmitDefaultValue=false)]
         public string LoginId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// the list of dnc.com codes to be treated as DNC
         /// </summary>
         /// <value>the list of dnc.com codes to be treated as DNC</value>
         [DataMember(Name="dncCodes", EmitDefaultValue=false)]
         public List<string> DncCodes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// the license number if the dncSourceType is gryphon
         /// </summary>
         /// <value>the license number if the dncSourceType is gryphon</value>
         [DataMember(Name="licenseId", EmitDefaultValue=false)]
         public string LicenseId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Division
         /// </summary>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public DialerDnclistConfigChangeUriReference Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The UI-visible name of the object
         /// </summary>
         /// <value>The UI-visible name of the object</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Creation time of the entity
         /// </summary>
         /// <value>Creation time of the entity</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last modified time of the entity
         /// </summary>
         /// <value>Last modified time of the entity</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -304,7 +232,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerDnclistConfigChangeDncList {\n");
-            
+
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  DncSourceType: ").Append(DncSourceType).Append("\n");
@@ -436,46 +364,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ImportStatus != null)
                     hash = hash * 59 + this.ImportStatus.GetHashCode();
-                
+
                 if (this.Size != null)
                     hash = hash * 59 + this.Size.GetHashCode();
-                
+
                 if (this.DncSourceType != null)
                     hash = hash * 59 + this.DncSourceType.GetHashCode();
-                
+
                 if (this.LoginId != null)
                     hash = hash * 59 + this.LoginId.GetHashCode();
-                
+
                 if (this.DncCodes != null)
                     hash = hash * 59 + this.DncCodes.GetHashCode();
-                
+
                 if (this.LicenseId != null)
                     hash = hash * 59 + this.LicenseId.GetHashCode();
-                
+
                 if (this.ContactMethod != null)
                     hash = hash * 59 + this.ContactMethod.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 return hash;
             }
         }

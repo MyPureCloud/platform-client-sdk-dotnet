@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UpdateTimeOffLimitRequest :  IEquatable<UpdateTimeOffLimitRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateTimeOffLimitRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UpdateTimeOffLimitRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateTimeOffLimitRequest" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The default time off limit value in minutes per granularity
         /// </summary>
         /// <value>The default time off limit value in minutes per granularity</value>
         [DataMember(Name="defaultLimitMinutes", EmitDefaultValue=false)]
         public int? DefaultLimitMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version metadata for the time off limit
         /// </summary>
         /// <value>Version metadata for the time off limit</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UpdateTimeOffLimitRequest {\n");
-            
+
             sb.Append("  DefaultLimitMinutes: ").Append(DefaultLimitMinutes).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DefaultLimitMinutes != null)
                     hash = hash * 59 + this.DefaultLimitMinutes.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

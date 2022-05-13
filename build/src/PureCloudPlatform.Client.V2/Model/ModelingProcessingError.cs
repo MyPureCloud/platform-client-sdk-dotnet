@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ModelingProcessingError :  IEquatable<ModelingProcessingError>
     {
-        
-        
         /// <summary>
         /// An internal code representing the type of error. ModelInputMissing for 'Model Builder inputs not found.' ModelInputInvalid for 'Model Builder inputs are invalid. Ensure the input data format is correct.' ModelFailed for 'An error occured while building the model with the given input.'
         /// </summary>
@@ -53,25 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ModelFailed")]
             Modelfailed
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// An internal code representing the type of error. ModelInputMissing for 'Model Builder inputs not found.' ModelInputInvalid for 'Model Builder inputs are invalid. Ensure the input data format is correct.' ModelFailed for 'An error occured while building the model with the given input.'
         /// </summary>
         /// <value>An internal code representing the type of error. ModelInputMissing for 'Model Builder inputs not found.' ModelInputInvalid for 'Model Builder inputs are invalid. Ensure the input data format is correct.' ModelFailed for 'An error occured while building the model with the given input.'</value>
         [DataMember(Name="internalErrorCode", EmitDefaultValue=false)]
-        public InternalErrorCodeEnum? InternalErrorCode { get; set; }
-        
-        
-        
-        
-    
+        public InternalErrorCodeEnum? InternalErrorCode { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ModelingProcessingError" /> class.
         /// </summary>
@@ -80,18 +65,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// A text description of the error
         /// </summary>
         /// <value>A text description of the error</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ModelingProcessingError {\n");
-            
+
             sb.Append("  InternalErrorCode: ").Append(InternalErrorCode).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("}\n");
@@ -166,13 +151,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.InternalErrorCode != null)
                     hash = hash * 59 + this.InternalErrorCode.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 return hash;
             }
         }

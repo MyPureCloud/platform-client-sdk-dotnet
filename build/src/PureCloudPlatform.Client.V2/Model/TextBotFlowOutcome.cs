@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotFlowOutcome :  IEquatable<TextBotFlowOutcome>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The value of the FlowOutcome.
         /// </summary>
@@ -50,37 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILURE")]
             Failure
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The value of the FlowOutcome.
         /// </summary>
         /// <value>The value of the FlowOutcome.</value>
         [DataMember(Name="outcomeValue", EmitDefaultValue=false)]
         public OutcomeValueEnum? OutcomeValue { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotFlowOutcome" /> class.
         /// </summary>
@@ -99,45 +69,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The Flow Outcome ID.
         /// </summary>
         /// <value>The Flow Outcome ID.</value>
         [DataMember(Name="outcomeId", EmitDefaultValue=false)]
         public string OutcomeId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The timestamp for when the Flow Outcome began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp for when the Flow Outcome began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateStart", EmitDefaultValue=false)]
         public DateTime? DateStart { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp for when the Flow Outcome finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp for when the Flow Outcome finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateEnd", EmitDefaultValue=false)]
         public DateTime? DateEnd { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Flow Milestones for the Flow Outcome.
         /// </summary>
         /// <value>The Flow Milestones for the Flow Outcome.</value>
         [DataMember(Name="milestones", EmitDefaultValue=false)]
         public List<TextBotFlowMilestone> Milestones { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotFlowOutcome {\n");
-            
+
             sb.Append("  OutcomeId: ").Append(OutcomeId).Append("\n");
             sb.Append("  OutcomeValue: ").Append(OutcomeValue).Append("\n");
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
@@ -230,22 +200,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OutcomeId != null)
                     hash = hash * 59 + this.OutcomeId.GetHashCode();
-                
+
                 if (this.OutcomeValue != null)
                     hash = hash * 59 + this.OutcomeValue.GetHashCode();
-                
+
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();
-                
+
                 if (this.DateEnd != null)
                     hash = hash * 59 + this.DateEnd.GetHashCode();
-                
+
                 if (this.Milestones != null)
                     hash = hash * 59 + this.Milestones.GetHashCode();
-                
+
                 return hash;
             }
         }

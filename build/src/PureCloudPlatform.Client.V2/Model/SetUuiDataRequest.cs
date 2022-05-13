@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SetUuiDataRequest :  IEquatable<SetUuiDataRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SetUuiDataRequest" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The value of the uuiData to set.
         /// </summary>
         /// <value>The value of the uuiData to set.</value>
         [DataMember(Name="uuiData", EmitDefaultValue=false)]
         public string UuiData { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SetUuiDataRequest {\n");
-            
+
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UuiData != null)
                     hash = hash * 59 + this.UuiData.GetHashCode();
-                
+
                 return hash;
             }
         }

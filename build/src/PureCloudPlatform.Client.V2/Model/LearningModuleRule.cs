@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningModuleRule :  IEquatable<LearningModuleRule>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModuleRule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LearningModuleRule() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModuleRule" /> class.
         /// </summary>
@@ -59,43 +36,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If true, rule is active
         /// </summary>
         /// <value>If true, rule is active</value>
         [DataMember(Name="isActive", EmitDefaultValue=false)]
         public bool? IsActive { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The parts of a learning module rule
         /// </summary>
         /// <value>The parts of a learning module rule</value>
         [DataMember(Name="parts", EmitDefaultValue=false)]
         public List<LearningModuleRuleParts> Parts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningModuleRule {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  Parts: ").Append(Parts).Append("\n");
@@ -182,19 +159,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.IsActive != null)
                     hash = hash * 59 + this.IsActive.GetHashCode();
-                
+
                 if (this.Parts != null)
                     hash = hash * 59 + this.Parts.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConsultTransferUpdate :  IEquatable<ConsultTransferUpdate>
     {
-        
-        
         /// <summary>
         /// Determines to whom the initiating participant is speaking.
         /// </summary>
@@ -53,26 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "BOTH")]
             Both
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// Determines to whom the initiating participant is speaking.
         /// </summary>
         /// <value>Determines to whom the initiating participant is speaking.</value>
         [DataMember(Name="speakTo", EmitDefaultValue=false)]
         public SpeakToEnum? SpeakTo { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsultTransferUpdate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConsultTransferUpdate() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsultTransferUpdate" /> class.
         /// </summary>
@@ -83,9 +73,9 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -94,7 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConsultTransferUpdate {\n");
-            
+
             sb.Append("  SpeakTo: ").Append(SpeakTo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -154,10 +144,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SpeakTo != null)
                     hash = hash * 59 + this.SpeakTo.GetHashCode();
-                
+
                 return hash;
             }
         }

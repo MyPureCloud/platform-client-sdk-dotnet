@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResponseFilter :  IEquatable<ResponseFilter>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Filter operation: IN, EQUALS, NOTEQUALS.
         /// </summary>
@@ -56,68 +51,53 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NOTEQUALS")]
             Notequals
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Filter operation: IN, EQUALS, NOTEQUALS.
         /// </summary>
         /// <value>Filter operation: IN, EQUALS, NOTEQUALS.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public OperatorEnum? _Operator { get; set; }
-        
-        
-        
-        
-    
+        public OperatorEnum? Operator { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseFilter" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ResponseFilter() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseFilter" /> class.
         /// </summary>
-        /// <param name="Name">Field to filter on. Allowed values are &#39;name&#39; and &#39;libraryId. (required).</param>
-        /// <param name="_Operator">Filter operation: IN, EQUALS, NOTEQUALS. (required).</param>
+        /// <param name="Name">Field to filter on. Allowed values are 'name' and 'libraryId. (required).</param>
+        /// <param name="Operator">Filter operation: IN, EQUALS, NOTEQUALS. (required).</param>
         /// <param name="Values">Values to filter on. (required).</param>
-        public ResponseFilter(string Name = null, OperatorEnum? _Operator = null, List<string> Values = null)
+        public ResponseFilter(string Name = null, OperatorEnum? Operator = null, List<string> Values = null)
         {
             this.Name = Name;
-            this._Operator = _Operator;
+            this.Operator = Operator;
             this.Values = Values;
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// Field to filter on. Allowed values are &#39;name&#39; and &#39;libraryId.
+        /// Field to filter on. Allowed values are 'name' and 'libraryId.
         /// </summary>
-        /// <value>Field to filter on. Allowed values are &#39;name&#39; and &#39;libraryId.</value>
+        /// <value>Field to filter on. Allowed values are 'name' and 'libraryId.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Values to filter on.
         /// </summary>
         /// <value>Values to filter on.</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -126,9 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResponseFilter {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -176,9 +156,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this._Operator == other._Operator ||
-                    this._Operator != null &&
-                    this._Operator.Equals(other._Operator)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
                 ) &&
                 (
                     this.Values == other.Values ||
@@ -198,16 +178,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
-                if (this._Operator != null)
-                    hash = hash * 59 + this._Operator.GetHashCode();
-                
+
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
+
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
+
                 return hash;
             }
         }

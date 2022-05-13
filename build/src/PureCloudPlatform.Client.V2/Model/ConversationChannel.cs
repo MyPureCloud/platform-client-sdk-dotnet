@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationChannel :  IEquatable<ConversationChannel>
     {
-        
-        
         /// <summary>
         /// The type or category of this channel.
         /// </summary>
@@ -119,10 +117,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Message")]
             Message
         }
-        
-        
-        
-        
         /// <summary>
         /// Message type for messaging conversations.
         /// </summary>
@@ -192,34 +186,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Instagram")]
             Instagram
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type or category of this channel.
         /// </summary>
         /// <value>The type or category of this channel.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
         /// <summary>
         /// Message type for messaging conversations.
         /// </summary>
         /// <value>Message type for messaging conversations.</value>
         [DataMember(Name="messageType", EmitDefaultValue=false)]
         public MessageTypeEnum? MessageType { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationChannel" /> class.
         /// </summary>
@@ -234,20 +212,20 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         /// <summary>
         /// The source provider for the conversation (e.g. Edge, PureCloud Messaging, PureCloud Email).
         /// </summary>
         /// <value>The source provider for the conversation (e.g. Edge, PureCloud Messaging, PureCloud Email).</value>
         [DataMember(Name="platform", EmitDefaultValue=false)]
         public string Platform { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -256,7 +234,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationChannel {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  MessageType: ").Append(MessageType).Append("\n");
             sb.Append("  Platform: ").Append(Platform).Append("\n");
@@ -328,16 +306,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.MessageType != null)
                     hash = hash * 59 + this.MessageType.GetHashCode();
-                
+
                 if (this.Platform != null)
                     hash = hash * 59 + this.Platform.GetHashCode();
-                
+
                 return hash;
             }
         }

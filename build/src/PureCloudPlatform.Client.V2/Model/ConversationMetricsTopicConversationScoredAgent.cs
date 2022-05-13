@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationMetricsTopicConversationScoredAgent :  IEquatable<ConversationMetricsTopicConversationScoredAgent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMetricsTopicConversationScoredAgent" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Assigned agent score for this conversation (0 - 100, higher being better)
         /// </summary>
         /// <value>Assigned agent score for this conversation (0 - 100, higher being better)</value>
         [DataMember(Name="agentScore", EmitDefaultValue=false)]
         public int? AgentScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for the agent that was scored for this conversation
         /// </summary>
         /// <value>Unique identifier for the agent that was scored for this conversation</value>
         [DataMember(Name="scoredAgentId", EmitDefaultValue=false)]
         public string ScoredAgentId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationMetricsTopicConversationScoredAgent {\n");
-            
+
             sb.Append("  AgentScore: ").Append(AgentScore).Append("\n");
             sb.Append("  ScoredAgentId: ").Append(ScoredAgentId).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AgentScore != null)
                     hash = hash * 59 + this.AgentScore.GetHashCode();
-                
+
                 if (this.ScoredAgentId != null)
                     hash = hash * 59 + this.ScoredAgentId.GetHashCode();
-                
+
                 return hash;
             }
         }

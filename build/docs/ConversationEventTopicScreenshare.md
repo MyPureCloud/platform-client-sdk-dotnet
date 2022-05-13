@@ -15,7 +15,7 @@ title: ConversationEventTopicScreenshare
 | **Provider** | **string** | The source provider of the screen share. | [optional] |
 | **ScriptId** | **string** | The UUID of the script to use. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
-| **PeerCount** | [**ConversationEventTopicObject**](ConversationEventTopicObject.html) |  | [optional] |
+| **PeerCount** | **Object** | The number of peer participants from the perspective of the participant in the conference. | [optional] |
 | **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
 | **ConnectedTime** | **DateTime?** | The timestamp when this communication was connected in the cloud clock. | [optional] |
 | **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |

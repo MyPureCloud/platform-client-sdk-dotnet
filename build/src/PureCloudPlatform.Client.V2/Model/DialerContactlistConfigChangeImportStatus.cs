@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerContactlistConfigChangeImportStatus :  IEquatable<DialerContactlistConfigChangeImportStatus>
     {
-        
-        
         /// <summary>
         /// current status of the import
         /// </summary>
@@ -47,40 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILED")]
             Failed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// current status of the import
         /// </summary>
         /// <value>current status of the import</value>
         [DataMember(Name="importState", EmitDefaultValue=false)]
         public ImportStateEnum? ImportState { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContactlistConfigChangeImportStatus" /> class.
         /// </summary>
@@ -99,45 +69,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// total number of records to be imported
         /// </summary>
         /// <value>total number of records to be imported</value>
         [DataMember(Name="totalRecords", EmitDefaultValue=false)]
         public int? TotalRecords { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// number of records finished importing
         /// </summary>
         /// <value>number of records finished importing</value>
         [DataMember(Name="completedRecords", EmitDefaultValue=false)]
         public int? CompletedRecords { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// percentage of records finished importing
         /// </summary>
         /// <value>percentage of records finished importing</value>
         [DataMember(Name="percentageComplete", EmitDefaultValue=false)]
         public int? PercentageComplete { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// if the import has failed, the reason for the failure
         /// </summary>
         /// <value>if the import has failed, the reason for the failure</value>
         [DataMember(Name="failureReason", EmitDefaultValue=false)]
         public string FailureReason { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerContactlistConfigChangeImportStatus {\n");
-            
+
             sb.Append("  ImportState: ").Append(ImportState).Append("\n");
             sb.Append("  TotalRecords: ").Append(TotalRecords).Append("\n");
             sb.Append("  CompletedRecords: ").Append(CompletedRecords).Append("\n");
@@ -230,22 +200,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ImportState != null)
                     hash = hash * 59 + this.ImportState.GetHashCode();
-                
+
                 if (this.TotalRecords != null)
                     hash = hash * 59 + this.TotalRecords.GetHashCode();
-                
+
                 if (this.CompletedRecords != null)
                     hash = hash * 59 + this.CompletedRecords.GetHashCode();
-                
+
                 if (this.PercentageComplete != null)
                     hash = hash * 59 + this.PercentageComplete.GetHashCode();
-                
+
                 if (this.FailureReason != null)
                     hash = hash * 59 + this.FailureReason.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Utilization :  IEquatable<Utilization>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Utilization" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Map of media type to utilization settings.  Valid media types include call, callback, chat, email, and message.
         /// </summary>
         /// <value>Map of media type to utilization settings.  Valid media types include call, callback, chat, email, and message.</value>
         [DataMember(Name="utilization", EmitDefaultValue=false)]
         public Dictionary<string, MediaUtilization> _Utilization { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Utilization {\n");
-            
+
             sb.Append("  _Utilization: ").Append(_Utilization).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this._Utilization != null)
                     hash = hash * 59 + this._Utilization.GetHashCode();
-                
+
                 return hash;
             }
         }

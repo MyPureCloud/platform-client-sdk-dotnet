@@ -122,6 +122,8 @@ Deletes an existing share.
 
 This revokes sharing rights specified in the share record
 
+
+
 Requires NO permissions: 
 
 
@@ -378,6 +380,8 @@ Delete workspace tag
 
 Delete a tag from a workspace. Will remove this tag from all documents.
 
+
+
 Requires NO permissions: 
 
 
@@ -538,9 +542,9 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var transactionFilter = transactionFilter_example;  // string | Transaction filter (optional) 
-            var level = level_example;  // string | level (optional)  (default to USER)
+            var level = level_example;  // string | level (optional)  (default to "USER")
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ascending")
 
             try
             { 
@@ -566,9 +570,9 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **transactionFilter** | **string**| Transaction filter | [optional]  |
-| **level** | **string**| level | [optional] [default to USER] |
+| **level** | **string**| level | [optional] [default to "USER"] |
 | **sortBy** | **string**| Sort by | [optional]  |
-| **sortOrder** | **string**| Sort order | [optional] [default to ascending] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ascending"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -636,7 +640,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
 | **disposition** | **string**| Request how the content will be downloaded: a file attachment or inline. Default is attachment. | [optional] <br />**Values**: attachment, inline |
-| **contentType** | **string**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav | [optional]  |
+| **contentType** | **string**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -684,7 +688,7 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | name or dateCreated (optional) 
-            var sortOrder = sortOrder_example;  // string | ascending or descending (optional)  (default to ascending)
+            var sortOrder = sortOrder_example;  // string | ascending or descending (optional)  (default to "ascending")
 
             try
             { 
@@ -712,7 +716,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| name or dateCreated | [optional]  |
-| **sortOrder** | **string**| ascending or descending | [optional] [default to ascending] |
+| **sortOrder** | **string**| ascending or descending | [optional] [default to "ascending"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -757,8 +761,8 @@ namespace Example
             var queryPhrase = queryPhrase_example;  // string | Phrase tokens are ANDed together over all searchable fields
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | name or dateCreated (optional)  (default to name)
-            var sortOrder = sortOrder_example;  // string | ascending or descending (optional)  (default to ascending)
+            var sortBy = sortBy_example;  // string | name or dateCreated (optional)  (default to "name")
+            var sortOrder = sortOrder_example;  // string | ascending or descending (optional)  (default to "ascending")
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
@@ -784,8 +788,8 @@ namespace Example
 | **queryPhrase** | **string**| Phrase tokens are ANDed together over all searchable fields |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| name or dateCreated | [optional] [default to name] |
-| **sortOrder** | **string**| ascending or descending | [optional] [default to ascending] |
+| **sortBy** | **string**| name or dateCreated | [optional] [default to "name"] |
+| **sortOrder** | **string**| ascending or descending | [optional] [default to "ascending"] |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: acl, workspace |
 {: class="table table-striped"}
 
@@ -992,6 +996,8 @@ Get shared documents. Securely download a shared document.
 
 This method requires the download sharing URI obtained in the get document response (downloadSharingUri). Documents may be shared between users in the same workspace. Documents may also be shared between any user by creating a content management share.
 
+
+
 Requires NO permissions: 
 
 
@@ -1046,7 +1052,7 @@ namespace Example
 | **sharedId** | **string**| Shared ID |  |
 | **redirect** | **bool?**| Turn on or off redirect | [optional] [default to true] |
 | **disposition** | **string**| Request how the share content will be downloaded: attached as a file or inline. Default is attachment. | [optional] [default to attachment]<br />**Values**: attachment, inline, none |
-| **contentType** | **string**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav | [optional]  |
+| **contentType** | **string**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav | [optional]  |
 | **expand** | **string**| Expand some document fields | [optional] <br />**Values**: document.acl |
 {: class="table table-striped"}
 
@@ -1063,6 +1069,8 @@ namespace Example
 Gets a list of shares.  You must specify at least one filter (e.g. entityId).
 
 Failing to specify a filter will return 400.
+
+
 
 Requires NO permissions: 
 
@@ -1419,7 +1427,7 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | name or dateCreated (optional) 
-            var sortOrder = sortOrder_example;  // string | ascending or descending (optional)  (default to ascending)
+            var sortOrder = sortOrder_example;  // string | ascending or descending (optional)  (default to "ascending")
 
             try
             { 
@@ -1446,7 +1454,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| name or dateCreated | [optional]  |
-| **sortOrder** | **string**| ascending or descending | [optional] [default to ascending] |
+| **sortOrder** | **string**| ascending or descending | [optional] [default to "ascending"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -1740,6 +1748,8 @@ namespace Example
 Get a list of workspaces.
 
 Specifying 'content' access will return all workspaces the user has document access to, while 'admin' access will return all group workspaces the user has administrative rights to.
+
+
 
 Requires NO permissions: 
 

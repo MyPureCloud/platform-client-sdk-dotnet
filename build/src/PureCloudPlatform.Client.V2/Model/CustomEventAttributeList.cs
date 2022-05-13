@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CustomEventAttributeList :  IEquatable<CustomEventAttributeList>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEventAttributeList" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CustomEventAttributeList() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEventAttributeList" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The data type of the custom attributes.
         /// </summary>
         /// <value>The data type of the custom attributes.</value>
         [DataMember(Name="dataType", EmitDefaultValue=false)]
         public string DataType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of custom event attribute values.
         /// </summary>
         /// <value>The list of custom event attribute values.</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CustomEventAttributeList {\n");
-            
+
             sb.Append("  DataType: ").Append(DataType).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DataType != null)
                     hash = hash * 59 + this.DataType.GetHashCode();
-                
+
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
+
                 return hash;
             }
         }

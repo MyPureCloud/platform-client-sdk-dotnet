@@ -18,99 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FaxDocument :  IEquatable<FaxDocument>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxDocument" /> class.
         /// </summary>
@@ -151,155 +58,155 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ContentUri
         /// </summary>
         [DataMember(Name="contentUri", EmitDefaultValue=false)]
         public string ContentUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public DomainEntityRef Workspace { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public DomainEntityRef CreatedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SharingUri
         /// </summary>
         [DataMember(Name="sharingUri", EmitDefaultValue=false)]
         public string SharingUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ContentType
         /// </summary>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ContentLength
         /// </summary>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
         public long? ContentLength { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Filename
         /// </summary>
         [DataMember(Name="filename", EmitDefaultValue=false)]
         public string Filename { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Read
         /// </summary>
         [DataMember(Name="read", EmitDefaultValue=false)]
         public bool? Read { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PageCount
         /// </summary>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public long? PageCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CallerAddress
         /// </summary>
         [DataMember(Name="callerAddress", EmitDefaultValue=false)]
         public string CallerAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ReceiverAddress
         /// </summary>
         [DataMember(Name="receiverAddress", EmitDefaultValue=false)]
         public string ReceiverAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Thumbnails
         /// </summary>
         [DataMember(Name="thumbnails", EmitDefaultValue=false)]
         public List<DocumentThumbnail> Thumbnails { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DownloadSharingUri
         /// </summary>
         [DataMember(Name="downloadSharingUri", EmitDefaultValue=false)]
         public string DownloadSharingUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -308,7 +215,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FaxDocument {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -470,61 +377,60 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.ContentUri != null)
                     hash = hash * 59 + this.ContentUri.GetHashCode();
-                
+
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.SharingUri != null)
                     hash = hash * 59 + this.SharingUri.GetHashCode();
-                
+
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
+
                 if (this.ContentLength != null)
                     hash = hash * 59 + this.ContentLength.GetHashCode();
-                
+
                 if (this.Filename != null)
                     hash = hash * 59 + this.Filename.GetHashCode();
-                
+
                 if (this.Read != null)
                     hash = hash * 59 + this.Read.GetHashCode();
-                
+
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
-                
+
                 if (this.CallerAddress != null)
                     hash = hash * 59 + this.CallerAddress.GetHashCode();
-                
+
                 if (this.ReceiverAddress != null)
                     hash = hash * 59 + this.ReceiverAddress.GetHashCode();
-                
+
                 if (this.Thumbnails != null)
                     hash = hash * 59 + this.Thumbnails.GetHashCode();
-                
+
                 if (this.DownloadSharingUri != null)
                     hash = hash * 59 + this.DownloadSharingUri.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

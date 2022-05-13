@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ArchitectFlowOutcomeNotificationFlowOutcomeNotification :  IEquatable<ArchitectFlowOutcomeNotificationFlowOutcomeNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectFlowOutcomeNotificationFlowOutcomeNotification" /> class.
         /// </summary>
@@ -57,42 +34,42 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The flow outcome ID
         /// </summary>
         /// <value>The flow outcome ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The flow outcome name
         /// </summary>
         /// <value>The flow outcome name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The flow outcome description
         /// </summary>
         /// <value>The flow outcome description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CurrentOperation
         /// </summary>
         [DataMember(Name="currentOperation", EmitDefaultValue=false)]
         public ArchitectFlowOutcomeNotificationArchitectOperation CurrentOperation { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -101,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ArchitectFlowOutcomeNotificationFlowOutcomeNotification {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -179,19 +156,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.CurrentOperation != null)
                     hash = hash * 59 + this.CurrentOperation.GetHashCode();
-                
+
                 return hash;
             }
         }

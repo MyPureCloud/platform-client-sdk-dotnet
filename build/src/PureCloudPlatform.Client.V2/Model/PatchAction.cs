@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchAction :  IEquatable<PatchAction>
     {
-        
-        
         /// <summary>
         /// Media type of action.
         /// </summary>
@@ -71,46 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "openAction")]
             Openaction
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Media type of action.
         /// </summary>
         /// <value>Media type of action.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchAction" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PatchAction() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchAction" /> class.
         /// </summary>
@@ -129,45 +99,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Action template associated with the action map.
         /// </summary>
         /// <value>Action template associated with the action map.</value>
         [DataMember(Name="actionTemplate", EmitDefaultValue=false)]
         public ActionMapActionTemplate ActionTemplate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Architect Flow Id and input contract.
         /// </summary>
         /// <value>Architect Flow Id and input contract.</value>
         [DataMember(Name="architectFlowFields", EmitDefaultValue=false)]
         public ArchitectFlowFields ArchitectFlowFields { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Admin-configurable fields of a web messaging offer action.
         /// </summary>
         /// <value>Admin-configurable fields of a web messaging offer action.</value>
         [DataMember(Name="webMessagingOfferFields", EmitDefaultValue=false)]
         public WebMessagingOfferFields WebMessagingOfferFields { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Admin-configurable fields of an open action.
         /// </summary>
         /// <value>Admin-configurable fields of an open action.</value>
         [DataMember(Name="openActionFields", EmitDefaultValue=false)]
         public OpenActionFields OpenActionFields { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -176,7 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PatchAction {\n");
-            
+
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  ActionTemplate: ").Append(ActionTemplate).Append("\n");
             sb.Append("  ArchitectFlowFields: ").Append(ArchitectFlowFields).Append("\n");
@@ -260,22 +230,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.ActionTemplate != null)
                     hash = hash * 59 + this.ActionTemplate.GetHashCode();
-                
+
                 if (this.ArchitectFlowFields != null)
                     hash = hash * 59 + this.ArchitectFlowFields.GetHashCode();
-                
+
                 if (this.WebMessagingOfferFields != null)
                     hash = hash * 59 + this.WebMessagingOfferFields.GetHashCode();
-                
+
                 if (this.OpenActionFields != null)
                     hash = hash * 59 + this.OpenActionFields.GetHashCode();
-                
+
                 return hash;
             }
         }

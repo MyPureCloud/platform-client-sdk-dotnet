@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsConversation :  IEquatable<AnalyticsConversation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the participant purpose of the participant initiating a message conversation
         /// </summary>
@@ -149,31 +141,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "workflow")]
             Workflow
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The original direction of the conversation
         /// </summary>
@@ -201,72 +168,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the participant purpose of the participant initiating a message conversation
         /// </summary>
         /// <value>Indicates the participant purpose of the participant initiating a message conversation</value>
         [DataMember(Name="conversationInitiator", EmitDefaultValue=false)]
         public ConversationInitiatorEnum? ConversationInitiator { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The original direction of the conversation
         /// </summary>
         /// <value>The original direction of the conversation</value>
         [DataMember(Name="originatingDirection", EmitDefaultValue=false)]
         public OriginatingDirectionEnum? OriginatingDirection { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversation" /> class.
         /// </summary>
@@ -307,137 +220,137 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="conversationEnd", EmitDefaultValue=false)]
         public DateTime? ConversationEnd { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for the conversation
         /// </summary>
         /// <value>Unique identifier for the conversation</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="conversationStart", EmitDefaultValue=false)]
         public DateTime? ConversationStart { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates a messaging conversation in which the customer participated by sending at least one message
         /// </summary>
         /// <value>Indicates a messaging conversation in which the customer participated by sending at least one message</value>
         [DataMember(Name="customerParticipation", EmitDefaultValue=false)]
         public bool? CustomerParticipation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Identifier(s) of division(s) associated with a conversation
         /// </summary>
         /// <value>Identifier(s) of division(s) associated with a conversation</value>
         [DataMember(Name="divisionIds", EmitDefaultValue=false)]
         public List<string> DivisionIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// External tag for the conversation
         /// </summary>
         /// <value>External tag for the conversation</value>
         [DataMember(Name="externalTag", EmitDefaultValue=false)]
         public string ExternalTag { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The unique identifier(s) of the knowledge base(s) used
         /// </summary>
         /// <value>The unique identifier(s) of the knowledge base(s) used</value>
         [DataMember(Name="knowledgeBaseIds", EmitDefaultValue=false)]
         public List<string> KnowledgeBaseIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The lowest estimated average MOS among all the audio streams belonging to this conversation
         /// </summary>
         /// <value>The lowest estimated average MOS among all the audio streams belonging to this conversation</value>
         [DataMember(Name="mediaStatsMinConversationMos", EmitDefaultValue=false)]
         public double? MediaStatsMinConversationMos { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The lowest R-factor value among all of the audio streams belonging to this conversation
         /// </summary>
         /// <value>The lowest R-factor value among all of the audio streams belonging to this conversation</value>
         [DataMember(Name="mediaStatsMinConversationRFactor", EmitDefaultValue=false)]
         public double? MediaStatsMinConversationRFactor { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Indicates whether all flow sessions were self serviced
         /// </summary>
         /// <value>Indicates whether all flow sessions were self serviced</value>
         [DataMember(Name="selfServed", EmitDefaultValue=false)]
         public bool? SelfServed { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Evaluations associated with this conversation
         /// </summary>
         /// <value>Evaluations associated with this conversation</value>
         [DataMember(Name="evaluations", EmitDefaultValue=false)]
         public List<AnalyticsEvaluation> Evaluations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Surveys associated with this conversation
         /// </summary>
         /// <value>Surveys associated with this conversation</value>
         [DataMember(Name="surveys", EmitDefaultValue=false)]
         public List<AnalyticsSurvey> Surveys { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Resolutions associated with this conversation
         /// </summary>
         /// <value>Resolutions associated with this conversation</value>
         [DataMember(Name="resolutions", EmitDefaultValue=false)]
         public List<AnalyticsResolution> Resolutions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Participants in the conversation
         /// </summary>
         /// <value>Participants in the conversation</value>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<AnalyticsParticipant> Participants { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -446,7 +359,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsConversation {\n");
-            
+
             sb.Append("  ConversationEnd: ").Append(ConversationEnd).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  ConversationInitiator: ").Append(ConversationInitiator).Append("\n");
@@ -596,55 +509,54 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ConversationEnd != null)
                     hash = hash * 59 + this.ConversationEnd.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.ConversationInitiator != null)
                     hash = hash * 59 + this.ConversationInitiator.GetHashCode();
-                
+
                 if (this.ConversationStart != null)
                     hash = hash * 59 + this.ConversationStart.GetHashCode();
-                
+
                 if (this.CustomerParticipation != null)
                     hash = hash * 59 + this.CustomerParticipation.GetHashCode();
-                
+
                 if (this.DivisionIds != null)
                     hash = hash * 59 + this.DivisionIds.GetHashCode();
-                
+
                 if (this.ExternalTag != null)
                     hash = hash * 59 + this.ExternalTag.GetHashCode();
-                
+
                 if (this.KnowledgeBaseIds != null)
                     hash = hash * 59 + this.KnowledgeBaseIds.GetHashCode();
-                
+
                 if (this.MediaStatsMinConversationMos != null)
                     hash = hash * 59 + this.MediaStatsMinConversationMos.GetHashCode();
-                
+
                 if (this.MediaStatsMinConversationRFactor != null)
                     hash = hash * 59 + this.MediaStatsMinConversationRFactor.GetHashCode();
-                
+
                 if (this.OriginatingDirection != null)
                     hash = hash * 59 + this.OriginatingDirection.GetHashCode();
-                
+
                 if (this.SelfServed != null)
                     hash = hash * 59 + this.SelfServed.GetHashCode();
-                
+
                 if (this.Evaluations != null)
                     hash = hash * 59 + this.Evaluations.GetHashCode();
-                
+
                 if (this.Surveys != null)
                     hash = hash * 59 + this.Surveys.GetHashCode();
-                
+
                 if (this.Resolutions != null)
                     hash = hash * 59 + this.Resolutions.GetHashCode();
-                
+
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
-                
+
                 return hash;
             }
         }

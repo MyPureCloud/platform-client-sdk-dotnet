@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Usage :  IEquatable<Usage>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Usage" /> class.
         /// </summary>
@@ -36,15 +28,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Types
         /// </summary>
         [DataMember(Name="types", EmitDefaultValue=false)]
         public List<UsageItem> Types { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Usage {\n");
-            
+
             sb.Append("  Types: ").Append(Types).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -113,10 +105,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Types != null)
                     hash = hash * 59 + this.Types.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimServiceProviderConfigFilterFeature :  IEquatable<ScimServiceProviderConfigFilterFeature>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfigFilterFeature" /> class.
         /// </summary>
@@ -39,25 +26,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Indicates whether configuration options are supported.
         /// </summary>
         /// <value>Indicates whether configuration options are supported.</value>
         [DataMember(Name="supported", EmitDefaultValue=false)]
         public bool? Supported { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum number of results returned from a filtered query.
         /// </summary>
         /// <value>The maximum number of results returned from a filtered query.</value>
         [DataMember(Name="maxResults", EmitDefaultValue=false)]
         public int? MaxResults { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimServiceProviderConfigFilterFeature {\n");
-            
+
             sb.Append("  Supported: ").Append(Supported).Append("\n");
             sb.Append("  MaxResults: ").Append(MaxResults).Append("\n");
             sb.Append("}\n");
@@ -132,13 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Supported != null)
                     hash = hash * 59 + this.Supported.GetHashCode();
-                
+
                 if (this.MaxResults != null)
                     hash = hash * 59 + this.MaxResults.GetHashCode();
-                
+
                 return hash;
             }
         }

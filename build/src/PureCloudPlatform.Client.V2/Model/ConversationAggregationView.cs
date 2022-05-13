@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationAggregationView :  IEquatable<ConversationAggregationView>
     {
-        
-        
         /// <summary>
         /// Target metric name
         /// </summary>
@@ -311,13 +309,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "tWait")]
             Twait
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of view you wish to create
         /// </summary>
@@ -339,42 +330,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "rangeBound")]
             Rangebound
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Target metric name
         /// </summary>
         /// <value>Target metric name</value>
         [DataMember(Name="target", EmitDefaultValue=false)]
         public TargetEnum? Target { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of view you wish to create
         /// </summary>
         /// <value>Type of view you wish to create</value>
         [DataMember(Name="function", EmitDefaultValue=false)]
         public FunctionEnum? Function { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationAggregationView" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConversationAggregationView() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationAggregationView" /> class.
         /// </summary>
@@ -391,29 +364,29 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// A unique name for this view. Must be distinct from other views and built-in metric names.
         /// </summary>
         /// <value>A unique name for this view. Must be distinct from other views and built-in metric names.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Range of numbers for slicing up data
         /// </summary>
         /// <value>Range of numbers for slicing up data</value>
         [DataMember(Name="range", EmitDefaultValue=false)]
         public AggregationRange Range { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -422,7 +395,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationAggregationView {\n");
-            
+
             sb.Append("  Target: ").Append(Target).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Function: ").Append(Function).Append("\n");
@@ -500,19 +473,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Target != null)
                     hash = hash * 59 + this.Target.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Function != null)
                     hash = hash * 59 + this.Function.GetHashCode();
-                
+
                 if (this.Range != null)
                     hash = hash * 59 + this.Range.GetHashCode();
-                
+
                 return hash;
             }
         }

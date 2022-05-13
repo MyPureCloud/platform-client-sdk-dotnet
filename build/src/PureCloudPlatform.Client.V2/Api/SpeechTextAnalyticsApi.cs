@@ -8,16 +8,16 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
-    
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface ISpeechTextAnalyticsApi : IApiAccessor
     {
         #region Synchronous Operations
-        
+
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics program by id
+        /// Delete a Speech & Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteSpeechandtextanalyticsProgram (string programId, bool? forceDelete = null);
 
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics program by id
+        /// Delete a Speech & Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSpeechandtextanalyticsProgramWithHttpInfo (string programId, bool? forceDelete = null);
-        
+
         /// <summary>
-        /// Delete All Speech &amp; Text Analytics SentimentFeedback
+        /// Delete All Speech & Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -51,7 +51,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteSpeechandtextanalyticsSentimentfeedback ();
 
         /// <summary>
-        /// Delete All Speech &amp; Text Analytics SentimentFeedback
+        /// Delete All Speech & Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -59,9 +59,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSpeechandtextanalyticsSentimentfeedbackWithHttpInfo ();
-        
+
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id
+        /// Delete a Speech & Text Analytics SentimentFeedback by Id
         /// </summary>
         /// <remarks>
         /// 
@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId (string sentimentFeedbackId);
 
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id
+        /// Delete a Speech & Text Analytics SentimentFeedback by Id
         /// </summary>
         /// <remarks>
         /// 
@@ -81,9 +81,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdWithHttpInfo (string sentimentFeedbackId);
-        
+
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics topic by id
+        /// Delete a Speech & Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -94,7 +94,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteSpeechandtextanalyticsTopic (string topicId);
 
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics topic by id
+        /// Delete a Speech & Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -103,7 +103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicId">The id of the topic</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSpeechandtextanalyticsTopicWithHttpInfo (string topicId);
-        
+
         /// <summary>
         /// Get Speech and Text Analytics for a specific conversation
         /// </summary>
@@ -125,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation Id</param>
         /// <returns>ApiResponse of ConversationMetrics</returns>
         ApiResponse<ConversationMetrics> GetSpeechandtextanalyticsConversationWithHttpInfo (string conversationId);
-        
+
         /// <summary>
         /// Get the pre-signed S3 URL for the transcript of a specific communication of a conversation
         /// </summary>
@@ -149,9 +149,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">Communication ID</param>
         /// <returns>ApiResponse of TranscriptUrl</returns>
         ApiResponse<TranscriptUrl> GetSpeechandtextanalyticsConversationCommunicationTranscripturlWithHttpInfo (string conversationId, string communicationId);
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics program by id
+        /// Get a Speech & Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -162,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Program GetSpeechandtextanalyticsProgram (string programId);
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics program by id
+        /// Get a Speech & Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -171,9 +171,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <returns>ApiResponse of Program</returns>
         ApiResponse<Program> GetSpeechandtextanalyticsProgramWithHttpInfo (string programId);
-        
+
         /// <summary>
-        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id
+        /// Get Speech & Text Analytics program mappings to queues and flows by id
         /// </summary>
         /// <remarks>
         /// 
@@ -184,7 +184,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ProgramMappings GetSpeechandtextanalyticsProgramMappings (string programId);
 
         /// <summary>
-        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id
+        /// Get Speech & Text Analytics program mappings to queues and flows by id
         /// </summary>
         /// <remarks>
         /// 
@@ -193,9 +193,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <returns>ApiResponse of ProgramMappings</returns>
         ApiResponse<ProgramMappings> GetSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId);
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs
+        /// Get the list of Speech & Text Analytics programs
         /// </summary>
         /// <remarks>
         /// 
@@ -207,7 +207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ProgramsEntityListing GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs
+        /// Get the list of Speech & Text Analytics programs
         /// </summary>
         /// <remarks>
         /// 
@@ -217,9 +217,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>ApiResponse of ProgramsEntityListing</returns>
         ApiResponse<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsWithHttpInfo (string nextPage = null, int? pageSize = null);
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics general program job by id
+        /// Get a Speech & Text Analytics general program job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -230,7 +230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         GeneralProgramJob GetSpeechandtextanalyticsProgramsGeneralJob (string jobId);
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics general program job by id
+        /// Get a Speech & Text Analytics general program job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -239,9 +239,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>ApiResponse of GeneralProgramJob</returns>
         ApiResponse<GeneralProgramJob> GetSpeechandtextanalyticsProgramsGeneralJobWithHttpInfo (string jobId);
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows
+        /// Get the list of Speech & Text Analytics programs mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -253,7 +253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ProgramsMappingsEntityListing GetSpeechandtextanalyticsProgramsMappings (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows
+        /// Get the list of Speech & Text Analytics programs mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -263,9 +263,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>ApiResponse of ProgramsMappingsEntityListing</returns>
         ApiResponse<ProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsWithHttpInfo (string nextPage = null, int? pageSize = null);
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish programs job by id
+        /// Get a Speech & Text Analytics publish programs job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -276,7 +276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ProgramJob GetSpeechandtextanalyticsProgramsPublishjob (string jobId);
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish programs job by id
+        /// Get a Speech & Text Analytics publish programs job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -285,9 +285,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>ApiResponse of ProgramJob</returns>
         ApiResponse<ProgramJob> GetSpeechandtextanalyticsProgramsPublishjobWithHttpInfo (string jobId);
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics unpublished programs
+        /// Get the list of Speech & Text Analytics unpublished programs
         /// </summary>
         /// <remarks>
         /// 
@@ -299,7 +299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         UnpublishedProgramsEntityListing GetSpeechandtextanalyticsProgramsUnpublished (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics unpublished programs
+        /// Get the list of Speech & Text Analytics unpublished programs
         /// </summary>
         /// <remarks>
         /// 
@@ -309,9 +309,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>ApiResponse of UnpublishedProgramsEntityListing</returns>
         ApiResponse<UnpublishedProgramsEntityListing> GetSpeechandtextanalyticsProgramsUnpublishedWithHttpInfo (string nextPage = null, int? pageSize = null);
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects
+        /// Get the list of Speech & Text Analytics sentiment supported dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -321,7 +321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         EntityListing GetSpeechandtextanalyticsSentimentDialects ();
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects
+        /// Get the list of Speech & Text Analytics sentiment supported dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -329,9 +329,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EntityListing</returns>
         ApiResponse<EntityListing> GetSpeechandtextanalyticsSentimentDialectsWithHttpInfo ();
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics SentimentFeedback
+        /// Get the list of Speech & Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -342,7 +342,7 @@ namespace PureCloudPlatform.Client.V2.Api
         SentimentFeedbackEntityListing GetSpeechandtextanalyticsSentimentfeedback (string dialect = null);
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics SentimentFeedback
+        /// Get the list of Speech & Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -351,7 +351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>ApiResponse of SentimentFeedbackEntityListing</returns>
         ApiResponse<SentimentFeedbackEntityListing> GetSpeechandtextanalyticsSentimentfeedbackWithHttpInfo (string dialect = null);
-        
+
         /// <summary>
         /// Get Speech And Text Analytics Settings
         /// </summary>
@@ -371,9 +371,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SpeechTextAnalyticsSettingsResponse</returns>
         ApiResponse<SpeechTextAnalyticsSettingsResponse> GetSpeechandtextanalyticsSettingsWithHttpInfo ();
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics topic by id
+        /// Get a Speech & Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -384,7 +384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Topic GetSpeechandtextanalyticsTopic (string topicId);
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics topic by id
+        /// Get a Speech & Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -393,9 +393,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicId">The id of the topic</param>
         /// <returns>ApiResponse of Topic</returns>
         ApiResponse<Topic> GetSpeechandtextanalyticsTopicWithHttpInfo (string topicId);
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics topics
+        /// Get the list of Speech & Text Analytics topics
         /// </summary>
         /// <remarks>
         /// 
@@ -412,7 +412,7 @@ namespace PureCloudPlatform.Client.V2.Api
         TopicsEntityListing GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics topics
+        /// Get the list of Speech & Text Analytics topics
         /// </summary>
         /// <remarks>
         /// 
@@ -427,9 +427,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>ApiResponse of TopicsEntityListing</returns>
         ApiResponse<TopicsEntityListing> GetSpeechandtextanalyticsTopicsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
-        
+
         /// <summary>
-        /// Get list of supported Speech &amp; Text Analytics topics dialects
+        /// Get list of supported Speech & Text Analytics topics dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -439,7 +439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         EntityListing GetSpeechandtextanalyticsTopicsDialects ();
 
         /// <summary>
-        /// Get list of supported Speech &amp; Text Analytics topics dialects
+        /// Get list of supported Speech & Text Analytics topics dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -447,9 +447,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EntityListing</returns>
         ApiResponse<EntityListing> GetSpeechandtextanalyticsTopicsDialectsWithHttpInfo ();
-        
+
         /// <summary>
-        /// Get the Speech &amp; Text Analytics general topics for a given dialect
+        /// Get the Speech & Text Analytics general topics for a given dialect
         /// </summary>
         /// <remarks>
         /// 
@@ -460,7 +460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         GeneralTopicsEntityListing GetSpeechandtextanalyticsTopicsGeneral (string dialect = null);
 
         /// <summary>
-        /// Get the Speech &amp; Text Analytics general topics for a given dialect
+        /// Get the Speech & Text Analytics general topics for a given dialect
         /// </summary>
         /// <remarks>
         /// 
@@ -469,9 +469,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>ApiResponse of GeneralTopicsEntityListing</returns>
         ApiResponse<GeneralTopicsEntityListing> GetSpeechandtextanalyticsTopicsGeneralWithHttpInfo (string dialect = null);
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish topics job by id
+        /// Get a Speech & Text Analytics publish topics job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -482,7 +482,7 @@ namespace PureCloudPlatform.Client.V2.Api
         TopicJob GetSpeechandtextanalyticsTopicsPublishjob (string jobId);
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish topics job by id
+        /// Get a Speech & Text Analytics publish topics job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -491,7 +491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the publish topics job</param>
         /// <returns>ApiResponse of TopicJob</returns>
         ApiResponse<TopicJob> GetSpeechandtextanalyticsTopicsPublishjobWithHttpInfo (string jobId);
-        
+
         /// <summary>
         /// Patch Speech And Text Analytics Settings
         /// </summary>
@@ -513,9 +513,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>ApiResponse of SpeechTextAnalyticsSettingsResponse</returns>
         ApiResponse<SpeechTextAnalyticsSettingsResponse> PatchSpeechandtextanalyticsSettingsWithHttpInfo (SpeechTextAnalyticsSettingsRequest body);
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics program
+        /// Create new Speech & Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -526,7 +526,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Program PostSpeechandtextanalyticsPrograms (ProgramRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics program
+        /// Create new Speech & Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -535,9 +535,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The program to create</param>
         /// <returns>ApiResponse of Program</returns>
         ApiResponse<Program> PostSpeechandtextanalyticsProgramsWithHttpInfo (ProgramRequest body);
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics general program job
+        /// Create new Speech & Text Analytics general program job
         /// </summary>
         /// <remarks>
         /// 
@@ -548,7 +548,7 @@ namespace PureCloudPlatform.Client.V2.Api
         GeneralProgramJob PostSpeechandtextanalyticsProgramsGeneralJobs (GeneralProgramJobRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics general program job
+        /// Create new Speech & Text Analytics general program job
         /// </summary>
         /// <remarks>
         /// 
@@ -557,9 +557,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The general programs job to create</param>
         /// <returns>ApiResponse of GeneralProgramJob</returns>
         ApiResponse<GeneralProgramJob> PostSpeechandtextanalyticsProgramsGeneralJobsWithHttpInfo (GeneralProgramJobRequest body);
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish programs job
+        /// Create new Speech & Text Analytics publish programs job
         /// </summary>
         /// <remarks>
         /// 
@@ -570,7 +570,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ProgramJob PostSpeechandtextanalyticsProgramsPublishjobs (ProgramJobRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish programs job
+        /// Create new Speech & Text Analytics publish programs job
         /// </summary>
         /// <remarks>
         /// 
@@ -579,9 +579,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The publish programs job to create</param>
         /// <returns>ApiResponse of ProgramJob</returns>
         ApiResponse<ProgramJob> PostSpeechandtextanalyticsProgramsPublishjobsWithHttpInfo (ProgramJobRequest body);
-        
+
         /// <summary>
-        /// Create a Speech &amp; Text Analytics SentimentFeedback
+        /// Create a Speech & Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -592,7 +592,7 @@ namespace PureCloudPlatform.Client.V2.Api
         SentimentFeedback PostSpeechandtextanalyticsSentimentfeedback (SentimentFeedback body);
 
         /// <summary>
-        /// Create a Speech &amp; Text Analytics SentimentFeedback
+        /// Create a Speech & Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -601,9 +601,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The SentimentFeedback to create</param>
         /// <returns>ApiResponse of SentimentFeedback</returns>
         ApiResponse<SentimentFeedback> PostSpeechandtextanalyticsSentimentfeedbackWithHttpInfo (SentimentFeedback body);
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics topic
+        /// Create new Speech & Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -614,7 +614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Topic PostSpeechandtextanalyticsTopics (TopicRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics topic
+        /// Create new Speech & Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -623,9 +623,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The topic to create</param>
         /// <returns>ApiResponse of Topic</returns>
         ApiResponse<Topic> PostSpeechandtextanalyticsTopicsWithHttpInfo (TopicRequest body);
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job
+        /// Create new Speech & Text Analytics publish topics job
         /// </summary>
         /// <remarks>
         /// 
@@ -636,7 +636,7 @@ namespace PureCloudPlatform.Client.V2.Api
         TopicJob PostSpeechandtextanalyticsTopicsPublishjobs (TopicJobRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job
+        /// Create new Speech & Text Analytics publish topics job
         /// </summary>
         /// <remarks>
         /// 
@@ -645,7 +645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The publish topics job to create</param>
         /// <returns>ApiResponse of TopicJob</returns>
         ApiResponse<TopicJob> PostSpeechandtextanalyticsTopicsPublishjobsWithHttpInfo (TopicJobRequest body);
-        
+
         /// <summary>
         /// Search resources.
         /// </summary>
@@ -667,9 +667,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of JsonSearchResponse</returns>
         ApiResponse<JsonSearchResponse> PostSpeechandtextanalyticsTranscriptsSearchWithHttpInfo (TranscriptSearchRequest body);
-        
+
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics program
+        /// Update existing Speech & Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -681,7 +681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Program PutSpeechandtextanalyticsProgram (string programId, ProgramRequest body);
 
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics program
+        /// Update existing Speech & Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -691,9 +691,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The program to update</param>
         /// <returns>ApiResponse of Program</returns>
         ApiResponse<Program> PutSpeechandtextanalyticsProgramWithHttpInfo (string programId, ProgramRequest body);
-        
+
         /// <summary>
-        /// Set Speech &amp; Text Analytics program mappings to queues and flows
+        /// Set Speech & Text Analytics program mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -705,7 +705,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ProgramMappings PutSpeechandtextanalyticsProgramMappings (string programId, ProgramMappingsRequest body);
 
         /// <summary>
-        /// Set Speech &amp; Text Analytics program mappings to queues and flows
+        /// Set Speech & Text Analytics program mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -715,7 +715,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The program to set mappings for</param>
         /// <returns>ApiResponse of ProgramMappings</returns>
         ApiResponse<ProgramMappings> PutSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId, ProgramMappingsRequest body);
-        
+
         /// <summary>
         /// Update Speech And Text Analytics Settings
         /// </summary>
@@ -737,9 +737,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>ApiResponse of SpeechTextAnalyticsSettingsResponse</returns>
         ApiResponse<SpeechTextAnalyticsSettingsResponse> PutSpeechandtextanalyticsSettingsWithHttpInfo (SpeechTextAnalyticsSettingsRequest body);
-        
+
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics topic
+        /// Update existing Speech & Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -751,7 +751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Topic PutSpeechandtextanalyticsTopic (string topicId, TopicRequest body);
 
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics topic
+        /// Update existing Speech & Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -761,13 +761,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The topic to update</param>
         /// <returns>ApiResponse of Topic</returns>
         ApiResponse<Topic> PutSpeechandtextanalyticsTopicWithHttpInfo (string topicId, TopicRequest body);
-        
+
         #endregion Synchronous Operations
-        
+
         #region Asynchronous Operations
-        
+
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics program by id
+        /// Delete a Speech & Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -779,7 +779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteSpeechandtextanalyticsProgramAsync (string programId, bool? forceDelete = null);
 
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics program by id
+        /// Delete a Speech & Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -789,9 +789,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId, bool? forceDelete = null);
-        
+
         /// <summary>
-        /// Delete All Speech &amp; Text Analytics SentimentFeedback
+        /// Delete All Speech & Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -801,7 +801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteSpeechandtextanalyticsSentimentfeedbackAsync ();
 
         /// <summary>
-        /// Delete All Speech &amp; Text Analytics SentimentFeedback
+        /// Delete All Speech & Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -809,9 +809,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsSentimentfeedbackAsyncWithHttpInfo ();
-        
+
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id
+        /// Delete a Speech & Text Analytics SentimentFeedback by Id
         /// </summary>
         /// <remarks>
         /// 
@@ -822,7 +822,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdAsync (string sentimentFeedbackId);
 
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id
+        /// Delete a Speech & Text Analytics SentimentFeedback by Id
         /// </summary>
         /// <remarks>
         /// 
@@ -831,9 +831,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdAsyncWithHttpInfo (string sentimentFeedbackId);
-        
+
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics topic by id
+        /// Delete a Speech & Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -844,7 +844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteSpeechandtextanalyticsTopicAsync (string topicId);
 
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics topic by id
+        /// Delete a Speech & Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -853,7 +853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicId">The id of the topic</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsTopicAsyncWithHttpInfo (string topicId);
-        
+
         /// <summary>
         /// Get Speech and Text Analytics for a specific conversation
         /// </summary>
@@ -875,7 +875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation Id</param>
         /// <returns>Task of ApiResponse (ConversationMetrics)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConversationMetrics>> GetSpeechandtextanalyticsConversationAsyncWithHttpInfo (string conversationId);
-        
+
         /// <summary>
         /// Get the pre-signed S3 URL for the transcript of a specific communication of a conversation
         /// </summary>
@@ -899,9 +899,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">Communication ID</param>
         /// <returns>Task of ApiResponse (TranscriptUrl)</returns>
         System.Threading.Tasks.Task<ApiResponse<TranscriptUrl>> GetSpeechandtextanalyticsConversationCommunicationTranscripturlAsyncWithHttpInfo (string conversationId, string communicationId);
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics program by id
+        /// Get a Speech & Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -912,7 +912,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Program> GetSpeechandtextanalyticsProgramAsync (string programId);
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics program by id
+        /// Get a Speech & Text Analytics program by id
         /// </summary>
         /// <remarks>
         /// 
@@ -921,9 +921,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of ApiResponse (Program)</returns>
         System.Threading.Tasks.Task<ApiResponse<Program>> GetSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId);
-        
+
         /// <summary>
-        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id
+        /// Get Speech & Text Analytics program mappings to queues and flows by id
         /// </summary>
         /// <remarks>
         /// 
@@ -934,7 +934,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ProgramMappings> GetSpeechandtextanalyticsProgramMappingsAsync (string programId);
 
         /// <summary>
-        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id
+        /// Get Speech & Text Analytics program mappings to queues and flows by id
         /// </summary>
         /// <remarks>
         /// 
@@ -943,9 +943,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of ApiResponse (ProgramMappings)</returns>
         System.Threading.Tasks.Task<ApiResponse<ProgramMappings>> GetSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId);
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs
+        /// Get the list of Speech & Text Analytics programs
         /// </summary>
         /// <remarks>
         /// 
@@ -957,7 +957,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsAsync (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs
+        /// Get the list of Speech & Text Analytics programs
         /// </summary>
         /// <remarks>
         /// 
@@ -967,9 +967,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>Task of ApiResponse (ProgramsEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ProgramsEntityListing>> GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null);
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics general program job by id
+        /// Get a Speech & Text Analytics general program job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -980,7 +980,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<GeneralProgramJob> GetSpeechandtextanalyticsProgramsGeneralJobAsync (string jobId);
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics general program job by id
+        /// Get a Speech & Text Analytics general program job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -989,9 +989,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>Task of ApiResponse (GeneralProgramJob)</returns>
         System.Threading.Tasks.Task<ApiResponse<GeneralProgramJob>> GetSpeechandtextanalyticsProgramsGeneralJobAsyncWithHttpInfo (string jobId);
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows
+        /// Get the list of Speech & Text Analytics programs mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -1003,7 +1003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsAsync (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows
+        /// Get the list of Speech & Text Analytics programs mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -1013,9 +1013,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>Task of ApiResponse (ProgramsMappingsEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ProgramsMappingsEntityListing>> GetSpeechandtextanalyticsProgramsMappingsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null);
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish programs job by id
+        /// Get a Speech & Text Analytics publish programs job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1026,7 +1026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ProgramJob> GetSpeechandtextanalyticsProgramsPublishjobAsync (string jobId);
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish programs job by id
+        /// Get a Speech & Text Analytics publish programs job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1035,9 +1035,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>Task of ApiResponse (ProgramJob)</returns>
         System.Threading.Tasks.Task<ApiResponse<ProgramJob>> GetSpeechandtextanalyticsProgramsPublishjobAsyncWithHttpInfo (string jobId);
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics unpublished programs
+        /// Get the list of Speech & Text Analytics unpublished programs
         /// </summary>
         /// <remarks>
         /// 
@@ -1049,7 +1049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UnpublishedProgramsEntityListing> GetSpeechandtextanalyticsProgramsUnpublishedAsync (string nextPage = null, int? pageSize = null);
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics unpublished programs
+        /// Get the list of Speech & Text Analytics unpublished programs
         /// </summary>
         /// <remarks>
         /// 
@@ -1059,9 +1059,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>Task of ApiResponse (UnpublishedProgramsEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<UnpublishedProgramsEntityListing>> GetSpeechandtextanalyticsProgramsUnpublishedAsyncWithHttpInfo (string nextPage = null, int? pageSize = null);
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects
+        /// Get the list of Speech & Text Analytics sentiment supported dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -1071,7 +1071,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<EntityListing> GetSpeechandtextanalyticsSentimentDialectsAsync ();
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects
+        /// Get the list of Speech & Text Analytics sentiment supported dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -1079,9 +1079,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetSpeechandtextanalyticsSentimentDialectsAsyncWithHttpInfo ();
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics SentimentFeedback
+        /// Get the list of Speech & Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -1092,7 +1092,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<SentimentFeedbackEntityListing> GetSpeechandtextanalyticsSentimentfeedbackAsync (string dialect = null);
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics SentimentFeedback
+        /// Get the list of Speech & Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -1101,7 +1101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of ApiResponse (SentimentFeedbackEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<SentimentFeedbackEntityListing>> GetSpeechandtextanalyticsSentimentfeedbackAsyncWithHttpInfo (string dialect = null);
-        
+
         /// <summary>
         /// Get Speech And Text Analytics Settings
         /// </summary>
@@ -1121,9 +1121,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SpeechTextAnalyticsSettingsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsSettingsResponse>> GetSpeechandtextanalyticsSettingsAsyncWithHttpInfo ();
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics topic by id
+        /// Get a Speech & Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1134,7 +1134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Topic> GetSpeechandtextanalyticsTopicAsync (string topicId);
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics topic by id
+        /// Get a Speech & Text Analytics topic by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1143,9 +1143,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicId">The id of the topic</param>
         /// <returns>Task of ApiResponse (Topic)</returns>
         System.Threading.Tasks.Task<ApiResponse<Topic>> GetSpeechandtextanalyticsTopicAsyncWithHttpInfo (string topicId);
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics topics
+        /// Get the list of Speech & Text Analytics topics
         /// </summary>
         /// <remarks>
         /// 
@@ -1162,7 +1162,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<TopicsEntityListing> GetSpeechandtextanalyticsTopicsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics topics
+        /// Get the list of Speech & Text Analytics topics
         /// </summary>
         /// <remarks>
         /// 
@@ -1177,9 +1177,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of ApiResponse (TopicsEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TopicsEntityListing>> GetSpeechandtextanalyticsTopicsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
-        
+
         /// <summary>
-        /// Get list of supported Speech &amp; Text Analytics topics dialects
+        /// Get list of supported Speech & Text Analytics topics dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -1189,7 +1189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<EntityListing> GetSpeechandtextanalyticsTopicsDialectsAsync ();
 
         /// <summary>
-        /// Get list of supported Speech &amp; Text Analytics topics dialects
+        /// Get list of supported Speech & Text Analytics topics dialects
         /// </summary>
         /// <remarks>
         /// 
@@ -1197,9 +1197,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetSpeechandtextanalyticsTopicsDialectsAsyncWithHttpInfo ();
-        
+
         /// <summary>
-        /// Get the Speech &amp; Text Analytics general topics for a given dialect
+        /// Get the Speech & Text Analytics general topics for a given dialect
         /// </summary>
         /// <remarks>
         /// 
@@ -1210,7 +1210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<GeneralTopicsEntityListing> GetSpeechandtextanalyticsTopicsGeneralAsync (string dialect = null);
 
         /// <summary>
-        /// Get the Speech &amp; Text Analytics general topics for a given dialect
+        /// Get the Speech & Text Analytics general topics for a given dialect
         /// </summary>
         /// <remarks>
         /// 
@@ -1219,9 +1219,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of ApiResponse (GeneralTopicsEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<GeneralTopicsEntityListing>> GetSpeechandtextanalyticsTopicsGeneralAsyncWithHttpInfo (string dialect = null);
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish topics job by id
+        /// Get a Speech & Text Analytics publish topics job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1232,7 +1232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<TopicJob> GetSpeechandtextanalyticsTopicsPublishjobAsync (string jobId);
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish topics job by id
+        /// Get a Speech & Text Analytics publish topics job by id
         /// </summary>
         /// <remarks>
         /// 
@@ -1241,7 +1241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the publish topics job</param>
         /// <returns>Task of ApiResponse (TopicJob)</returns>
         System.Threading.Tasks.Task<ApiResponse<TopicJob>> GetSpeechandtextanalyticsTopicsPublishjobAsyncWithHttpInfo (string jobId);
-        
+
         /// <summary>
         /// Patch Speech And Text Analytics Settings
         /// </summary>
@@ -1263,9 +1263,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>Task of ApiResponse (SpeechTextAnalyticsSettingsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsSettingsResponse>> PatchSpeechandtextanalyticsSettingsAsyncWithHttpInfo (SpeechTextAnalyticsSettingsRequest body);
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics program
+        /// Create new Speech & Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -1276,7 +1276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Program> PostSpeechandtextanalyticsProgramsAsync (ProgramRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics program
+        /// Create new Speech & Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -1285,9 +1285,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The program to create</param>
         /// <returns>Task of ApiResponse (Program)</returns>
         System.Threading.Tasks.Task<ApiResponse<Program>> PostSpeechandtextanalyticsProgramsAsyncWithHttpInfo (ProgramRequest body);
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics general program job
+        /// Create new Speech & Text Analytics general program job
         /// </summary>
         /// <remarks>
         /// 
@@ -1298,7 +1298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<GeneralProgramJob> PostSpeechandtextanalyticsProgramsGeneralJobsAsync (GeneralProgramJobRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics general program job
+        /// Create new Speech & Text Analytics general program job
         /// </summary>
         /// <remarks>
         /// 
@@ -1307,9 +1307,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The general programs job to create</param>
         /// <returns>Task of ApiResponse (GeneralProgramJob)</returns>
         System.Threading.Tasks.Task<ApiResponse<GeneralProgramJob>> PostSpeechandtextanalyticsProgramsGeneralJobsAsyncWithHttpInfo (GeneralProgramJobRequest body);
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish programs job
+        /// Create new Speech & Text Analytics publish programs job
         /// </summary>
         /// <remarks>
         /// 
@@ -1320,7 +1320,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ProgramJob> PostSpeechandtextanalyticsProgramsPublishjobsAsync (ProgramJobRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish programs job
+        /// Create new Speech & Text Analytics publish programs job
         /// </summary>
         /// <remarks>
         /// 
@@ -1329,9 +1329,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The publish programs job to create</param>
         /// <returns>Task of ApiResponse (ProgramJob)</returns>
         System.Threading.Tasks.Task<ApiResponse<ProgramJob>> PostSpeechandtextanalyticsProgramsPublishjobsAsyncWithHttpInfo (ProgramJobRequest body);
-        
+
         /// <summary>
-        /// Create a Speech &amp; Text Analytics SentimentFeedback
+        /// Create a Speech & Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -1342,7 +1342,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<SentimentFeedback> PostSpeechandtextanalyticsSentimentfeedbackAsync (SentimentFeedback body);
 
         /// <summary>
-        /// Create a Speech &amp; Text Analytics SentimentFeedback
+        /// Create a Speech & Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
         /// 
@@ -1351,9 +1351,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The SentimentFeedback to create</param>
         /// <returns>Task of ApiResponse (SentimentFeedback)</returns>
         System.Threading.Tasks.Task<ApiResponse<SentimentFeedback>> PostSpeechandtextanalyticsSentimentfeedbackAsyncWithHttpInfo (SentimentFeedback body);
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics topic
+        /// Create new Speech & Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -1364,7 +1364,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Topic> PostSpeechandtextanalyticsTopicsAsync (TopicRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics topic
+        /// Create new Speech & Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -1373,9 +1373,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The topic to create</param>
         /// <returns>Task of ApiResponse (Topic)</returns>
         System.Threading.Tasks.Task<ApiResponse<Topic>> PostSpeechandtextanalyticsTopicsAsyncWithHttpInfo (TopicRequest body);
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job
+        /// Create new Speech & Text Analytics publish topics job
         /// </summary>
         /// <remarks>
         /// 
@@ -1386,7 +1386,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<TopicJob> PostSpeechandtextanalyticsTopicsPublishjobsAsync (TopicJobRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job
+        /// Create new Speech & Text Analytics publish topics job
         /// </summary>
         /// <remarks>
         /// 
@@ -1395,7 +1395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The publish topics job to create</param>
         /// <returns>Task of ApiResponse (TopicJob)</returns>
         System.Threading.Tasks.Task<ApiResponse<TopicJob>> PostSpeechandtextanalyticsTopicsPublishjobsAsyncWithHttpInfo (TopicJobRequest body);
-        
+
         /// <summary>
         /// Search resources.
         /// </summary>
@@ -1417,9 +1417,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (JsonSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<JsonSearchResponse>> PostSpeechandtextanalyticsTranscriptsSearchAsyncWithHttpInfo (TranscriptSearchRequest body);
-        
+
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics program
+        /// Update existing Speech & Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -1431,7 +1431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Program> PutSpeechandtextanalyticsProgramAsync (string programId, ProgramRequest body);
 
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics program
+        /// Update existing Speech & Text Analytics program
         /// </summary>
         /// <remarks>
         /// 
@@ -1441,9 +1441,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The program to update</param>
         /// <returns>Task of ApiResponse (Program)</returns>
         System.Threading.Tasks.Task<ApiResponse<Program>> PutSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId, ProgramRequest body);
-        
+
         /// <summary>
-        /// Set Speech &amp; Text Analytics program mappings to queues and flows
+        /// Set Speech & Text Analytics program mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -1455,7 +1455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ProgramMappings> PutSpeechandtextanalyticsProgramMappingsAsync (string programId, ProgramMappingsRequest body);
 
         /// <summary>
-        /// Set Speech &amp; Text Analytics program mappings to queues and flows
+        /// Set Speech & Text Analytics program mappings to queues and flows
         /// </summary>
         /// <remarks>
         /// 
@@ -1465,7 +1465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The program to set mappings for</param>
         /// <returns>Task of ApiResponse (ProgramMappings)</returns>
         System.Threading.Tasks.Task<ApiResponse<ProgramMappings>> PutSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId, ProgramMappingsRequest body);
-        
+
         /// <summary>
         /// Update Speech And Text Analytics Settings
         /// </summary>
@@ -1487,9 +1487,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>Task of ApiResponse (SpeechTextAnalyticsSettingsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsSettingsResponse>> PutSpeechandtextanalyticsSettingsAsyncWithHttpInfo (SpeechTextAnalyticsSettingsRequest body);
-        
+
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics topic
+        /// Update existing Speech & Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -1501,7 +1501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Topic> PutSpeechandtextanalyticsTopicAsync (string topicId, TopicRequest body);
 
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics topic
+        /// Update existing Speech & Text Analytics topic
         /// </summary>
         /// <remarks>
         /// 
@@ -1511,9 +1511,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The topic to update</param>
         /// <returns>Task of ApiResponse (Topic)</returns>
         System.Threading.Tasks.Task<ApiResponse<Topic>> PutSpeechandtextanalyticsTopicAsyncWithHttpInfo (string topicId, TopicRequest body);
-        
+
         #endregion Asynchronous Operations
-        
+
     }
 
     /// <summary>
@@ -1603,9 +1603,9 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
-        
+
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics program by id 
+        /// Delete a Speech & Text Analytics program by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -1617,7 +1617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics program by id 
+        /// Delete a Speech & Text Analytics program by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -1639,17 +1639,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1671,7 +1670,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1700,9 +1699,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics program by id 
+        /// Delete a Speech & Text Analytics program by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -1715,7 +1714,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics program by id 
+        /// Delete a Speech & Text Analytics program by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -1738,16 +1737,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1770,7 +1768,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1799,10 +1797,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Delete All Speech &amp; Text Analytics SentimentFeedback 
+        /// Delete All Speech & Text Analytics SentimentFeedback 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -1812,7 +1810,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete All Speech &amp; Text Analytics SentimentFeedback 
+        /// Delete All Speech & Text Analytics SentimentFeedback 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1829,17 +1827,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1859,7 +1856,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1888,9 +1885,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Delete All Speech &amp; Text Analytics SentimentFeedback 
+        /// Delete All Speech & Text Analytics SentimentFeedback 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -1901,7 +1898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete All Speech &amp; Text Analytics SentimentFeedback 
+        /// Delete All Speech & Text Analytics SentimentFeedback 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -1918,16 +1915,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1948,7 +1944,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1977,10 +1973,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id 
+        /// Delete a Speech & Text Analytics SentimentFeedback by Id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
@@ -1991,7 +1987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id 
+        /// Delete a Speech & Text Analytics SentimentFeedback by Id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
@@ -2012,17 +2008,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2043,7 +2038,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2072,9 +2067,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id 
+        /// Delete a Speech & Text Analytics SentimentFeedback by Id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
@@ -2086,7 +2081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics SentimentFeedback by Id 
+        /// Delete a Speech & Text Analytics SentimentFeedback by Id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
@@ -2108,16 +2103,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2139,7 +2133,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2168,10 +2162,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics topic by id 
+        /// Delete a Speech & Text Analytics topic by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
@@ -2182,7 +2176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics topic by id 
+        /// Delete a Speech & Text Analytics topic by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
@@ -2203,17 +2197,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2234,7 +2227,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2263,9 +2256,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics topic by id 
+        /// Delete a Speech & Text Analytics topic by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
@@ -2277,7 +2270,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Speech &amp; Text Analytics topic by id 
+        /// Delete a Speech & Text Analytics topic by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
@@ -2299,16 +2292,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2330,7 +2322,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2359,8 +2351,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Speech and Text Analytics for a specific conversation 
         /// </summary>
@@ -2395,17 +2387,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2426,7 +2417,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2455,7 +2446,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Speech and Text Analytics for a specific conversation 
         /// </summary>
@@ -2492,16 +2483,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2523,7 +2513,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2552,8 +2542,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the pre-signed S3 URL for the transcript of a specific communication of a conversation 
         /// </summary>
@@ -2593,17 +2583,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2625,7 +2614,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2654,7 +2643,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the pre-signed S3 URL for the transcript of a specific communication of a conversation 
         /// </summary>
@@ -2697,16 +2686,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2729,7 +2717,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2758,10 +2746,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics program by id 
+        /// Get a Speech & Text Analytics program by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -2773,7 +2761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics program by id 
+        /// Get a Speech & Text Analytics program by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -2794,17 +2782,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2825,7 +2812,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2854,9 +2841,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics program by id 
+        /// Get a Speech & Text Analytics program by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -2869,7 +2856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics program by id 
+        /// Get a Speech & Text Analytics program by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -2891,16 +2878,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2922,7 +2908,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2951,10 +2937,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id 
+        /// Get Speech & Text Analytics program mappings to queues and flows by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -2966,7 +2952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id 
+        /// Get Speech & Text Analytics program mappings to queues and flows by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -2987,17 +2973,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3018,7 +3003,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3047,9 +3032,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id 
+        /// Get Speech & Text Analytics program mappings to queues and flows by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -3062,7 +3047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get Speech &amp; Text Analytics program mappings to queues and flows by id 
+        /// Get Speech & Text Analytics program mappings to queues and flows by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -3084,16 +3069,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3115,7 +3099,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3144,10 +3128,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs 
+        /// Get the list of Speech & Text Analytics programs 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -3160,7 +3144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs 
+        /// Get the list of Speech & Text Analytics programs 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -3179,17 +3163,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3211,7 +3194,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3240,9 +3223,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs 
+        /// Get the list of Speech & Text Analytics programs 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -3256,7 +3239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs 
+        /// Get the list of Speech & Text Analytics programs 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -3275,16 +3258,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3307,7 +3289,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3336,10 +3318,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics general program job by id 
+        /// Get a Speech & Text Analytics general program job by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
@@ -3351,7 +3333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics general program job by id 
+        /// Get a Speech & Text Analytics general program job by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
@@ -3372,17 +3354,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3403,7 +3384,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3432,9 +3413,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics general program job by id 
+        /// Get a Speech & Text Analytics general program job by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
@@ -3447,7 +3428,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics general program job by id 
+        /// Get a Speech & Text Analytics general program job by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
@@ -3469,16 +3450,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3500,7 +3480,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3529,10 +3509,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows 
+        /// Get the list of Speech & Text Analytics programs mappings to queues and flows 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -3545,7 +3525,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows 
+        /// Get the list of Speech & Text Analytics programs mappings to queues and flows 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -3564,17 +3544,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3596,7 +3575,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3625,9 +3604,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows 
+        /// Get the list of Speech & Text Analytics programs mappings to queues and flows 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -3641,7 +3620,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows 
+        /// Get the list of Speech & Text Analytics programs mappings to queues and flows 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -3660,16 +3639,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3692,7 +3670,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3721,10 +3699,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish programs job by id 
+        /// Get a Speech & Text Analytics publish programs job by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
@@ -3736,7 +3714,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish programs job by id 
+        /// Get a Speech & Text Analytics publish programs job by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
@@ -3757,17 +3735,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3788,7 +3765,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3817,9 +3794,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish programs job by id 
+        /// Get a Speech & Text Analytics publish programs job by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
@@ -3832,7 +3809,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish programs job by id 
+        /// Get a Speech & Text Analytics publish programs job by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
@@ -3854,16 +3831,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3885,7 +3861,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3914,10 +3890,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics unpublished programs 
+        /// Get the list of Speech & Text Analytics unpublished programs 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -3930,7 +3906,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics unpublished programs 
+        /// Get the list of Speech & Text Analytics unpublished programs 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -3949,17 +3925,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3981,7 +3956,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4010,9 +3985,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics unpublished programs 
+        /// Get the list of Speech & Text Analytics unpublished programs 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -4026,7 +4001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics unpublished programs 
+        /// Get the list of Speech & Text Analytics unpublished programs 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -4045,16 +4020,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4077,7 +4051,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4106,10 +4080,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects 
+        /// Get the list of Speech & Text Analytics sentiment supported dialects 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EntityListing</returns>
@@ -4120,7 +4094,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects 
+        /// Get the list of Speech & Text Analytics sentiment supported dialects 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EntityListing</returns>
@@ -4137,17 +4111,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4167,7 +4140,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4196,9 +4169,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects 
+        /// Get the list of Speech & Text Analytics sentiment supported dialects 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EntityListing</returns>
@@ -4210,7 +4183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics sentiment supported dialects 
+        /// Get the list of Speech & Text Analytics sentiment supported dialects 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EntityListing)</returns>
@@ -4227,16 +4200,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4257,7 +4229,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4286,10 +4258,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics SentimentFeedback 
+        /// Get the list of Speech & Text Analytics SentimentFeedback 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
@@ -4301,7 +4273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics SentimentFeedback 
+        /// Get the list of Speech & Text Analytics SentimentFeedback 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
@@ -4319,17 +4291,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4350,7 +4321,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4379,9 +4350,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics SentimentFeedback 
+        /// Get the list of Speech & Text Analytics SentimentFeedback 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
@@ -4394,7 +4365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics SentimentFeedback 
+        /// Get the list of Speech & Text Analytics SentimentFeedback 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
@@ -4412,16 +4383,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4443,7 +4413,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4472,8 +4442,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Speech And Text Analytics Settings 
         /// </summary>
@@ -4503,17 +4473,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4533,7 +4502,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4562,7 +4531,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Speech And Text Analytics Settings 
         /// </summary>
@@ -4593,16 +4562,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4623,7 +4591,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4652,10 +4620,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics topic by id 
+        /// Get a Speech & Text Analytics topic by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
@@ -4667,7 +4635,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics topic by id 
+        /// Get a Speech & Text Analytics topic by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
@@ -4688,17 +4656,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4719,7 +4686,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4748,9 +4715,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics topic by id 
+        /// Get a Speech & Text Analytics topic by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
@@ -4763,7 +4730,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics topic by id 
+        /// Get a Speech & Text Analytics topic by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
@@ -4785,16 +4752,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4816,7 +4782,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4845,10 +4811,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics topics 
+        /// Get the list of Speech & Text Analytics topics 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -4866,7 +4832,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics topics 
+        /// Get the list of Speech & Text Analytics topics 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -4890,17 +4856,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4927,7 +4892,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4956,9 +4921,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics topics 
+        /// Get the list of Speech & Text Analytics topics 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -4977,7 +4942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Speech &amp; Text Analytics topics 
+        /// Get the list of Speech & Text Analytics topics 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -5001,16 +4966,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5038,7 +5002,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5067,10 +5031,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get list of supported Speech &amp; Text Analytics topics dialects 
+        /// Get list of supported Speech & Text Analytics topics dialects 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EntityListing</returns>
@@ -5081,7 +5045,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get list of supported Speech &amp; Text Analytics topics dialects 
+        /// Get list of supported Speech & Text Analytics topics dialects 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EntityListing</returns>
@@ -5098,17 +5062,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5128,7 +5091,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5157,9 +5120,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get list of supported Speech &amp; Text Analytics topics dialects 
+        /// Get list of supported Speech & Text Analytics topics dialects 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EntityListing</returns>
@@ -5171,7 +5134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get list of supported Speech &amp; Text Analytics topics dialects 
+        /// Get list of supported Speech & Text Analytics topics dialects 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EntityListing)</returns>
@@ -5188,16 +5151,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5218,7 +5180,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5247,10 +5209,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get the Speech &amp; Text Analytics general topics for a given dialect 
+        /// Get the Speech & Text Analytics general topics for a given dialect 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
@@ -5262,7 +5224,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the Speech &amp; Text Analytics general topics for a given dialect 
+        /// Get the Speech & Text Analytics general topics for a given dialect 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
@@ -5280,17 +5242,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5311,7 +5272,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5340,9 +5301,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get the Speech &amp; Text Analytics general topics for a given dialect 
+        /// Get the Speech & Text Analytics general topics for a given dialect 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
@@ -5355,7 +5316,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the Speech &amp; Text Analytics general topics for a given dialect 
+        /// Get the Speech & Text Analytics general topics for a given dialect 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
@@ -5373,16 +5334,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5404,7 +5364,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5433,10 +5393,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish topics job by id 
+        /// Get a Speech & Text Analytics publish topics job by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish topics job</param>
@@ -5448,7 +5408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish topics job by id 
+        /// Get a Speech & Text Analytics publish topics job by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish topics job</param>
@@ -5469,17 +5429,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5500,7 +5459,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5529,9 +5488,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish topics job by id 
+        /// Get a Speech & Text Analytics publish topics job by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish topics job</param>
@@ -5544,7 +5503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Speech &amp; Text Analytics publish topics job by id 
+        /// Get a Speech & Text Analytics publish topics job by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish topics job</param>
@@ -5566,16 +5525,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5597,7 +5555,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5626,8 +5584,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Patch Speech And Text Analytics Settings 
         /// </summary>
@@ -5662,7 +5620,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -5670,9 +5627,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5695,9 +5653,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5726,7 +5684,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Patch Speech And Text Analytics Settings 
         /// </summary>
@@ -5763,7 +5721,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -5771,8 +5728,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5796,9 +5754,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5827,10 +5785,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics program 
+        /// Create new Speech & Text Analytics program 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The program to create</param>
@@ -5842,7 +5800,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics program 
+        /// Create new Speech & Text Analytics program 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The program to create</param>
@@ -5863,7 +5821,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -5871,9 +5828,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5896,9 +5854,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5927,9 +5885,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics program 
+        /// Create new Speech & Text Analytics program 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The program to create</param>
@@ -5942,7 +5900,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics program 
+        /// Create new Speech & Text Analytics program 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The program to create</param>
@@ -5964,7 +5922,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -5972,8 +5929,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5997,9 +5955,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6028,10 +5986,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics general program job 
+        /// Create new Speech & Text Analytics general program job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The general programs job to create</param>
@@ -6043,7 +6001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics general program job 
+        /// Create new Speech & Text Analytics general program job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The general programs job to create</param>
@@ -6064,7 +6022,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6072,9 +6029,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6097,9 +6055,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6128,9 +6086,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics general program job 
+        /// Create new Speech & Text Analytics general program job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The general programs job to create</param>
@@ -6143,7 +6101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics general program job 
+        /// Create new Speech & Text Analytics general program job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The general programs job to create</param>
@@ -6165,7 +6123,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6173,8 +6130,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6198,9 +6156,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6229,10 +6187,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish programs job 
+        /// Create new Speech & Text Analytics publish programs job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish programs job to create</param>
@@ -6244,7 +6202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish programs job 
+        /// Create new Speech & Text Analytics publish programs job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish programs job to create</param>
@@ -6265,7 +6223,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6273,9 +6230,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6298,9 +6256,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6329,9 +6287,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish programs job 
+        /// Create new Speech & Text Analytics publish programs job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish programs job to create</param>
@@ -6344,7 +6302,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish programs job 
+        /// Create new Speech & Text Analytics publish programs job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish programs job to create</param>
@@ -6366,7 +6324,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6374,8 +6331,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6399,9 +6357,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6430,10 +6388,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Create a Speech &amp; Text Analytics SentimentFeedback 
+        /// Create a Speech & Text Analytics SentimentFeedback 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The SentimentFeedback to create</param>
@@ -6445,7 +6403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Speech &amp; Text Analytics SentimentFeedback 
+        /// Create a Speech & Text Analytics SentimentFeedback 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The SentimentFeedback to create</param>
@@ -6466,7 +6424,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6474,9 +6431,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6499,9 +6457,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6530,9 +6488,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Create a Speech &amp; Text Analytics SentimentFeedback 
+        /// Create a Speech & Text Analytics SentimentFeedback 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The SentimentFeedback to create</param>
@@ -6545,7 +6503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Speech &amp; Text Analytics SentimentFeedback 
+        /// Create a Speech & Text Analytics SentimentFeedback 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The SentimentFeedback to create</param>
@@ -6567,7 +6525,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6575,8 +6532,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6600,9 +6558,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6631,10 +6589,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics topic 
+        /// Create new Speech & Text Analytics topic 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The topic to create</param>
@@ -6646,7 +6604,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics topic 
+        /// Create new Speech & Text Analytics topic 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The topic to create</param>
@@ -6667,7 +6625,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6675,9 +6632,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6700,9 +6658,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6731,9 +6689,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics topic 
+        /// Create new Speech & Text Analytics topic 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The topic to create</param>
@@ -6746,7 +6704,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics topic 
+        /// Create new Speech & Text Analytics topic 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The topic to create</param>
@@ -6768,7 +6726,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6776,8 +6733,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6801,9 +6759,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6832,10 +6790,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job 
+        /// Create new Speech & Text Analytics publish topics job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish topics job to create</param>
@@ -6847,7 +6805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job 
+        /// Create new Speech & Text Analytics publish topics job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish topics job to create</param>
@@ -6868,7 +6826,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6876,9 +6833,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6901,9 +6859,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6932,9 +6890,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job 
+        /// Create new Speech & Text Analytics publish topics job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish topics job to create</param>
@@ -6947,7 +6905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job 
+        /// Create new Speech & Text Analytics publish topics job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish topics job to create</param>
@@ -6969,7 +6927,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6977,8 +6934,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7002,9 +6960,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7033,8 +6991,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Search resources. 
         /// </summary>
@@ -7069,7 +7027,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7077,9 +7034,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7102,9 +7060,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7133,7 +7091,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Search resources. 
         /// </summary>
@@ -7170,7 +7128,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7178,8 +7135,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7203,9 +7161,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7234,10 +7192,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics program 
+        /// Update existing Speech & Text Analytics program 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -7250,7 +7208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics program 
+        /// Update existing Speech & Text Analytics program 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -7275,7 +7233,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7283,9 +7240,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7309,9 +7267,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7340,9 +7298,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics program 
+        /// Update existing Speech & Text Analytics program 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -7356,7 +7314,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics program 
+        /// Update existing Speech & Text Analytics program 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -7383,7 +7341,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7391,8 +7348,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7417,9 +7375,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7448,10 +7406,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Set Speech &amp; Text Analytics program mappings to queues and flows 
+        /// Set Speech & Text Analytics program mappings to queues and flows 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -7464,7 +7422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Set Speech &amp; Text Analytics program mappings to queues and flows 
+        /// Set Speech & Text Analytics program mappings to queues and flows 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -7489,7 +7447,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7497,9 +7454,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7523,9 +7481,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7554,9 +7512,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Set Speech &amp; Text Analytics program mappings to queues and flows 
+        /// Set Speech & Text Analytics program mappings to queues and flows 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -7570,7 +7528,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Set Speech &amp; Text Analytics program mappings to queues and flows 
+        /// Set Speech & Text Analytics program mappings to queues and flows 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
@@ -7597,7 +7555,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7605,8 +7562,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7631,9 +7589,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7662,8 +7620,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update Speech And Text Analytics Settings 
         /// </summary>
@@ -7698,7 +7656,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7706,9 +7663,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7731,9 +7689,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7762,7 +7720,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update Speech And Text Analytics Settings 
         /// </summary>
@@ -7799,7 +7757,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7807,8 +7764,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7832,9 +7790,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7863,10 +7821,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics topic 
+        /// Update existing Speech & Text Analytics topic 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
@@ -7879,7 +7837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics topic 
+        /// Update existing Speech & Text Analytics topic 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
@@ -7904,7 +7862,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7912,9 +7869,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7938,9 +7896,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7969,9 +7927,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics topic 
+        /// Update existing Speech & Text Analytics topic 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
@@ -7985,7 +7943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update existing Speech &amp; Text Analytics topic 
+        /// Update existing Speech & Text Analytics topic 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
@@ -8012,7 +7970,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -8020,8 +7977,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8046,9 +8004,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8077,8 +8035,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
     }
-    
+
 }

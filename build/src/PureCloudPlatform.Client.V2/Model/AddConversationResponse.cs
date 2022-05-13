@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AddConversationResponse :  IEquatable<AddConversationResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AddConversationResponse" /> class.
         /// </summary>
@@ -39,25 +26,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The conversation reference
         /// </summary>
         /// <value>The conversation reference</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public ConversationReference Conversation { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The appointment reference
         /// </summary>
         /// <value>The appointment reference</value>
         [DataMember(Name="appointment", EmitDefaultValue=false)]
         public CoachingAppointmentReference Appointment { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AddConversationResponse {\n");
-            
+
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("  Appointment: ").Append(Appointment).Append("\n");
             sb.Append("}\n");
@@ -132,13 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
+
                 if (this.Appointment != null)
                     hash = hash * 59 + this.Appointment.GetHashCode();
-                
+
                 return hash;
             }
         }

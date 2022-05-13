@@ -18,64 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class StatisticalSummary :  IEquatable<StatisticalSummary>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="StatisticalSummary" /> class.
         /// </summary>
@@ -106,95 +48,95 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Max
         /// </summary>
         [DataMember(Name="max", EmitDefaultValue=false)]
         public double? Max { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Min
         /// </summary>
         [DataMember(Name="min", EmitDefaultValue=false)]
         public double? Min { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public long? Count { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CountNegative
         /// </summary>
         [DataMember(Name="countNegative", EmitDefaultValue=false)]
         public long? CountNegative { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CountPositive
         /// </summary>
         [DataMember(Name="countPositive", EmitDefaultValue=false)]
         public long? CountPositive { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Sum
         /// </summary>
         [DataMember(Name="sum", EmitDefaultValue=false)]
         public double? Sum { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Current
         /// </summary>
         [DataMember(Name="current", EmitDefaultValue=false)]
         public double? Current { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Ratio
         /// </summary>
         [DataMember(Name="ratio", EmitDefaultValue=false)]
         public double? Ratio { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Numerator
         /// </summary>
         [DataMember(Name="numerator", EmitDefaultValue=false)]
         public double? Numerator { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Denominator
         /// </summary>
         [DataMember(Name="denominator", EmitDefaultValue=false)]
         public double? Denominator { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Target
         /// </summary>
         [DataMember(Name="target", EmitDefaultValue=false)]
         public double? Target { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -203,7 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StatisticalSummary {\n");
-            
+
             sb.Append("  Max: ").Append(Max).Append("\n");
             sb.Append("  Min: ").Append(Min).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
@@ -323,40 +265,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Max != null)
                     hash = hash * 59 + this.Max.GetHashCode();
-                
+
                 if (this.Min != null)
                     hash = hash * 59 + this.Min.GetHashCode();
-                
+
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-                
+
                 if (this.CountNegative != null)
                     hash = hash * 59 + this.CountNegative.GetHashCode();
-                
+
                 if (this.CountPositive != null)
                     hash = hash * 59 + this.CountPositive.GetHashCode();
-                
+
                 if (this.Sum != null)
                     hash = hash * 59 + this.Sum.GetHashCode();
-                
+
                 if (this.Current != null)
                     hash = hash * 59 + this.Current.GetHashCode();
-                
+
                 if (this.Ratio != null)
                     hash = hash * 59 + this.Ratio.GetHashCode();
-                
+
                 if (this.Numerator != null)
                     hash = hash * 59 + this.Numerator.GetHashCode();
-                
+
                 if (this.Denominator != null)
                     hash = hash * 59 + this.Denominator.GetHashCode();
-                
+
                 if (this.Target != null)
                     hash = hash * 59 + this.Target.GetHashCode();
-                
+
                 return hash;
             }
         }

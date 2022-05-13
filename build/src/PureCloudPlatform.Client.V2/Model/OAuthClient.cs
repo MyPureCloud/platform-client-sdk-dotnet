@@ -18,41 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OAuthClient :  IEquatable<OAuthClient>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. PKCE-Enabled Code Authorization grant type - Code grant type which requires PKCE challenge and verifier to create tokens. Used in public clients for increased security. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. 
         /// </summary>
@@ -98,16 +63,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CLIENT-CREDENTIALS")]
             Clientcredentials
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted.
         /// </summary>
@@ -141,71 +96,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "inactive")]
             Inactive
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. PKCE-Enabled Code Authorization grant type - Code grant type which requires PKCE challenge and verifier to create tokens. Used in public clients for increased security. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. 
         /// </summary>
         /// <value>The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. PKCE-Enabled Code Authorization grant type - Code grant type which requires PKCE challenge and verifier to create tokens. Used in public clients for increased security. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. </value>
         [DataMember(Name="authorizedGrantType", EmitDefaultValue=false)]
         public AuthorizedGrantTypeEnum? AuthorizedGrantType { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted.
         /// </summary>
         /// <value>The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthClient" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected OAuthClient() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthClient" /> class.
         /// </summary>
@@ -244,145 +152,145 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the OAuth client.
         /// </summary>
         /// <value>The name of the OAuth client.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of seconds, between 5mins and 48hrs, until tokens created with this client expire. If this field is omitted, a default of 24 hours will be applied.
         /// </summary>
         /// <value>The number of seconds, between 5mins and 48hrs, until tokens created with this client expire. If this field is omitted, a default of 24 hours will be applied.</value>
         [DataMember(Name="accessTokenValiditySeconds", EmitDefaultValue=false)]
         public long? AccessTokenValiditySeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of allowed callbacks for this client. For example: https://myap.example.com/auth/callback
         /// </summary>
         /// <value>List of allowed callbacks for this client. For example: https://myap.example.com/auth/callback</value>
         [DataMember(Name="registeredRedirectUri", EmitDefaultValue=false)]
         public List<string> RegisteredRedirectUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// System created secret assigned to this client. Secrets are required for code authorization and client credential grants.
         /// </summary>
         /// <value>System created secret assigned to this client. Secrets are required for code authorization and client credential grants.</value>
         [DataMember(Name="secret", EmitDefaultValue=false)]
         public string Secret { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Deprecated. Use roleDivisions instead.
         /// </summary>
         /// <value>Deprecated. Use roleDivisions instead.</value>
         [DataMember(Name="roleIds", EmitDefaultValue=false)]
         public List<string> RoleIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date this client was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date this client was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User that created this client
         /// </summary>
         /// <value>User that created this client</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public DomainEntityRef CreatedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User that last modified this client
         /// </summary>
         /// <value>User that last modified this client</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public DomainEntityRef ModifiedBy { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The scope requested by this client. Scopes only apply to clients not using the client_credential grant
         /// </summary>
         /// <value>The scope requested by this client. Scopes only apply to clients not using the client_credential grant</value>
         [DataMember(Name="scope", EmitDefaultValue=false)]
         public List<string> Scope { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant
         /// </summary>
         /// <value>Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant</value>
         [DataMember(Name="roleDivisions", EmitDefaultValue=false)]
         public List<RoleDivision> RoleDivisions { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The time at which this client will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time at which this client will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateToDelete", EmitDefaultValue=false)]
         public DateTime? DateToDelete { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -391,7 +299,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OAuthClient {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  AccessTokenValiditySeconds: ").Append(AccessTokenValiditySeconds).Append("\n");
@@ -547,58 +455,57 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.AccessTokenValiditySeconds != null)
                     hash = hash * 59 + this.AccessTokenValiditySeconds.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.RegisteredRedirectUri != null)
                     hash = hash * 59 + this.RegisteredRedirectUri.GetHashCode();
-                
+
                 if (this.Secret != null)
                     hash = hash * 59 + this.Secret.GetHashCode();
-                
+
                 if (this.RoleIds != null)
                     hash = hash * 59 + this.RoleIds.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
+
                 if (this.AuthorizedGrantType != null)
                     hash = hash * 59 + this.AuthorizedGrantType.GetHashCode();
-                
+
                 if (this.Scope != null)
                     hash = hash * 59 + this.Scope.GetHashCode();
-                
+
                 if (this.RoleDivisions != null)
                     hash = hash * 59 + this.RoleDivisions.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.DateToDelete != null)
                     hash = hash * 59 + this.DateToDelete.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

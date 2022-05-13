@@ -18,24 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationScreenShareEventTopicScoredAgent :  IEquatable<ConversationScreenShareEventTopicScoredAgent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationScreenShareEventTopicScoredAgent" /> class.
         /// </summary>
         /// <param name="Agent">A UriReference for a resource.</param>
-        /// <param name="Score">Agent&#39;s score for the current conversation, from 0 - 100, higher being better.</param>
+        /// <param name="Score">Agent's score for the current conversation, from 0 - 100, higher being better.</param>
         public ConversationScreenShareEventTopicScoredAgent(ConversationScreenShareEventTopicUriReference Agent = null, int? Score = null)
         {
             this.Agent = Agent;
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A UriReference for a resource
         /// </summary>
         /// <value>A UriReference for a resource</value>
         [DataMember(Name="agent", EmitDefaultValue=false)]
         public ConversationScreenShareEventTopicUriReference Agent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Agent&#39;s score for the current conversation, from 0 - 100, higher being better
+        /// Agent's score for the current conversation, from 0 - 100, higher being better
         /// </summary>
-        /// <value>Agent&#39;s score for the current conversation, from 0 - 100, higher being better</value>
+        /// <value>Agent's score for the current conversation, from 0 - 100, higher being better</value>
         [DataMember(Name="score", EmitDefaultValue=false)]
         public int? Score { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationScreenShareEventTopicScoredAgent {\n");
-            
+
             sb.Append("  Agent: ").Append(Agent).Append("\n");
             sb.Append("  Score: ").Append(Score).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();
-                
+
                 if (this.Score != null)
                     hash = hash * 59 + this.Score.GetHashCode();
-                
+
                 return hash;
             }
         }

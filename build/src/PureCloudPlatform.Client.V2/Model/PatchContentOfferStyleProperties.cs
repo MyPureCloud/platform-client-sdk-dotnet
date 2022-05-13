@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchContentOfferStyleProperties :  IEquatable<PatchContentOfferStyleProperties>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchContentOfferStyleProperties" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Padding of the offer. (eg. 10px)
         /// </summary>
         /// <value>Padding of the offer. (eg. 10px)</value>
         [DataMember(Name="padding", EmitDefaultValue=false)]
         public string Padding { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text color of the offer. (eg. #FF0000)
         /// </summary>
         /// <value>Text color of the offer. (eg. #FF0000)</value>
         [DataMember(Name="color", EmitDefaultValue=false)]
         public string Color { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Background color of the offer. (eg. #000000)
         /// </summary>
         /// <value>Background color of the offer. (eg. #000000)</value>
         [DataMember(Name="backgroundColor", EmitDefaultValue=false)]
         public string BackgroundColor { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PatchContentOfferStyleProperties {\n");
-            
+
             sb.Append("  Padding: ").Append(Padding).Append("\n");
             sb.Append("  Color: ").Append(Color).Append("\n");
             sb.Append("  BackgroundColor: ").Append(BackgroundColor).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Padding != null)
                     hash = hash * 59 + this.Padding.GetHashCode();
-                
+
                 if (this.Color != null)
                     hash = hash * 59 + this.Color.GetHashCode();
-                
+
                 if (this.BackgroundColor != null)
                     hash = hash * 59 + this.BackgroundColor.GetHashCode();
-                
+
                 return hash;
             }
         }

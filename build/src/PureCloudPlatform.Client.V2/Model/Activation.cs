@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Activation :  IEquatable<Activation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Activation" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Activation() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Activation" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Type of activation.
         /// </summary>
         /// <value>Type of activation.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Activation delay time amount.
         /// </summary>
         /// <value>Activation delay time amount.</value>
         [DataMember(Name="delayInSeconds", EmitDefaultValue=false)]
         public int? DelayInSeconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Activation {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  DelayInSeconds: ").Append(DelayInSeconds).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.DelayInSeconds != null)
                     hash = hash * 59 + this.DelayInSeconds.GetHashCode();
-                
+
                 return hash;
             }
         }

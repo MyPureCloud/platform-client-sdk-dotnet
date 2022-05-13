@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SurveyErrorDetails :  IEquatable<SurveyErrorDetails>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyErrorDetails" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Additional information about any errors that occurred in the survey invite flow.
         /// </summary>
         /// <value>Additional information about any errors that occurred in the survey invite flow.</value>
         [DataMember(Name="flowDiagnosticInfo", EmitDefaultValue=false)]
         public FlowDiagnosticInfo FlowDiagnosticInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// An error code indicating the reason for the survey failure.
         /// </summary>
         /// <value>An error code indicating the reason for the survey failure.</value>
         [DataMember(Name="surveyErrorReason", EmitDefaultValue=false)]
         public string SurveyErrorReason { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SurveyErrorDetails {\n");
-            
+
             sb.Append("  FlowDiagnosticInfo: ").Append(FlowDiagnosticInfo).Append("\n");
             sb.Append("  SurveyErrorReason: ").Append(SurveyErrorReason).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FlowDiagnosticInfo != null)
                     hash = hash * 59 + this.FlowDiagnosticInfo.GetHashCode();
-                
+
                 if (this.SurveyErrorReason != null)
                     hash = hash * 59 + this.SurveyErrorReason.GetHashCode();
-                
+
                 return hash;
             }
         }

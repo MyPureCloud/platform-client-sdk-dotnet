@@ -18,22 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AssessmentScoringSet :  IEquatable<AssessmentScoringSet>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets FailureReasons
         /// </summary>
@@ -66,42 +50,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "KillQuestion")]
             Killquestion
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AssessmentScoringSet" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AssessmentScoringSet() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AssessmentScoringSet" /> class.
         /// </summary>
@@ -116,79 +70,79 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The total score of the answers
         /// </summary>
         /// <value>The total score of the answers</value>
         [DataMember(Name="totalScore", EmitDefaultValue=false)]
         public float? TotalScore { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total score for the critical questions
         /// </summary>
         /// <value>The total score for the critical questions</value>
         [DataMember(Name="totalCriticalScore", EmitDefaultValue=false)]
         public float? TotalCriticalScore { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total score for the non-critical questions
         /// </summary>
         /// <value>The total score for the non-critical questions</value>
         [DataMember(Name="totalNonCriticalScore", EmitDefaultValue=false)]
         public float? TotalNonCriticalScore { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The individual scores for each question group
         /// </summary>
         /// <value>The individual scores for each question group</value>
         [DataMember(Name="questionGroupScores", EmitDefaultValue=false)]
         public List<AssessmentQuestionGroupScore> QuestionGroupScores { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If the assessment was not passed, the reasons for failure.
         /// </summary>
         /// <value>If the assessment was not passed, the reasons for failure.</value>
         [DataMember(Name="failureReasons", EmitDefaultValue=false)]
         public List<FailureReasonsEnum> FailureReasons { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Comments provided for these answers.
         /// </summary>
         /// <value>Comments provided for these answers.</value>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Comments provided by agent.
         /// </summary>
         /// <value>Comments provided by agent.</value>
         [DataMember(Name="agentComments", EmitDefaultValue=false)]
         public string AgentComments { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if the assessment was passed
         /// </summary>
         /// <value>True if the assessment was passed</value>
         [DataMember(Name="isPassed", EmitDefaultValue=false)]
         public bool? IsPassed { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -197,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AssessmentScoringSet {\n");
-            
+
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
             sb.Append("  TotalCriticalScore: ").Append(TotalCriticalScore).Append("\n");
             sb.Append("  TotalNonCriticalScore: ").Append(TotalNonCriticalScore).Append("\n");
@@ -299,31 +253,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TotalScore != null)
                     hash = hash * 59 + this.TotalScore.GetHashCode();
-                
+
                 if (this.TotalCriticalScore != null)
                     hash = hash * 59 + this.TotalCriticalScore.GetHashCode();
-                
+
                 if (this.TotalNonCriticalScore != null)
                     hash = hash * 59 + this.TotalNonCriticalScore.GetHashCode();
-                
+
                 if (this.QuestionGroupScores != null)
                     hash = hash * 59 + this.QuestionGroupScores.GetHashCode();
-                
+
                 if (this.FailureReasons != null)
                     hash = hash * 59 + this.FailureReasons.GetHashCode();
-                
+
                 if (this.Comments != null)
                     hash = hash * 59 + this.Comments.GetHashCode();
-                
+
                 if (this.AgentComments != null)
                     hash = hash * 59 + this.AgentComments.GetHashCode();
-                
+
                 if (this.IsPassed != null)
                     hash = hash * 59 + this.IsPassed.GetHashCode();
-                
+
                 return hash;
             }
         }

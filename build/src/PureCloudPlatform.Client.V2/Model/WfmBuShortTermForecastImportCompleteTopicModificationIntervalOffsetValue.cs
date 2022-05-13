@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue :  IEquatable<WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets IntervalIndex
         /// </summary>
         [DataMember(Name="intervalIndex", EmitDefaultValue=false)]
         public int? IntervalIndex { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public double? Value { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue {\n");
-            
+
             sb.Append("  IntervalIndex: ").Append(IntervalIndex).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.IntervalIndex != null)
                     hash = hash * 59 + this.IntervalIndex.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 return hash;
             }
         }

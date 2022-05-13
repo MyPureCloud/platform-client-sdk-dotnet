@@ -18,26 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DomainEdgeSoftwareUpdateDto :  IEquatable<DomainEdgeSoftwareUpdateDto>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -106,52 +86,17 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DELETE")]
             Delete
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainEdgeSoftwareUpdateDto" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DomainEdgeSoftwareUpdateDto() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainEdgeSoftwareUpdateDto" /> class.
         /// </summary>
@@ -180,85 +125,85 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Version
         /// </summary>
         /// <value>Version</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public DomainEdgeSoftwareVersionDto Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MaxDownloadRate
         /// </summary>
         [DataMember(Name="maxDownloadRate", EmitDefaultValue=false)]
         public int? MaxDownloadRate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="downloadStartTime", EmitDefaultValue=false)]
         public DateTime? DownloadStartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="executeStartTime", EmitDefaultValue=false)]
         public DateTime? ExecuteStartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="executeStopTime", EmitDefaultValue=false)]
         public DateTime? ExecuteStopTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ExecuteOnIdle
         /// </summary>
         [DataMember(Name="executeOnIdle", EmitDefaultValue=false)]
         public bool? ExecuteOnIdle { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets EdgeUri
         /// </summary>
         [DataMember(Name="edgeUri", EmitDefaultValue=false)]
         public string EdgeUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CallDrainingWaitTimeSeconds
         /// </summary>
         [DataMember(Name="callDrainingWaitTimeSeconds", EmitDefaultValue=false)]
         public long? CallDrainingWaitTimeSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Current
         /// </summary>
         [DataMember(Name="current", EmitDefaultValue=false)]
         public bool? Current { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -267,7 +212,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DomainEdgeSoftwareUpdateDto {\n");
-            
+
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  MaxDownloadRate: ").Append(MaxDownloadRate).Append("\n");
             sb.Append("  DownloadStartTime: ").Append(DownloadStartTime).Append("\n");
@@ -381,37 +326,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.MaxDownloadRate != null)
                     hash = hash * 59 + this.MaxDownloadRate.GetHashCode();
-                
+
                 if (this.DownloadStartTime != null)
                     hash = hash * 59 + this.DownloadStartTime.GetHashCode();
-                
+
                 if (this.ExecuteStartTime != null)
                     hash = hash * 59 + this.ExecuteStartTime.GetHashCode();
-                
+
                 if (this.ExecuteStopTime != null)
                     hash = hash * 59 + this.ExecuteStopTime.GetHashCode();
-                
+
                 if (this.ExecuteOnIdle != null)
                     hash = hash * 59 + this.ExecuteOnIdle.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.EdgeUri != null)
                     hash = hash * 59 + this.EdgeUri.GetHashCode();
-                
+
                 if (this.CallDrainingWaitTimeSeconds != null)
                     hash = hash * 59 + this.CallDrainingWaitTimeSeconds.GetHashCode();
-                
+
                 if (this.Current != null)
                     hash = hash * 59 + this.Current.GetHashCode();
-                
+
                 return hash;
             }
         }

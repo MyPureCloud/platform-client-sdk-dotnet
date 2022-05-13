@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ShrinkageOverride :  IEquatable<ShrinkageOverride>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ShrinkageOverride" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ShrinkageOverride() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ShrinkageOverride" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Index of shrinkage override interval. Starting index is 0 and indexes are based on 15 minute intervals for a 7 day week
         /// </summary>
         /// <value>Index of shrinkage override interval. Starting index is 0 and indexes are based on 15 minute intervals for a 7 day week</value>
         [DataMember(Name="intervalIndex", EmitDefaultValue=false)]
         public int? IntervalIndex { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Shrinkage override percent. Setting a null value will reset the interval to the default
         /// </summary>
         /// <value>Shrinkage override percent. Setting a null value will reset the interval to the default</value>
         [DataMember(Name="shrinkagePercent", EmitDefaultValue=false)]
         public double? ShrinkagePercent { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ShrinkageOverride {\n");
-            
+
             sb.Append("  IntervalIndex: ").Append(IntervalIndex).Append("\n");
             sb.Append("  ShrinkagePercent: ").Append(ShrinkagePercent).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.IntervalIndex != null)
                     hash = hash * 59 + this.IntervalIndex.GetHashCode();
-                
+
                 if (this.ShrinkagePercent != null)
                     hash = hash * 59 + this.ShrinkagePercent.GetHashCode();
-                
+
                 return hash;
             }
         }

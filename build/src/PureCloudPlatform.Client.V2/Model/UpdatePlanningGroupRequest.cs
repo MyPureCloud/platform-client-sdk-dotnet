@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UpdatePlanningGroupRequest :  IEquatable<UpdatePlanningGroupRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdatePlanningGroupRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UpdatePlanningGroupRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdatePlanningGroupRequest" /> class.
         /// </summary>
@@ -63,43 +40,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the planning group
         /// </summary>
         /// <value>The name of the planning group</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Set of route paths to associate with the planning group
         /// </summary>
         /// <value>Set of route paths to associate with the planning group</value>
         [DataMember(Name="routePaths", EmitDefaultValue=false)]
         public SetWrapperRoutePathRequest RoutePaths { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the service goal template to associate with this planning group
         /// </summary>
         /// <value>The ID of the service goal template to associate with this planning group</value>
         [DataMember(Name="serviceGoalTemplateId", EmitDefaultValue=false)]
         public string ServiceGoalTemplateId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version metadata for the planning group
         /// </summary>
         /// <value>Version metadata for the planning group</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UpdatePlanningGroupRequest {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  RoutePaths: ").Append(RoutePaths).Append("\n");
             sb.Append("  ServiceGoalTemplateId: ").Append(ServiceGoalTemplateId).Append("\n");
@@ -186,19 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.RoutePaths != null)
                     hash = hash * 59 + this.RoutePaths.GetHashCode();
-                
+
                 if (this.ServiceGoalTemplateId != null)
                     hash = hash * 59 + this.ServiceGoalTemplateId.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

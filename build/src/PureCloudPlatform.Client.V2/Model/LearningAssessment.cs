@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningAssessment :  IEquatable<LearningAssessment>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of the assessment
         /// </summary>
@@ -62,46 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Finished")]
             Finished
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of the assessment
         /// </summary>
         /// <value>Status of the assessment</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public StatusEnum? Status { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssessment" /> class.
         /// </summary>
@@ -112,72 +67,72 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The Id of the assessment
         /// </summary>
         /// <value>The Id of the assessment</value>
         [DataMember(Name="assessmentId", EmitDefaultValue=false)]
         public string AssessmentId { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The context Id of the related assessment form
         /// </summary>
         /// <value>The context Id of the related assessment form</value>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Id of the related assessment form
         /// </summary>
         /// <value>The Id of the related assessment form</value>
         [DataMember(Name="assessmentFormId", EmitDefaultValue=false)]
         public string AssessmentFormId { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Answers for the assessment
         /// </summary>
         /// <value>Answers for the assessment</value>
         [DataMember(Name="answers", EmitDefaultValue=false)]
         public AssessmentScoringSet Answers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date the assessment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date the assessment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date the assessment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date the assessment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date the assessment was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date the assessment was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateSubmitted", EmitDefaultValue=false)]
         public DateTime? DateSubmitted { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -186,7 +141,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningAssessment {\n");
-            
+
             sb.Append("  AssessmentId: ").Append(AssessmentId).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  AssessmentFormId: ").Append(AssessmentFormId).Append("\n");
@@ -288,31 +243,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AssessmentId != null)
                     hash = hash * 59 + this.AssessmentId.GetHashCode();
-                
+
                 if (this.ContextId != null)
                     hash = hash * 59 + this.ContextId.GetHashCode();
-                
+
                 if (this.AssessmentFormId != null)
                     hash = hash * 59 + this.AssessmentFormId.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Answers != null)
                     hash = hash * 59 + this.Answers.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.DateSubmitted != null)
                     hash = hash * 59 + this.DateSubmitted.GetHashCode();
-                
+
                 return hash;
             }
         }

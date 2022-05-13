@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class HeadcountInterval :  IEquatable<HeadcountInterval>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="HeadcountInterval" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected HeadcountInterval() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="HeadcountInterval" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The start date-time for this headcount interval in ISO-8601 format, must be within the 8 day schedule
         /// </summary>
         /// <value>The start date-time for this headcount interval in ISO-8601 format, must be within the 8 day schedule</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public DateTime? Interval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Headcount value for this interval
         /// </summary>
         /// <value>Headcount value for this interval</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public double? Value { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HeadcountInterval {\n");
-            
+
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,70 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateCallbackCommand :  IEquatable<CreateCallbackCommand>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallbackCommand" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateCallbackCommand() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallbackCommand" /> class.
         /// </summary>
@@ -93,9 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackScheduledTime">The scheduled date-time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CountryCode">The country code to be associated with the callback numbers..</param>
         /// <param name="ValidateCallbackNumbers">Whether or not to validate the callback numbers for phone number format..</param>
-        /// <param name="Data">A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }.</param>
-        /// <param name="CallerId">The phone number displayed to recipients when a phone call is placed as part of the callback. Must conform to the E.164 format. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerId\&quot; varies..</param>
-        /// <param name="CallerIdName">The name displayed to recipients when a phone call is placed as part of the callback. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerIdName\&quot; varies..</param>
+        /// <param name="Data">A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \"notes\": \"ready to close the deal!\", \"customerPreferredName\": \"Doc\" }.</param>
+        /// <param name="CallerId">The phone number displayed to recipients when a phone call is placed as part of the callback. Must conform to the E.164 format. May be overridden by other settings in the system such as external trunk settings. Telco support for \"callerId\" varies..</param>
+        /// <param name="CallerIdName">The name displayed to recipients when a phone call is placed as part of the callback. May be overridden by other settings in the system such as external trunk settings. Telco support for \"callerIdName\" varies..</param>
         public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? ValidateCallbackNumbers = null, Dictionary<string, string> Data = null, string CallerId = null, string CallerIdName = null)
         {
             this.ScriptId = ScriptId;
@@ -112,106 +54,106 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The identifier of the script to be used for the callback
         /// </summary>
         /// <value>The identifier of the script to be used for the callback</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The identifier of the queue to be used for the callback. Either queueId or routingData is required.
         /// </summary>
         /// <value>The identifier of the queue to be used for the callback. Either queueId or routingData is required.</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The routing data to be used for the callback. Either queueId or routingData is required.
         /// </summary>
         /// <value>The routing data to be used for the callback. Either queueId or routingData is required.</value>
         [DataMember(Name="routingData", EmitDefaultValue=false)]
         public RoutingData RoutingData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the party to be called back.
         /// </summary>
         /// <value>The name of the party to be called back.</value>
         [DataMember(Name="callbackUserName", EmitDefaultValue=false)]
         public string CallbackUserName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of phone numbers for the callback.
         /// </summary>
         /// <value>A list of phone numbers for the callback.</value>
         [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
         public List<string> CallbackNumbers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The scheduled date-time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The scheduled date-time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
         public DateTime? CallbackScheduledTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The country code to be associated with the callback numbers.
         /// </summary>
         /// <value>The country code to be associated with the callback numbers.</value>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not to validate the callback numbers for phone number format.
         /// </summary>
         /// <value>Whether or not to validate the callback numbers for phone number format.</value>
         [DataMember(Name="validateCallbackNumbers", EmitDefaultValue=false)]
         public bool? ValidateCallbackNumbers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }
+        /// A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \"notes\": \"ready to close the deal!\", \"customerPreferredName\": \"Doc\" }
         /// </summary>
-        /// <value>A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }</value>
+        /// <value>A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \"notes\": \"ready to close the deal!\", \"customerPreferredName\": \"Doc\" }</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public Dictionary<string, string> Data { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The phone number displayed to recipients when a phone call is placed as part of the callback. Must conform to the E.164 format. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerId\&quot; varies.
+        /// The phone number displayed to recipients when a phone call is placed as part of the callback. Must conform to the E.164 format. May be overridden by other settings in the system such as external trunk settings. Telco support for \"callerId\" varies.
         /// </summary>
-        /// <value>The phone number displayed to recipients when a phone call is placed as part of the callback. Must conform to the E.164 format. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerId\&quot; varies.</value>
+        /// <value>The phone number displayed to recipients when a phone call is placed as part of the callback. Must conform to the E.164 format. May be overridden by other settings in the system such as external trunk settings. Telco support for \"callerId\" varies.</value>
         [DataMember(Name="callerId", EmitDefaultValue=false)]
         public string CallerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The name displayed to recipients when a phone call is placed as part of the callback. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerIdName\&quot; varies.
+        /// The name displayed to recipients when a phone call is placed as part of the callback. May be overridden by other settings in the system such as external trunk settings. Telco support for \"callerIdName\" varies.
         /// </summary>
-        /// <value>The name displayed to recipients when a phone call is placed as part of the callback. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerIdName\&quot; varies.</value>
+        /// <value>The name displayed to recipients when a phone call is placed as part of the callback. May be overridden by other settings in the system such as external trunk settings. Telco support for \"callerIdName\" varies.</value>
         [DataMember(Name="callerIdName", EmitDefaultValue=false)]
         public string CallerIdName { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -220,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateCallbackCommand {\n");
-            
+
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  RoutingData: ").Append(RoutingData).Append("\n");
@@ -340,40 +282,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
-                
+
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
+
                 if (this.RoutingData != null)
                     hash = hash * 59 + this.RoutingData.GetHashCode();
-                
+
                 if (this.CallbackUserName != null)
                     hash = hash * 59 + this.CallbackUserName.GetHashCode();
-                
+
                 if (this.CallbackNumbers != null)
                     hash = hash * 59 + this.CallbackNumbers.GetHashCode();
-                
+
                 if (this.CallbackScheduledTime != null)
                     hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();
-                
+
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
-                
+
                 if (this.ValidateCallbackNumbers != null)
                     hash = hash * 59 + this.ValidateCallbackNumbers.GetHashCode();
-                
+
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
-                
+
                 if (this.CallerId != null)
                     hash = hash * 59 + this.CallerId.GetHashCode();
-                
+
                 if (this.CallerIdName != null)
                     hash = hash * 59 + this.CallerIdName.GetHashCode();
-                
+
                 return hash;
             }
         }

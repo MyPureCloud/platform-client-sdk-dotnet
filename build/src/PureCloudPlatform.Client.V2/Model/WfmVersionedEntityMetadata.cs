@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmVersionedEntityMetadata :  IEquatable<WfmVersionedEntityMetadata>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmVersionedEntityMetadata" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WfmVersionedEntityMetadata() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmVersionedEntityMetadata" /> class.
         /// </summary>
@@ -62,52 +34,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The version of the associated entity.  Used to prevent conflicts on concurrent edits
         /// </summary>
         /// <value>The version of the associated entity.  Used to prevent conflicts on concurrent edits</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user who last modified the associated entity
         /// </summary>
         /// <value>The user who last modified the associated entity</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public UserReference ModifiedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the associated entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the associated entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user who created the associated entity, if available
         /// </summary>
         /// <value>The user who created the associated entity, if available</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public UserReference CreatedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the associated entity was created, if available. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the associated entity was created, if available. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -116,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmVersionedEntityMetadata {\n");
-            
+
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
@@ -200,22 +172,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 return hash;
             }
         }

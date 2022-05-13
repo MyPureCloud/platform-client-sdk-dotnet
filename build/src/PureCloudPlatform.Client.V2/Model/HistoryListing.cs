@@ -18,32 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class HistoryListing :  IEquatable<HistoryListing>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Action name
         /// </summary>
@@ -113,10 +87,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "VALIDATE")]
             Validate
         }
-        
-        
-        
-        
         /// <summary>
         /// Action status
         /// </summary>
@@ -174,95 +144,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILURE")]
             Failure
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Action name
         /// </summary>
         /// <value>Action name</value>
         [DataMember(Name="actionName", EmitDefaultValue=false)]
         public ActionNameEnum? ActionName { get; set; }
-        
-        
-        
         /// <summary>
         /// Action status
         /// </summary>
         /// <value>Action status</value>
         [DataMember(Name="actionStatus", EmitDefaultValue=false)]
         public ActionStatusEnum? ActionStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="HistoryListing" /> class.
         /// </summary>
@@ -311,157 +204,157 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Complete
         /// </summary>
         [DataMember(Name="complete", EmitDefaultValue=false)]
         public bool? Complete { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Client
         /// </summary>
         [DataMember(Name="client", EmitDefaultValue=false)]
         public DomainEntityRef Client { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorMessage
         /// </summary>
         [DataMember(Name="errorMessage", EmitDefaultValue=false)]
         public string ErrorMessage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorDetails
         /// </summary>
         [DataMember(Name="errorDetails", EmitDefaultValue=false)]
         public List<Detail> ErrorDetails { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorMessageParams
         /// </summary>
         [DataMember(Name="errorMessageParams", EmitDefaultValue=false)]
         public Dictionary<string, string> ErrorMessageParams { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets System
         /// </summary>
         [DataMember(Name="system", EmitDefaultValue=false)]
         public bool? System { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="started", EmitDefaultValue=false)]
         public DateTime? Started { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="completed", EmitDefaultValue=false)]
         public DateTime? Completed { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public long? Total { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<HistoryEntry> Entities { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PageCount
         /// </summary>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public int? PageCount { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -470,7 +363,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HistoryListing {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Complete: ").Append(Complete).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -644,67 +537,66 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Complete != null)
                     hash = hash * 59 + this.Complete.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Client != null)
                     hash = hash * 59 + this.Client.GetHashCode();
-                
+
                 if (this.ErrorMessage != null)
                     hash = hash * 59 + this.ErrorMessage.GetHashCode();
-                
+
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
-                
+
                 if (this.ErrorDetails != null)
                     hash = hash * 59 + this.ErrorDetails.GetHashCode();
-                
+
                 if (this.ErrorMessageParams != null)
                     hash = hash * 59 + this.ErrorMessageParams.GetHashCode();
-                
+
                 if (this.ActionName != null)
                     hash = hash * 59 + this.ActionName.GetHashCode();
-                
+
                 if (this.ActionStatus != null)
                     hash = hash * 59 + this.ActionStatus.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.System != null)
                     hash = hash * 59 + this.System.GetHashCode();
-                
+
                 if (this.Started != null)
                     hash = hash * 59 + this.Started.GetHashCode();
-                
+
                 if (this.Completed != null)
                     hash = hash * 59 + this.Completed.GetHashCode();
-                
+
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
+
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
+
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
-                
+
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
+
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
-                
+
                 return hash;
             }
         }

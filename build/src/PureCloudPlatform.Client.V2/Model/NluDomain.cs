@@ -18,60 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NluDomain :  IEquatable<NluDomain>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDomain" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected NluDomain() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDomain" /> class.
         /// </summary>
@@ -86,88 +38,88 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the NLU domain.
         /// </summary>
         /// <value>The name of the NLU domain.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The language culture of the NLU domain, e.g. `en-us`, `de-de`.
         /// </summary>
         /// <value>The language culture of the NLU domain, e.g. `en-us`, `de-de`.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The draft version of that NLU domain.
         /// </summary>
         /// <value>The draft version of that NLU domain.</value>
         [DataMember(Name="draftVersion", EmitDefaultValue=false)]
         public NluDomainVersion DraftVersion { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The last published version of that NLU domain.
         /// </summary>
         /// <value>The last published version of that NLU domain.</value>
         [DataMember(Name="lastPublishedVersion", EmitDefaultValue=false)]
         public NluDomainVersion LastPublishedVersion { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date when the NLU domain was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date when the NLU domain was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date when the NLU domain was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date when the NLU domain was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The version of the NLU engine to use.
         /// </summary>
         /// <value>The version of the NLU engine to use.</value>
         [DataMember(Name="engineVersion", EmitDefaultValue=false)]
         public string EngineVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -176,7 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NluDomain {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
@@ -284,34 +236,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.DraftVersion != null)
                     hash = hash * 59 + this.DraftVersion.GetHashCode();
-                
+
                 if (this.LastPublishedVersion != null)
                     hash = hash * 59 + this.LastPublishedVersion.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.EngineVersion != null)
                     hash = hash * 59 + this.EngineVersion.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

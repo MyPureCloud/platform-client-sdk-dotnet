@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationCallbackEventTopicVoicemail :  IEquatable<ConversationCallbackEventTopicVoicemail>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// current state of the voicemail upload
         /// </summary>
@@ -68,22 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "none")]
             None
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// current state of the voicemail upload
         /// </summary>
         /// <value>current state of the voicemail upload</value>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
         public UploadStatusEnum? UploadStatus { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationCallbackEventTopicVoicemail" /> class.
         /// </summary>
@@ -96,18 +81,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The voicemail id
         /// </summary>
         /// <value>The voicemail id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -116,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationCallbackEventTopicVoicemail {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
             sb.Append("}\n");
@@ -182,13 +167,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.UploadStatus != null)
                     hash = hash * 59 + this.UploadStatus.GetHashCode();
-                
+
                 return hash;
             }
         }

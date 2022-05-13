@@ -9,7 +9,7 @@ title: AsyncIntradayResponse
 |------------ | ------------- | ------------- | -------------|
 | **Status** | **string** | The status of the operation | [optional] |
 | **OperationId** | **string** | The ID for the operation | [optional] |
-| **Result** | [**BuIntradayResponse**](BuIntradayResponse.html) | The result of the operation.  Null unless status == Complete | [optional] |
+| **Result** | [**BuIntradayResponse**](BuIntradayResponse.html) | The result of the operation.  Null unless status &#x3D;&#x3D; Complete | [optional] |
 {: class="table table-striped"}
 
 

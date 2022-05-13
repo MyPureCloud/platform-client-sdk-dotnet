@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningModuleRuleParts :  IEquatable<LearningModuleRuleParts>
     {
-        
-        
         /// <summary>
         /// The learning module rule operation
         /// </summary>
@@ -47,10 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Exclude")]
             Exclude
         }
-        
-        
-        
-        
         /// <summary>
         /// The learning module rule selector
         /// </summary>
@@ -114,45 +108,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Team")]
             Team
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The learning module rule operation
         /// </summary>
         /// <value>The learning module rule operation</value>
         [DataMember(Name="operation", EmitDefaultValue=false)]
         public OperationEnum? Operation { get; set; }
-        
-        
-        
         /// <summary>
         /// The learning module rule selector
         /// </summary>
         /// <value>The learning module rule selector</value>
         [DataMember(Name="selector", EmitDefaultValue=false)]
         public SelectorEnum? Selector { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModuleRuleParts" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LearningModuleRuleParts() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModuleRuleParts" /> class.
         /// </summary>
@@ -169,29 +142,29 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         /// <summary>
         /// The value of rules
         /// </summary>
         /// <value>The value of rules</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public List<string> Value { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The order of rules in learning module rule
         /// </summary>
         /// <value>The order of rules in learning module rule</value>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public int? Order { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -200,7 +173,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningModuleRuleParts {\n");
-            
+
             sb.Append("  Operation: ").Append(Operation).Append("\n");
             sb.Append("  Selector: ").Append(Selector).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
@@ -278,19 +251,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Operation != null)
                     hash = hash * 59 + this.Operation.GetHashCode();
-                
+
                 if (this.Selector != null)
                     hash = hash * 59 + this.Selector.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
-                
+
                 return hash;
             }
         }

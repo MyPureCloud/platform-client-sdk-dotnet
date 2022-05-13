@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerCampaignRuleConfigChangeCampaignRuleEntities :  IEquatable<DialerCampaignRuleConfigChangeCampaignRuleEntities>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCampaignRuleConfigChangeCampaignRuleEntities" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A list of campaignIds to act on
         /// </summary>
         /// <value>A list of campaignIds to act on</value>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
         public List<DialerCampaignRuleConfigChangeUriReference> Campaigns { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of sequenceIds to act on
         /// </summary>
         /// <value>A list of sequenceIds to act on</value>
         [DataMember(Name="sequences", EmitDefaultValue=false)]
         public List<DialerCampaignRuleConfigChangeUriReference> Sequences { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerCampaignRuleConfigChangeCampaignRuleEntities {\n");
-            
+
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
             sb.Append("  Sequences: ").Append(Sequences).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Campaigns != null)
                     hash = hash * 59 + this.Campaigns.GetHashCode();
-                
+
                 if (this.Sequences != null)
                     hash = hash * 59 + this.Sequences.GetHashCode();
-                
+
                 return hash;
             }
         }

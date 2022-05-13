@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MinLength :  IEquatable<MinLength>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MinLength" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected MinLength() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MinLength" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A non-negative integer for a text-based schema field denoting the minimum smallest length a string field can contain for a schema instance.
         /// </summary>
         /// <value>A non-negative integer for a text-based schema field denoting the minimum smallest length a string field can contain for a schema instance.</value>
         [DataMember(Name="min", EmitDefaultValue=false)]
         public long? Min { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A non-negative integer for a text-based schema field denoting the maximum smallest length string the field can contain for a schema instance.
         /// </summary>
         /// <value>A non-negative integer for a text-based schema field denoting the maximum smallest length string the field can contain for a schema instance.</value>
         [DataMember(Name="max", EmitDefaultValue=false)]
         public long? Max { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MinLength {\n");
-            
+
             sb.Append("  Min: ").Append(Min).Append("\n");
             sb.Append("  Max: ").Append(Max).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Min != null)
                     hash = hash * 59 + this.Min.GetHashCode();
-                
+
                 if (this.Max != null)
                     hash = hash * 59 + this.Max.GetHashCode();
-                
+
                 return hash;
             }
         }

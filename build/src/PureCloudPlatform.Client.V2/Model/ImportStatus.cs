@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ImportStatus :  IEquatable<ImportStatus>
     {
-        
-        
         /// <summary>
         /// current status of the import
         /// </summary>
@@ -47,40 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILED")]
             Failed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// current status of the import
         /// </summary>
         /// <value>current status of the import</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public StateEnum? State { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportStatus" /> class.
         /// </summary>
@@ -89,45 +59,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// total number of records to be imported
         /// </summary>
         /// <value>total number of records to be imported</value>
         [DataMember(Name="totalRecords", EmitDefaultValue=false)]
         public long? TotalRecords { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// number of records finished importing
         /// </summary>
         /// <value>number of records finished importing</value>
         [DataMember(Name="completedRecords", EmitDefaultValue=false)]
         public long? CompletedRecords { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// percentage of records finished importing
         /// </summary>
         /// <value>percentage of records finished importing</value>
         [DataMember(Name="percentComplete", EmitDefaultValue=false)]
         public int? PercentComplete { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// if the import has failed, the reason for the failure
         /// </summary>
         /// <value>if the import has failed, the reason for the failure</value>
         [DataMember(Name="failureReason", EmitDefaultValue=false)]
         public string FailureReason { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -136,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ImportStatus {\n");
-            
+
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  TotalRecords: ").Append(TotalRecords).Append("\n");
             sb.Append("  CompletedRecords: ").Append(CompletedRecords).Append("\n");
@@ -220,22 +190,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.TotalRecords != null)
                     hash = hash * 59 + this.TotalRecords.GetHashCode();
-                
+
                 if (this.CompletedRecords != null)
                     hash = hash * 59 + this.CompletedRecords.GetHashCode();
-                
+
                 if (this.PercentComplete != null)
                     hash = hash * 59 + this.PercentComplete.GetHashCode();
-                
+
                 if (this.FailureReason != null)
                     hash = hash * 59 + this.FailureReason.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GDPRRequest :  IEquatable<GDPRRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of GDPR request
         /// </summary>
@@ -48,30 +34,23 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum GdprExport for "GDPR_EXPORT"
+            /// Enum Export for "GDPR_EXPORT"
             /// </summary>
             [EnumMember(Value = "GDPR_EXPORT")]
-            GdprExport,
+            Export,
             
             /// <summary>
-            /// Enum GdprUpdate for "GDPR_UPDATE"
+            /// Enum Update for "GDPR_UPDATE"
             /// </summary>
             [EnumMember(Value = "GDPR_UPDATE")]
-            GdprUpdate,
+            Update,
             
             /// <summary>
-            /// Enum GdprDelete for "GDPR_DELETE"
+            /// Enum Delete for "GDPR_DELETE"
             /// </summary>
             [EnumMember(Value = "GDPR_DELETE")]
-            GdprDelete
+            Delete
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the request
         /// </summary>
@@ -129,60 +108,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FINALIZING")]
             Finalizing
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of GDPR request
         /// </summary>
         /// <value>The type of GDPR request</value>
         [DataMember(Name="requestType", EmitDefaultValue=false)]
         public RequestTypeEnum? RequestType { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the request
         /// </summary>
         /// <value>The status of the request</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public StatusEnum? Status { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GDPRRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected GDPRRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GDPRRequest" /> class.
         /// </summary>
@@ -199,82 +142,82 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user that created this request
         /// </summary>
         /// <value>The user that created this request</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public DomainEntityRef CreatedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The replacement terms for the provided search terms, in the case of a GDPR_UPDATE request
         /// </summary>
         /// <value>The replacement terms for the provided search terms, in the case of a GDPR_UPDATE request</value>
         [DataMember(Name="replacementTerms", EmitDefaultValue=false)]
         public List<ReplacementTerm> ReplacementTerms { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// When the request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>When the request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The subject of the GDPR request
         /// </summary>
         /// <value>The subject of the GDPR request</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public GDPRSubject Subject { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The location where the results of the request can be retrieved
         /// </summary>
         /// <value>The location where the results of the request can be retrieved</value>
         [DataMember(Name="resultsUrl", EmitDefaultValue=false)]
         public string ResultsUrl { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -283,7 +226,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GDPRRequest {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
@@ -397,37 +340,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.ReplacementTerms != null)
                     hash = hash * 59 + this.ReplacementTerms.GetHashCode();
-                
+
                 if (this.RequestType != null)
                     hash = hash * 59 + this.RequestType.GetHashCode();
-                
+
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
-                
+
                 if (this.ResultsUrl != null)
                     hash = hash * 59 + this.ResultsUrl.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

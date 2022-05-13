@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GeolocationEventGeolocation :  IEquatable<GeolocationEventGeolocation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GeolocationEventGeolocation" /> class.
         /// </summary>
@@ -64,47 +36,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Region
         /// </summary>
         [DataMember(Name="region", EmitDefaultValue=false)]
         public string Region { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets City
         /// </summary>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GeolocationEventGeolocation {\n");
-            
+
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
@@ -197,22 +169,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Country != null)
                     hash = hash * 59 + this.Country.GetHashCode();
-                
+
                 if (this.Region != null)
                     hash = hash * 59 + this.Region.GetHashCode();
-                
+
                 if (this.City != null)
                     hash = hash * 59 + this.City.GetHashCode();
-                
+
                 return hash;
             }
         }

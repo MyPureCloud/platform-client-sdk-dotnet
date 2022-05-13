@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class V2ConversationMessageTypingEventForUserTopicConversationMessageContent :  IEquatable<V2ConversationMessageTypingEventForUserTopicConversationMessageContent>
     {
-        
-        
         /// <summary>
         /// Gets or Sets ContentType
         /// </summary>
@@ -76,54 +74,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "GenericTemplate")]
             Generictemplate
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ContentType
         /// </summary>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public ContentTypeEnum? ContentType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="V2ConversationMessageTypingEventForUserTopicConversationMessageContent" /> class.
         /// </summary>
@@ -148,65 +103,65 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets Location
         /// </summary>
         [DataMember(Name="location", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForUserTopicConversationContentLocation Location { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Story
         /// </summary>
         [DataMember(Name="story", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForUserTopicConversationContentStory Story { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Attachment
         /// </summary>
         [DataMember(Name="attachment", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForUserTopicConversationContentAttachment Attachment { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets QuickReply
         /// </summary>
         [DataMember(Name="quickReply", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForUserTopicConversationContentQuickReply QuickReply { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Template
         /// </summary>
         [DataMember(Name="template", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForUserTopicConversationContentNotificationTemplate Template { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ButtonResponse
         /// </summary>
         [DataMember(Name="buttonResponse", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForUserTopicConversationContentButtonResponse ButtonResponse { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Generic
         /// </summary>
         [DataMember(Name="generic", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForUserTopicConversationContentGeneric Generic { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -215,7 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class V2ConversationMessageTypingEventForUserTopicConversationMessageContent {\n");
-            
+
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  Location: ").Append(Location).Append("\n");
             sb.Append("  Story: ").Append(Story).Append("\n");
@@ -317,31 +272,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
+
                 if (this.Location != null)
                     hash = hash * 59 + this.Location.GetHashCode();
-                
+
                 if (this.Story != null)
                     hash = hash * 59 + this.Story.GetHashCode();
-                
+
                 if (this.Attachment != null)
                     hash = hash * 59 + this.Attachment.GetHashCode();
-                
+
                 if (this.QuickReply != null)
                     hash = hash * 59 + this.QuickReply.GetHashCode();
-                
+
                 if (this.Template != null)
                     hash = hash * 59 + this.Template.GetHashCode();
-                
+
                 if (this.ButtonResponse != null)
                     hash = hash * 59 + this.ButtonResponse.GetHashCode();
-                
+
                 if (this.Generic != null)
                     hash = hash * 59 + this.Generic.GetHashCode();
-                
+
                 return hash;
             }
         }

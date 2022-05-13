@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LexIntent :  IEquatable<LexIntent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LexIntent" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LexIntent() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LexIntent" /> class.
         /// </summary>
@@ -63,43 +40,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The intent name
         /// </summary>
         /// <value>The intent name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A description of the intent
         /// </summary>
         /// <value>A description of the intent</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// An object mapping slot names to Slot objects
         /// </summary>
         /// <value>An object mapping slot names to Slot objects</value>
         [DataMember(Name="slots", EmitDefaultValue=false)]
         public Dictionary<string, LexSlot> Slots { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The intent version
         /// </summary>
         /// <value>The intent version</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LexIntent {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Slots: ").Append(Slots).Append("\n");
@@ -186,19 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Slots != null)
                     hash = hash * 59 + this.Slots.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -13,7 +13,7 @@ title: DialerRulesetConfigChangeCondition
 | **AttributeName** | **string** | An attribute name associated with the condition (applies only to certain rule conditions) | [optional] |
 | **Value** | **string** | A value associated with the condition | [optional] |
 | **ValueType** | **string** | Determines the type of the value associated with the condition | [optional] |
-| **_Operator** | **string** | An operation type for condition evaluation | [optional] |
+| **Operator** | **string** | An operation type for condition evaluation | [optional] |
 | **Codes** | **List&lt;string&gt;** | List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;) | [optional] |
 | **PropertyType** | **string** | Determines the type of the property associated with the condition | [optional] |
 | **Property** | **string** | A value associated with the property type of this condition | [optional] |

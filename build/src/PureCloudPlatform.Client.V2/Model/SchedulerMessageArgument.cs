@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SchedulerMessageArgument :  IEquatable<SchedulerMessageArgument>
     {
-        
-        
         /// <summary>
         /// The type of this message parameter
         /// </summary>
@@ -47,25 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Date")]
             Date
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of this message parameter
         /// </summary>
         /// <value>The type of this message parameter</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulerMessageArgument" /> class.
         /// </summary>
@@ -78,18 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The value of this message parameter
         /// </summary>
         /// <value>The value of this message parameter</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SchedulerMessageArgument {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -164,13 +149,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 return hash;
             }
         }

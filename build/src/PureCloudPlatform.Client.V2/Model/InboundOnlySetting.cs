@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class InboundOnlySetting :  IEquatable<InboundOnlySetting>
     {
-        
-        
         /// <summary>
         /// Gets or Sets Inbound
         /// </summary>
@@ -46,19 +44,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Disabled")]
             Disabled
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Inbound
         /// </summary>
         [DataMember(Name="inbound", EmitDefaultValue=false)]
         public InboundEnum? Inbound { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundOnlySetting" /> class.
         /// </summary>
@@ -69,9 +59,9 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InboundOnlySetting {\n");
-            
+
             sb.Append("  Inbound: ").Append(Inbound).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -140,10 +130,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Inbound != null)
                     hash = hash * 59 + this.Inbound.GetHashCode();
-                
+
                 return hash;
             }
         }

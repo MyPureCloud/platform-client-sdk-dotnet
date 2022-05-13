@@ -18,32 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RecordingMetadata :  IEquatable<RecordingMetadata>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>
@@ -101,16 +75,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ERROR")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of archive medium used. Example: CloudArchive
         /// </summary>
@@ -132,84 +96,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CLOUDARCHIVE")]
             Cloudarchive
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>
         /// <value>Represents the current file state for a recording. Examples: Uploading, Archived, etc</value>
         [DataMember(Name="fileState", EmitDefaultValue=false)]
         public FileStateEnum? FileState { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of archive medium used. Example: CloudArchive
         /// </summary>
         /// <value>The type of archive medium used. Example: CloudArchive</value>
         [DataMember(Name="archiveMedium", EmitDefaultValue=false)]
         public ArchiveMediumEnum? ArchiveMedium { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingMetadata" /> class.
         /// </summary>
@@ -252,160 +150,160 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Path
         /// </summary>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public string Path { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The start time of the recording for screen recordings. Null for other types.
         /// </summary>
         /// <value>The start time of the recording for screen recordings. Null for other types.</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EndTime
         /// </summary>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public string EndTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The type of media that the recording is. At the moment that could be audio, chat, email, or message.
         /// </summary>
         /// <value>The type of media that the recording is. At the moment that could be audio, chat, email, or message.</value>
         [DataMember(Name="media", EmitDefaultValue=false)]
         public string Media { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Annotations that belong to the recording. Populated when recording filestate is AVAILABLE.
         /// </summary>
         /// <value>Annotations that belong to the recording. Populated when recording filestate is AVAILABLE.</value>
         [DataMember(Name="annotations", EmitDefaultValue=false)]
         public List<Annotation> Annotations { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="restoreExpirationTime", EmitDefaultValue=false)]
         public DateTime? RestoreExpirationTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the recording will be archived. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the recording will be archived. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="archiveDate", EmitDefaultValue=false)]
         public DateTime? ArchiveDate { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="deleteDate", EmitDefaultValue=false)]
         public DateTime? DeleteDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="exportDate", EmitDefaultValue=false)]
         public DateTime? ExportDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="exportedDate", EmitDefaultValue=false)]
         public DateTime? ExportedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// How many archive restorations the organization is allowed to have.
         /// </summary>
         /// <value>How many archive restorations the organization is allowed to have.</value>
         [DataMember(Name="maxAllowedRestorationsForOrg", EmitDefaultValue=false)]
         public int? MaxAllowedRestorationsForOrg { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The remaining archive restorations the organization has.
         /// </summary>
         /// <value>The remaining archive restorations the organization has.</value>
         [DataMember(Name="remainingRestorationsAllowedForOrg", EmitDefaultValue=false)]
         public int? RemainingRestorationsAllowedForOrg { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The session id represents an external resource id, such as email, call, chat, etc
         /// </summary>
         /// <value>The session id represents an external resource id, such as email, call, chat, etc</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -414,7 +312,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RecordingMetadata {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
@@ -582,64 +480,63 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.Path != null)
                     hash = hash * 59 + this.Path.GetHashCode();
-                
+
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
+
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
+
                 if (this.Media != null)
                     hash = hash * 59 + this.Media.GetHashCode();
-                
+
                 if (this.Annotations != null)
                     hash = hash * 59 + this.Annotations.GetHashCode();
-                
+
                 if (this.FileState != null)
                     hash = hash * 59 + this.FileState.GetHashCode();
-                
+
                 if (this.RestoreExpirationTime != null)
                     hash = hash * 59 + this.RestoreExpirationTime.GetHashCode();
-                
+
                 if (this.ArchiveDate != null)
                     hash = hash * 59 + this.ArchiveDate.GetHashCode();
-                
+
                 if (this.ArchiveMedium != null)
                     hash = hash * 59 + this.ArchiveMedium.GetHashCode();
-                
+
                 if (this.DeleteDate != null)
                     hash = hash * 59 + this.DeleteDate.GetHashCode();
-                
+
                 if (this.ExportDate != null)
                     hash = hash * 59 + this.ExportDate.GetHashCode();
-                
+
                 if (this.ExportedDate != null)
                     hash = hash * 59 + this.ExportedDate.GetHashCode();
-                
+
                 if (this.MaxAllowedRestorationsForOrg != null)
                     hash = hash * 59 + this.MaxAllowedRestorationsForOrg.GetHashCode();
-                
+
                 if (this.RemainingRestorationsAllowedForOrg != null)
                     hash = hash * 59 + this.RemainingRestorationsAllowedForOrg.GetHashCode();
-                
+
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

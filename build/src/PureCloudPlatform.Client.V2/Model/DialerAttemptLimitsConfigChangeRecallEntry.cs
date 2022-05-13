@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerAttemptLimitsConfigChangeRecallEntry :  IEquatable<DialerAttemptLimitsConfigChangeRecallEntry>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerAttemptLimitsConfigChangeRecallEntry" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The number of recall attempts to make
         /// </summary>
         /// <value>The number of recall attempts to make</value>
         [DataMember(Name="nbrAttempts", EmitDefaultValue=false)]
         public int? NbrAttempts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// How long to wait between recall attempts
         /// </summary>
         /// <value>How long to wait between recall attempts</value>
         [DataMember(Name="minutesBetweenAttempts", EmitDefaultValue=false)]
         public int? MinutesBetweenAttempts { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerAttemptLimitsConfigChangeRecallEntry {\n");
-            
+
             sb.Append("  NbrAttempts: ").Append(NbrAttempts).Append("\n");
             sb.Append("  MinutesBetweenAttempts: ").Append(MinutesBetweenAttempts).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.NbrAttempts != null)
                     hash = hash * 59 + this.NbrAttempts.GetHashCode();
-                
+
                 if (this.MinutesBetweenAttempts != null)
                     hash = hash * 59 + this.MinutesBetweenAttempts.GetHashCode();
-                
+
                 return hash;
             }
         }

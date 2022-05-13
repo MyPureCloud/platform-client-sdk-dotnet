@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CredentialSpecification :  IEquatable<CredentialSpecification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CredentialSpecification" /> class.
         /// </summary>
@@ -44,34 +26,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Indicates if the credential must be provided in order for the integration configuration to be valid.
         /// </summary>
         /// <value>Indicates if the credential must be provided in order for the integration configuration to be valid.</value>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public bool? Required { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Title describing the usage for this credential.
         /// </summary>
         /// <value>Title describing the usage for this credential.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of acceptable credential types that can be provided for this credential.
         /// </summary>
         /// <value>List of acceptable credential types that can be provided for this credential.</value>
         [DataMember(Name="credentialTypes", EmitDefaultValue=false)]
         public List<string> CredentialTypes { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CredentialSpecification {\n");
-            
+
             sb.Append("  Required: ").Append(Required).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  CredentialTypes: ").Append(CredentialTypes).Append("\n");
@@ -152,16 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Required != null)
                     hash = hash * 59 + this.Required.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.CredentialTypes != null)
                     hash = hash * 59 + this.CredentialTypes.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -284,6 +284,8 @@ Verify a channel still exists and is valid
 
 Returns a 200 OK if channel exists, and a 404 Not Found if it doesn't
 
+
+
 Requires NO permissions: 
 
 
@@ -412,6 +414,8 @@ namespace Example
 Create a new channel
 
 There is a limit of 20 channels per user/app combination. Creating a 21st channel will remove the channel with oldest last used date. Channels without an active connection will be removed first.
+
+
 
 Requires NO permissions: 
 

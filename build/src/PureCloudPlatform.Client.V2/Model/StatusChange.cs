@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class StatusChange :  IEquatable<StatusChange>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The status the change request transitioned to
         /// </summary>
@@ -86,10 +81,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "RollbackImplemented")]
             Rollbackimplemented
         }
-        
-        
-        
-        
         /// <summary>
         /// The status the change request transitioned from
         /// </summary>
@@ -153,16 +144,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "RollbackImplemented")]
             Rollbackimplemented
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reason for rejecting the limit override request
         /// </summary>
@@ -208,44 +189,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OtherReason")]
             Otherreason
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status the change request transitioned to
         /// </summary>
         /// <value>The status the change request transitioned to</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        
-        
-        
+        public StatusEnum? Status { get; private set; }
         /// <summary>
         /// The status the change request transitioned from
         /// </summary>
         /// <value>The status the change request transitioned from</value>
         [DataMember(Name="previousStatus", EmitDefaultValue=false)]
-        public PreviousStatusEnum? PreviousStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
+        public PreviousStatusEnum? PreviousStatus { get; private set; }
         /// <summary>
         /// The reason for rejecting the limit override request
         /// </summary>
         /// <value>The reason for rejecting the limit override request</value>
         [DataMember(Name="rejectReason", EmitDefaultValue=false)]
-        public RejectReasonEnum? RejectReason { get; set; }
-        
-        
-    
+        public RejectReasonEnum? RejectReason { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="StatusChange" /> class.
         /// </summary>
@@ -254,40 +215,40 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The date of this status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date of this status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateStatusChanged", EmitDefaultValue=false)]
         public DateTime? DateStatusChanged { get; private set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// A short message describing the status change
         /// </summary>
         /// <value>A short message describing the status change</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If applicable, the user who updated the change request to this status
         /// </summary>
         /// <value>If applicable, the user who updated the change request to this status</value>
         [DataMember(Name="changedBy", EmitDefaultValue=false)]
         public string ChangedBy { get; private set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -296,7 +257,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StatusChange {\n");
-            
+
             sb.Append("  DateStatusChanged: ").Append(DateStatusChanged).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  PreviousStatus: ").Append(PreviousStatus).Append("\n");
@@ -386,25 +347,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DateStatusChanged != null)
                     hash = hash * 59 + this.DateStatusChanged.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.PreviousStatus != null)
                     hash = hash * 59 + this.PreviousStatus.GetHashCode();
-                
+
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 if (this.ChangedBy != null)
                     hash = hash * 59 + this.ChangedBy.GetHashCode();
-                
+
                 if (this.RejectReason != null)
                     hash = hash * 59 + this.RejectReason.GetHashCode();
-                
+
                 return hash;
             }
         }

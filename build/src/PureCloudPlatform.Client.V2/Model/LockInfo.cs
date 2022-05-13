@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LockInfo :  IEquatable<LockInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
@@ -85,25 +74,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "TEXT_EXTRACTION")]
             TextExtraction
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LockInfo" /> class.
         /// </summary>
@@ -120,35 +95,35 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets LockedBy
         /// </summary>
         [DataMember(Name="lockedBy", EmitDefaultValue=false)]
         public DomainEntityRef LockedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateExpires", EmitDefaultValue=false)]
         public DateTime? DateExpires { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -157,7 +132,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LockInfo {\n");
-            
+
             sb.Append("  LockedBy: ").Append(LockedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateExpires: ").Append(DateExpires).Append("\n");
@@ -235,19 +210,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LockedBy != null)
                     hash = hash * 59 + this.LockedBy.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateExpires != null)
                     hash = hash * 59 + this.DateExpires.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NluInfo :  IEquatable<NluInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NluInfo" /> class.
         /// </summary>
@@ -53,39 +30,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public AddressableEntityRef Domain { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public NluDomainVersion Version { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Intents
         /// </summary>
         [DataMember(Name="intents", EmitDefaultValue=false)]
         public List<Intent> Intents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EngineVersion
         /// </summary>
         [DataMember(Name="engineVersion", EmitDefaultValue=false)]
         public string EngineVersion { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -94,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NluInfo {\n");
-            
+
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Intents: ").Append(Intents).Append("\n");
@@ -172,19 +149,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.Intents != null)
                     hash = hash * 59 + this.Intents.GetHashCode();
-                
+
                 if (this.EngineVersion != null)
                     hash = hash * 59 + this.EngineVersion.GetHashCode();
-                
+
                 return hash;
             }
         }

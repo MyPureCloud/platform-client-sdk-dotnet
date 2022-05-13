@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class StationSettings :  IEquatable<StationSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="StationSettings" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Configuration options for free-seating
         /// </summary>
         /// <value>Configuration options for free-seating</value>
         [DataMember(Name="freeSeatingConfiguration", EmitDefaultValue=false)]
         public FreeSeatingConfiguration FreeSeatingConfiguration { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StationSettings {\n");
-            
+
             sb.Append("  FreeSeatingConfiguration: ").Append(FreeSeatingConfiguration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FreeSeatingConfiguration != null)
                     hash = hash * 59 + this.FreeSeatingConfiguration.GetHashCode();
-                
+
                 return hash;
             }
         }

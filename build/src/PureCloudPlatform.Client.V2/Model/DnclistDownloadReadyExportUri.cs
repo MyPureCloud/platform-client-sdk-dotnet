@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DnclistDownloadReadyExportUri :  IEquatable<DnclistDownloadReadyExportUri>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DnclistDownloadReadyExportUri" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Uri
         /// </summary>
         [DataMember(Name="uri", EmitDefaultValue=false)]
         public string Uri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ExportTimestamp
         /// </summary>
         [DataMember(Name="exportTimestamp", EmitDefaultValue=false)]
         public string ExportTimestamp { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DnclistDownloadReadyExportUri {\n");
-            
+
             sb.Append("  Uri: ").Append(Uri).Append("\n");
             sb.Append("  ExportTimestamp: ").Append(ExportTimestamp).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Uri != null)
                     hash = hash * 59 + this.Uri.GetHashCode();
-                
+
                 if (this.ExportTimestamp != null)
                     hash = hash * 59 + this.ExportTimestamp.GetHashCode();
-                
+
                 return hash;
             }
         }

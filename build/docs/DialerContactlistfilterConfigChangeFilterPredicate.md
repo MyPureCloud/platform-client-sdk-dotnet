@@ -9,7 +9,7 @@ title: DialerContactlistfilterConfigChangeFilterPredicate
 |------------ | ------------- | ------------- | -------------|
 | **Column** | **string** | The contact list column | [optional] |
 | **ColumnType** | **string** | Whether a contact column is numeric or alphabetic | [optional] |
-| **_Operator** | **string** | The comparison operator | [optional] |
+| **Operator** | **string** | The comparison operator | [optional] |
 | **Value** | **string** | The value the predicate applies to | [optional] |
 | **Range** | [**DialerContactlistfilterConfigChangeRange**](DialerContactlistfilterConfigChangeRange.html) |  | [optional] |
 | **Inverted** | **bool?** | Whether or not to invert to result of evaluating the predicate | [optional] |

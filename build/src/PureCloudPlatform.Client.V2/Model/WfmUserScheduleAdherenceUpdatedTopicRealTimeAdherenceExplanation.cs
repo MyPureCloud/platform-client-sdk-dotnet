@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation :  IEquatable<WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -61,25 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Denied")]
             Denied
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation" /> class.
         /// </summary>
@@ -96,33 +71,33 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LengthMinutes
         /// </summary>
         [DataMember(Name="lengthMinutes", EmitDefaultValue=false)]
         public int? LengthMinutes { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -131,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  LengthMinutes: ").Append(LengthMinutes).Append("\n");
@@ -209,19 +184,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.LengthMinutes != null)
                     hash = hash * 59 + this.LengthMinutes.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 return hash;
             }
         }

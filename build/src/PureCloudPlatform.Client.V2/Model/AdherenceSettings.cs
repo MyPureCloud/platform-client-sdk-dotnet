@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AdherenceSettings :  IEquatable<AdherenceSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AdherenceSettings" /> class.
         /// </summary>
@@ -71,61 +38,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The threshold in minutes where an alert will be triggered when an agent is considered severely out of adherence
         /// </summary>
         /// <value>The threshold in minutes where an alert will be triggered when an agent is considered severely out of adherence</value>
         [DataMember(Name="severeAlertThresholdMinutes", EmitDefaultValue=false)]
         public int? SevereAlertThresholdMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Target adherence percentage
         /// </summary>
         /// <value>Target adherence percentage</value>
         [DataMember(Name="adherenceTargetPercent", EmitDefaultValue=false)]
         public int? AdherenceTargetPercent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The threshold in seconds for which agents should not be penalized for being momentarily out of adherence
         /// </summary>
         /// <value>The threshold in seconds for which agents should not be penalized for being momentarily out of adherence</value>
         [DataMember(Name="adherenceExceptionThresholdSeconds", EmitDefaultValue=false)]
         public int? AdherenceExceptionThresholdSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to treat all non-on-queue activities as equivalent for adherence purposes
         /// </summary>
         /// <value>Whether to treat all non-on-queue activities as equivalent for adherence purposes</value>
         [DataMember(Name="nonOnQueueActivitiesEquivalent", EmitDefaultValue=false)]
         public bool? NonOnQueueActivitiesEquivalent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to track on-queue activities
         /// </summary>
         /// <value>Whether to track on-queue activities</value>
         [DataMember(Name="trackOnQueueActivity", EmitDefaultValue=false)]
         public bool? TrackOnQueueActivity { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Activity categories that should be ignored for adherence purposes
         /// </summary>
         /// <value>Activity categories that should be ignored for adherence purposes</value>
         [DataMember(Name="ignoredActivityCategories", EmitDefaultValue=false)]
         public IgnoredActivityCategories IgnoredActivityCategories { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AdherenceSettings {\n");
-            
+
             sb.Append("  SevereAlertThresholdMinutes: ").Append(SevereAlertThresholdMinutes).Append("\n");
             sb.Append("  AdherenceTargetPercent: ").Append(AdherenceTargetPercent).Append("\n");
             sb.Append("  AdherenceExceptionThresholdSeconds: ").Append(AdherenceExceptionThresholdSeconds).Append("\n");
@@ -224,25 +191,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SevereAlertThresholdMinutes != null)
                     hash = hash * 59 + this.SevereAlertThresholdMinutes.GetHashCode();
-                
+
                 if (this.AdherenceTargetPercent != null)
                     hash = hash * 59 + this.AdherenceTargetPercent.GetHashCode();
-                
+
                 if (this.AdherenceExceptionThresholdSeconds != null)
                     hash = hash * 59 + this.AdherenceExceptionThresholdSeconds.GetHashCode();
-                
+
                 if (this.NonOnQueueActivitiesEquivalent != null)
                     hash = hash * 59 + this.NonOnQueueActivitiesEquivalent.GetHashCode();
-                
+
                 if (this.TrackOnQueueActivity != null)
                     hash = hash * 59 + this.TrackOnQueueActivity.GetHashCode();
-                
+
                 if (this.IgnoredActivityCategories != null)
                     hash = hash * 59 + this.IgnoredActivityCategories.GetHashCode();
-                
+
                 return hash;
             }
         }

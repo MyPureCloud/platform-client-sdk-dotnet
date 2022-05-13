@@ -18,75 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Outcome :  IEquatable<Outcome>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Outcome" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Outcome() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Outcome" /> class.
         /// </summary>
@@ -115,115 +52,115 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not the outcome is active.
         /// </summary>
         /// <value>Whether or not the outcome is active.</value>
         [DataMember(Name="isActive", EmitDefaultValue=false)]
         public bool? IsActive { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The display name of the outcome.
         /// </summary>
         /// <value>The display name of the outcome.</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The version of the outcome.
         /// </summary>
         /// <value>The version of the outcome.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A description of the outcome.
         /// </summary>
         /// <value>A description of the outcome.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not the outcome is positive.
         /// </summary>
         /// <value>Whether or not the outcome is positive.</value>
         [DataMember(Name="isPositive", EmitDefaultValue=false)]
         public bool? IsPositive { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The context of the outcome.
         /// </summary>
         /// <value>The context of the outcome.</value>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public Context Context { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The pattern of rules defining the filter of the outcome.
         /// </summary>
         /// <value>The pattern of rules defining the filter of the outcome.</value>
         [DataMember(Name="journey", EmitDefaultValue=false)]
         public Journey Journey { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The field from the event indicating the associated value.
         /// </summary>
         /// <value>The field from the event indicating the associated value.</value>
         [DataMember(Name="associatedValueField", EmitDefaultValue=false)]
         public AssociatedValueField AssociatedValueField { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp indicating when the outcome was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the outcome was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp indicating when the outcome was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the outcome was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -232,7 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Outcome {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
@@ -358,43 +295,42 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.IsActive != null)
                     hash = hash * 59 + this.IsActive.GetHashCode();
-                
+
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.IsPositive != null)
                     hash = hash * 59 + this.IsPositive.GetHashCode();
-                
+
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
-                
+
                 if (this.Journey != null)
                     hash = hash * 59 + this.Journey.GetHashCode();
-                
+
                 if (this.AssociatedValueField != null)
                     hash = hash * 59 + this.AssociatedValueField.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
+
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
+
                 return hash;
             }
         }

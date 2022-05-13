@@ -18,105 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActionMap :  IEquatable<ActionMap>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionMap" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ActionMap() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionMap" /> class.
         /// </summary>
@@ -130,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Activation">Type of activation..</param>
         /// <param name="Weight">Weight of the action map with higher number denoting higher weight..</param>
         /// <param name="Action">The action that will be executed if this action map is triggered..</param>
-        /// <param name="ActionMapScheduleGroups">The action map&#39;s associated schedule groups..</param>
+        /// <param name="ActionMapScheduleGroups">The action map's associated schedule groups..</param>
         /// <param name="IgnoreFrequencyCap">Override organization-level frequency cap and always offer web engagements from this action map..</param>
         /// <param name="CreatedDate">Timestamp indicating when the action map was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ModifiedDate">Timestamp indicating when the action map was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -157,169 +64,169 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The version of the action map.
         /// </summary>
         /// <value>The version of the action map.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the action map is active.
         /// </summary>
         /// <value>Whether the action map is active.</value>
         [DataMember(Name="isActive", EmitDefaultValue=false)]
         public bool? IsActive { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Display name of the action map.
         /// </summary>
         /// <value>Display name of the action map.</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Trigger action map if any segment in the list is assigned to a given customer.
         /// </summary>
         /// <value>Trigger action map if any segment in the list is assigned to a given customer.</value>
         [DataMember(Name="triggerWithSegments", EmitDefaultValue=false)]
         public List<string> TriggerWithSegments { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of event conditions that must be satisfied to trigger the action map.
         /// </summary>
         /// <value>List of event conditions that must be satisfied to trigger the action map.</value>
         [DataMember(Name="triggerWithEventConditions", EmitDefaultValue=false)]
         public List<EventCondition> TriggerWithEventConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Probability conditions for outcomes that must be satisfied to trigger the action map.
         /// </summary>
         /// <value>Probability conditions for outcomes that must be satisfied to trigger the action map.</value>
         [DataMember(Name="triggerWithOutcomeProbabilityConditions", EmitDefaultValue=false)]
         public List<OutcomeProbabilityCondition> TriggerWithOutcomeProbabilityConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URL conditions that a page must match for web actions to be displayable.
         /// </summary>
         /// <value>URL conditions that a page must match for web actions to be displayable.</value>
         [DataMember(Name="pageUrlConditions", EmitDefaultValue=false)]
         public List<UrlCondition> PageUrlConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Type of activation.
         /// </summary>
         /// <value>Type of activation.</value>
         [DataMember(Name="activation", EmitDefaultValue=false)]
         public Activation Activation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Weight of the action map with higher number denoting higher weight.
         /// </summary>
         /// <value>Weight of the action map with higher number denoting higher weight.</value>
         [DataMember(Name="weight", EmitDefaultValue=false)]
         public int? Weight { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The action that will be executed if this action map is triggered.
         /// </summary>
         /// <value>The action that will be executed if this action map is triggered.</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionMapAction Action { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The action map&#39;s associated schedule groups.
+        /// The action map's associated schedule groups.
         /// </summary>
-        /// <value>The action map&#39;s associated schedule groups.</value>
+        /// <value>The action map's associated schedule groups.</value>
         [DataMember(Name="actionMapScheduleGroups", EmitDefaultValue=false)]
         public ActionMapScheduleGroups ActionMapScheduleGroups { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Override organization-level frequency cap and always offer web engagements from this action map.
         /// </summary>
         /// <value>Override organization-level frequency cap and always offer web engagements from this action map.</value>
         [DataMember(Name="ignoreFrequencyCap", EmitDefaultValue=false)]
         public bool? IgnoreFrequencyCap { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp indicating when the action map was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the action map was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp indicating when the action map was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the action map was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp at which the action map is scheduled to start firing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp at which the action map is scheduled to start firing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp at which the action map is scheduled to stop firing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp at which the action map is scheduled to stop firing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -328,7 +235,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActionMap {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
@@ -490,61 +397,60 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.IsActive != null)
                     hash = hash * 59 + this.IsActive.GetHashCode();
-                
+
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
-                
+
                 if (this.TriggerWithSegments != null)
                     hash = hash * 59 + this.TriggerWithSegments.GetHashCode();
-                
+
                 if (this.TriggerWithEventConditions != null)
                     hash = hash * 59 + this.TriggerWithEventConditions.GetHashCode();
-                
+
                 if (this.TriggerWithOutcomeProbabilityConditions != null)
                     hash = hash * 59 + this.TriggerWithOutcomeProbabilityConditions.GetHashCode();
-                
+
                 if (this.PageUrlConditions != null)
                     hash = hash * 59 + this.PageUrlConditions.GetHashCode();
-                
+
                 if (this.Activation != null)
                     hash = hash * 59 + this.Activation.GetHashCode();
-                
+
                 if (this.Weight != null)
                     hash = hash * 59 + this.Weight.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.ActionMapScheduleGroups != null)
                     hash = hash * 59 + this.ActionMapScheduleGroups.GetHashCode();
-                
+
                 if (this.IgnoreFrequencyCap != null)
                     hash = hash * 59 + this.IgnoreFrequencyCap.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
+
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 return hash;
             }
         }

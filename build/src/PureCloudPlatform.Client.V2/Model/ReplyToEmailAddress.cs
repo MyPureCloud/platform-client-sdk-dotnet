@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReplyToEmailAddress :  IEquatable<ReplyToEmailAddress>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplyToEmailAddress" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ReplyToEmailAddress() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplyToEmailAddress" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The InboundDomain used for the email address.
         /// </summary>
         /// <value>The InboundDomain used for the email address.</value>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public DomainEntityRef Domain { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The InboundRoute used for the email address.
         /// </summary>
         /// <value>The InboundRoute used for the email address.</value>
         [DataMember(Name="route", EmitDefaultValue=false)]
         public DomainEntityRef Route { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReplyToEmailAddress {\n");
-            
+
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  Route: ").Append(Route).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
+
                 if (this.Route != null)
                     hash = hash * 59 + this.Route.GetHashCode();
-                
+
                 return hash;
             }
         }

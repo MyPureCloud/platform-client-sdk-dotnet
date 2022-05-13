@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Knowledge :  IEquatable<Knowledge>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Knowledge" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// whether or not knowledge base is enabled
         /// </summary>
         /// <value>whether or not knowledge base is enabled</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The knowledge base for messenger
         /// </summary>
         /// <value>The knowledge base for messenger</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
         public AddressableEntityRef KnowledgeBase { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Knowledge {\n");
-            
+
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  KnowledgeBase: ").Append(KnowledgeBase).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.KnowledgeBase != null)
                     hash = hash * 59 + this.KnowledgeBase.GetHashCode();
-                
+
                 return hash;
             }
         }

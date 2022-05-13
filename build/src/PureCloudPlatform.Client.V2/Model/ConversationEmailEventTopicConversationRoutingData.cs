@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationEmailEventTopicConversationRoutingData :  IEquatable<ConversationEmailEventTopicConversationRoutingData>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEmailEventTopicConversationRoutingData" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A UriReference for a resource
         /// </summary>
         /// <value>A UriReference for a resource</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public ConversationEmailEventTopicUriReference Queue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A UriReference for a resource
         /// </summary>
         /// <value>A UriReference for a resource</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public ConversationEmailEventTopicUriReference Language { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The priority of the conversation to use for routing decisions
         /// </summary>
         /// <value>The priority of the conversation to use for routing decisions</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The skills to use for routing decisions
         /// </summary>
         /// <value>The skills to use for routing decisions</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
         public List<ConversationEmailEventTopicUriReference> Skills { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents
         /// </summary>
         /// <value>A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents</value>
         [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
         public List<ConversationEmailEventTopicScoredAgent> ScoredAgents { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationEmailEventTopicConversationRoutingData {\n");
-            
+
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
-                
+
                 if (this.Skills != null)
                     hash = hash * 59 + this.Skills.GetHashCode();
-                
+
                 if (this.ScoredAgents != null)
                     hash = hash * 59 + this.ScoredAgents.GetHashCode();
-                
+
                 return hash;
             }
         }

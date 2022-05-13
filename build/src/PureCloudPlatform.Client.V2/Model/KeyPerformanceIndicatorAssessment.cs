@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KeyPerformanceIndicatorAssessment :  IEquatable<KeyPerformanceIndicatorAssessment>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The overall result of the assessment for a key performance indicator.
         /// </summary>
@@ -68,27 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The overall result of the assessment for a key performance indicator.
         /// </summary>
         /// <value>The overall result of the assessment for a key performance indicator.</value>
         [DataMember(Name="assessmentResult", EmitDefaultValue=false)]
-        public AssessmentResultEnum? AssessmentResult { get; set; }
-        
-        
-        
-        
-    
+        public AssessmentResultEnum? AssessmentResult { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="KeyPerformanceIndicatorAssessment" /> class.
         /// </summary>
@@ -97,27 +77,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Name of the key performance indicator assessed.
         /// </summary>
         /// <value>Name of the key performance indicator assessed.</value>
         [DataMember(Name="kpi", EmitDefaultValue=false)]
         public string Kpi { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Set of checks executed as part of an assessment.
         /// </summary>
         /// <value>Set of checks executed as part of an assessment.</value>
         [DataMember(Name="checks", EmitDefaultValue=false)]
         public List<Check> Checks { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -126,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class KeyPerformanceIndicatorAssessment {\n");
-            
+
             sb.Append("  Kpi: ").Append(Kpi).Append("\n");
             sb.Append("  AssessmentResult: ").Append(AssessmentResult).Append("\n");
             sb.Append("  Checks: ").Append(Checks).Append("\n");
@@ -198,16 +178,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Kpi != null)
                     hash = hash * 59 + this.Kpi.GetHashCode();
-                
+
                 if (this.AssessmentResult != null)
                     hash = hash * 59 + this.AssessmentResult.GetHashCode();
-                
+
                 if (this.Checks != null)
                     hash = hash * 59 + this.Checks.GetHashCode();
-                
+
                 return hash;
             }
         }

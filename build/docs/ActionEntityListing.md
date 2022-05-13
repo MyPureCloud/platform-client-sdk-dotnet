@@ -7,7 +7,7 @@ title: ActionEntityListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;PureCloudPlatform.Client.V2.Model.Action&gt;**](Action.html) |  | [optional] |
+| **Entities** | [**List&lt;PureCloudPlatform.Client.V2.Model.Action&gt;**](PureCloudPlatform.Client.V2.Model.Action.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |

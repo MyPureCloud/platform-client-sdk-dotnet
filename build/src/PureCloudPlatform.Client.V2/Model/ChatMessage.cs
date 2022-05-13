@@ -18,32 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ChatMessage :  IEquatable<ChatMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of the message body (v2 chats only)
         /// </summary>
@@ -101,51 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "MEDIAREQUEST")]
             Mediarequest
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of the message body (v2 chats only)
         /// </summary>
         /// <value>Type of the message body (v2 chats only)</value>
         [DataMember(Name="bodyType", EmitDefaultValue=false)]
         public BodyTypeEnum? BodyType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatMessage" /> class.
         /// </summary>
@@ -178,105 +113,105 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The message body
         /// </summary>
         /// <value>The message body</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public string Body { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The message recipient
         /// </summary>
         /// <value>The message recipient</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public string To { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The message sender
         /// </summary>
         /// <value>The message sender</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public string From { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Utc
         /// </summary>
         [DataMember(Name="utc", EmitDefaultValue=false)]
         public string Utc { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The interaction id (if available)
         /// </summary>
         /// <value>The interaction id (if available)</value>
         [DataMember(Name="chat", EmitDefaultValue=false)]
         public string Chat { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The message id
         /// </summary>
         /// <value>The message id</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Communication of sender (v2 chats only)
         /// </summary>
         /// <value>Communication of sender (v2 chats only)</value>
         [DataMember(Name="senderCommunicationId", EmitDefaultValue=false)]
         public string SenderCommunicationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Participant purpose of sender (v2 chats only)
         /// </summary>
         /// <value>Participant purpose of sender (v2 chats only)</value>
         [DataMember(Name="participantPurpose", EmitDefaultValue=false)]
         public string ParticipantPurpose { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user information for the sender (if available)
         /// </summary>
         /// <value>The user information for the sender (if available)</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public ChatMessageUser User { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -285,7 +220,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ChatMessage {\n");
-            
+
             sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  To: ").Append(To).Append("\n");
@@ -411,43 +346,42 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
-                
+
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
-                
+
                 if (this.Utc != null)
                     hash = hash * 59 + this.Utc.GetHashCode();
-                
+
                 if (this.Chat != null)
                     hash = hash * 59 + this.Chat.GetHashCode();
-                
+
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.BodyType != null)
                     hash = hash * 59 + this.BodyType.GetHashCode();
-                
+
                 if (this.SenderCommunicationId != null)
                     hash = hash * 59 + this.SenderCommunicationId.GetHashCode();
-                
+
                 if (this.ParticipantPurpose != null)
                     hash = hash * 59 + this.ParticipantPurpose.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 return hash;
             }
         }

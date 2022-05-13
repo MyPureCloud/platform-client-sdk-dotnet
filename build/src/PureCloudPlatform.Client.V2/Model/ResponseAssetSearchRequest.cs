@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResponseAssetSearchRequest :  IEquatable<ResponseAssetSearchRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The sort order for results
         /// </summary>
@@ -53,40 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DESC")]
             Desc
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The sort order for results
         /// </summary>
         /// <value>The sort order for results</value>
         [DataMember(Name="sortOrder", EmitDefaultValue=false)]
         public SortOrderEnum? SortOrder { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseAssetSearchRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ResponseAssetSearchRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseAssetSearchRequest" /> class.
         /// </summary>
@@ -105,45 +75,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The number of results per page. Default: 25, Maximum: 100.
         /// </summary>
         /// <value>The number of results per page. Default: 25, Maximum: 100.</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The page of resources you want to retrieve
         /// </summary>
         /// <value>The page of resources you want to retrieve</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The field in the resource that you want to sort the results by
         /// </summary>
         /// <value>The field in the resource that you want to sort the results by</value>
         [DataMember(Name="sortBy", EmitDefaultValue=false)]
         public string SortBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filter the query results.
         /// </summary>
         /// <value>Filter the query results.</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public List<ResponseAssetFilter> Query { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResponseAssetSearchRequest {\n");
-            
+
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
@@ -236,22 +206,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
+
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
+
                 if (this.SortOrder != null)
                     hash = hash * 59 + this.SortOrder.GetHashCode();
-                
+
                 if (this.SortBy != null)
                     hash = hash * 59 + this.SortBy.GetHashCode();
-                
+
                 if (this.Query != null)
                     hash = hash * 59 + this.Query.GetHashCode();
-                
+
                 return hash;
             }
         }

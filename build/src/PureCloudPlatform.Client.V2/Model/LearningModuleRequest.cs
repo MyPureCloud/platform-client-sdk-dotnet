@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningModuleRequest :  IEquatable<LearningModuleRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type for the learning module
         /// </summary>
@@ -65,44 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Assessment")]
             Assessment
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type for the learning module
         /// </summary>
         /// <value>The type for the learning module</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModuleRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LearningModuleRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModuleRequest" /> class.
         /// </summary>
@@ -125,63 +85,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of learning module
         /// </summary>
         /// <value>The name of learning module</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of learning module
         /// </summary>
         /// <value>The description of learning module</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The completion time of learning module in days
         /// </summary>
         /// <value>The completion time of learning module in days</value>
         [DataMember(Name="completionTimeInDays", EmitDefaultValue=false)]
         public int? CompletionTimeInDays { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of inform steps in a learning module
         /// </summary>
         /// <value>The list of inform steps in a learning module</value>
         [DataMember(Name="informSteps", EmitDefaultValue=false)]
         public List<LearningModuleInformStepRequest> InformSteps { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The assessment form for learning module
         /// </summary>
         /// <value>The assessment form for learning module</value>
         [DataMember(Name="assessmentForm", EmitDefaultValue=false)]
         public AssessmentForm AssessmentForm { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The cover art for the learning module
         /// </summary>
         /// <value>The cover art for the learning module</value>
         [DataMember(Name="coverArt", EmitDefaultValue=false)]
         public LearningModuleCoverArtRequest CoverArt { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -190,7 +150,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningModuleRequest {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  CompletionTimeInDays: ").Append(CompletionTimeInDays).Append("\n");
@@ -286,28 +246,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.CompletionTimeInDays != null)
                     hash = hash * 59 + this.CompletionTimeInDays.GetHashCode();
-                
+
                 if (this.InformSteps != null)
                     hash = hash * 59 + this.InformSteps.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.AssessmentForm != null)
                     hash = hash * 59 + this.AssessmentForm.GetHashCode();
-                
+
                 if (this.CoverArt != null)
                     hash = hash * 59 + this.CoverArt.GetHashCode();
-                
+
                 return hash;
             }
         }

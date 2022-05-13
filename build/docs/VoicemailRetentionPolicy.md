@@ -8,7 +8,7 @@ title: VoicemailRetentionPolicy
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **VoicemailRetentionPolicyType** | **string** | The retention policy type | [optional] |
-| **NumberOfDays** | **int?** | If retentionPolicyType == RETAIN_WITH_TTL, then this value represents the number of days for the TTL | [optional] |
+| **NumberOfDays** | **int?** | If retentionPolicyType &#x3D;&#x3D; RETAIN_WITH_TTL, then this value represents the number of days for the TTL | [optional] |
 {: class="table table-striped"}
 
 

@@ -18,59 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RecordingEmailMessage :  IEquatable<RecordingEmailMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingEmailMessage" /> class.
         /// </summary>
@@ -99,88 +46,88 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets HtmlBody
         /// </summary>
         [DataMember(Name="htmlBody", EmitDefaultValue=false)]
         public string HtmlBody { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TextBody
         /// </summary>
         [DataMember(Name="textBody", EmitDefaultValue=false)]
         public string TextBody { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets To
         /// </summary>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public List<EmailAddress> To { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Cc
         /// </summary>
         [DataMember(Name="cc", EmitDefaultValue=false)]
         public List<EmailAddress> Cc { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Bcc
         /// </summary>
         [DataMember(Name="bcc", EmitDefaultValue=false)]
         public List<EmailAddress> Bcc { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets From
         /// </summary>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public EmailAddress From { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Subject
         /// </summary>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Attachments
         /// </summary>
         [DataMember(Name="attachments", EmitDefaultValue=false)]
         public List<EmailAttachment> Attachments { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -189,7 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RecordingEmailMessage {\n");
-            
+
             sb.Append("  HtmlBody: ").Append(HtmlBody).Append("\n");
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -303,37 +250,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.HtmlBody != null)
                     hash = hash * 59 + this.HtmlBody.GetHashCode();
-                
+
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
-                
+
                 if (this.Cc != null)
                     hash = hash * 59 + this.Cc.GetHashCode();
-                
+
                 if (this.Bcc != null)
                     hash = hash * 59 + this.Bcc.GetHashCode();
-                
+
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
-                
+
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
-                
+
                 if (this.Attachments != null)
                     hash = hash * 59 + this.Attachments.GetHashCode();
-                
+
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
-                
+
                 return hash;
             }
         }

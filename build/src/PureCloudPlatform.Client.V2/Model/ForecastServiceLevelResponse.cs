@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ForecastServiceLevelResponse :  IEquatable<ForecastServiceLevelResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ForecastServiceLevelResponse" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The percent of calls to answer in the number of seconds defined
         /// </summary>
         /// <value>The percent of calls to answer in the number of seconds defined</value>
         [DataMember(Name="percent", EmitDefaultValue=false)]
         public int? Percent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of seconds to define for the percent of calls to be answered
         /// </summary>
         /// <value>The number of seconds to define for the percent of calls to be answered</value>
         [DataMember(Name="seconds", EmitDefaultValue=false)]
         public int? Seconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ForecastServiceLevelResponse {\n");
-            
+
             sb.Append("  Percent: ").Append(Percent).Append("\n");
             sb.Append("  Seconds: ").Append(Seconds).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Percent != null)
                     hash = hash * 59 + this.Percent.GetHashCode();
-                
+
                 if (this.Seconds != null)
                     hash = hash * 59 + this.Seconds.GetHashCode();
-                
+
                 return hash;
             }
         }

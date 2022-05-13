@@ -8,14 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
-    
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface ITelephonyApi : IApiAccessor
     {
         #region Synchronous Operations
-        
+
         /// <summary>
         /// Fetch SIP metadata
         /// </summary>
@@ -47,7 +47,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Unique identification of the conversation (optional)</param>
         /// <returns>ApiResponse of SipSearchResult</returns>
         ApiResponse<SipSearchResult> GetTelephonySiptracesWithHttpInfo (DateTime? dateStart, DateTime? dateEnd, string callId = null, string toUser = null, string fromUser = null, string conversationId = null);
-        
+
         /// <summary>
         /// Get signed S3 URL for a pcap download
         /// </summary>
@@ -69,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="downloadId">unique id for the downloaded file in S3</param>
         /// <returns>ApiResponse of SignedUrlResponse</returns>
         ApiResponse<SignedUrlResponse> GetTelephonySiptracesDownloadDownloadIdWithHttpInfo (string downloadId);
-        
+
         /// <summary>
         /// Request a download of a pcap file to S3
         /// </summary>
@@ -91,11 +91,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sIPSearchPublicRequest"></param>
         /// <returns>ApiResponse of SipDownloadResponse</returns>
         ApiResponse<SipDownloadResponse> PostTelephonySiptracesDownloadWithHttpInfo (SIPSearchPublicRequest sIPSearchPublicRequest);
-        
+
         #endregion Synchronous Operations
-        
+
         #region Asynchronous Operations
-        
+
         /// <summary>
         /// Fetch SIP metadata
         /// </summary>
@@ -127,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Unique identification of the conversation (optional)</param>
         /// <returns>Task of ApiResponse (SipSearchResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<SipSearchResult>> GetTelephonySiptracesAsyncWithHttpInfo (DateTime? dateStart, DateTime? dateEnd, string callId = null, string toUser = null, string fromUser = null, string conversationId = null);
-        
+
         /// <summary>
         /// Get signed S3 URL for a pcap download
         /// </summary>
@@ -149,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="downloadId">unique id for the downloaded file in S3</param>
         /// <returns>Task of ApiResponse (SignedUrlResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SignedUrlResponse>> GetTelephonySiptracesDownloadDownloadIdAsyncWithHttpInfo (string downloadId);
-        
+
         /// <summary>
         /// Request a download of a pcap file to S3
         /// </summary>
@@ -171,9 +171,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sIPSearchPublicRequest"></param>
         /// <returns>Task of ApiResponse (SipDownloadResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SipDownloadResponse>> PostTelephonySiptracesDownloadAsyncWithHttpInfo (SIPSearchPublicRequest sIPSearchPublicRequest);
-        
+
         #endregion Asynchronous Operations
-        
+
     }
 
     /// <summary>
@@ -263,7 +263,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
-        
+
         /// <summary>
         /// Fetch SIP metadata Fetch SIP metadata that matches a given parameter. If exactMatch is passed as a parameter only sip records that have exactly that value will be returned. For example, some records contain conversationId but not all relevant records for that call may contain the conversationId so only a partial view of the call will be reflected
         /// </summary>
@@ -311,17 +311,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -347,7 +346,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -376,7 +375,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Fetch SIP metadata Fetch SIP metadata that matches a given parameter. If exactMatch is passed as a parameter only sip records that have exactly that value will be returned. For example, some records contain conversationId but not all relevant records for that call may contain the conversationId so only a partial view of the call will be reflected
         /// </summary>
@@ -427,16 +426,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -463,7 +461,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -492,8 +490,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get signed S3 URL for a pcap download 
         /// </summary>
@@ -528,17 +526,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -559,7 +556,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -588,7 +585,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get signed S3 URL for a pcap download 
         /// </summary>
@@ -625,16 +622,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -656,7 +652,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -685,8 +681,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Request a download of a pcap file to S3 
         /// </summary>
@@ -721,7 +717,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -729,9 +724,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -754,9 +750,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(sIPSearchPublicRequest); // http body (model) parameter
             else
                 localVarPostBody = sIPSearchPublicRequest; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -785,7 +781,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Request a download of a pcap file to S3 
         /// </summary>
@@ -822,7 +818,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -830,8 +825,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -855,9 +851,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(sIPSearchPublicRequest); // http body (model) parameter
             else
                 localVarPostBody = sIPSearchPublicRequest; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -886,8 +882,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
     }
-    
+
 }

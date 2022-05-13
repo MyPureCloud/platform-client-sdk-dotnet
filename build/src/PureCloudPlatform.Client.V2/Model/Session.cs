@@ -18,98 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Session :  IEquatable<Session>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The original direction of the conversation.
         /// </summary>
@@ -143,13 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Outbound")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Disconnect reason for the last user connected to the conversation.
         /// </summary>
@@ -267,10 +168,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Uncallable")]
             Uncallable
         }
-        
-        
-        
-        
         /// <summary>
         /// Last ACD outcome for the conversation.
         /// </summary>
@@ -310,140 +207,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FlowOut")]
             Flowout
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The original direction of the conversation.
         /// </summary>
         /// <value>The original direction of the conversation.</value>
         [DataMember(Name="originatingDirection", EmitDefaultValue=false)]
         public OriginatingDirectionEnum? OriginatingDirection { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Disconnect reason for the last user connected to the conversation.
         /// </summary>
         /// <value>Disconnect reason for the last user connected to the conversation.</value>
         [DataMember(Name="lastUserDisconnectType", EmitDefaultValue=false)]
         public LastUserDisconnectTypeEnum? LastUserDisconnectType { get; set; }
-        
-        
-        
         /// <summary>
         /// Last ACD outcome for the conversation.
         /// </summary>
         /// <value>Last ACD outcome for the conversation.</value>
         [DataMember(Name="lastAcdOutcome", EmitDefaultValue=false)]
         public LastAcdOutcomeEnum? LastAcdOutcome { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Session" /> class.
         /// </summary>
@@ -455,14 +236,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShortId">Shortened numeric identifier of 4-6 digits..</param>
         /// <param name="OutcomeAchievements">List of the outcome achievements by the customer in this session..</param>
         /// <param name="SegmentAssignments">List of the segment assignments to the customer in this session..</param>
-        /// <param name="Attributes">Attributes projected from the session&#39;s event stream..</param>
-        /// <param name="AttributeLists">List-type attributes projected from the session&#39;s event stream..</param>
-        /// <param name="Browser">Customer&#39;s browser..</param>
-        /// <param name="Device">Customer&#39;s device..</param>
-        /// <param name="Geolocation">Customer&#39;s geolocation..</param>
-        /// <param name="IpAddress">Customer&#39;s IP address..</param>
-        /// <param name="IpOrganization">Customer&#39;s IP-based organization or ISP name..</param>
-        /// <param name="LastPage">The webpage where the customer&#39;s last web interaction occurred..</param>
+        /// <param name="Attributes">Attributes projected from the session's event stream..</param>
+        /// <param name="AttributeLists">List-type attributes projected from the session's event stream..</param>
+        /// <param name="Browser">Customer's browser..</param>
+        /// <param name="Device">Customer's device..</param>
+        /// <param name="Geolocation">Customer's geolocation..</param>
+        /// <param name="IpAddress">Customer's IP address..</param>
+        /// <param name="IpOrganization">Customer's IP-based organization or ISP name..</param>
+        /// <param name="LastPage">The webpage where the customer's last web interaction occurred..</param>
         /// <param name="MktCampaign">Marketing / traffic source information..</param>
         /// <param name="Referrer">Identifies the page URL that originally generated the request for the current page being viewed..</param>
         /// <param name="SearchTerms">Search terms associated with the session..</param>
@@ -528,364 +309,364 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Primary identifier of the customer in the source where the events for the session originate from.
         /// </summary>
         /// <value>Primary identifier of the customer in the source where the events for the session originate from.</value>
         [DataMember(Name="customerId", EmitDefaultValue=false)]
         public string CustomerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Type of source customer identifier (e.g. cookie, email, phone).
         /// </summary>
         /// <value>Type of source customer identifier (e.g. cookie, email, phone).</value>
         [DataMember(Name="customerIdType", EmitDefaultValue=false)]
         public string CustomerIdType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Session types indicate the type or category of sessions (e.g. web, ticket, delivery, atm).
         /// </summary>
         /// <value>Session types indicate the type or category of sessions (e.g. web, ticket, delivery, atm).</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier in the external system where the events for the session originate from.
         /// </summary>
         /// <value>Unique identifier in the external system where the events for the session originate from.</value>
         [DataMember(Name="externalId", EmitDefaultValue=false)]
         public string ExternalId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A URL that identifies an external system-of-record resource that may have more detailed information on the session.
         /// </summary>
         /// <value>A URL that identifies an external system-of-record resource that may have more detailed information on the session.</value>
         [DataMember(Name="externalUrl", EmitDefaultValue=false)]
         public string ExternalUrl { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Shortened numeric identifier of 4-6 digits.
         /// </summary>
         /// <value>Shortened numeric identifier of 4-6 digits.</value>
         [DataMember(Name="shortId", EmitDefaultValue=false)]
         public string ShortId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of the outcome achievements by the customer in this session.
         /// </summary>
         /// <value>List of the outcome achievements by the customer in this session.</value>
         [DataMember(Name="outcomeAchievements", EmitDefaultValue=false)]
         public List<OutcomeAchievement> OutcomeAchievements { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of the segment assignments to the customer in this session.
         /// </summary>
         /// <value>List of the segment assignments to the customer in this session.</value>
         [DataMember(Name="segmentAssignments", EmitDefaultValue=false)]
         public List<SessionSegmentAssignment> SegmentAssignments { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Attributes projected from the session&#39;s event stream.
+        /// Attributes projected from the session's event stream.
         /// </summary>
-        /// <value>Attributes projected from the session&#39;s event stream.</value>
+        /// <value>Attributes projected from the session's event stream.</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, CustomEventAttribute> Attributes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// List-type attributes projected from the session&#39;s event stream.
+        /// List-type attributes projected from the session's event stream.
         /// </summary>
-        /// <value>List-type attributes projected from the session&#39;s event stream.</value>
+        /// <value>List-type attributes projected from the session's event stream.</value>
         [DataMember(Name="attributeLists", EmitDefaultValue=false)]
         public Dictionary<string, CustomEventAttributeList> AttributeLists { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Customer&#39;s browser.
+        /// Customer's browser.
         /// </summary>
-        /// <value>Customer&#39;s browser.</value>
+        /// <value>Customer's browser.</value>
         [DataMember(Name="browser", EmitDefaultValue=false)]
         public Browser Browser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Customer&#39;s device.
+        /// Customer's device.
         /// </summary>
-        /// <value>Customer&#39;s device.</value>
+        /// <value>Customer's device.</value>
         [DataMember(Name="device", EmitDefaultValue=false)]
         public Device Device { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Customer&#39;s geolocation.
+        /// Customer's geolocation.
         /// </summary>
-        /// <value>Customer&#39;s geolocation.</value>
+        /// <value>Customer's geolocation.</value>
         [DataMember(Name="geolocation", EmitDefaultValue=false)]
         public JourneyGeolocation Geolocation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Customer&#39;s IP address.
+        /// Customer's IP address.
         /// </summary>
-        /// <value>Customer&#39;s IP address.</value>
+        /// <value>Customer's IP address.</value>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Customer&#39;s IP-based organization or ISP name.
+        /// Customer's IP-based organization or ISP name.
         /// </summary>
-        /// <value>Customer&#39;s IP-based organization or ISP name.</value>
+        /// <value>Customer's IP-based organization or ISP name.</value>
         [DataMember(Name="ipOrganization", EmitDefaultValue=false)]
         public string IpOrganization { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The webpage where the customer&#39;s last web interaction occurred.
+        /// The webpage where the customer's last web interaction occurred.
         /// </summary>
-        /// <value>The webpage where the customer&#39;s last web interaction occurred.</value>
+        /// <value>The webpage where the customer's last web interaction occurred.</value>
         [DataMember(Name="lastPage", EmitDefaultValue=false)]
         public JourneyPage LastPage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Marketing / traffic source information.
         /// </summary>
         /// <value>Marketing / traffic source information.</value>
         [DataMember(Name="mktCampaign", EmitDefaultValue=false)]
         public JourneyCampaign MktCampaign { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Identifies the page URL that originally generated the request for the current page being viewed.
         /// </summary>
         /// <value>Identifies the page URL that originally generated the request for the current page being viewed.</value>
         [DataMember(Name="referrer", EmitDefaultValue=false)]
         public Referrer Referrer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Search terms associated with the session.
         /// </summary>
         /// <value>Search terms associated with the session.</value>
         [DataMember(Name="searchTerms", EmitDefaultValue=false)]
         public List<string> SearchTerms { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// String identifying the user agent.
         /// </summary>
         /// <value>String identifying the user agent.</value>
         [DataMember(Name="userAgentString", EmitDefaultValue=false)]
         public string UserAgentString { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates how long the session has been active (valid for an individual device).
         /// </summary>
         /// <value>Indicates how long the session has been active (valid for an individual device).</value>
         [DataMember(Name="durationInSeconds", EmitDefaultValue=false)]
         public int? DurationInSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The count of all events performed during the session.
         /// </summary>
         /// <value>The count of all events performed during the session.</value>
         [DataMember(Name="eventCount", EmitDefaultValue=false)]
         public int? EventCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The count of all pageviews performed during the session.
         /// </summary>
         /// <value>The count of all pageviews performed during the session.</value>
         [DataMember(Name="pageviewCount", EmitDefaultValue=false)]
         public int? PageviewCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The count of all screenviews performed during the session.
         /// </summary>
         /// <value>The count of all screenviews performed during the session.</value>
         [DataMember(Name="screenviewCount", EmitDefaultValue=false)]
         public int? ScreenviewCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Information about the most recent event in this session.
         /// </summary>
         /// <value>Information about the most recent event in this session.</value>
         [DataMember(Name="lastEvent", EmitDefaultValue=false)]
         public SessionLastEvent LastEvent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The last queue connected to this session.
         /// </summary>
         /// <value>The last queue connected to this session.</value>
         [DataMember(Name="lastConnectedQueue", EmitDefaultValue=false)]
         public ConnectedQueue LastConnectedQueue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The last user connected to this session.
         /// </summary>
         /// <value>The last user connected to this session.</value>
         [DataMember(Name="lastConnectedUser", EmitDefaultValue=false)]
         public ConnectedUser LastConnectedUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The last user disposition connected to this session.
         /// </summary>
         /// <value>The last user disposition connected to this session.</value>
         [DataMember(Name="lastUserDisposition", EmitDefaultValue=false)]
         public ConversationUserDisposition LastUserDisposition { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Represents the channels used for this conversation.
         /// </summary>
         /// <value>Represents the channels used for this conversation.</value>
         [DataMember(Name="conversationChannels", EmitDefaultValue=false)]
         public List<ConversationChannel> ConversationChannels { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The subject for the conversation, for example an email subject.
         /// </summary>
         /// <value>The subject for the conversation, for example an email subject.</value>
         [DataMember(Name="conversationSubject", EmitDefaultValue=false)]
         public string ConversationSubject { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Indicates whether or not the session is authenticated.
         /// </summary>
         /// <value>Indicates whether or not the session is authenticated.</value>
         [DataMember(Name="authenticated", EmitDefaultValue=false)]
         public bool? Authenticated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp indicating when the session was ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the session was ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="endedDate", EmitDefaultValue=false)]
         public DateTime? EndedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The external contact associated with this session.
         /// </summary>
         /// <value>The external contact associated with this session.</value>
         [DataMember(Name="externalContact", EmitDefaultValue=false)]
         public AddressableEntityRef ExternalContact { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp indicating when the visitor should be considered as away. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the visitor should be considered as away. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="awayDate", EmitDefaultValue=false)]
         public DateTime? AwayDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp indicating when the visitor should be considered as idle. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the visitor should be considered as idle. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="idleDate", EmitDefaultValue=false)]
         public DateTime? IdleDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The conversation for this session.
         /// </summary>
         /// <value>The conversation for this session.</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public AddressableEntityRef Conversation { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -894,7 +675,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Session {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  CustomerId: ").Append(CustomerId).Append("\n");
             sb.Append("  CustomerIdType: ").Append(CustomerIdType).Append("\n");
@@ -1200,133 +981,132 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.CustomerId != null)
                     hash = hash * 59 + this.CustomerId.GetHashCode();
-                
+
                 if (this.CustomerIdType != null)
                     hash = hash * 59 + this.CustomerIdType.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.ExternalId != null)
                     hash = hash * 59 + this.ExternalId.GetHashCode();
-                
+
                 if (this.ExternalUrl != null)
                     hash = hash * 59 + this.ExternalUrl.GetHashCode();
-                
+
                 if (this.ShortId != null)
                     hash = hash * 59 + this.ShortId.GetHashCode();
-                
+
                 if (this.OutcomeAchievements != null)
                     hash = hash * 59 + this.OutcomeAchievements.GetHashCode();
-                
+
                 if (this.SegmentAssignments != null)
                     hash = hash * 59 + this.SegmentAssignments.GetHashCode();
-                
+
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
+
                 if (this.AttributeLists != null)
                     hash = hash * 59 + this.AttributeLists.GetHashCode();
-                
+
                 if (this.Browser != null)
                     hash = hash * 59 + this.Browser.GetHashCode();
-                
+
                 if (this.Device != null)
                     hash = hash * 59 + this.Device.GetHashCode();
-                
+
                 if (this.Geolocation != null)
                     hash = hash * 59 + this.Geolocation.GetHashCode();
-                
+
                 if (this.IpAddress != null)
                     hash = hash * 59 + this.IpAddress.GetHashCode();
-                
+
                 if (this.IpOrganization != null)
                     hash = hash * 59 + this.IpOrganization.GetHashCode();
-                
+
                 if (this.LastPage != null)
                     hash = hash * 59 + this.LastPage.GetHashCode();
-                
+
                 if (this.MktCampaign != null)
                     hash = hash * 59 + this.MktCampaign.GetHashCode();
-                
+
                 if (this.Referrer != null)
                     hash = hash * 59 + this.Referrer.GetHashCode();
-                
+
                 if (this.SearchTerms != null)
                     hash = hash * 59 + this.SearchTerms.GetHashCode();
-                
+
                 if (this.UserAgentString != null)
                     hash = hash * 59 + this.UserAgentString.GetHashCode();
-                
+
                 if (this.DurationInSeconds != null)
                     hash = hash * 59 + this.DurationInSeconds.GetHashCode();
-                
+
                 if (this.EventCount != null)
                     hash = hash * 59 + this.EventCount.GetHashCode();
-                
+
                 if (this.PageviewCount != null)
                     hash = hash * 59 + this.PageviewCount.GetHashCode();
-                
+
                 if (this.ScreenviewCount != null)
                     hash = hash * 59 + this.ScreenviewCount.GetHashCode();
-                
+
                 if (this.LastEvent != null)
                     hash = hash * 59 + this.LastEvent.GetHashCode();
-                
+
                 if (this.LastConnectedQueue != null)
                     hash = hash * 59 + this.LastConnectedQueue.GetHashCode();
-                
+
                 if (this.LastConnectedUser != null)
                     hash = hash * 59 + this.LastConnectedUser.GetHashCode();
-                
+
                 if (this.LastUserDisposition != null)
                     hash = hash * 59 + this.LastUserDisposition.GetHashCode();
-                
+
                 if (this.ConversationChannels != null)
                     hash = hash * 59 + this.ConversationChannels.GetHashCode();
-                
+
                 if (this.OriginatingDirection != null)
                     hash = hash * 59 + this.OriginatingDirection.GetHashCode();
-                
+
                 if (this.ConversationSubject != null)
                     hash = hash * 59 + this.ConversationSubject.GetHashCode();
-                
+
                 if (this.LastUserDisconnectType != null)
                     hash = hash * 59 + this.LastUserDisconnectType.GetHashCode();
-                
+
                 if (this.LastAcdOutcome != null)
                     hash = hash * 59 + this.LastAcdOutcome.GetHashCode();
-                
+
                 if (this.Authenticated != null)
                     hash = hash * 59 + this.Authenticated.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
+
                 if (this.EndedDate != null)
                     hash = hash * 59 + this.EndedDate.GetHashCode();
-                
+
                 if (this.ExternalContact != null)
                     hash = hash * 59 + this.ExternalContact.GetHashCode();
-                
+
                 if (this.AwayDate != null)
                     hash = hash * 59 + this.AwayDate.GetHashCode();
-                
+
                 if (this.IdleDate != null)
                     hash = hash * 59 + this.IdleDate.GetHashCode();
-                
+
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
+
                 return hash;
             }
         }

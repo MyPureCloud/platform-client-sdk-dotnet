@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WeekScheduleResponse :  IEquatable<WeekScheduleResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WeekScheduleResponse" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The result of the request. The value will be null if response is large
         /// </summary>
         /// <value>The result of the request. The value will be null if response is large</value>
         [DataMember(Name="result", EmitDefaultValue=false)]
         public WeekSchedule Result { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The url to fetch the result for large responses. The value is null if result contains the data
         /// </summary>
         /// <value>The url to fetch the result for large responses. The value is null if result contains the data</value>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WeekScheduleResponse {\n");
-            
+
             sb.Append("  Result: ").Append(Result).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Result != null)
                     hash = hash * 59 + this.Result.GetHashCode();
-                
+
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
-                
+
                 return hash;
             }
         }

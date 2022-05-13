@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactColumnToDataActionFieldMapping :  IEquatable<ContactColumnToDataActionFieldMapping>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactColumnToDataActionFieldMapping" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ContactColumnToDataActionFieldMapping() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactColumnToDataActionFieldMapping" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of a contact column whose data will be passed to the data action
         /// </summary>
         /// <value>The name of a contact column whose data will be passed to the data action</value>
         [DataMember(Name="contactColumnName", EmitDefaultValue=false)]
         public string ContactColumnName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of an input field from the data action that the contact column data will be passed to
         /// </summary>
         /// <value>The name of an input field from the data action that the contact column data will be passed to</value>
         [DataMember(Name="dataActionField", EmitDefaultValue=false)]
         public string DataActionField { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactColumnToDataActionFieldMapping {\n");
-            
+
             sb.Append("  ContactColumnName: ").Append(ContactColumnName).Append("\n");
             sb.Append("  DataActionField: ").Append(DataActionField).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContactColumnName != null)
                     hash = hash * 59 + this.ContactColumnName.GetHashCode();
-                
+
                 if (this.DataActionField != null)
                     hash = hash * 59 + this.DataActionField.GetHashCode();
-                
+
                 return hash;
             }
         }

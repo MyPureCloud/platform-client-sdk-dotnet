@@ -18,57 +18,21 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeMetricsTopicEdgeMetrics :  IEquatable<EdgeMetricsTopicEdgeMetrics>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsTopicEdgeMetrics" /> class.
         /// </summary>
         /// <param name="Edge">Edge.</param>
+        /// <param name="EventTime">EventTime.</param>
         /// <param name="UpTimeMsec">UpTimeMsec.</param>
         /// <param name="Processors">Processors.</param>
         /// <param name="Memory">Memory.</param>
         /// <param name="Disks">Disks.</param>
         /// <param name="Subsystems">Subsystems.</param>
         /// <param name="Networks">Networks.</param>
-        public EdgeMetricsTopicEdgeMetrics(EdgeMetricsTopicUriReference Edge = null, int? UpTimeMsec = null, List<EdgeMetricsTopicEdgeMetricProcessor> Processors = null, List<EdgeMetricsTopicEdgeMetricMemory> Memory = null, List<EdgeMetricsTopicEdgeMetricDisk> Disks = null, List<EdgeMetricsTopicEdgeMetricSubsystem> Subsystems = null, List<EdgeMetricsTopicEdgeMetricNetworks> Networks = null)
+        public EdgeMetricsTopicEdgeMetrics(EdgeMetricsTopicUriReference Edge = null, DateTime? EventTime = null, int? UpTimeMsec = null, List<EdgeMetricsTopicEdgeMetricProcessor> Processors = null, List<EdgeMetricsTopicEdgeMetricMemory> Memory = null, List<EdgeMetricsTopicEdgeMetricDisk> Disks = null, List<EdgeMetricsTopicEdgeMetricSubsystem> Subsystems = null, List<EdgeMetricsTopicEdgeMetricNetworks> Networks = null)
         {
             this.Edge = Edge;
+            this.EventTime = EventTime;
             this.UpTimeMsec = UpTimeMsec;
             this.Processors = Processors;
             this.Memory = Memory;
@@ -78,63 +42,71 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Edge
         /// </summary>
         [DataMember(Name="edge", EmitDefaultValue=false)]
         public EdgeMetricsTopicUriReference Edge { get; set; }
-        
-        
-        
+
+
+
+        /// <summary>
+        /// Gets or Sets EventTime
+        /// </summary>
+        [DataMember(Name="eventTime", EmitDefaultValue=false)]
+        public DateTime? EventTime { get; set; }
+
+
+
         /// <summary>
         /// Gets or Sets UpTimeMsec
         /// </summary>
         [DataMember(Name="upTimeMsec", EmitDefaultValue=false)]
         public int? UpTimeMsec { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Processors
         /// </summary>
         [DataMember(Name="processors", EmitDefaultValue=false)]
         public List<EdgeMetricsTopicEdgeMetricProcessor> Processors { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Memory
         /// </summary>
         [DataMember(Name="memory", EmitDefaultValue=false)]
         public List<EdgeMetricsTopicEdgeMetricMemory> Memory { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Disks
         /// </summary>
         [DataMember(Name="disks", EmitDefaultValue=false)]
         public List<EdgeMetricsTopicEdgeMetricDisk> Disks { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Subsystems
         /// </summary>
         [DataMember(Name="subsystems", EmitDefaultValue=false)]
         public List<EdgeMetricsTopicEdgeMetricSubsystem> Subsystems { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Networks
         /// </summary>
         [DataMember(Name="networks", EmitDefaultValue=false)]
         public List<EdgeMetricsTopicEdgeMetricNetworks> Networks { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -143,8 +115,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeMetricsTopicEdgeMetrics {\n");
-            
+
             sb.Append("  Edge: ").Append(Edge).Append("\n");
+            sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  UpTimeMsec: ").Append(UpTimeMsec).Append("\n");
             sb.Append("  Processors: ").Append(Processors).Append("\n");
             sb.Append("  Memory: ").Append(Memory).Append("\n");
@@ -197,6 +170,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Edge.Equals(other.Edge)
                 ) &&
                 (
+                    this.EventTime == other.EventTime ||
+                    this.EventTime != null &&
+                    this.EventTime.Equals(other.EventTime)
+                ) &&
+                (
                     this.UpTimeMsec == other.UpTimeMsec ||
                     this.UpTimeMsec != null &&
                     this.UpTimeMsec.Equals(other.UpTimeMsec)
@@ -239,28 +217,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Edge != null)
                     hash = hash * 59 + this.Edge.GetHashCode();
-                
+
+                if (this.EventTime != null)
+                    hash = hash * 59 + this.EventTime.GetHashCode();
+
                 if (this.UpTimeMsec != null)
                     hash = hash * 59 + this.UpTimeMsec.GetHashCode();
-                
+
                 if (this.Processors != null)
                     hash = hash * 59 + this.Processors.GetHashCode();
-                
+
                 if (this.Memory != null)
                     hash = hash * 59 + this.Memory.GetHashCode();
-                
+
                 if (this.Disks != null)
                     hash = hash * 59 + this.Disks.GetHashCode();
-                
+
                 if (this.Subsystems != null)
                     hash = hash * 59 + this.Subsystems.GetHashCode();
-                
+
                 if (this.Networks != null)
                     hash = hash * 59 + this.Networks.GetHashCode();
-                
+
                 return hash;
             }
         }

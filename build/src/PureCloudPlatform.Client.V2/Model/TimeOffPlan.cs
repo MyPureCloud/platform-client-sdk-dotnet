@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TimeOffPlan :  IEquatable<TimeOffPlan>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Auto approval rule for this time off plan
         /// </summary>
@@ -65,48 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CheckLimits")]
             Checklimits
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Auto approval rule for this time off plan
         /// </summary>
         /// <value>Auto approval rule for this time off plan</value>
         [DataMember(Name="autoApprovalRule", EmitDefaultValue=false)]
         public AutoApprovalRuleEnum? AutoApprovalRule { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffPlan" /> class.
         /// </summary>
@@ -129,81 +79,81 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of this time off plan.
         /// </summary>
         /// <value>The name of this time off plan.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The set of activity code IDs associated with this time off plan.
         /// </summary>
         /// <value>The set of activity code IDs associated with this time off plan.</value>
         [DataMember(Name="activityCodeIds", EmitDefaultValue=false)]
         public List<string> ActivityCodeIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The set of time off limit IDs associated with this time off plan.
         /// </summary>
         /// <value>The set of time off limit IDs associated with this time off plan.</value>
         [DataMember(Name="timeOffLimits", EmitDefaultValue=false)]
         public List<TimeOffLimitReference> TimeOffLimits { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The number of days before the time off request start date for when the request will be expired from the waitlist.
         /// </summary>
         /// <value>The number of days before the time off request start date for when the request will be expired from the waitlist.</value>
         [DataMember(Name="daysBeforeStartToExpireFromWaitlist", EmitDefaultValue=false)]
         public int? DaysBeforeStartToExpireFromWaitlist { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this time off plan is currently being used by agents.
         /// </summary>
         /// <value>Whether this time off plan is currently being used by agents.</value>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version metadata for the time off plan.
         /// </summary>
         /// <value>Version metadata for the time off plan.</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -212,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimeOffPlan {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ActivityCodeIds: ").Append(ActivityCodeIds).Append("\n");
@@ -320,34 +270,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ActivityCodeIds != null)
                     hash = hash * 59 + this.ActivityCodeIds.GetHashCode();
-                
+
                 if (this.TimeOffLimits != null)
                     hash = hash * 59 + this.TimeOffLimits.GetHashCode();
-                
+
                 if (this.AutoApprovalRule != null)
                     hash = hash * 59 + this.AutoApprovalRule.GetHashCode();
-                
+
                 if (this.DaysBeforeStartToExpireFromWaitlist != null)
                     hash = hash * 59 + this.DaysBeforeStartToExpireFromWaitlist.GetHashCode();
-                
+
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

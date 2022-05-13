@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportedLanguage :  IEquatable<SupportedLanguage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportedLanguage" /> class.
         /// </summary>
@@ -39,25 +26,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Architect supported language tag, e.g. en-us, es-us
         /// </summary>
         /// <value>Architect supported language tag, e.g. en-us, es-us</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not this language is the default language
         /// </summary>
         /// <value>Whether or not this language is the default language</value>
         [DataMember(Name="isDefault", EmitDefaultValue=false)]
         public bool? IsDefault { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SupportedLanguage {\n");
-            
+
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  IsDefault: ").Append(IsDefault).Append("\n");
             sb.Append("}\n");
@@ -132,13 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.IsDefault != null)
                     hash = hash * 59 + this.IsDefault.GetHashCode();
-                
+
                 return hash;
             }
         }

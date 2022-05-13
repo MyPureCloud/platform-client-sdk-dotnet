@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WhatsAppIntegrationUpdateRequest :  IEquatable<WhatsAppIntegrationUpdateRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The action used to activate and then confirm a WhatsApp Integration.
         /// </summary>
@@ -59,10 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Confirm")]
             Confirm
         }
-        
-        
-        
-        
         /// <summary>
         /// The authentication method used to confirm a WhatsApp Integration activation. If action is set to Activate, then authenticationMethod is a required field. 
         /// </summary>
@@ -90,52 +72,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Voice")]
             Voice
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The action used to activate and then confirm a WhatsApp Integration.
         /// </summary>
         /// <value>The action used to activate and then confirm a WhatsApp Integration.</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
-        
         /// <summary>
         /// The authentication method used to confirm a WhatsApp Integration activation. If action is set to Activate, then authenticationMethod is a required field. 
         /// </summary>
         /// <value>The authentication method used to confirm a WhatsApp Integration activation. If action is set to Activate, then authenticationMethod is a required field. </value>
         [DataMember(Name="authenticationMethod", EmitDefaultValue=false)]
         public AuthenticationMethodEnum? AuthenticationMethod { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WhatsAppIntegrationUpdateRequest" /> class.
         /// </summary>
@@ -158,73 +106,73 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// WhatsApp Integration name
         /// </summary>
         /// <value>WhatsApp Integration name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Defines the SupportedContent profile configured for an integration
         /// </summary>
         /// <value>Defines the SupportedContent profile configured for an integration</value>
         [DataMember(Name="supportedContent", EmitDefaultValue=false)]
         public SupportedContentReference SupportedContent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessagingSetting
         /// </summary>
         [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
         public MessagingSettingReference MessagingSetting { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// The confirmation code sent by Whatsapp to you during the activation step. If action is set to Confirm, then confirmationCode is a required field.
         /// </summary>
         /// <value>The confirmation code sent by Whatsapp to you during the activation step. If action is set to Confirm, then confirmationCode is a required field.</value>
         [DataMember(Name="confirmationCode", EmitDefaultValue=false)]
         public string ConfirmationCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Phone number to associate with the WhatsApp integration
         /// </summary>
         /// <value>Phone number to associate with the WhatsApp integration</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -233,7 +181,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WhatsAppIntegrationUpdateRequest {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
@@ -341,34 +289,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.SupportedContent != null)
                     hash = hash * 59 + this.SupportedContent.GetHashCode();
-                
+
                 if (this.MessagingSetting != null)
                     hash = hash * 59 + this.MessagingSetting.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.AuthenticationMethod != null)
                     hash = hash * 59 + this.AuthenticationMethod.GetHashCode();
-                
+
                 if (this.ConfirmationCode != null)
                     hash = hash * 59 + this.ConfirmationCode.GetHashCode();
-                
+
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkPlanConstraintConflictMessage :  IEquatable<WorkPlanConstraintConflictMessage>
     {
-        
-        
         /// <summary>
         /// Type of constraint conflict that can be resolved by clients in order to generate agent schedules
         /// </summary>
@@ -47,25 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "WithPotentialFixes")]
             Withpotentialfixes
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of constraint conflict that can be resolved by clients in order to generate agent schedules
         /// </summary>
         /// <value>Type of constraint conflict that can be resolved by clients in order to generate agent schedules</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanConstraintConflictMessage" /> class.
         /// </summary>
@@ -78,18 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The arguments to the type of the message that can help clients resolve validation issues
         /// </summary>
         /// <value>The arguments to the type of the message that can help clients resolve validation issues</value>
         [DataMember(Name="arguments", EmitDefaultValue=false)]
         public List<WorkPlanValidationMessageArgument> Arguments { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkPlanConstraintConflictMessage {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Arguments: ").Append(Arguments).Append("\n");
             sb.Append("}\n");
@@ -164,13 +149,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Arguments != null)
                     hash = hash * 59 + this.Arguments.GetHashCode();
-                
+
                 return hash;
             }
         }

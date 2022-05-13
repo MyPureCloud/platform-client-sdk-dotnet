@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchBuScheduleRunRequest :  IEquatable<PatchBuScheduleRunRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchBuScheduleRunRequest" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The rescheduling options to update
         /// </summary>
         /// <value>The rescheduling options to update</value>
         [DataMember(Name="reschedulingOptions", EmitDefaultValue=false)]
         public PatchBuReschedulingOptionsRequest ReschedulingOptions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PatchBuScheduleRunRequest {\n");
-            
+
             sb.Append("  ReschedulingOptions: ").Append(ReschedulingOptions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ReschedulingOptions != null)
                     hash = hash * 59 + this.ReschedulingOptions.GetHashCode();
-                
+
                 return hash;
             }
         }

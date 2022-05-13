@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuAgentScheduleHistoryChange :  IEquatable<BuAgentScheduleHistoryChange>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAgentScheduleHistoryChange" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The metadata of the change, including who and when the change was made
         /// </summary>
         /// <value>The metadata of the change, including who and when the change was made</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public BuAgentScheduleHistoryChangeMetadata Metadata { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of changed shifts
         /// </summary>
         /// <value>The list of changed shifts</value>
         [DataMember(Name="shifts", EmitDefaultValue=false)]
         public List<BuAgentScheduleShift> Shifts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of changed full day time off markers
         /// </summary>
         /// <value>The list of changed full day time off markers</value>
         [DataMember(Name="fullDayTimeOffMarkers", EmitDefaultValue=false)]
         public List<BuFullDayTimeOffMarker> FullDayTimeOffMarkers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The deleted shifts, full day time off markers, or the entire agent schedule
         /// </summary>
         /// <value>The deleted shifts, full day time off markers, or the entire agent schedule</value>
         [DataMember(Name="deletes", EmitDefaultValue=false)]
         public BuAgentScheduleHistoryDeletedChange Deletes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuAgentScheduleHistoryChange {\n");
-            
+
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  Shifts: ").Append(Shifts).Append("\n");
             sb.Append("  FullDayTimeOffMarkers: ").Append(FullDayTimeOffMarkers).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 if (this.Shifts != null)
                     hash = hash * 59 + this.Shifts.GetHashCode();
-                
+
                 if (this.FullDayTimeOffMarkers != null)
                     hash = hash * 59 + this.FullDayTimeOffMarkers.GetHashCode();
-                
+
                 if (this.Deletes != null)
                     hash = hash * 59 + this.Deletes.GetHashCode();
-                
+
                 return hash;
             }
         }

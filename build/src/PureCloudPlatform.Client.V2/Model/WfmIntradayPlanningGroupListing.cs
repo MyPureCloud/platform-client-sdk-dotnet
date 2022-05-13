@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmIntradayPlanningGroupListing :  IEquatable<WfmIntradayPlanningGroupListing>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The reason there was no data for the request
         /// </summary>
@@ -50,22 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NoSourceForecast")]
             Nosourceforecast
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reason there was no data for the request
         /// </summary>
         /// <value>The reason there was no data for the request</value>
         [DataMember(Name="noDataReason", EmitDefaultValue=false)]
         public NoDataReasonEnum? NoDataReason { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmIntradayPlanningGroupListing" /> class.
         /// </summary>
@@ -78,17 +63,17 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<ForecastPlanningGroupResponse> Entities { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -97,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmIntradayPlanningGroupListing {\n");
-            
+
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  NoDataReason: ").Append(NoDataReason).Append("\n");
             sb.Append("}\n");
@@ -163,13 +148,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
+
                 if (this.NoDataReason != null)
                     hash = hash * 59 + this.NoDataReason.GetHashCode();
-                
+
                 return hash;
             }
         }

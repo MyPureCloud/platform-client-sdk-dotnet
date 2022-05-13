@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsConversationQueryResponse :  IEquatable<AnalyticsConversationQueryResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversationQueryResponse" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Aggregations
         /// </summary>
         [DataMember(Name="aggregations", EmitDefaultValue=false)]
         public List<AggregationResult> Aggregations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Conversations
         /// </summary>
         [DataMember(Name="conversations", EmitDefaultValue=false)]
         public List<AnalyticsConversationWithoutAttributes> Conversations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TotalHits
         /// </summary>
         [DataMember(Name="totalHits", EmitDefaultValue=false)]
         public int? TotalHits { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsConversationQueryResponse {\n");
-            
+
             sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
             sb.Append("  Conversations: ").Append(Conversations).Append("\n");
             sb.Append("  TotalHits: ").Append(TotalHits).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Aggregations != null)
                     hash = hash * 59 + this.Aggregations.GetHashCode();
-                
+
                 if (this.Conversations != null)
                     hash = hash * 59 + this.Conversations.GetHashCode();
-                
+
                 if (this.TotalHits != null)
                     hash = hash * 59 + this.TotalHits.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeMetricsTopicEdgeMetricSubsystem :  IEquatable<EdgeMetricsTopicEdgeMetricSubsystem>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsTopicEdgeMetricSubsystem" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ProcessName
         /// </summary>
         [DataMember(Name="processName", EmitDefaultValue=false)]
         public string ProcessName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DelayMs
         /// </summary>
         [DataMember(Name="delayMs", EmitDefaultValue=false)]
         public int? DelayMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MediaSubsystem
         /// </summary>
         [DataMember(Name="mediaSubsystem", EmitDefaultValue=false)]
         public EdgeMetricsTopicEdgeMetricSubsystemMedia MediaSubsystem { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeMetricsTopicEdgeMetricSubsystem {\n");
-            
+
             sb.Append("  ProcessName: ").Append(ProcessName).Append("\n");
             sb.Append("  DelayMs: ").Append(DelayMs).Append("\n");
             sb.Append("  MediaSubsystem: ").Append(MediaSubsystem).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ProcessName != null)
                     hash = hash * 59 + this.ProcessName.GetHashCode();
-                
+
                 if (this.DelayMs != null)
                     hash = hash * 59 + this.DelayMs.GetHashCode();
-                
+
                 if (this.MediaSubsystem != null)
                     hash = hash * 59 + this.MediaSubsystem.GetHashCode();
-                
+
                 return hash;
             }
         }

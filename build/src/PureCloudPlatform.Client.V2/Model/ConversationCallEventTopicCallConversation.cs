@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationCallEventTopicCallConversation :  IEquatable<ConversationCallEventTopicCallConversation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
@@ -64,32 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "paused")]
             Paused
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationCallEventTopicCallConversation" /> class.
         /// </summary>
@@ -110,49 +75,49 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Participants
         /// </summary>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<ConversationCallEventTopicCallMediaParticipant> Participants { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OtherMediaUris
         /// </summary>
         [DataMember(Name="otherMediaUris", EmitDefaultValue=false)]
         public List<string> OtherMediaUris { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets MaxParticipants
         /// </summary>
         [DataMember(Name="maxParticipants", EmitDefaultValue=false)]
         public int? MaxParticipants { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -161,7 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationCallEventTopicCallConversation {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
@@ -251,25 +216,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
-                
+
                 if (this.OtherMediaUris != null)
                     hash = hash * 59 + this.OtherMediaUris.GetHashCode();
-                
+
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
-                
+
                 if (this.MaxParticipants != null)
                     hash = hash * 59 + this.MaxParticipants.GetHashCode();
-                
+
                 return hash;
             }
         }

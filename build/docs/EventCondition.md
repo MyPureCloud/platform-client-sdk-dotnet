@@ -9,7 +9,7 @@ title: EventCondition
 |------------ | ------------- | ------------- | -------------|
 | **Key** | **string** | The event key. | |
 | **Values** | **List&lt;string&gt;** | The event values. | |
-| **_Operator** | **string** | The comparison operator. | [optional] |
+| **Operator** | **string** | The comparison operator. | [optional] |
 | **StreamType** | **string** | The stream type for which this condition can be satisfied. | |
 | **SessionType** | **string** | The session type for which this condition can be satisfied. | |
 | **EventName** | **string** | The name of the event for which this condition can be satisfied. | [optional] |

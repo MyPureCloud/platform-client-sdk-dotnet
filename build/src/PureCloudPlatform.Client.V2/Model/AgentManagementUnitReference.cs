@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AgentManagementUnitReference :  IEquatable<AgentManagementUnitReference>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentManagementUnitReference" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The user (agent) for whom the management unit was requested
         /// </summary>
         /// <value>The user (agent) for whom the management unit was requested</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UserReference User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The management to which the user (agent) belongs
         /// </summary>
         /// <value>The management to which the user (agent) belongs</value>
         [DataMember(Name="managementUnit", EmitDefaultValue=false)]
         public ManagementUnitReference ManagementUnit { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The business unit to which the user (agent) belongs. Populate with expand=businessUnit
         /// </summary>
         /// <value>The business unit to which the user (agent) belongs. Populate with expand=businessUnit</value>
         [DataMember(Name="businessUnit", EmitDefaultValue=false)]
         public BusinessUnitReference BusinessUnit { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AgentManagementUnitReference {\n");
-            
+
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
             sb.Append("  BusinessUnit: ").Append(BusinessUnit).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.ManagementUnit != null)
                     hash = hash * 59 + this.ManagementUnit.GetHashCode();
-                
+
                 if (this.BusinessUnit != null)
                     hash = hash * 59 + this.BusinessUnit.GetHashCode();
-                
+
                 return hash;
             }
         }

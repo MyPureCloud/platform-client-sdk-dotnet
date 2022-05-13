@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ExecuteRecordingJobsQuery :  IEquatable<ExecuteRecordingJobsQuery>
     {
-        
-        
         /// <summary>
         /// The desired state for the job to be set to.
         /// </summary>
@@ -41,26 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PROCESSING")]
             Processing
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// The desired state for the job to be set to.
         /// </summary>
         /// <value>The desired state for the job to be set to.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ExecuteRecordingJobsQuery" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ExecuteRecordingJobsQuery() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ExecuteRecordingJobsQuery" /> class.
         /// </summary>
@@ -71,9 +61,9 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -82,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ExecuteRecordingJobsQuery {\n");
-            
+
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -142,10 +132,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,45 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BotConnectorBot :  IEquatable<BotConnectorBot>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BotConnectorBot" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BotConnectorBot() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BotConnectorBot" /> class.
         /// </summary>
@@ -73,60 +40,60 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The Botconnector Bot Id - this is configurable by the user when put
         /// </summary>
         /// <value>The Botconnector Bot Id - this is configurable by the user when put</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// An optional description of the bot.  This can be up to 256 characters long and must be comprised of displayable characters without leading or trailing whitespace
         /// </summary>
         /// <value>An optional description of the bot.  This can be up to 256 characters long and must be comprised of displayable characters without leading or trailing whitespace</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// This bots versions, limit of 50 per bot
         /// </summary>
         /// <value>This bots versions, limit of 50 per bot</value>
         [DataMember(Name="versions", EmitDefaultValue=false)]
         public List<BotConnectorBotVersion> Versions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A system-generated string that contains metadata about this bot.
         /// </summary>
         /// <value>A system-generated string that contains metadata about this bot.</value>
         [DataMember(Name="botCompositeTag", EmitDefaultValue=false)]
         public string BotCompositeTag { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -135,7 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BotConnectorBot {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -225,25 +192,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Versions != null)
                     hash = hash * 59 + this.Versions.GetHashCode();
-                
+
                 if (this.BotCompositeTag != null)
                     hash = hash * 59 + this.BotCompositeTag.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

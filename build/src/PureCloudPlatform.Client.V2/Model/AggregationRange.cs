@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AggregationRange :  IEquatable<AggregationRange>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregationRange" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Greater than or equal to
         /// </summary>
         /// <value>Greater than or equal to</value>
         [DataMember(Name="gte", EmitDefaultValue=false)]
         public double? Gte { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Less than
         /// </summary>
         /// <value>Less than</value>
         [DataMember(Name="lt", EmitDefaultValue=false)]
         public double? Lt { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AggregationRange {\n");
-            
+
             sb.Append("  Gte: ").Append(Gte).Append("\n");
             sb.Append("  Lt: ").Append(Lt).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Gte != null)
                     hash = hash * 59 + this.Gte.GetHashCode();
-                
+
                 if (this.Lt != null)
                     hash = hash * 59 + this.Lt.GetHashCode();
-                
+
                 return hash;
             }
         }

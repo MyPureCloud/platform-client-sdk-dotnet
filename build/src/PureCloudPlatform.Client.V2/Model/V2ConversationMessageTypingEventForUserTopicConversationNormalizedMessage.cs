@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class V2ConversationMessageTypingEventForUserTopicConversationNormalizedMessage :  IEquatable<V2ConversationMessageTypingEventForUserTopicConversationNormalizedMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -64,19 +56,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Event")]
             Event
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -127,13 +106,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Removed")]
             Removed
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets OriginatingEntity
         /// </summary>
@@ -160,13 +132,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Bot")]
             Bot
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
@@ -193,62 +158,26 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Outbound")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets OriginatingEntity
         /// </summary>
         [DataMember(Name="originatingEntity", EmitDefaultValue=false)]
         public OriginatingEntityEnum? OriginatingEntity { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="V2ConversationMessageTypingEventForUserTopicConversationNormalizedMessage" /> class.
         /// </summary>
@@ -281,79 +210,79 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Channel
         /// </summary>
         [DataMember(Name="channel", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel Channel { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Text
         /// </summary>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public List<V2ConversationMessageTypingEventForUserTopicConversationMessageContent> Content { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Events
         /// </summary>
         [DataMember(Name="events", EmitDefaultValue=false)]
         public List<V2ConversationMessageTypingEventForUserTopicConversationMessageEvent> Events { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Reasons
         /// </summary>
         [DataMember(Name="reasons", EmitDefaultValue=false)]
         public List<V2ConversationMessageTypingEventForUserTopicConversationReason> Reasons { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets IsFinalReceipt
         /// </summary>
         [DataMember(Name="isFinalReceipt", EmitDefaultValue=false)]
         public bool? IsFinalReceipt { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public Dictionary<string, string> Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -362,7 +291,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class V2ConversationMessageTypingEventForUserTopicConversationNormalizedMessage {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Channel: ").Append(Channel).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -488,43 +417,42 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Channel != null)
                     hash = hash * 59 + this.Channel.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
-                
+
                 if (this.Events != null)
                     hash = hash * 59 + this.Events.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Reasons != null)
                     hash = hash * 59 + this.Reasons.GetHashCode();
-                
+
                 if (this.OriginatingEntity != null)
                     hash = hash * 59 + this.OriginatingEntity.GetHashCode();
-                
+
                 if (this.IsFinalReceipt != null)
                     hash = hash * 59 + this.IsFinalReceipt.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

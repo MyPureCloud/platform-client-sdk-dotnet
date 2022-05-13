@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class VoicemailCopyRecord :  IEquatable<VoicemailCopyRecord>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailCopyRecord" /> class.
         /// </summary>
@@ -44,34 +26,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The user that the voicemail message was copied to/from
         /// </summary>
         /// <value>The user that the voicemail message was copied to/from</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The group that the voicemail message was copied to/from
         /// </summary>
         /// <value>The group that the voicemail message was copied to/from</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public Group Group { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date when the voicemail was copied. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date when the voicemail was copied. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public DateTime? Date { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VoicemailCopyRecord {\n");
-            
+
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
@@ -152,16 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
-                
+
                 if (this.Date != null)
                     hash = hash * 59 + this.Date.GetHashCode();
-                
+
                 return hash;
             }
         }

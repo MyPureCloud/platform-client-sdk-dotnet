@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningModuleReassignSummary :  IEquatable<LearningModuleReassignSummary>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModuleReassignSummary" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The total number of users for whom assignment is reassigned
         /// </summary>
         /// <value>The total number of users for whom assignment is reassigned</value>
         [DataMember(Name="totalReassigned", EmitDefaultValue=false)]
         public int? TotalReassigned { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of users who have the assignment in Completed state
         /// </summary>
         /// <value>The total number of users who have the assignment in Completed state</value>
         [DataMember(Name="completedCount", EmitDefaultValue=false)]
         public int? CompletedCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of users who have the assignment in InProgress state
         /// </summary>
         /// <value>The total number of users who have the assignment in InProgress state</value>
         [DataMember(Name="inProgressCount", EmitDefaultValue=false)]
         public int? InProgressCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of users who have the assignment in Assigned state
         /// </summary>
         /// <value>The total number of users who have the assignment in Assigned state</value>
         [DataMember(Name="assignedCount", EmitDefaultValue=false)]
         public int? AssignedCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of users who have their assignment overdue
         /// </summary>
         /// <value>The total number of users who have their assignment overdue</value>
         [DataMember(Name="notCompletedCount", EmitDefaultValue=false)]
         public int? NotCompletedCount { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningModuleReassignSummary {\n");
-            
+
             sb.Append("  TotalReassigned: ").Append(TotalReassigned).Append("\n");
             sb.Append("  CompletedCount: ").Append(CompletedCount).Append("\n");
             sb.Append("  InProgressCount: ").Append(InProgressCount).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TotalReassigned != null)
                     hash = hash * 59 + this.TotalReassigned.GetHashCode();
-                
+
                 if (this.CompletedCount != null)
                     hash = hash * 59 + this.CompletedCount.GetHashCode();
-                
+
                 if (this.InProgressCount != null)
                     hash = hash * 59 + this.InProgressCount.GetHashCode();
-                
+
                 if (this.AssignedCount != null)
                     hash = hash * 59 + this.AssignedCount.GetHashCode();
-                
+
                 if (this.NotCompletedCount != null)
                     hash = hash * 59 + this.NotCompletedCount.GetHashCode();
-                
+
                 return hash;
             }
         }

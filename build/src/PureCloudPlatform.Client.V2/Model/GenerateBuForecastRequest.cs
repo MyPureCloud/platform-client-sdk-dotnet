@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GenerateBuForecastRequest :  IEquatable<GenerateBuForecastRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GenerateBuForecastRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected GenerateBuForecastRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GenerateBuForecastRequest" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The description for the forecast
         /// </summary>
         /// <value>The description for the forecast</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of weeks this forecast covers
         /// </summary>
         /// <value>The number of weeks this forecast covers</value>
         [DataMember(Name="weekCount", EmitDefaultValue=false)]
         public int? WeekCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this forecast can be used for scheduling
         /// </summary>
         /// <value>Whether this forecast can be used for scheduling</value>
         [DataMember(Name="canUseForScheduling", EmitDefaultValue=false)]
         public bool? CanUseForScheduling { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GenerateBuForecastRequest {\n");
-            
+
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  WeekCount: ").Append(WeekCount).Append("\n");
             sb.Append("  CanUseForScheduling: ").Append(CanUseForScheduling).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.WeekCount != null)
                     hash = hash * 59 + this.WeekCount.GetHashCode();
-                
+
                 if (this.CanUseForScheduling != null)
                     hash = hash * 59 + this.CanUseForScheduling.GetHashCode();
-                
+
                 return hash;
             }
         }

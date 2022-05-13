@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OutboundMessagingMessagingCampaignConfigChangeContactSort :  IEquatable<OutboundMessagingMessagingCampaignConfigChangeContactSort>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
@@ -49,26 +44,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DESC")]
             Desc
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeContactSort" /> class.
         /// </summary>
@@ -83,26 +63,26 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets FieldName
         /// </summary>
         [DataMember(Name="fieldName", EmitDefaultValue=false)]
         public string FieldName { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Whether that column contains numeric data
         /// </summary>
         /// <value>Whether that column contains numeric data</value>
         [DataMember(Name="numeric", EmitDefaultValue=false)]
         public bool? Numeric { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -111,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OutboundMessagingMessagingCampaignConfigChangeContactSort {\n");
-            
+
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  Numeric: ").Append(Numeric).Append("\n");
@@ -183,16 +163,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FieldName != null)
                     hash = hash * 59 + this.FieldName.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.Numeric != null)
                     hash = hash * 59 + this.Numeric.GetHashCode();
-                
+
                 return hash;
             }
         }

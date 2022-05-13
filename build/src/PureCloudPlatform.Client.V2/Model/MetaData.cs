@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MetaData :  IEquatable<MetaData>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MetaData" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets PairingToken
         /// </summary>
         [DataMember(Name="pairing-token", EmitDefaultValue=false)]
         public string PairingToken { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PairingTrust
         /// </summary>
         [DataMember(Name="pairing-trust", EmitDefaultValue=false)]
         public List<string> PairingTrust { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PairingUrl
         /// </summary>
         [DataMember(Name="pairing-url", EmitDefaultValue=false)]
         public string PairingUrl { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MetaData {\n");
-            
+
             sb.Append("  PairingToken: ").Append(PairingToken).Append("\n");
             sb.Append("  PairingTrust: ").Append(PairingTrust).Append("\n");
             sb.Append("  PairingUrl: ").Append(PairingUrl).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PairingToken != null)
                     hash = hash * 59 + this.PairingToken.GetHashCode();
-                
+
                 if (this.PairingTrust != null)
                     hash = hash * 59 + this.PairingTrust.GetHashCode();
-                
+
                 if (this.PairingUrl != null)
                     hash = hash * 59 + this.PairingUrl.GetHashCode();
-                
+
                 return hash;
             }
         }

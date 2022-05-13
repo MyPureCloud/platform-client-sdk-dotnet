@@ -18,65 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerCampaignRuleConfigChangeCampaignRule :  IEquatable<DialerCampaignRuleConfigChangeCampaignRule>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCampaignRuleConfigChangeCampaignRule" /> class.
         /// </summary>
         /// <param name="CampaignRuleEntities">CampaignRuleEntities.</param>
         /// <param name="CampaignRuleConditions">The list of conditions that will trigger this Campaign Rule.</param>
-        /// <param name="CampaignRuleActions">The list of actions that will be taken when this Campaign Rule&#39;s conditions are met.</param>
+        /// <param name="CampaignRuleActions">The list of actions that will be taken when this Campaign Rule's conditions are met.</param>
         /// <param name="MatchAnyConditions">Whether this Campaign Rule should match any conditions (inclusive OR) or match all conditions (ALL).</param>
         /// <param name="Enabled">Whether this campaign rule is enabled.</param>
         /// <param name="Id">The globally unique identifier for the object..</param>
@@ -99,96 +46,96 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets CampaignRuleEntities
         /// </summary>
         [DataMember(Name="campaignRuleEntities", EmitDefaultValue=false)]
         public DialerCampaignRuleConfigChangeCampaignRuleEntities CampaignRuleEntities { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of conditions that will trigger this Campaign Rule
         /// </summary>
         /// <value>The list of conditions that will trigger this Campaign Rule</value>
         [DataMember(Name="campaignRuleConditions", EmitDefaultValue=false)]
         public List<DialerCampaignRuleConfigChangeCampaignRuleCondition> CampaignRuleConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The list of actions that will be taken when this Campaign Rule&#39;s conditions are met
+        /// The list of actions that will be taken when this Campaign Rule's conditions are met
         /// </summary>
-        /// <value>The list of actions that will be taken when this Campaign Rule&#39;s conditions are met</value>
+        /// <value>The list of actions that will be taken when this Campaign Rule's conditions are met</value>
         [DataMember(Name="campaignRuleActions", EmitDefaultValue=false)]
         public List<DialerCampaignRuleConfigChangeCampaignRuleAction> CampaignRuleActions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this Campaign Rule should match any conditions (inclusive OR) or match all conditions (ALL)
         /// </summary>
         /// <value>Whether this Campaign Rule should match any conditions (inclusive OR) or match all conditions (ALL)</value>
         [DataMember(Name="matchAnyConditions", EmitDefaultValue=false)]
         public bool? MatchAnyConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this campaign rule is enabled
         /// </summary>
         /// <value>Whether this campaign rule is enabled</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The UI-visible name of the object
         /// </summary>
         /// <value>The UI-visible name of the object</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Creation time of the entity
         /// </summary>
         /// <value>Creation time of the entity</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last modified time of the entity
         /// </summary>
         /// <value>Last modified time of the entity</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -197,7 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerCampaignRuleConfigChangeCampaignRule {\n");
-            
+
             sb.Append("  CampaignRuleEntities: ").Append(CampaignRuleEntities).Append("\n");
             sb.Append("  CampaignRuleConditions: ").Append(CampaignRuleConditions).Append("\n");
             sb.Append("  CampaignRuleActions: ").Append(CampaignRuleActions).Append("\n");
@@ -311,37 +258,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CampaignRuleEntities != null)
                     hash = hash * 59 + this.CampaignRuleEntities.GetHashCode();
-                
+
                 if (this.CampaignRuleConditions != null)
                     hash = hash * 59 + this.CampaignRuleConditions.GetHashCode();
-                
+
                 if (this.CampaignRuleActions != null)
                     hash = hash * 59 + this.CampaignRuleActions.GetHashCode();
-                
+
                 if (this.MatchAnyConditions != null)
                     hash = hash * 59 + this.MatchAnyConditions.GetHashCode();
-                
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 return hash;
             }
         }

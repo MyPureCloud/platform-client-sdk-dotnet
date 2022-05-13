@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RoleDivisionGrants :  IEquatable<RoleDivisionGrants>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="RoleDivisionGrants" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected RoleDivisionGrants() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoleDivisionGrants" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A list containing pairs of role and division IDs
         /// </summary>
         /// <value>A list containing pairs of role and division IDs</value>
         [DataMember(Name="grants", EmitDefaultValue=false)]
         public List<RoleDivisionPair> Grants { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RoleDivisionGrants {\n");
-            
+
             sb.Append("  Grants: ").Append(Grants).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Grants != null)
                     hash = hash * 59 + this.Grants.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebChatTyping :  IEquatable<WebChatTyping>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatTyping" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WebChatTyping() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatTyping" /> class.
         /// </summary>
@@ -63,43 +40,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The event identifier of this typing indicator event (useful to guard against event re-delivery
         /// </summary>
         /// <value>The event identifier of this typing indicator event (useful to guard against event re-delivery</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The identifier of the conversation
         /// </summary>
         /// <value>The identifier of the conversation</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public WebChatConversation Conversation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The member who sent the message
         /// </summary>
         /// <value>The member who sent the message</value>
         [DataMember(Name="sender", EmitDefaultValue=false)]
         public WebChatMemberInfo Sender { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp of the message, in ISO-8601 format
         /// </summary>
         /// <value>The timestamp of the message, in ISO-8601 format</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebChatTyping {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("  Sender: ").Append(Sender).Append("\n");
@@ -186,19 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
+
                 if (this.Sender != null)
                     hash = hash * 59 + this.Sender.GetHashCode();
-                
+
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
+
                 return hash;
             }
         }

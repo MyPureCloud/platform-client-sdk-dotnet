@@ -18,72 +18,19 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyGeolocation :  IEquatable<JourneyGeolocation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyGeolocation" /> class.
         /// </summary>
-        /// <param name="Country">Geolocation&#39;s ISO 3166-1 alpha-2 country code..</param>
-        /// <param name="CountryName">Geolocation&#39;s country name..</param>
-        /// <param name="Latitude">Geolocation&#39;s latitude..</param>
-        /// <param name="Longitude">Geolocation&#39;s longitude..</param>
-        /// <param name="Locality">Geolocation&#39;s locality or city..</param>
-        /// <param name="PostalCode">Geolocation&#39;s postal code or ZIP code..</param>
-        /// <param name="Region">Geolocation&#39;s ISO-3166-2 region code..</param>
-        /// <param name="RegionName">Geolocation&#39;s region name..</param>
+        /// <param name="Country">Geolocation's ISO 3166-1 alpha-2 country code..</param>
+        /// <param name="CountryName">Geolocation's country name..</param>
+        /// <param name="Latitude">Geolocation's latitude..</param>
+        /// <param name="Longitude">Geolocation's longitude..</param>
+        /// <param name="Locality">Geolocation's locality or city..</param>
+        /// <param name="PostalCode">Geolocation's postal code or ZIP code..</param>
+        /// <param name="Region">Geolocation's ISO-3166-2 region code..</param>
+        /// <param name="RegionName">Geolocation's region name..</param>
         /// <param name="Source">The source that was used to determine the geolocation information..</param>
-        /// <param name="Timezone">Geolocation&#39;s timezone..</param>
+        /// <param name="Timezone">Geolocation's timezone..</param>
         public JourneyGeolocation(string Country = null, string CountryName = null, double? Latitude = null, double? Longitude = null, string Locality = null, string PostalCode = null, string Region = null, string RegionName = null, string Source = null, string Timezone = null)
         {
             this.Country = Country;
@@ -99,97 +46,97 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// Geolocation&#39;s ISO 3166-1 alpha-2 country code.
+        /// Geolocation's ISO 3166-1 alpha-2 country code.
         /// </summary>
-        /// <value>Geolocation&#39;s ISO 3166-1 alpha-2 country code.</value>
+        /// <value>Geolocation's ISO 3166-1 alpha-2 country code.</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Geolocation&#39;s country name.
+        /// Geolocation's country name.
         /// </summary>
-        /// <value>Geolocation&#39;s country name.</value>
+        /// <value>Geolocation's country name.</value>
         [DataMember(Name="countryName", EmitDefaultValue=false)]
         public string CountryName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Geolocation&#39;s latitude.
+        /// Geolocation's latitude.
         /// </summary>
-        /// <value>Geolocation&#39;s latitude.</value>
+        /// <value>Geolocation's latitude.</value>
         [DataMember(Name="latitude", EmitDefaultValue=false)]
         public double? Latitude { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Geolocation&#39;s longitude.
+        /// Geolocation's longitude.
         /// </summary>
-        /// <value>Geolocation&#39;s longitude.</value>
+        /// <value>Geolocation's longitude.</value>
         [DataMember(Name="longitude", EmitDefaultValue=false)]
         public double? Longitude { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Geolocation&#39;s locality or city.
+        /// Geolocation's locality or city.
         /// </summary>
-        /// <value>Geolocation&#39;s locality or city.</value>
+        /// <value>Geolocation's locality or city.</value>
         [DataMember(Name="locality", EmitDefaultValue=false)]
         public string Locality { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Geolocation&#39;s postal code or ZIP code.
+        /// Geolocation's postal code or ZIP code.
         /// </summary>
-        /// <value>Geolocation&#39;s postal code or ZIP code.</value>
+        /// <value>Geolocation's postal code or ZIP code.</value>
         [DataMember(Name="postalCode", EmitDefaultValue=false)]
         public string PostalCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Geolocation&#39;s ISO-3166-2 region code.
+        /// Geolocation's ISO-3166-2 region code.
         /// </summary>
-        /// <value>Geolocation&#39;s ISO-3166-2 region code.</value>
+        /// <value>Geolocation's ISO-3166-2 region code.</value>
         [DataMember(Name="region", EmitDefaultValue=false)]
         public string Region { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Geolocation&#39;s region name.
+        /// Geolocation's region name.
         /// </summary>
-        /// <value>Geolocation&#39;s region name.</value>
+        /// <value>Geolocation's region name.</value>
         [DataMember(Name="regionName", EmitDefaultValue=false)]
         public string RegionName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The source that was used to determine the geolocation information.
         /// </summary>
         /// <value>The source that was used to determine the geolocation information.</value>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public string Source { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Geolocation&#39;s timezone.
+        /// Geolocation's timezone.
         /// </summary>
-        /// <value>Geolocation&#39;s timezone.</value>
+        /// <value>Geolocation's timezone.</value>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public string Timezone { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -198,7 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyGeolocation {\n");
-            
+
             sb.Append("  Country: ").Append(Country).Append("\n");
             sb.Append("  CountryName: ").Append(CountryName).Append("\n");
             sb.Append("  Latitude: ").Append(Latitude).Append("\n");
@@ -312,37 +259,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Country != null)
                     hash = hash * 59 + this.Country.GetHashCode();
-                
+
                 if (this.CountryName != null)
                     hash = hash * 59 + this.CountryName.GetHashCode();
-                
+
                 if (this.Latitude != null)
                     hash = hash * 59 + this.Latitude.GetHashCode();
-                
+
                 if (this.Longitude != null)
                     hash = hash * 59 + this.Longitude.GetHashCode();
-                
+
                 if (this.Locality != null)
                     hash = hash * 59 + this.Locality.GetHashCode();
-                
+
                 if (this.PostalCode != null)
                     hash = hash * 59 + this.PostalCode.GetHashCode();
-                
+
                 if (this.Region != null)
                     hash = hash * 59 + this.Region.GetHashCode();
-                
+
                 if (this.RegionName != null)
                     hash = hash * 59 + this.RegionName.GetHashCode();
-                
+
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
-                
+
                 if (this.Timezone != null)
                     hash = hash * 59 + this.Timezone.GetHashCode();
-                
+
                 return hash;
             }
         }

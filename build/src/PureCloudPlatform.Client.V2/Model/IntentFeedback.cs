@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntentFeedback :  IEquatable<IntentFeedback>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The assessment on the detection for feedback text.
         /// </summary>
@@ -68,26 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Disabled")]
             Disabled
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The assessment on the detection for feedback text.
         /// </summary>
         /// <value>The assessment on the detection for feedback text.</value>
         [DataMember(Name="assessment", EmitDefaultValue=false)]
         public AssessmentEnum? Assessment { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntentFeedback" /> class.
         /// </summary>
@@ -98,36 +73,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the detected intent.
         /// </summary>
         /// <value>The name of the detected intent.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The probability of the detected intent.
         /// </summary>
         /// <value>The probability of the detected intent.</value>
         [DataMember(Name="probability", EmitDefaultValue=false)]
         public double? Probability { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The collection of named entities detected.
         /// </summary>
         /// <value>The collection of named entities detected.</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<DetectedNamedEntity> Entities { get; private set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -136,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntentFeedback {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Probability: ").Append(Probability).Append("\n");
             sb.Append("  Entities: ").Append(Entities).Append("\n");
@@ -214,19 +189,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Probability != null)
                     hash = hash * 59 + this.Probability.GetHashCode();
-                
+
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
+
                 if (this.Assessment != null)
                     hash = hash * 59 + this.Assessment.GetHashCode();
-                
+
                 return hash;
             }
         }

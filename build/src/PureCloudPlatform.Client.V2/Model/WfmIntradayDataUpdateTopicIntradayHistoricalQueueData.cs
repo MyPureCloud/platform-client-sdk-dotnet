@@ -18,49 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmIntradayDataUpdateTopicIntradayHistoricalQueueData :  IEquatable<WfmIntradayDataUpdateTopicIntradayHistoricalQueueData>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmIntradayDataUpdateTopicIntradayHistoricalQueueData" /> class.
         /// </summary>
@@ -85,71 +42,71 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Offered
         /// </summary>
         [DataMember(Name="offered", EmitDefaultValue=false)]
         public int? Offered { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Completed
         /// </summary>
         [DataMember(Name="completed", EmitDefaultValue=false)]
         public int? Completed { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Answered
         /// </summary>
         [DataMember(Name="answered", EmitDefaultValue=false)]
         public int? Answered { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Abandoned
         /// </summary>
         [DataMember(Name="abandoned", EmitDefaultValue=false)]
         public int? Abandoned { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AverageTalkTimeSeconds
         /// </summary>
         [DataMember(Name="averageTalkTimeSeconds", EmitDefaultValue=false)]
         public double? AverageTalkTimeSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AverageAfterCallWorkSeconds
         /// </summary>
         [DataMember(Name="averageAfterCallWorkSeconds", EmitDefaultValue=false)]
         public double? AverageAfterCallWorkSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ServiceLevelPercent
         /// </summary>
         [DataMember(Name="serviceLevelPercent", EmitDefaultValue=false)]
         public double? ServiceLevelPercent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AverageSpeedOfAnswerSeconds
         /// </summary>
         [DataMember(Name="averageSpeedOfAnswerSeconds", EmitDefaultValue=false)]
         public double? AverageSpeedOfAnswerSeconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -158,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmIntradayDataUpdateTopicIntradayHistoricalQueueData {\n");
-            
+
             sb.Append("  Offered: ").Append(Offered).Append("\n");
             sb.Append("  Completed: ").Append(Completed).Append("\n");
             sb.Append("  Answered: ").Append(Answered).Append("\n");
@@ -260,31 +217,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Offered != null)
                     hash = hash * 59 + this.Offered.GetHashCode();
-                
+
                 if (this.Completed != null)
                     hash = hash * 59 + this.Completed.GetHashCode();
-                
+
                 if (this.Answered != null)
                     hash = hash * 59 + this.Answered.GetHashCode();
-                
+
                 if (this.Abandoned != null)
                     hash = hash * 59 + this.Abandoned.GetHashCode();
-                
+
                 if (this.AverageTalkTimeSeconds != null)
                     hash = hash * 59 + this.AverageTalkTimeSeconds.GetHashCode();
-                
+
                 if (this.AverageAfterCallWorkSeconds != null)
                     hash = hash * 59 + this.AverageAfterCallWorkSeconds.GetHashCode();
-                
+
                 if (this.ServiceLevelPercent != null)
                     hash = hash * 59 + this.ServiceLevelPercent.GetHashCode();
-                
+
                 if (this.AverageSpeedOfAnswerSeconds != null)
                     hash = hash * 59 + this.AverageSpeedOfAnswerSeconds.GetHashCode();
-                
+
                 return hash;
             }
         }

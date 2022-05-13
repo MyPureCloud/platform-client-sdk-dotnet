@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MessengerSettings :  IEquatable<MessengerSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MessengerSettings" /> class.
         /// </summary>
@@ -71,61 +38,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether or not messenger is enabled
         /// </summary>
         /// <value>Whether or not messenger is enabled</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The style settings for messenger
         /// </summary>
         /// <value>The style settings for messenger</value>
         [DataMember(Name="styles", EmitDefaultValue=false)]
         public MessengerStyles Styles { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The launcher button settings for messenger
         /// </summary>
         /// <value>The launcher button settings for messenger</value>
         [DataMember(Name="launcherButton", EmitDefaultValue=false)]
         public LauncherButtonSettings LauncherButton { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The file upload settings for messenger
         /// </summary>
         /// <value>The file upload settings for messenger</value>
         [DataMember(Name="fileUpload", EmitDefaultValue=false)]
         public FileUploadSettings FileUpload { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The apps embedded in the messenger
         /// </summary>
         /// <value>The apps embedded in the messenger</value>
         [DataMember(Name="apps", EmitDefaultValue=false)]
         public MessengerApps Apps { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The homescreen settings for messenger
         /// </summary>
         /// <value>The homescreen settings for messenger</value>
         [DataMember(Name="homeScreen", EmitDefaultValue=false)]
         public MessengerHomeScreen HomeScreen { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MessengerSettings {\n");
-            
+
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  Styles: ").Append(Styles).Append("\n");
             sb.Append("  LauncherButton: ").Append(LauncherButton).Append("\n");
@@ -224,25 +191,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.Styles != null)
                     hash = hash * 59 + this.Styles.GetHashCode();
-                
+
                 if (this.LauncherButton != null)
                     hash = hash * 59 + this.LauncherButton.GetHashCode();
-                
+
                 if (this.FileUpload != null)
                     hash = hash * 59 + this.FileUpload.GetHashCode();
-                
+
                 if (this.Apps != null)
                     hash = hash * 59 + this.Apps.GetHashCode();
-                
+
                 if (this.HomeScreen != null)
                     hash = hash * 59 + this.HomeScreen.GetHashCode();
-                
+
                 return hash;
             }
         }

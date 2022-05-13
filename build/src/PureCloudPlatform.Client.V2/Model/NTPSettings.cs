@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NTPSettings :  IEquatable<NTPSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NTPSettings" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// List of NTP servers, in priority order
         /// </summary>
         /// <value>List of NTP servers, in priority order</value>
         [DataMember(Name="servers", EmitDefaultValue=false)]
         public List<string> Servers { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NTPSettings {\n");
-            
+
             sb.Append("  Servers: ").Append(Servers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Servers != null)
                     hash = hash * 59 + this.Servers.GetHashCode();
-                
+
                 return hash;
             }
         }

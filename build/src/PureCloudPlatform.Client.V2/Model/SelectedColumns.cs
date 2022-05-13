@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SelectedColumns :  IEquatable<SelectedColumns>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SelectedColumns" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Indicates the order/position of the selected column
         /// </summary>
         /// <value>Indicates the order/position of the selected column</value>
         [DataMember(Name="columnOrder", EmitDefaultValue=false)]
         public int? ColumnOrder { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates enum name of the column from the export view
         /// </summary>
         /// <value>Indicates enum name of the column from the export view</value>
         [DataMember(Name="columnName", EmitDefaultValue=false)]
         public string ColumnName { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SelectedColumns {\n");
-            
+
             sb.Append("  ColumnOrder: ").Append(ColumnOrder).Append("\n");
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ColumnOrder != null)
                     hash = hash * 59 + this.ColumnOrder.GetHashCode();
-                
+
                 if (this.ColumnName != null)
                     hash = hash * 59 + this.ColumnName.GetHashCode();
-                
+
                 return hash;
             }
         }

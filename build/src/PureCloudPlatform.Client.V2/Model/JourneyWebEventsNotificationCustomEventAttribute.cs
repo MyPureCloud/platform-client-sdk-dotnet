@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyWebEventsNotificationCustomEventAttribute :  IEquatable<JourneyWebEventsNotificationCustomEventAttribute>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets DataType
         /// </summary>
@@ -55,21 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NUMBER")]
             Number
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets DataType
         /// </summary>
         [DataMember(Name="dataType", EmitDefaultValue=false)]
         public DataTypeEnum? DataType { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyWebEventsNotificationCustomEventAttribute" /> class.
         /// </summary>
@@ -82,17 +67,17 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -101,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyWebEventsNotificationCustomEventAttribute {\n");
-            
+
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  DataType: ").Append(DataType).Append("\n");
             sb.Append("}\n");
@@ -167,13 +152,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.DataType != null)
                     hash = hash * 59 + this.DataType.GetHashCode();
-                
+
                 return hash;
             }
         }

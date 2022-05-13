@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactListFilterRange :  IEquatable<ContactListFilterRange>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterRange" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The minimum value of the range. Required for the operator BETWEEN.
         /// </summary>
         /// <value>The minimum value of the range. Required for the operator BETWEEN.</value>
         [DataMember(Name="min", EmitDefaultValue=false)]
         public string Min { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum value of the range. Required for the operator BETWEEN.
         /// </summary>
         /// <value>The maximum value of the range. Required for the operator BETWEEN.</value>
         [DataMember(Name="max", EmitDefaultValue=false)]
         public string Max { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not to include the minimum in the range.
         /// </summary>
         /// <value>Whether or not to include the minimum in the range.</value>
         [DataMember(Name="minInclusive", EmitDefaultValue=false)]
         public bool? MinInclusive { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not to include the maximum in the range.
         /// </summary>
         /// <value>Whether or not to include the maximum in the range.</value>
         [DataMember(Name="maxInclusive", EmitDefaultValue=false)]
         public bool? MaxInclusive { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A set of values that the contact data should be in. Required for the IN operator.
         /// </summary>
         /// <value>A set of values that the contact data should be in. Required for the IN operator.</value>
         [DataMember(Name="inSet", EmitDefaultValue=false)]
         public List<string> InSet { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactListFilterRange {\n");
-            
+
             sb.Append("  Min: ").Append(Min).Append("\n");
             sb.Append("  Max: ").Append(Max).Append("\n");
             sb.Append("  MinInclusive: ").Append(MinInclusive).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Min != null)
                     hash = hash * 59 + this.Min.GetHashCode();
-                
+
                 if (this.Max != null)
                     hash = hash * 59 + this.Max.GetHashCode();
-                
+
                 if (this.MinInclusive != null)
                     hash = hash * 59 + this.MinInclusive.GetHashCode();
-                
+
                 if (this.MaxInclusive != null)
                     hash = hash * 59 + this.MaxInclusive.GetHashCode();
-                
+
                 if (this.InSet != null)
                     hash = hash * 59 + this.InSet.GetHashCode();
-                
+
                 return hash;
             }
         }

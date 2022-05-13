@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AttendanceStatus :  IEquatable<AttendanceStatus>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// the attendance status
         /// </summary>
@@ -68,22 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NoSchedule")]
             Noschedule
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// the attendance status
         /// </summary>
         /// <value>the attendance status</value>
         [DataMember(Name="attendanceStatusType", EmitDefaultValue=false)]
-        public AttendanceStatusTypeEnum? AttendanceStatusType { get; set; }
-        
-        
-    
+        public AttendanceStatusTypeEnum? AttendanceStatusType { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AttendanceStatus" /> class.
         /// </summary>
@@ -92,18 +77,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// the workday date of this attendance status. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>the workday date of this attendance status. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateWorkday", EmitDefaultValue=false)]
         public String DateWorkday { get; private set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -112,7 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AttendanceStatus {\n");
-            
+
             sb.Append("  DateWorkday: ").Append(DateWorkday).Append("\n");
             sb.Append("  AttendanceStatusType: ").Append(AttendanceStatusType).Append("\n");
             sb.Append("}\n");
@@ -178,13 +163,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DateWorkday != null)
                     hash = hash * 59 + this.DateWorkday.GetHashCode();
-                
+
                 if (this.AttendanceStatusType != null)
                     hash = hash * 59 + this.AttendanceStatusType.GetHashCode();
-                
+
                 return hash;
             }
         }

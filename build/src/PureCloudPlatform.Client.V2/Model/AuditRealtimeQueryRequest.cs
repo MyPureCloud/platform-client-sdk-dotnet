@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuditRealtimeQueryRequest :  IEquatable<AuditRealtimeQueryRequest>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Name of the service to query audits for.
         /// </summary>
@@ -260,48 +255,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NumberPurchasing")]
             Numberpurchasing
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Name of the service to query audits for.
         /// </summary>
         /// <value>Name of the service to query audits for.</value>
         [DataMember(Name="serviceName", EmitDefaultValue=false)]
         public ServiceNameEnum? ServiceName { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditRealtimeQueryRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AuditRealtimeQueryRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditRealtimeQueryRequest" /> class.
         /// </summary>
@@ -322,54 +287,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
         /// <value>Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Additional filters for the query.
         /// </summary>
         /// <value>Additional filters for the query.</value>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<AuditQueryFilter> Filters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Sort parameter for the query.
         /// </summary>
         /// <value>Sort parameter for the query.</value>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public List<AuditQuerySort> Sort { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Page number
         /// </summary>
         /// <value>Page number</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Page size
         /// </summary>
         /// <value>Page size</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -378,7 +343,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuditRealtimeQueryRequest {\n");
-            
+
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
@@ -468,25 +433,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
+
                 if (this.ServiceName != null)
                     hash = hash * 59 + this.ServiceName.GetHashCode();
-                
+
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
-                
+
                 if (this.Sort != null)
                     hash = hash * 59 + this.Sort.GetHashCode();
-                
+
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
+
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
+
                 return hash;
             }
         }

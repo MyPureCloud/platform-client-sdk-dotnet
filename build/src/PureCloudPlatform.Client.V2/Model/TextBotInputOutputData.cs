@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotInputOutputData :  IEquatable<TextBotInputOutputData>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotInputOutputData" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotInputOutputData() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotInputOutputData" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The input/output variables using the format as appropriate for the variable data type in the flow definition.
         /// </summary>
         /// <value>The input/output variables using the format as appropriate for the variable data type in the flow definition.</value>
         [DataMember(Name="variables", EmitDefaultValue=false)]
         public Dictionary<string, Object> Variables { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotInputOutputData {\n");
-            
+
             sb.Append("  Variables: ").Append(Variables).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Variables != null)
                     hash = hash * 59 + this.Variables.GetHashCode();
-                
+
                 return hash;
             }
         }

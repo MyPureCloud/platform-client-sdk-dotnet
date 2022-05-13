@@ -18,53 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UpdateUser :  IEquatable<UpdateUser>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field.
         /// </summary>
@@ -98,81 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field.
         /// </summary>
         /// <value>The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateUser" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UpdateUser() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateUser" /> class.
         /// </summary>
@@ -217,178 +107,178 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Chat
         /// </summary>
         [DataMember(Name="chat", EmitDefaultValue=false)]
         public Chat Chat { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Department
         /// </summary>
         [DataMember(Name="department", EmitDefaultValue=false)]
         public string Department { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The address(s) used for primary contact. Updates to the corresponding address in the addresses list will be reflected here.
         /// </summary>
         /// <value>The address(s) used for primary contact. Updates to the corresponding address in the addresses list will be reflected here.</value>
         [DataMember(Name="primaryContactInfo", EmitDefaultValue=false)]
         public List<Contact> PrimaryContactInfo { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Email address, phone number, and/or extension for this user. One entry is allowed per media type
         /// </summary>
         /// <value>Email address, phone number, and/or extension for this user. One entry is allowed per media type</value>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<Contact> Addresses { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Username
         /// </summary>
         [DataMember(Name="username", EmitDefaultValue=false)]
         public string Username { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Manager
         /// </summary>
         [DataMember(Name="manager", EmitDefaultValue=false)]
         public string Manager { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Images
         /// </summary>
         [DataMember(Name="images", EmitDefaultValue=false)]
         public List<UserImage> Images { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// This value should be the current version of the user. The current version can be obtained with a GET on the user before doing a PATCH.
         /// </summary>
         /// <value>This value should be the current version of the user. The current version can be obtained with a GET on the user before doing a PATCH.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Profile skills possessed by the user
         /// </summary>
         /// <value>Profile skills possessed by the user</value>
         [DataMember(Name="profileSkills", EmitDefaultValue=false)]
         public List<string> ProfileSkills { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user placement at each site location.
         /// </summary>
         /// <value>The user placement at each site location.</value>
         [DataMember(Name="locations", EmitDefaultValue=false)]
         public List<Location> Locations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The groups the user is a member of
         /// </summary>
         /// <value>The groups the user is a member of</value>
         [DataMember(Name="groups", EmitDefaultValue=false)]
         public List<Group> Groups { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The value that denotes if acdAutoAnswer is set on the user
         /// </summary>
         /// <value>The value that denotes if acdAutoAnswer is set on the user</value>
         [DataMember(Name="acdAutoAnswer", EmitDefaultValue=false)]
         public bool? AcdAutoAnswer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Certifications
         /// </summary>
         [DataMember(Name="certifications", EmitDefaultValue=false)]
         public List<string> Certifications { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Biography
         /// </summary>
         [DataMember(Name="biography", EmitDefaultValue=false)]
         public Biography Biography { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EmployerInfo
         /// </summary>
         [DataMember(Name="employerInfo", EmitDefaultValue=false)]
         public EmployerInfo EmployerInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -397,7 +287,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UpdateUser {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Chat: ").Append(Chat).Append("\n");
@@ -577,70 +467,69 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Chat != null)
                     hash = hash * 59 + this.Chat.GetHashCode();
-                
+
                 if (this.Department != null)
                     hash = hash * 59 + this.Department.GetHashCode();
-                
+
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
+
                 if (this.PrimaryContactInfo != null)
                     hash = hash * 59 + this.PrimaryContactInfo.GetHashCode();
-                
+
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Username != null)
                     hash = hash * 59 + this.Username.GetHashCode();
-                
+
                 if (this.Manager != null)
                     hash = hash * 59 + this.Manager.GetHashCode();
-                
+
                 if (this.Images != null)
                     hash = hash * 59 + this.Images.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.ProfileSkills != null)
                     hash = hash * 59 + this.ProfileSkills.GetHashCode();
-                
+
                 if (this.Locations != null)
                     hash = hash * 59 + this.Locations.GetHashCode();
-                
+
                 if (this.Groups != null)
                     hash = hash * 59 + this.Groups.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.AcdAutoAnswer != null)
                     hash = hash * 59 + this.AcdAutoAnswer.GetHashCode();
-                
+
                 if (this.Certifications != null)
                     hash = hash * 59 + this.Certifications.GetHashCode();
-                
+
                 if (this.Biography != null)
                     hash = hash * 59 + this.Biography.GetHashCode();
-                
+
                 if (this.EmployerInfo != null)
                     hash = hash * 59 + this.EmployerInfo.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

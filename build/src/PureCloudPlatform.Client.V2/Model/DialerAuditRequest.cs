@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerAuditRequest :  IEquatable<DialerAuditRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerAuditRequest" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The word or words to search for.
         /// </summary>
         /// <value>The word or words to search for.</value>
         [DataMember(Name="queryPhrase", EmitDefaultValue=false)]
         public string QueryPhrase { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The fields in which to search for the queryPhrase.
         /// </summary>
         /// <value>The fields in which to search for the queryPhrase.</value>
         [DataMember(Name="queryFields", EmitDefaultValue=false)]
         public List<string> QueryFields { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The fields to facet on.
         /// </summary>
         /// <value>The fields to facet on.</value>
         [DataMember(Name="facets", EmitDefaultValue=false)]
         public List<AuditFacet> Facets { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The fields to filter on.
         /// </summary>
         /// <value>The fields to filter on.</value>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<AuditFilter> Filters { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerAuditRequest {\n");
-            
+
             sb.Append("  QueryPhrase: ").Append(QueryPhrase).Append("\n");
             sb.Append("  QueryFields: ").Append(QueryFields).Append("\n");
             sb.Append("  Facets: ").Append(Facets).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QueryPhrase != null)
                     hash = hash * 59 + this.QueryPhrase.GetHashCode();
-                
+
                 if (this.QueryFields != null)
                     hash = hash * 59 + this.QueryFields.GetHashCode();
-                
+
                 if (this.Facets != null)
                     hash = hash * 59 + this.Facets.GetHashCode();
-                
+
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -8,14 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
-    
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IOrganizationAuthorizationApi : IApiAccessor
     {
         #region Synchronous Operations
-        
+
         /// <summary>
         /// Delete Org Trust
         /// </summary>
@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId);
-        
+
         /// <summary>
         /// Deletes cloned user
         /// </summary>
@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Id of the cloned user to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOrgauthorizationTrusteeCloneduserWithHttpInfo (string trusteeOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Delete Trustee User
         /// </summary>
@@ -85,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOrgauthorizationTrusteeUserWithHttpInfo (string trusteeOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Delete Trustee User Roles
         /// </summary>
@@ -109,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOrgauthorizationTrusteeUserRolesWithHttpInfo (string trusteeOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Delete Org Trust
         /// </summary>
@@ -131,7 +131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOrgauthorizationTrustorWithHttpInfo (string trustorOrgId);
-        
+
         /// <summary>
         /// Delete Cloned User
         /// </summary>
@@ -155,7 +155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOrgauthorizationTrustorCloneduserWithHttpInfo (string trustorOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Delete Trustee User
         /// </summary>
@@ -179,7 +179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOrgauthorizationTrustorUserWithHttpInfo (string trustorOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Get Pairing Info
         /// </summary>
@@ -201,7 +201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pairingId">Pairing Id</param>
         /// <returns>ApiResponse of TrustRequest</returns>
         ApiResponse<TrustRequest> GetOrgauthorizationPairingWithHttpInfo (string pairingId);
-        
+
         /// <summary>
         /// Get Org Trust
         /// </summary>
@@ -223,7 +223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>ApiResponse of Trustee</returns>
         ApiResponse<Trustee> GetOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId);
-        
+
         /// <summary>
         /// The list of cloned users from the trustee organization (i.e. users with a native user record).
         /// </summary>
@@ -245,7 +245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>ApiResponse of ClonedUserEntityListing</returns>
         ApiResponse<ClonedUserEntityListing> GetOrgauthorizationTrusteeClonedusersWithHttpInfo (string trusteeOrgId);
-        
+
         /// <summary>
         /// Get Trustee User
         /// </summary>
@@ -269,7 +269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of TrustUser</returns>
         ApiResponse<TrustUser> GetOrgauthorizationTrusteeUserWithHttpInfo (string trusteeOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Get Trustee User Roles
         /// </summary>
@@ -293,7 +293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
         ApiResponse<UserAuthorization> GetOrgauthorizationTrusteeUserRolesWithHttpInfo (string trusteeOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// The list of trustee users for this organization (i.e. users granted access to this organization).
         /// </summary>
@@ -319,7 +319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustUserEntityListing</returns>
         ApiResponse<TrustUserEntityListing> GetOrgauthorizationTrusteeUsersWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
-        
+
         /// <summary>
         /// The list of trustees for this organization (i.e. organizations granted access to this organization).
         /// </summary>
@@ -343,7 +343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustEntityListing</returns>
         ApiResponse<TrustEntityListing> GetOrgauthorizationTrusteesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
-        
+
         /// <summary>
         /// Get organization authorization trust with Customer Care, if one exists.
         /// </summary>
@@ -363,7 +363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Trustee</returns>
         ApiResponse<Trustee> GetOrgauthorizationTrusteesDefaultWithHttpInfo ();
-        
+
         /// <summary>
         /// Get Org Trust
         /// </summary>
@@ -385,7 +385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>ApiResponse of Trustor</returns>
         ApiResponse<Trustor> GetOrgauthorizationTrustorWithHttpInfo (string trustorOrgId);
-        
+
         /// <summary>
         /// Get Cloned User
         /// </summary>
@@ -409,7 +409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of ClonedUser</returns>
         ApiResponse<ClonedUser> GetOrgauthorizationTrustorCloneduserWithHttpInfo (string trustorOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// The list of cloned users in the trustor organization (i.e. users with a native user record).
         /// </summary>
@@ -431,7 +431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>ApiResponse of ClonedUserEntityListing</returns>
         ApiResponse<ClonedUserEntityListing> GetOrgauthorizationTrustorClonedusersWithHttpInfo (string trustorOrgId);
-        
+
         /// <summary>
         /// Get Trustee User
         /// </summary>
@@ -455,7 +455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of TrustUser</returns>
         ApiResponse<TrustUser> GetOrgauthorizationTrustorUserWithHttpInfo (string trustorOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// The list of users in the trustor organization (i.e. users granted access).
         /// </summary>
@@ -481,7 +481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustUserEntityListing</returns>
         ApiResponse<TrustUserEntityListing> GetOrgauthorizationTrustorUsersWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
-        
+
         /// <summary>
         /// The list of organizations that have authorized/trusted your organization.
         /// </summary>
@@ -505,7 +505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustorEntityListing</returns>
         ApiResponse<TrustorEntityListing> GetOrgauthorizationTrustorsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
-        
+
         /// <summary>
         /// A pairing id is created by the trustee and given to the trustor to create a trust.
         /// </summary>
@@ -527,7 +527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairing Info</param>
         /// <returns>ApiResponse of TrustRequest</returns>
         ApiResponse<TrustRequest> PostOrgauthorizationPairingsWithHttpInfo (TrustRequestCreate body);
-        
+
         /// <summary>
         /// Add a user to the trust.
         /// </summary>
@@ -551,7 +551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Trust</param>
         /// <returns>ApiResponse of TrustUser</returns>
         ApiResponse<TrustUser> PostOrgauthorizationTrusteeUsersWithHttpInfo (string trusteeOrgId, TrustMemberCreate body);
-        
+
         /// <summary>
         /// Create a new organization authorization trust. This is required to grant other organizations access to your organization.
         /// </summary>
@@ -573,21 +573,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Trust</param>
         /// <returns>ApiResponse of Trustee</returns>
         ApiResponse<Trustee> PostOrgauthorizationTrusteesWithHttpInfo (TrustCreate body);
-        
-        /// <summary>
-        /// Get Org Trustee Audits
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Values to scope the request.</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>AuditQueryResponse</returns>
-        AuditQueryResponse PostOrgauthorizationTrusteesAudits (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get Org Trustee Audits
@@ -599,11 +584,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Values to scope the request.</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>ApiResponse of AuditQueryResponse</returns>
-        ApiResponse<AuditQueryResponse> PostOrgauthorizationTrusteesAuditsWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
-        
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>Object</returns>
+        Object PostOrgauthorizationTrusteesAudits (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get Org Trustee Audits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Values to scope the request.</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> PostOrgauthorizationTrusteesAuditsWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
         /// <summary>
         /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
         /// </summary>
@@ -627,21 +627,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
         /// <returns>ApiResponse of Trustee</returns>
         ApiResponse<Trustee> PostOrgauthorizationTrusteesDefaultWithHttpInfo (bool? assignDefaultRole = null, bool? autoExpire = null);
-        
-        /// <summary>
-        /// Get Org Trustor Audits
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Values to scope the request.</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>AuditQueryResponse</returns>
-        AuditQueryResponse PostOrgauthorizationTrustorAudits (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get Org Trustor Audits
@@ -653,11 +638,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Values to scope the request.</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>ApiResponse of AuditQueryResponse</returns>
-        ApiResponse<AuditQueryResponse> PostOrgauthorizationTrustorAuditsWithHttpInfo (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
-        
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>Object</returns>
+        Object PostOrgauthorizationTrustorAudits (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get Org Trustor Audits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Values to scope the request.</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> PostOrgauthorizationTrustorAuditsWithHttpInfo (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
         /// <summary>
         /// Update Org Trust
         /// </summary>
@@ -681,7 +681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of Trustee</returns>
         ApiResponse<Trustee> PutOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId, TrustUpdate body);
-        
+
         /// <summary>
         /// Update Trustee User Roles
         /// </summary>
@@ -707,7 +707,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
         ApiResponse<UserAuthorization> PutOrgauthorizationTrusteeUserRoledivisionsWithHttpInfo (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body);
-        
+
         /// <summary>
         /// Update Trustee User Roles
         /// </summary>
@@ -733,7 +733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
         ApiResponse<UserAuthorization> PutOrgauthorizationTrusteeUserRolesWithHttpInfo (string trusteeOrgId, string trusteeUserId, List<string> body);
-        
+
         /// <summary>
         /// Creates a clone of the trustee user in the trustor org.
         /// </summary>
@@ -757,7 +757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of ClonedUser</returns>
         ApiResponse<ClonedUser> PutOrgauthorizationTrustorCloneduserWithHttpInfo (string trustorOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Add a Trustee user to the trust.
         /// </summary>
@@ -781,11 +781,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of TrustUser</returns>
         ApiResponse<TrustUser> PutOrgauthorizationTrustorUserWithHttpInfo (string trustorOrgId, string trusteeUserId);
-        
+
         #endregion Synchronous Operations
-        
+
         #region Asynchronous Operations
-        
+
         /// <summary>
         /// Delete Org Trust
         /// </summary>
@@ -807,7 +807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId);
-        
+
         /// <summary>
         /// Deletes cloned user
         /// </summary>
@@ -831,7 +831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Id of the cloned user to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeCloneduserAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Delete Trustee User
         /// </summary>
@@ -855,7 +855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeUserAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Delete Trustee User Roles
         /// </summary>
@@ -879,7 +879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeUserRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Delete Org Trust
         /// </summary>
@@ -901,7 +901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorAsyncWithHttpInfo (string trustorOrgId);
-        
+
         /// <summary>
         /// Delete Cloned User
         /// </summary>
@@ -925,7 +925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorCloneduserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Delete Trustee User
         /// </summary>
@@ -949,7 +949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorUserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Get Pairing Info
         /// </summary>
@@ -971,7 +971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pairingId">Pairing Id</param>
         /// <returns>Task of ApiResponse (TrustRequest)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrustRequest>> GetOrgauthorizationPairingAsyncWithHttpInfo (string pairingId);
-        
+
         /// <summary>
         /// Get Org Trust
         /// </summary>
@@ -993,7 +993,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
         System.Threading.Tasks.Task<ApiResponse<Trustee>> GetOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId);
-        
+
         /// <summary>
         /// The list of cloned users from the trustee organization (i.e. users with a native user record).
         /// </summary>
@@ -1015,7 +1015,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of ApiResponse (ClonedUserEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ClonedUserEntityListing>> GetOrgauthorizationTrusteeClonedusersAsyncWithHttpInfo (string trusteeOrgId);
-        
+
         /// <summary>
         /// Get Trustee User
         /// </summary>
@@ -1039,7 +1039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (TrustUser)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrustUser>> GetOrgauthorizationTrusteeUserAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Get Trustee User Roles
         /// </summary>
@@ -1063,7 +1063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetOrgauthorizationTrusteeUserRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// The list of trustee users for this organization (i.e. users granted access to this organization).
         /// </summary>
@@ -1089,7 +1089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustUserEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrustUserEntityListing>> GetOrgauthorizationTrusteeUsersAsyncWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
-        
+
         /// <summary>
         /// The list of trustees for this organization (i.e. organizations granted access to this organization).
         /// </summary>
@@ -1113,7 +1113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrustEntityListing>> GetOrgauthorizationTrusteesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
-        
+
         /// <summary>
         /// Get organization authorization trust with Customer Care, if one exists.
         /// </summary>
@@ -1133,7 +1133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Trustee)</returns>
         System.Threading.Tasks.Task<ApiResponse<Trustee>> GetOrgauthorizationTrusteesDefaultAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Get Org Trust
         /// </summary>
@@ -1155,7 +1155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of ApiResponse (Trustor)</returns>
         System.Threading.Tasks.Task<ApiResponse<Trustor>> GetOrgauthorizationTrustorAsyncWithHttpInfo (string trustorOrgId);
-        
+
         /// <summary>
         /// Get Cloned User
         /// </summary>
@@ -1179,7 +1179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (ClonedUser)</returns>
         System.Threading.Tasks.Task<ApiResponse<ClonedUser>> GetOrgauthorizationTrustorCloneduserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// The list of cloned users in the trustor organization (i.e. users with a native user record).
         /// </summary>
@@ -1201,7 +1201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of ApiResponse (ClonedUserEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ClonedUserEntityListing>> GetOrgauthorizationTrustorClonedusersAsyncWithHttpInfo (string trustorOrgId);
-        
+
         /// <summary>
         /// Get Trustee User
         /// </summary>
@@ -1225,7 +1225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (TrustUser)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrustUser>> GetOrgauthorizationTrustorUserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// The list of users in the trustor organization (i.e. users granted access).
         /// </summary>
@@ -1251,7 +1251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustUserEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrustUserEntityListing>> GetOrgauthorizationTrustorUsersAsyncWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
-        
+
         /// <summary>
         /// The list of organizations that have authorized/trusted your organization.
         /// </summary>
@@ -1275,7 +1275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustorEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrustorEntityListing>> GetOrgauthorizationTrustorsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
-        
+
         /// <summary>
         /// A pairing id is created by the trustee and given to the trustor to create a trust.
         /// </summary>
@@ -1297,7 +1297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairing Info</param>
         /// <returns>Task of ApiResponse (TrustRequest)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrustRequest>> PostOrgauthorizationPairingsAsyncWithHttpInfo (TrustRequestCreate body);
-        
+
         /// <summary>
         /// Add a user to the trust.
         /// </summary>
@@ -1321,7 +1321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Trust</param>
         /// <returns>Task of ApiResponse (TrustUser)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrustUser>> PostOrgauthorizationTrusteeUsersAsyncWithHttpInfo (string trusteeOrgId, TrustMemberCreate body);
-        
+
         /// <summary>
         /// Create a new organization authorization trust. This is required to grant other organizations access to your organization.
         /// </summary>
@@ -1343,21 +1343,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Trust</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
         System.Threading.Tasks.Task<ApiResponse<Trustee>> PostOrgauthorizationTrusteesAsyncWithHttpInfo (TrustCreate body);
-        
-        /// <summary>
-        /// Get Org Trustee Audits
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Values to scope the request.</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>Task of AuditQueryResponse</returns>
-        System.Threading.Tasks.Task<AuditQueryResponse> PostOrgauthorizationTrusteesAuditsAsync (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get Org Trustee Audits
@@ -1369,11 +1354,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Values to scope the request.</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>Task of ApiResponse (AuditQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuditQueryResponse>> PostOrgauthorizationTrusteesAuditsAsyncWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
-        
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> PostOrgauthorizationTrusteesAuditsAsync (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get Org Trustee Audits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Values to scope the request.</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostOrgauthorizationTrusteesAuditsAsyncWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
         /// <summary>
         /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
         /// </summary>
@@ -1397,21 +1397,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
         System.Threading.Tasks.Task<ApiResponse<Trustee>> PostOrgauthorizationTrusteesDefaultAsyncWithHttpInfo (bool? assignDefaultRole = null, bool? autoExpire = null);
-        
-        /// <summary>
-        /// Get Org Trustor Audits
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Values to scope the request.</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>Task of AuditQueryResponse</returns>
-        System.Threading.Tasks.Task<AuditQueryResponse> PostOrgauthorizationTrustorAuditsAsync (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get Org Trustor Audits
@@ -1423,11 +1408,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Values to scope the request.</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>Task of ApiResponse (AuditQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuditQueryResponse>> PostOrgauthorizationTrustorAuditsAsyncWithHttpInfo (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
-        
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> PostOrgauthorizationTrustorAuditsAsync (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get Org Trustor Audits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Values to scope the request.</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostOrgauthorizationTrustorAuditsAsyncWithHttpInfo (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
         /// <summary>
         /// Update Org Trust
         /// </summary>
@@ -1451,7 +1451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
         System.Threading.Tasks.Task<ApiResponse<Trustee>> PutOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId, TrustUpdate body);
-        
+
         /// <summary>
         /// Update Trustee User Roles
         /// </summary>
@@ -1477,7 +1477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeUserRoledivisionsAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body);
-        
+
         /// <summary>
         /// Update Trustee User Roles
         /// </summary>
@@ -1503,7 +1503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeUserRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId, List<string> body);
-        
+
         /// <summary>
         /// Creates a clone of the trustee user in the trustor org.
         /// </summary>
@@ -1527,7 +1527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (ClonedUser)</returns>
         System.Threading.Tasks.Task<ApiResponse<ClonedUser>> PutOrgauthorizationTrustorCloneduserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
-        
+
         /// <summary>
         /// Add a Trustee user to the trust.
         /// </summary>
@@ -1551,9 +1551,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (TrustUser)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrustUser>> PutOrgauthorizationTrustorUserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
-        
+
         #endregion Asynchronous Operations
-        
+
     }
 
     /// <summary>
@@ -1643,7 +1643,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
-        
+
         /// <summary>
         /// Delete Org Trust 
         /// </summary>
@@ -1677,17 +1677,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1708,7 +1707,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1737,7 +1736,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete Org Trust 
         /// </summary>
@@ -1773,16 +1772,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1804,7 +1802,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1833,8 +1831,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Deletes cloned user 
         /// </summary>
@@ -1873,17 +1871,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1905,7 +1902,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1934,7 +1931,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Deletes cloned user 
         /// </summary>
@@ -1976,16 +1973,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2008,7 +2004,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2037,8 +2033,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete Trustee User 
         /// </summary>
@@ -2077,17 +2073,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2109,7 +2104,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2138,7 +2133,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete Trustee User 
         /// </summary>
@@ -2180,16 +2175,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2212,7 +2206,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2241,8 +2235,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete Trustee User Roles 
         /// </summary>
@@ -2281,17 +2275,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2313,7 +2306,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2342,7 +2335,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete Trustee User Roles 
         /// </summary>
@@ -2384,16 +2377,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2416,7 +2408,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2445,8 +2437,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete Org Trust 
         /// </summary>
@@ -2480,17 +2472,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2511,7 +2502,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2540,7 +2531,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete Org Trust 
         /// </summary>
@@ -2576,16 +2567,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2607,7 +2597,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2636,8 +2626,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete Cloned User 
         /// </summary>
@@ -2676,17 +2666,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2708,7 +2697,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2737,7 +2726,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete Cloned User 
         /// </summary>
@@ -2779,16 +2768,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2811,7 +2799,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2840,8 +2828,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete Trustee User 
         /// </summary>
@@ -2880,17 +2868,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2912,7 +2899,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2941,7 +2928,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete Trustee User 
         /// </summary>
@@ -2983,16 +2970,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3015,7 +3001,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3044,8 +3030,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Pairing Info 
         /// </summary>
@@ -3080,17 +3066,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3111,7 +3096,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3140,7 +3125,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Pairing Info 
         /// </summary>
@@ -3177,16 +3162,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3208,7 +3192,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3237,8 +3221,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Org Trust 
         /// </summary>
@@ -3273,17 +3257,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3304,7 +3287,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3333,7 +3316,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Org Trust 
         /// </summary>
@@ -3370,16 +3353,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3401,7 +3383,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3430,8 +3412,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// The list of cloned users from the trustee organization (i.e. users with a native user record). There can be no more than 5 cloned users per organization, so results are represented as simple list and not paged
         /// </summary>
@@ -3466,17 +3448,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3497,7 +3478,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3526,7 +3507,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// The list of cloned users from the trustee organization (i.e. users with a native user record). There can be no more than 5 cloned users per organization, so results are represented as simple list and not paged
         /// </summary>
@@ -3563,16 +3544,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3594,7 +3574,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3623,8 +3603,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Trustee User 
         /// </summary>
@@ -3664,17 +3644,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3696,7 +3675,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3725,7 +3704,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Trustee User 
         /// </summary>
@@ -3768,16 +3747,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3800,7 +3778,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3829,8 +3807,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Trustee User Roles 
         /// </summary>
@@ -3870,17 +3848,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3902,7 +3879,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3931,7 +3908,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Trustee User Roles 
         /// </summary>
@@ -3974,16 +3951,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4006,7 +3982,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4035,8 +4011,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// The list of trustee users for this organization (i.e. users granted access to this organization). 
         /// </summary>
@@ -4075,17 +4051,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4108,7 +4083,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4137,7 +4112,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// The list of trustee users for this organization (i.e. users granted access to this organization). 
         /// </summary>
@@ -4178,16 +4153,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4211,7 +4185,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4240,8 +4214,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// The list of trustees for this organization (i.e. organizations granted access to this organization). 
         /// </summary>
@@ -4275,17 +4249,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4307,7 +4280,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4336,7 +4309,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// The list of trustees for this organization (i.e. organizations granted access to this organization). 
         /// </summary>
@@ -4371,16 +4344,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4403,7 +4375,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4432,8 +4404,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get organization authorization trust with Customer Care, if one exists. 
         /// </summary>
@@ -4463,17 +4435,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4493,7 +4464,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4522,7 +4493,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get organization authorization trust with Customer Care, if one exists. 
         /// </summary>
@@ -4553,16 +4524,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4583,7 +4553,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4612,8 +4582,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Org Trust 
         /// </summary>
@@ -4648,17 +4618,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4679,7 +4648,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4708,7 +4677,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Org Trust 
         /// </summary>
@@ -4745,16 +4714,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4776,7 +4744,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4805,8 +4773,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Cloned User 
         /// </summary>
@@ -4846,17 +4814,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4878,7 +4845,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4907,7 +4874,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Cloned User 
         /// </summary>
@@ -4950,16 +4917,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4982,7 +4948,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5011,8 +4977,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// The list of cloned users in the trustor organization (i.e. users with a native user record). 
         /// </summary>
@@ -5047,17 +5013,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5078,7 +5043,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5107,7 +5072,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// The list of cloned users in the trustor organization (i.e. users with a native user record). 
         /// </summary>
@@ -5144,16 +5109,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5175,7 +5139,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5204,8 +5168,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Trustee User 
         /// </summary>
@@ -5245,17 +5209,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5277,7 +5240,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5306,7 +5269,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Trustee User 
         /// </summary>
@@ -5349,16 +5312,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5381,7 +5343,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5410,8 +5372,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// The list of users in the trustor organization (i.e. users granted access). 
         /// </summary>
@@ -5450,17 +5412,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5483,7 +5444,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5512,7 +5473,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// The list of users in the trustor organization (i.e. users granted access). 
         /// </summary>
@@ -5553,16 +5514,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5586,7 +5546,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5615,8 +5575,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// The list of organizations that have authorized/trusted your organization. 
         /// </summary>
@@ -5650,17 +5610,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5682,7 +5641,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5711,7 +5670,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// The list of organizations that have authorized/trusted your organization. 
         /// </summary>
@@ -5746,16 +5705,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5778,7 +5736,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5807,8 +5765,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// A pairing id is created by the trustee and given to the trustor to create a trust. 
         /// </summary>
@@ -5843,7 +5801,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -5851,9 +5808,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5876,9 +5834,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5907,7 +5865,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// A pairing id is created by the trustee and given to the trustor to create a trust. 
         /// </summary>
@@ -5944,7 +5902,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -5952,8 +5909,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5977,9 +5935,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6008,8 +5966,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Add a user to the trust. 
         /// </summary>
@@ -6049,7 +6007,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6057,9 +6014,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6083,9 +6041,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6114,7 +6072,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Add a user to the trust. 
         /// </summary>
@@ -6157,7 +6115,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6165,8 +6122,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6191,9 +6149,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6222,8 +6180,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a new organization authorization trust. This is required to grant other organizations access to your organization. 
         /// </summary>
@@ -6258,7 +6216,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6266,9 +6223,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6291,9 +6249,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6322,7 +6280,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a new organization authorization trust. This is required to grant other organizations access to your organization. 
         /// </summary>
@@ -6359,7 +6317,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6367,8 +6324,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6392,9 +6350,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6423,8 +6381,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Org Trustee Audits 
         /// </summary>
@@ -6432,12 +6390,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Values to scope the request.</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>AuditQueryResponse</returns>
-        public AuditQueryResponse PostOrgauthorizationTrusteesAudits (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>Object</returns>
+        public Object PostOrgauthorizationTrusteesAudits (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<AuditQueryResponse> localVarResponse = PostOrgauthorizationTrusteesAuditsWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder);
+             ApiResponse<Object> localVarResponse = PostOrgauthorizationTrusteesAuditsWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -6448,10 +6406,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Values to scope the request.</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>ApiResponse of AuditQueryResponse</returns>
-        public ApiResponse< AuditQueryResponse > PostOrgauthorizationTrusteesAuditsWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > PostOrgauthorizationTrusteesAuditsWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6467,7 +6425,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6475,9 +6432,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6504,9 +6462,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6528,14 +6486,14 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostOrgauthorizationTrusteesAudits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AuditQueryResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (AuditQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuditQueryResponse)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Org Trustee Audits 
         /// </summary>
@@ -6543,12 +6501,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Values to scope the request.</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>Task of AuditQueryResponse</returns>
-        public async System.Threading.Tasks.Task<AuditQueryResponse> PostOrgauthorizationTrusteesAuditsAsync (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> PostOrgauthorizationTrusteesAuditsAsync (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<AuditQueryResponse> localVarResponse = await PostOrgauthorizationTrusteesAuditsAsyncWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder);
+             ApiResponse<Object> localVarResponse = await PostOrgauthorizationTrusteesAuditsAsyncWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -6560,10 +6518,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Values to scope the request.</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>Task of ApiResponse (AuditQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AuditQueryResponse>> PostOrgauthorizationTrusteesAuditsAsyncWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostOrgauthorizationTrusteesAuditsAsyncWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6580,7 +6538,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6588,8 +6545,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6617,9 +6575,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6641,15 +6599,15 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostOrgauthorizationTrusteesAudits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AuditQueryResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (AuditQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuditQueryResponse)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization. 
         /// </summary>
@@ -6683,17 +6641,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6715,7 +6672,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6744,7 +6701,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization. 
         /// </summary>
@@ -6779,16 +6736,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6811,7 +6767,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6840,8 +6796,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Org Trustor Audits 
         /// </summary>
@@ -6849,12 +6805,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Values to scope the request.</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>AuditQueryResponse</returns>
-        public AuditQueryResponse PostOrgauthorizationTrustorAudits (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>Object</returns>
+        public Object PostOrgauthorizationTrustorAudits (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<AuditQueryResponse> localVarResponse = PostOrgauthorizationTrustorAuditsWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder);
+             ApiResponse<Object> localVarResponse = PostOrgauthorizationTrustorAuditsWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -6865,10 +6821,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Values to scope the request.</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>ApiResponse of AuditQueryResponse</returns>
-        public ApiResponse< AuditQueryResponse > PostOrgauthorizationTrustorAuditsWithHttpInfo (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > PostOrgauthorizationTrustorAuditsWithHttpInfo (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6884,7 +6840,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -6892,9 +6847,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6921,9 +6877,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6945,14 +6901,14 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostOrgauthorizationTrustorAudits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AuditQueryResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (AuditQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuditQueryResponse)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Org Trustor Audits 
         /// </summary>
@@ -6960,12 +6916,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Values to scope the request.</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>Task of AuditQueryResponse</returns>
-        public async System.Threading.Tasks.Task<AuditQueryResponse> PostOrgauthorizationTrustorAuditsAsync (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> PostOrgauthorizationTrustorAuditsAsync (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<AuditQueryResponse> localVarResponse = await PostOrgauthorizationTrustorAuditsAsyncWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder);
+             ApiResponse<Object> localVarResponse = await PostOrgauthorizationTrustorAuditsAsyncWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -6977,10 +6933,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Values to scope the request.</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
-        /// <param name="sortOrder">Sort order (optional, default to descending)</param>
-        /// <returns>Task of ApiResponse (AuditQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AuditQueryResponse>> PostOrgauthorizationTrustorAuditsAsyncWithHttpInfo (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostOrgauthorizationTrustorAuditsAsyncWithHttpInfo (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6997,7 +6953,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7005,8 +6960,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7034,9 +6990,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7058,15 +7014,15 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostOrgauthorizationTrustorAudits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AuditQueryResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (AuditQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuditQueryResponse)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update Org Trust 
         /// </summary>
@@ -7106,7 +7062,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7114,9 +7069,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7140,9 +7096,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7171,7 +7127,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update Org Trust 
         /// </summary>
@@ -7214,7 +7170,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7222,8 +7177,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7248,9 +7204,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7279,8 +7235,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update Trustee User Roles 
         /// </summary>
@@ -7325,7 +7281,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7333,9 +7288,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7360,9 +7316,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7391,7 +7347,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update Trustee User Roles 
         /// </summary>
@@ -7440,7 +7396,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7448,8 +7403,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7475,9 +7431,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7506,8 +7462,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update Trustee User Roles 
         /// </summary>
@@ -7552,7 +7508,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7560,9 +7515,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7587,9 +7543,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7618,7 +7574,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update Trustee User Roles 
         /// </summary>
@@ -7667,7 +7623,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -7675,8 +7630,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7702,9 +7658,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7733,8 +7689,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates a clone of the trustee user in the trustor org. 
         /// </summary>
@@ -7774,17 +7730,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7806,7 +7761,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7835,7 +7790,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates a clone of the trustee user in the trustor org. 
         /// </summary>
@@ -7878,16 +7833,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7910,7 +7864,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7939,8 +7893,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Add a Trustee user to the trust. 
         /// </summary>
@@ -7980,17 +7934,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8012,7 +7965,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8041,7 +7994,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Add a Trustee user to the trust. 
         /// </summary>
@@ -8084,16 +8037,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8116,7 +8068,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8145,8 +8097,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
     }
-    
+
 }

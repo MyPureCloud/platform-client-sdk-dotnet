@@ -18,54 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SmsAddress :  IEquatable<SmsAddress>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsAddress" /> class.
         /// </summary>
@@ -86,87 +38,87 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The id of this address.
         /// </summary>
         /// <value>The id of this address.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number and street address where this address is located.
         /// </summary>
         /// <value>The number and street address where this address is located.</value>
         [DataMember(Name="street", EmitDefaultValue=false)]
         public string Street { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The city in which this address is in
         /// </summary>
         /// <value>The city in which this address is in</value>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The state or region this address is in
         /// </summary>
         /// <value>The state or region this address is in</value>
         [DataMember(Name="region", EmitDefaultValue=false)]
         public string Region { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The postal code this address is in
         /// </summary>
         /// <value>The postal code this address is in</value>
         [DataMember(Name="postalCode", EmitDefaultValue=false)]
         public string PostalCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ISO country code of this address
         /// </summary>
         /// <value>The ISO country code of this address</value>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// In some countries, addresses are validated to comply with local regulation. In those countries, if the address you provide does not pass validation, it will not be accepted as an Address. This value will be true if the Address has been validated, or false for countries that don&#39;t require validation or if the Address is non-compliant.
+        /// In some countries, addresses are validated to comply with local regulation. In those countries, if the address you provide does not pass validation, it will not be accepted as an Address. This value will be true if the Address has been validated, or false for countries that don't require validation or if the Address is non-compliant.
         /// </summary>
-        /// <value>In some countries, addresses are validated to comply with local regulation. In those countries, if the address you provide does not pass validation, it will not be accepted as an Address. This value will be true if the Address has been validated, or false for countries that don&#39;t require validation or if the Address is non-compliant.</value>
+        /// <value>In some countries, addresses are validated to comply with local regulation. In those countries, if the address you provide does not pass validation, it will not be accepted as an Address. This value will be true if the Address has been validated, or false for countries that don't require validation or if the Address is non-compliant.</value>
         [DataMember(Name="validated", EmitDefaultValue=false)]
         public bool? Validated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -175,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SmsAddress {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Street: ").Append(Street).Append("\n");
@@ -283,34 +235,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Street != null)
                     hash = hash * 59 + this.Street.GetHashCode();
-                
+
                 if (this.City != null)
                     hash = hash * 59 + this.City.GetHashCode();
-                
+
                 if (this.Region != null)
                     hash = hash * 59 + this.Region.GetHashCode();
-                
+
                 if (this.PostalCode != null)
                     hash = hash * 59 + this.PostalCode.GetHashCode();
-                
+
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
-                
+
                 if (this.Validated != null)
                     hash = hash * 59 + this.Validated.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

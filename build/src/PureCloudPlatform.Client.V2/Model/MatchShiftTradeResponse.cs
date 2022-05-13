@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MatchShiftTradeResponse :  IEquatable<MatchShiftTradeResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MatchShiftTradeResponse" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The associated shift trade
         /// </summary>
         /// <value>The associated shift trade</value>
         [DataMember(Name="trade", EmitDefaultValue=false)]
         public ShiftTradeResponse Trade { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Constraint violations which disallow this shift trade
         /// </summary>
         /// <value>Constraint violations which disallow this shift trade</value>
         [DataMember(Name="violations", EmitDefaultValue=false)]
         public List<ShiftTradeMatchViolation> Violations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Constraint violations for this shift trade which require shift trade administrator review
         /// </summary>
         /// <value>Constraint violations for this shift trade which require shift trade administrator review</value>
         [DataMember(Name="adminReviewViolations", EmitDefaultValue=false)]
         public List<ShiftTradeMatchViolation> AdminReviewViolations { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MatchShiftTradeResponse {\n");
-            
+
             sb.Append("  Trade: ").Append(Trade).Append("\n");
             sb.Append("  Violations: ").Append(Violations).Append("\n");
             sb.Append("  AdminReviewViolations: ").Append(AdminReviewViolations).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Trade != null)
                     hash = hash * 59 + this.Trade.GetHashCode();
-                
+
                 if (this.Violations != null)
                     hash = hash * 59 + this.Violations.GetHashCode();
-                
+
                 if (this.AdminReviewViolations != null)
                     hash = hash * 59 + this.AdminReviewViolations.GetHashCode();
-                
+
                 return hash;
             }
         }

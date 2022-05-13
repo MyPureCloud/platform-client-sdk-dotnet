@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimError :  IEquatable<ScimError>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of SCIM error when httpStatus is a \"400\" error.
         /// </summary>
@@ -101,29 +93,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "sensitive")]
             Sensitive
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of SCIM error when httpStatus is a \"400\" error.
         /// </summary>
         /// <value>The type of SCIM error when httpStatus is a \"400\" error.</value>
         [DataMember(Name="scimType", EmitDefaultValue=false)]
-        public ScimTypeEnum? ScimType { get; set; }
-        
-        
-        
-        
-    
+        public ScimTypeEnum? ScimType { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimError" /> class.
         /// </summary>
@@ -132,36 +107,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of schemas for the SCIM error.
         /// </summary>
         /// <value>The list of schemas for the SCIM error.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
         public List<string> Schemas { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The HTTP status code returned for the SCIM error.
         /// </summary>
         /// <value>The HTTP status code returned for the SCIM error.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The detailed description of the SCIM error.
         /// </summary>
         /// <value>The detailed description of the SCIM error.</value>
         [DataMember(Name="detail", EmitDefaultValue=false)]
         public string Detail { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -170,7 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimError {\n");
-            
+
             sb.Append("  Schemas: ").Append(Schemas).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  ScimType: ").Append(ScimType).Append("\n");
@@ -248,19 +223,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Schemas != null)
                     hash = hash * 59 + this.Schemas.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.ScimType != null)
                     hash = hash * 59 + this.ScimType.GetHashCode();
-                
+
                 if (this.Detail != null)
                     hash = hash * 59 + this.Detail.GetHashCode();
-                
+
                 return hash;
             }
         }

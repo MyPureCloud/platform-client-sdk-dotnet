@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkdayPointsTrend :  IEquatable<WorkdayPointsTrend>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Aggregated for same day comparison
         /// </summary>
@@ -86,36 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Saturday")]
             Saturday
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Aggregated for same day comparison
         /// </summary>
         /// <value>Aggregated for same day comparison</value>
         [DataMember(Name="dayOfWeek", EmitDefaultValue=false)]
-        public DayOfWeekEnum? DayOfWeek { get; set; }
-        
-        
-        
-        
-        
-        
-    
+        public DayOfWeekEnum? DayOfWeek { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkdayPointsTrend" /> class.
         /// </summary>
@@ -124,54 +89,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The start workday for the query range for the gamification points trend. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>The start workday for the query range for the gamification points trend. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateStartWorkday", EmitDefaultValue=false)]
         public String DateStartWorkday { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The end workday for the query range for the gamification points trend. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>The end workday for the query range for the gamification points trend. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateEndWorkday", EmitDefaultValue=false)]
         public String DateEndWorkday { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The targeted user for the query
         /// </summary>
         /// <value>The targeted user for the query</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UserReference User { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The total average points
         /// </summary>
         /// <value>The total average points</value>
         [DataMember(Name="averagePoints", EmitDefaultValue=false)]
         public double? AveragePoints { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Daily points trends
         /// </summary>
         /// <value>Daily points trends</value>
         [DataMember(Name="trend", EmitDefaultValue=false)]
         public List<WorkdayPointsTrendItem> Trend { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -180,7 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkdayPointsTrend {\n");
-            
+
             sb.Append("  DateStartWorkday: ").Append(DateStartWorkday).Append("\n");
             sb.Append("  DateEndWorkday: ").Append(DateEndWorkday).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -270,25 +235,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DateStartWorkday != null)
                     hash = hash * 59 + this.DateStartWorkday.GetHashCode();
-                
+
                 if (this.DateEndWorkday != null)
                     hash = hash * 59 + this.DateEndWorkday.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.DayOfWeek != null)
                     hash = hash * 59 + this.DayOfWeek.GetHashCode();
-                
+
                 if (this.AveragePoints != null)
                     hash = hash * 59 + this.AveragePoints.GetHashCode();
-                
+
                 if (this.Trend != null)
                     hash = hash * 59 + this.Trend.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData :  IEquatable<WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData" /> class.
         /// </summary>
@@ -36,15 +28,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets InteractingTimeSeconds
         /// </summary>
         [DataMember(Name="interactingTimeSeconds", EmitDefaultValue=false)]
         public double? InteractingTimeSeconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData {\n");
-            
+
             sb.Append("  InteractingTimeSeconds: ").Append(InteractingTimeSeconds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -113,10 +105,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.InteractingTimeSeconds != null)
                     hash = hash * 59 + this.InteractingTimeSeconds.GetHashCode();
-                
+
                 return hash;
             }
         }

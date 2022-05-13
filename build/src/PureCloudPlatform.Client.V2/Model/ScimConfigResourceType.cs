@@ -18,49 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimConfigResourceType :  IEquatable<ScimConfigResourceType>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimConfigResourceType" /> class.
         /// </summary>
@@ -69,79 +26,79 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;returned\&quot; is set to \&quot;always\&quot;.
+        /// The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readOnly\". \"returned\" is set to \"always\".
         /// </summary>
-        /// <value>The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;returned\&quot; is set to \&quot;always\&quot;.</value>
+        /// <value>The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readOnly\". \"returned\" is set to \"always\".</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of supported schemas.
         /// </summary>
         /// <value>The list of supported schemas.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
         public List<string> Schemas { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the resource type.
         /// </summary>
         /// <value>The name of the resource type.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of the resource type.
         /// </summary>
         /// <value>The description of the resource type.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI of the primary or base schema for the resource type.
         /// </summary>
         /// <value>The URI of the primary or base schema for the resource type.</value>
         [DataMember(Name="schema", EmitDefaultValue=false)]
         public string Schema { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of schema extensions for the resource type.
         /// </summary>
         /// <value>The list of schema extensions for the resource type.</value>
         [DataMember(Name="schemaExtensions", EmitDefaultValue=false)]
         public List<ScimConfigResourceTypeSchemaExtension> SchemaExtensions { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The HTTP-addressable endpoint of the resource type. Appears after the base URL.
         /// </summary>
         /// <value>The HTTP-addressable endpoint of the resource type. Appears after the base URL.</value>
         [DataMember(Name="endpoint", EmitDefaultValue=false)]
         public string Endpoint { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;ResourceType\&quot; resources.
+        /// The metadata of the SCIM resource. Only \"location\" and \"resourceType\" are set for \"ResourceType\" resources.
         /// </summary>
-        /// <value>The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;ResourceType\&quot; resources.</value>
+        /// <value>The metadata of the SCIM resource. Only \"location\" and \"resourceType\" are set for \"ResourceType\" resources.</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
         public ScimMetadata Meta { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -150,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimConfigResourceType {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Schemas: ").Append(Schemas).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -252,31 +209,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Schemas != null)
                     hash = hash * 59 + this.Schemas.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();
-                
+
                 if (this.SchemaExtensions != null)
                     hash = hash * 59 + this.SchemaExtensions.GetHashCode();
-                
+
                 if (this.Endpoint != null)
                     hash = hash * 59 + this.Endpoint.GetHashCode();
-                
+
                 if (this.Meta != null)
                     hash = hash * 59 + this.Meta.GetHashCode();
-                
+
                 return hash;
             }
         }

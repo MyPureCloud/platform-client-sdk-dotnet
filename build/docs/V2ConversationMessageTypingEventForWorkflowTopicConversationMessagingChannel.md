@@ -13,6 +13,8 @@ title: V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChan
 | **To** | [**V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingToRecipient**](V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingToRecipient.html) |  | [optional] |
 | **From** | [**V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingFromRecipient**](V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingFromRecipient.html) |  | [optional] |
 | **Time** | **DateTime?** |  | [optional] |
+| **DateModified** | **DateTime?** |  | [optional] |
+| **DateDeleted** | **DateTime?** |  | [optional] |
 | **Metadata** | [**V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannelMetadata**](V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannelMetadata.html) |  | [optional] |
 {: class="table table-striped"}
 

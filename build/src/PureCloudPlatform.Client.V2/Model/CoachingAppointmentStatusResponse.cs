@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CoachingAppointmentStatusResponse :  IEquatable<CoachingAppointmentStatusResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the coaching appointment
         /// </summary>
@@ -68,26 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "InvalidSchedule")]
             Invalidschedule
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the coaching appointment
         /// </summary>
         /// <value>The status of the coaching appointment</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        
-        
-    
+        public StatusEnum? Status { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingAppointmentStatusResponse" /> class.
         /// </summary>
@@ -96,36 +71,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The coaching appointment this status belongs to
         /// </summary>
         /// <value>The coaching appointment this status belongs to</value>
         [DataMember(Name="appointment", EmitDefaultValue=false)]
         public CoachingAppointmentReference Appointment { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User who updated the status
         /// </summary>
         /// <value>User who updated the status</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public UserReference CreatedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Creation time of the status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Creation time of the status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CoachingAppointmentStatusResponse {\n");
-            
+
             sb.Append("  Appointment: ").Append(Appointment).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -212,19 +187,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Appointment != null)
                     hash = hash * 59 + this.Appointment.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 return hash;
             }
         }

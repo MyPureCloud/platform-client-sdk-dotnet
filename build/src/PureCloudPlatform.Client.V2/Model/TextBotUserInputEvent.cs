@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotUserInputEvent :  IEquatable<TextBotUserInputEvent>
     {
-        
-        
         /// <summary>
         /// The input mode.
         /// </summary>
@@ -41,31 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Text")]
             Text
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The input mode.
         /// </summary>
         /// <value>The input mode.</value>
         [DataMember(Name="mode", EmitDefaultValue=false)]
         public ModeEnum? Mode { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotUserInputEvent" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotUserInputEvent() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotUserInputEvent" /> class.
         /// </summary>
@@ -78,18 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The input alternatives.
         /// </summary>
         /// <value>The input alternatives.</value>
         [DataMember(Name="alternatives", EmitDefaultValue=false)]
         public List<TextBotUserInputAlternative> Alternatives { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotUserInputEvent {\n");
-            
+
             sb.Append("  Mode: ").Append(Mode).Append("\n");
             sb.Append("  Alternatives: ").Append(Alternatives).Append("\n");
             sb.Append("}\n");
@@ -164,13 +149,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Mode != null)
                     hash = hash * 59 + this.Mode.GetHashCode();
-                
+
                 if (this.Alternatives != null)
                     hash = hash * 59 + this.Alternatives.GetHashCode();
-                
+
                 return hash;
             }
         }

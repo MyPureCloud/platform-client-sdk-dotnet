@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SpeechTextAnalyticsSettingsRequest :  IEquatable<SpeechTextAnalyticsSettingsRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SpeechTextAnalyticsSettingsRequest" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Setting to choose name for the default program for topic detection
         /// </summary>
         /// <value>Setting to choose name for the default program for topic detection</value>
         [DataMember(Name="defaultProgramId", EmitDefaultValue=false)]
         public string DefaultProgramId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Setting to choose expected dialects
         /// </summary>
         /// <value>Setting to choose expected dialects</value>
         [DataMember(Name="expectedDialects", EmitDefaultValue=false)]
         public List<string> ExpectedDialects { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SpeechTextAnalyticsSettingsRequest {\n");
-            
+
             sb.Append("  DefaultProgramId: ").Append(DefaultProgramId).Append("\n");
             sb.Append("  ExpectedDialects: ").Append(ExpectedDialects).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DefaultProgramId != null)
                     hash = hash * 59 + this.DefaultProgramId.GetHashCode();
-                
+
                 if (this.ExpectedDialects != null)
                     hash = hash * 59 + this.ExpectedDialects.GetHashCode();
-                
+
                 return hash;
             }
         }

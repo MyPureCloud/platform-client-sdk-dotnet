@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningAssignmentBulkRemoveResponse :  IEquatable<LearningAssignmentBulkRemoveResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignmentBulkRemoveResponse" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The learning assignments that were removed successfully
         /// </summary>
         /// <value>The learning assignments that were removed successfully</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<LearningAssignmentEntity> Entities { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The learning assignments that were not removed due to missing permissions
         /// </summary>
         /// <value>The learning assignments that were not removed due to missing permissions</value>
         [DataMember(Name="disallowedEntities", EmitDefaultValue=false)]
         public List<DisallowedEntityLearningAssignmentReference> DisallowedEntities { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningAssignmentBulkRemoveResponse {\n");
-            
+
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  DisallowedEntities: ").Append(DisallowedEntities).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
+
                 if (this.DisallowedEntities != null)
                     hash = hash * 59 + this.DisallowedEntities.GetHashCode();
-                
+
                 return hash;
             }
         }

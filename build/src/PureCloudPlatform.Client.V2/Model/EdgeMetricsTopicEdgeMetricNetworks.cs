@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeMetricsTopicEdgeMetricNetworks :  IEquatable<EdgeMetricsTopicEdgeMetricNetworks>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsTopicEdgeMetricNetworks" /> class.
         /// </summary>
@@ -64,47 +36,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Ifname
         /// </summary>
         [DataMember(Name="ifname", EmitDefaultValue=false)]
         public string Ifname { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SentBytesPerSec
         /// </summary>
         [DataMember(Name="sentBytesPerSec", EmitDefaultValue=false)]
         public int? SentBytesPerSec { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ReceivedBytesPerSec
         /// </summary>
         [DataMember(Name="receivedBytesPerSec", EmitDefaultValue=false)]
         public int? ReceivedBytesPerSec { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets BandwidthBitsPerSec
         /// </summary>
         [DataMember(Name="bandwidthBitsPerSec", EmitDefaultValue=false)]
         public int? BandwidthBitsPerSec { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UtilizationPct
         /// </summary>
         [DataMember(Name="utilizationPct", EmitDefaultValue=false)]
         public double? UtilizationPct { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeMetricsTopicEdgeMetricNetworks {\n");
-            
+
             sb.Append("  Ifname: ").Append(Ifname).Append("\n");
             sb.Append("  SentBytesPerSec: ").Append(SentBytesPerSec).Append("\n");
             sb.Append("  ReceivedBytesPerSec: ").Append(ReceivedBytesPerSec).Append("\n");
@@ -197,22 +169,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Ifname != null)
                     hash = hash * 59 + this.Ifname.GetHashCode();
-                
+
                 if (this.SentBytesPerSec != null)
                     hash = hash * 59 + this.SentBytesPerSec.GetHashCode();
-                
+
                 if (this.ReceivedBytesPerSec != null)
                     hash = hash * 59 + this.ReceivedBytesPerSec.GetHashCode();
-                
+
                 if (this.BandwidthBitsPerSec != null)
                     hash = hash * 59 + this.BandwidthBitsPerSec.GetHashCode();
-                
+
                 if (this.UtilizationPct != null)
                     hash = hash * 59 + this.UtilizationPct.GetHashCode();
-                
+
                 return hash;
             }
         }

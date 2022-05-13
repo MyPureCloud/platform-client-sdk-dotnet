@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EventSetting :  IEquatable<EventSetting>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EventSetting" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Settings regarding typing events
         /// </summary>
         /// <value>Settings regarding typing events</value>
         [DataMember(Name="typing", EmitDefaultValue=false)]
         public TypingSetting Typing { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Settings regarding presence events
         /// </summary>
         /// <value>Settings regarding presence events</value>
         [DataMember(Name="presence", EmitDefaultValue=false)]
         public PresenceSetting Presence { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EventSetting {\n");
-            
+
             sb.Append("  Typing: ").Append(Typing).Append("\n");
             sb.Append("  Presence: ").Append(Presence).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Typing != null)
                     hash = hash * 59 + this.Typing.GetHashCode();
-                
+
                 if (this.Presence != null)
                     hash = hash * 59 + this.Presence.GetHashCode();
-                
+
                 return hash;
             }
         }

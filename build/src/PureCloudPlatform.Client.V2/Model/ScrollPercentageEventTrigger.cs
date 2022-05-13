@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScrollPercentageEventTrigger :  IEquatable<ScrollPercentageEventTrigger>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ScrollPercentageEventTrigger" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ScrollPercentageEventTrigger() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScrollPercentageEventTrigger" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Percentage of a webpage at which an event is triggered.
         /// </summary>
         /// <value>Percentage of a webpage at which an event is triggered.</value>
         [DataMember(Name="percentage", EmitDefaultValue=false)]
         public int? Percentage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of event triggered after scrolling to the specified percentage.
         /// </summary>
         /// <value>Name of event triggered after scrolling to the specified percentage.</value>
         [DataMember(Name="eventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScrollPercentageEventTrigger {\n");
-            
+
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Percentage != null)
                     hash = hash * 59 + this.Percentage.GetHashCode();
-                
+
                 if (this.EventName != null)
                     hash = hash * 59 + this.EventName.GetHashCode();
-                
+
                 return hash;
             }
         }

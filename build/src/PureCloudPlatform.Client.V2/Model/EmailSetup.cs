@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EmailSetup :  IEquatable<EmailSetup>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailSetup" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The root PureCloud domain that all sub-domains are created from.
         /// </summary>
         /// <value>The root PureCloud domain that all sub-domains are created from.</value>
         [DataMember(Name="rootDomain", EmitDefaultValue=false)]
         public string RootDomain { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EmailSetup {\n");
-            
+
             sb.Append("  RootDomain: ").Append(RootDomain).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RootDomain != null)
                     hash = hash * 59 + this.RootDomain.GetHashCode();
-                
+
                 return hash;
             }
         }

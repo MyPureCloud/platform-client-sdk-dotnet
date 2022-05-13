@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkMetricsQoS :  IEquatable<TrunkMetricsQoS>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetricsQoS" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TrunkMetricsQoS() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetricsQoS" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Total number of QoS mismatches over the course of the last 24-hour period (sliding window).
         /// </summary>
         /// <value>Total number of QoS mismatches over the course of the last 24-hour period (sliding window).</value>
         [DataMember(Name="mismatchCount", EmitDefaultValue=false)]
         public int? MismatchCount { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkMetricsQoS {\n");
-            
+
             sb.Append("  MismatchCount: ").Append(MismatchCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MismatchCount != null)
                     hash = hash * 59 + this.MismatchCount.GetHashCode();
-                
+
                 return hash;
             }
         }

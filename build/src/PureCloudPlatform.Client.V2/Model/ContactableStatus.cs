@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactableStatus :  IEquatable<ContactableStatus>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactableStatus" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Indicates whether or not the entire contact is contactable for the associated media type.
         /// </summary>
         /// <value>Indicates whether or not the entire contact is contactable for the associated media type.</value>
         [DataMember(Name="contactable", EmitDefaultValue=false)]
         public bool? Contactable { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A map of individual contact method columns to whether the individual column is contactable for the associated media type.
         /// </summary>
         /// <value>A map of individual contact method columns to whether the individual column is contactable for the associated media type.</value>
         [DataMember(Name="columnStatus", EmitDefaultValue=false)]
         public Dictionary<string, ColumnStatus> ColumnStatus { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactableStatus {\n");
-            
+
             sb.Append("  Contactable: ").Append(Contactable).Append("\n");
             sb.Append("  ColumnStatus: ").Append(ColumnStatus).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Contactable != null)
                     hash = hash * 59 + this.Contactable.GetHashCode();
-                
+
                 if (this.ColumnStatus != null)
                     hash = hash * 59 + this.ColumnStatus.GetHashCode();
-                
+
                 return hash;
             }
         }

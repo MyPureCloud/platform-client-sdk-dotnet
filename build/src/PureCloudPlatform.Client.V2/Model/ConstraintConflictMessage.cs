@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConstraintConflictMessage :  IEquatable<ConstraintConflictMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConstraintConflictMessage" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Message for how to resolve a set of conflicted work plan constraints
         /// </summary>
         /// <value>Message for how to resolve a set of conflicted work plan constraints</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public WorkPlanConstraintConflictMessage Message { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Messages for the set of conflicted work plan constraints. Each element indicates the message of a work plan constraint that is conflicted in the set
         /// </summary>
         /// <value>Messages for the set of conflicted work plan constraints. Each element indicates the message of a work plan constraint that is conflicted in the set</value>
         [DataMember(Name="conflictedConstraintMessages", EmitDefaultValue=false)]
         public List<WorkPlanConstraintMessage> ConflictedConstraintMessages { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConstraintConflictMessage {\n");
-            
+
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  ConflictedConstraintMessages: ").Append(ConflictedConstraintMessages).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 if (this.ConflictedConstraintMessages != null)
                     hash = hash * 59 + this.ConflictedConstraintMessages.GetHashCode();
-                
+
                 return hash;
             }
         }

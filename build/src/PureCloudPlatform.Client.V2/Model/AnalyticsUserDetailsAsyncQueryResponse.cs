@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsUserDetailsAsyncQueryResponse :  IEquatable<AnalyticsUserDetailsAsyncQueryResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsUserDetailsAsyncQueryResponse" /> class.
         /// </summary>
@@ -50,33 +32,33 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets UserDetails
         /// </summary>
         [DataMember(Name="userDetails", EmitDefaultValue=false)]
         public List<AnalyticsUserDetail> UserDetails { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Optional cursor to indicate where to resume the results
         /// </summary>
         /// <value>Optional cursor to indicate where to resume the results</value>
         [DataMember(Name="cursor", EmitDefaultValue=false)]
         public string Cursor { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Data available up to at least this datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Data available up to at least this datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dataAvailabilityDate", EmitDefaultValue=false)]
         public DateTime? DataAvailabilityDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -85,7 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsUserDetailsAsyncQueryResponse {\n");
-            
+
             sb.Append("  UserDetails: ").Append(UserDetails).Append("\n");
             sb.Append("  Cursor: ").Append(Cursor).Append("\n");
             sb.Append("  DataAvailabilityDate: ").Append(DataAvailabilityDate).Append("\n");
@@ -157,16 +139,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserDetails != null)
                     hash = hash * 59 + this.UserDetails.GetHashCode();
-                
+
                 if (this.Cursor != null)
                     hash = hash * 59 + this.Cursor.GetHashCode();
-                
+
                 if (this.DataAvailabilityDate != null)
                     hash = hash * 59 + this.DataAvailabilityDate.GetHashCode();
-                
+
                 return hash;
             }
         }

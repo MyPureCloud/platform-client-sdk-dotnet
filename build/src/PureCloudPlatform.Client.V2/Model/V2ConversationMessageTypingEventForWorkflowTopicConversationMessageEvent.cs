@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class V2ConversationMessageTypingEventForWorkflowTopicConversationMessageEvent :  IEquatable<V2ConversationMessageTypingEventForWorkflowTopicConversationMessageEvent>
     {
-        
-        
         /// <summary>
         /// Gets or Sets EventType
         /// </summary>
@@ -46,29 +44,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Typing")]
             Typing
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets EventType
         /// </summary>
         [DataMember(Name="eventType", EmitDefaultValue=false)]
         public EventTypeEnum? EventType { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="V2ConversationMessageTypingEventForWorkflowTopicConversationMessageEvent" /> class.
         /// </summary>
@@ -83,25 +63,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets CoBrowse
         /// </summary>
         [DataMember(Name="coBrowse", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForWorkflowTopicConversationEventCoBrowse CoBrowse { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Typing
         /// </summary>
         [DataMember(Name="typing", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForWorkflowTopicConversationEventTyping Typing { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class V2ConversationMessageTypingEventForWorkflowTopicConversationMessageEvent {\n");
-            
+
             sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  CoBrowse: ").Append(CoBrowse).Append("\n");
             sb.Append("  Typing: ").Append(Typing).Append("\n");
@@ -182,16 +162,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EventType != null)
                     hash = hash * 59 + this.EventType.GetHashCode();
-                
+
                 if (this.CoBrowse != null)
                     hash = hash * 59 + this.CoBrowse.GetHashCode();
-                
+
                 if (this.Typing != null)
                     hash = hash * 59 + this.Typing.GetHashCode();
-                
+
                 return hash;
             }
         }

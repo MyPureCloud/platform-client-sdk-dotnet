@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate :  IEquatable<WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate>
     {
-        
-        
         /// <summary>
         /// Gets or Sets UpdateType
         /// </summary>
@@ -52,24 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Deleted")]
             Deleted
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets UpdateType
         /// </summary>
         [DataMember(Name="updateType", EmitDefaultValue=false)]
         public UpdateTypeEnum? UpdateType { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate" /> class.
         /// </summary>
@@ -82,17 +67,17 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets ShiftStartDates
         /// </summary>
         [DataMember(Name="shiftStartDates", EmitDefaultValue=false)]
         public List<DateTime?> ShiftStartDates { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -101,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate {\n");
-            
+
             sb.Append("  UpdateType: ").Append(UpdateType).Append("\n");
             sb.Append("  ShiftStartDates: ").Append(ShiftStartDates).Append("\n");
             sb.Append("}\n");
@@ -167,13 +152,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UpdateType != null)
                     hash = hash * 59 + this.UpdateType.GetHashCode();
-                
+
                 if (this.ShiftStartDates != null)
                     hash = hash * 59 + this.ShiftStartDates.GetHashCode();
-                
+
                 return hash;
             }
         }

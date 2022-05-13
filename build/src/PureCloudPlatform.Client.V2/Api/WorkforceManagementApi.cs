@@ -8,14 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
-    
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IWorkforceManagementApi : IApiAccessor
     {
         #region Synchronous Operations
-        
+
         /// <summary>
         /// Delete business unit
         /// </summary>
@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId);
-        
+
         /// <summary>
         /// Deletes an activity code
         /// </summary>
@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId);
-        
+
         /// <summary>
         /// Deletes the planning group
         /// </summary>
@@ -85,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitPlanninggroupWithHttpInfo (string businessUnitId, string planningGroupId);
-        
+
         /// <summary>
         /// Cancel a scheduling run
         /// </summary>
@@ -109,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitSchedulingRunWithHttpInfo (string businessUnitId, string runId);
-        
+
         /// <summary>
         /// Delete a service goal template
         /// </summary>
@@ -133,7 +133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of the service goal template to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitServicegoaltemplateWithHttpInfo (string businessUnitId, string serviceGoalTemplateId);
-        
+
         /// <summary>
         /// Delete a schedule
         /// </summary>
@@ -159,7 +159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
         ApiResponse<BuAsyncScheduleResponse> DeleteWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId);
-        
+
         /// <summary>
         /// Delete a short term forecast
         /// </summary>
@@ -185,7 +185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
-        
+
         /// <summary>
         /// Disable generated calendar link for the current user
         /// </summary>
@@ -205,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementCalendarUrlIcsWithHttpInfo ();
-        
+
         /// <summary>
         /// Delete management unit
         /// </summary>
@@ -227,7 +227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Deletes a time off limit object
         /// </summary>
@@ -251,7 +251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId);
-        
+
         /// <summary>
         /// Deletes a time off plan
         /// </summary>
@@ -275,7 +275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId);
-        
+
         /// <summary>
         /// Delete a work plan
         /// </summary>
@@ -299,7 +299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId);
-        
+
         /// <summary>
         /// Delete a work plan rotation
         /// </summary>
@@ -323,7 +323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId);
-        
+
         /// <summary>
         /// Get a list of UserScheduleAdherence records for the requested users
         /// </summary>
@@ -345,7 +345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
         /// <returns>ApiResponse of List&lt;UserScheduleAdherence&gt;</returns>
         ApiResponse<List<UserScheduleAdherence>> GetWorkforcemanagementAdherenceWithHttpInfo (List<string> userId);
-        
+
         /// <summary>
         /// Get status of the modeling job
         /// </summary>
@@ -367,7 +367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>ApiResponse of ModelingStatusResponse</returns>
         ApiResponse<ModelingStatusResponse> GetWorkforcemanagementAdhocmodelingjobWithHttpInfo (string jobId);
-        
+
         /// <summary>
         /// Get the management unit to which the agent belongs
         /// </summary>
@@ -389,7 +389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The ID of the agent to look up</param>
         /// <returns>ApiResponse of AgentManagementUnitReference</returns>
         ApiResponse<AgentManagementUnitReference> GetWorkforcemanagementAgentManagementunitWithHttpInfo (string agentId);
-        
+
         /// <summary>
         /// Get the management unit to which the currently logged in agent belongs
         /// </summary>
@@ -409,12 +409,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AgentManagementUnitReference</returns>
         ApiResponse<AgentManagementUnitReference> GetWorkforcemanagementAgentsMeManagementunitWithHttpInfo ();
-        
+
         /// <summary>
         /// Get business unit
         /// </summary>
         /// <remarks>
-        /// Expanding \&quot;settings\&quot; will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
+        /// Expanding \"settings\" will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
@@ -426,14 +426,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get business unit
         /// </summary>
         /// <remarks>
-        /// Expanding \&quot;settings\&quot; will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
+        /// Expanding \"settings\" will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of BusinessUnit</returns>
         ApiResponse<BusinessUnit> GetWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, List<string> expand = null);
-        
+
         /// <summary>
         /// Get an activity code
         /// </summary>
@@ -457,7 +457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
         ApiResponse<BusinessUnitActivityCode> GetWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId);
-        
+
         /// <summary>
         /// Get activity codes
         /// </summary>
@@ -479,7 +479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>ApiResponse of BusinessUnitActivityCodeListing</returns>
         ApiResponse<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId);
-        
+
         /// <summary>
         /// Get intraday planning groups for the given date
         /// </summary>
@@ -503,7 +503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of WfmIntradayPlanningGroupListing</returns>
         ApiResponse<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsWithHttpInfo (string businessUnitId, String date);
-        
+
         /// <summary>
         /// Get all authorized management units in the business unit
         /// </summary>
@@ -529,7 +529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
         ApiResponse<ManagementUnitListing> GetWorkforcemanagementBusinessunitManagementunitsWithHttpInfo (string businessUnitId, string feature = null, string divisionId = null);
-        
+
         /// <summary>
         /// Get a planning group
         /// </summary>
@@ -553,7 +553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to fetch</param>
         /// <returns>ApiResponse of PlanningGroup</returns>
         ApiResponse<PlanningGroup> GetWorkforcemanagementBusinessunitPlanninggroupWithHttpInfo (string businessUnitId, string planningGroupId);
-        
+
         /// <summary>
         /// Gets list of planning groups
         /// </summary>
@@ -575,7 +575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>ApiResponse of PlanningGroupList</returns>
         ApiResponse<PlanningGroupList> GetWorkforcemanagementBusinessunitPlanninggroupsWithHttpInfo (string businessUnitId);
-        
+
         /// <summary>
         /// Get a scheduling run
         /// </summary>
@@ -599,7 +599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>ApiResponse of BuScheduleRun</returns>
         ApiResponse<BuScheduleRun> GetWorkforcemanagementBusinessunitSchedulingRunWithHttpInfo (string businessUnitId, string runId);
-        
+
         /// <summary>
         /// Get the result of a rescheduling operation
         /// </summary>
@@ -627,7 +627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">The fields to expand. Omitting will return an empty response</param>
         /// <returns>ApiResponse of BuRescheduleResult</returns>
         ApiResponse<BuRescheduleResult> GetWorkforcemanagementBusinessunitSchedulingRunResultWithHttpInfo (string businessUnitId, string runId, List<string> managementUnitIds, List<string> expand);
-        
+
         /// <summary>
         /// Get the list of scheduling runs
         /// </summary>
@@ -649,7 +649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <returns>ApiResponse of BuScheduleRunListing</returns>
         ApiResponse<BuScheduleRunListing> GetWorkforcemanagementBusinessunitSchedulingRunsWithHttpInfo (string businessUnitId);
-        
+
         /// <summary>
         /// Get a service goal template
         /// </summary>
@@ -673,7 +673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of a service goal template to fetch</param>
         /// <returns>ApiResponse of ServiceGoalTemplate</returns>
         ApiResponse<ServiceGoalTemplate> GetWorkforcemanagementBusinessunitServicegoaltemplateWithHttpInfo (string businessUnitId, string serviceGoalTemplateId);
-        
+
         /// <summary>
         /// Gets list of service goal templates
         /// </summary>
@@ -695,7 +695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>ApiResponse of ServiceGoalTemplateList</returns>
         ApiResponse<ServiceGoalTemplateList> GetWorkforcemanagementBusinessunitServicegoaltemplatesWithHttpInfo (string businessUnitId);
-        
+
         /// <summary>
         /// Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
         /// </summary>
@@ -723,7 +723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of BuScheduleMetadata</returns>
         ApiResponse<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string expand = null);
-        
+
         /// <summary>
         /// Get the generation results for a generated schedule
         /// </summary>
@@ -749,7 +749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ApiResponse of ScheduleGenerationResult</returns>
         ApiResponse<ScheduleGenerationResult> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsWithHttpInfo (string businessUnitId, String weekId, string scheduleId);
-        
+
         /// <summary>
         /// Get the headcount forecast by planning group for the schedule
         /// </summary>
@@ -777,9 +777,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>ApiResponse of BuHeadcountForecastResponse</returns>
         ApiResponse<BuHeadcountForecastResponse> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
-        
+
         /// <summary>
-        /// Loads agent&#39;s schedule history.
+        /// Loads agent's schedule history.
         /// </summary>
         /// <remarks>
         /// 
@@ -793,7 +793,7 @@ namespace PureCloudPlatform.Client.V2.Api
         BuAgentScheduleHistoryResponse GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent (string businessUnitId, String weekId, string scheduleId, string agentId);
 
         /// <summary>
-        /// Loads agent&#39;s schedule history.
+        /// Loads agent's schedule history.
         /// </summary>
         /// <remarks>
         /// 
@@ -805,12 +805,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">THe ID of the agent</param>
         /// <returns>ApiResponse of BuAgentScheduleHistoryResponse</returns>
         ApiResponse<BuAgentScheduleHistoryResponse> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string agentId);
-        
+
         /// <summary>
         /// Get the list of week schedules for the specified week
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -824,7 +824,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the list of week schedules for the specified week
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -833,7 +833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of BuScheduleListing</returns>
         ApiResponse<BuScheduleListing> GetWorkforcemanagementBusinessunitWeekSchedulesWithHttpInfo (string businessUnitId, string weekId, bool? includeOnlyPublished = null, string expand = null);
-        
+
         /// <summary>
         /// Get a short term forecast
         /// </summary>
@@ -861,7 +861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of BuShortTermForecast</returns>
         ApiResponse<BuShortTermForecast> GetWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null);
-        
+
         /// <summary>
         /// Get the result of a short term forecast calculation
         /// </summary>
@@ -891,7 +891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuForecastResultResponse</returns>
         ApiResponse<BuForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
-        
+
         /// <summary>
         /// Gets the forecast generation results
         /// </summary>
@@ -917,7 +917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of BuForecastGenerationResult</returns>
         ApiResponse<BuForecastGenerationResult> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
-        
+
         /// <summary>
         /// Get the result of a long term forecast calculation
         /// </summary>
@@ -945,7 +945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of LongTermForecastResultResponse</returns>
         ApiResponse<LongTermForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null);
-        
+
         /// <summary>
         /// Gets the forecast planning group snapshot
         /// </summary>
@@ -971,12 +971,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of ForecastPlanningGroupsResponse</returns>
         ApiResponse<ForecastPlanningGroupsResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
-        
+
         /// <summary>
         /// Get short term forecasts
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
@@ -988,14 +988,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get short term forecasts
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>ApiResponse of BuShortTermForecastListing</returns>
         ApiResponse<BuShortTermForecastListing> GetWorkforcemanagementBusinessunitWeekShorttermforecastsWithHttpInfo (string businessUnitId, string weekDateId);
-        
+
         /// <summary>
         /// Get business units
         /// </summary>
@@ -1019,7 +1019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ApiResponse of BusinessUnitListing</returns>
         ApiResponse<BusinessUnitListing> GetWorkforcemanagementBusinessunitsWithHttpInfo (string feature = null, string divisionId = null);
-        
+
         /// <summary>
         /// Get business units across divisions
         /// </summary>
@@ -1041,7 +1041,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return business units in all divisions (optional)</param>
         /// <returns>ApiResponse of BusinessUnitListing</returns>
         ApiResponse<BusinessUnitListing> GetWorkforcemanagementBusinessunitsDivisionviewsWithHttpInfo (List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get ics formatted calendar based on shareable link
         /// </summary>
@@ -1063,7 +1063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="calendarId">The id of the ics-formatted calendar</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> GetWorkforcemanagementCalendarDataIcsWithHttpInfo (string calendarId);
-        
+
         /// <summary>
         /// Get existing calendar link for the current user
         /// </summary>
@@ -1083,7 +1083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CalendarUrlResponse</returns>
         ApiResponse<CalendarUrlResponse> GetWorkforcemanagementCalendarUrlIcsWithHttpInfo ();
-        
+
         /// <summary>
         /// Retrieves delete job status for historical data imports of the organization
         /// </summary>
@@ -1103,7 +1103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of HistoricalImportDeleteJobResponse</returns>
         ApiResponse<HistoricalImportDeleteJobResponse> GetWorkforcemanagementHistoricaldataDeletejobWithHttpInfo ();
-        
+
         /// <summary>
         /// Retrieves status of the historical data imports of the organization
         /// </summary>
@@ -1123,7 +1123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of HistoricalImportStatusListing</returns>
         ApiResponse<HistoricalImportStatusListing> GetWorkforcemanagementHistoricaldataImportstatusWithHttpInfo ();
-        
+
         /// <summary>
         /// Get management unit
         /// </summary>
@@ -1147,7 +1147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
         ApiResponse<ManagementUnit> GetWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId, List<string> expand = null);
-        
+
         /// <summary>
         /// Get activity codes
         /// </summary>
@@ -1169,7 +1169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of ActivityCodeContainer</returns>
         ApiResponse<ActivityCodeContainer> GetWorkforcemanagementManagementunitActivitycodesWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Get a list of user schedule adherence records for the requested management unit
         /// </summary>
@@ -1193,7 +1193,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of UserScheduleAdherenceListing</returns>
         ApiResponse<UserScheduleAdherenceListing> GetWorkforcemanagementManagementunitAdherenceWithHttpInfo (string managementUnitId, bool? forceDownloadService = null);
-        
+
         /// <summary>
         /// Get data for agent in the management unit
         /// </summary>
@@ -1219,7 +1219,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>ApiResponse of WfmAgent</returns>
         ApiResponse<WfmAgent> GetWorkforcemanagementManagementunitAgentWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null);
-        
+
         /// <summary>
         /// Gets all the shift trades for a given agent
         /// </summary>
@@ -1243,7 +1243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The agent id</param>
         /// <returns>ApiResponse of ShiftTradeListResponse</returns>
         ApiResponse<ShiftTradeListResponse> GetWorkforcemanagementManagementunitAgentShifttradesWithHttpInfo (string managementUnitId, string agentId);
-        
+
         /// <summary>
         /// Gets a summary of all shift trades in the matched state
         /// </summary>
@@ -1265,7 +1265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of ShiftTradeMatchesSummaryResponse</returns>
         ApiResponse<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Gets list of users available for whom you can send direct shift trade requests
         /// </summary>
@@ -1287,7 +1287,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
         ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Gets a time off limit object
         /// </summary>
@@ -1311,7 +1311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
         ApiResponse<TimeOffLimit> GetWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId);
-        
+
         /// <summary>
         /// Gets a list of time off limit objects under management unit.
         /// </summary>
@@ -1333,7 +1333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>ApiResponse of TimeOffLimitListing</returns>
         ApiResponse<TimeOffLimitListing> GetWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Gets a time off plan
         /// </summary>
@@ -1357,7 +1357,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
         ApiResponse<TimeOffPlan> GetWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId);
-        
+
         /// <summary>
         /// Gets a list of time off plans
         /// </summary>
@@ -1379,7 +1379,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>ApiResponse of TimeOffPlanListing</returns>
         ApiResponse<TimeOffPlanListing> GetWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Get a time off request
         /// </summary>
@@ -1405,7 +1405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
         ApiResponse<TimeOffRequestResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
-        
+
         /// <summary>
         /// Retrieves time off limit, allocated and waitlisted values according to specific time off request
         /// </summary>
@@ -1431,7 +1431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
         ApiResponse<QueryTimeOffLimitValuesResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
-        
+
         /// <summary>
         /// Get a list of time off requests for a given user
         /// </summary>
@@ -1457,7 +1457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
         ApiResponse<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null);
-        
+
         /// <summary>
         /// Get users in the management unit
         /// </summary>
@@ -1479,7 +1479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
         ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
         /// </summary>
@@ -1509,7 +1509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of WeekScheduleResponse</returns>
         ApiResponse<WeekScheduleResponse> GetWorkforcemanagementManagementunitWeekScheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null);
-        
+
         /// <summary>
         /// Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
         /// </summary>
@@ -1539,7 +1539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>ApiResponse of WeekScheduleListResponse</returns>
         ApiResponse<WeekScheduleListResponse> GetWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null);
-        
+
         /// <summary>
         /// Gets all the shift trades for a given week
         /// </summary>
@@ -1565,7 +1565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>ApiResponse of WeekShiftTradeListResponse</returns>
         ApiResponse<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
-        
+
         /// <summary>
         /// Get a work plan
         /// </summary>
@@ -1591,7 +1591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
         ApiResponse<WorkPlan> GetWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, List<string> includeOnly = null);
-        
+
         /// <summary>
         /// Get a work plan rotation
         /// </summary>
@@ -1615,7 +1615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
         /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
         ApiResponse<WorkPlanRotationResponse> GetWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId);
-        
+
         /// <summary>
         /// Get work plan rotations
         /// </summary>
@@ -1639,12 +1639,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of WorkPlanRotationListResponse</returns>
         ApiResponse<WorkPlanRotationListResponse> GetWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo (string managementUnitId, List<string> expand = null);
-        
+
         /// <summary>
         /// Get work plans
         /// </summary>
         /// <remarks>
-        /// \&quot;expand=details\&quot; is deprecated
+        /// \"expand=details\" is deprecated
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -1656,14 +1656,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get work plans
         /// </summary>
         /// <remarks>
-        /// \&quot;expand=details\&quot; is deprecated
+        /// \"expand=details\" is deprecated
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of WorkPlanListResponse</returns>
         ApiResponse<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, List<string> expand = null);
-        
+
         /// <summary>
         /// Get management units
         /// </summary>
@@ -1693,7 +1693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
         ApiResponse<ManagementUnitListing> GetWorkforcemanagementManagementunitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null);
-        
+
         /// <summary>
         /// Get management units across divisions
         /// </summary>
@@ -1715,7 +1715,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
         ApiResponse<ManagementUnitListing> GetWorkforcemanagementManagementunitsDivisionviewsWithHttpInfo (List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get a list of notifications for the current user
         /// </summary>
@@ -1735,7 +1735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of NotificationsResponse</returns>
         ApiResponse<NotificationsResponse> GetWorkforcemanagementNotificationsWithHttpInfo ();
-        
+
         /// <summary>
         /// Get status of the scheduling job
         /// </summary>
@@ -1757,7 +1757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the scheduling job</param>
         /// <returns>ApiResponse of SchedulingStatusResponse</returns>
         ApiResponse<SchedulingStatusResponse> GetWorkforcemanagementSchedulingjobWithHttpInfo (string jobId);
-        
+
         /// <summary>
         /// Gets all of my shift trades
         /// </summary>
@@ -1777,7 +1777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ShiftTradeListResponse</returns>
         ApiResponse<ShiftTradeListResponse> GetWorkforcemanagementShifttradesWithHttpInfo ();
-        
+
         /// <summary>
         /// Get a time off request for the current user
         /// </summary>
@@ -1799,7 +1799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
         ApiResponse<TimeOffRequestResponse> GetWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId);
-        
+
         /// <summary>
         /// Get the daily waitlist positions of a time off request for the current user
         /// </summary>
@@ -1821,7 +1821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>ApiResponse of WaitlistPositionListing</returns>
         ApiResponse<WaitlistPositionListing> GetWorkforcemanagementTimeoffrequestWaitlistpositionsWithHttpInfo (string timeOffRequestId);
-        
+
         /// <summary>
         /// Get a list of time off requests for the current user
         /// </summary>
@@ -1843,7 +1843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
         ApiResponse<TimeOffRequestList> GetWorkforcemanagementTimeoffrequestsWithHttpInfo (bool? recentlyReviewed = null);
-        
+
         /// <summary>
         /// Update business unit
         /// </summary>
@@ -1867,7 +1867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnit</returns>
         ApiResponse<BusinessUnit> PatchWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null);
-        
+
         /// <summary>
         /// Update an activity code
         /// </summary>
@@ -1893,7 +1893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
         ApiResponse<BusinessUnitActivityCode> PatchWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null);
-        
+
         /// <summary>
         /// Updates the planning group
         /// </summary>
@@ -1919,7 +1919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of PlanningGroup</returns>
         ApiResponse<PlanningGroup> PatchWorkforcemanagementBusinessunitPlanninggroupWithHttpInfo (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body = null);
-        
+
         /// <summary>
         /// Mark a schedule run as applied
         /// </summary>
@@ -1945,7 +1945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchWorkforcemanagementBusinessunitSchedulingRunWithHttpInfo (string businessUnitId, string runId, PatchBuScheduleRunRequest body = null);
-        
+
         /// <summary>
         /// Updates a service goal template
         /// </summary>
@@ -1971,7 +1971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ServiceGoalTemplate</returns>
         ApiResponse<ServiceGoalTemplate> PatchWorkforcemanagementBusinessunitServicegoaltemplateWithHttpInfo (string businessUnitId, string serviceGoalTemplateId, UpdateServiceGoalTemplate body = null);
-        
+
         /// <summary>
         /// Update the requested management unit
         /// </summary>
@@ -1995,7 +1995,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
         ApiResponse<ManagementUnit> PatchWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null);
-        
+
         /// <summary>
         /// Updates a time off limit object.
         /// </summary>
@@ -2021,7 +2021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
         ApiResponse<TimeOffLimit> PatchWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null);
-        
+
         /// <summary>
         /// Updates a time off plan
         /// </summary>
@@ -2047,7 +2047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
         ApiResponse<TimeOffPlan> PatchWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null);
-        
+
         /// <summary>
         /// Update a time off request
         /// </summary>
@@ -2075,7 +2075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
         ApiResponse<TimeOffRequestResponse> PatchWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
-        
+
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating agent
         /// </summary>
@@ -2085,10 +2085,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>ShiftTradeResponse</returns>
-        ShiftTradeResponse PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId);
+        ShiftTradeResponse PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body);
 
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating agent
@@ -2099,24 +2099,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>ApiResponse of ShiftTradeResponse</returns>
-        ApiResponse<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId);
-        
-        /// <summary>
-        /// Update a work plan
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="workPlanId">The ID of the work plan to update</param>
-        /// <param name="body">body (optional)</param>
-        /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
-        /// <returns>WorkPlan</returns>
-        WorkPlan PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null);
+        ApiResponse<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body);
 
         /// <summary>
         /// Update a work plan
@@ -2127,11 +2113,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WorkPlan</returns>
+        WorkPlan PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null);
+
+        /// <summary>
+        /// Update a work plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanId">The ID of the work plan to update</param>
+        /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
-        ApiResponse<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null);
-        
+        ApiResponse<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null);
+
         /// <summary>
         /// Update a work plan rotation
         /// </summary>
@@ -2157,7 +2157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
         ApiResponse<WorkPlanRotationResponse> PatchWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null);
-        
+
         /// <summary>
         /// Update a time off request for the current user
         /// </summary>
@@ -2181,7 +2181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
         ApiResponse<TimeOffRequestResponse> PatchWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId, AgentTimeOffRequestPatch body = null);
-        
+
         /// <summary>
         /// Request a historical adherence report for users across management units
         /// </summary>
@@ -2203,7 +2203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
         ApiResponse<WfmHistoricalAdherenceResponse> PostWorkforcemanagementAdherenceHistoricalWithHttpInfo (WfmHistoricalAdherenceQueryForUsers body = null);
-        
+
         /// <summary>
         /// Get published schedule for the current user
         /// </summary>
@@ -2225,7 +2225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BuCurrentAgentScheduleSearchResponse</returns>
         ApiResponse<BuCurrentAgentScheduleSearchResponse> PostWorkforcemanagementAgentschedulesMineWithHttpInfo (BuGetCurrentAgentScheduleRequest body = null);
-        
+
         /// <summary>
         /// Create a new activity code
         /// </summary>
@@ -2249,20 +2249,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
         ApiResponse<BusinessUnitActivityCode> PostWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId, CreateActivityCodeRequest body = null);
-        
-        /// <summary>
-        /// Search published schedules
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="body">body (optional)</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
-        BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementBusinessunitAgentschedulesSearch (string businessUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Search published schedules
@@ -2272,12 +2258,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
+        BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementBusinessunitAgentschedulesSearch (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
+
+        /// <summary>
+        /// Search published schedules
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesSearchResponse</returns>
-        ApiResponse<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementBusinessunitAgentschedulesSearchWithHttpInfo (string businessUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
-        
+        ApiResponse<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementBusinessunitAgentschedulesSearchWithHttpInfo (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
+
         /// <summary>
         /// Get intraday data for the given date for the requested planningGroupIds
         /// </summary>
@@ -2303,7 +2303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of AsyncIntradayResponse</returns>
         ApiResponse<AsyncIntradayResponse> PostWorkforcemanagementBusinessunitIntradayWithHttpInfo (string businessUnitId, bool? forceAsync = null, IntradayPlanningGroupRequest body = null);
-        
+
         /// <summary>
         /// Adds a new planning group
         /// </summary>
@@ -2327,7 +2327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of PlanningGroup</returns>
         ApiResponse<PlanningGroup> PostWorkforcemanagementBusinessunitPlanninggroupsWithHttpInfo (string businessUnitId, CreatePlanningGroupRequest body = null);
-        
+
         /// <summary>
         /// Adds a new service goal template
         /// </summary>
@@ -2351,7 +2351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ServiceGoalTemplate</returns>
         ApiResponse<ServiceGoalTemplate> PostWorkforcemanagementBusinessunitServicegoaltemplatesWithHttpInfo (string businessUnitId, CreateServiceGoalTemplate body = null);
-        
+
         /// <summary>
         /// Loads agent schedule data from the schedule. Used in combination with the metadata route
         /// </summary>
@@ -2383,7 +2383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesQueryResponse</returns>
         ApiResponse<BuAsyncAgentSchedulesQueryResponse> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
-        
+
         /// <summary>
         /// Copy a schedule
         /// </summary>
@@ -2411,7 +2411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
         ApiResponse<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleCopyWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body);
-        
+
         /// <summary>
         /// Start a rescheduling run
         /// </summary>
@@ -2439,7 +2439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleRunResponse</returns>
         ApiResponse<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body);
-        
+
         /// <summary>
         /// Starts processing a schedule update
         /// </summary>
@@ -2467,7 +2467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
         ApiResponse<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateWithHttpInfo (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body);
-        
+
         /// <summary>
         /// Creates a signed upload URL for updating a schedule
         /// </summary>
@@ -2495,7 +2495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of UpdateScheduleUploadResponse</returns>
         ApiResponse<UpdateScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlWithHttpInfo (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body);
-        
+
         /// <summary>
         /// Create a blank schedule
         /// </summary>
@@ -2521,7 +2521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuScheduleMetadata</returns>
         ApiResponse<BuScheduleMetadata> PostWorkforcemanagementBusinessunitWeekSchedulesWithHttpInfo (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body);
-        
+
         /// <summary>
         /// Generate a schedule
         /// </summary>
@@ -2547,7 +2547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleRunResponse</returns>
         ApiResponse<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateWithHttpInfo (string businessUnitId, String weekId, BuGenerateScheduleRequest body);
-        
+
         /// <summary>
         /// Starts processing a schedule import
         /// </summary>
@@ -2573,7 +2573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleUploadProcessingResponse</returns>
         ApiResponse<ScheduleUploadProcessingResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportWithHttpInfo (string businessUnitId, String weekId, WfmProcessUploadRequest body);
-        
+
         /// <summary>
         /// Creates a signed upload URL for importing a schedule
         /// </summary>
@@ -2599,7 +2599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ImportScheduleUploadResponse</returns>
         ApiResponse<ImportScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlWithHttpInfo (string businessUnitId, String weekId, UploadUrlRequestBody body);
-        
+
         /// <summary>
         /// Copy a short term forecast
         /// </summary>
@@ -2629,7 +2629,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of AsyncForecastOperationResult</returns>
         ApiResponse<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
-        
+
         /// <summary>
         /// Generate a short term forecast
         /// </summary>
@@ -2657,7 +2657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of AsyncForecastOperationResult</returns>
         ApiResponse<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithHttpInfo (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
-        
+
         /// <summary>
         /// Starts importing the uploaded short term forecast
         /// </summary>
@@ -2683,7 +2683,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of ImportForecastResponse</returns>
         ApiResponse<ImportForecastResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportWithHttpInfo (string businessUnitId, String weekDateId, WfmProcessUploadRequest body);
-        
+
         /// <summary>
         /// Creates a signed upload URL for importing a short term forecast
         /// </summary>
@@ -2709,7 +2709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ImportForecastUploadResponse</returns>
         ApiResponse<ImportForecastUploadResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlWithHttpInfo (string businessUnitId, String weekDateId, UploadUrlRequestBody body);
-        
+
         /// <summary>
         /// Add a new business unit
         /// </summary>
@@ -2731,7 +2731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnit</returns>
         ApiResponse<BusinessUnit> PostWorkforcemanagementBusinessunitsWithHttpInfo (CreateBusinessUnitRequest body = null);
-        
+
         /// <summary>
         /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
         /// </summary>
@@ -2739,7 +2739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>CalendarUrlResponse</returns>
         CalendarUrlResponse PostWorkforcemanagementCalendarUrlIcs (string language = null);
 
@@ -2750,10 +2750,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>ApiResponse of CalendarUrlResponse</returns>
         ApiResponse<CalendarUrlResponse> PostWorkforcemanagementCalendarUrlIcsWithHttpInfo (string language = null);
-        
+
         /// <summary>
         /// Delete the entries of the historical data imports in the organization
         /// </summary>
@@ -2773,7 +2773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of HistoricalImportDeleteJobResponse</returns>
         ApiResponse<HistoricalImportDeleteJobResponse> PostWorkforcemanagementHistoricaldataDeletejobWithHttpInfo ();
-        
+
         /// <summary>
         /// Trigger validation process for historical import
         /// </summary>
@@ -2795,20 +2795,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostWorkforcemanagementHistoricaldataValidateWithHttpInfo (ValidationServiceRequest body = null);
-        
-        /// <summary>
-        /// Query published schedules for given given time range for set of users
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
-        BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -2818,12 +2804,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
+        BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
+
+        /// <summary>
+        /// Query published schedules for given given time range for set of users
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesSearchResponse</returns>
-        ApiResponse<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
-        
+        ApiResponse<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
+
         /// <summary>
         /// Request a historical adherence report
         /// </summary>
@@ -2847,7 +2847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
         ApiResponse<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
-        
+
         /// <summary>
         /// Move the requested management unit to a new business unit
         /// </summary>
@@ -2871,7 +2871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of MoveManagementUnitResponse</returns>
         ApiResponse<MoveManagementUnitResponse> PostWorkforcemanagementManagementunitMoveWithHttpInfo (string managementUnitId, MoveManagementUnitRequest body = null);
-        
+
         /// <summary>
         /// Query published schedules for given given time range for set of users
         /// </summary>
@@ -2895,7 +2895,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
         ApiResponse<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null);
-        
+
         /// <summary>
         /// Creates a new time off limit object under management unit.
         /// </summary>
@@ -2919,7 +2919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
         ApiResponse<TimeOffLimit> PostWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null);
-        
+
         /// <summary>
         /// Retrieves time off limit related values based on a given set of filters.
         /// </summary>
@@ -2943,7 +2943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
         ApiResponse<QueryTimeOffLimitValuesResponse> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
-        
+
         /// <summary>
         /// Creates a new time off plan
         /// </summary>
@@ -2967,7 +2967,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
         ApiResponse<TimeOffPlan> PostWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null);
-        
+
         /// <summary>
         /// Create a new time off request
         /// </summary>
@@ -2991,7 +2991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
         ApiResponse<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null);
-        
+
         /// <summary>
         /// Fetches time off requests matching the conditions specified in the request body
         /// </summary>
@@ -3015,7 +3015,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestListing</returns>
         ApiResponse<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null);
-        
+
         /// <summary>
         /// Retrieves daily waitlist position for a list of time off requests
         /// </summary>
@@ -3039,20 +3039,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WaitlistPositionListing</returns>
         ApiResponse<WaitlistPositionListing> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null);
-        
-        /// <summary>
-        /// Matches a shift trade. This route can only be called by the receiving agent
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
-        /// <param name="tradeId">The ID of the shift trade to update</param>
-        /// <returns>MatchShiftTradeResponse</returns>
-        MatchShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId);
 
         /// <summary>
         /// Matches a shift trade. This route can only be called by the receiving agent
@@ -3063,11 +3049,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
+        /// <returns>MatchShiftTradeResponse</returns>
+        MatchShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body);
+
+        /// <summary>
+        /// Matches a shift trade. This route can only be called by the receiving agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>ApiResponse of MatchShiftTradeResponse</returns>
-        ApiResponse<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId);
-        
+        ApiResponse<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body);
+
         /// <summary>
         /// Adds a shift trade
         /// </summary>
@@ -3093,7 +3093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ShiftTradeResponse</returns>
         ApiResponse<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, AddShiftTradeRequest body);
-        
+
         /// <summary>
         /// Searches for potential shift trade matches for the current agent
         /// </summary>
@@ -3119,12 +3119,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of SearchShiftTradesResponse</returns>
         ApiResponse<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
-        
+
         /// <summary>
         /// Updates the state of a batch of shift trades
         /// </summary>
         /// <remarks>
-        /// Admin functionality is not supported with \&quot;mine\&quot;.
+        /// Admin functionality is not supported with \"mine\".
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -3138,7 +3138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates the state of a batch of shift trades
         /// </summary>
         /// <remarks>
-        /// Admin functionality is not supported with \&quot;mine\&quot;.
+        /// Admin functionality is not supported with \"mine\".
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -3147,7 +3147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BulkUpdateShiftTradeStateResponse</returns>
         ApiResponse<BulkUpdateShiftTradeStateResponse> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkWithHttpInfo (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
-        
+
         /// <summary>
         /// Create a copy of work plan
         /// </summary>
@@ -3173,20 +3173,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
         ApiResponse<WorkPlan> PostWorkforcemanagementManagementunitWorkplanCopyWithHttpInfo (string managementUnitId, string workPlanId, CopyWorkPlan body = null);
-        
-        /// <summary>
-        /// Validate Work Plan
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
-        /// <param name="body">body (optional)</param>
-        /// <param name="expand"> (optional)</param>
-        /// <returns>ValidateWorkPlanResponse</returns>
-        ValidateWorkPlanResponse PostWorkforcemanagementManagementunitWorkplanValidate (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null);
 
         /// <summary>
         /// Validate Work Plan
@@ -3197,11 +3183,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="expand"> (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ValidateWorkPlanResponse</returns>
+        ValidateWorkPlanResponse PostWorkforcemanagementManagementunitWorkplanValidate (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null);
+
+        /// <summary>
+        /// Validate Work Plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
+        /// <param name="expand"> (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ValidateWorkPlanResponse</returns>
-        ApiResponse<ValidateWorkPlanResponse> PostWorkforcemanagementManagementunitWorkplanValidateWithHttpInfo (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null);
-        
+        ApiResponse<ValidateWorkPlanResponse> PostWorkforcemanagementManagementunitWorkplanValidateWithHttpInfo (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null);
+
         /// <summary>
         /// Create a copy of work plan rotation
         /// </summary>
@@ -3227,7 +3227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
         ApiResponse<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationCopyWithHttpInfo (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null);
-        
+
         /// <summary>
         /// Create a new work plan rotation
         /// </summary>
@@ -3251,19 +3251,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
         ApiResponse<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo (string managementUnitId, AddWorkPlanRotationRequest body = null);
-        
-        /// <summary>
-        /// Create a new work plan
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
-        /// <returns>WorkPlan</returns>
-        WorkPlan PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, CreateWorkPlan body = null, string validationMode = null);
 
         /// <summary>
         /// Create a new work plan
@@ -3273,11 +3260,24 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WorkPlan</returns>
+        WorkPlan PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, string validationMode = null, CreateWorkPlan body = null);
+
+        /// <summary>
+        /// Create a new work plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
-        ApiResponse<WorkPlan> PostWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, CreateWorkPlan body = null, string validationMode = null);
-        
+        ApiResponse<WorkPlan> PostWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, string validationMode = null, CreateWorkPlan body = null);
+
         /// <summary>
         /// Add a management unit
         /// </summary>
@@ -3299,7 +3299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
         ApiResponse<ManagementUnit> PostWorkforcemanagementManagementunitsWithHttpInfo (CreateManagementUnitApiRequest body = null);
-        
+
         /// <summary>
         /// Mark a list of notifications as read or unread
         /// </summary>
@@ -3321,7 +3321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UpdateNotificationsResponse</returns>
         ApiResponse<UpdateNotificationsResponse> PostWorkforcemanagementNotificationsUpdateWithHttpInfo (UpdateNotificationsRequest body = null);
-        
+
         /// <summary>
         /// Get published schedule for the current user
         /// </summary>
@@ -3343,7 +3343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
         ApiResponse<UserScheduleContainer> PostWorkforcemanagementSchedulesWithHttpInfo (CurrentUserScheduleRequestBody body = null);
-        
+
         /// <summary>
         /// Queries available time off for the current user
         /// </summary>
@@ -3365,7 +3365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of AvailableTimeOffResponse</returns>
         ApiResponse<AvailableTimeOffResponse> PostWorkforcemanagementTimeofflimitsAvailableQueryWithHttpInfo (AvailableTimeOffRequest body = null);
-        
+
         /// <summary>
         /// Create a time off request for the current user
         /// </summary>
@@ -3387,7 +3387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
         ApiResponse<TimeOffRequestResponse> PostWorkforcemanagementTimeoffrequestsWithHttpInfo (CreateAgentTimeOffRequest body = null);
-        
+
         /// <summary>
         /// Sets daily values for a date range of time off limit object
         /// </summary>
@@ -3413,11 +3413,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
         ApiResponse<TimeOffLimit> PutWorkforcemanagementManagementunitTimeofflimitValuesWithHttpInfo (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null);
-        
+
         #endregion Synchronous Operations
-        
+
         #region Asynchronous Operations
-        
+
         /// <summary>
         /// Delete business unit
         /// </summary>
@@ -3439,7 +3439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId);
-        
+
         /// <summary>
         /// Deletes an activity code
         /// </summary>
@@ -3463,7 +3463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId);
-        
+
         /// <summary>
         /// Deletes the planning group
         /// </summary>
@@ -3487,7 +3487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitPlanninggroupAsyncWithHttpInfo (string businessUnitId, string planningGroupId);
-        
+
         /// <summary>
         /// Cancel a scheduling run
         /// </summary>
@@ -3511,7 +3511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitSchedulingRunAsyncWithHttpInfo (string businessUnitId, string runId);
-        
+
         /// <summary>
         /// Delete a service goal template
         /// </summary>
@@ -3535,7 +3535,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of the service goal template to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitServicegoaltemplateAsyncWithHttpInfo (string businessUnitId, string serviceGoalTemplateId);
-        
+
         /// <summary>
         /// Delete a schedule
         /// </summary>
@@ -3561,7 +3561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> DeleteWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId);
-        
+
         /// <summary>
         /// Delete a short term forecast
         /// </summary>
@@ -3587,7 +3587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
-        
+
         /// <summary>
         /// Disable generated calendar link for the current user
         /// </summary>
@@ -3607,7 +3607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Delete management unit
         /// </summary>
@@ -3629,7 +3629,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Deletes a time off limit object
         /// </summary>
@@ -3653,7 +3653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId);
-        
+
         /// <summary>
         /// Deletes a time off plan
         /// </summary>
@@ -3677,7 +3677,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId);
-        
+
         /// <summary>
         /// Delete a work plan
         /// </summary>
@@ -3701,7 +3701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId);
-        
+
         /// <summary>
         /// Delete a work plan rotation
         /// </summary>
@@ -3725,7 +3725,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId);
-        
+
         /// <summary>
         /// Get a list of UserScheduleAdherence records for the requested users
         /// </summary>
@@ -3747,7 +3747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
         /// <returns>Task of ApiResponse (List&lt;UserScheduleAdherence&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UserScheduleAdherence>>> GetWorkforcemanagementAdherenceAsyncWithHttpInfo (List<string> userId);
-        
+
         /// <summary>
         /// Get status of the modeling job
         /// </summary>
@@ -3769,7 +3769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>Task of ApiResponse (ModelingStatusResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ModelingStatusResponse>> GetWorkforcemanagementAdhocmodelingjobAsyncWithHttpInfo (string jobId);
-        
+
         /// <summary>
         /// Get the management unit to which the agent belongs
         /// </summary>
@@ -3791,7 +3791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The ID of the agent to look up</param>
         /// <returns>Task of ApiResponse (AgentManagementUnitReference)</returns>
         System.Threading.Tasks.Task<ApiResponse<AgentManagementUnitReference>> GetWorkforcemanagementAgentManagementunitAsyncWithHttpInfo (string agentId);
-        
+
         /// <summary>
         /// Get the management unit to which the currently logged in agent belongs
         /// </summary>
@@ -3811,12 +3811,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AgentManagementUnitReference)</returns>
         System.Threading.Tasks.Task<ApiResponse<AgentManagementUnitReference>> GetWorkforcemanagementAgentsMeManagementunitAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Get business unit
         /// </summary>
         /// <remarks>
-        /// Expanding \&quot;settings\&quot; will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
+        /// Expanding \"settings\" will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
@@ -3828,14 +3828,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get business unit
         /// </summary>
         /// <remarks>
-        /// Expanding \&quot;settings\&quot; will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
+        /// Expanding \"settings\" will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnit)</returns>
         System.Threading.Tasks.Task<ApiResponse<BusinessUnit>> GetWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, List<string> expand = null);
-        
+
         /// <summary>
         /// Get an activity code
         /// </summary>
@@ -3859,7 +3859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> GetWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId);
-        
+
         /// <summary>
         /// Get activity codes
         /// </summary>
@@ -3881,7 +3881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCodeListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCodeListing>> GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId);
-        
+
         /// <summary>
         /// Get intraday planning groups for the given date
         /// </summary>
@@ -3905,7 +3905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (WfmIntradayPlanningGroupListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmIntradayPlanningGroupListing>> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String date);
-        
+
         /// <summary>
         /// Get all authorized management units in the business unit
         /// </summary>
@@ -3931,7 +3931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementBusinessunitManagementunitsAsyncWithHttpInfo (string businessUnitId, string feature = null, string divisionId = null);
-        
+
         /// <summary>
         /// Get a planning group
         /// </summary>
@@ -3955,7 +3955,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to fetch</param>
         /// <returns>Task of ApiResponse (PlanningGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<PlanningGroup>> GetWorkforcemanagementBusinessunitPlanninggroupAsyncWithHttpInfo (string businessUnitId, string planningGroupId);
-        
+
         /// <summary>
         /// Gets list of planning groups
         /// </summary>
@@ -3977,7 +3977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>Task of ApiResponse (PlanningGroupList)</returns>
         System.Threading.Tasks.Task<ApiResponse<PlanningGroupList>> GetWorkforcemanagementBusinessunitPlanninggroupsAsyncWithHttpInfo (string businessUnitId);
-        
+
         /// <summary>
         /// Get a scheduling run
         /// </summary>
@@ -4001,7 +4001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of ApiResponse (BuScheduleRun)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuScheduleRun>> GetWorkforcemanagementBusinessunitSchedulingRunAsyncWithHttpInfo (string businessUnitId, string runId);
-        
+
         /// <summary>
         /// Get the result of a rescheduling operation
         /// </summary>
@@ -4029,7 +4029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">The fields to expand. Omitting will return an empty response</param>
         /// <returns>Task of ApiResponse (BuRescheduleResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuRescheduleResult>> GetWorkforcemanagementBusinessunitSchedulingRunResultAsyncWithHttpInfo (string businessUnitId, string runId, List<string> managementUnitIds, List<string> expand);
-        
+
         /// <summary>
         /// Get the list of scheduling runs
         /// </summary>
@@ -4051,7 +4051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <returns>Task of ApiResponse (BuScheduleRunListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuScheduleRunListing>> GetWorkforcemanagementBusinessunitSchedulingRunsAsyncWithHttpInfo (string businessUnitId);
-        
+
         /// <summary>
         /// Get a service goal template
         /// </summary>
@@ -4075,7 +4075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of a service goal template to fetch</param>
         /// <returns>Task of ApiResponse (ServiceGoalTemplate)</returns>
         System.Threading.Tasks.Task<ApiResponse<ServiceGoalTemplate>> GetWorkforcemanagementBusinessunitServicegoaltemplateAsyncWithHttpInfo (string businessUnitId, string serviceGoalTemplateId);
-        
+
         /// <summary>
         /// Gets list of service goal templates
         /// </summary>
@@ -4097,7 +4097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>Task of ApiResponse (ServiceGoalTemplateList)</returns>
         System.Threading.Tasks.Task<ApiResponse<ServiceGoalTemplateList>> GetWorkforcemanagementBusinessunitServicegoaltemplatesAsyncWithHttpInfo (string businessUnitId);
-        
+
         /// <summary>
         /// Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
         /// </summary>
@@ -4125,7 +4125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (BuScheduleMetadata)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string expand = null);
-        
+
         /// <summary>
         /// Get the generation results for a generated schedule
         /// </summary>
@@ -4151,7 +4151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ApiResponse (ScheduleGenerationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScheduleGenerationResult>> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId);
-        
+
         /// <summary>
         /// Get the headcount forecast by planning group for the schedule
         /// </summary>
@@ -4179,9 +4179,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>Task of ApiResponse (BuHeadcountForecastResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuHeadcountForecastResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
-        
+
         /// <summary>
-        /// Loads agent&#39;s schedule history.
+        /// Loads agent's schedule history.
         /// </summary>
         /// <remarks>
         /// 
@@ -4195,7 +4195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<BuAgentScheduleHistoryResponse> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsync (string businessUnitId, String weekId, string scheduleId, string agentId);
 
         /// <summary>
-        /// Loads agent&#39;s schedule history.
+        /// Loads agent's schedule history.
         /// </summary>
         /// <remarks>
         /// 
@@ -4207,12 +4207,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">THe ID of the agent</param>
         /// <returns>Task of ApiResponse (BuAgentScheduleHistoryResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuAgentScheduleHistoryResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string agentId);
-        
+
         /// <summary>
         /// Get the list of week schedules for the specified week
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -4226,7 +4226,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the list of week schedules for the specified week
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -4235,7 +4235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (BuScheduleListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuScheduleListing>> GetWorkforcemanagementBusinessunitWeekSchedulesAsyncWithHttpInfo (string businessUnitId, string weekId, bool? includeOnlyPublished = null, string expand = null);
-        
+
         /// <summary>
         /// Get a short term forecast
         /// </summary>
@@ -4263,7 +4263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (BuShortTermForecast)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuShortTermForecast>> GetWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null);
-        
+
         /// <summary>
         /// Get the result of a short term forecast calculation
         /// </summary>
@@ -4293,7 +4293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuForecastResultResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuForecastResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
-        
+
         /// <summary>
         /// Gets the forecast generation results
         /// </summary>
@@ -4319,7 +4319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (BuForecastGenerationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuForecastGenerationResult>> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
-        
+
         /// <summary>
         /// Get the result of a long term forecast calculation
         /// </summary>
@@ -4347,7 +4347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (LongTermForecastResultResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LongTermForecastResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null);
-        
+
         /// <summary>
         /// Gets the forecast planning group snapshot
         /// </summary>
@@ -4373,12 +4373,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (ForecastPlanningGroupsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ForecastPlanningGroupsResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
-        
+
         /// <summary>
         /// Get short term forecasts
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
@@ -4390,14 +4390,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get short term forecasts
         /// </summary>
         /// <remarks>
-        /// Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>Task of ApiResponse (BuShortTermForecastListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuShortTermForecastListing>> GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsyncWithHttpInfo (string businessUnitId, string weekDateId);
-        
+
         /// <summary>
         /// Get business units
         /// </summary>
@@ -4421,7 +4421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitListing>> GetWorkforcemanagementBusinessunitsAsyncWithHttpInfo (string feature = null, string divisionId = null);
-        
+
         /// <summary>
         /// Get business units across divisions
         /// </summary>
@@ -4443,7 +4443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return business units in all divisions (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitListing>> GetWorkforcemanagementBusinessunitsDivisionviewsAsyncWithHttpInfo (List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get ics formatted calendar based on shareable link
         /// </summary>
@@ -4465,7 +4465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="calendarId">The id of the ics-formatted calendar</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> GetWorkforcemanagementCalendarDataIcsAsyncWithHttpInfo (string calendarId);
-        
+
         /// <summary>
         /// Get existing calendar link for the current user
         /// </summary>
@@ -4485,7 +4485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CalendarUrlResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CalendarUrlResponse>> GetWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Retrieves delete job status for historical data imports of the organization
         /// </summary>
@@ -4505,7 +4505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (HistoricalImportDeleteJobResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<HistoricalImportDeleteJobResponse>> GetWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Retrieves status of the historical data imports of the organization
         /// </summary>
@@ -4525,7 +4525,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (HistoricalImportStatusListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<HistoricalImportStatusListing>> GetWorkforcemanagementHistoricaldataImportstatusAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Get management unit
         /// </summary>
@@ -4549,7 +4549,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
         System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> GetWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId, List<string> expand = null);
-        
+
         /// <summary>
         /// Get activity codes
         /// </summary>
@@ -4571,7 +4571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (ActivityCodeContainer)</returns>
         System.Threading.Tasks.Task<ApiResponse<ActivityCodeContainer>> GetWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Get a list of user schedule adherence records for the requested management unit
         /// </summary>
@@ -4595,7 +4595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleAdherenceListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserScheduleAdherenceListing>> GetWorkforcemanagementManagementunitAdherenceAsyncWithHttpInfo (string managementUnitId, bool? forceDownloadService = null);
-        
+
         /// <summary>
         /// Get data for agent in the management unit
         /// </summary>
@@ -4621,7 +4621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>Task of ApiResponse (WfmAgent)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmAgent>> GetWorkforcemanagementManagementunitAgentAsyncWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null);
-        
+
         /// <summary>
         /// Gets all the shift trades for a given agent
         /// </summary>
@@ -4645,7 +4645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The agent id</param>
         /// <returns>Task of ApiResponse (ShiftTradeListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementManagementunitAgentShifttradesAsyncWithHttpInfo (string managementUnitId, string agentId);
-        
+
         /// <summary>
         /// Gets a summary of all shift trades in the matched state
         /// </summary>
@@ -4667,7 +4667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (ShiftTradeMatchesSummaryResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ShiftTradeMatchesSummaryResponse>> GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Gets list of users available for whom you can send direct shift trade requests
         /// </summary>
@@ -4689,7 +4689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Gets a time off limit object
         /// </summary>
@@ -4713,7 +4713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> GetWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId);
-        
+
         /// <summary>
         /// Gets a list of time off limit objects under management unit.
         /// </summary>
@@ -4735,7 +4735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>Task of ApiResponse (TimeOffLimitListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffLimitListing>> GetWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Gets a time off plan
         /// </summary>
@@ -4759,7 +4759,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> GetWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId);
-        
+
         /// <summary>
         /// Gets a list of time off plans
         /// </summary>
@@ -4781,7 +4781,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>Task of ApiResponse (TimeOffPlanListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffPlanListing>> GetWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Get a time off request
         /// </summary>
@@ -4807,7 +4807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
-        
+
         /// <summary>
         /// Retrieves time off limit, allocated and waitlisted values according to specific time off request
         /// </summary>
@@ -4833,7 +4833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueryTimeOffLimitValuesResponse>> GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
-        
+
         /// <summary>
         /// Get a list of time off requests for a given user
         /// </summary>
@@ -4859,7 +4859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null);
-        
+
         /// <summary>
         /// Get users in the management unit
         /// </summary>
@@ -4881,7 +4881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo (string managementUnitId);
-        
+
         /// <summary>
         /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
         /// </summary>
@@ -4911,7 +4911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (WeekScheduleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WeekScheduleResponse>> GetWorkforcemanagementManagementunitWeekScheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null);
-        
+
         /// <summary>
         /// Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
         /// </summary>
@@ -4941,7 +4941,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>Task of ApiResponse (WeekScheduleListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WeekScheduleListResponse>> GetWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null);
-        
+
         /// <summary>
         /// Gets all the shift trades for a given week
         /// </summary>
@@ -4967,7 +4967,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>Task of ApiResponse (WeekShiftTradeListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
-        
+
         /// <summary>
         /// Get a work plan
         /// </summary>
@@ -4993,7 +4993,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkPlan>> GetWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, List<string> includeOnly = null);
-        
+
         /// <summary>
         /// Get a work plan rotation
         /// </summary>
@@ -5017,7 +5017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> GetWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId);
-        
+
         /// <summary>
         /// Get work plan rotations
         /// </summary>
@@ -5041,12 +5041,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationListResponse>> GetWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo (string managementUnitId, List<string> expand = null);
-        
+
         /// <summary>
         /// Get work plans
         /// </summary>
         /// <remarks>
-        /// \&quot;expand=details\&quot; is deprecated
+        /// \"expand=details\" is deprecated
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -5058,14 +5058,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get work plans
         /// </summary>
         /// <remarks>
-        /// \&quot;expand=details\&quot; is deprecated
+        /// \"expand=details\" is deprecated
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, List<string> expand = null);
-        
+
         /// <summary>
         /// Get management units
         /// </summary>
@@ -5095,7 +5095,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null);
-        
+
         /// <summary>
         /// Get management units across divisions
         /// </summary>
@@ -5117,7 +5117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsDivisionviewsAsyncWithHttpInfo (List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get a list of notifications for the current user
         /// </summary>
@@ -5137,7 +5137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (NotificationsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<NotificationsResponse>> GetWorkforcemanagementNotificationsAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Get status of the scheduling job
         /// </summary>
@@ -5159,7 +5159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the scheduling job</param>
         /// <returns>Task of ApiResponse (SchedulingStatusResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SchedulingStatusResponse>> GetWorkforcemanagementSchedulingjobAsyncWithHttpInfo (string jobId);
-        
+
         /// <summary>
         /// Gets all of my shift trades
         /// </summary>
@@ -5179,7 +5179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ShiftTradeListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementShifttradesAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Get a time off request for the current user
         /// </summary>
@@ -5201,7 +5201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId);
-        
+
         /// <summary>
         /// Get the daily waitlist positions of a time off request for the current user
         /// </summary>
@@ -5223,7 +5223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsyncWithHttpInfo (string timeOffRequestId);
-        
+
         /// <summary>
         /// Get a list of time off requests for the current user
         /// </summary>
@@ -5245,7 +5245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo (bool? recentlyReviewed = null);
-        
+
         /// <summary>
         /// Update business unit
         /// </summary>
@@ -5269,7 +5269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnit)</returns>
         System.Threading.Tasks.Task<ApiResponse<BusinessUnit>> PatchWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null);
-        
+
         /// <summary>
         /// Update an activity code
         /// </summary>
@@ -5295,7 +5295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PatchWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null);
-        
+
         /// <summary>
         /// Updates the planning group
         /// </summary>
@@ -5321,7 +5321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (PlanningGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<PlanningGroup>> PatchWorkforcemanagementBusinessunitPlanninggroupAsyncWithHttpInfo (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body = null);
-        
+
         /// <summary>
         /// Mark a schedule run as applied
         /// </summary>
@@ -5347,7 +5347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementBusinessunitSchedulingRunAsyncWithHttpInfo (string businessUnitId, string runId, PatchBuScheduleRunRequest body = null);
-        
+
         /// <summary>
         /// Updates a service goal template
         /// </summary>
@@ -5373,7 +5373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ServiceGoalTemplate)</returns>
         System.Threading.Tasks.Task<ApiResponse<ServiceGoalTemplate>> PatchWorkforcemanagementBusinessunitServicegoaltemplateAsyncWithHttpInfo (string businessUnitId, string serviceGoalTemplateId, UpdateServiceGoalTemplate body = null);
-        
+
         /// <summary>
         /// Update the requested management unit
         /// </summary>
@@ -5397,7 +5397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
         System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PatchWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null);
-        
+
         /// <summary>
         /// Updates a time off limit object.
         /// </summary>
@@ -5423,7 +5423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PatchWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null);
-        
+
         /// <summary>
         /// Updates a time off plan
         /// </summary>
@@ -5449,7 +5449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> PatchWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null);
-        
+
         /// <summary>
         /// Update a time off request
         /// </summary>
@@ -5477,7 +5477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
-        
+
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating agent
         /// </summary>
@@ -5487,10 +5487,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>Task of ShiftTradeResponse</returns>
-        System.Threading.Tasks.Task<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeAsync (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId);
+        System.Threading.Tasks.Task<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeAsync (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body);
 
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating agent
@@ -5501,24 +5501,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId);
-        
-        /// <summary>
-        /// Update a work plan
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="workPlanId">The ID of the work plan to update</param>
-        /// <param name="body">body (optional)</param>
-        /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
-        /// <returns>Task of WorkPlan</returns>
-        System.Threading.Tasks.Task<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null);
+        System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body);
 
         /// <summary>
         /// Update a work plan
@@ -5529,11 +5515,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WorkPlan</returns>
+        System.Threading.Tasks.Task<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null);
+
+        /// <summary>
+        /// Update a work plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanId">The ID of the work plan to update</param>
+        /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null);
-        
+        System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null);
+
         /// <summary>
         /// Update a work plan rotation
         /// </summary>
@@ -5559,7 +5559,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PatchWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null);
-        
+
         /// <summary>
         /// Update a time off request for the current user
         /// </summary>
@@ -5583,7 +5583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PatchWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId, AgentTimeOffRequestPatch body = null);
-        
+
         /// <summary>
         /// Request a historical adherence report for users across management units
         /// </summary>
@@ -5605,7 +5605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementAdherenceHistoricalAsyncWithHttpInfo (WfmHistoricalAdherenceQueryForUsers body = null);
-        
+
         /// <summary>
         /// Get published schedule for the current user
         /// </summary>
@@ -5627,7 +5627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BuCurrentAgentScheduleSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuCurrentAgentScheduleSearchResponse>> PostWorkforcemanagementAgentschedulesMineAsyncWithHttpInfo (BuGetCurrentAgentScheduleRequest body = null);
-        
+
         /// <summary>
         /// Create a new activity code
         /// </summary>
@@ -5651,20 +5651,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PostWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId, CreateActivityCodeRequest body = null);
-        
-        /// <summary>
-        /// Search published schedules
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="body">body (optional)</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
-        System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementBusinessunitAgentschedulesSearchAsync (string businessUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Search published schedules
@@ -5674,12 +5660,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
+        System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementBusinessunitAgentschedulesSearchAsync (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
+
+        /// <summary>
+        /// Search published schedules
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementBusinessunitAgentschedulesSearchAsyncWithHttpInfo (string businessUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
-        
+        System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementBusinessunitAgentschedulesSearchAsyncWithHttpInfo (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
+
         /// <summary>
         /// Get intraday data for the given date for the requested planningGroupIds
         /// </summary>
@@ -5705,7 +5705,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (AsyncIntradayResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AsyncIntradayResponse>> PostWorkforcemanagementBusinessunitIntradayAsyncWithHttpInfo (string businessUnitId, bool? forceAsync = null, IntradayPlanningGroupRequest body = null);
-        
+
         /// <summary>
         /// Adds a new planning group
         /// </summary>
@@ -5729,7 +5729,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (PlanningGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<PlanningGroup>> PostWorkforcemanagementBusinessunitPlanninggroupsAsyncWithHttpInfo (string businessUnitId, CreatePlanningGroupRequest body = null);
-        
+
         /// <summary>
         /// Adds a new service goal template
         /// </summary>
@@ -5753,7 +5753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ServiceGoalTemplate)</returns>
         System.Threading.Tasks.Task<ApiResponse<ServiceGoalTemplate>> PostWorkforcemanagementBusinessunitServicegoaltemplatesAsyncWithHttpInfo (string businessUnitId, CreateServiceGoalTemplate body = null);
-        
+
         /// <summary>
         /// Loads agent schedule data from the schedule. Used in combination with the metadata route
         /// </summary>
@@ -5785,7 +5785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesQueryResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesQueryResponse>> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
-        
+
         /// <summary>
         /// Copy a schedule
         /// </summary>
@@ -5813,7 +5813,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body);
-        
+
         /// <summary>
         /// Start a rescheduling run
         /// </summary>
@@ -5841,7 +5841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleRunResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body);
-        
+
         /// <summary>
         /// Starts processing a schedule update
         /// </summary>
@@ -5869,7 +5869,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> PostWorkforcemanagementBusinessunitWeekScheduleUpdateAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body);
-        
+
         /// <summary>
         /// Creates a signed upload URL for updating a schedule
         /// </summary>
@@ -5897,7 +5897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (UpdateScheduleUploadResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UpdateScheduleUploadResponse>> PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body);
-        
+
         /// <summary>
         /// Create a blank schedule
         /// </summary>
@@ -5923,7 +5923,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuScheduleMetadata)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> PostWorkforcemanagementBusinessunitWeekSchedulesAsyncWithHttpInfo (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body);
-        
+
         /// <summary>
         /// Generate a schedule
         /// </summary>
@@ -5949,7 +5949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleRunResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsyncWithHttpInfo (string businessUnitId, String weekId, BuGenerateScheduleRequest body);
-        
+
         /// <summary>
         /// Starts processing a schedule import
         /// </summary>
@@ -5975,7 +5975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleUploadProcessingResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScheduleUploadProcessingResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesImportAsyncWithHttpInfo (string businessUnitId, String weekId, WfmProcessUploadRequest body);
-        
+
         /// <summary>
         /// Creates a signed upload URL for importing a schedule
         /// </summary>
@@ -6001,7 +6001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ImportScheduleUploadResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ImportScheduleUploadResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlAsyncWithHttpInfo (string businessUnitId, String weekId, UploadUrlRequestBody body);
-        
+
         /// <summary>
         /// Copy a short term forecast
         /// </summary>
@@ -6031,7 +6031,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AsyncForecastOperationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
-        
+
         /// <summary>
         /// Generate a short term forecast
         /// </summary>
@@ -6059,7 +6059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AsyncForecastOperationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsyncWithHttpInfo (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
-        
+
         /// <summary>
         /// Starts importing the uploaded short term forecast
         /// </summary>
@@ -6085,7 +6085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ImportForecastResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ImportForecastResponse>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportAsyncWithHttpInfo (string businessUnitId, String weekDateId, WfmProcessUploadRequest body);
-        
+
         /// <summary>
         /// Creates a signed upload URL for importing a short term forecast
         /// </summary>
@@ -6111,7 +6111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ImportForecastUploadResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ImportForecastUploadResponse>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlAsyncWithHttpInfo (string businessUnitId, String weekDateId, UploadUrlRequestBody body);
-        
+
         /// <summary>
         /// Add a new business unit
         /// </summary>
@@ -6133,7 +6133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnit)</returns>
         System.Threading.Tasks.Task<ApiResponse<BusinessUnit>> PostWorkforcemanagementBusinessunitsAsyncWithHttpInfo (CreateBusinessUnitRequest body = null);
-        
+
         /// <summary>
         /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
         /// </summary>
@@ -6141,7 +6141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>Task of CalendarUrlResponse</returns>
         System.Threading.Tasks.Task<CalendarUrlResponse> PostWorkforcemanagementCalendarUrlIcsAsync (string language = null);
 
@@ -6152,10 +6152,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>Task of ApiResponse (CalendarUrlResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CalendarUrlResponse>> PostWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo (string language = null);
-        
+
         /// <summary>
         /// Delete the entries of the historical data imports in the organization
         /// </summary>
@@ -6175,7 +6175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (HistoricalImportDeleteJobResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<HistoricalImportDeleteJobResponse>> PostWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Trigger validation process for historical import
         /// </summary>
@@ -6197,20 +6197,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementHistoricaldataValidateAsyncWithHttpInfo (ValidationServiceRequest body = null);
-        
-        /// <summary>
-        /// Query published schedules for given given time range for set of users
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
-        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
-        System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -6220,12 +6206,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
+        System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
+
+        /// <summary>
+        /// Query published schedules for given given time range for set of users
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
-        
+        System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
+
         /// <summary>
         /// Request a historical adherence report
         /// </summary>
@@ -6249,7 +6249,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
-        
+
         /// <summary>
         /// Move the requested management unit to a new business unit
         /// </summary>
@@ -6273,7 +6273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (MoveManagementUnitResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<MoveManagementUnitResponse>> PostWorkforcemanagementManagementunitMoveAsyncWithHttpInfo (string managementUnitId, MoveManagementUnitRequest body = null);
-        
+
         /// <summary>
         /// Query published schedules for given given time range for set of users
         /// </summary>
@@ -6297,7 +6297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null);
-        
+
         /// <summary>
         /// Creates a new time off limit object under management unit.
         /// </summary>
@@ -6321,7 +6321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PostWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null);
-        
+
         /// <summary>
         /// Retrieves time off limit related values based on a given set of filters.
         /// </summary>
@@ -6345,7 +6345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueryTimeOffLimitValuesResponse>> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsyncWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
-        
+
         /// <summary>
         /// Creates a new time off plan
         /// </summary>
@@ -6369,7 +6369,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> PostWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null);
-        
+
         /// <summary>
         /// Create a new time off request
         /// </summary>
@@ -6393,7 +6393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null);
-        
+
         /// <summary>
         /// Fetches time off requests matching the conditions specified in the request body
         /// </summary>
@@ -6417,7 +6417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null);
-        
+
         /// <summary>
         /// Retrieves daily waitlist position for a list of time off requests
         /// </summary>
@@ -6441,20 +6441,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsyncWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null);
-        
-        /// <summary>
-        /// Matches a shift trade. This route can only be called by the receiving agent
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
-        /// <param name="tradeId">The ID of the shift trade to update</param>
-        /// <returns>Task of MatchShiftTradeResponse</returns>
-        System.Threading.Tasks.Task<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsync (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId);
 
         /// <summary>
         /// Matches a shift trade. This route can only be called by the receiving agent
@@ -6465,11 +6451,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of MatchShiftTradeResponse</returns>
+        System.Threading.Tasks.Task<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsync (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body);
+
+        /// <summary>
+        /// Matches a shift trade. This route can only be called by the receiving agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (MatchShiftTradeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MatchShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId);
-        
+        System.Threading.Tasks.Task<ApiResponse<MatchShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body);
+
         /// <summary>
         /// Adds a shift trade
         /// </summary>
@@ -6495,7 +6495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, AddShiftTradeRequest body);
-        
+
         /// <summary>
         /// Searches for potential shift trade matches for the current agent
         /// </summary>
@@ -6521,12 +6521,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (SearchShiftTradesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SearchShiftTradesResponse>> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
-        
+
         /// <summary>
         /// Updates the state of a batch of shift trades
         /// </summary>
         /// <remarks>
-        /// Admin functionality is not supported with \&quot;mine\&quot;.
+        /// Admin functionality is not supported with \"mine\".
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -6540,7 +6540,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates the state of a batch of shift trades
         /// </summary>
         /// <remarks>
-        /// Admin functionality is not supported with \&quot;mine\&quot;.
+        /// Admin functionality is not supported with \"mine\".
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -6549,7 +6549,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BulkUpdateShiftTradeStateResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BulkUpdateShiftTradeStateResponse>> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsyncWithHttpInfo (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
-        
+
         /// <summary>
         /// Create a copy of work plan
         /// </summary>
@@ -6575,20 +6575,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplanCopyAsyncWithHttpInfo (string managementUnitId, string workPlanId, CopyWorkPlan body = null);
-        
-        /// <summary>
-        /// Validate Work Plan
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
-        /// <param name="body">body (optional)</param>
-        /// <param name="expand"> (optional)</param>
-        /// <returns>Task of ValidateWorkPlanResponse</returns>
-        System.Threading.Tasks.Task<ValidateWorkPlanResponse> PostWorkforcemanagementManagementunitWorkplanValidateAsync (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null);
 
         /// <summary>
         /// Validate Work Plan
@@ -6599,11 +6585,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="expand"> (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ValidateWorkPlanResponse</returns>
+        System.Threading.Tasks.Task<ValidateWorkPlanResponse> PostWorkforcemanagementManagementunitWorkplanValidateAsync (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null);
+
+        /// <summary>
+        /// Validate Work Plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
+        /// <param name="expand"> (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ValidateWorkPlanResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidateWorkPlanResponse>> PostWorkforcemanagementManagementunitWorkplanValidateAsyncWithHttpInfo (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null);
-        
+        System.Threading.Tasks.Task<ApiResponse<ValidateWorkPlanResponse>> PostWorkforcemanagementManagementunitWorkplanValidateAsyncWithHttpInfo (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null);
+
         /// <summary>
         /// Create a copy of work plan rotation
         /// </summary>
@@ -6629,7 +6629,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PostWorkforcemanagementManagementunitWorkplanrotationCopyAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null);
-        
+
         /// <summary>
         /// Create a new work plan rotation
         /// </summary>
@@ -6653,19 +6653,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PostWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo (string managementUnitId, AddWorkPlanRotationRequest body = null);
-        
-        /// <summary>
-        /// Create a new work plan
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
-        /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
-        /// <returns>Task of WorkPlan</returns>
-        System.Threading.Tasks.Task<WorkPlan> PostWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, CreateWorkPlan body = null, string validationMode = null);
 
         /// <summary>
         /// Create a new work plan
@@ -6675,11 +6662,24 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WorkPlan</returns>
+        System.Threading.Tasks.Task<WorkPlan> PostWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, string validationMode = null, CreateWorkPlan body = null);
+
+        /// <summary>
+        /// Create a new work plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, CreateWorkPlan body = null, string validationMode = null);
-        
+        System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, string validationMode = null, CreateWorkPlan body = null);
+
         /// <summary>
         /// Add a management unit
         /// </summary>
@@ -6701,7 +6701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
         System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PostWorkforcemanagementManagementunitsAsyncWithHttpInfo (CreateManagementUnitApiRequest body = null);
-        
+
         /// <summary>
         /// Mark a list of notifications as read or unread
         /// </summary>
@@ -6723,7 +6723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UpdateNotificationsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UpdateNotificationsResponse>> PostWorkforcemanagementNotificationsUpdateAsyncWithHttpInfo (UpdateNotificationsRequest body = null);
-        
+
         /// <summary>
         /// Get published schedule for the current user
         /// </summary>
@@ -6745,7 +6745,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementSchedulesAsyncWithHttpInfo (CurrentUserScheduleRequestBody body = null);
-        
+
         /// <summary>
         /// Queries available time off for the current user
         /// </summary>
@@ -6767,7 +6767,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (AvailableTimeOffResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AvailableTimeOffResponse>> PostWorkforcemanagementTimeofflimitsAvailableQueryAsyncWithHttpInfo (AvailableTimeOffRequest body = null);
-        
+
         /// <summary>
         /// Create a time off request for the current user
         /// </summary>
@@ -6789,7 +6789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PostWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo (CreateAgentTimeOffRequest body = null);
-        
+
         /// <summary>
         /// Sets daily values for a date range of time off limit object
         /// </summary>
@@ -6815,9 +6815,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PutWorkforcemanagementManagementunitTimeofflimitValuesAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null);
-        
+
         #endregion Asynchronous Operations
-        
+
     }
 
     /// <summary>
@@ -6907,7 +6907,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
-        
+
         /// <summary>
         /// Delete business unit A business unit cannot be deleted if it contains one or more management units
         /// </summary>
@@ -6941,17 +6941,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6972,7 +6971,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7001,7 +7000,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete business unit A business unit cannot be deleted if it contains one or more management units
         /// </summary>
@@ -7037,16 +7036,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7068,7 +7066,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7097,8 +7095,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Deletes an activity code 
         /// </summary>
@@ -7137,17 +7135,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7169,7 +7166,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7198,7 +7195,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Deletes an activity code 
         /// </summary>
@@ -7240,16 +7237,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7272,7 +7268,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7301,8 +7297,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Deletes the planning group 
         /// </summary>
@@ -7341,17 +7337,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7373,7 +7368,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7402,7 +7397,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Deletes the planning group 
         /// </summary>
@@ -7444,16 +7439,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7476,7 +7470,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7505,8 +7499,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Cancel a scheduling run 
         /// </summary>
@@ -7545,17 +7539,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7577,7 +7570,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7606,7 +7599,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Cancel a scheduling run 
         /// </summary>
@@ -7648,16 +7641,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7680,7 +7672,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7709,8 +7701,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete a service goal template 
         /// </summary>
@@ -7749,17 +7741,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7781,7 +7772,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7810,7 +7801,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete a service goal template 
         /// </summary>
@@ -7852,16 +7843,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7884,7 +7874,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7913,8 +7903,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete a schedule 
         /// </summary>
@@ -7959,17 +7949,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7992,7 +7981,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8021,7 +8010,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete a schedule 
         /// </summary>
@@ -8070,16 +8059,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8103,7 +8091,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8132,8 +8120,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete a short term forecast Must not be tied to any schedules
         /// </summary>
@@ -8177,17 +8165,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8210,7 +8197,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8239,7 +8226,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete a short term forecast Must not be tied to any schedules
         /// </summary>
@@ -8287,16 +8274,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8320,7 +8306,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8349,8 +8335,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Disable generated calendar link for the current user 
         /// </summary>
@@ -8379,17 +8365,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8409,7 +8394,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8438,7 +8423,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Disable generated calendar link for the current user 
         /// </summary>
@@ -8468,16 +8453,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8498,7 +8482,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8527,8 +8511,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete management unit 
         /// </summary>
@@ -8562,17 +8546,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8593,7 +8576,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8622,7 +8605,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete management unit 
         /// </summary>
@@ -8658,16 +8641,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8689,7 +8671,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8718,8 +8700,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Deletes a time off limit object 
         /// </summary>
@@ -8758,17 +8740,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8790,7 +8771,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8819,7 +8800,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Deletes a time off limit object 
         /// </summary>
@@ -8861,16 +8842,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8893,7 +8873,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8922,8 +8902,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Deletes a time off plan 
         /// </summary>
@@ -8962,17 +8942,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8994,7 +8973,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9023,7 +9002,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Deletes a time off plan 
         /// </summary>
@@ -9065,16 +9044,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9097,7 +9075,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9126,8 +9104,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete a work plan 
         /// </summary>
@@ -9166,17 +9144,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9198,7 +9175,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9227,7 +9204,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete a work plan 
         /// </summary>
@@ -9269,16 +9246,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9301,7 +9277,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9330,8 +9306,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete a work plan rotation 
         /// </summary>
@@ -9370,17 +9346,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9402,7 +9377,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9431,7 +9406,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete a work plan rotation 
         /// </summary>
@@ -9473,16 +9448,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9505,7 +9479,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9534,8 +9508,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a list of UserScheduleAdherence records for the requested users 
         /// </summary>
@@ -9570,17 +9544,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9601,7 +9574,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9630,7 +9603,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a list of UserScheduleAdherence records for the requested users 
         /// </summary>
@@ -9667,16 +9640,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9698,7 +9670,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9727,8 +9699,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get status of the modeling job 
         /// </summary>
@@ -9763,17 +9735,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9794,7 +9765,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9823,7 +9794,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get status of the modeling job 
         /// </summary>
@@ -9860,16 +9831,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9891,7 +9861,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9920,8 +9890,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the management unit to which the agent belongs 
         /// </summary>
@@ -9956,17 +9926,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9987,7 +9956,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10016,7 +9985,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the management unit to which the agent belongs 
         /// </summary>
@@ -10053,16 +10022,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10084,7 +10052,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10113,8 +10081,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the management unit to which the currently logged in agent belongs 
         /// </summary>
@@ -10144,17 +10112,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10174,7 +10141,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10203,7 +10170,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the management unit to which the currently logged in agent belongs 
         /// </summary>
@@ -10234,16 +10201,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10264,7 +10230,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10293,10 +10259,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get business unit Expanding \&quot;settings\&quot; will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
+        /// Get business unit Expanding \"settings\" will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
@@ -10309,7 +10275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get business unit Expanding \&quot;settings\&quot; will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
+        /// Get business unit Expanding \"settings\" will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
@@ -10331,17 +10297,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10363,7 +10328,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10392,9 +10357,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get business unit Expanding \&quot;settings\&quot; will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
+        /// Get business unit Expanding \"settings\" will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
@@ -10408,7 +10373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get business unit Expanding \&quot;settings\&quot; will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
+        /// Get business unit Expanding \"settings\" will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
@@ -10431,16 +10396,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10463,7 +10427,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10492,8 +10456,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get an activity code 
         /// </summary>
@@ -10533,17 +10497,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10565,7 +10528,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10594,7 +10557,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get an activity code 
         /// </summary>
@@ -10637,16 +10600,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10669,7 +10631,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10698,8 +10660,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get activity codes 
         /// </summary>
@@ -10734,17 +10696,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10765,7 +10726,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10794,7 +10755,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get activity codes 
         /// </summary>
@@ -10831,16 +10792,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10862,7 +10822,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10891,8 +10851,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get intraday planning groups for the given date 
         /// </summary>
@@ -10932,17 +10892,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10964,7 +10923,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10993,7 +10952,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get intraday planning groups for the given date 
         /// </summary>
@@ -11036,16 +10995,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11068,7 +11026,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11097,8 +11055,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get all authorized management units in the business unit 
         /// </summary>
@@ -11137,17 +11095,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11170,7 +11127,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11199,7 +11156,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get all authorized management units in the business unit 
         /// </summary>
@@ -11240,16 +11197,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11273,7 +11229,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11302,8 +11258,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a planning group 
         /// </summary>
@@ -11343,17 +11299,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11375,7 +11330,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11404,7 +11359,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a planning group 
         /// </summary>
@@ -11447,16 +11402,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11479,7 +11433,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11508,8 +11462,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets list of planning groups 
         /// </summary>
@@ -11544,17 +11498,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11575,7 +11528,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11604,7 +11557,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets list of planning groups 
         /// </summary>
@@ -11641,16 +11594,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11672,7 +11624,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11701,8 +11653,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a scheduling run 
         /// </summary>
@@ -11742,17 +11694,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11774,7 +11725,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11803,7 +11754,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a scheduling run 
         /// </summary>
@@ -11846,16 +11797,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11878,7 +11828,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11907,8 +11857,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the result of a rescheduling operation 
         /// </summary>
@@ -11958,17 +11908,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11992,7 +11941,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12021,7 +11970,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the result of a rescheduling operation 
         /// </summary>
@@ -12076,16 +12025,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12110,7 +12058,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12139,8 +12087,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the list of scheduling runs 
         /// </summary>
@@ -12175,17 +12123,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12206,7 +12153,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12235,7 +12182,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the list of scheduling runs 
         /// </summary>
@@ -12272,16 +12219,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12303,7 +12249,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12332,8 +12278,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a service goal template 
         /// </summary>
@@ -12373,17 +12319,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12405,7 +12350,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12434,7 +12379,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a service goal template 
         /// </summary>
@@ -12477,16 +12422,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12509,7 +12453,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12538,8 +12482,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets list of service goal templates 
         /// </summary>
@@ -12574,17 +12518,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12605,7 +12548,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12634,7 +12577,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets list of service goal templates 
         /// </summary>
@@ -12671,16 +12614,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12702,7 +12644,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12731,8 +12673,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route 
         /// </summary>
@@ -12779,17 +12721,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12813,7 +12754,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12842,7 +12783,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route 
         /// </summary>
@@ -12893,16 +12834,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12927,7 +12867,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12956,8 +12896,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the generation results for a generated schedule 
         /// </summary>
@@ -13002,17 +12942,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13035,7 +12974,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13064,7 +13003,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the generation results for a generated schedule 
         /// </summary>
@@ -13113,16 +13052,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13146,7 +13084,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13175,8 +13113,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the headcount forecast by planning group for the schedule 
         /// </summary>
@@ -13223,17 +13161,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13257,7 +13194,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13286,7 +13223,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the headcount forecast by planning group for the schedule 
         /// </summary>
@@ -13337,16 +13274,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13371,7 +13307,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13400,10 +13336,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Loads agent&#39;s schedule history. 
+        /// Loads agent's schedule history. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -13418,7 +13354,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Loads agent&#39;s schedule history. 
+        /// Loads agent's schedule history. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -13451,17 +13387,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13485,7 +13420,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13514,9 +13449,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Loads agent&#39;s schedule history. 
+        /// Loads agent's schedule history. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -13532,7 +13467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Loads agent&#39;s schedule history. 
+        /// Loads agent's schedule history. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -13569,16 +13504,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13603,7 +13537,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13632,10 +13566,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get the list of week schedules for the specified week Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Get the list of week schedules for the specified week Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -13650,7 +13584,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of week schedules for the specified week Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Get the list of week schedules for the specified week Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -13677,17 +13611,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13711,7 +13644,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13740,9 +13673,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get the list of week schedules for the specified week Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Get the list of week schedules for the specified week Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -13758,7 +13691,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of week schedules for the specified week Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+        /// Get the list of week schedules for the specified week Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -13787,16 +13720,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13821,7 +13753,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13850,8 +13782,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a short term forecast 
         /// </summary>
@@ -13898,17 +13830,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13932,7 +13863,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13961,7 +13892,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a short term forecast 
         /// </summary>
@@ -14012,16 +13943,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -14046,7 +13976,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14075,8 +14005,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the result of a short term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </summary>
@@ -14125,17 +14055,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14160,7 +14089,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14189,7 +14118,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the result of a short term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </summary>
@@ -14242,16 +14171,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -14277,7 +14205,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14306,8 +14234,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets the forecast generation results 
         /// </summary>
@@ -14352,17 +14280,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14385,7 +14312,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14414,7 +14341,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets the forecast generation results 
         /// </summary>
@@ -14463,16 +14390,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -14496,7 +14422,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14525,8 +14451,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the result of a long term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </summary>
@@ -14573,17 +14499,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14607,7 +14532,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14636,7 +14561,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the result of a long term forecast calculation Includes modifications unless you pass the doNotApplyModifications query parameter
         /// </summary>
@@ -14687,16 +14612,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -14721,7 +14645,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14750,8 +14674,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets the forecast planning group snapshot 
         /// </summary>
@@ -14796,17 +14720,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14829,7 +14752,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14858,7 +14781,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets the forecast planning group snapshot 
         /// </summary>
@@ -14907,16 +14830,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -14940,7 +14862,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14969,10 +14891,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get short term forecasts Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Get short term forecasts Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
@@ -14985,7 +14907,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get short term forecasts Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Get short term forecasts Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
@@ -15010,17 +14932,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15042,7 +14963,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15071,9 +14992,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get short term forecasts Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Get short term forecasts Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
@@ -15087,7 +15008,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get short term forecasts Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+        /// Get short term forecasts Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
@@ -15114,16 +15035,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15146,7 +15066,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15175,8 +15095,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get business units 
         /// </summary>
@@ -15210,17 +15130,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15242,7 +15161,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15271,7 +15190,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get business units 
         /// </summary>
@@ -15306,16 +15225,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15338,7 +15256,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15367,8 +15285,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get business units across divisions 
         /// </summary>
@@ -15400,17 +15318,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15431,7 +15348,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15460,7 +15377,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get business units across divisions 
         /// </summary>
@@ -15493,16 +15410,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15524,7 +15440,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15553,8 +15469,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get ics formatted calendar based on shareable link 
         /// </summary>
@@ -15589,17 +15505,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "text/calendar"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15620,7 +15535,6 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -15643,7 +15557,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get ics formatted calendar based on shareable link 
         /// </summary>
@@ -15680,16 +15594,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "text/calendar"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15711,7 +15624,6 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -15734,8 +15646,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get existing calendar link for the current user 
         /// </summary>
@@ -15765,17 +15677,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15795,7 +15706,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15824,7 +15735,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get existing calendar link for the current user 
         /// </summary>
@@ -15855,16 +15766,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15885,7 +15795,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15914,8 +15824,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Retrieves delete job status for historical data imports of the organization 
         /// </summary>
@@ -15945,17 +15855,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15975,7 +15884,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16004,7 +15913,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Retrieves delete job status for historical data imports of the organization 
         /// </summary>
@@ -16035,16 +15944,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -16065,7 +15973,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16094,8 +16002,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Retrieves status of the historical data imports of the organization 
         /// </summary>
@@ -16125,17 +16033,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -16155,7 +16062,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16184,7 +16091,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Retrieves status of the historical data imports of the organization 
         /// </summary>
@@ -16215,16 +16122,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -16245,7 +16151,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16274,8 +16180,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get management unit settings.shortTermForecasting is deprecated and now lives on the business unit
         /// </summary>
@@ -16312,17 +16218,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -16344,7 +16249,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16373,7 +16278,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get management unit settings.shortTermForecasting is deprecated and now lives on the business unit
         /// </summary>
@@ -16412,16 +16317,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -16444,7 +16348,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16473,8 +16377,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get activity codes 
         /// </summary>
@@ -16509,17 +16413,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -16540,7 +16443,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16569,7 +16472,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get activity codes 
         /// </summary>
@@ -16606,16 +16509,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -16637,7 +16539,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16666,8 +16568,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a list of user schedule adherence records for the requested management unit 
         /// </summary>
@@ -16704,17 +16606,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -16736,7 +16637,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16765,7 +16666,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a list of user schedule adherence records for the requested management unit 
         /// </summary>
@@ -16804,16 +16705,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -16836,7 +16736,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16865,8 +16765,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get data for agent in the management unit 
         /// </summary>
@@ -16908,17 +16808,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -16941,7 +16840,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16970,7 +16869,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get data for agent in the management unit 
         /// </summary>
@@ -17015,16 +16914,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -17048,7 +16946,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17077,8 +16975,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets all the shift trades for a given agent 
         /// </summary>
@@ -17118,17 +17016,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -17150,7 +17047,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17179,7 +17076,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets all the shift trades for a given agent 
         /// </summary>
@@ -17222,16 +17119,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -17254,7 +17150,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17283,8 +17179,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets a summary of all shift trades in the matched state 
         /// </summary>
@@ -17319,17 +17215,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -17350,7 +17245,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17379,7 +17274,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets a summary of all shift trades in the matched state 
         /// </summary>
@@ -17416,16 +17311,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -17447,7 +17341,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17476,8 +17370,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets list of users available for whom you can send direct shift trade requests 
         /// </summary>
@@ -17512,17 +17406,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -17543,7 +17436,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17572,7 +17465,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets list of users available for whom you can send direct shift trade requests 
         /// </summary>
@@ -17609,16 +17502,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -17640,7 +17532,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17669,8 +17561,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets a time off limit object Returns properties of time off limit object, but not daily values.
         /// </summary>
@@ -17710,17 +17602,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -17742,7 +17633,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17771,7 +17662,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets a time off limit object Returns properties of time off limit object, but not daily values.
         /// </summary>
@@ -17814,16 +17705,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -17846,7 +17736,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17875,8 +17765,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets a list of time off limit objects under management unit. Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
         /// </summary>
@@ -17911,17 +17801,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -17942,7 +17831,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17971,7 +17860,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets a list of time off limit objects under management unit. Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
         /// </summary>
@@ -18008,16 +17897,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -18039,7 +17927,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18068,8 +17956,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets a time off plan 
         /// </summary>
@@ -18109,17 +17997,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -18141,7 +18028,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18170,7 +18057,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets a time off plan 
         /// </summary>
@@ -18213,16 +18100,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -18245,7 +18131,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18274,8 +18160,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets a list of time off plans 
         /// </summary>
@@ -18310,17 +18196,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -18341,7 +18226,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18370,7 +18255,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets a list of time off plans 
         /// </summary>
@@ -18407,16 +18292,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -18438,7 +18322,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18467,8 +18351,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a time off request 
         /// </summary>
@@ -18513,17 +18397,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -18546,7 +18429,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18575,7 +18458,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a time off request 
         /// </summary>
@@ -18624,16 +18507,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -18657,7 +18539,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18686,8 +18568,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Retrieves time off limit, allocated and waitlisted values according to specific time off request 
         /// </summary>
@@ -18732,17 +18614,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -18765,7 +18646,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18794,7 +18675,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Retrieves time off limit, allocated and waitlisted values according to specific time off request 
         /// </summary>
@@ -18843,16 +18724,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -18876,7 +18756,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18905,8 +18785,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a list of time off requests for a given user 
         /// </summary>
@@ -18948,17 +18828,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -18981,7 +18860,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19010,7 +18889,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a list of time off requests for a given user 
         /// </summary>
@@ -19055,16 +18934,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -19088,7 +18966,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19117,8 +18995,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get users in the management unit 
         /// </summary>
@@ -19153,17 +19031,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -19184,7 +19061,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19213,7 +19090,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get users in the management unit 
         /// </summary>
@@ -19250,16 +19127,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -19281,7 +19157,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19310,8 +19186,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule 
         /// </summary>
@@ -19360,17 +19236,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -19395,7 +19270,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19424,7 +19299,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Deprecated.  Use the equivalent business unit resource instead. Get a week schedule 
         /// </summary>
@@ -19477,16 +19352,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -19512,7 +19386,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19541,8 +19415,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit 
         /// </summary>
@@ -19588,17 +19462,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -19623,7 +19496,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19652,7 +19525,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit 
         /// </summary>
@@ -19701,16 +19574,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -19736,7 +19608,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19765,8 +19637,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets all the shift trades for a given week 
         /// </summary>
@@ -19808,17 +19680,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -19841,7 +19712,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19870,7 +19741,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets all the shift trades for a given week 
         /// </summary>
@@ -19915,16 +19786,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -19948,7 +19818,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19977,8 +19847,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a work plan 
         /// </summary>
@@ -20020,17 +19890,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -20053,7 +19922,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20082,7 +19951,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a work plan 
         /// </summary>
@@ -20127,16 +19996,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -20160,7 +20028,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20189,8 +20057,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a work plan rotation 
         /// </summary>
@@ -20230,17 +20098,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -20262,7 +20129,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20291,7 +20158,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a work plan rotation 
         /// </summary>
@@ -20334,16 +20201,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -20366,7 +20232,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20395,8 +20261,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get work plan rotations 
         /// </summary>
@@ -20433,17 +20299,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -20465,7 +20330,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20494,7 +20359,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get work plan rotations 
         /// </summary>
@@ -20533,16 +20398,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -20565,7 +20429,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20594,10 +20458,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get work plans \&quot;expand=details\&quot; is deprecated
+        /// Get work plans \"expand=details\" is deprecated
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -20610,7 +20474,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get work plans \&quot;expand=details\&quot; is deprecated
+        /// Get work plans \"expand=details\" is deprecated
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -20632,17 +20496,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -20664,7 +20527,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20693,9 +20556,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get work plans \&quot;expand=details\&quot; is deprecated
+        /// Get work plans \"expand=details\" is deprecated
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -20709,7 +20572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get work plans \&quot;expand=details\&quot; is deprecated
+        /// Get work plans \"expand=details\" is deprecated
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -20732,16 +20595,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -20764,7 +20626,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20793,8 +20655,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get management units 
         /// </summary>
@@ -20834,17 +20696,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -20869,7 +20730,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20898,7 +20759,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get management units 
         /// </summary>
@@ -20939,16 +20800,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -20974,7 +20834,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21003,8 +20863,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get management units across divisions 
         /// </summary>
@@ -21036,17 +20896,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -21067,7 +20926,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21096,7 +20955,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get management units across divisions 
         /// </summary>
@@ -21129,16 +20988,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -21160,7 +21018,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21189,8 +21047,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a list of notifications for the current user Notifications are only initially sent if you have the relevant Notify and Edit permissions
         /// </summary>
@@ -21220,17 +21078,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -21250,7 +21107,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21279,7 +21136,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a list of notifications for the current user Notifications are only initially sent if you have the relevant Notify and Edit permissions
         /// </summary>
@@ -21310,16 +21167,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -21340,7 +21196,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21369,8 +21225,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get status of the scheduling job 
         /// </summary>
@@ -21405,17 +21261,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -21436,7 +21291,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21465,7 +21320,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get status of the scheduling job 
         /// </summary>
@@ -21502,16 +21357,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -21533,7 +21387,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21562,8 +21416,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets all of my shift trades 
         /// </summary>
@@ -21593,17 +21447,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -21623,7 +21476,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21652,7 +21505,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets all of my shift trades 
         /// </summary>
@@ -21683,16 +21536,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -21713,7 +21565,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21742,8 +21594,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a time off request for the current user 
         /// </summary>
@@ -21778,17 +21630,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -21809,7 +21660,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21838,7 +21689,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a time off request for the current user 
         /// </summary>
@@ -21875,16 +21726,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -21906,7 +21756,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21935,8 +21785,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the daily waitlist positions of a time off request for the current user 
         /// </summary>
@@ -21971,17 +21821,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -22002,7 +21851,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22031,7 +21880,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the daily waitlist positions of a time off request for the current user 
         /// </summary>
@@ -22068,16 +21917,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -22099,7 +21947,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22128,8 +21976,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a list of time off requests for the current user 
         /// </summary>
@@ -22161,17 +22009,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -22192,7 +22039,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22221,7 +22068,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a list of time off requests for the current user 
         /// </summary>
@@ -22254,16 +22101,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -22285,7 +22131,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22314,8 +22160,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update business unit 
         /// </summary>
@@ -22352,7 +22198,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -22360,9 +22205,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -22386,9 +22232,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22417,7 +22263,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update business unit 
         /// </summary>
@@ -22456,7 +22302,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -22464,8 +22309,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -22490,9 +22336,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22521,8 +22367,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update an activity code 
         /// </summary>
@@ -22564,7 +22410,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -22572,9 +22417,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -22599,9 +22445,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22630,7 +22476,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update an activity code 
         /// </summary>
@@ -22675,7 +22521,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -22683,8 +22528,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -22710,9 +22556,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22741,8 +22587,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates the planning group 
         /// </summary>
@@ -22784,7 +22630,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -22792,9 +22637,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -22819,9 +22665,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22850,7 +22696,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates the planning group 
         /// </summary>
@@ -22895,7 +22741,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -22903,8 +22748,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -22930,9 +22776,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22961,8 +22807,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Mark a schedule run as applied 
         /// </summary>
@@ -23003,7 +22849,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23011,9 +22856,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -23038,9 +22884,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23069,7 +22915,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Mark a schedule run as applied 
         /// </summary>
@@ -23113,7 +22959,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23121,8 +22966,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -23148,9 +22994,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23179,8 +23025,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates a service goal template 
         /// </summary>
@@ -23222,7 +23068,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23230,9 +23075,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -23257,9 +23103,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23288,7 +23134,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates a service goal template 
         /// </summary>
@@ -23333,7 +23179,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23341,8 +23186,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -23368,9 +23214,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23399,8 +23245,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update the requested management unit 
         /// </summary>
@@ -23437,7 +23283,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23445,9 +23290,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -23471,9 +23317,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23502,7 +23348,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update the requested management unit 
         /// </summary>
@@ -23541,7 +23387,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23549,8 +23394,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -23575,9 +23421,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23606,8 +23452,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates a time off limit object. Updates time off limit object properties, but not daily values.
         /// </summary>
@@ -23649,7 +23495,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23657,9 +23502,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -23684,9 +23530,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23715,7 +23561,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates a time off limit object. Updates time off limit object properties, but not daily values.
         /// </summary>
@@ -23760,7 +23606,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23768,8 +23613,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -23795,9 +23641,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23826,8 +23672,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates a time off plan 
         /// </summary>
@@ -23869,7 +23715,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23877,9 +23722,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -23904,9 +23750,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23935,7 +23781,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates a time off plan 
         /// </summary>
@@ -23980,7 +23826,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23988,8 +23833,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -24015,9 +23861,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24046,8 +23892,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update a time off request 
         /// </summary>
@@ -24094,7 +23940,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24102,9 +23947,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -24130,9 +23976,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24161,7 +24007,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update a time off request 
         /// </summary>
@@ -24212,7 +24058,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24220,8 +24065,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -24248,9 +24094,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24279,20 +24125,20 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>ShiftTradeResponse</returns>
-        public ShiftTradeResponse PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId)
+        public ShiftTradeResponse PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body)
         {
-             ApiResponse<ShiftTradeResponse> localVarResponse = PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo(managementUnitId, weekDateId, body, tradeId);
+             ApiResponse<ShiftTradeResponse> localVarResponse = PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo(managementUnitId, weekDateId, tradeId, body);
              return localVarResponse.Data;
         }
 
@@ -24302,10 +24148,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>ApiResponse of ShiftTradeResponse</returns>
-        public ApiResponse< ShiftTradeResponse > PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId)
+        public ApiResponse< ShiftTradeResponse > PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -24313,12 +24159,12 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'weekDateId' is set
             if (weekDateId == null)
                 throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWeekShifttrade");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWeekShifttrade");
             // verify the required parameter 'tradeId' is set
             if (tradeId == null)
                 throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWeekShifttrade");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWeekShifttrade");
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -24330,7 +24176,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24338,9 +24183,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -24366,9 +24212,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24397,19 +24243,19 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>Task of ShiftTradeResponse</returns>
-        public async System.Threading.Tasks.Task<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeAsync (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId)
+        public async System.Threading.Tasks.Task<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeAsync (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body)
         {
-             ApiResponse<ShiftTradeResponse> localVarResponse = await PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo(managementUnitId, weekDateId, body, tradeId);
+             ApiResponse<ShiftTradeResponse> localVarResponse = await PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo(managementUnitId, weekDateId, tradeId, body);
              return localVarResponse.Data;
 
         }
@@ -24420,10 +24266,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId)
+        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -24433,13 +24279,13 @@ namespace PureCloudPlatform.Client.V2.Api
             if (weekDateId == null)
                 throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWeekShifttrade");
             
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWeekShifttrade");
-            
             // verify the required parameter 'tradeId' is set
             if (tradeId == null)
                 throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWeekShifttrade");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWeekShifttrade");
             
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}";
@@ -24452,7 +24298,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24460,8 +24305,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -24488,9 +24334,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24519,20 +24365,20 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update a work plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>WorkPlan</returns>
-        public WorkPlan PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null)
+        public WorkPlan PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null)
         {
-             ApiResponse<WorkPlan> localVarResponse = PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo(managementUnitId, workPlanId, body, validationMode);
+             ApiResponse<WorkPlan> localVarResponse = PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo(managementUnitId, workPlanId, validationMode, body);
              return localVarResponse.Data;
         }
 
@@ -24542,10 +24388,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
-        public ApiResponse< WorkPlan > PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null)
+        public ApiResponse< WorkPlan > PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -24564,7 +24410,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24572,9 +24417,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -24600,9 +24446,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24631,19 +24477,19 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update a work plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlan</returns>
-        public async System.Threading.Tasks.Task<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null)
+        public async System.Threading.Tasks.Task<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null)
         {
-             ApiResponse<WorkPlan> localVarResponse = await PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo(managementUnitId, workPlanId, body, validationMode);
+             ApiResponse<WorkPlan> localVarResponse = await PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo(managementUnitId, workPlanId, validationMode, body);
              return localVarResponse.Data;
 
         }
@@ -24654,10 +24500,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to update</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -24678,7 +24524,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24686,8 +24531,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -24714,9 +24560,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24745,8 +24591,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update a work plan rotation 
         /// </summary>
@@ -24788,7 +24634,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24796,9 +24641,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -24823,9 +24669,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24854,7 +24700,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update a work plan rotation 
         /// </summary>
@@ -24899,7 +24745,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24907,8 +24752,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -24934,9 +24780,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24965,8 +24811,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update a time off request for the current user 
         /// </summary>
@@ -25003,7 +24849,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25011,9 +24856,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -25037,9 +24883,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25068,7 +24914,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update a time off request for the current user 
         /// </summary>
@@ -25107,7 +24953,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25115,8 +24960,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -25141,9 +24987,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25172,8 +25018,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Request a historical adherence report for users across management units 
         /// </summary>
@@ -25205,7 +25051,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25213,9 +25058,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -25238,9 +25084,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25269,7 +25115,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Request a historical adherence report for users across management units 
         /// </summary>
@@ -25302,7 +25148,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25310,8 +25155,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -25335,9 +25181,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25366,8 +25212,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get published schedule for the current user 
         /// </summary>
@@ -25399,7 +25245,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25407,9 +25252,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -25432,9 +25278,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25463,7 +25309,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get published schedule for the current user 
         /// </summary>
@@ -25496,7 +25342,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25504,8 +25349,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -25529,9 +25375,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25560,8 +25406,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a new activity code 
         /// </summary>
@@ -25598,7 +25444,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25606,9 +25451,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -25632,9 +25478,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25663,7 +25509,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a new activity code 
         /// </summary>
@@ -25702,7 +25548,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25710,8 +25555,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -25736,9 +25582,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25767,20 +25613,20 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Search published schedules 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
-        public BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementBusinessunitAgentschedulesSearch (string businessUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        public BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementBusinessunitAgentschedulesSearch (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         {
-             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = PostWorkforcemanagementBusinessunitAgentschedulesSearchWithHttpInfo(businessUnitId, body, forceAsync, forceDownloadService);
+             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = PostWorkforcemanagementBusinessunitAgentschedulesSearchWithHttpInfo(businessUnitId, forceAsync, forceDownloadService, body);
              return localVarResponse.Data;
         }
 
@@ -25789,11 +25635,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesSearchResponse</returns>
-        public ApiResponse< BuAsyncAgentSchedulesSearchResponse > PostWorkforcemanagementBusinessunitAgentschedulesSearchWithHttpInfo (string businessUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        public ApiResponse< BuAsyncAgentSchedulesSearchResponse > PostWorkforcemanagementBusinessunitAgentschedulesSearchWithHttpInfo (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -25809,7 +25655,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25817,9 +25662,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -25845,9 +25691,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25876,19 +25722,19 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Search published schedules 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
-        public async System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementBusinessunitAgentschedulesSearchAsync (string businessUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        public async System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementBusinessunitAgentschedulesSearchAsync (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         {
-             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = await PostWorkforcemanagementBusinessunitAgentschedulesSearchAsyncWithHttpInfo(businessUnitId, body, forceAsync, forceDownloadService);
+             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = await PostWorkforcemanagementBusinessunitAgentschedulesSearchAsyncWithHttpInfo(businessUnitId, forceAsync, forceDownloadService, body);
              return localVarResponse.Data;
 
         }
@@ -25898,11 +25744,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementBusinessunitAgentschedulesSearchAsyncWithHttpInfo (string businessUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementBusinessunitAgentschedulesSearchAsyncWithHttpInfo (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -25919,7 +25765,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25927,8 +25772,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -25955,9 +25801,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25986,8 +25832,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get intraday data for the given date for the requested planningGroupIds 
         /// </summary>
@@ -26026,7 +25872,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26034,9 +25879,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -26061,9 +25907,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26092,7 +25938,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get intraday data for the given date for the requested planningGroupIds 
         /// </summary>
@@ -26133,7 +25979,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26141,8 +25986,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -26168,9 +26014,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26199,8 +26045,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Adds a new planning group 
         /// </summary>
@@ -26237,7 +26083,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26245,9 +26090,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -26271,9 +26117,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26302,7 +26148,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Adds a new planning group 
         /// </summary>
@@ -26341,7 +26187,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26349,8 +26194,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -26375,9 +26221,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26406,8 +26252,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Adds a new service goal template 
         /// </summary>
@@ -26444,7 +26290,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26452,9 +26297,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -26478,9 +26324,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26509,7 +26355,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Adds a new service goal template 
         /// </summary>
@@ -26548,7 +26394,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26556,8 +26401,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -26582,9 +26428,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26613,8 +26459,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Loads agent schedule data from the schedule. Used in combination with the metadata route 
         /// </summary>
@@ -26668,7 +26514,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26676,9 +26521,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -26706,9 +26552,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26737,7 +26583,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Loads agent schedule data from the schedule. Used in combination with the metadata route 
         /// </summary>
@@ -26796,7 +26642,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26804,8 +26649,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -26834,9 +26680,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26865,8 +26711,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Copy a schedule 
         /// </summary>
@@ -26916,7 +26762,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26924,9 +26769,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -26952,9 +26798,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26983,7 +26829,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Copy a schedule 
         /// </summary>
@@ -27038,7 +26884,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -27046,8 +26891,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -27074,9 +26920,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -27105,8 +26951,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Start a rescheduling run 
         /// </summary>
@@ -27156,7 +27002,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -27164,9 +27009,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -27192,9 +27038,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -27223,7 +27069,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Start a rescheduling run 
         /// </summary>
@@ -27278,7 +27124,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -27286,8 +27131,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -27314,9 +27160,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -27345,8 +27191,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Starts processing a schedule update Call after uploading the schedule data to the url supplied by the /update/uploadurl route
         /// </summary>
@@ -27396,7 +27242,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -27404,9 +27249,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -27432,9 +27278,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -27463,7 +27309,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Starts processing a schedule update Call after uploading the schedule data to the url supplied by the /update/uploadurl route
         /// </summary>
@@ -27518,7 +27364,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -27526,8 +27371,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -27554,9 +27400,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -27585,8 +27431,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates a signed upload URL for updating a schedule Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
         /// </summary>
@@ -27636,7 +27482,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -27644,9 +27489,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -27672,9 +27518,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -27703,7 +27549,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates a signed upload URL for updating a schedule Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
         /// </summary>
@@ -27758,7 +27604,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -27766,8 +27611,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -27794,9 +27640,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -27825,8 +27671,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a blank schedule 
         /// </summary>
@@ -27871,7 +27717,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -27879,9 +27724,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -27906,9 +27752,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -27937,7 +27783,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a blank schedule 
         /// </summary>
@@ -27986,7 +27832,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -27994,8 +27839,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -28021,9 +27867,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -28052,8 +27898,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Generate a schedule 
         /// </summary>
@@ -28098,7 +27944,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -28106,9 +27951,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -28133,9 +27979,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -28164,7 +28010,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Generate a schedule 
         /// </summary>
@@ -28213,7 +28059,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -28221,8 +28066,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -28248,9 +28094,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -28279,8 +28125,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Starts processing a schedule import Call after uploading the schedule data to the url supplied by the /import/uploadurl route
         /// </summary>
@@ -28325,7 +28171,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -28333,9 +28178,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -28360,9 +28206,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -28391,7 +28237,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Starts processing a schedule import Call after uploading the schedule data to the url supplied by the /import/uploadurl route
         /// </summary>
@@ -28440,7 +28286,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -28448,8 +28293,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -28475,9 +28321,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -28506,8 +28352,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates a signed upload URL for importing a schedule Once the upload is complete, call the /import route to start the schedule import process
         /// </summary>
@@ -28552,7 +28398,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -28560,9 +28405,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -28587,9 +28433,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -28618,7 +28464,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates a signed upload URL for importing a schedule Once the upload is complete, call the /import route to start the schedule import process
         /// </summary>
@@ -28667,7 +28513,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -28675,8 +28520,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -28702,9 +28548,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -28733,8 +28579,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Copy a short term forecast 
         /// </summary>
@@ -28786,7 +28632,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -28794,9 +28639,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -28823,9 +28669,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -28854,7 +28700,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Copy a short term forecast 
         /// </summary>
@@ -28911,7 +28757,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -28919,8 +28764,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -28948,9 +28794,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -28979,8 +28825,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Generate a short term forecast 
         /// </summary>
@@ -29027,7 +28873,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -29035,9 +28880,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -29063,9 +28909,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -29094,7 +28940,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Generate a short term forecast 
         /// </summary>
@@ -29145,7 +28991,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -29153,8 +28998,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -29181,9 +29027,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -29212,8 +29058,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Starts importing the uploaded short term forecast Call after uploading the forecast data to the url supplied by the /import/uploadurl route
         /// </summary>
@@ -29258,7 +29104,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -29266,9 +29111,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -29293,9 +29139,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -29324,7 +29170,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Starts importing the uploaded short term forecast Call after uploading the forecast data to the url supplied by the /import/uploadurl route
         /// </summary>
@@ -29373,7 +29219,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -29381,8 +29226,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -29408,9 +29254,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -29439,8 +29285,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates a signed upload URL for importing a short term forecast Once the upload is complete, call the /import route to start the short term forecast import process
         /// </summary>
@@ -29485,7 +29331,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -29493,9 +29338,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -29520,9 +29366,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -29551,7 +29397,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates a signed upload URL for importing a short term forecast Once the upload is complete, call the /import route to start the short term forecast import process
         /// </summary>
@@ -29600,7 +29446,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -29608,8 +29453,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -29635,9 +29481,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -29666,8 +29512,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Add a new business unit It may take a minute or two for a new business unit to be available for api operations
         /// </summary>
@@ -29699,7 +29545,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -29707,9 +29552,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -29732,9 +29578,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -29763,7 +29609,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Add a new business unit It may take a minute or two for a new business unit to be available for api operations
         /// </summary>
@@ -29796,7 +29642,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -29804,8 +29649,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -29829,9 +29675,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -29860,13 +29706,13 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>CalendarUrlResponse</returns>
         public CalendarUrlResponse PostWorkforcemanagementCalendarUrlIcs (string language = null)
         {
@@ -29878,7 +29724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>ApiResponse of CalendarUrlResponse</returns>
         public ApiResponse< CalendarUrlResponse > PostWorkforcemanagementCalendarUrlIcsWithHttpInfo (string language = null)
         { 
@@ -29893,17 +29739,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -29924,7 +29769,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -29953,12 +29798,12 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>Task of CalendarUrlResponse</returns>
         public async System.Threading.Tasks.Task<CalendarUrlResponse> PostWorkforcemanagementCalendarUrlIcsAsync (string language = null)
         {
@@ -29971,7 +29816,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)</param>
+        /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>Task of ApiResponse (CalendarUrlResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CalendarUrlResponse>> PostWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo (string language = null)
         { 
@@ -29986,16 +29831,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -30017,7 +29861,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -30046,8 +29890,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete the entries of the historical data imports in the organization 
         /// </summary>
@@ -30077,17 +29921,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -30107,7 +29950,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -30136,7 +29979,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete the entries of the historical data imports in the organization 
         /// </summary>
@@ -30167,16 +30010,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -30197,7 +30039,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -30226,8 +30068,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Trigger validation process for historical import 
         /// </summary>
@@ -30258,7 +30100,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -30266,9 +30107,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -30291,9 +30133,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -30322,7 +30164,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Trigger validation process for historical import 
         /// </summary>
@@ -30354,7 +30196,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -30362,8 +30203,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -30387,9 +30229,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -30418,20 +30260,20 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
-        public BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        public BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         {
-             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo(managementUnitId, body, forceAsync, forceDownloadService);
+             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo(managementUnitId, forceAsync, forceDownloadService, body);
              return localVarResponse.Data;
         }
 
@@ -30440,11 +30282,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesSearchResponse</returns>
-        public ApiResponse< BuAsyncAgentSchedulesSearchResponse > PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        public ApiResponse< BuAsyncAgentSchedulesSearchResponse > PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -30460,7 +30302,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -30468,9 +30309,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -30496,9 +30338,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -30527,19 +30369,19 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Query published schedules for given given time range for set of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
-        public async System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        public async System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         {
-             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = await PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo(managementUnitId, body, forceAsync, forceDownloadService);
+             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = await PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo(managementUnitId, forceAsync, forceDownloadService, body);
              return localVarResponse.Data;
 
         }
@@ -30549,11 +30391,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -30570,7 +30412,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -30578,8 +30419,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -30606,9 +30448,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -30637,8 +30479,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Request a historical adherence report The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </summary>
@@ -30675,7 +30517,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -30683,9 +30524,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -30709,9 +30551,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -30740,7 +30582,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Request a historical adherence report The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
         /// </summary>
@@ -30779,7 +30621,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -30787,8 +30628,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -30813,9 +30655,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -30844,8 +30686,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Move the requested management unit to a new business unit Returns status 200 if the management unit is already in the requested business unit
         /// </summary>
@@ -30882,7 +30724,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -30890,9 +30731,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -30916,9 +30758,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -30947,7 +30789,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Move the requested management unit to a new business unit Returns status 200 if the management unit is already in the requested business unit
         /// </summary>
@@ -30986,7 +30828,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -30994,8 +30835,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -31020,9 +30862,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -31051,8 +30893,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Query published schedules for given given time range for set of users 
         /// </summary>
@@ -31089,7 +30931,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -31097,9 +30938,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -31123,9 +30965,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -31154,7 +30996,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Query published schedules for given given time range for set of users 
         /// </summary>
@@ -31193,7 +31035,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -31201,8 +31042,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -31227,9 +31069,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -31258,8 +31100,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates a new time off limit object under management unit. Only one limit object is allowed under management unit, so an attempt to create second object will fail.
         /// </summary>
@@ -31296,7 +31138,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -31304,9 +31145,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -31330,9 +31172,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -31361,7 +31203,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates a new time off limit object under management unit. Only one limit object is allowed under management unit, so an attempt to create second object will fail.
         /// </summary>
@@ -31400,7 +31242,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -31408,8 +31249,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -31434,9 +31276,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -31465,8 +31307,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Retrieves time off limit related values based on a given set of filters. 
         /// </summary>
@@ -31503,7 +31345,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -31511,9 +31352,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -31537,9 +31379,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -31568,7 +31410,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Retrieves time off limit related values based on a given set of filters. 
         /// </summary>
@@ -31607,7 +31449,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -31615,8 +31456,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -31641,9 +31483,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -31672,8 +31514,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates a new time off plan 
         /// </summary>
@@ -31710,7 +31552,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -31718,9 +31559,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -31744,9 +31586,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -31775,7 +31617,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates a new time off plan 
         /// </summary>
@@ -31814,7 +31656,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -31822,8 +31663,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -31848,9 +31690,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -31879,8 +31721,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a new time off request 
         /// </summary>
@@ -31917,7 +31759,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -31925,9 +31766,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -31951,9 +31793,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -31982,7 +31824,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a new time off request 
         /// </summary>
@@ -32021,7 +31863,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -32029,8 +31870,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -32055,9 +31897,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -32086,8 +31928,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Fetches time off requests matching the conditions specified in the request body Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </summary>
@@ -32124,7 +31966,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -32132,9 +31973,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -32158,9 +32000,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -32189,7 +32031,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Fetches time off requests matching the conditions specified in the request body Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
         /// </summary>
@@ -32228,7 +32070,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -32236,8 +32077,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -32262,9 +32104,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -32293,8 +32135,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Retrieves daily waitlist position for a list of time off requests 
         /// </summary>
@@ -32331,7 +32173,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -32339,9 +32180,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -32365,9 +32207,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -32396,7 +32238,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Retrieves daily waitlist position for a list of time off requests 
         /// </summary>
@@ -32435,7 +32277,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -32443,8 +32284,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -32469,9 +32311,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -32500,20 +32342,20 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Matches a shift trade. This route can only be called by the receiving agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>MatchShiftTradeResponse</returns>
-        public MatchShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId)
+        public MatchShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body)
         {
-             ApiResponse<MatchShiftTradeResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo(managementUnitId, weekDateId, body, tradeId);
+             ApiResponse<MatchShiftTradeResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo(managementUnitId, weekDateId, tradeId, body);
              return localVarResponse.Data;
         }
 
@@ -32523,10 +32365,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>ApiResponse of MatchShiftTradeResponse</returns>
-        public ApiResponse< MatchShiftTradeResponse > PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId)
+        public ApiResponse< MatchShiftTradeResponse > PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -32534,12 +32376,12 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'weekDateId' is set
             if (weekDateId == null)
                 throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
             // verify the required parameter 'tradeId' is set
             if (tradeId == null)
                 throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match";
             var localVarPathParams = new Dictionary<String, String>();
@@ -32551,7 +32393,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -32559,9 +32400,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -32587,9 +32429,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -32618,19 +32460,19 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Matches a shift trade. This route can only be called by the receiving agent 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>Task of MatchShiftTradeResponse</returns>
-        public async System.Threading.Tasks.Task<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsync (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId)
+        public async System.Threading.Tasks.Task<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsync (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body)
         {
-             ApiResponse<MatchShiftTradeResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo(managementUnitId, weekDateId, body, tradeId);
+             ApiResponse<MatchShiftTradeResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo(managementUnitId, weekDateId, tradeId, body);
              return localVarResponse.Data;
 
         }
@@ -32641,10 +32483,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
-        /// <param name="body">body</param>
         /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (MatchShiftTradeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MatchShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId)
+        public async System.Threading.Tasks.Task<ApiResponse<MatchShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -32654,13 +32496,13 @@ namespace PureCloudPlatform.Client.V2.Api
             if (weekDateId == null)
                 throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
             
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
-            
             // verify the required parameter 'tradeId' is set
             if (tradeId == null)
                 throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
             
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match";
@@ -32673,7 +32515,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -32681,8 +32522,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -32709,9 +32551,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -32740,8 +32582,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Adds a shift trade 
         /// </summary>
@@ -32786,7 +32628,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -32794,9 +32635,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -32821,9 +32663,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -32852,7 +32694,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Adds a shift trade 
         /// </summary>
@@ -32901,7 +32743,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -32909,8 +32750,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -32936,9 +32778,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -32967,8 +32809,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Searches for potential shift trade matches for the current agent 
         /// </summary>
@@ -33013,7 +32855,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -33021,9 +32862,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -33048,9 +32890,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -33079,7 +32921,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Searches for potential shift trade matches for the current agent 
         /// </summary>
@@ -33128,7 +32970,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -33136,8 +32977,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -33163,9 +33005,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -33194,10 +33036,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Updates the state of a batch of shift trades Admin functionality is not supported with \&quot;mine\&quot;.
+        /// Updates the state of a batch of shift trades Admin functionality is not supported with \"mine\".
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -33212,7 +33054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Updates the state of a batch of shift trades Admin functionality is not supported with \&quot;mine\&quot;.
+        /// Updates the state of a batch of shift trades Admin functionality is not supported with \"mine\".
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -33242,7 +33084,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -33250,9 +33091,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -33278,9 +33120,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -33309,9 +33151,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Updates the state of a batch of shift trades Admin functionality is not supported with \&quot;mine\&quot;.
+        /// Updates the state of a batch of shift trades Admin functionality is not supported with \"mine\".
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -33327,7 +33169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Updates the state of a batch of shift trades Admin functionality is not supported with \&quot;mine\&quot;.
+        /// Updates the state of a batch of shift trades Admin functionality is not supported with \"mine\".
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
@@ -33360,7 +33202,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -33368,8 +33209,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -33396,9 +33238,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -33427,8 +33269,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a copy of work plan 
         /// </summary>
@@ -33470,7 +33312,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -33478,9 +33319,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -33505,9 +33347,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -33536,7 +33378,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a copy of work plan 
         /// </summary>
@@ -33581,7 +33423,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -33589,8 +33430,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -33616,9 +33458,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -33647,20 +33489,20 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Validate Work Plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="expand"> (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>ValidateWorkPlanResponse</returns>
-        public ValidateWorkPlanResponse PostWorkforcemanagementManagementunitWorkplanValidate (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null)
+        public ValidateWorkPlanResponse PostWorkforcemanagementManagementunitWorkplanValidate (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null)
         {
-             ApiResponse<ValidateWorkPlanResponse> localVarResponse = PostWorkforcemanagementManagementunitWorkplanValidateWithHttpInfo(managementUnitId, workPlanId, body, expand);
+             ApiResponse<ValidateWorkPlanResponse> localVarResponse = PostWorkforcemanagementManagementunitWorkplanValidateWithHttpInfo(managementUnitId, workPlanId, expand, body);
              return localVarResponse.Data;
         }
 
@@ -33670,10 +33512,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="expand"> (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ValidateWorkPlanResponse</returns>
-        public ApiResponse< ValidateWorkPlanResponse > PostWorkforcemanagementManagementunitWorkplanValidateWithHttpInfo (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null)
+        public ApiResponse< ValidateWorkPlanResponse > PostWorkforcemanagementManagementunitWorkplanValidateWithHttpInfo (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -33692,7 +33534,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -33700,9 +33541,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -33728,9 +33570,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -33759,19 +33601,19 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Validate Work Plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="expand"> (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of ValidateWorkPlanResponse</returns>
-        public async System.Threading.Tasks.Task<ValidateWorkPlanResponse> PostWorkforcemanagementManagementunitWorkplanValidateAsync (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ValidateWorkPlanResponse> PostWorkforcemanagementManagementunitWorkplanValidateAsync (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null)
         {
-             ApiResponse<ValidateWorkPlanResponse> localVarResponse = await PostWorkforcemanagementManagementunitWorkplanValidateAsyncWithHttpInfo(managementUnitId, workPlanId, body, expand);
+             ApiResponse<ValidateWorkPlanResponse> localVarResponse = await PostWorkforcemanagementManagementunitWorkplanValidateAsyncWithHttpInfo(managementUnitId, workPlanId, expand, body);
              return localVarResponse.Data;
 
         }
@@ -33782,10 +33624,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="expand"> (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ValidateWorkPlanResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidateWorkPlanResponse>> PostWorkforcemanagementManagementunitWorkplanValidateAsyncWithHttpInfo (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ValidateWorkPlanResponse>> PostWorkforcemanagementManagementunitWorkplanValidateAsyncWithHttpInfo (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -33806,7 +33648,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -33814,8 +33655,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -33842,9 +33684,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -33873,8 +33715,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a copy of work plan rotation 
         /// </summary>
@@ -33916,7 +33758,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -33924,9 +33765,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -33951,9 +33793,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -33982,7 +33824,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a copy of work plan rotation 
         /// </summary>
@@ -34027,7 +33869,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -34035,8 +33876,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -34062,9 +33904,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -34093,8 +33935,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a new work plan rotation 
         /// </summary>
@@ -34131,7 +33973,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -34139,9 +33980,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -34165,9 +34007,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -34196,7 +34038,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a new work plan rotation 
         /// </summary>
@@ -34235,7 +34077,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -34243,8 +34084,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -34269,9 +34111,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -34300,19 +34142,19 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a new work plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>WorkPlan</returns>
-        public WorkPlan PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, CreateWorkPlan body = null, string validationMode = null)
+        public WorkPlan PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, string validationMode = null, CreateWorkPlan body = null)
         {
-             ApiResponse<WorkPlan> localVarResponse = PostWorkforcemanagementManagementunitWorkplansWithHttpInfo(managementUnitId, body, validationMode);
+             ApiResponse<WorkPlan> localVarResponse = PostWorkforcemanagementManagementunitWorkplansWithHttpInfo(managementUnitId, validationMode, body);
              return localVarResponse.Data;
         }
 
@@ -34321,10 +34163,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
-        public ApiResponse< WorkPlan > PostWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, CreateWorkPlan body = null, string validationMode = null)
+        public ApiResponse< WorkPlan > PostWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, string validationMode = null, CreateWorkPlan body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -34340,7 +34182,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -34348,9 +34189,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -34375,9 +34217,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -34406,18 +34248,18 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a new work plan 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlan</returns>
-        public async System.Threading.Tasks.Task<WorkPlan> PostWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, CreateWorkPlan body = null, string validationMode = null)
+        public async System.Threading.Tasks.Task<WorkPlan> PostWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, string validationMode = null, CreateWorkPlan body = null)
         {
-             ApiResponse<WorkPlan> localVarResponse = await PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo(managementUnitId, body, validationMode);
+             ApiResponse<WorkPlan> localVarResponse = await PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo(managementUnitId, validationMode, body);
              return localVarResponse.Data;
 
         }
@@ -34427,10 +34269,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <param name="body">body (optional)</param>
         /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
+        /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, CreateWorkPlan body = null, string validationMode = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, string validationMode = null, CreateWorkPlan body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -34447,7 +34289,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -34455,8 +34296,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -34482,9 +34324,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -34513,8 +34355,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Add a management unit It may take a minute or two for a new management unit to be available for api operations
         /// </summary>
@@ -34546,7 +34388,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -34554,9 +34395,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -34579,9 +34421,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -34610,7 +34452,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Add a management unit It may take a minute or two for a new management unit to be available for api operations
         /// </summary>
@@ -34643,7 +34485,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -34651,8 +34492,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -34676,9 +34518,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -34707,8 +34549,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Mark a list of notifications as read or unread 
         /// </summary>
@@ -34740,7 +34582,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -34748,9 +34589,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -34773,9 +34615,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -34804,7 +34646,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Mark a list of notifications as read or unread 
         /// </summary>
@@ -34837,7 +34679,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -34845,8 +34686,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -34870,9 +34712,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -34901,8 +34743,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get published schedule for the current user 
         /// </summary>
@@ -34934,7 +34776,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -34942,9 +34783,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -34967,9 +34809,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -34998,7 +34840,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get published schedule for the current user 
         /// </summary>
@@ -35031,7 +34873,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -35039,8 +34880,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -35064,9 +34906,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -35095,8 +34937,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Queries available time off for the current user 
         /// </summary>
@@ -35128,7 +34970,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -35136,9 +34977,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -35161,9 +35003,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -35192,7 +35034,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Queries available time off for the current user 
         /// </summary>
@@ -35225,7 +35067,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -35233,8 +35074,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -35258,9 +35100,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -35289,8 +35131,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a time off request for the current user 
         /// </summary>
@@ -35322,7 +35164,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -35330,9 +35171,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -35355,9 +35197,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -35386,7 +35228,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a time off request for the current user 
         /// </summary>
@@ -35419,7 +35261,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -35427,8 +35268,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -35452,9 +35294,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -35483,8 +35325,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Sets daily values for a date range of time off limit object Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
         /// </summary>
@@ -35526,7 +35368,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -35534,9 +35375,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -35561,9 +35403,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -35592,7 +35434,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Sets daily values for a date range of time off limit object Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
         /// </summary>
@@ -35637,7 +35479,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -35645,8 +35486,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -35672,9 +35514,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -35703,8 +35545,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
     }
-    
+
 }

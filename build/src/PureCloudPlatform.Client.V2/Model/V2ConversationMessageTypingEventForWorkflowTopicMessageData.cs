@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class V2ConversationMessageTypingEventForWorkflowTopicMessageData :  IEquatable<V2ConversationMessageTypingEventForWorkflowTopicMessageData>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="V2ConversationMessageTypingEventForWorkflowTopicMessageData" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NormalizedMessage
         /// </summary>
         [DataMember(Name="normalizedMessage", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForWorkflowTopicConversationNormalizedMessage NormalizedMessage { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class V2ConversationMessageTypingEventForWorkflowTopicMessageData {\n");
-            
+
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  NormalizedMessage: ").Append(NormalizedMessage).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.NormalizedMessage != null)
                     hash = hash * 59 + this.NormalizedMessage.GetHashCode();
-                
+
                 return hash;
             }
         }

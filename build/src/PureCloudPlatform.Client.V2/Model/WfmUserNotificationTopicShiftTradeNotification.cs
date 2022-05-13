@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmUserNotificationTopicShiftTradeNotification :  IEquatable<WfmUserNotificationTopicShiftTradeNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets NewState
         /// </summary>
@@ -79,45 +68,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Canceled")]
             Canceled
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets NewState
         /// </summary>
         [DataMember(Name="newState", EmitDefaultValue=false)]
         public NewStateEnum? NewState { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmUserNotificationTopicShiftTradeNotification" /> class.
         /// </summary>
@@ -142,65 +97,65 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets WeekDate
         /// </summary>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
         public string WeekDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TradeId
         /// </summary>
         [DataMember(Name="tradeId", EmitDefaultValue=false)]
         public string TradeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OneSided
         /// </summary>
         [DataMember(Name="oneSided", EmitDefaultValue=false)]
         public bool? OneSided { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets InitiatingUser
         /// </summary>
         [DataMember(Name="initiatingUser", EmitDefaultValue=false)]
         public WfmUserNotificationTopicUserReference InitiatingUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets InitiatingShiftDate
         /// </summary>
         [DataMember(Name="initiatingShiftDate", EmitDefaultValue=false)]
         public DateTime? InitiatingShiftDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ReceivingUser
         /// </summary>
         [DataMember(Name="receivingUser", EmitDefaultValue=false)]
         public WfmUserNotificationTopicUserReference ReceivingUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ReceivingShiftDate
         /// </summary>
         [DataMember(Name="receivingShiftDate", EmitDefaultValue=false)]
         public DateTime? ReceivingShiftDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -209,7 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmUserNotificationTopicShiftTradeNotification {\n");
-            
+
             sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("  TradeId: ").Append(TradeId).Append("\n");
             sb.Append("  OneSided: ").Append(OneSided).Append("\n");
@@ -311,31 +266,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WeekDate != null)
                     hash = hash * 59 + this.WeekDate.GetHashCode();
-                
+
                 if (this.TradeId != null)
                     hash = hash * 59 + this.TradeId.GetHashCode();
-                
+
                 if (this.OneSided != null)
                     hash = hash * 59 + this.OneSided.GetHashCode();
-                
+
                 if (this.NewState != null)
                     hash = hash * 59 + this.NewState.GetHashCode();
-                
+
                 if (this.InitiatingUser != null)
                     hash = hash * 59 + this.InitiatingUser.GetHashCode();
-                
+
                 if (this.InitiatingShiftDate != null)
                     hash = hash * 59 + this.InitiatingShiftDate.GetHashCode();
-                
+
                 if (this.ReceivingUser != null)
                     hash = hash * 59 + this.ReceivingUser.GetHashCode();
-                
+
                 if (this.ReceivingShiftDate != null)
                     hash = hash * 59 + this.ReceivingShiftDate.GetHashCode();
-                
+
                 return hash;
             }
         }

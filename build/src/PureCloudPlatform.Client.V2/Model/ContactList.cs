@@ -18,95 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactList :  IEquatable<ContactList>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactList" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ContactList() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactList" /> class.
         /// </summary>
@@ -119,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PreviewModeAcceptedValues">The values in the previewModeColumnName column that indicate a contact should always be dialed in preview mode..</param>
         /// <param name="AttemptLimits">AttemptLimits for this ContactList..</param>
         /// <param name="AutomaticTimeZoneMapping">Indicates if automatic time zone mapping is to be used for this ContactList..</param>
-        /// <param name="ZipCodeColumnName">The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true..</param>
+        /// <param name="ZipCodeColumnName">The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if 'automaticTimeZoneMapping' is set to true..</param>
         public ContactList(string Name = null, int? Version = null, DomainEntityRef Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, DomainEntityRef AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null)
         {
             this.Name = Name;
@@ -135,150 +52,150 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The division this entity belongs to.
         /// </summary>
         /// <value>The division this entity belongs to.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public DomainEntityRef Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The names of the contact data columns.
         /// </summary>
         /// <value>The names of the contact data columns.</value>
         [DataMember(Name="columnNames", EmitDefaultValue=false)]
         public List<string> ColumnNames { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates which columns are phone numbers.
         /// </summary>
         /// <value>Indicates which columns are phone numbers.</value>
         [DataMember(Name="phoneColumns", EmitDefaultValue=false)]
         public List<ContactPhoneNumberColumn> PhoneColumns { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The status of the import process.
         /// </summary>
         /// <value>The status of the import process.</value>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
         public ImportStatus ImportStatus { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A column to check if a contact should always be dialed in preview mode.
         /// </summary>
         /// <value>A column to check if a contact should always be dialed in preview mode.</value>
         [DataMember(Name="previewModeColumnName", EmitDefaultValue=false)]
         public string PreviewModeColumnName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The values in the previewModeColumnName column that indicate a contact should always be dialed in preview mode.
         /// </summary>
         /// <value>The values in the previewModeColumnName column that indicate a contact should always be dialed in preview mode.</value>
         [DataMember(Name="previewModeAcceptedValues", EmitDefaultValue=false)]
         public List<string> PreviewModeAcceptedValues { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of contacts in the ContactList.
         /// </summary>
         /// <value>The number of contacts in the ContactList.</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public long? Size { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// AttemptLimits for this ContactList.
         /// </summary>
         /// <value>AttemptLimits for this ContactList.</value>
         [DataMember(Name="attemptLimits", EmitDefaultValue=false)]
         public DomainEntityRef AttemptLimits { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if automatic time zone mapping is to be used for this ContactList.
         /// </summary>
         /// <value>Indicates if automatic time zone mapping is to be used for this ContactList.</value>
         [DataMember(Name="automaticTimeZoneMapping", EmitDefaultValue=false)]
         public bool? AutomaticTimeZoneMapping { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true.
+        /// The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if 'automaticTimeZoneMapping' is set to true.
         /// </summary>
-        /// <value>The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true.</value>
+        /// <value>The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if 'automaticTimeZoneMapping' is set to true.</value>
         [DataMember(Name="zipCodeColumnName", EmitDefaultValue=false)]
         public string ZipCodeColumnName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -287,7 +204,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactList {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -437,55 +354,54 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.ColumnNames != null)
                     hash = hash * 59 + this.ColumnNames.GetHashCode();
-                
+
                 if (this.PhoneColumns != null)
                     hash = hash * 59 + this.PhoneColumns.GetHashCode();
-                
+
                 if (this.ImportStatus != null)
                     hash = hash * 59 + this.ImportStatus.GetHashCode();
-                
+
                 if (this.PreviewModeColumnName != null)
                     hash = hash * 59 + this.PreviewModeColumnName.GetHashCode();
-                
+
                 if (this.PreviewModeAcceptedValues != null)
                     hash = hash * 59 + this.PreviewModeAcceptedValues.GetHashCode();
-                
+
                 if (this.Size != null)
                     hash = hash * 59 + this.Size.GetHashCode();
-                
+
                 if (this.AttemptLimits != null)
                     hash = hash * 59 + this.AttemptLimits.GetHashCode();
-                
+
                 if (this.AutomaticTimeZoneMapping != null)
                     hash = hash * 59 + this.AutomaticTimeZoneMapping.GetHashCode();
-                
+
                 if (this.ZipCodeColumnName != null)
                     hash = hash * 59 + this.ZipCodeColumnName.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

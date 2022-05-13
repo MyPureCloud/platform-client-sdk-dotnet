@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UpdateActionInput :  IEquatable<UpdateActionInput>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateActionInput" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UpdateActionInput() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateActionInput" /> class.
         /// </summary>
@@ -63,43 +40,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Category of action, Can be up to 256 characters long
         /// </summary>
         /// <value>Category of action, Can be up to 256 characters long</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public string Category { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of action, Can be up to 256 characters long
         /// </summary>
         /// <value>Name of action, Can be up to 256 characters long</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Configuration to support request and response processing
         /// </summary>
         /// <value>Configuration to support request and response processing</value>
         [DataMember(Name="config", EmitDefaultValue=false)]
         public ActionConfig Config { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version of this action
         /// </summary>
         /// <value>Version of this action</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UpdateActionInput {\n");
-            
+
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Config: ").Append(Config).Append("\n");
@@ -186,19 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Config != null)
                     hash = hash * 59 + this.Config.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 return hash;
             }
         }

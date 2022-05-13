@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Flow :  IEquatable<Flow>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -154,57 +140,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "WORKITEM")]
             Workitem
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets CompatibleFlowTypes
         /// </summary>
@@ -327,70 +262,17 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "WORKITEM")]
             Workitem
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Flow" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Flow() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Flow" /> class.
         /// </summary>
@@ -435,188 +317,188 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The flow identifier
         /// </summary>
         /// <value>The flow identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The flow name
         /// </summary>
         /// <value>The flow name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The division to which this entity belongs.
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public WritableDivision Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// User that has the flow locked.
         /// </summary>
         /// <value>User that has the flow locked.</value>
         [DataMember(Name="lockedUser", EmitDefaultValue=false)]
         public User LockedUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// OAuth client that has the flow locked.
         /// </summary>
         /// <value>OAuth client that has the flow locked.</value>
         [DataMember(Name="lockedClient", EmitDefaultValue=false)]
         public DomainEntityRef LockedClient { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets System
         /// </summary>
         [DataMember(Name="system", EmitDefaultValue=false)]
         public bool? System { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Deleted
         /// </summary>
         [DataMember(Name="deleted", EmitDefaultValue=false)]
         public bool? Deleted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PublishedVersion
         /// </summary>
         [DataMember(Name="publishedVersion", EmitDefaultValue=false)]
         public FlowVersion PublishedVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SavedVersion
         /// </summary>
         [DataMember(Name="savedVersion", EmitDefaultValue=false)]
         public FlowVersion SavedVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// json schema describing the inputs for the flow
         /// </summary>
         /// <value>json schema describing the inputs for the flow</value>
         [DataMember(Name="inputSchema", EmitDefaultValue=false)]
         public Object InputSchema { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// json schema describing the outputs for the flow
         /// </summary>
         /// <value>json schema describing the outputs for the flow</value>
         [DataMember(Name="outputSchema", EmitDefaultValue=false)]
         public Object OutputSchema { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CheckedInVersion
         /// </summary>
         [DataMember(Name="checkedInVersion", EmitDefaultValue=false)]
         public FlowVersion CheckedInVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DebugVersion
         /// </summary>
         [DataMember(Name="debugVersion", EmitDefaultValue=false)]
         public FlowVersion DebugVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PublishedBy
         /// </summary>
         [DataMember(Name="publishedBy", EmitDefaultValue=false)]
         public User PublishedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CurrentOperation
         /// </summary>
         [DataMember(Name="currentOperation", EmitDefaultValue=false)]
         public Operation CurrentOperation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Information about the natural language understanding configuration for the published version of the flow
         /// </summary>
         /// <value>Information about the natural language understanding configuration for the published version of the flow</value>
         [DataMember(Name="nluInfo", EmitDefaultValue=false)]
         public NluInfo NluInfo { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of supported languages for the published version of the flow.
         /// </summary>
         /// <value>List of supported languages for the published version of the flow.</value>
         [DataMember(Name="supportedLanguages", EmitDefaultValue=false)]
         public List<SupportedLanguage> SupportedLanguages { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Compatible flow types designate which flow types are allowed to embed a flow’s configuration within their own flow configuration.  Currently the only flows that can be embedded are Common Module flows and the embedding flow can invoke them using the Call Common Module action.
         /// </summary>
         /// <value>Compatible flow types designate which flow types are allowed to embed a flow’s configuration within their own flow configuration.  Currently the only flows that can be embedded are Common Module flows and the embedding flow can invoke them using the Call Common Module action.</value>
         [DataMember(Name="compatibleFlowTypes", EmitDefaultValue=false)]
         public List<CompatibleFlowTypesEnum> CompatibleFlowTypes { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -625,7 +507,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Flow {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
@@ -811,73 +693,72 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.LockedUser != null)
                     hash = hash * 59 + this.LockedUser.GetHashCode();
-                
+
                 if (this.LockedClient != null)
                     hash = hash * 59 + this.LockedClient.GetHashCode();
-                
+
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
-                
+
                 if (this.System != null)
                     hash = hash * 59 + this.System.GetHashCode();
-                
+
                 if (this.Deleted != null)
                     hash = hash * 59 + this.Deleted.GetHashCode();
-                
+
                 if (this.PublishedVersion != null)
                     hash = hash * 59 + this.PublishedVersion.GetHashCode();
-                
+
                 if (this.SavedVersion != null)
                     hash = hash * 59 + this.SavedVersion.GetHashCode();
-                
+
                 if (this.InputSchema != null)
                     hash = hash * 59 + this.InputSchema.GetHashCode();
-                
+
                 if (this.OutputSchema != null)
                     hash = hash * 59 + this.OutputSchema.GetHashCode();
-                
+
                 if (this.CheckedInVersion != null)
                     hash = hash * 59 + this.CheckedInVersion.GetHashCode();
-                
+
                 if (this.DebugVersion != null)
                     hash = hash * 59 + this.DebugVersion.GetHashCode();
-                
+
                 if (this.PublishedBy != null)
                     hash = hash * 59 + this.PublishedBy.GetHashCode();
-                
+
                 if (this.CurrentOperation != null)
                     hash = hash * 59 + this.CurrentOperation.GetHashCode();
-                
+
                 if (this.NluInfo != null)
                     hash = hash * 59 + this.NluInfo.GetHashCode();
-                
+
                 if (this.SupportedLanguages != null)
                     hash = hash * 59 + this.SupportedLanguages.GetHashCode();
-                
+
                 if (this.CompatibleFlowTypes != null)
                     hash = hash * 59 + this.CompatibleFlowTypes.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

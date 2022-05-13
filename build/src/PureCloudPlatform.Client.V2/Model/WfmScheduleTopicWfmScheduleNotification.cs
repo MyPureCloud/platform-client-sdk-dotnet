@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmScheduleTopicWfmScheduleNotification :  IEquatable<WfmScheduleTopicWfmScheduleNotification>
     {
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -58,19 +56,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets EventType
         /// </summary>
@@ -115,33 +100,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Reschedule")]
             Reschedule
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets EventType
         /// </summary>
         [DataMember(Name="eventType", EmitDefaultValue=false)]
         public EventTypeEnum? EventType { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmScheduleTopicWfmScheduleNotification" /> class.
         /// </summary>
@@ -160,35 +128,35 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets OperationId
         /// </summary>
         [DataMember(Name="operationId", EmitDefaultValue=false)]
         public string OperationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DownloadUrl
         /// </summary>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PercentComplete
         /// </summary>
         [DataMember(Name="percentComplete", EmitDefaultValue=false)]
         public int? PercentComplete { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -197,7 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmScheduleTopicWfmScheduleNotification {\n");
-            
+
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  OperationId: ").Append(OperationId).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
@@ -281,22 +249,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.OperationId != null)
                     hash = hash * 59 + this.OperationId.GetHashCode();
-                
+
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
-                
+
                 if (this.PercentComplete != null)
                     hash = hash * 59 + this.PercentComplete.GetHashCode();
-                
+
                 if (this.EventType != null)
                     hash = hash * 59 + this.EventType.GetHashCode();
-                
+
                 return hash;
             }
         }

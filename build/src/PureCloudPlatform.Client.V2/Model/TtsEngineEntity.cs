@@ -18,55 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TtsEngineEntity :  IEquatable<TtsEngineEntity>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TtsEngineEntity" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TtsEngineEntity() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TtsEngineEntity" /> class.
         /// </summary>
@@ -87,78 +44,78 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The set of languages the TTS engine supports
         /// </summary>
         /// <value>The set of languages the TTS engine supports</value>
         [DataMember(Name="languages", EmitDefaultValue=false)]
         public List<string> Languages { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The set of output formats the TTS engine can produce
         /// </summary>
         /// <value>The set of output formats the TTS engine can produce</value>
         [DataMember(Name="outputFormats", EmitDefaultValue=false)]
         public List<string> OutputFormats { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The set of voices the TTS engine supports
         /// </summary>
         /// <value>The set of voices the TTS engine supports</value>
         [DataMember(Name="voices", EmitDefaultValue=false)]
         public List<TtsVoiceEntity> Voices { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The TTS engine is the global default engine
         /// </summary>
         /// <value>The TTS engine is the global default engine</value>
         [DataMember(Name="isDefault", EmitDefaultValue=false)]
         public bool? IsDefault { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The TTS engine can be used in a secure call flow
         /// </summary>
         /// <value>The TTS engine can be used in a secure call flow</value>
         [DataMember(Name="isSecure", EmitDefaultValue=false)]
         public bool? IsSecure { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -167,7 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TtsEngineEntity {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Languages: ").Append(Languages).Append("\n");
@@ -269,31 +226,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Languages != null)
                     hash = hash * 59 + this.Languages.GetHashCode();
-                
+
                 if (this.OutputFormats != null)
                     hash = hash * 59 + this.OutputFormats.GetHashCode();
-                
+
                 if (this.Voices != null)
                     hash = hash * 59 + this.Voices.GetHashCode();
-                
+
                 if (this.IsDefault != null)
                     hash = hash * 59 + this.IsDefault.GetHashCode();
-                
+
                 if (this.IsSecure != null)
                     hash = hash * 59 + this.IsSecure.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

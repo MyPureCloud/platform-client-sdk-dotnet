@@ -18,34 +18,26 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MediaType :  IEquatable<MediaType>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaType" /> class.
         /// </summary>
-        /// <param name="Type">The media type string as defined by RFC 2046. You can define specific types such as &#39;image/jpeg&#39;, &#39;video/mpeg&#39;, or specify wild cards for a range of types, &#39;image/*&#39;, or all types &#39;*/*&#39;. See https://www.iana.org/assignments/media-types/media-types.xhtml for a list of registered media types..</param>
+        /// <param name="Type">The media type string as defined by RFC 2046. You can define specific types such as 'image/jpeg', 'video/mpeg', or specify wild cards for a range of types, 'image/_*', or all types '*_/_*'. See https://www.iana.org/assignments/media-types/media-types.xhtml for a list of registered media types..</param>
         public MediaType(string Type = null)
         {
             this.Type = Type;
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The media type string as defined by RFC 2046. You can define specific types such as &#39;image/jpeg&#39;, &#39;video/mpeg&#39;, or specify wild cards for a range of types, &#39;image/*&#39;, or all types &#39;*/*&#39;. See https://www.iana.org/assignments/media-types/media-types.xhtml for a list of registered media types.
+        /// The media type string as defined by RFC 2046. You can define specific types such as 'image/jpeg', 'video/mpeg', or specify wild cards for a range of types, 'image/_*', or all types '*_/_*'. See https://www.iana.org/assignments/media-types/media-types.xhtml for a list of registered media types.
         /// </summary>
-        /// <value>The media type string as defined by RFC 2046. You can define specific types such as &#39;image/jpeg&#39;, &#39;video/mpeg&#39;, or specify wild cards for a range of types, &#39;image/*&#39;, or all types &#39;*/*&#39;. See https://www.iana.org/assignments/media-types/media-types.xhtml for a list of registered media types.</value>
+        /// <value>The media type string as defined by RFC 2046. You can define specific types such as 'image/jpeg', 'video/mpeg', or specify wild cards for a range of types, 'image/_*', or all types '*_/_*'. See https://www.iana.org/assignments/media-types/media-types.xhtml for a list of registered media types.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MediaType {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 return hash;
             }
         }

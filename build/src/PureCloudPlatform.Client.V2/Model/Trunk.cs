@@ -18,35 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Trunk :  IEquatable<Trunk>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
@@ -80,16 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of this trunk.
         /// </summary>
@@ -123,43 +84,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EDGE")]
             Edge
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Returns Enabled when the trunk base supports the availability interval and it has a value greater than 0.
         /// </summary>
@@ -193,10 +117,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NOT_SUPPORTED")]
             NotSupported
         }
-        
-        
-        
-        
         /// <summary>
         /// Returns Enabled when the trunk base supports the registration interval and it has a value greater than 0.
         /// </summary>
@@ -230,118 +150,42 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NOT_SUPPORTED")]
             NotSupported
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
         /// <value>Indicates if the resource is active, inactive, or deleted.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
+        public StateEnum? State { get; private set; }
         /// <summary>
         /// The type of this trunk.
         /// </summary>
         /// <value>The type of this trunk.</value>
         [DataMember(Name="trunkType", EmitDefaultValue=false)]
         public TrunkTypeEnum? TrunkType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Returns Enabled when the trunk base supports the availability interval and it has a value greater than 0.
         /// </summary>
         /// <value>Returns Enabled when the trunk base supports the availability interval and it has a value greater than 0.</value>
         [DataMember(Name="optionsEnabledStatus", EmitDefaultValue=false)]
-        public OptionsEnabledStatusEnum? OptionsEnabledStatus { get; set; }
-        
-        
-        
+        public OptionsEnabledStatusEnum? OptionsEnabledStatus { get; private set; }
         /// <summary>
         /// Returns Enabled when the trunk base supports the registration interval and it has a value greater than 0.
         /// </summary>
         /// <value>Returns Enabled when the trunk base supports the registration interval and it has a value greater than 0.</value>
         [DataMember(Name="registersEnabledStatus", EmitDefaultValue=false)]
-        public RegistersEnabledStatusEnum? RegistersEnabledStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public RegistersEnabledStatusEnum? RegistersEnabledStatus { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Trunk" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Trunk() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Trunk" /> class.
         /// </summary>
         /// <param name="Name">The name of the entity. (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
-        /// <param name="Description">The resource&#39;s description..</param>
+        /// <param name="Description">The resource's description..</param>
         /// <param name="Version">The current version of the resource..</param>
         /// <param name="DateCreated">The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -376,240 +220,240 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the entity.
         /// </summary>
         /// <value>The name of the entity.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The division to which this entity belongs.
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public Division Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The resource&#39;s description.
+        /// The resource's description.
         /// </summary>
-        /// <value>The resource&#39;s description.</value>
+        /// <value>The resource's description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The current version of the resource.
         /// </summary>
         /// <value>The current version of the resource.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the user that last modified the resource.
         /// </summary>
         /// <value>The ID of the user that last modified the resource.</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the user that created the resource.
         /// </summary>
         /// <value>The ID of the user that created the resource.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The application that last modified the resource.
         /// </summary>
         /// <value>The application that last modified the resource.</value>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The application that created the resource.
         /// </summary>
         /// <value>The application that created the resource.</value>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The Edge using this trunk.
         /// </summary>
         /// <value>The Edge using this trunk.</value>
         [DataMember(Name="edge", EmitDefaultValue=false)]
         public DomainEntityRef Edge { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The trunk base configuration used on this trunk.
         /// </summary>
         /// <value>The trunk base configuration used on this trunk.</value>
         [DataMember(Name="trunkBase", EmitDefaultValue=false)]
         public DomainEntityRef TrunkBase { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The metabase used to create this trunk.
         /// </summary>
         /// <value>The metabase used to create this trunk.</value>
         [DataMember(Name="trunkMetabase", EmitDefaultValue=false)]
         public DomainEntityRef TrunkMetabase { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The edge group associated with this trunk.
         /// </summary>
         /// <value>The edge group associated with this trunk.</value>
         [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
         public DomainEntityRef EdgeGroup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if this trunk is in-service.  This comes from the trunk_enabled property of the referenced trunk base.
         /// </summary>
         /// <value>True if this trunk is in-service.  This comes from the trunk_enabled property of the referenced trunk base.</value>
         [DataMember(Name="inService", EmitDefaultValue=false)]
         public bool? InService { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if the Edge used by this trunk is in-service
         /// </summary>
         /// <value>True if the Edge used by this trunk is in-service</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Logical Interface on the Edge to which the trunk is assigned.
         /// </summary>
         /// <value>The Logical Interface on the Edge to which the trunk is assigned.</value>
         [DataMember(Name="logicalInterface", EmitDefaultValue=false)]
         public DomainEntityRef LogicalInterface { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The connected status of the trunk
         /// </summary>
         /// <value>The connected status of the trunk</value>
         [DataMember(Name="connectedStatus", EmitDefaultValue=false)]
         public TrunkConnectedStatus ConnectedStatus { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The trunk optionsStatus
         /// </summary>
         /// <value>The trunk optionsStatus</value>
         [DataMember(Name="optionsStatus", EmitDefaultValue=false)]
         public List<TrunkMetricsOptions> OptionsStatus { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The trunk registersStatus
         /// </summary>
         /// <value>The trunk registersStatus</value>
         [DataMember(Name="registersStatus", EmitDefaultValue=false)]
         public List<TrunkMetricsRegisters> RegistersStatus { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The trunk ipStatus
         /// </summary>
         /// <value>The trunk ipStatus</value>
         [DataMember(Name="ipStatus", EmitDefaultValue=false)]
         public TrunkMetricsNetworkTypeIp IpStatus { get; private set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// The IP Network Family of the trunk
         /// </summary>
         /// <value>The IP Network Family of the trunk</value>
         [DataMember(Name="family", EmitDefaultValue=false)]
         public int? Family { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of proxy addresses (ports if provided) for the trunk
         /// </summary>
         /// <value>The list of proxy addresses (ports if provided) for the trunk</value>
         [DataMember(Name="proxyAddressList", EmitDefaultValue=false)]
         public List<string> ProxyAddressList { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -618,7 +462,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Trunk {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
@@ -846,94 +690,93 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.ModifiedByApp != null)
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
-                
+
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
-                
+
                 if (this.TrunkType != null)
                     hash = hash * 59 + this.TrunkType.GetHashCode();
-                
+
                 if (this.Edge != null)
                     hash = hash * 59 + this.Edge.GetHashCode();
-                
+
                 if (this.TrunkBase != null)
                     hash = hash * 59 + this.TrunkBase.GetHashCode();
-                
+
                 if (this.TrunkMetabase != null)
                     hash = hash * 59 + this.TrunkMetabase.GetHashCode();
-                
+
                 if (this.EdgeGroup != null)
                     hash = hash * 59 + this.EdgeGroup.GetHashCode();
-                
+
                 if (this.InService != null)
                     hash = hash * 59 + this.InService.GetHashCode();
-                
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.LogicalInterface != null)
                     hash = hash * 59 + this.LogicalInterface.GetHashCode();
-                
+
                 if (this.ConnectedStatus != null)
                     hash = hash * 59 + this.ConnectedStatus.GetHashCode();
-                
+
                 if (this.OptionsStatus != null)
                     hash = hash * 59 + this.OptionsStatus.GetHashCode();
-                
+
                 if (this.RegistersStatus != null)
                     hash = hash * 59 + this.RegistersStatus.GetHashCode();
-                
+
                 if (this.IpStatus != null)
                     hash = hash * 59 + this.IpStatus.GetHashCode();
-                
+
                 if (this.OptionsEnabledStatus != null)
                     hash = hash * 59 + this.OptionsEnabledStatus.GetHashCode();
-                
+
                 if (this.RegistersEnabledStatus != null)
                     hash = hash * 59 + this.RegistersEnabledStatus.GetHashCode();
-                
+
                 if (this.Family != null)
                     hash = hash * 59 + this.Family.GetHashCode();
-                
+
                 if (this.ProxyAddressList != null)
                     hash = hash * 59 + this.ProxyAddressList.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

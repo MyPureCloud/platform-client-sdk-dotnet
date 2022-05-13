@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MessageMediaAttachment :  IEquatable<MessageMediaAttachment>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The optional internet media type of the the media object.If null then the media type should be dictated by the url.
         /// </summary>
@@ -39,54 +34,29 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Imagepng for "image/png"
+            /// Enum Png for "image/png"
             /// </summary>
             [EnumMember(Value = "image/png")]
-            Imagepng,
+            Png,
             
             /// <summary>
-            /// Enum Imagejpeg for "image/jpeg"
+            /// Enum Jpeg for "image/jpeg"
             /// </summary>
             [EnumMember(Value = "image/jpeg")]
-            Imagejpeg,
+            Jpeg,
             
             /// <summary>
-            /// Enum Imagegif for "image/gif"
+            /// Enum Gif for "image/gif"
             /// </summary>
             [EnumMember(Value = "image/gif")]
-            Imagegif
+            Gif
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The optional internet media type of the the media object.If null then the media type should be dictated by the url.
         /// </summary>
         /// <value>The optional internet media type of the the media object.If null then the media type should be dictated by the url.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageMediaAttachment" /> class.
         /// </summary>
@@ -105,45 +75,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The location of the media, useful for retrieving it
         /// </summary>
         /// <value>The location of the media, useful for retrieving it</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The optional content length of the the media object, in bytes.
         /// </summary>
         /// <value>The optional content length of the the media object, in bytes.</value>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
         public long? ContentLength { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the media object.
         /// </summary>
         /// <value>The name of the media object.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A globally unique identifier for the media object.
         /// </summary>
         /// <value>A globally unique identifier for the media object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MessageMediaAttachment {\n");
-            
+
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
@@ -236,22 +206,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.ContentLength != null)
                     hash = hash * 59 + this.ContentLength.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 return hash;
             }
         }

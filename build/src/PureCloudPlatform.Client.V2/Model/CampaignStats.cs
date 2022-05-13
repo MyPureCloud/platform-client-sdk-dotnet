@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignStats :  IEquatable<CampaignStats>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignStats" /> class.
         /// </summary>
@@ -59,61 +26,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// Information regarding the campaign&#39;s connect rate
+        /// Information regarding the campaign's connect rate
         /// </summary>
-        /// <value>Information regarding the campaign&#39;s connect rate</value>
+        /// <value>Information regarding the campaign's connect rate</value>
         [DataMember(Name="contactRate", EmitDefaultValue=false)]
         public ConnectRate ContactRate { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of available agents not currently being utilized
         /// </summary>
         /// <value>Number of available agents not currently being utilized</value>
         [DataMember(Name="idleAgents", EmitDefaultValue=false)]
         public int? IdleAgents { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of effective available agents not currently being utilized
         /// </summary>
         /// <value>Number of effective available agents not currently being utilized</value>
         [DataMember(Name="effectiveIdleAgents", EmitDefaultValue=false)]
         public double? EffectiveIdleAgents { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Calls per agent adjusted by pace
         /// </summary>
         /// <value>Calls per agent adjusted by pace</value>
         [DataMember(Name="adjustedCallsPerAgent", EmitDefaultValue=false)]
         public double? AdjustedCallsPerAgent { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of campaign calls currently ongoing
         /// </summary>
         /// <value>Number of campaign calls currently ongoing</value>
         [DataMember(Name="outstandingCalls", EmitDefaultValue=false)]
         public int? OutstandingCalls { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of campaign calls currently scheduled
         /// </summary>
         /// <value>Number of campaign calls currently scheduled</value>
         [DataMember(Name="scheduledCalls", EmitDefaultValue=false)]
         public int? ScheduledCalls { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignStats {\n");
-            
+
             sb.Append("  ContactRate: ").Append(ContactRate).Append("\n");
             sb.Append("  IdleAgents: ").Append(IdleAgents).Append("\n");
             sb.Append("  EffectiveIdleAgents: ").Append(EffectiveIdleAgents).Append("\n");
@@ -212,25 +179,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContactRate != null)
                     hash = hash * 59 + this.ContactRate.GetHashCode();
-                
+
                 if (this.IdleAgents != null)
                     hash = hash * 59 + this.IdleAgents.GetHashCode();
-                
+
                 if (this.EffectiveIdleAgents != null)
                     hash = hash * 59 + this.EffectiveIdleAgents.GetHashCode();
-                
+
                 if (this.AdjustedCallsPerAgent != null)
                     hash = hash * 59 + this.AdjustedCallsPerAgent.GetHashCode();
-                
+
                 if (this.OutstandingCalls != null)
                     hash = hash * 59 + this.OutstandingCalls.GetHashCode();
-                
+
                 if (this.ScheduledCalls != null)
                     hash = hash * 59 + this.ScheduledCalls.GetHashCode();
-                
+
                 return hash;
             }
         }

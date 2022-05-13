@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DomainNetworkCommandResponse :  IEquatable<DomainNetworkCommandResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainNetworkCommandResponse" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets CorrelationId
         /// </summary>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CommandName
         /// </summary>
         [DataMember(Name="commandName", EmitDefaultValue=false)]
         public string CommandName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Acknowledged
         /// </summary>
         [DataMember(Name="acknowledged", EmitDefaultValue=false)]
         public bool? Acknowledged { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ErrorDetails ErrorInfo { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DomainNetworkCommandResponse {\n");
-            
+
             sb.Append("  CorrelationId: ").Append(CorrelationId).Append("\n");
             sb.Append("  CommandName: ").Append(CommandName).Append("\n");
             sb.Append("  Acknowledged: ").Append(Acknowledged).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CorrelationId != null)
                     hash = hash * 59 + this.CorrelationId.GetHashCode();
-                
+
                 if (this.CommandName != null)
                     hash = hash * 59 + this.CommandName.GetHashCode();
-                
+
                 if (this.Acknowledged != null)
                     hash = hash * 59 + this.Acknowledged.GetHashCode();
-                
+
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
+
                 return hash;
             }
         }

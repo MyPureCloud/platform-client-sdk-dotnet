@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuServiceLevel :  IEquatable<BuServiceLevel>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BuServiceLevel" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BuServiceLevel() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuServiceLevel" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether to include service level targets in the associated configuration
         /// </summary>
         /// <value>Whether to include service level targets in the associated configuration</value>
         [DataMember(Name="include", EmitDefaultValue=false)]
         public bool? Include { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Service level target percent answered. Required if include == true
         /// </summary>
         /// <value>Service level target percent answered. Required if include == true</value>
         [DataMember(Name="percent", EmitDefaultValue=false)]
         public int? Percent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Service level target answer time. Required if include == true
         /// </summary>
         /// <value>Service level target answer time. Required if include == true</value>
         [DataMember(Name="seconds", EmitDefaultValue=false)]
         public int? Seconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuServiceLevel {\n");
-            
+
             sb.Append("  Include: ").Append(Include).Append("\n");
             sb.Append("  Percent: ").Append(Percent).Append("\n");
             sb.Append("  Seconds: ").Append(Seconds).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Include != null)
                     hash = hash * 59 + this.Include.GetHashCode();
-                
+
                 if (this.Percent != null)
                     hash = hash * 59 + this.Percent.GetHashCode();
-                
+
                 if (this.Seconds != null)
                     hash = hash * 59 + this.Seconds.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ShortTermForecastReference :  IEquatable<ShortTermForecastReference>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ShortTermForecastReference" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ShortTermForecastReference() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ShortTermForecastReference" /> class.
         /// </summary>
@@ -59,43 +36,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The weekDate of the short term forecast in yyyy-MM-dd format
         /// </summary>
         /// <value>The weekDate of the short term forecast in yyyy-MM-dd format</value>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
         public string WeekDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of the short term forecast
         /// </summary>
         /// <value>The description of the short term forecast</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ShortTermForecastReference {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
@@ -182,19 +159,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.WeekDate != null)
                     hash = hash * 59 + this.WeekDate.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 return hash;
             }
         }

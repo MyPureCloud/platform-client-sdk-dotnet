@@ -18,62 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebDeploymentConfigurationVersion :  IEquatable<WebDeploymentConfigurationVersion>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current status of the configuration version
         /// </summary>
@@ -119,67 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Deleting")]
             Deleting
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current status of the configuration version
         /// </summary>
         /// <value>The current status of the configuration version</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WebDeploymentConfigurationVersion" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WebDeploymentConfigurationVersion() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WebDeploymentConfigurationVersion" /> class.
         /// </summary>
@@ -210,180 +105,180 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The configuration version ID
         /// </summary>
         /// <value>The configuration version ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The configuration version name
         /// </summary>
         /// <value>The configuration version name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The version of the configuration
         /// </summary>
         /// <value>The version of the configuration</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of the configuration
         /// </summary>
         /// <value>The description of the configuration</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of languages supported on the configuration required if the messenger is enabled
         /// </summary>
         /// <value>A list of languages supported on the configuration required if the messenger is enabled</value>
         [DataMember(Name="languages", EmitDefaultValue=false)]
         public List<string> Languages { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The default language to use for the configuration required if the messenger is enabled
         /// </summary>
         /// <value>The default language to use for the configuration required if the messenger is enabled</value>
         [DataMember(Name="defaultLanguage", EmitDefaultValue=false)]
         public string DefaultLanguage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The settings for messenger
         /// </summary>
         /// <value>The settings for messenger</value>
         [DataMember(Name="messenger", EmitDefaultValue=false)]
         public MessengerSettings Messenger { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The settings for position
         /// </summary>
         /// <value>The settings for position</value>
         [DataMember(Name="position", EmitDefaultValue=false)]
         public PositionSettings Position { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The settings for support center
         /// </summary>
         /// <value>The settings for support center</value>
         [DataMember(Name="supportCenter", EmitDefaultValue=false)]
         public SupportCenterSettings SupportCenter { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The settings for cobrowse
         /// </summary>
         /// <value>The settings for cobrowse</value>
         [DataMember(Name="cobrowse", EmitDefaultValue=false)]
         public CobrowseSettings Cobrowse { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The settings for journey events
         /// </summary>
         /// <value>The settings for journey events</value>
         [DataMember(Name="journeyEvents", EmitDefaultValue=false)]
         public JourneyEventsSettings JourneyEvents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The settings for authenticated deployments
         /// </summary>
         /// <value>The settings for authenticated deployments</value>
         [DataMember(Name="authenticationSettings", EmitDefaultValue=false)]
         public AuthenticationSettings AuthenticationSettings { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the configuration version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the configuration version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the configuration version was most recently modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the configuration version was most recently modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the configuration version was most recently published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the configuration version was most recently published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="datePublished", EmitDefaultValue=false)]
         public DateTime? DatePublished { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A reference to the user who most recently modified the configuration version
         /// </summary>
         /// <value>A reference to the user who most recently modified the configuration version</value>
         [DataMember(Name="lastModifiedUser", EmitDefaultValue=false)]
         public AddressableEntityRef LastModifiedUser { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A reference to the user who created the configuration version
         /// </summary>
         /// <value>A reference to the user who created the configuration version</value>
         [DataMember(Name="createdUser", EmitDefaultValue=false)]
         public AddressableEntityRef CreatedUser { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A reference to the user who published the configuration version
         /// </summary>
         /// <value>A reference to the user who published the configuration version</value>
         [DataMember(Name="publishedUser", EmitDefaultValue=false)]
         public AddressableEntityRef PublishedUser { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -392,7 +287,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebDeploymentConfigurationVersion {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
@@ -566,67 +461,66 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Languages != null)
                     hash = hash * 59 + this.Languages.GetHashCode();
-                
+
                 if (this.DefaultLanguage != null)
                     hash = hash * 59 + this.DefaultLanguage.GetHashCode();
-                
+
                 if (this.Messenger != null)
                     hash = hash * 59 + this.Messenger.GetHashCode();
-                
+
                 if (this.Position != null)
                     hash = hash * 59 + this.Position.GetHashCode();
-                
+
                 if (this.SupportCenter != null)
                     hash = hash * 59 + this.SupportCenter.GetHashCode();
-                
+
                 if (this.Cobrowse != null)
                     hash = hash * 59 + this.Cobrowse.GetHashCode();
-                
+
                 if (this.JourneyEvents != null)
                     hash = hash * 59 + this.JourneyEvents.GetHashCode();
-                
+
                 if (this.AuthenticationSettings != null)
                     hash = hash * 59 + this.AuthenticationSettings.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.DatePublished != null)
                     hash = hash * 59 + this.DatePublished.GetHashCode();
-                
+
                 if (this.LastModifiedUser != null)
                     hash = hash * 59 + this.LastModifiedUser.GetHashCode();
-                
+
                 if (this.CreatedUser != null)
                     hash = hash * 59 + this.CreatedUser.GetHashCode();
-                
+
                 if (this.PublishedUser != null)
                     hash = hash * 59 + this.PublishedUser.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,24 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LineId :  IEquatable<LineId>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LineId" /> class.
         /// </summary>
         /// <param name="Ids">The set of Line userIds that this person has. Each userId is specific to the Line channel that the user interacts with..</param>
-        /// <param name="DisplayName">The displayName of this person&#39;s account in Line.</param>
+        /// <param name="DisplayName">The displayName of this person's account in Line.</param>
         public LineId(List<LineUserId> Ids = null, string DisplayName = null)
         {
             this.Ids = Ids;
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The set of Line userIds that this person has. Each userId is specific to the Line channel that the user interacts with.
         /// </summary>
         /// <value>The set of Line userIds that this person has. Each userId is specific to the Line channel that the user interacts with.</value>
         [DataMember(Name="ids", EmitDefaultValue=false)]
         public List<LineUserId> Ids { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The displayName of this person&#39;s account in Line
+        /// The displayName of this person's account in Line
         /// </summary>
-        /// <value>The displayName of this person&#39;s account in Line</value>
+        /// <value>The displayName of this person's account in Line</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LineId {\n");
-            
+
             sb.Append("  Ids: ").Append(Ids).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Ids != null)
                     hash = hash * 59 + this.Ids.GetHashCode();
-                
+
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
-                
+
                 return hash;
             }
         }

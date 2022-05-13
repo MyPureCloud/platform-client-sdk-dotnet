@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyCustomer :  IEquatable<JourneyCustomer>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyCustomer" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected JourneyCustomer() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyCustomer" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// An ID of a customer within the Journey System at a point-in-time.  Note that a customer entity can have multiple customerIds based on the stitching process.  Depending on the context within the PureCloud conversation, this may or may not be mutable.
         /// </summary>
         /// <value>An ID of a customer within the Journey System at a point-in-time.  Note that a customer entity can have multiple customerIds based on the stitching process.  Depending on the context within the PureCloud conversation, this may or may not be mutable.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The type of the customerId within the Journey System (e.g. cookie).
         /// </summary>
         /// <value>The type of the customerId within the Journey System (e.g. cookie).</value>
         [DataMember(Name="idType", EmitDefaultValue=false)]
         public string IdType { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyCustomer {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdType: ").Append(IdType).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.IdType != null)
                     hash = hash * 59 + this.IdType.GetHashCode();
-                
+
                 return hash;
             }
         }

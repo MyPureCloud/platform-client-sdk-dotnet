@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Phrase :  IEquatable<Phrase>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The phrase strictness, default value is null
         /// </summary>
@@ -74,10 +69,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "90")]
             _90
         }
-        
-        
-        
-        
         /// <summary>
         /// The phrase sentiment, default value is Unspecified
         /// </summary>
@@ -117,37 +108,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Negative")]
             Negative
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The phrase strictness, default value is null
         /// </summary>
         /// <value>The phrase strictness, default value is null</value>
         [DataMember(Name="strictness", EmitDefaultValue=false)]
         public StrictnessEnum? Strictness { get; set; }
-        
-        
-        
         /// <summary>
         /// The phrase sentiment, default value is Unspecified
         /// </summary>
         /// <value>The phrase sentiment, default value is Unspecified</value>
         [DataMember(Name="sentiment", EmitDefaultValue=false)]
         public SentimentEnum? Sentiment { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Phrase" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Phrase() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Phrase" /> class.
         /// </summary>
@@ -162,20 +140,20 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The phrase text
         /// </summary>
         /// <value>The phrase text</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -184,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Phrase {\n");
-            
+
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Strictness: ").Append(Strictness).Append("\n");
             sb.Append("  Sentiment: ").Append(Sentiment).Append("\n");
@@ -256,16 +234,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Strictness != null)
                     hash = hash * 59 + this.Strictness.GetHashCode();
-                
+
                 if (this.Sentiment != null)
                     hash = hash * 59 + this.Sentiment.GetHashCode();
-                
+
                 return hash;
             }
         }

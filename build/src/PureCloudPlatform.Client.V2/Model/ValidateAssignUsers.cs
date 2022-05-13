@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ValidateAssignUsers :  IEquatable<ValidateAssignUsers>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateAssignUsers" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ValidateAssignUsers() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateAssignUsers" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// List of user ids to assign to a performance profile
         /// </summary>
         /// <value>List of user ids to assign to a performance profile</value>
         [DataMember(Name="membersToAssign", EmitDefaultValue=false)]
         public List<string> MembersToAssign { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ValidateAssignUsers {\n");
-            
+
             sb.Append("  MembersToAssign: ").Append(MembersToAssign).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MembersToAssign != null)
                     hash = hash * 59 + this.MembersToAssign.GetHashCode();
-                
+
                 return hash;
             }
         }

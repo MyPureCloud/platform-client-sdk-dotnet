@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EvaluationQuestionScore :  IEquatable<EvaluationQuestionScore>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationQuestionScore" /> class.
         /// </summary>
@@ -78,67 +40,67 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets QuestionId
         /// </summary>
         [DataMember(Name="questionId", EmitDefaultValue=false)]
         public string QuestionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AnswerId
         /// </summary>
         [DataMember(Name="answerId", EmitDefaultValue=false)]
         public string AnswerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unweighted score of the question
         /// </summary>
         /// <value>Unweighted score of the question</value>
         [DataMember(Name="score", EmitDefaultValue=false)]
         public int? Score { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MarkedNA
         /// </summary>
         [DataMember(Name="markedNA", EmitDefaultValue=false)]
         public bool? MarkedNA { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// AnswerId found with evaluation assistance conditions
         /// </summary>
         /// <value>AnswerId found with evaluation assistance conditions</value>
         [DataMember(Name="assistedAnswerId", EmitDefaultValue=false)]
         public string AssistedAnswerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Applicable only on fatal questions. Indicates that the answer selected was not the highest score available for the question
         /// </summary>
         /// <value>Applicable only on fatal questions. Indicates that the answer selected was not the highest score available for the question</value>
         [DataMember(Name="failedKillQuestion", EmitDefaultValue=false)]
         public bool? FailedKillQuestion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Comments from the evaluator specific to this question
         /// </summary>
         /// <value>Comments from the evaluator specific to this question</value>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -147,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EvaluationQuestionScore {\n");
-            
+
             sb.Append("  QuestionId: ").Append(QuestionId).Append("\n");
             sb.Append("  AnswerId: ").Append(AnswerId).Append("\n");
             sb.Append("  Score: ").Append(Score).Append("\n");
@@ -243,28 +205,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QuestionId != null)
                     hash = hash * 59 + this.QuestionId.GetHashCode();
-                
+
                 if (this.AnswerId != null)
                     hash = hash * 59 + this.AnswerId.GetHashCode();
-                
+
                 if (this.Score != null)
                     hash = hash * 59 + this.Score.GetHashCode();
-                
+
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
-                
+
                 if (this.AssistedAnswerId != null)
                     hash = hash * 59 + this.AssistedAnswerId.GetHashCode();
-                
+
                 if (this.FailedKillQuestion != null)
                     hash = hash * 59 + this.FailedKillQuestion.GetHashCode();
-                
+
                 if (this.Comments != null)
                     hash = hash * 59 + this.Comments.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -12,7 +12,7 @@ title: SegmentDetailQueryPredicate
 | **PropertyType** | **string** | Left hand side for property predicates | [optional] |
 | **Property** | **string** | Left hand side for property predicates | [optional] |
 | **Metric** | **string** | Left hand side for metric predicates | [optional] |
-| **_Operator** | **string** | Optional operator, default is matches | [optional] |
+| **Operator** | **string** | Optional operator, default is matches | [optional] |
 | **Value** | **string** | Right hand side for dimension, metric, or property predicates | [optional] |
 | **Range** | [**NumericRange**](NumericRange.html) | Right hand side for dimension, metric, or property predicates | [optional] |
 {: class="table table-striped"}

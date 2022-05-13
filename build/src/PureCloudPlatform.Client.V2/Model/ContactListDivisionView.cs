@@ -18,55 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactListDivisionView :  IEquatable<ContactListDivisionView>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListDivisionView" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ContactListDivisionView() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListDivisionView" /> class.
         /// </summary>
@@ -83,78 +40,78 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The division to which this entity belongs.
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public Division Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The names of the contact data columns.
         /// </summary>
         /// <value>The names of the contact data columns.</value>
         [DataMember(Name="columnNames", EmitDefaultValue=false)]
         public List<string> ColumnNames { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates which columns are phone numbers.
         /// </summary>
         /// <value>Indicates which columns are phone numbers.</value>
         [DataMember(Name="phoneColumns", EmitDefaultValue=false)]
         public List<ContactPhoneNumberColumn> PhoneColumns { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The status of the import process.
         /// </summary>
         /// <value>The status of the import process.</value>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
         public ImportStatus ImportStatus { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of contacts in the ContactList.
         /// </summary>
         /// <value>The number of contacts in the ContactList.</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public long? Size { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -163,7 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactListDivisionView {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
@@ -265,31 +222,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.ColumnNames != null)
                     hash = hash * 59 + this.ColumnNames.GetHashCode();
-                
+
                 if (this.PhoneColumns != null)
                     hash = hash * 59 + this.PhoneColumns.GetHashCode();
-                
+
                 if (this.ImportStatus != null)
                     hash = hash * 59 + this.ImportStatus.GetHashCode();
-                
+
                 if (this.Size != null)
                     hash = hash * 59 + this.Size.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

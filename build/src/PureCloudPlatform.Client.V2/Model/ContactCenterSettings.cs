@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactCenterSettings :  IEquatable<ContactCenterSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactCenterSettings" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Strip skills from transfer
         /// </summary>
         /// <value>Strip skills from transfer</value>
         [DataMember(Name="removeSkillsFromBlindTransfer", EmitDefaultValue=false)]
         public bool? RemoveSkillsFromBlindTransfer { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactCenterSettings {\n");
-            
+
             sb.Append("  RemoveSkillsFromBlindTransfer: ").Append(RemoveSkillsFromBlindTransfer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RemoveSkillsFromBlindTransfer != null)
                     hash = hash * 59 + this.RemoveSkillsFromBlindTransfer.GetHashCode();
-                
+
                 return hash;
             }
         }

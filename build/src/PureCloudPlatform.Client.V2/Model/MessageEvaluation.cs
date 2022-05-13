@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MessageEvaluation :  IEquatable<MessageEvaluation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of message sent
         /// </summary>
@@ -53,34 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Email")]
             Email
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of message sent
         /// </summary>
         /// <value>The type of message sent</value>
         [DataMember(Name="messageType", EmitDefaultValue=false)]
         public MessageTypeEnum? MessageType { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageEvaluation" /> class.
         /// </summary>
@@ -99,45 +69,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the contact column that was wrapped up
         /// </summary>
         /// <value>The name of the contact column that was wrapped up</value>
         [DataMember(Name="contactColumn", EmitDefaultValue=false)]
         public string ContactColumn { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The address (phone or email) that was wrapped up
         /// </summary>
         /// <value>The address (phone or email) that was wrapped up</value>
         [DataMember(Name="contactAddress", EmitDefaultValue=false)]
         public string ContactAddress { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The id of the wrap-up code
         /// </summary>
         /// <value>The id of the wrap-up code</value>
         [DataMember(Name="wrapupCodeId", EmitDefaultValue=false)]
         public string WrapupCodeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time that the wrap-up was applied. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time that the wrap-up was applied. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MessageEvaluation {\n");
-            
+
             sb.Append("  ContactColumn: ").Append(ContactColumn).Append("\n");
             sb.Append("  ContactAddress: ").Append(ContactAddress).Append("\n");
             sb.Append("  MessageType: ").Append(MessageType).Append("\n");
@@ -230,22 +200,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContactColumn != null)
                     hash = hash * 59 + this.ContactColumn.GetHashCode();
-                
+
                 if (this.ContactAddress != null)
                     hash = hash * 59 + this.ContactAddress.GetHashCode();
-                
+
                 if (this.MessageType != null)
                     hash = hash * 59 + this.MessageType.GetHashCode();
-                
+
                 if (this.WrapupCodeId != null)
                     hash = hash * 59 + this.WrapupCodeId.GetHashCode();
-                
+
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
+
                 return hash;
             }
         }

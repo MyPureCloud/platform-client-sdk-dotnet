@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UsageItem :  IEquatable<UsageItem>
     {
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -58,29 +56,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ALL")]
             All
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UsageItem" /> class.
         /// </summary>
@@ -95,25 +75,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets TotalDocumentByteCount
         /// </summary>
         [DataMember(Name="totalDocumentByteCount", EmitDefaultValue=false)]
         public long? TotalDocumentByteCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TotalDocumentCount
         /// </summary>
         [DataMember(Name="totalDocumentCount", EmitDefaultValue=false)]
         public long? TotalDocumentCount { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,7 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UsageItem {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  TotalDocumentByteCount: ").Append(TotalDocumentByteCount).Append("\n");
             sb.Append("  TotalDocumentCount: ").Append(TotalDocumentCount).Append("\n");
@@ -194,16 +174,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.TotalDocumentByteCount != null)
                     hash = hash * 59 + this.TotalDocumentByteCount.GetHashCode();
-                
+
                 if (this.TotalDocumentCount != null)
                     hash = hash * 59 + this.TotalDocumentCount.GetHashCode();
-                
+
                 return hash;
             }
         }

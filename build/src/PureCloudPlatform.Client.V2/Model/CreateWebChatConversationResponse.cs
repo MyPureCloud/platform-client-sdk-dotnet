@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateWebChatConversationResponse :  IEquatable<CreateWebChatConversationResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWebChatConversationResponse" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Chat Conversation identifier
         /// </summary>
         /// <value>Chat Conversation identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The JWT that you can use to identify subsequent calls on this conversation
         /// </summary>
         /// <value>The JWT that you can use to identify subsequent calls on this conversation</value>
         [DataMember(Name="jwt", EmitDefaultValue=false)]
         public string Jwt { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI which provides the conversation event stream.
         /// </summary>
         /// <value>The URI which provides the conversation event stream.</value>
         [DataMember(Name="eventStreamUri", EmitDefaultValue=false)]
         public string EventStreamUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Chat Member
         /// </summary>
         /// <value>Chat Member</value>
         [DataMember(Name="member", EmitDefaultValue=false)]
         public WebChatMemberInfo Member { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateWebChatConversationResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Jwt: ").Append(Jwt).Append("\n");
             sb.Append("  EventStreamUri: ").Append(EventStreamUri).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Jwt != null)
                     hash = hash * 59 + this.Jwt.GetHashCode();
-                
+
                 if (this.EventStreamUri != null)
                     hash = hash * 59 + this.EventStreamUri.GetHashCode();
-                
+
                 if (this.Member != null)
                     hash = hash * 59 + this.Member.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -8,14 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
-    
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface ICoachingApi : IApiAccessor
     {
         #region Synchronous Operations
-        
+
         /// <summary>
         /// Delete an existing appointment
         /// </summary>
@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>ApiResponse of CoachingAppointmentReference</returns>
         ApiResponse<CoachingAppointmentReference> DeleteCoachingAppointmentWithHttpInfo (string appointmentId);
-        
+
         /// <summary>
         /// Delete an existing annotation
         /// </summary>
@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteCoachingAppointmentAnnotationWithHttpInfo (string appointmentId, string annotationId);
-        
+
         /// <summary>
         /// Retrieve an appointment
         /// </summary>
@@ -83,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>ApiResponse of CoachingAppointmentResponse</returns>
         ApiResponse<CoachingAppointmentResponse> GetCoachingAppointmentWithHttpInfo (string appointmentId);
-        
+
         /// <summary>
         /// Retrieve an annotation.
         /// </summary>
@@ -107,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>ApiResponse of CoachingAnnotation</returns>
         ApiResponse<CoachingAnnotation> GetCoachingAppointmentAnnotationWithHttpInfo (string appointmentId, string annotationId);
-        
+
         /// <summary>
         /// Get a list of annotations.
         /// </summary>
@@ -133,7 +133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of CoachingAnnotationList</returns>
         ApiResponse<CoachingAnnotationList> GetCoachingAppointmentAnnotationsWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Get the list of status changes for a coaching appointment.
         /// </summary>
@@ -159,7 +159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of CoachingAppointmentStatusResponseList</returns>
         ApiResponse<CoachingAppointmentStatusResponseList> GetCoachingAppointmentStatusesWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Get appointments for users and optional date range
         /// </summary>
@@ -201,7 +201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
         ApiResponse<CoachingAppointmentResponseList> GetCoachingAppointmentsWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
-        
+
         /// <summary>
         /// Get my appointments for a given date range
         /// </summary>
@@ -241,7 +241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
         ApiResponse<CoachingAppointmentResponseList> GetCoachingAppointmentsMeWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
-        
+
         /// <summary>
         /// Get an existing notification
         /// </summary>
@@ -265,7 +265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>ApiResponse of CoachingNotification</returns>
         ApiResponse<CoachingNotification> GetCoachingNotificationWithHttpInfo (string notificationId, List<string> expand = null);
-        
+
         /// <summary>
         /// Retrieve the list of your notifications.
         /// </summary>
@@ -291,7 +291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>ApiResponse of CoachingNotificationList</returns>
         ApiResponse<CoachingNotificationList> GetCoachingNotificationsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> expand = null);
-        
+
         /// <summary>
         /// Update an existing appointment
         /// </summary>
@@ -315,7 +315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The new version of the appointment</param>
         /// <returns>ApiResponse of CoachingAppointmentResponse</returns>
         ApiResponse<CoachingAppointmentResponse> PatchCoachingAppointmentWithHttpInfo (string appointmentId, UpdateCoachingAppointmentRequest body);
-        
+
         /// <summary>
         /// Update an existing annotation.
         /// </summary>
@@ -341,7 +341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The new version of the annotation</param>
         /// <returns>ApiResponse of CoachingAnnotation</returns>
         ApiResponse<CoachingAnnotation> PatchCoachingAppointmentAnnotationWithHttpInfo (string appointmentId, string annotationId, CoachingAnnotation body);
-        
+
         /// <summary>
         /// Update the status of a coaching appointment
         /// </summary>
@@ -365,7 +365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Updated status of the coaching appointment</param>
         /// <returns>ApiResponse of CoachingAppointmentStatusResponse</returns>
         ApiResponse<CoachingAppointmentStatusResponse> PatchCoachingAppointmentStatusWithHttpInfo (string appointmentId, CoachingAppointmentStatusRequest body);
-        
+
         /// <summary>
         /// Update an existing notification.
         /// </summary>
@@ -389,7 +389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Change the read state of a notification</param>
         /// <returns>ApiResponse of CoachingNotification</returns>
         ApiResponse<CoachingNotification> PatchCoachingNotificationWithHttpInfo (string notificationId, CoachingNotification body);
-        
+
         /// <summary>
         /// Create a new annotation.
         /// </summary>
@@ -413,7 +413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The annotation to add</param>
         /// <returns>ApiResponse of CoachingAnnotation</returns>
         ApiResponse<CoachingAnnotation> PostCoachingAppointmentAnnotationsWithHttpInfo (string appointmentId, CoachingAnnotationCreateRequest body);
-        
+
         /// <summary>
         /// Add a conversation to an appointment
         /// </summary>
@@ -437,7 +437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of AddConversationResponse</returns>
         ApiResponse<AddConversationResponse> PostCoachingAppointmentConversationsWithHttpInfo (string appointmentId, AddConversationRequest body);
-        
+
         /// <summary>
         /// Create a new appointment
         /// </summary>
@@ -459,7 +459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The appointment to add</param>
         /// <returns>ApiResponse of CoachingAppointmentResponse</returns>
         ApiResponse<CoachingAppointmentResponse> PostCoachingAppointmentsWithHttpInfo (CreateCoachingAppointmentRequest body);
-        
+
         /// <summary>
         /// Retrieve aggregated appointment data
         /// </summary>
@@ -481,7 +481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Aggregate Request</param>
         /// <returns>ApiResponse of CoachingAppointmentAggregateResponse</returns>
         ApiResponse<CoachingAppointmentAggregateResponse> PostCoachingAppointmentsAggregatesQueryWithHttpInfo (CoachingAppointmentAggregateRequest body);
-        
+
         /// <summary>
         /// Get list of possible slots where a coaching appointment can be scheduled.
         /// </summary>
@@ -503,11 +503,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The slot search request</param>
         /// <returns>ApiResponse of CoachingSlotsResponse</returns>
         ApiResponse<CoachingSlotsResponse> PostCoachingScheduleslotsQueryWithHttpInfo (CoachingSlotsRequest body);
-        
+
         #endregion Synchronous Operations
-        
+
         #region Asynchronous Operations
-        
+
         /// <summary>
         /// Delete an existing appointment
         /// </summary>
@@ -529,7 +529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentReference)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentReference>> DeleteCoachingAppointmentAsyncWithHttpInfo (string appointmentId);
-        
+
         /// <summary>
         /// Delete an existing annotation
         /// </summary>
@@ -553,7 +553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCoachingAppointmentAnnotationAsyncWithHttpInfo (string appointmentId, string annotationId);
-        
+
         /// <summary>
         /// Retrieve an appointment
         /// </summary>
@@ -575,7 +575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponse>> GetCoachingAppointmentAsyncWithHttpInfo (string appointmentId);
-        
+
         /// <summary>
         /// Retrieve an annotation.
         /// </summary>
@@ -599,7 +599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>Task of ApiResponse (CoachingAnnotation)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAnnotation>> GetCoachingAppointmentAnnotationAsyncWithHttpInfo (string appointmentId, string annotationId);
-        
+
         /// <summary>
         /// Get a list of annotations.
         /// </summary>
@@ -625,7 +625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (CoachingAnnotationList)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAnnotationList>> GetCoachingAppointmentAnnotationsAsyncWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Get the list of status changes for a coaching appointment.
         /// </summary>
@@ -651,7 +651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentStatusResponseList)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusResponseList>> GetCoachingAppointmentStatusesAsyncWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Get appointments for users and optional date range
         /// </summary>
@@ -693,7 +693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsAsyncWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
-        
+
         /// <summary>
         /// Get my appointments for a given date range
         /// </summary>
@@ -733,7 +733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsMeAsyncWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
-        
+
         /// <summary>
         /// Get an existing notification
         /// </summary>
@@ -757,7 +757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of ApiResponse (CoachingNotification)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingNotification>> GetCoachingNotificationAsyncWithHttpInfo (string notificationId, List<string> expand = null);
-        
+
         /// <summary>
         /// Retrieve the list of your notifications.
         /// </summary>
@@ -783,7 +783,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of ApiResponse (CoachingNotificationList)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingNotificationList>> GetCoachingNotificationsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> expand = null);
-        
+
         /// <summary>
         /// Update an existing appointment
         /// </summary>
@@ -807,7 +807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The new version of the appointment</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponse>> PatchCoachingAppointmentAsyncWithHttpInfo (string appointmentId, UpdateCoachingAppointmentRequest body);
-        
+
         /// <summary>
         /// Update an existing annotation.
         /// </summary>
@@ -833,7 +833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The new version of the annotation</param>
         /// <returns>Task of ApiResponse (CoachingAnnotation)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAnnotation>> PatchCoachingAppointmentAnnotationAsyncWithHttpInfo (string appointmentId, string annotationId, CoachingAnnotation body);
-        
+
         /// <summary>
         /// Update the status of a coaching appointment
         /// </summary>
@@ -857,7 +857,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Updated status of the coaching appointment</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentStatusResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusResponse>> PatchCoachingAppointmentStatusAsyncWithHttpInfo (string appointmentId, CoachingAppointmentStatusRequest body);
-        
+
         /// <summary>
         /// Update an existing notification.
         /// </summary>
@@ -881,7 +881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Change the read state of a notification</param>
         /// <returns>Task of ApiResponse (CoachingNotification)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingNotification>> PatchCoachingNotificationAsyncWithHttpInfo (string notificationId, CoachingNotification body);
-        
+
         /// <summary>
         /// Create a new annotation.
         /// </summary>
@@ -905,7 +905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The annotation to add</param>
         /// <returns>Task of ApiResponse (CoachingAnnotation)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAnnotation>> PostCoachingAppointmentAnnotationsAsyncWithHttpInfo (string appointmentId, CoachingAnnotationCreateRequest body);
-        
+
         /// <summary>
         /// Add a conversation to an appointment
         /// </summary>
@@ -929,7 +929,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (AddConversationResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AddConversationResponse>> PostCoachingAppointmentConversationsAsyncWithHttpInfo (string appointmentId, AddConversationRequest body);
-        
+
         /// <summary>
         /// Create a new appointment
         /// </summary>
@@ -951,7 +951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The appointment to add</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponse>> PostCoachingAppointmentsAsyncWithHttpInfo (CreateCoachingAppointmentRequest body);
-        
+
         /// <summary>
         /// Retrieve aggregated appointment data
         /// </summary>
@@ -973,7 +973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Aggregate Request</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentAggregateResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentAggregateResponse>> PostCoachingAppointmentsAggregatesQueryAsyncWithHttpInfo (CoachingAppointmentAggregateRequest body);
-        
+
         /// <summary>
         /// Get list of possible slots where a coaching appointment can be scheduled.
         /// </summary>
@@ -995,9 +995,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The slot search request</param>
         /// <returns>Task of ApiResponse (CoachingSlotsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CoachingSlotsResponse>> PostCoachingScheduleslotsQueryAsyncWithHttpInfo (CoachingSlotsRequest body);
-        
+
         #endregion Asynchronous Operations
-        
+
     }
 
     /// <summary>
@@ -1087,7 +1087,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
-        
+
         /// <summary>
         /// Delete an existing appointment Permission not required if you are the creator of the appointment
         /// </summary>
@@ -1122,17 +1122,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1153,7 +1152,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1182,7 +1181,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete an existing appointment Permission not required if you are the creator of the appointment
         /// </summary>
@@ -1219,16 +1218,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1250,7 +1248,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1279,8 +1277,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete an existing annotation You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
@@ -1319,17 +1317,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1351,7 +1348,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1380,7 +1377,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete an existing annotation You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
@@ -1422,16 +1419,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1454,7 +1450,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1483,8 +1479,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Retrieve an appointment Permission not required if you are the attendee, creator or facilitator of the appointment
         /// </summary>
@@ -1519,17 +1515,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1550,7 +1545,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1579,7 +1574,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Retrieve an appointment Permission not required if you are the attendee, creator or facilitator of the appointment
         /// </summary>
@@ -1616,16 +1611,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1647,7 +1641,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1676,8 +1670,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Retrieve an annotation. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
         /// </summary>
@@ -1717,17 +1711,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1749,7 +1742,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1778,7 +1771,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Retrieve an annotation. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
         /// </summary>
@@ -1821,16 +1814,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1853,7 +1845,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1882,8 +1874,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a list of annotations. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
         /// </summary>
@@ -1922,17 +1914,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1955,7 +1946,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1984,7 +1975,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a list of annotations. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
         /// </summary>
@@ -2025,16 +2016,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2058,7 +2048,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2087,8 +2077,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the list of status changes for a coaching appointment. Permission not required if you are an attendee, creator or facilitator of the appointment
         /// </summary>
@@ -2127,17 +2117,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2160,7 +2149,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2189,7 +2178,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the list of status changes for a coaching appointment. Permission not required if you are an attendee, creator or facilitator of the appointment
         /// </summary>
@@ -2230,16 +2219,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2263,7 +2251,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2292,8 +2280,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get appointments for users and optional date range 
         /// </summary>
@@ -2348,17 +2336,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2389,7 +2376,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2418,7 +2405,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get appointments for users and optional date range 
         /// </summary>
@@ -2475,16 +2462,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2516,7 +2502,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2545,8 +2531,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get my appointments for a given date range 
         /// </summary>
@@ -2596,17 +2582,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2636,7 +2621,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2665,7 +2650,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get my appointments for a given date range 
         /// </summary>
@@ -2716,16 +2701,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2756,7 +2740,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2785,8 +2769,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get an existing notification Permission not required if you are the owner of the notification.
         /// </summary>
@@ -2823,17 +2807,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2855,7 +2838,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2884,7 +2867,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get an existing notification Permission not required if you are the owner of the notification.
         /// </summary>
@@ -2923,16 +2906,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -2955,7 +2937,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -2984,8 +2966,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Retrieve the list of your notifications. 
         /// </summary>
@@ -3021,17 +3003,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3054,7 +3035,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3083,7 +3064,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Retrieve the list of your notifications. 
         /// </summary>
@@ -3120,16 +3101,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3153,7 +3133,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3182,8 +3162,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update an existing appointment Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
@@ -3223,7 +3203,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -3231,9 +3210,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3257,9 +3237,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3288,7 +3268,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update an existing appointment Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
@@ -3331,7 +3311,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -3339,8 +3318,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3365,9 +3345,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3396,8 +3376,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update an existing annotation. You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
@@ -3442,7 +3422,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -3450,9 +3429,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3477,9 +3457,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3508,7 +3488,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update an existing annotation. You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
@@ -3557,7 +3537,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -3565,8 +3544,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3592,9 +3572,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3623,8 +3603,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update the status of a coaching appointment Permission not required if you are an attendee, creator or facilitator of the appointment
         /// </summary>
@@ -3664,7 +3644,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -3672,9 +3651,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3698,9 +3678,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3729,7 +3709,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update the status of a coaching appointment Permission not required if you are an attendee, creator or facilitator of the appointment
         /// </summary>
@@ -3772,7 +3752,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -3780,8 +3759,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -3806,9 +3786,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3837,8 +3817,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update an existing notification. Can only update your own notifications.
         /// </summary>
@@ -3878,7 +3858,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -3886,9 +3865,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3912,9 +3892,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -3943,7 +3923,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update an existing notification. Can only update your own notifications.
         /// </summary>
@@ -3986,7 +3966,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -3994,8 +3973,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4020,9 +4000,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4051,8 +4031,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a new annotation. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can create private annotations).
         /// </summary>
@@ -4092,7 +4072,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -4100,9 +4079,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4126,9 +4106,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4157,7 +4137,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a new annotation. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can create private annotations).
         /// </summary>
@@ -4200,7 +4180,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -4208,8 +4187,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4234,9 +4214,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4265,8 +4245,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Add a conversation to an appointment Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
@@ -4306,7 +4286,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -4314,9 +4293,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4340,9 +4320,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4371,7 +4351,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Add a conversation to an appointment Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
@@ -4414,7 +4394,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -4422,8 +4401,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4448,9 +4428,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4479,8 +4459,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a new appointment 
         /// </summary>
@@ -4515,7 +4495,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -4523,9 +4502,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4548,9 +4528,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4579,7 +4559,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a new appointment 
         /// </summary>
@@ -4616,7 +4596,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -4624,8 +4603,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4649,9 +4629,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4680,8 +4660,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Retrieve aggregated appointment data 
         /// </summary>
@@ -4716,7 +4696,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -4724,9 +4703,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4749,9 +4729,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4780,7 +4760,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Retrieve aggregated appointment data 
         /// </summary>
@@ -4817,7 +4797,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -4825,8 +4804,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -4850,9 +4830,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4881,8 +4861,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get list of possible slots where a coaching appointment can be scheduled. 
         /// </summary>
@@ -4917,7 +4897,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -4925,9 +4904,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4950,9 +4930,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -4981,7 +4961,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get list of possible slots where a coaching appointment can be scheduled. 
         /// </summary>
@@ -5018,7 +4998,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -5026,8 +5005,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5051,9 +5031,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5082,8 +5062,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
     }
-    
+
 }

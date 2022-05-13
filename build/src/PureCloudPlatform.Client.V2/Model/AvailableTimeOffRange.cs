@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AvailableTimeOffRange :  IEquatable<AvailableTimeOffRange>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Granularity choice for time off limit
         /// </summary>
@@ -47,39 +39,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Daily")]
             Daily
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Granularity choice for time off limit
         /// </summary>
         /// <value>Granularity choice for time off limit</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public GranularityEnum? Granularity { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTimeOffRange" /> class.
         /// </summary>
@@ -100,54 +65,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The time off limit
         /// </summary>
         /// <value>The time off limit</value>
         [DataMember(Name="timeOffLimit", EmitDefaultValue=false)]
         public TimeOffLimitReference TimeOffLimit { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Start date of the requested date range. The end date is determined by the size of interval list. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Start date of the requested date range. The end date is determined by the size of interval list. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public String StartDate { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The list of available time off values in minutes per granularity interval
         /// </summary>
         /// <value>The list of available time off values in minutes per granularity interval</value>
         [DataMember(Name="availableMinutesPerInterval", EmitDefaultValue=false)]
         public List<int?> AvailableMinutesPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The current number of waitlisted time off requests for every interval per granularity
         /// </summary>
         /// <value>The current number of waitlisted time off requests for every interval per granularity</value>
         [DataMember(Name="waitlistedRequestsPerInterval", EmitDefaultValue=false)]
         public List<int?> WaitlistedRequestsPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the time off request can be waitlisted
         /// </summary>
         /// <value>Whether the time off request can be waitlisted</value>
         [DataMember(Name="waitlistEnabled", EmitDefaultValue=false)]
         public bool? WaitlistEnabled { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -156,7 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AvailableTimeOffRange {\n");
-            
+
             sb.Append("  TimeOffLimit: ").Append(TimeOffLimit).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  Granularity: ").Append(Granularity).Append("\n");
@@ -246,25 +211,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeOffLimit != null)
                     hash = hash * 59 + this.TimeOffLimit.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.Granularity != null)
                     hash = hash * 59 + this.Granularity.GetHashCode();
-                
+
                 if (this.AvailableMinutesPerInterval != null)
                     hash = hash * 59 + this.AvailableMinutesPerInterval.GetHashCode();
-                
+
                 if (this.WaitlistedRequestsPerInterval != null)
                     hash = hash * 59 + this.WaitlistedRequestsPerInterval.GetHashCode();
-                
+
                 if (this.WaitlistEnabled != null)
                     hash = hash * 59 + this.WaitlistEnabled.GetHashCode();
-                
+
                 return hash;
             }
         }

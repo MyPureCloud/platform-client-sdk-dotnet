@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AgentActivityChangedTopicRoutingStatus :  IEquatable<AgentActivityChangedTopicRoutingStatus>
     {
-        
-        
         /// <summary>
         /// Indicates the Routing State of the agent.
         /// </summary>
@@ -65,25 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "COMMUNICATING")]
             Communicating
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the Routing State of the agent.
         /// </summary>
         /// <value>Indicates the Routing State of the agent.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentActivityChangedTopicRoutingStatus" /> class.
         /// </summary>
@@ -96,18 +81,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The timestamp when the agent went into this state.
         /// </summary>
         /// <value>The timestamp when the agent went into this state.</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -116,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AgentActivityChangedTopicRoutingStatus {\n");
-            
+
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("}\n");
@@ -182,13 +167,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
+
                 return hash;
             }
         }

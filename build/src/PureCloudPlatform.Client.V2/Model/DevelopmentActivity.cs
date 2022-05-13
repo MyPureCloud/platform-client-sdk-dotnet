@@ -18,32 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DevelopmentActivity :  IEquatable<DevelopmentActivity>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of activity
         /// </summary>
@@ -83,10 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Assessment")]
             Assessment
         }
-        
-        
-        
-        
         /// <summary>
         /// The status of the activity
         /// </summary>
@@ -132,65 +102,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NotCompleted")]
             Notcompleted
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of activity
         /// </summary>
         /// <value>The type of activity</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
         /// <summary>
         /// The status of the activity
         /// </summary>
         /// <value>The status of the activity</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DevelopmentActivity" /> class.
         /// </summary>
@@ -213,119 +136,119 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date that activity was completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date that activity was completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
         public DateTime? DateCompleted { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User that created activity
         /// </summary>
         /// <value>User that created activity</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public UserReference CreatedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date activity was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date activity was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The user&#39;s percentage score for this activity
+        /// The user's percentage score for this activity
         /// </summary>
-        /// <value>The user&#39;s percentage score for this activity</value>
+        /// <value>The user's percentage score for this activity</value>
         [DataMember(Name="percentageScore", EmitDefaultValue=false)]
         public float? PercentageScore { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if the activity was passed
         /// </summary>
         /// <value>True if the activity was passed</value>
         [DataMember(Name="isPassed", EmitDefaultValue=false)]
         public bool? IsPassed { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the activity
         /// </summary>
         /// <value>The name of the activity</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Due date for completion of the activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Due date for completion of the activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateDue", EmitDefaultValue=false)]
         public DateTime? DateDue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Facilitator of the activity
         /// </summary>
         /// <value>Facilitator of the activity</value>
         [DataMember(Name="facilitator", EmitDefaultValue=false)]
         public UserReference Facilitator { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of users attending the activity
         /// </summary>
         /// <value>List of users attending the activity</value>
         [DataMember(Name="attendees", EmitDefaultValue=false)]
         public List<UserReference> Attendees { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if the activity is overdue
         /// </summary>
         /// <value>Indicates if the activity is overdue</value>
         [DataMember(Name="isOverdue", EmitDefaultValue=false)]
         public bool? IsOverdue { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -334,7 +257,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DevelopmentActivity {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
@@ -472,49 +395,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.DateCompleted != null)
                     hash = hash * 59 + this.DateCompleted.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.PercentageScore != null)
                     hash = hash * 59 + this.PercentageScore.GetHashCode();
-                
+
                 if (this.IsPassed != null)
                     hash = hash * 59 + this.IsPassed.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.DateDue != null)
                     hash = hash * 59 + this.DateDue.GetHashCode();
-                
+
                 if (this.Facilitator != null)
                     hash = hash * 59 + this.Facilitator.GetHashCode();
-                
+
                 if (this.Attendees != null)
                     hash = hash * 59 + this.Attendees.GetHashCode();
-                
+
                 if (this.IsOverdue != null)
                     hash = hash * 59 + this.IsOverdue.GetHashCode();
-                
+
                 return hash;
             }
         }

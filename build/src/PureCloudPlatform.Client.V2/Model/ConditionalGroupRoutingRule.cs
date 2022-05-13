@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConditionalGroupRoutingRule :  IEquatable<ConditionalGroupRoutingRule>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The queue metric being evaluated
         /// </summary>
@@ -44,10 +39,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EstimatedWaitTime")]
             Estimatedwaittime
         }
-        
-        
-        
-        
         /// <summary>
         /// The operator that compares the actual value against the condition value
         /// </summary>
@@ -87,107 +78,79 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "LessThanOrEqualTo")]
             Lessthanorequalto
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The queue metric being evaluated
         /// </summary>
         /// <value>The queue metric being evaluated</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
-        
-        
-        
         /// <summary>
         /// The operator that compares the actual value against the condition value
         /// </summary>
         /// <value>The operator that compares the actual value against the condition value</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public OperatorEnum? _Operator { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public OperatorEnum? Operator { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ConditionalGroupRoutingRule" /> class.
         /// </summary>
         /// <param name="Queue">The queue being evaluated for this rule.  For rule 1, this is always the current queue..</param>
         /// <param name="Metric">The queue metric being evaluated.</param>
-        /// <param name="_Operator">The operator that compares the actual value against the condition value.</param>
+        /// <param name="Operator">The operator that compares the actual value against the condition value.</param>
         /// <param name="ConditionValue">The limit value, beyond which a rule evaluates as true.</param>
         /// <param name="Groups">The group(s) to activate if the rule evaluates as true.</param>
         /// <param name="WaitSeconds">The number of seconds to wait in this rule, if it evaluates as true, before evaluating the next rule.</param>
-        public ConditionalGroupRoutingRule(DomainEntityRef Queue = null, MetricEnum? Metric = null, OperatorEnum? _Operator = null, double? ConditionValue = null, List<MemberGroup> Groups = null, int? WaitSeconds = null)
+        public ConditionalGroupRoutingRule(DomainEntityRef Queue = null, MetricEnum? Metric = null, OperatorEnum? Operator = null, double? ConditionValue = null, List<MemberGroup> Groups = null, int? WaitSeconds = null)
         {
             this.Queue = Queue;
             this.Metric = Metric;
-            this._Operator = _Operator;
+            this.Operator = Operator;
             this.ConditionValue = ConditionValue;
             this.Groups = Groups;
             this.WaitSeconds = WaitSeconds;
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The queue being evaluated for this rule.  For rule 1, this is always the current queue.
         /// </summary>
         /// <value>The queue being evaluated for this rule.  For rule 1, this is always the current queue.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public DomainEntityRef Queue { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// The limit value, beyond which a rule evaluates as true
         /// </summary>
         /// <value>The limit value, beyond which a rule evaluates as true</value>
         [DataMember(Name="conditionValue", EmitDefaultValue=false)]
         public double? ConditionValue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The group(s) to activate if the rule evaluates as true
         /// </summary>
         /// <value>The group(s) to activate if the rule evaluates as true</value>
         [DataMember(Name="groups", EmitDefaultValue=false)]
         public List<MemberGroup> Groups { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of seconds to wait in this rule, if it evaluates as true, before evaluating the next rule
         /// </summary>
         /// <value>The number of seconds to wait in this rule, if it evaluates as true, before evaluating the next rule</value>
         [DataMember(Name="waitSeconds", EmitDefaultValue=false)]
         public int? WaitSeconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -196,10 +159,10 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConditionalGroupRoutingRule {\n");
-            
+
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  Metric: ").Append(Metric).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  ConditionValue: ").Append(ConditionValue).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
             sb.Append("  WaitSeconds: ").Append(WaitSeconds).Append("\n");
@@ -254,9 +217,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Metric.Equals(other.Metric)
                 ) &&
                 (
-                    this._Operator == other._Operator ||
-                    this._Operator != null &&
-                    this._Operator.Equals(other._Operator)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
                 ) &&
                 (
                     this.ConditionValue == other.ConditionValue ||
@@ -286,25 +249,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
+
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
-                if (this._Operator != null)
-                    hash = hash * 59 + this._Operator.GetHashCode();
-                
+
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
+
                 if (this.ConditionValue != null)
                     hash = hash * 59 + this.ConditionValue.GetHashCode();
-                
+
                 if (this.Groups != null)
                     hash = hash * 59 + this.Groups.GetHashCode();
-                
+
                 if (this.WaitSeconds != null)
                     hash = hash * 59 + this.WaitSeconds.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationEventCoBrowse :  IEquatable<ConversationEventCoBrowse>
     {
-        
-        
         /// <summary>
         /// Describes the type of CoBrowse event.
         /// </summary>
@@ -59,36 +57,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OfferingRejected")]
             Offeringrejected
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Describes the type of CoBrowse event.
         /// </summary>
         /// <value>Describes the type of CoBrowse event.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEventCoBrowse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConversationEventCoBrowse() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEventCoBrowse" /> class.
         /// </summary>
@@ -103,27 +83,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The CoBrowse session ID.
         /// </summary>
         /// <value>The CoBrowse session ID.</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The CoBrowse session join token.
         /// </summary>
         /// <value>The CoBrowse session join token.</value>
         [DataMember(Name="sessionJoinToken", EmitDefaultValue=false)]
         public string SessionJoinToken { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -132,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationEventCoBrowse {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  SessionJoinToken: ").Append(SessionJoinToken).Append("\n");
@@ -204,16 +184,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
-                
+
                 if (this.SessionJoinToken != null)
                     hash = hash * 59 + this.SessionJoinToken.GetHashCode();
-                
+
                 return hash;
             }
         }

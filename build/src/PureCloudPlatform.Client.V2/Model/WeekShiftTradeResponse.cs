@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WeekShiftTradeResponse :  IEquatable<WeekShiftTradeResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WeekShiftTradeResponse" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The shift trade details
         /// </summary>
         /// <value>The shift trade details</value>
         [DataMember(Name="trade", EmitDefaultValue=false)]
         public ShiftTradeResponse Trade { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A preview of what the schedule would look like if the shift trade is approved plus any violations
         /// </summary>
         /// <value>A preview of what the schedule would look like if the shift trade is approved plus any violations</value>
         [DataMember(Name="matchReview", EmitDefaultValue=false)]
         public ShiftTradeMatchReviewResponse MatchReview { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WeekShiftTradeResponse {\n");
-            
+
             sb.Append("  Trade: ").Append(Trade).Append("\n");
             sb.Append("  MatchReview: ").Append(MatchReview).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Trade != null)
                     hash = hash * 59 + this.Trade.GetHashCode();
-                
+
                 if (this.MatchReview != null)
                     hash = hash * 59 + this.MatchReview.GetHashCode();
-                
+
                 return hash;
             }
         }

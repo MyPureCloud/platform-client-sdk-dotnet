@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SearchSort :  IEquatable<SearchSort>
     {
-        
-        
         /// <summary>
         /// The sort order for results
         /// </summary>
@@ -53,25 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SCORE")]
             Score
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The sort order for results
         /// </summary>
         /// <value>The sort order for results</value>
         [DataMember(Name="sortOrder", EmitDefaultValue=false)]
         public SortOrderEnum? SortOrder { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchSort" /> class.
         /// </summary>
@@ -84,18 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The field in the resource that you want to sort the results by
         /// </summary>
         /// <value>The field in the resource that you want to sort the results by</value>
         [DataMember(Name="sortBy", EmitDefaultValue=false)]
         public string SortBy { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SearchSort {\n");
-            
+
             sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
             sb.Append("  SortBy: ").Append(SortBy).Append("\n");
             sb.Append("}\n");
@@ -170,13 +155,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SortOrder != null)
                     hash = hash * 59 + this.SortOrder.GetHashCode();
-                
+
                 if (this.SortBy != null)
                     hash = hash * 59 + this.SortBy.GetHashCode();
-                
+
                 return hash;
             }
         }

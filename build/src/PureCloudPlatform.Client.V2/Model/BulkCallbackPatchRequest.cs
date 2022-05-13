@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BulkCallbackPatchRequest :  IEquatable<BulkCallbackPatchRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BulkCallbackPatchRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BulkCallbackPatchRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BulkCallbackPatchRequest" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of requests to update callbacks in bulk
         /// </summary>
         /// <value>The list of requests to update callbacks in bulk</value>
         [DataMember(Name="patchCallbackRequests", EmitDefaultValue=false)]
         public List<PatchCallbackRequest> PatchCallbackRequests { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BulkCallbackPatchRequest {\n");
-            
+
             sb.Append("  PatchCallbackRequests: ").Append(PatchCallbackRequests).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PatchCallbackRequests != null)
                     hash = hash * 59 + this.PatchCallbackRequests.GetHashCode();
-                
+
                 return hash;
             }
         }

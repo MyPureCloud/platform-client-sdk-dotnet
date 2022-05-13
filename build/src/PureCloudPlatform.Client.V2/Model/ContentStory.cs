@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContentStory :  IEquatable<ContentStory>
     {
-        
-        
         /// <summary>
         /// Type of ephemeral story attachment.
         /// </summary>
@@ -47,36 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Reply")]
             Reply
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of ephemeral story attachment.
         /// </summary>
         /// <value>Type of ephemeral story attachment.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentStory" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ContentStory() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentStory" /> class.
         /// </summary>
@@ -91,27 +71,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// URL to the ephemeral story.
         /// </summary>
         /// <value>URL to the ephemeral story.</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ID of the ephemeral story being replied to.
         /// </summary>
         /// <value>ID of the ephemeral story being replied to.</value>
         [DataMember(Name="replyToId", EmitDefaultValue=false)]
         public string ReplyToId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -120,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContentStory {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  ReplyToId: ").Append(ReplyToId).Append("\n");
@@ -192,16 +172,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.ReplyToId != null)
                     hash = hash * 59 + this.ReplyToId.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,31 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PostTextRequest :  IEquatable<PostTextRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets BotChannels
         /// </summary>
@@ -81,13 +56,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Webchat")]
             Webchat
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// If the channels list contains a 'Messaging' item and the messaging platform is known, include it here to get accurate analytics
         /// </summary>
@@ -193,77 +161,31 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unknown")]
             Unknown
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// If the channels list contains a 'Messaging' item and the messaging platform is known, include it here to get accurate analytics
         /// </summary>
         /// <value>If the channels list contains a 'Messaging' item and the messaging platform is known, include it here to get accurate analytics</value>
         [DataMember(Name="messagingPlatformType", EmitDefaultValue=false)]
         public MessagingPlatformTypeEnum? MessagingPlatformType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PostTextRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PostTextRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PostTextRequest" /> class.
         /// </summary>
         /// <param name="BotId">ID of the bot to send the text to. (required).</param>
         /// <param name="BotAlias">Alias/Version of the bot.</param>
-        /// <param name="IntegrationId">the integration service id for the bot&#39;s credentials (required).</param>
-        /// <param name="BotSessionId">GUID for this bot&#39;s session (required).</param>
+        /// <param name="IntegrationId">the integration service id for the bot's credentials (required).</param>
+        /// <param name="BotSessionId">GUID for this bot's session (required).</param>
         /// <param name="PostTextMessage">Message to send to the bot (required).</param>
         /// <param name="LanguageCode">The launguage code the bot will run under.</param>
         /// <param name="BotSessionTimeoutMinutes">Override timeout for the bot session. This should be greater than 10 minutes..</param>
         /// <param name="BotChannels">The channels this bot is utilizing.</param>
         /// <param name="BotCorrelationId">Id for tracking the activity - this will be returned in the response.</param>
-        /// <param name="MessagingPlatformType">If the channels list contains a &#39;Messaging&#39; item and the messaging platform is known, include it here to get accurate analytics.</param>
+        /// <param name="MessagingPlatformType">If the channels list contains a 'Messaging' item and the messaging platform is known, include it here to get accurate analytics.</param>
         /// <param name="AmazonLexRequest">Provider specific settings, if any.</param>
         /// <param name="GoogleDialogflow">Provider specific settings, if any.</param>
         /// <param name="GenesysBotConnector">Provider specific settings, if any.</param>
@@ -287,126 +209,126 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// ID of the bot to send the text to.
         /// </summary>
         /// <value>ID of the bot to send the text to.</value>
         [DataMember(Name="botId", EmitDefaultValue=false)]
         public string BotId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Alias/Version of the bot
         /// </summary>
         /// <value>Alias/Version of the bot</value>
         [DataMember(Name="botAlias", EmitDefaultValue=false)]
         public string BotAlias { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// the integration service id for the bot&#39;s credentials
+        /// the integration service id for the bot's credentials
         /// </summary>
-        /// <value>the integration service id for the bot&#39;s credentials</value>
+        /// <value>the integration service id for the bot's credentials</value>
         [DataMember(Name="integrationId", EmitDefaultValue=false)]
         public string IntegrationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// GUID for this bot&#39;s session
+        /// GUID for this bot's session
         /// </summary>
-        /// <value>GUID for this bot&#39;s session</value>
+        /// <value>GUID for this bot's session</value>
         [DataMember(Name="botSessionId", EmitDefaultValue=false)]
         public string BotSessionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Message to send to the bot
         /// </summary>
         /// <value>Message to send to the bot</value>
         [DataMember(Name="postTextMessage", EmitDefaultValue=false)]
         public PostTextMessage PostTextMessage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The launguage code the bot will run under
         /// </summary>
         /// <value>The launguage code the bot will run under</value>
         [DataMember(Name="languageCode", EmitDefaultValue=false)]
         public string LanguageCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Override timeout for the bot session. This should be greater than 10 minutes.
         /// </summary>
         /// <value>Override timeout for the bot session. This should be greater than 10 minutes.</value>
         [DataMember(Name="botSessionTimeoutMinutes", EmitDefaultValue=false)]
         public int? BotSessionTimeoutMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The channels this bot is utilizing
         /// </summary>
         /// <value>The channels this bot is utilizing</value>
         [DataMember(Name="botChannels", EmitDefaultValue=false)]
         public List<BotChannelsEnum> BotChannels { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Id for tracking the activity - this will be returned in the response
         /// </summary>
         /// <value>Id for tracking the activity - this will be returned in the response</value>
         [DataMember(Name="botCorrelationId", EmitDefaultValue=false)]
         public string BotCorrelationId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Provider specific settings, if any
         /// </summary>
         /// <value>Provider specific settings, if any</value>
         [DataMember(Name="amazonLexRequest", EmitDefaultValue=false)]
         public AmazonLexRequest AmazonLexRequest { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Provider specific settings, if any
         /// </summary>
         /// <value>Provider specific settings, if any</value>
         [DataMember(Name="googleDialogflow", EmitDefaultValue=false)]
         public GoogleDialogflowCustomSettings GoogleDialogflow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Provider specific settings, if any
         /// </summary>
         /// <value>Provider specific settings, if any</value>
         [DataMember(Name="genesysBotConnector", EmitDefaultValue=false)]
         public GenesysBotConnector GenesysBotConnector { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Provider specific settings, if any
         /// </summary>
         /// <value>Provider specific settings, if any</value>
         [DataMember(Name="nuanceMixDlg", EmitDefaultValue=false)]
         public NuanceMixDlgSettings NuanceMixDlg { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -415,7 +337,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PostTextRequest {\n");
-            
+
             sb.Append("  BotId: ").Append(BotId).Append("\n");
             sb.Append("  BotAlias: ").Append(BotAlias).Append("\n");
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
@@ -553,49 +475,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.BotId != null)
                     hash = hash * 59 + this.BotId.GetHashCode();
-                
+
                 if (this.BotAlias != null)
                     hash = hash * 59 + this.BotAlias.GetHashCode();
-                
+
                 if (this.IntegrationId != null)
                     hash = hash * 59 + this.IntegrationId.GetHashCode();
-                
+
                 if (this.BotSessionId != null)
                     hash = hash * 59 + this.BotSessionId.GetHashCode();
-                
+
                 if (this.PostTextMessage != null)
                     hash = hash * 59 + this.PostTextMessage.GetHashCode();
-                
+
                 if (this.LanguageCode != null)
                     hash = hash * 59 + this.LanguageCode.GetHashCode();
-                
+
                 if (this.BotSessionTimeoutMinutes != null)
                     hash = hash * 59 + this.BotSessionTimeoutMinutes.GetHashCode();
-                
+
                 if (this.BotChannels != null)
                     hash = hash * 59 + this.BotChannels.GetHashCode();
-                
+
                 if (this.BotCorrelationId != null)
                     hash = hash * 59 + this.BotCorrelationId.GetHashCode();
-                
+
                 if (this.MessagingPlatformType != null)
                     hash = hash * 59 + this.MessagingPlatformType.GetHashCode();
-                
+
                 if (this.AmazonLexRequest != null)
                     hash = hash * 59 + this.AmazonLexRequest.GetHashCode();
-                
+
                 if (this.GoogleDialogflow != null)
                     hash = hash * 59 + this.GoogleDialogflow.GetHashCode();
-                
+
                 if (this.GenesysBotConnector != null)
                     hash = hash * 59 + this.GenesysBotConnector.GetHashCode();
-                
+
                 if (this.NuanceMixDlg != null)
                     hash = hash * 59 + this.NuanceMixDlg.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterGlobalStyle :  IEquatable<SupportCenterGlobalStyle>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterGlobalStyle" /> class.
         /// </summary>
@@ -71,61 +38,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Global background color, in hexadecimal format, eg #ffffff
         /// </summary>
         /// <value>Global background color, in hexadecimal format, eg #ffffff</value>
         [DataMember(Name="backgroundColor", EmitDefaultValue=false)]
         public string BackgroundColor { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Global primary color, in hexadecimal format, eg #ffffff
         /// </summary>
         /// <value>Global primary color, in hexadecimal format, eg #ffffff</value>
         [DataMember(Name="primaryColor", EmitDefaultValue=false)]
         public string PrimaryColor { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Global dark primary color, in hexadecimal format, eg #ffffff
         /// </summary>
         /// <value>Global dark primary color, in hexadecimal format, eg #ffffff</value>
         [DataMember(Name="primaryColorDark", EmitDefaultValue=false)]
         public string PrimaryColorDark { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Global light primary color, in hexadecimal format, eg #ffffff
         /// </summary>
         /// <value>Global light primary color, in hexadecimal format, eg #ffffff</value>
         [DataMember(Name="primaryColorLight", EmitDefaultValue=false)]
         public string PrimaryColorLight { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Global text color, in hexadecimal format, eg #ffffff
         /// </summary>
         /// <value>Global text color, in hexadecimal format, eg #ffffff</value>
         [DataMember(Name="textColor", EmitDefaultValue=false)]
         public string TextColor { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Global font family
         /// </summary>
         /// <value>Global font family</value>
         [DataMember(Name="fontFamily", EmitDefaultValue=false)]
         public string FontFamily { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SupportCenterGlobalStyle {\n");
-            
+
             sb.Append("  BackgroundColor: ").Append(BackgroundColor).Append("\n");
             sb.Append("  PrimaryColor: ").Append(PrimaryColor).Append("\n");
             sb.Append("  PrimaryColorDark: ").Append(PrimaryColorDark).Append("\n");
@@ -224,25 +191,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.BackgroundColor != null)
                     hash = hash * 59 + this.BackgroundColor.GetHashCode();
-                
+
                 if (this.PrimaryColor != null)
                     hash = hash * 59 + this.PrimaryColor.GetHashCode();
-                
+
                 if (this.PrimaryColorDark != null)
                     hash = hash * 59 + this.PrimaryColorDark.GetHashCode();
-                
+
                 if (this.PrimaryColorLight != null)
                     hash = hash * 59 + this.PrimaryColorLight.GetHashCode();
-                
+
                 if (this.TextColor != null)
                     hash = hash * 59 + this.TextColor.GetHashCode();
-                
+
                 if (this.FontFamily != null)
                     hash = hash * 59 + this.FontFamily.GetHashCode();
-                
+
                 return hash;
             }
         }

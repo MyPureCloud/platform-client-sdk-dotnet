@@ -18,32 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallbackMediaParticipant :  IEquatable<CallbackMediaParticipant>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting
         /// </summary>
@@ -125,10 +99,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "none")]
             None
         }
-        
-        
-        
-        
         /// <summary>
         /// The participant's direction.  Values can be: 'inbound' or 'outbound'
         /// </summary>
@@ -156,10 +126,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-        
-        
-        
-        
         /// <summary>
         /// The reason the participant was disconnected from the conversation.
         /// </summary>
@@ -259,61 +225,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "spam")]
             Spam
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reason specifying why participant flagged the conversation.
         /// </summary>
@@ -335,162 +246,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "general")]
             General
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting
         /// </summary>
         /// <value>The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
         /// <summary>
         /// The participant's direction.  Values can be: 'inbound' or 'outbound'
         /// </summary>
         /// <value>The participant's direction.  Values can be: 'inbound' or 'outbound'</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
         /// <summary>
         /// The reason the participant was disconnected from the conversation.
         /// </summary>
         /// <value>The reason the participant was disconnected from the conversation.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reason specifying why participant flagged the conversation.
         /// </summary>
         /// <value>The reason specifying why participant flagged the conversation.</value>
         [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
         public FlaggedReasonEnum? FlaggedReason { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallbackMediaParticipant" /> class.
         /// </summary>
@@ -500,10 +279,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartTime">The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ConnectedTime">The time when this participant went connected for this media (eg: video connected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndTime">The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="StartHoldTime">The time when this participant&#39;s hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="Purpose">The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr.</param>
-        /// <param name="State">The participant&#39;s state.  Values can be: &#39;alerting&#39;, &#39;connected&#39;, &#39;disconnected&#39;, &#39;dialing&#39;, &#39;contacting.</param>
-        /// <param name="Direction">The participant&#39;s direction.  Values can be: &#39;inbound&#39; or &#39;outbound&#39;.</param>
+        /// <param name="StartHoldTime">The time when this participant's hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="Purpose">The participant's purpose.  Values can be: 'agent', 'user', 'customer', 'external', 'acd', 'ivr.</param>
+        /// <param name="State">The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting.</param>
+        /// <param name="Direction">The participant's direction.  Values can be: 'inbound' or 'outbound'.</param>
         /// <param name="DisconnectType">The reason the participant was disconnected from the conversation..</param>
         /// <param name="Held">Value is true when the participant is on hold..</param>
         /// <param name="WrapupRequired">Value is true when the participant requires wrap-up..</param>
@@ -583,357 +362,357 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The unique participant ID.
         /// </summary>
         /// <value>The unique participant ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The display friendly name of the participant.
         /// </summary>
         /// <value>The display friendly name of the participant.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The participant address.
         /// </summary>
         /// <value>The participant address.</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when this participant went connected for this media (eg: video connected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when this participant went connected for this media (eg: video connected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The time when this participant&#39;s hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// The time when this participant's hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The time when this participant&#39;s hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>The time when this participant's hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr
+        /// The participant's purpose.  Values can be: 'agent', 'user', 'customer', 'external', 'acd', 'ivr
         /// </summary>
-        /// <value>The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr</value>
+        /// <value>The participant's purpose.  Values can be: 'agent', 'user', 'customer', 'external', 'acd', 'ivr</value>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public string Purpose { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Value is true when the participant is on hold.
         /// </summary>
         /// <value>Value is true when the participant is on hold.</value>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Value is true when the participant requires wrap-up.
         /// </summary>
         /// <value>Value is true when the participant requires wrap-up.</value>
         [DataMember(Name="wrapupRequired", EmitDefaultValue=false)]
         public bool? WrapupRequired { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The wrap-up prompt indicating the type of wrap-up to be performed.
         /// </summary>
         /// <value>The wrap-up prompt indicating the type of wrap-up to be performed.</value>
         [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
         public string WrapupPrompt { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The PureCloud user for this participant.
         /// </summary>
         /// <value>The PureCloud user for this participant.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public DomainEntityRef User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The PureCloud queue for this participant.
         /// </summary>
         /// <value>The PureCloud queue for this participant.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public DomainEntityRef Queue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The PureCloud team for this participant.
         /// </summary>
         /// <value>The PureCloud team for this participant.</value>
         [DataMember(Name="team", EmitDefaultValue=false)]
         public DomainEntityRef Team { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of ad-hoc attributes for the participant.
         /// </summary>
         /// <value>A list of ad-hoc attributes for the participant.</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If the conversation ends in error, contains additional error details.
         /// </summary>
         /// <value>If the conversation ends in error, contains additional error details.</value>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ErrorInfo ErrorInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Engage script that should be used by this participant.
         /// </summary>
         /// <value>The Engage script that should be used by this participant.</value>
         [DataMember(Name="script", EmitDefaultValue=false)]
         public DomainEntityRef Script { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The amount of time the participant has to complete wrap-up.
         /// </summary>
         /// <value>The amount of time the participant has to complete wrap-up.</value>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
         public int? WrapupTimeoutMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Value is true when the participant has skipped wrap-up.
         /// </summary>
         /// <value>Value is true when the participant has skipped wrap-up.</value>
         [DataMember(Name="wrapupSkipped", EmitDefaultValue=false)]
         public bool? WrapupSkipped { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Specifies how long the agent has to answer an interaction before being marked as not responding.
         /// </summary>
         /// <value>Specifies how long the agent has to answer an interaction before being marked as not responding.</value>
         [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
         public int? AlertingTimeoutMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The source provider for the communication.
         /// </summary>
         /// <value>The source provider for the communication.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If this participant represents an external contact, then this will be the reference for the external contact.
         /// </summary>
         /// <value>If this participant represents an external contact, then this will be the reference for the external contact.</value>
         [DataMember(Name="externalContact", EmitDefaultValue=false)]
         public DomainEntityRef ExternalContact { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If this participant represents an external org, then this will be the reference for the external org.
         /// </summary>
         /// <value>If this participant represents an external org, then this will be the reference for the external org.</value>
         [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
         public DomainEntityRef ExternalOrganization { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Wrapup for this participant, if it has been applied.
         /// </summary>
         /// <value>Wrapup for this participant, if it has been applied.</value>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public Wrapup Wrapup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The peer communication corresponding to a matching leg for this communication.
         /// </summary>
         /// <value>The peer communication corresponding to a matching leg for this communication.</value>
         [DataMember(Name="peer", EmitDefaultValue=false)]
         public string Peer { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context.
         /// </summary>
         /// <value>Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context.</value>
         [DataMember(Name="journeyContext", EmitDefaultValue=false)]
         public JourneyContext JourneyContext { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Information on how a communication should be routed to an agent.
         /// </summary>
         /// <value>Information on how a communication should be routed to an agent.</value>
         [DataMember(Name="conversationRoutingData", EmitDefaultValue=false)]
         public ConversationRoutingData ConversationRoutingData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startAcwTime", EmitDefaultValue=false)]
         public DateTime? StartAcwTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="endAcwTime", EmitDefaultValue=false)]
         public DateTime? EndAcwTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The outbound preview associated with this callback.
         /// </summary>
         /// <value>The outbound preview associated with this callback.</value>
         [DataMember(Name="outboundPreview", EmitDefaultValue=false)]
         public DialerPreview OutboundPreview { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The voicemail associated with this callback.
         /// </summary>
         /// <value>The voicemail associated with this callback.</value>
         [DataMember(Name="voicemail", EmitDefaultValue=false)]
         public Voicemail Voicemail { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of phone number to use for this callback.
         /// </summary>
         /// <value>The list of phone number to use for this callback.</value>
         [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
         public List<string> CallbackNumbers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the callback target.
         /// </summary>
         /// <value>The name of the callback target.</value>
         [DataMember(Name="callbackUserName", EmitDefaultValue=false)]
         public string CallbackUserName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if the call for the callback uses external dialing.
         /// </summary>
         /// <value>True if the call for the callback uses external dialing.</value>
         [DataMember(Name="externalCampaign", EmitDefaultValue=false)]
         public bool? ExternalCampaign { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If true, the callback can be skipped.
         /// </summary>
         /// <value>If true, the callback can be skipped.</value>
         [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
         public bool? SkipEnabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Duration in seconds before the callback will be auto-dialed.
         /// </summary>
         /// <value>Duration in seconds before the callback will be auto-dialed.</value>
         [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
         public int? TimeoutSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the config for automatically placing the callback (and handling the disposition). If absent, the callback will not be placed automatically but routed to an agent as per normal.
         /// </summary>
         /// <value>The id of the config for automatically placing the callback (and handling the disposition). If absent, the callback will not be placed automatically but routed to an agent as per normal.</value>
         [DataMember(Name="automatedCallbackConfigId", EmitDefaultValue=false)]
         public string AutomatedCallbackConfigId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
         public DateTime? CallbackScheduledTime { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -942,7 +721,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallbackMediaParticipant {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
@@ -1248,133 +1027,132 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
+
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
+
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
-                
+
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
+
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
-                
+
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
+
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
-                
+
                 if (this.WrapupRequired != null)
                     hash = hash * 59 + this.WrapupRequired.GetHashCode();
-                
+
                 if (this.WrapupPrompt != null)
                     hash = hash * 59 + this.WrapupPrompt.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
+
                 if (this.Team != null)
                     hash = hash * 59 + this.Team.GetHashCode();
-                
+
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
+
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
+
                 if (this.Script != null)
                     hash = hash * 59 + this.Script.GetHashCode();
-                
+
                 if (this.WrapupTimeoutMs != null)
                     hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
-                
+
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
-                
+
                 if (this.AlertingTimeoutMs != null)
                     hash = hash * 59 + this.AlertingTimeoutMs.GetHashCode();
-                
+
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                
+
                 if (this.ExternalContact != null)
                     hash = hash * 59 + this.ExternalContact.GetHashCode();
-                
+
                 if (this.ExternalOrganization != null)
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
-                
+
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
-                
+
                 if (this.Peer != null)
                     hash = hash * 59 + this.Peer.GetHashCode();
-                
+
                 if (this.FlaggedReason != null)
                     hash = hash * 59 + this.FlaggedReason.GetHashCode();
-                
+
                 if (this.JourneyContext != null)
                     hash = hash * 59 + this.JourneyContext.GetHashCode();
-                
+
                 if (this.ConversationRoutingData != null)
                     hash = hash * 59 + this.ConversationRoutingData.GetHashCode();
-                
+
                 if (this.StartAcwTime != null)
                     hash = hash * 59 + this.StartAcwTime.GetHashCode();
-                
+
                 if (this.EndAcwTime != null)
                     hash = hash * 59 + this.EndAcwTime.GetHashCode();
-                
+
                 if (this.OutboundPreview != null)
                     hash = hash * 59 + this.OutboundPreview.GetHashCode();
-                
+
                 if (this.Voicemail != null)
                     hash = hash * 59 + this.Voicemail.GetHashCode();
-                
+
                 if (this.CallbackNumbers != null)
                     hash = hash * 59 + this.CallbackNumbers.GetHashCode();
-                
+
                 if (this.CallbackUserName != null)
                     hash = hash * 59 + this.CallbackUserName.GetHashCode();
-                
+
                 if (this.ExternalCampaign != null)
                     hash = hash * 59 + this.ExternalCampaign.GetHashCode();
-                
+
                 if (this.SkipEnabled != null)
                     hash = hash * 59 + this.SkipEnabled.GetHashCode();
-                
+
                 if (this.TimeoutSeconds != null)
                     hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
-                
+
                 if (this.AutomatedCallbackConfigId != null)
                     hash = hash * 59 + this.AutomatedCallbackConfigId.GetHashCode();
-                
+
                 if (this.CallbackScheduledTime != null)
                     hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();
-                
+
                 return hash;
             }
         }

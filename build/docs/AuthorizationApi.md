@@ -283,7 +283,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var divisionId = divisionId_example;  // string | Division ID
-            var objectCount = true;  // bool? | Get count of objects in this division, grouped by type (optional)  (default to false)
+            var objectCount = objectCount_example;  // bool? | Get count of objects in this division, grouped by type (optional)  (default to false)
 
             try
             { 
@@ -306,7 +306,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
-| **objectCount** | **bool?**| Get count of objects in this division, grouped by type | [optional] [default to false] |
+| **objectCount** | **bool?**| Get count of objects in this division, grouped by type | [optional] [default to false]<br />**Values**: true, false |
 {: class="table table-striped"}
 
 ### Return type
@@ -322,6 +322,8 @@ namespace Example
 Gets all grants for a given division.
 
 Returns all grants assigned to a given division. Maximum page size is 500.
+
+
 
 Requires ANY permissions: 
 
@@ -391,6 +393,8 @@ namespace Example
 Retrieve a list of all divisions defined for the organization
 
 Request specific divisions by id using a query param \"id\", e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&id=72e9fb25-c484-488d-9312-7acba82435b3
+
+
 
 Requires NO permissions: 
 
@@ -471,6 +475,8 @@ namespace Example
 Retrieve the home division for the organization.
 
 Will not include object counts.
+
+
 
 Requires NO permissions: 
 
@@ -589,6 +595,8 @@ This endpoint does require any parameters.
 Returns which divisions the current user has the given permission in.
 
 This route is deprecated, use authorization/divisionspermitted/paged/me instead.
+
+
 
 Requires NO permissions: 
 
@@ -724,6 +732,8 @@ Returns which divisions the specified user has the given permission in.
 
 This route is deprecated, use authorization/divisionspermitted/paged/me instead.
 
+
+
 Requires NO permissions: 
 
 
@@ -793,6 +803,8 @@ namespace Example
 Get all permissions.
 
 Retrieve a list of all permission defined in the system.
+
+
 
 Requires NO permissions: 
 
@@ -864,6 +876,8 @@ Get the list of enabled products
 
 Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
 
+
+
 Requires NO permissions: 
 
 
@@ -922,6 +936,8 @@ This endpoint does require any parameters.
 Get a single organization role.
 
 Get the organization role specified by its ID.
+
+
 
 Requires ANY permissions: 
 
@@ -990,6 +1006,8 @@ Get an org role to default role comparison
 
 Compares any organization role to a default role id and show differences
 
+
+
 Requires ANY permissions: 
 
 * authorization:role:view
@@ -1056,6 +1074,8 @@ namespace Example
 Get the subjects' granted divisions in the specified role.
 
 Includes the divisions for which the subject has a grant.
+
+
 
 Requires ANY permissions: 
 
@@ -1133,6 +1153,8 @@ namespace Example
 Get a list of the users in a specified role.
 
 Get an array of the UUIDs of the users in the specified role.
+
+
 
 Requires NO permissions: 
 
@@ -1541,6 +1563,8 @@ Patch Organization Role for needsUpdate Field
 
 Patch Organization Role for needsUpdate Field
 
+
+
 Requires ANY permissions: 
 
 * authorization:role:edit
@@ -1608,6 +1632,8 @@ Assign a list of objects to a division
 
 Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, DATATABLES or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\"206ce31f-61ec-40ed-a8b1-be6f06303998\",\"250a754e-f5e4-4f51-800f-a92f09d3bf8c\"]
 
+
+
 Requires NO permissions: 
 
 
@@ -1635,7 +1661,7 @@ namespace Example
             var apiInstance = new AuthorizationApi();
             var divisionId = divisionId_example;  // string | Division ID
             var objectType = objectType_example;  // string | The type of the objects. Must be one of the valid object types
-            var body = ;  // List<string> | Object Id List
+            var body = new List<string>(); // List<string> | Object Id List
 
             try
             { 
@@ -1658,7 +1684,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
 | **objectType** | **string**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, EMAILCAMPAIGN, MESSAGINGCAMPAIGN, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, FLOWMILESTONE, FLOWOUTCOME, USER, CALLROUTE, EMERGENCYGROUPS, ROUTINGSCHEDULES, ROUTINGSCHEDULEGROUPS, DATATABLES, TEAM, WORKBIN, WORKTYPE, EXTENSIONPOOL, SKILLGROUP, SCRIPT |
-| **body** | **List<string>**| Object Id List |  |
+| **body** | [**List<string>**](string.html)| Object Id List |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1836,7 +1862,7 @@ namespace Example
             var apiInstance = new AuthorizationApi();
             var roleId = roleId_example;  // string | Role ID
             var body = new SubjectDivisions(); // SubjectDivisions | Subjects and Divisions
-            var subjectType = subjectType_example;  // string | what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional)  (default to PC_USER)
+            var subjectType = subjectType_example;  // string | what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional)  (default to "PC_USER")
 
             try
             { 
@@ -1859,7 +1885,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
 | **body** | [**SubjectDivisions**](SubjectDivisions.html)| Subjects and Divisions |  |
-| **subjectType** | **string**| what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
+| **subjectType** | **string**| what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to "PC_USER"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -1875,6 +1901,8 @@ void (empty response body)
 Get an unsaved org role to default role comparison
 
 Allows users to compare their existing roles in an unsaved state to its default role
+
+
 
 Requires ANY permissions: 
 
@@ -2010,6 +2038,8 @@ Restores all default roles
 
 This endpoint serves several purposes. 1. It provides the org with default roles. This is important for default roles that will be added after go-live (they can retroactively add the new default-role). Note: When not using a query param of force=true, it only adds the default roles not configured for the org; it does not overwrite roles. 2. Using the query param force=true, you can restore all default roles. Note: This does not have an effect on custom roles.
 
+
+
 Requires ANY permissions: 
 
 * authorization:role:edit
@@ -2103,7 +2133,7 @@ namespace Example
             var apiInstance = new AuthorizationApi();
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
             var body = new RoleDivisionGrants(); // RoleDivisionGrants | Pairs of role and division IDs
-            var subjectType = subjectType_example;  // string | what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional)  (default to PC_USER)
+            var subjectType = subjectType_example;  // string | what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional)  (default to "PC_USER")
 
             try
             { 
@@ -2126,7 +2156,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs |  |
-| **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
+| **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to "PC_USER"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -2209,6 +2239,8 @@ Replace subject's roles and divisions with the exact list supplied in the reques
 
 This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
 
+
+
 Requires ALL permissions: 
 
 * authorization:grant:add
@@ -2238,7 +2270,7 @@ namespace Example
             var apiInstance = new AuthorizationApi();
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
             var body = new RoleDivisionGrants(); // RoleDivisionGrants | Pairs of role and division IDs
-            var subjectType = subjectType_example;  // string | what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional)  (default to PC_USER)
+            var subjectType = subjectType_example;  // string | what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional)  (default to "PC_USER")
 
             try
             { 
@@ -2261,7 +2293,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs |  |
-| **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
+| **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to "PC_USER"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -2307,7 +2339,7 @@ namespace Example
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
             var divisionId = divisionId_example;  // string | the id of the division to which to make the grant
             var roleId = roleId_example;  // string | the id of the role to grant
-            var subjectType = subjectType_example;  // string | what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional)  (default to PC_USER)
+            var subjectType = subjectType_example;  // string | what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional)  (default to "PC_USER")
 
             try
             { 
@@ -2331,7 +2363,7 @@ namespace Example
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **divisionId** | **string**| the id of the division to which to make the grant |  |
 | **roleId** | **string**| the id of the role to grant |  |
-| **subjectType** | **string**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to PC_USER] |
+| **subjectType** | **string**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to "PC_USER"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -2414,6 +2446,8 @@ namespace Example
 Update an organization role.
 
 Update
+
+
 
 Requires ANY permissions: 
 
@@ -2509,7 +2543,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var roleId = roleId_example;  // string | Role ID
-            var body = ;  // List<string> | List of user IDs
+            var body = new List<string>(); // List<string> | List of user IDs
 
             try
             { 
@@ -2532,7 +2566,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
-| **body** | **List<string>**| List of user IDs |  |
+| **body** | [**List<string>**](string.html)| List of user IDs |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2576,7 +2610,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var roleId = roleId_example;  // string | Role ID
-            var body = ;  // List<string> | List of user IDs
+            var body = new List<string>(); // List<string> | List of user IDs
 
             try
             { 
@@ -2599,7 +2633,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
-| **body** | **List<string>**| List of user IDs |  |
+| **body** | [**List<string>**](string.html)| List of user IDs |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2708,7 +2742,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var userId = userId_example;  // string | User ID
-            var body = ;  // List<string> | List of roles
+            var body = new List<string>(); // List<string> | List of roles
 
             try
             { 
@@ -2731,7 +2765,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | **List<string>**| List of roles |  |
+| **body** | [**List<string>**](string.html)| List of roles |  |
 {: class="table table-striped"}
 
 ### Return type

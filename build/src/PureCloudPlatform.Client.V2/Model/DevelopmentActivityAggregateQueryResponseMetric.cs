@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DevelopmentActivityAggregateQueryResponseMetric :  IEquatable<DevelopmentActivityAggregateQueryResponseMetric>
     {
-        
-        
         /// <summary>
         /// The metric this applies to
         /// </summary>
@@ -95,25 +93,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "nNotCompletedActivities")]
             Nnotcompletedactivities
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The metric this applies to
         /// </summary>
         /// <value>The metric this applies to</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DevelopmentActivityAggregateQueryResponseMetric" /> class.
         /// </summary>
@@ -126,18 +111,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The aggregated values for this metric
         /// </summary>
         /// <value>The aggregated values for this metric</value>
         [DataMember(Name="stats", EmitDefaultValue=false)]
         public DevelopmentActivityAggregateQueryResponseStatistics Stats { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,7 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DevelopmentActivityAggregateQueryResponseMetric {\n");
-            
+
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  Stats: ").Append(Stats).Append("\n");
             sb.Append("}\n");
@@ -212,13 +197,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 if (this.Stats != null)
                     hash = hash * 59 + this.Stats.GetHashCode();
-                
+
                 return hash;
             }
         }

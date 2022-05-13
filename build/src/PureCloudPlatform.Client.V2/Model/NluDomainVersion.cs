@@ -18,35 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NluDomainVersion :  IEquatable<NluDomainVersion>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The training status of the NLU domain version.
         /// </summary>
@@ -92,10 +63,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unknown")]
             Unknown
         }
-        
-        
-        
-        
         /// <summary>
         /// The evaluation status of the NLU domain version.
         /// </summary>
@@ -135,73 +102,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The training status of the NLU domain version.
         /// </summary>
         /// <value>The training status of the NLU domain version.</value>
         [DataMember(Name="trainingStatus", EmitDefaultValue=false)]
-        public TrainingStatusEnum? TrainingStatus { get; set; }
-        
-        
-        
+        public TrainingStatusEnum? TrainingStatus { get; private set; }
         /// <summary>
         /// The evaluation status of the NLU domain version.
         /// </summary>
         /// <value>The evaluation status of the NLU domain version.</value>
         [DataMember(Name="evaluationStatus", EmitDefaultValue=false)]
-        public EvaluationStatusEnum? EvaluationStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public EvaluationStatusEnum? EvaluationStatus { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDomainVersion" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected NluDomainVersion() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDomainVersion" /> class.
         /// </summary>
@@ -220,128 +138,128 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The NLU domain of the version.
         /// </summary>
         /// <value>The NLU domain of the version.</value>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public NluDomain Domain { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of the NLU domain version.
         /// </summary>
         /// <value>The description of the NLU domain version.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The language that the NLU domain version supports.
         /// </summary>
         /// <value>The language that the NLU domain version supports.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this NLU domain version has been published.
         /// </summary>
         /// <value>Whether this NLU domain version has been published.</value>
         [DataMember(Name="published", EmitDefaultValue=false)]
         public bool? Published { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date when the NLU domain version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date when the NLU domain version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date when the NLU domain version was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date when the NLU domain version was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date when the NLU domain version was trained. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date when the NLU domain version was trained. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateTrained", EmitDefaultValue=false)]
         public DateTime? DateTrained { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date when the NLU domain version was published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date when the NLU domain version was published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="datePublished", EmitDefaultValue=false)]
         public DateTime? DatePublished { get; private set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// The intents defined for this NLU domain version.
         /// </summary>
         /// <value>The intents defined for this NLU domain version.</value>
         [DataMember(Name="intents", EmitDefaultValue=false)]
         public List<IntentDefinition> Intents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The entity types defined for this NLU domain version.
         /// </summary>
         /// <value>The entity types defined for this NLU domain version.</value>
         [DataMember(Name="entityTypes", EmitDefaultValue=false)]
         public List<NamedEntityTypeDefinition> EntityTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The entities defined for this NLU domain version.This field is mutually exclusive with entityTypeBindings
         /// </summary>
         /// <value>The entities defined for this NLU domain version.This field is mutually exclusive with entityTypeBindings</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<NamedEntityDefinition> Entities { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -350,7 +268,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NluDomainVersion {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -494,52 +412,51 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.Published != null)
                     hash = hash * 59 + this.Published.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.DateTrained != null)
                     hash = hash * 59 + this.DateTrained.GetHashCode();
-                
+
                 if (this.DatePublished != null)
                     hash = hash * 59 + this.DatePublished.GetHashCode();
-                
+
                 if (this.TrainingStatus != null)
                     hash = hash * 59 + this.TrainingStatus.GetHashCode();
-                
+
                 if (this.EvaluationStatus != null)
                     hash = hash * 59 + this.EvaluationStatus.GetHashCode();
-                
+
                 if (this.Intents != null)
                     hash = hash * 59 + this.Intents.GetHashCode();
-                
+
                 if (this.EntityTypes != null)
                     hash = hash * 59 + this.EntityTypes.GetHashCode();
-                
+
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

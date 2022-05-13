@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PhoneChangeTopicProvisionInfo :  IEquatable<PhoneChangeTopicProvisionInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneChangeTopicProvisionInfo" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Time
         /// </summary>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Source
         /// </summary>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public string Source { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public string ErrorInfo { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneChangeTopicProvisionInfo {\n");
-            
+
             sb.Append("  Time: ").Append(Time).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
-                
+
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
-                
+
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
+
                 return hash;
             }
         }

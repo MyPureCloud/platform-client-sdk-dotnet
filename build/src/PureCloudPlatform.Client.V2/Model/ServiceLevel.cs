@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ServiceLevel :  IEquatable<ServiceLevel>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceLevel" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The desired Service Level. A value between 0 and 1.
         /// </summary>
         /// <value>The desired Service Level. A value between 0 and 1.</value>
         [DataMember(Name="percentage", EmitDefaultValue=false)]
         public double? Percentage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Service Level target in milliseconds.
         /// </summary>
         /// <value>Service Level target in milliseconds.</value>
         [DataMember(Name="durationMs", EmitDefaultValue=false)]
         public long? DurationMs { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ServiceLevel {\n");
-            
+
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
             sb.Append("  DurationMs: ").Append(DurationMs).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Percentage != null)
                     hash = hash * 59 + this.Percentage.GetHashCode();
-                
+
                 if (this.DurationMs != null)
                     hash = hash * 59 + this.DurationMs.GetHashCode();
-                
+
                 return hash;
             }
         }

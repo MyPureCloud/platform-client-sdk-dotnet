@@ -18,25 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerWrapupcodemappingConfigChangeWrapUpCodeMapping :  IEquatable<DialerWrapupcodemappingConfigChangeWrapUpCodeMapping>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets DefaultSet
         /// </summary>
@@ -69,28 +50,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "RIGHT_PARTY_CONTACT")]
             RightPartyContact
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerWrapupcodemappingConfigChangeWrapUpCodeMapping" /> class.
         /// </summary>
@@ -113,68 +72,68 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The UI-visible name of the object
         /// </summary>
         /// <value>The UI-visible name of the object</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Creation time of the entity
         /// </summary>
         /// <value>Creation time of the entity</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last modified time of the entity
         /// </summary>
         /// <value>Last modified time of the entity</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DefaultSet
         /// </summary>
         [DataMember(Name="defaultSet", EmitDefaultValue=false)]
         public List<DefaultSetEnum> DefaultSet { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Mapping
         /// </summary>
         [DataMember(Name="mapping", EmitDefaultValue=false)]
         public Dictionary<string, List<string>> Mapping { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -183,7 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerWrapupcodemappingConfigChangeWrapUpCodeMapping {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -279,28 +238,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.DefaultSet != null)
                     hash = hash * 59 + this.DefaultSet.GetHashCode();
-                
+
                 if (this.Mapping != null)
                     hash = hash * 59 + this.Mapping.GetHashCode();
-                
+
                 return hash;
             }
         }

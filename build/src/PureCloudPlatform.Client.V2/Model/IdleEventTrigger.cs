@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IdleEventTrigger :  IEquatable<IdleEventTrigger>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="IdleEventTrigger" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected IdleEventTrigger() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="IdleEventTrigger" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Name of event triggered after period of inactivity.
         /// </summary>
         /// <value>Name of event triggered after period of inactivity.</value>
         [DataMember(Name="eventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of seconds of inactivity before an event is triggered.
         /// </summary>
         /// <value>Number of seconds of inactivity before an event is triggered.</value>
         [DataMember(Name="idleAfterSeconds", EmitDefaultValue=false)]
         public long? IdleAfterSeconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IdleEventTrigger {\n");
-            
+
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  IdleAfterSeconds: ").Append(IdleAfterSeconds).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EventName != null)
                     hash = hash * 59 + this.EventName.GetHashCode();
-                
+
                 if (this.IdleAfterSeconds != null)
                     hash = hash * 59 + this.IdleAfterSeconds.GetHashCode();
-                
+
                 return hash;
             }
         }

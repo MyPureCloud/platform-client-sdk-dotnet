@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateManagementUnitSettingsRequest :  IEquatable<CreateManagementUnitSettingsRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateManagementUnitSettingsRequest" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Adherence settings for this management unit
         /// </summary>
         /// <value>Adherence settings for this management unit</value>
         [DataMember(Name="adherence", EmitDefaultValue=false)]
         public AdherenceSettings Adherence { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Short term forecasting settings for this management unit.  Moving to Business Unit
         /// </summary>
         /// <value>Short term forecasting settings for this management unit.  Moving to Business Unit</value>
         [DataMember(Name="shortTermForecasting", EmitDefaultValue=false)]
         public ShortTermForecastingSettings ShortTermForecasting { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Time off request settings for this management unit
         /// </summary>
         /// <value>Time off request settings for this management unit</value>
         [DataMember(Name="timeOff", EmitDefaultValue=false)]
         public TimeOffRequestSettings TimeOff { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Scheduling settings for this management unit
         /// </summary>
         /// <value>Scheduling settings for this management unit</value>
         [DataMember(Name="scheduling", EmitDefaultValue=false)]
         public SchedulingSettingsRequest Scheduling { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Shift trade settings for this management unit
         /// </summary>
         /// <value>Shift trade settings for this management unit</value>
         [DataMember(Name="shiftTrading", EmitDefaultValue=false)]
         public ShiftTradeSettings ShiftTrading { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateManagementUnitSettingsRequest {\n");
-            
+
             sb.Append("  Adherence: ").Append(Adherence).Append("\n");
             sb.Append("  ShortTermForecasting: ").Append(ShortTermForecasting).Append("\n");
             sb.Append("  TimeOff: ").Append(TimeOff).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Adherence != null)
                     hash = hash * 59 + this.Adherence.GetHashCode();
-                
+
                 if (this.ShortTermForecasting != null)
                     hash = hash * 59 + this.ShortTermForecasting.GetHashCode();
-                
+
                 if (this.TimeOff != null)
                     hash = hash * 59 + this.TimeOff.GetHashCode();
-                
+
                 if (this.Scheduling != null)
                     hash = hash * 59 + this.Scheduling.GetHashCode();
-                
+
                 if (this.ShiftTrading != null)
                     hash = hash * 59 + this.ShiftTrading.GetHashCode();
-                
+
                 return hash;
             }
         }

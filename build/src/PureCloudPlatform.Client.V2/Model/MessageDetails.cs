@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MessageDetails :  IEquatable<MessageDetails>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the delivery status of the message.
         /// </summary>
@@ -83,49 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "read")]
             Read
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the delivery status of the message.
         /// </summary>
         /// <value>Indicates the delivery status of the message.</value>
         [DataMember(Name="messageStatus", EmitDefaultValue=false)]
         public MessageStatusEnum? MessageStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageDetails" /> class.
         /// </summary>
@@ -150,72 +105,72 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// UUID identifying the message media.
         /// </summary>
         /// <value>UUID identifying the message media.</value>
         [DataMember(Name="messageId", EmitDefaultValue=false)]
         public string MessageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A URI for this message entity.
         /// </summary>
         /// <value>A URI for this message entity.</value>
         [DataMember(Name="messageURI", EmitDefaultValue=false)]
         public string MessageURI { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits.
         /// </summary>
         /// <value>The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits.</value>
         [DataMember(Name="messageSegmentCount", EmitDefaultValue=false)]
         public int? MessageSegmentCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="messageTime", EmitDefaultValue=false)]
         public DateTime? MessageTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The media (images, files, etc) associated with this message, if any
         /// </summary>
         /// <value>The media (images, files, etc) associated with this message, if any</value>
         [DataMember(Name="media", EmitDefaultValue=false)]
         public List<MessageMedia> Media { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// One or more stickers associated with this message, if any
         /// </summary>
         /// <value>One or more stickers associated with this message, if any</value>
         [DataMember(Name="stickers", EmitDefaultValue=false)]
         public List<MessageSticker> Stickers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Provider specific error information for a communication.
         /// </summary>
         /// <value>Provider specific error information for a communication.</value>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ErrorBody ErrorInfo { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -224,7 +179,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MessageDetails {\n");
-            
+
             sb.Append("  MessageId: ").Append(MessageId).Append("\n");
             sb.Append("  MessageURI: ").Append(MessageURI).Append("\n");
             sb.Append("  MessageStatus: ").Append(MessageStatus).Append("\n");
@@ -326,31 +281,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MessageId != null)
                     hash = hash * 59 + this.MessageId.GetHashCode();
-                
+
                 if (this.MessageURI != null)
                     hash = hash * 59 + this.MessageURI.GetHashCode();
-                
+
                 if (this.MessageStatus != null)
                     hash = hash * 59 + this.MessageStatus.GetHashCode();
-                
+
                 if (this.MessageSegmentCount != null)
                     hash = hash * 59 + this.MessageSegmentCount.GetHashCode();
-                
+
                 if (this.MessageTime != null)
                     hash = hash * 59 + this.MessageTime.GetHashCode();
-                
+
                 if (this.Media != null)
                     hash = hash * 59 + this.Media.GetHashCode();
-                
+
                 if (this.Stickers != null)
                     hash = hash * 59 + this.Stickers.GetHashCode();
-                
+
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
+
                 return hash;
             }
         }

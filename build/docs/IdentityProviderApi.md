@@ -45,7 +45,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deleteidentityprovidersadfs"></a>
 
-## [**Empty**](Empty.html) DeleteIdentityprovidersAdfs ()
+## **Object** DeleteIdentityprovidersAdfs ()
 
 
 
@@ -83,7 +83,7 @@ namespace Example
             try
             { 
                 // Delete ADFS Identity Provider
-                Empty result = apiInstance.DeleteIdentityprovidersAdfs();
+                Object result = apiInstance.DeleteIdentityprovidersAdfs();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -101,11 +101,11 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteidentityproviderscic"></a>
 
-## [**Empty**](Empty.html) DeleteIdentityprovidersCic ()
+## **Object** DeleteIdentityprovidersCic ()
 
 
 
@@ -143,7 +143,7 @@ namespace Example
             try
             { 
                 // Delete Customer Interaction Center (CIC) Identity Provider
-                Empty result = apiInstance.DeleteIdentityprovidersCic();
+                Object result = apiInstance.DeleteIdentityprovidersCic();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -161,11 +161,11 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteidentityprovidersgeneric"></a>
 
-## [**Empty**](Empty.html) DeleteIdentityprovidersGeneric ()
+## **Object** DeleteIdentityprovidersGeneric ()
 
 
 
@@ -203,7 +203,7 @@ namespace Example
             try
             { 
                 // Delete Generic SAML Identity Provider
-                Empty result = apiInstance.DeleteIdentityprovidersGeneric();
+                Object result = apiInstance.DeleteIdentityprovidersGeneric();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -221,11 +221,11 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteidentityprovidersgsuite"></a>
 
-## [**Empty**](Empty.html) DeleteIdentityprovidersGsuite ()
+## **Object** DeleteIdentityprovidersGsuite ()
 
 
 
@@ -263,7 +263,7 @@ namespace Example
             try
             { 
                 // Delete G Suite Identity Provider
-                Empty result = apiInstance.DeleteIdentityprovidersGsuite();
+                Object result = apiInstance.DeleteIdentityprovidersGsuite();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -281,11 +281,11 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteidentityprovidersidentitynow"></a>
 
-## [**Empty**](Empty.html) DeleteIdentityprovidersIdentitynow ()
+## **Object** DeleteIdentityprovidersIdentitynow ()
 
 
 
@@ -323,7 +323,7 @@ namespace Example
             try
             { 
                 // Delete IdentityNow Provider
-                Empty result = apiInstance.DeleteIdentityprovidersIdentitynow();
+                Object result = apiInstance.DeleteIdentityprovidersIdentitynow();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -341,11 +341,11 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteidentityprovidersokta"></a>
 
-## [**Empty**](Empty.html) DeleteIdentityprovidersOkta ()
+## **Object** DeleteIdentityprovidersOkta ()
 
 
 
@@ -383,7 +383,7 @@ namespace Example
             try
             { 
                 // Delete Okta Identity Provider
-                Empty result = apiInstance.DeleteIdentityprovidersOkta();
+                Object result = apiInstance.DeleteIdentityprovidersOkta();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -401,11 +401,11 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteidentityprovidersonelogin"></a>
 
-## [**Empty**](Empty.html) DeleteIdentityprovidersOnelogin ()
+## **Object** DeleteIdentityprovidersOnelogin ()
 
 
 
@@ -443,7 +443,7 @@ namespace Example
             try
             { 
                 // Delete OneLogin Identity Provider
-                Empty result = apiInstance.DeleteIdentityprovidersOnelogin();
+                Object result = apiInstance.DeleteIdentityprovidersOnelogin();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -461,11 +461,11 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteidentityprovidersping"></a>
 
-## [**Empty**](Empty.html) DeleteIdentityprovidersPing ()
+## **Object** DeleteIdentityprovidersPing ()
 
 
 
@@ -503,7 +503,7 @@ namespace Example
             try
             { 
                 // Delete Ping Identity Provider
-                Empty result = apiInstance.DeleteIdentityprovidersPing();
+                Object result = apiInstance.DeleteIdentityprovidersPing();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -521,11 +521,11 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteidentityproviderspurecloud"></a>
 
-## [**Empty**](Empty.html) DeleteIdentityprovidersPurecloud ()
+## **Object** DeleteIdentityprovidersPurecloud ()
 
 
 
@@ -563,7 +563,7 @@ namespace Example
             try
             { 
                 // Delete PureCloud Identity Provider
-                Empty result = apiInstance.DeleteIdentityprovidersPurecloud();
+                Object result = apiInstance.DeleteIdentityprovidersPurecloud();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -581,11 +581,11 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteidentityproviderspureengage"></a>
 
-## [**Empty**](Empty.html) DeleteIdentityprovidersPureengage ()
+## **Object** DeleteIdentityprovidersPureengage ()
 
 
 
@@ -623,7 +623,7 @@ namespace Example
             try
             { 
                 // Delete PureEngage Identity Provider
-                Empty result = apiInstance.DeleteIdentityprovidersPureengage();
+                Object result = apiInstance.DeleteIdentityprovidersPureengage();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -641,11 +641,11 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteidentityproviderssalesforce"></a>
 
-## [**Empty**](Empty.html) DeleteIdentityprovidersSalesforce ()
+## **Object** DeleteIdentityprovidersSalesforce ()
 
 
 
@@ -683,7 +683,7 @@ namespace Example
             try
             { 
                 // Delete Salesforce Identity Provider
-                Empty result = apiInstance.DeleteIdentityprovidersSalesforce();
+                Object result = apiInstance.DeleteIdentityprovidersSalesforce();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -701,7 +701,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="getidentityproviders"></a>
 
@@ -1245,7 +1245,7 @@ This endpoint does require any parameters.
 
 <a name="getidentityproviderspurecloud"></a>
 
-## [**PureCloudPlatform.Client.V2.Model.PureCloud**](PureCloud.html) GetIdentityprovidersPurecloud ()
+## [**PureCloudPlatform.Client.V2.Model.PureCloud**](PureCloudPlatform.Client.V2.Model.PureCloud.html) GetIdentityprovidersPurecloud ()
 
 
 
@@ -1301,7 +1301,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**PureCloudPlatform.Client.V2.Model.PureCloud**](PureCloud.html)
+[**PureCloudPlatform.Client.V2.Model.PureCloud**](PureCloudPlatform.Client.V2.Model.PureCloud.html)
 
 <a name="getidentityproviderspureengage"></a>
 
@@ -1953,7 +1953,7 @@ namespace Example
 
 <a name="putidentityproviderspurecloud"></a>
 
-## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersPurecloud (PureCloudPlatform.Client.V2.Model.PureCloud body)
+## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersPurecloud (PureCloud body)
 
 
 
@@ -1988,7 +1988,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new IdentityProviderApi();
-            var body = new PureCloudPlatform.Client.V2.Model.PureCloud(); // PureCloudPlatform.Client.V2.Model.PureCloud | Provider
+            var body = new PureCloud(); // PureCloud | Provider
 
             try
             { 
@@ -2010,7 +2010,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PureCloudPlatform.Client.V2.Model.PureCloud**](PureCloudPlatform.Client.V2.Model.PureCloud.html)| Provider |  |
+| **body** | [**PureCloud**](PureCloud.html)| Provider |  |
 {: class="table table-striped"}
 
 ### Return type

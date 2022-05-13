@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TimeOffRequestListing :  IEquatable<TimeOffRequestListing>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestListing" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TimeOffRequestListing() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestListing" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// List of time off requests
         /// </summary>
         /// <value>List of time off requests</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<TimeOffRequest> Entities { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimeOffRequestListing {\n");
-            
+
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimMetadata :  IEquatable<ScimMetadata>
     {
-        
-        
         /// <summary>
         /// The type of SCIM resource.
         /// </summary>
@@ -65,35 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Schema")]
             Schema
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of SCIM resource.
         /// </summary>
         /// <value>The type of SCIM resource.</value>
         [DataMember(Name="resourceType", EmitDefaultValue=false)]
-        public ResourceTypeEnum? ResourceType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public ResourceTypeEnum? ResourceType { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimMetadata" /> class.
         /// </summary>
@@ -102,36 +77,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
-        /// The last time that the resource was modified. Date time is represented as an \&quot;ISO-8601 string\&quot;, for example, yyyy-MM-ddTHH:mm:ss.SSSZ. Not included with \&quot;Schema\&quot; and \&quot;ResourceType\&quot; resources.
+        /// The last time that the resource was modified. Date time is represented as an \"ISO-8601 string\", for example, yyyy-MM-ddTHH:mm:ss.SSSZ. Not included with \"Schema\" and \"ResourceType\" resources.
         /// </summary>
-        /// <value>The last time that the resource was modified. Date time is represented as an \&quot;ISO-8601 string\&quot;, for example, yyyy-MM-ddTHH:mm:ss.SSSZ. Not included with \&quot;Schema\&quot; and \&quot;ResourceType\&quot; resources.</value>
+        /// <value>The last time that the resource was modified. Date time is represented as an \"ISO-8601 string\", for example, yyyy-MM-ddTHH:mm:ss.SSSZ. Not included with \"Schema\" and \"ResourceType\" resources.</value>
         [DataMember(Name="lastModified", EmitDefaultValue=false)]
         public DateTime? LastModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI of the resource.
         /// </summary>
         /// <value>The URI of the resource.</value>
         [DataMember(Name="location", EmitDefaultValue=false)]
         public string Location { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The version of the resource. Matches the ETag HTTP response header. Not included with \&quot;Schema\&quot; and \&quot;ResourceType\&quot; resources.
+        /// The version of the resource. Matches the ETag HTTP response header. Not included with \"Schema\" and \"ResourceType\" resources.
         /// </summary>
-        /// <value>The version of the resource. Matches the ETag HTTP response header. Not included with \&quot;Schema\&quot; and \&quot;ResourceType\&quot; resources.</value>
+        /// <value>The version of the resource. Matches the ETag HTTP response header. Not included with \"Schema\" and \"ResourceType\" resources.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -140,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimMetadata {\n");
-            
+
             sb.Append("  ResourceType: ").Append(ResourceType).Append("\n");
             sb.Append("  LastModified: ").Append(LastModified).Append("\n");
             sb.Append("  Location: ").Append(Location).Append("\n");
@@ -218,19 +193,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ResourceType != null)
                     hash = hash * 59 + this.ResourceType.GetHashCode();
-                
+
                 if (this.LastModified != null)
                     hash = hash * 59 + this.LastModified.GetHashCode();
-                
+
                 if (this.Location != null)
                     hash = hash * 59 + this.Location.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 return hash;
             }
         }

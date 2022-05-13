@@ -18,53 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueueRequest :  IEquatable<QueueRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The skill evaluation method to use when routing conversations.
         /// </summary>
@@ -98,126 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ALL")]
             All
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The skill evaluation method to use when routing conversations.
         /// </summary>
         /// <value>The skill evaluation method to use when routing conversations.</value>
         [DataMember(Name="skillEvaluationMethod", EmitDefaultValue=false)]
         public SkillEvaluationMethodEnum? SkillEvaluationMethod { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected QueueRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueRequest" /> class.
         /// </summary>
@@ -276,269 +121,269 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The queue name
         /// </summary>
         /// <value>The queue name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The division to which this entity belongs.
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public WritableDivision Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The queue description.
         /// </summary>
         /// <value>The queue description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the user that last modified the queue.
         /// </summary>
         /// <value>The ID of the user that last modified the queue.</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the user that created the queue.
         /// </summary>
         /// <value>The ID of the user that created the queue.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of members in the queue.
         /// </summary>
         /// <value>The total number of members in the queue.</value>
         [DataMember(Name="memberCount", EmitDefaultValue=false)]
         public int? MemberCount { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of user members (i.e., non-group members) in the queue.
         /// </summary>
         /// <value>The number of user members (i.e., non-group members) in the queue.</value>
         [DataMember(Name="userMemberCount", EmitDefaultValue=false)]
         public int? UserMemberCount { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of joined members in the queue.
         /// </summary>
         /// <value>The number of joined members in the queue.</value>
         [DataMember(Name="joinedMemberCount", EmitDefaultValue=false)]
         public int? JoinedMemberCount { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM
         /// </summary>
         /// <value>The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM</value>
         [DataMember(Name="mediaSettings", EmitDefaultValue=false)]
         public Dictionary<string, MediaSetting> MediaSettings { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The routing rules for the queue, used for Preferred Agent Routing.
         /// </summary>
         /// <value>The routing rules for the queue, used for Preferred Agent Routing.</value>
         [DataMember(Name="routingRules", EmitDefaultValue=false)]
         public List<RoutingRule> RoutingRules { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The bullseye settings for the queue.
         /// </summary>
         /// <value>The bullseye settings for the queue.</value>
         [DataMember(Name="bullseye", EmitDefaultValue=false)]
         public Bullseye Bullseye { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ACW settings for the queue.
         /// </summary>
         /// <value>The ACW settings for the queue.</value>
         [DataMember(Name="acwSettings", EmitDefaultValue=false)]
         public AcwSettings AcwSettings { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The in-queue flow to use for call conversations waiting in queue.
         /// </summary>
         /// <value>The in-queue flow to use for call conversations waiting in queue.</value>
         [DataMember(Name="queueFlow", EmitDefaultValue=false)]
         public DomainEntityRef QueueFlow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The in-queue flow to use for email conversations waiting in queue.
         /// </summary>
         /// <value>The in-queue flow to use for email conversations waiting in queue.</value>
         [DataMember(Name="emailInQueueFlow", EmitDefaultValue=false)]
         public DomainEntityRef EmailInQueueFlow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The in-queue flow to use for message conversations waiting in queue.
         /// </summary>
         /// <value>The in-queue flow to use for message conversations waiting in queue.</value>
         [DataMember(Name="messageInQueueFlow", EmitDefaultValue=false)]
         public DomainEntityRef MessageInQueueFlow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The prompt used for whisper on the queue, if configured.
         /// </summary>
         /// <value>The prompt used for whisper on the queue, if configured.</value>
         [DataMember(Name="whisperPrompt", EmitDefaultValue=false)]
         public DomainEntityRef WhisperPrompt { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The audio to be played when calls on this queue are on hold. If not configured, the default on-hold music will play.
         /// </summary>
         /// <value>The audio to be played when calls on this queue are on hold. If not configured, the default on-hold music will play.</value>
         [DataMember(Name="onHoldPrompt", EmitDefaultValue=false)]
         public DomainEntityRef OnHoldPrompt { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered.
         /// </summary>
         /// <value>Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered.</value>
         [DataMember(Name="autoAnswerOnly", EmitDefaultValue=false)]
         public bool? AutoAnswerOnly { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether voice transcription is enabled for this queue.
         /// </summary>
         /// <value>Indicates whether voice transcription is enabled for this queue.</value>
         [DataMember(Name="enableTranscription", EmitDefaultValue=false)]
         public bool? EnableTranscription { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether manual assignment is enabled for this queue.
         /// </summary>
         /// <value>Indicates whether manual assignment is enabled for this queue.</value>
         [DataMember(Name="enableManualAssignment", EmitDefaultValue=false)]
         public bool? EnableManualAssignment { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name to use for caller identification for outbound calls from this queue.
         /// </summary>
         /// <value>The name to use for caller identification for outbound calls from this queue.</value>
         [DataMember(Name="callingPartyName", EmitDefaultValue=false)]
         public string CallingPartyName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The phone number to use for caller identification for outbound calls from this queue.
         /// </summary>
         /// <value>The phone number to use for caller identification for outbound calls from this queue.</value>
         [DataMember(Name="callingPartyNumber", EmitDefaultValue=false)]
         public string CallingPartyNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The default script Ids for the communication types.
         /// </summary>
         /// <value>The default script Ids for the communication types.</value>
         [DataMember(Name="defaultScripts", EmitDefaultValue=false)]
         public Dictionary<string, Script> DefaultScripts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The messaging addresses for the queue.
         /// </summary>
         /// <value>The messaging addresses for the queue.</value>
         [DataMember(Name="outboundMessagingAddresses", EmitDefaultValue=false)]
         public QueueMessagingAddresses OutboundMessagingAddresses { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OutboundEmailAddress
         /// </summary>
         [DataMember(Name="outboundEmailAddress", EmitDefaultValue=false)]
         public QueueEmailAddress OutboundEmailAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -547,7 +392,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueueRequest {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
@@ -781,97 +626,96 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.MemberCount != null)
                     hash = hash * 59 + this.MemberCount.GetHashCode();
-                
+
                 if (this.UserMemberCount != null)
                     hash = hash * 59 + this.UserMemberCount.GetHashCode();
-                
+
                 if (this.JoinedMemberCount != null)
                     hash = hash * 59 + this.JoinedMemberCount.GetHashCode();
-                
+
                 if (this.MediaSettings != null)
                     hash = hash * 59 + this.MediaSettings.GetHashCode();
-                
+
                 if (this.RoutingRules != null)
                     hash = hash * 59 + this.RoutingRules.GetHashCode();
-                
+
                 if (this.Bullseye != null)
                     hash = hash * 59 + this.Bullseye.GetHashCode();
-                
+
                 if (this.AcwSettings != null)
                     hash = hash * 59 + this.AcwSettings.GetHashCode();
-                
+
                 if (this.SkillEvaluationMethod != null)
                     hash = hash * 59 + this.SkillEvaluationMethod.GetHashCode();
-                
+
                 if (this.QueueFlow != null)
                     hash = hash * 59 + this.QueueFlow.GetHashCode();
-                
+
                 if (this.EmailInQueueFlow != null)
                     hash = hash * 59 + this.EmailInQueueFlow.GetHashCode();
-                
+
                 if (this.MessageInQueueFlow != null)
                     hash = hash * 59 + this.MessageInQueueFlow.GetHashCode();
-                
+
                 if (this.WhisperPrompt != null)
                     hash = hash * 59 + this.WhisperPrompt.GetHashCode();
-                
+
                 if (this.OnHoldPrompt != null)
                     hash = hash * 59 + this.OnHoldPrompt.GetHashCode();
-                
+
                 if (this.AutoAnswerOnly != null)
                     hash = hash * 59 + this.AutoAnswerOnly.GetHashCode();
-                
+
                 if (this.EnableTranscription != null)
                     hash = hash * 59 + this.EnableTranscription.GetHashCode();
-                
+
                 if (this.EnableManualAssignment != null)
                     hash = hash * 59 + this.EnableManualAssignment.GetHashCode();
-                
+
                 if (this.CallingPartyName != null)
                     hash = hash * 59 + this.CallingPartyName.GetHashCode();
-                
+
                 if (this.CallingPartyNumber != null)
                     hash = hash * 59 + this.CallingPartyNumber.GetHashCode();
-                
+
                 if (this.DefaultScripts != null)
                     hash = hash * 59 + this.DefaultScripts.GetHashCode();
-                
+
                 if (this.OutboundMessagingAddresses != null)
                     hash = hash * 59 + this.OutboundMessagingAddresses.GetHashCode();
-                
+
                 if (this.OutboundEmailAddress != null)
                     hash = hash * 59 + this.OutboundEmailAddress.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

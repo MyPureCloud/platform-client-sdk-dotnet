@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UploadUrlRequestBody :  IEquatable<UploadUrlRequestBody>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UploadUrlRequestBody" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UploadUrlRequestBody() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UploadUrlRequestBody" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The expected content length (in bytes) of the gzip-encoded data that will be PUT to the returned signed URL
         /// </summary>
         /// <value>The expected content length (in bytes) of the gzip-encoded data that will be PUT to the returned signed URL</value>
         [DataMember(Name="contentLengthBytes", EmitDefaultValue=false)]
         public long? ContentLengthBytes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UploadUrlRequestBody {\n");
-            
+
             sb.Append("  ContentLengthBytes: ").Append(ContentLengthBytes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContentLengthBytes != null)
                     hash = hash * 59 + this.ContentLengthBytes.GetHashCode();
-                
+
                 return hash;
             }
         }

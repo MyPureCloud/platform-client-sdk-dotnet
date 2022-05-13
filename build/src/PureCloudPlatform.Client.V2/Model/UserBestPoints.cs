@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserBestPoints :  IEquatable<UserBestPoints>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserBestPoints" /> class.
         /// </summary>
@@ -39,25 +26,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The requested user for the best points
         /// </summary>
         /// <value>The requested user for the best points</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UserReference User { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of best point for the requested user
         /// </summary>
         /// <value>List of best point for the requested user</value>
         [DataMember(Name="bestPoints", EmitDefaultValue=false)]
         public List<UserBestPointsItem> BestPoints { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserBestPoints {\n");
-            
+
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  BestPoints: ").Append(BestPoints).Append("\n");
             sb.Append("}\n");
@@ -132,13 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.BestPoints != null)
                     hash = hash * 59 + this.BestPoints.GetHashCode();
-                
+
                 return hash;
             }
         }

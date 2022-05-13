@@ -18,26 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneySegment :  IEquatable<JourneySegment>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The target entity that a segment applies to.
         /// </summary>
@@ -65,78 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Customer")]
             Customer
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The target entity that a segment applies to.
         /// </summary>
         /// <value>The target entity that a segment applies to.</value>
         [DataMember(Name="scope", EmitDefaultValue=false)]
         public ScopeEnum? Scope { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneySegment" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected JourneySegment() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneySegment" /> class.
         /// </summary>
@@ -171,135 +91,135 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not the segment is active.
         /// </summary>
         /// <value>Whether or not the segment is active.</value>
         [DataMember(Name="isActive", EmitDefaultValue=false)]
         public bool? IsActive { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The display name of the segment.
         /// </summary>
         /// <value>The display name of the segment.</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The version of the segment.
         /// </summary>
         /// <value>The version of the segment.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A description of the segment.
         /// </summary>
         /// <value>A description of the segment.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The hexadecimal color value of the segment.
         /// </summary>
         /// <value>The hexadecimal color value of the segment.</value>
         [DataMember(Name="color", EmitDefaultValue=false)]
         public string Color { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Whether or not the segment should be displayed to agent/supervisor users.
         /// </summary>
         /// <value>Whether or not the segment should be displayed to agent/supervisor users.</value>
         [DataMember(Name="shouldDisplayToAgent", EmitDefaultValue=false)]
         public bool? ShouldDisplayToAgent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The context of the segment.
         /// </summary>
         /// <value>The context of the segment.</value>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public Context Context { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The pattern of rules defining the segment.
         /// </summary>
         /// <value>The pattern of rules defining the segment.</value>
         [DataMember(Name="journey", EmitDefaultValue=false)]
         public Journey Journey { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Details of an entity corresponding to this segment in an external system.
         /// </summary>
         /// <value>Details of an entity corresponding to this segment in an external system.</value>
         [DataMember(Name="externalSegment", EmitDefaultValue=false)]
         public ExternalSegment ExternalSegment { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Time, in days, from when the segment is assigned until it is automatically unassigned.
         /// </summary>
         /// <value>Time, in days, from when the segment is assigned until it is automatically unassigned.</value>
         [DataMember(Name="assignmentExpirationDays", EmitDefaultValue=false)]
         public int? AssignmentExpirationDays { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp indicating when the segment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the segment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp indicating when the the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -308,7 +228,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneySegment {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
@@ -452,52 +372,51 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.IsActive != null)
                     hash = hash * 59 + this.IsActive.GetHashCode();
-                
+
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Color != null)
                     hash = hash * 59 + this.Color.GetHashCode();
-                
+
                 if (this.Scope != null)
                     hash = hash * 59 + this.Scope.GetHashCode();
-                
+
                 if (this.ShouldDisplayToAgent != null)
                     hash = hash * 59 + this.ShouldDisplayToAgent.GetHashCode();
-                
+
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
-                
+
                 if (this.Journey != null)
                     hash = hash * 59 + this.Journey.GetHashCode();
-                
+
                 if (this.ExternalSegment != null)
                     hash = hash * 59 + this.ExternalSegment.GetHashCode();
-                
+
                 if (this.AssignmentExpirationDays != null)
                     hash = hash * 59 + this.AssignmentExpirationDays.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
+
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
+
                 return hash;
             }
         }

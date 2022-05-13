@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PostOutputContract :  IEquatable<PostOutputContract>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PostOutputContract" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PostOutputContract() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PostOutputContract" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// JSON schema that defines the transformed, successful result that will be sent back to the caller.
         /// </summary>
         /// <value>JSON schema that defines the transformed, successful result that will be sent back to the caller.</value>
         [DataMember(Name="successSchema", EmitDefaultValue=false)]
         public JsonSchemaDocument SuccessSchema { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PostOutputContract {\n");
-            
+
             sb.Append("  SuccessSchema: ").Append(SuccessSchema).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SuccessSchema != null)
                     hash = hash * 59 + this.SuccessSchema.GetHashCode();
-                
+
                 return hash;
             }
         }

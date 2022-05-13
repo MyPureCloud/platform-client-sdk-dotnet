@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NamedEntityTypeMechanism :  IEquatable<NamedEntityTypeMechanism>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of the mechanism.
         /// </summary>
@@ -65,30 +57,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unknown")]
             Unknown
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of the mechanism.
         /// </summary>
         /// <value>The type of the mechanism.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NamedEntityTypeMechanism" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected NamedEntityTypeMechanism() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NamedEntityTypeMechanism" /> class.
         /// </summary>
@@ -103,27 +83,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The items that define the named entity type.
         /// </summary>
         /// <value>The items that define the named entity type.</value>
         [DataMember(Name="items", EmitDefaultValue=false)]
         public List<NamedEntityTypeItem> Items { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the named entity type is restricted to the items provided. Default: false
         /// </summary>
         /// <value>Whether the named entity type is restricted to the items provided. Default: false</value>
         [DataMember(Name="restricted", EmitDefaultValue=false)]
         public bool? Restricted { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -132,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NamedEntityTypeMechanism {\n");
-            
+
             sb.Append("  Items: ").Append(Items).Append("\n");
             sb.Append("  Restricted: ").Append(Restricted).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -204,16 +184,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Items != null)
                     hash = hash * 59 + this.Items.GetHashCode();
-                
+
                 if (this.Restricted != null)
                     hash = hash * 59 + this.Restricted.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 return hash;
             }
         }

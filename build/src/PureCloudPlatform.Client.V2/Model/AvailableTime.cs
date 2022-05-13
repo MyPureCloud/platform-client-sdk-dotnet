@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AvailableTime :  IEquatable<AvailableTime>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Workforce Management activity category for this availability period
         /// </summary>
@@ -92,31 +81,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unavailable")]
             Unavailable
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Workforce Management activity category for this availability period
         /// </summary>
         /// <value>Workforce Management activity category for this availability period</value>
         [DataMember(Name="activityCategory", EmitDefaultValue=false)]
-        public ActivityCategoryEnum? ActivityCategory { get; set; }
-        
-        
-        
-        
-    
+        public ActivityCategoryEnum? ActivityCategory { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTime" /> class.
         /// </summary>
@@ -125,45 +95,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Start of the availability period. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Start of the availability period. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateStart", EmitDefaultValue=false)]
         public DateTime? DateStart { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Length of availability period in minutes
         /// </summary>
         /// <value>Length of availability period in minutes</value>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if this availability period is paid in Workforce Management schedule
         /// </summary>
         /// <value>Indicates if this availability period is paid in Workforce Management schedule</value>
         [DataMember(Name="isPaid", EmitDefaultValue=false)]
         public bool? IsPaid { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Workforce Management schedule information associated with the available time
         /// </summary>
         /// <value>Workforce Management schedule information associated with the available time</value>
         [DataMember(Name="wfmSchedule", EmitDefaultValue=false)]
         public WfmScheduleReference WfmSchedule { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -172,7 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AvailableTime {\n");
-            
+
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
             sb.Append("  IsPaid: ").Append(IsPaid).Append("\n");
@@ -256,22 +226,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();
-                
+
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
-                
+
                 if (this.IsPaid != null)
                     hash = hash * 59 + this.IsPaid.GetHashCode();
-                
+
                 if (this.ActivityCategory != null)
                     hash = hash * 59 + this.ActivityCategory.GetHashCode();
-                
+
                 if (this.WfmSchedule != null)
                     hash = hash * 59 + this.WfmSchedule.GetHashCode();
-                
+
                 return hash;
             }
         }

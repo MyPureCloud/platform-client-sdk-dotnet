@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeLogsJobUploadRequest :  IEquatable<EdgeLogsJobUploadRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogsJobUploadRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected EdgeLogsJobUploadRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogsJobUploadRequest" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A list of file ids to upload.
         /// </summary>
         /// <value>A list of file ids to upload.</value>
         [DataMember(Name="fileIds", EmitDefaultValue=false)]
         public List<string> FileIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeLogsJobUploadRequest {\n");
-            
+
             sb.Append("  FileIds: ").Append(FileIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FileIds != null)
                     hash = hash * 59 + this.FileIds.GetHashCode();
-                
+
                 return hash;
             }
         }

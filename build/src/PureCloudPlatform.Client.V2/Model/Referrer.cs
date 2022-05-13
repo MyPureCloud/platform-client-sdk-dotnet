@@ -18,32 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Referrer :  IEquatable<Referrer>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of referrer (e.g. search, social).
         /// </summary>
@@ -95,42 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "paid")]
             Paid
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of referrer (e.g. search, social).
         /// </summary>
         /// <value>Type of referrer (e.g. search, social).</value>
         [DataMember(Name="medium", EmitDefaultValue=false)]
         public MediumEnum? Medium { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Referrer" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Referrer() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Referrer" /> class.
         /// </summary>
@@ -157,81 +107,81 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Referrer URL.
         /// </summary>
         /// <value>Referrer URL.</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Referrer URL domain.
         /// </summary>
         /// <value>Referrer URL domain.</value>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Referrer URL hostname.
         /// </summary>
         /// <value>Referrer URL hostname.</value>
         [DataMember(Name="hostname", EmitDefaultValue=false)]
         public string Hostname { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Referrer keywords.
         /// </summary>
         /// <value>Referrer keywords.</value>
         [DataMember(Name="keywords", EmitDefaultValue=false)]
         public string Keywords { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Referrer URL pathname.
         /// </summary>
         /// <value>Referrer URL pathname.</value>
         [DataMember(Name="pathname", EmitDefaultValue=false)]
         public string Pathname { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Referrer URL querystring.
         /// </summary>
         /// <value>Referrer URL querystring.</value>
         [DataMember(Name="queryString", EmitDefaultValue=false)]
         public string QueryString { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Referrer URL fragment.
         /// </summary>
         /// <value>Referrer URL fragment.</value>
         [DataMember(Name="fragment", EmitDefaultValue=false)]
         public string Fragment { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of referrer (e.g. Yahoo!, Google, InfoSpace).
         /// </summary>
         /// <value>Name of referrer (e.g. Yahoo!, Google, InfoSpace).</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -240,7 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Referrer {\n");
-            
+
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  Hostname: ").Append(Hostname).Append("\n");
@@ -348,34 +298,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
+
                 if (this.Hostname != null)
                     hash = hash * 59 + this.Hostname.GetHashCode();
-                
+
                 if (this.Keywords != null)
                     hash = hash * 59 + this.Keywords.GetHashCode();
-                
+
                 if (this.Pathname != null)
                     hash = hash * 59 + this.Pathname.GetHashCode();
-                
+
                 if (this.QueryString != null)
                     hash = hash * 59 + this.QueryString.GetHashCode();
-                
+
                 if (this.Fragment != null)
                     hash = hash * 59 + this.Fragment.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Medium != null)
                     hash = hash * 59 + this.Medium.GetHashCode();
-                
+
                 return hash;
             }
         }

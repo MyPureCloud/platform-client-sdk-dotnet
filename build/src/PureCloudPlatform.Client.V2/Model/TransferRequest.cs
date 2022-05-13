@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TransferRequest :  IEquatable<TransferRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TransferRequest" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The user ID of the transfer target.
         /// </summary>
         /// <value>The user ID of the transfer target.</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The phone number or address of the transfer target.
         /// </summary>
         /// <value>The phone number or address of the transfer target.</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user name of the transfer target.
         /// </summary>
         /// <value>The user name of the transfer target.</value>
         [DataMember(Name="userName", EmitDefaultValue=false)]
         public string UserName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The queue ID of the transfer target.
         /// </summary>
         /// <value>The queue ID of the transfer target.</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If true, transfer to the voicemail inbox of the participant that is being replaced.
         /// </summary>
         /// <value>If true, transfer to the voicemail inbox of the participant that is being replaced.</value>
         [DataMember(Name="voicemail", EmitDefaultValue=false)]
         public bool? Voicemail { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TransferRequest {\n");
-            
+
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  UserName: ").Append(UserName).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
+
                 if (this.UserName != null)
                     hash = hash * 59 + this.UserName.GetHashCode();
-                
+
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
+
                 if (this.Voicemail != null)
                     hash = hash * 59 + this.Voicemail.GetHashCode();
-                
+
                 return hash;
             }
         }

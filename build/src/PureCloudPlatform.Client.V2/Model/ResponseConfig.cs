@@ -18,34 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResponseConfig :  IEquatable<ResponseConfig>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseConfig" /> class.
         /// </summary>
-        /// <param name="TranslationMap">Map &#39;attribute name&#39; and &#39;JSON path&#39; pairs used to extract data from REST response..</param>
-        /// <param name="TranslationMapDefaults">Map &#39;attribute name&#39; and &#39;default value&#39; pairs used as fallback values if JSON path extraction fails for specified key..</param>
+        /// <param name="TranslationMap">Map 'attribute name' and 'JSON path' pairs used to extract data from REST response..</param>
+        /// <param name="TranslationMapDefaults">Map 'attribute name' and 'default value' pairs used as fallback values if JSON path extraction fails for specified key..</param>
         /// <param name="SuccessTemplate">Velocity template to build response to return from Action..</param>
         /// <param name="SuccessTemplateUri">URI to retrieve success template..</param>
         public ResponseConfig(Dictionary<string, string> TranslationMap = null, Dictionary<string, string> TranslationMapDefaults = null, string SuccessTemplate = null, string SuccessTemplateUri = null)
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// Map &#39;attribute name&#39; and &#39;JSON path&#39; pairs used to extract data from REST response.
+        /// Map 'attribute name' and 'JSON path' pairs used to extract data from REST response.
         /// </summary>
-        /// <value>Map &#39;attribute name&#39; and &#39;JSON path&#39; pairs used to extract data from REST response.</value>
+        /// <value>Map 'attribute name' and 'JSON path' pairs used to extract data from REST response.</value>
         [DataMember(Name="translationMap", EmitDefaultValue=false)]
         public Dictionary<string, string> TranslationMap { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Map &#39;attribute name&#39; and &#39;default value&#39; pairs used as fallback values if JSON path extraction fails for specified key.
+        /// Map 'attribute name' and 'default value' pairs used as fallback values if JSON path extraction fails for specified key.
         /// </summary>
-        /// <value>Map &#39;attribute name&#39; and &#39;default value&#39; pairs used as fallback values if JSON path extraction fails for specified key.</value>
+        /// <value>Map 'attribute name' and 'default value' pairs used as fallback values if JSON path extraction fails for specified key.</value>
         [DataMember(Name="translationMapDefaults", EmitDefaultValue=false)]
         public Dictionary<string, string> TranslationMapDefaults { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Velocity template to build response to return from Action.
         /// </summary>
         /// <value>Velocity template to build response to return from Action.</value>
         [DataMember(Name="successTemplate", EmitDefaultValue=false)]
         public string SuccessTemplate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URI to retrieve success template.
         /// </summary>
         /// <value>URI to retrieve success template.</value>
         [DataMember(Name="successTemplateUri", EmitDefaultValue=false)]
         public string SuccessTemplateUri { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResponseConfig {\n");
-            
+
             sb.Append("  TranslationMap: ").Append(TranslationMap).Append("\n");
             sb.Append("  TranslationMapDefaults: ").Append(TranslationMapDefaults).Append("\n");
             sb.Append("  SuccessTemplate: ").Append(SuccessTemplate).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TranslationMap != null)
                     hash = hash * 59 + this.TranslationMap.GetHashCode();
-                
+
                 if (this.TranslationMapDefaults != null)
                     hash = hash * 59 + this.TranslationMapDefaults.GetHashCode();
-                
+
                 if (this.SuccessTemplate != null)
                     hash = hash * 59 + this.SuccessTemplate.GetHashCode();
-                
+
                 if (this.SuccessTemplateUri != null)
                     hash = hash * 59 + this.SuccessTemplateUri.GetHashCode();
-                
+
                 return hash;
             }
         }

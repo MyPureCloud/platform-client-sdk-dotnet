@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DetectedNamedEntityValue :  IEquatable<DetectedNamedEntityValue>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DetectedNamedEntityValue" /> class.
         /// </summary>
@@ -39,25 +26,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The raw value of the detected named entity.
         /// </summary>
         /// <value>The raw value of the detected named entity.</value>
         [DataMember(Name="raw", EmitDefaultValue=false)]
         public string Raw { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The resolved value of the detected named entity.
         /// </summary>
         /// <value>The resolved value of the detected named entity.</value>
         [DataMember(Name="resolved", EmitDefaultValue=false)]
         public string Resolved { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DetectedNamedEntityValue {\n");
-            
+
             sb.Append("  Raw: ").Append(Raw).Append("\n");
             sb.Append("  Resolved: ").Append(Resolved).Append("\n");
             sb.Append("}\n");
@@ -132,13 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Raw != null)
                     hash = hash * 59 + this.Raw.GetHashCode();
-                
+
                 if (this.Resolved != null)
                     hash = hash * 59 + this.Resolved.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CloseButtonStyleProperties :  IEquatable<CloseButtonStyleProperties>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CloseButtonStyleProperties" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Color of button. (eg. #FF0000)
         /// </summary>
         /// <value>Color of button. (eg. #FF0000)</value>
         [DataMember(Name="color", EmitDefaultValue=false)]
         public string Color { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Opacity of button.
         /// </summary>
         /// <value>Opacity of button.</value>
         [DataMember(Name="opacity", EmitDefaultValue=false)]
         public float? Opacity { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CloseButtonStyleProperties {\n");
-            
+
             sb.Append("  Color: ").Append(Color).Append("\n");
             sb.Append("  Opacity: ").Append(Opacity).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Color != null)
                     hash = hash * 59 + this.Color.GetHashCode();
-                
+
                 if (this.Opacity != null)
                     hash = hash * 59 + this.Opacity.GetHashCode();
-                
+
                 return hash;
             }
         }

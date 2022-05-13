@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkdayMetric :  IEquatable<WorkdayMetric>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkdayMetric" /> class.
         /// </summary>
@@ -54,52 +26,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gamification metric
         /// </summary>
         /// <value>Gamification metric</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public Metric Metric { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current objective for this metric
         /// </summary>
         /// <value>Current objective for this metric</value>
         [DataMember(Name="objective", EmitDefaultValue=false)]
         public Objective Objective { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gamification points earned for this metric
         /// </summary>
         /// <value>Gamification points earned for this metric</value>
         [DataMember(Name="points", EmitDefaultValue=false)]
         public int? Points { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Value of this metric
         /// </summary>
         /// <value>Value of this metric</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public double? Value { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of schedule activity events for punctuality metrics
         /// </summary>
         /// <value>List of schedule activity events for punctuality metrics</value>
         [DataMember(Name="punctualityEvents", EmitDefaultValue=false)]
         public List<PunctualityEvent> PunctualityEvents { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkdayMetric {\n");
-            
+
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  Objective: ").Append(Objective).Append("\n");
             sb.Append("  Points: ").Append(Points).Append("\n");
@@ -192,22 +164,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 if (this.Objective != null)
                     hash = hash * 59 + this.Objective.GetHashCode();
-                
+
                 if (this.Points != null)
                     hash = hash * 59 + this.Points.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.PunctualityEvents != null)
                     hash = hash * 59 + this.PunctualityEvents.GetHashCode();
-                
+
                 return hash;
             }
         }

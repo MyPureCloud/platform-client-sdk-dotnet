@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateUser :  IEquatable<CreateUser>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive.
         /// </summary>
@@ -74,49 +51,27 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive.
         /// </summary>
         /// <value>Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateUser" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateUser() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateUser" /> class.
         /// </summary>
-        /// <param name="Name">User&#39;s full name (required).</param>
+        /// <param name="Name">User's full name (required).</param>
         /// <param name="Department">Department.</param>
-        /// <param name="Email">User&#39;s email and username (required).</param>
+        /// <param name="Email">User's email and username (required).</param>
         /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
         /// <param name="Title">Title.</param>
-        /// <param name="Password">User&#39;s password (required).</param>
+        /// <param name="Password">User's password (required).</param>
         /// <param name="DivisionId">The division to which this user will belong (required).</param>
         /// <param name="State">Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive..</param>
         public CreateUser(string Name = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Password = null, string DivisionId = null, StateEnum? State = null)
@@ -132,70 +87,70 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// User&#39;s full name
+        /// User's full name
         /// </summary>
-        /// <value>User&#39;s full name</value>
+        /// <value>User's full name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Department
         /// </summary>
         [DataMember(Name="department", EmitDefaultValue=false)]
         public string Department { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// User&#39;s email and username
+        /// User's email and username
         /// </summary>
-        /// <value>User&#39;s email and username</value>
+        /// <value>User's email and username</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Email addresses and phone numbers for this user
         /// </summary>
         /// <value>Email addresses and phone numbers for this user</value>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<Contact> Addresses { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// User&#39;s password
+        /// User's password
         /// </summary>
-        /// <value>User&#39;s password</value>
+        /// <value>User's password</value>
         [DataMember(Name="password", EmitDefaultValue=false)]
         public string Password { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The division to which this user will belong
         /// </summary>
         /// <value>The division to which this user will belong</value>
         [DataMember(Name="divisionId", EmitDefaultValue=false)]
         public string DivisionId { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -204,7 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateUser {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Department: ").Append(Department).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
@@ -306,31 +261,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Department != null)
                     hash = hash * 59 + this.Department.GetHashCode();
-                
+
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
+
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Password != null)
                     hash = hash * 59 + this.Password.GetHashCode();
-                
+
                 if (this.DivisionId != null)
                     hash = hash * 59 + this.DivisionId.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 return hash;
             }
         }

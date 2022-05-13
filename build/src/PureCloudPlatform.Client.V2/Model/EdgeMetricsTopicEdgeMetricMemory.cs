@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeMetricsTopicEdgeMetricMemory :  IEquatable<EdgeMetricsTopicEdgeMetricMemory>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsTopicEdgeMetricMemory" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AvailableBytes
         /// </summary>
         [DataMember(Name="availableBytes", EmitDefaultValue=false)]
         public int? AvailableBytes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TotalBytes
         /// </summary>
         [DataMember(Name="totalBytes", EmitDefaultValue=false)]
         public int? TotalBytes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeMetricsTopicEdgeMetricMemory {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  AvailableBytes: ").Append(AvailableBytes).Append("\n");
             sb.Append("  TotalBytes: ").Append(TotalBytes).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.AvailableBytes != null)
                     hash = hash * 59 + this.AvailableBytes.GetHashCode();
-                
+
                 if (this.TotalBytes != null)
                     hash = hash * 59 + this.TotalBytes.GetHashCode();
-                
+
                 return hash;
             }
         }

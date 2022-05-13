@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuRescheduleResult :  IEquatable<BuRescheduleResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuRescheduleResult" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The generation results.  Note the result will always be delivered via the downloadUrl; however the schema is included for documentation
         /// </summary>
         /// <value>The generation results.  Note the result will always be delivered via the downloadUrl; however the schema is included for documentation</value>
         [DataMember(Name="generationResults", EmitDefaultValue=false)]
         public ScheduleGenerationResult GenerationResults { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The download URL from which to fetch the generation results for the rescheduling run
         /// </summary>
         /// <value>The download URL from which to fetch the generation results for the rescheduling run</value>
         [DataMember(Name="generationResultsDownloadUrl", EmitDefaultValue=false)]
         public string GenerationResultsDownloadUrl { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The headcount forecast.  Note the result will always be delivered via the downloadUrl; however the schema is included for documentation
         /// </summary>
         /// <value>The headcount forecast.  Note the result will always be delivered via the downloadUrl; however the schema is included for documentation</value>
         [DataMember(Name="headcountForecast", EmitDefaultValue=false)]
         public BuHeadcountForecast HeadcountForecast { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The download URL from which to fetch the headcount forecast for the rescheduling run
         /// </summary>
         /// <value>The download URL from which to fetch the headcount forecast for the rescheduling run</value>
         [DataMember(Name="headcountForecastDownloadUrl", EmitDefaultValue=false)]
         public string HeadcountForecastDownloadUrl { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of download links for agent schedules produced by the rescheduling run
         /// </summary>
         /// <value>List of download links for agent schedules produced by the rescheduling run</value>
         [DataMember(Name="agentSchedules", EmitDefaultValue=false)]
         public List<BuRescheduleAgentScheduleResult> AgentSchedules { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuRescheduleResult {\n");
-            
+
             sb.Append("  GenerationResults: ").Append(GenerationResults).Append("\n");
             sb.Append("  GenerationResultsDownloadUrl: ").Append(GenerationResultsDownloadUrl).Append("\n");
             sb.Append("  HeadcountForecast: ").Append(HeadcountForecast).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.GenerationResults != null)
                     hash = hash * 59 + this.GenerationResults.GetHashCode();
-                
+
                 if (this.GenerationResultsDownloadUrl != null)
                     hash = hash * 59 + this.GenerationResultsDownloadUrl.GetHashCode();
-                
+
                 if (this.HeadcountForecast != null)
                     hash = hash * 59 + this.HeadcountForecast.GetHashCode();
-                
+
                 if (this.HeadcountForecastDownloadUrl != null)
                     hash = hash * 59 + this.HeadcountForecastDownloadUrl.GetHashCode();
-                
+
                 if (this.AgentSchedules != null)
                     hash = hash * 59 + this.AgentSchedules.GetHashCode();
-                
+
                 return hash;
             }
         }

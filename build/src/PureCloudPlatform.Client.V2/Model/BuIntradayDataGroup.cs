@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuIntradayDataGroup :  IEquatable<BuIntradayDataGroup>
     {
-        
-        
         /// <summary>
         /// The media type associated with this intraday group
         /// </summary>
@@ -65,50 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Message")]
             Message
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The media type associated with this intraday group
         /// </summary>
         /// <value>The media type associated with this intraday group</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuIntradayDataGroup" /> class.
         /// </summary>
@@ -131,63 +91,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Forecast data summary for this date range
         /// </summary>
         /// <value>Forecast data summary for this date range</value>
         [DataMember(Name="forecastDataSummary", EmitDefaultValue=false)]
         public BuIntradayForecastData ForecastDataSummary { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Forecast data per interval for this date range
         /// </summary>
         /// <value>Forecast data per interval for this date range</value>
         [DataMember(Name="forecastDataPerInterval", EmitDefaultValue=false)]
         public List<BuIntradayForecastData> ForecastDataPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Schedule data summary for this date range
         /// </summary>
         /// <value>Schedule data summary for this date range</value>
         [DataMember(Name="scheduleDataSummary", EmitDefaultValue=false)]
         public BuIntradayScheduleData ScheduleDataSummary { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Schedule data per interval for this date range
         /// </summary>
         /// <value>Schedule data per interval for this date range</value>
         [DataMember(Name="scheduleDataPerInterval", EmitDefaultValue=false)]
         public List<BuIntradayScheduleData> ScheduleDataPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Performance prediction data summary for this date range
         /// </summary>
         /// <value>Performance prediction data summary for this date range</value>
         [DataMember(Name="performancePredictionDataSummary", EmitDefaultValue=false)]
         public IntradayPerformancePredictionData PerformancePredictionDataSummary { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Performance prediction data per interval for this date range
         /// </summary>
         /// <value>Performance prediction data per interval for this date range</value>
         [DataMember(Name="performancePredictionDataPerInterval", EmitDefaultValue=false)]
         public List<IntradayPerformancePredictionData> PerformancePredictionDataPerInterval { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -196,7 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuIntradayDataGroup {\n");
-            
+
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  ForecastDataSummary: ").Append(ForecastDataSummary).Append("\n");
             sb.Append("  ForecastDataPerInterval: ").Append(ForecastDataPerInterval).Append("\n");
@@ -292,28 +252,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.ForecastDataSummary != null)
                     hash = hash * 59 + this.ForecastDataSummary.GetHashCode();
-                
+
                 if (this.ForecastDataPerInterval != null)
                     hash = hash * 59 + this.ForecastDataPerInterval.GetHashCode();
-                
+
                 if (this.ScheduleDataSummary != null)
                     hash = hash * 59 + this.ScheduleDataSummary.GetHashCode();
-                
+
                 if (this.ScheduleDataPerInterval != null)
                     hash = hash * 59 + this.ScheduleDataPerInterval.GetHashCode();
-                
+
                 if (this.PerformancePredictionDataSummary != null)
                     hash = hash * 59 + this.PerformancePredictionDataSummary.GetHashCode();
-                
+
                 if (this.PerformancePredictionDataPerInterval != null)
                     hash = hash * 59 + this.PerformancePredictionDataPerInterval.GetHashCode();
-                
+
                 return hash;
             }
         }

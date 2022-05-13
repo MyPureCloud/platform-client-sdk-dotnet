@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerSequenceConfigChangeCampaignSequence :  IEquatable<DialerSequenceConfigChangeCampaignSequence>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -58,58 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "complete")]
             Complete
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerSequenceConfigChangeCampaignSequence" /> class.
         /// </summary>
@@ -138,90 +83,90 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// the ordered list of campaign identifiers
         /// </summary>
         /// <value>the ordered list of campaign identifiers</value>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
         public List<DialerSequenceConfigChangeUriReference> Campaigns { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// the zero-based index of the current campaign in the campaigns list
         /// </summary>
         /// <value>the zero-based index of the current campaign in the campaigns list</value>
         [DataMember(Name="currentCampaign", EmitDefaultValue=false)]
         public int? CurrentCampaign { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// if a sequence has unexpectedly stopped, this message provides the reason
         /// </summary>
         /// <value>if a sequence has unexpectedly stopped, this message provides the reason</value>
         [DataMember(Name="stopMessage", EmitDefaultValue=false)]
         public string StopMessage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false
         /// </summary>
         /// <value>indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false</value>
         [DataMember(Name="repeat", EmitDefaultValue=false)]
         public bool? Repeat { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The UI-visible name of the object
         /// </summary>
         /// <value>The UI-visible name of the object</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Creation time of the entity
         /// </summary>
         /// <value>Creation time of the entity</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last modified time of the entity
         /// </summary>
         /// <value>Last modified time of the entity</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -230,7 +175,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerSequenceConfigChangeCampaignSequence {\n");
-            
+
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
             sb.Append("  CurrentCampaign: ").Append(CurrentCampaign).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -344,37 +289,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Campaigns != null)
                     hash = hash * 59 + this.Campaigns.GetHashCode();
-                
+
                 if (this.CurrentCampaign != null)
                     hash = hash * 59 + this.CurrentCampaign.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.StopMessage != null)
                     hash = hash * 59 + this.StopMessage.GetHashCode();
-                
+
                 if (this.Repeat != null)
                     hash = hash * 59 + this.Repeat.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 return hash;
             }
         }

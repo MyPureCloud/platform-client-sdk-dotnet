@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MaxParticipants :  IEquatable<MaxParticipants>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MaxParticipants" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The maximum number of participants that are allowed on a conversation.
         /// </summary>
         /// <value>The maximum number of participants that are allowed on a conversation.</value>
         [DataMember(Name="maxParticipants", EmitDefaultValue=false)]
         public int? _MaxParticipants { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MaxParticipants {\n");
-            
+
             sb.Append("  _MaxParticipants: ").Append(_MaxParticipants).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this._MaxParticipants != null)
                     hash = hash * 59 + this._MaxParticipants.GetHashCode();
-                
+
                 return hash;
             }
         }

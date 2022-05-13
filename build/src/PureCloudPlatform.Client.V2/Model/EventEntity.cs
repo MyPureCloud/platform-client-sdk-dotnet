@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EventEntity :  IEquatable<EventEntity>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EventEntity" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Type of entity the event pertains to. e.g. integration
         /// </summary>
         /// <value>Type of entity the event pertains to. e.g. integration</value>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public string EntityType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ID of the entity the event pertains to.
         /// </summary>
         /// <value>ID of the entity the event pertains to.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EventEntity {\n");
-            
+
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 return hash;
             }
         }

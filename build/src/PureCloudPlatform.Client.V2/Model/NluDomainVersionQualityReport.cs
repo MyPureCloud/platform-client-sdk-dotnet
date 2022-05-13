@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NluDomainVersionQualityReport :  IEquatable<NluDomainVersionQualityReport>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDomainVersionQualityReport" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected NluDomainVersionQualityReport() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDomainVersionQualityReport" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The domain and version details of the quality report
         /// </summary>
         /// <value>The domain and version details of the quality report</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public NluDomainVersion Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The confusion matrix for the Domain Version
         /// </summary>
         /// <value>The confusion matrix for the Domain Version</value>
         [DataMember(Name="confusionMatrix", EmitDefaultValue=false)]
         public List<NluConfusionMatrixRow> ConfusionMatrix { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The quality report summary for the Domain Version
         /// </summary>
         /// <value>The quality report summary for the Domain Version</value>
         [DataMember(Name="summary", EmitDefaultValue=false)]
         public NluQualityReportSummary Summary { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NluDomainVersionQualityReport {\n");
-            
+
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  ConfusionMatrix: ").Append(ConfusionMatrix).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.ConfusionMatrix != null)
                     hash = hash * 59 + this.ConfusionMatrix.GetHashCode();
-                
+
                 if (this.Summary != null)
                     hash = hash * 59 + this.Summary.GetHashCode();
-                
+
                 return hash;
             }
         }

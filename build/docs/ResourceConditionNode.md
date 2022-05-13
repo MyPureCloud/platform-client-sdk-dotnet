@@ -9,7 +9,7 @@ title: ResourceConditionNode
 |------------ | ------------- | ------------- | -------------|
 | **VariableName** | **string** |  | [optional] |
 | **Conjunction** | **string** |  | [optional] |
-| **_Operator** | **string** |  | [optional] |
+| **Operator** | **string** |  | [optional] |
 | **Operands** | [**List&lt;ResourceConditionValue&gt;**](ResourceConditionValue.html) |  | [optional] |
 | **Terms** | [**List&lt;ResourceConditionNode&gt;**](ResourceConditionNode.html) |  | [optional] |
 {: class="table table-striped"}

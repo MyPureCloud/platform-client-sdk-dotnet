@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateBenefitAssessmentJobRequest :  IEquatable<CreateBenefitAssessmentJobRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateBenefitAssessmentJobRequest" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of division ids for routing queues that are to be assessed for Predictive Routing benefit.
         /// </summary>
         /// <value>The list of division ids for routing queues that are to be assessed for Predictive Routing benefit.</value>
         [DataMember(Name="divisionIds", EmitDefaultValue=false)]
         public List<string> DivisionIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateBenefitAssessmentJobRequest {\n");
-            
+
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DivisionIds != null)
                     hash = hash * 59 + this.DivisionIds.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MediaResult :  IEquatable<MediaResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaResult" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets MediaUri
         /// </summary>
         [DataMember(Name="mediaUri", EmitDefaultValue=false)]
         public string MediaUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets WaveformData
         /// </summary>
         [DataMember(Name="waveformData", EmitDefaultValue=false)]
         public List<float?> WaveformData { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MediaResult {\n");
-            
+
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
             sb.Append("  WaveformData: ").Append(WaveformData).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MediaUri != null)
                     hash = hash * 59 + this.MediaUri.GetHashCode();
-                
+
                 if (this.WaveformData != null)
                     hash = hash * 59 + this.WaveformData.GetHashCode();
-                
+
                 return hash;
             }
         }

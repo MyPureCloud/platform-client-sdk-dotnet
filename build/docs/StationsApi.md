@@ -178,7 +178,7 @@ namespace Example
             var apiInstance = new StationsApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "name")
             var name = name_example;  // string | Name (optional) 
             var userSelectable = userSelectable_example;  // string | True for stations that the user can select otherwise false (optional) 
             var webRtcUserId = webRtcUserId_example;  // string | Filter for the webRtc station of the webRtcUserId (optional) 
@@ -207,7 +207,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **sortBy** | **string**| Sort by | [optional] [default to "name"] |
 | **name** | **string**| Name | [optional]  |
 | **userSelectable** | **string**| True for stations that the user can select otherwise false | [optional]  |
 | **webRtcUserId** | **string**| Filter for the webRtc station of the webRtcUserId | [optional]  |

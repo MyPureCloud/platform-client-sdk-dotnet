@@ -18,10 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Format :  IEquatable<Format>
     {
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Flags
         /// </summary>
@@ -234,33 +230,26 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "LanguageGenderNeuter")]
             Languagegenderneuter
         }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Format" /> class.
         /// </summary>
-        /// <param name="Flags">The Set of prompt segment format flags i.e. each entry is a part of describing the overall format. E.g. \&quot;format\&quot;: { \&quot;flags\&quot;: [StringPlayChars] }.</param>
+        /// <param name="Flags">The Set of prompt segment format flags i.e. each entry is a part of describing the overall format. E.g. \"format\": { \"flags\": [StringPlayChars] }.</param>
         public Format(List<FlagsEnum> Flags = null)
         {
             this.Flags = Flags;
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The Set of prompt segment format flags i.e. each entry is a part of describing the overall format. E.g. \&quot;format\&quot;: { \&quot;flags\&quot;: [StringPlayChars] }
+        /// The Set of prompt segment format flags i.e. each entry is a part of describing the overall format. E.g. \"format\": { \"flags\": [StringPlayChars] }
         /// </summary>
-        /// <value>The Set of prompt segment format flags i.e. each entry is a part of describing the overall format. E.g. \&quot;format\&quot;: { \&quot;flags\&quot;: [StringPlayChars] }</value>
+        /// <value>The Set of prompt segment format flags i.e. each entry is a part of describing the overall format. E.g. \"format\": { \"flags\": [StringPlayChars] }</value>
         [DataMember(Name="flags", EmitDefaultValue=false)]
         public List<FlagsEnum> Flags { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -269,7 +258,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Format {\n");
-            
+
             sb.Append("  Flags: ").Append(Flags).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -329,10 +318,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Flags != null)
                     hash = hash * 59 + this.Flags.GetHashCode();
-                
+
                 return hash;
             }
         }

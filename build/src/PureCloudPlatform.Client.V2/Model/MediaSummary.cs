@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MediaSummary :  IEquatable<MediaSummary>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaSummary" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ContactCenter
         /// </summary>
         [DataMember(Name="contactCenter", EmitDefaultValue=false)]
         public MediaSummaryDetail ContactCenter { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Enterprise
         /// </summary>
         [DataMember(Name="enterprise", EmitDefaultValue=false)]
         public MediaSummaryDetail Enterprise { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MediaSummary {\n");
-            
+
             sb.Append("  ContactCenter: ").Append(ContactCenter).Append("\n");
             sb.Append("  Enterprise: ").Append(Enterprise).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContactCenter != null)
                     hash = hash * 59 + this.ContactCenter.GetHashCode();
-                
+
                 if (this.Enterprise != null)
                     hash = hash * 59 + this.Enterprise.GetHashCode();
-                
+
                 return hash;
             }
         }

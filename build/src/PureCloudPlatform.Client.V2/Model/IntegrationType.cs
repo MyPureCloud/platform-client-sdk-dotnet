@@ -18,135 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntegrationType :  IEquatable<IntegrationType>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationType" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected IntegrationType() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationType" /> class.
         /// </summary>
@@ -159,222 +36,222 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the integration type.
         /// </summary>
         /// <value>The ID of the integration type.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Description of the integration type.
         /// </summary>
         /// <value>Description of the integration type.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// PureCloud provider of the integration type.
         /// </summary>
         /// <value>PureCloud provider of the integration type.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Category describing the integration type.
         /// </summary>
         /// <value>Category describing the integration type.</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public string Category { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Collection of logos.
         /// </summary>
         /// <value>Collection of logos.</value>
         [DataMember(Name="images", EmitDefaultValue=false)]
         public List<UserImage> Images { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URI of the schema describing the key-value properties needed to configure an integration of this type.
         /// </summary>
         /// <value>URI of the schema describing the key-value properties needed to configure an integration of this type.</value>
         [DataMember(Name="configPropertiesSchemaUri", EmitDefaultValue=false)]
         public string ConfigPropertiesSchemaUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URI of the schema describing the advanced JSON document needed to configure an integration of this type.
         /// </summary>
         /// <value>URI of the schema describing the advanced JSON document needed to configure an integration of this type.</value>
         [DataMember(Name="configAdvancedSchemaUri", EmitDefaultValue=false)]
         public string ConfigAdvancedSchemaUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URI of a page with more information about the integration type
         /// </summary>
         /// <value>URI of a page with more information about the integration type</value>
         [DataMember(Name="helpUri", EmitDefaultValue=false)]
         public string HelpUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URI of a page with terms and conditions for the integration type
         /// </summary>
         /// <value>URI of a page with terms and conditions for the integration type</value>
         [DataMember(Name="termsOfServiceUri", EmitDefaultValue=false)]
         public string TermsOfServiceUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of the vendor of this integration type
         /// </summary>
         /// <value>Name of the vendor of this integration type</value>
         [DataMember(Name="vendorName", EmitDefaultValue=false)]
         public string VendorName { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// URI of the vendor&#39;s website
+        /// URI of the vendor's website
         /// </summary>
-        /// <value>URI of the vendor&#39;s website</value>
+        /// <value>URI of the vendor's website</value>
         [DataMember(Name="vendorWebsiteUri", EmitDefaultValue=false)]
         public string VendorWebsiteUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URI of the marketplace listing for this integration type
         /// </summary>
         /// <value>URI of the marketplace listing for this integration type</value>
         [DataMember(Name="marketplaceUri", EmitDefaultValue=false)]
         public string MarketplaceUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URI of frequently asked questions about the integration type
         /// </summary>
         /// <value>URI of frequently asked questions about the integration type</value>
         [DataMember(Name="faqUri", EmitDefaultValue=false)]
         public string FaqUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URI of a privacy policy for users of the integration type
         /// </summary>
         /// <value>URI of a privacy policy for users of the integration type</value>
         [DataMember(Name="privacyPolicyUri", EmitDefaultValue=false)]
         public string PrivacyPolicyUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URI for vendor support
         /// </summary>
         /// <value>URI for vendor support</value>
         [DataMember(Name="supportContactUri", EmitDefaultValue=false)]
         public string SupportContactUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URI for vendor sales information
         /// </summary>
         /// <value>URI for vendor sales information</value>
         [DataMember(Name="salesContactUri", EmitDefaultValue=false)]
         public string SalesContactUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of links to additional help resources
         /// </summary>
         /// <value>List of links to additional help resources</value>
         [DataMember(Name="helpLinks", EmitDefaultValue=false)]
         public List<HelpLink> HelpLinks { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration.
         /// </summary>
         /// <value>Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration.</value>
         [DataMember(Name="credentials", EmitDefaultValue=false)]
         public Dictionary<string, CredentialSpecification> Credentials { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if the integration type is installable or not.
         /// </summary>
         /// <value>Indicates if the integration type is installable or not.</value>
         [DataMember(Name="nonInstallable", EmitDefaultValue=false)]
         public bool? NonInstallable { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum number of integration instances allowable for this integration type
         /// </summary>
         /// <value>The maximum number of integration instances allowable for this integration type</value>
         [DataMember(Name="maxInstances", EmitDefaultValue=false)]
         public int? MaxInstances { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of permissions required to permit user access to the integration type.
         /// </summary>
         /// <value>List of permissions required to permit user access to the integration type.</value>
         [DataMember(Name="userPermissions", EmitDefaultValue=false)]
         public List<string> UserPermissions { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of OAuth Client IDs that must be authorized when the integration is created.
         /// </summary>
         /// <value>List of OAuth Client IDs that must be authorized when the integration is created.</value>
         [DataMember(Name="vendorOAuthClientIds", EmitDefaultValue=false)]
         public List<string> VendorOAuthClientIds { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -383,7 +260,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntegrationType {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -581,79 +458,78 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                
+
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
-                
+
                 if (this.Images != null)
                     hash = hash * 59 + this.Images.GetHashCode();
-                
+
                 if (this.ConfigPropertiesSchemaUri != null)
                     hash = hash * 59 + this.ConfigPropertiesSchemaUri.GetHashCode();
-                
+
                 if (this.ConfigAdvancedSchemaUri != null)
                     hash = hash * 59 + this.ConfigAdvancedSchemaUri.GetHashCode();
-                
+
                 if (this.HelpUri != null)
                     hash = hash * 59 + this.HelpUri.GetHashCode();
-                
+
                 if (this.TermsOfServiceUri != null)
                     hash = hash * 59 + this.TermsOfServiceUri.GetHashCode();
-                
+
                 if (this.VendorName != null)
                     hash = hash * 59 + this.VendorName.GetHashCode();
-                
+
                 if (this.VendorWebsiteUri != null)
                     hash = hash * 59 + this.VendorWebsiteUri.GetHashCode();
-                
+
                 if (this.MarketplaceUri != null)
                     hash = hash * 59 + this.MarketplaceUri.GetHashCode();
-                
+
                 if (this.FaqUri != null)
                     hash = hash * 59 + this.FaqUri.GetHashCode();
-                
+
                 if (this.PrivacyPolicyUri != null)
                     hash = hash * 59 + this.PrivacyPolicyUri.GetHashCode();
-                
+
                 if (this.SupportContactUri != null)
                     hash = hash * 59 + this.SupportContactUri.GetHashCode();
-                
+
                 if (this.SalesContactUri != null)
                     hash = hash * 59 + this.SalesContactUri.GetHashCode();
-                
+
                 if (this.HelpLinks != null)
                     hash = hash * 59 + this.HelpLinks.GetHashCode();
-                
+
                 if (this.Credentials != null)
                     hash = hash * 59 + this.Credentials.GetHashCode();
-                
+
                 if (this.NonInstallable != null)
                     hash = hash * 59 + this.NonInstallable.GetHashCode();
-                
+
                 if (this.MaxInstances != null)
                     hash = hash * 59 + this.MaxInstances.GetHashCode();
-                
+
                 if (this.UserPermissions != null)
                     hash = hash * 59 + this.UserPermissions.GetHashCode();
-                
+
                 if (this.VendorOAuthClientIds != null)
                     hash = hash * 59 + this.VendorOAuthClientIds.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

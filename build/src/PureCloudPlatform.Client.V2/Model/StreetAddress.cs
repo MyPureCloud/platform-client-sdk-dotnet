@@ -18,55 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class StreetAddress :  IEquatable<StreetAddress>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="StreetAddress" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected StreetAddress() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="StreetAddress" /> class.
         /// </summary>
@@ -91,79 +48,79 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// 2 Letter Country code, like US or GB
         /// </summary>
         /// <value>2 Letter Country code, like US or GB</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// State or Province
         /// </summary>
         /// <value>State or Province</value>
         [DataMember(Name="A1", EmitDefaultValue=false)]
         public string A1 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// City or township
         /// </summary>
         /// <value>City or township</value>
         [DataMember(Name="A3", EmitDefaultValue=false)]
         public string A3 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number and street
         /// </summary>
         /// <value>Number and street</value>
         [DataMember(Name="RD", EmitDefaultValue=false)]
         public string RD { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// House Number
         /// </summary>
         /// <value>House Number</value>
         [DataMember(Name="HNO", EmitDefaultValue=false)]
         public string HNO { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// extra location info like suite 300
         /// </summary>
         /// <value>extra location info like suite 300</value>
         [DataMember(Name="LOC", EmitDefaultValue=false)]
         public string LOC { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of the customer
         /// </summary>
         /// <value>Name of the customer</value>
         [DataMember(Name="NAM", EmitDefaultValue=false)]
         public string NAM { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Postal code
         /// </summary>
         /// <value>Postal code</value>
         [DataMember(Name="PC", EmitDefaultValue=false)]
         public string PC { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -172,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StreetAddress {\n");
-            
+
             sb.Append("  Country: ").Append(Country).Append("\n");
             sb.Append("  A1: ").Append(A1).Append("\n");
             sb.Append("  A3: ").Append(A3).Append("\n");
@@ -274,31 +231,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Country != null)
                     hash = hash * 59 + this.Country.GetHashCode();
-                
+
                 if (this.A1 != null)
                     hash = hash * 59 + this.A1.GetHashCode();
-                
+
                 if (this.A3 != null)
                     hash = hash * 59 + this.A3.GetHashCode();
-                
+
                 if (this.RD != null)
                     hash = hash * 59 + this.RD.GetHashCode();
-                
+
                 if (this.HNO != null)
                     hash = hash * 59 + this.HNO.GetHashCode();
-                
+
                 if (this.LOC != null)
                     hash = hash * 59 + this.LOC.GetHashCode();
-                
+
                 if (this.NAM != null)
                     hash = hash * 59 + this.NAM.GetHashCode();
-                
+
                 if (this.PC != null)
                     hash = hash * 59 + this.PC.GetHashCode();
-                
+
                 return hash;
             }
         }

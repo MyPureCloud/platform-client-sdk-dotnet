@@ -18,36 +18,18 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyContext :  IEquatable<JourneyContext>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyContext" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected JourneyContext() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyContext" /> class.
         /// </summary>
-        /// <param name="Customer">A subset of the Journey System&#39;s customer data at a point-in-time (for external linkage and internal usage/context) (required).</param>
-        /// <param name="CustomerSession">A subset of the Journey System&#39;s tracked customer session data at a point-in-time (for external linkage and internal usage/context).</param>
-        /// <param name="TriggeringAction">A subset of the Journey System&#39;s action data relevant to a part of a conversation (for external linkage and internal usage/context).</param>
+        /// <param name="Customer">A subset of the Journey System's customer data at a point-in-time (for external linkage and internal usage/context) (required).</param>
+        /// <param name="CustomerSession">A subset of the Journey System's tracked customer session data at a point-in-time (for external linkage and internal usage/context).</param>
+        /// <param name="TriggeringAction">A subset of the Journey System's action data relevant to a part of a conversation (for external linkage and internal usage/context).</param>
         public JourneyContext(JourneyCustomer Customer = null, JourneyCustomerSession CustomerSession = null, JourneyAction TriggeringAction = null)
         {
             this.Customer = Customer;
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// A subset of the Journey System&#39;s customer data at a point-in-time (for external linkage and internal usage/context)
+        /// A subset of the Journey System's customer data at a point-in-time (for external linkage and internal usage/context)
         /// </summary>
-        /// <value>A subset of the Journey System&#39;s customer data at a point-in-time (for external linkage and internal usage/context)</value>
+        /// <value>A subset of the Journey System's customer data at a point-in-time (for external linkage and internal usage/context)</value>
         [DataMember(Name="customer", EmitDefaultValue=false)]
         public JourneyCustomer Customer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// A subset of the Journey System&#39;s tracked customer session data at a point-in-time (for external linkage and internal usage/context)
+        /// A subset of the Journey System's tracked customer session data at a point-in-time (for external linkage and internal usage/context)
         /// </summary>
-        /// <value>A subset of the Journey System&#39;s tracked customer session data at a point-in-time (for external linkage and internal usage/context)</value>
+        /// <value>A subset of the Journey System's tracked customer session data at a point-in-time (for external linkage and internal usage/context)</value>
         [DataMember(Name="customerSession", EmitDefaultValue=false)]
         public JourneyCustomerSession CustomerSession { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// A subset of the Journey System&#39;s action data relevant to a part of a conversation (for external linkage and internal usage/context)
+        /// A subset of the Journey System's action data relevant to a part of a conversation (for external linkage and internal usage/context)
         /// </summary>
-        /// <value>A subset of the Journey System&#39;s action data relevant to a part of a conversation (for external linkage and internal usage/context)</value>
+        /// <value>A subset of the Journey System's action data relevant to a part of a conversation (for external linkage and internal usage/context)</value>
         [DataMember(Name="triggeringAction", EmitDefaultValue=false)]
         public JourneyAction TriggeringAction { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyContext {\n");
-            
+
             sb.Append("  Customer: ").Append(Customer).Append("\n");
             sb.Append("  CustomerSession: ").Append(CustomerSession).Append("\n");
             sb.Append("  TriggeringAction: ").Append(TriggeringAction).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Customer != null)
                     hash = hash * 59 + this.Customer.GetHashCode();
-                
+
                 if (this.CustomerSession != null)
                     hash = hash * 59 + this.CustomerSession.GetHashCode();
-                
+
                 if (this.TriggeringAction != null)
                     hash = hash * 59 + this.TriggeringAction.GetHashCode();
-                
+
                 return hash;
             }
         }

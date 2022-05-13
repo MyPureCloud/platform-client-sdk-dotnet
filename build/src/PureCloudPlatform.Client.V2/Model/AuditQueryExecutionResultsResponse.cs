@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuditQueryExecutionResultsResponse :  IEquatable<AuditQueryExecutionResultsResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditQueryExecutionResultsResponse" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Id of the audit query execution request.
         /// </summary>
         /// <value>Id of the audit query execution request.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of results in a page.
         /// </summary>
         /// <value>Number of results in a page.</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Optional cursor to indicate where to resume the results.
         /// </summary>
         /// <value>Optional cursor to indicate where to resume the results.</value>
         [DataMember(Name="cursor", EmitDefaultValue=false)]
         public string Cursor { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of audit messages.
         /// </summary>
         /// <value>List of audit messages.</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<AuditLogMessage> Entities { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuditQueryExecutionResultsResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  Cursor: ").Append(Cursor).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
+
                 if (this.Cursor != null)
                     hash = hash * 59 + this.Cursor.GetHashCode();
-                
+
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PhoneChangeTopicPhone :  IEquatable<PhoneChangeTopicPhone>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneChangeTopicPhone" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets UserAgentInfo
         /// </summary>
         [DataMember(Name="userAgentInfo", EmitDefaultValue=false)]
         public PhoneChangeTopicUserAgentInfo UserAgentInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public PhoneChangeTopicPhoneStatus Status { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SecondaryStatus
         /// </summary>
         [DataMember(Name="secondaryStatus", EmitDefaultValue=false)]
         public PhoneChangeTopicPhoneStatus SecondaryStatus { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneChangeTopicPhone {\n");
-            
+
             sb.Append("  UserAgentInfo: ").Append(UserAgentInfo).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserAgentInfo != null)
                     hash = hash * 59 + this.UserAgentInfo.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.SecondaryStatus != null)
                     hash = hash * 59 + this.SecondaryStatus.GetHashCode();
-                
+
                 return hash;
             }
         }

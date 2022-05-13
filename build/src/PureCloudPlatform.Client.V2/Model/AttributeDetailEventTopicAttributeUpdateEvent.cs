@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AttributeDetailEventTopicAttributeUpdateEvent :  IEquatable<AttributeDetailEventTopicAttributeUpdateEvent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AttributeDetailEventTopicAttributeUpdateEvent" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
         public int? EventTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ParticipantId
         /// </summary>
         [DataMember(Name="participantId", EmitDefaultValue=false)]
         public string ParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AttributeDetailEventTopicAttributeUpdateEvent {\n");
-            
+
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EventTime != null)
                     hash = hash * 59 + this.EventTime.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.ParticipantId != null)
                     hash = hash * 59 + this.ParticipantId.GetHashCode();
-                
+
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
+
                 return hash;
             }
         }

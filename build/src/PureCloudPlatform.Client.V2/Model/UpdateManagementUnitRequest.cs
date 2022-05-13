@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UpdateManagementUnitRequest :  IEquatable<UpdateManagementUnitRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateManagementUnitRequest" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The new name of the management unit
         /// </summary>
         /// <value>The new name of the management unit</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The new division id for the management unit
         /// </summary>
         /// <value>The new division id for the management unit</value>
         [DataMember(Name="divisionId", EmitDefaultValue=false)]
         public string DivisionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Updated settings for the management unit
         /// </summary>
         /// <value>Updated settings for the management unit</value>
         [DataMember(Name="settings", EmitDefaultValue=false)]
         public ManagementUnitSettingsRequest Settings { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UpdateManagementUnitRequest {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DivisionId != null)
                     hash = hash * 59 + this.DivisionId.GetHashCode();
-                
+
                 if (this.Settings != null)
                     hash = hash * 59 + this.Settings.GetHashCode();
-                
+
                 return hash;
             }
         }

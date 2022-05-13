@@ -18,33 +18,35 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuIntradayDataUpdateTopicBuScheduleReference :  IEquatable<WfmBuIntradayDataUpdateTopicBuScheduleReference>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuIntradayDataUpdateTopicBuScheduleReference" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        public WfmBuIntradayDataUpdateTopicBuScheduleReference(string Id = null)
+        /// <param name="WeekDate">WeekDate.</param>
+        public WfmBuIntradayDataUpdateTopicBuScheduleReference(string Id = null, DateTime? WeekDate = null)
         {
             this.Id = Id;
+            this.WeekDate = WeekDate;
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
+
+
+
+        /// <summary>
+        /// Gets or Sets WeekDate
+        /// </summary>
+        [DataMember(Name="weekDate", EmitDefaultValue=false)]
+        public DateTime? WeekDate { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,8 +55,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuIntradayDataUpdateTopicBuScheduleReference {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -99,6 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.WeekDate == other.WeekDate ||
+                    this.WeekDate != null &&
+                    this.WeekDate.Equals(other.WeekDate)
                 );
         }
 
@@ -113,10 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
+                if (this.WeekDate != null)
+                    hash = hash * 59 + this.WeekDate.GetHashCode();
+
                 return hash;
             }
         }

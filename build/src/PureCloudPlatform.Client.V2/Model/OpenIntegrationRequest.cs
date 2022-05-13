@@ -18,55 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OpenIntegrationRequest :  IEquatable<OpenIntegrationRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenIntegrationRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected OpenIntegrationRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenIntegrationRequest" /> class.
         /// </summary>
@@ -87,78 +44,78 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the Open messaging integration.
         /// </summary>
         /// <value>The name of the Open messaging integration.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Defines the SupportedContent profile configured for an integration
         /// </summary>
         /// <value>Defines the SupportedContent profile configured for an integration</value>
         [DataMember(Name="supportedContent", EmitDefaultValue=false)]
         public SupportedContentReference SupportedContent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessagingSetting
         /// </summary>
         [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
         public MessagingSettingReference MessagingSetting { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The outbound notification webhook URL for the Open messaging integration.
         /// </summary>
         /// <value>The outbound notification webhook URL for the Open messaging integration.</value>
         [DataMember(Name="outboundNotificationWebhookUrl", EmitDefaultValue=false)]
         public string OutboundNotificationWebhookUrl { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The outbound notification webhook signature secret token. This token must be longer than 15 characters.
         /// </summary>
         /// <value>The outbound notification webhook signature secret token. This token must be longer than 15 characters.</value>
         [DataMember(Name="outboundNotificationWebhookSignatureSecretToken", EmitDefaultValue=false)]
         public string OutboundNotificationWebhookSignatureSecretToken { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user specified headers for the Open messaging integration.
         /// </summary>
         /// <value>The user specified headers for the Open messaging integration.</value>
         [DataMember(Name="webhookHeaders", EmitDefaultValue=false)]
         public Dictionary<string, string> WebhookHeaders { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -167,7 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OpenIntegrationRequest {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
@@ -269,31 +226,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.SupportedContent != null)
                     hash = hash * 59 + this.SupportedContent.GetHashCode();
-                
+
                 if (this.MessagingSetting != null)
                     hash = hash * 59 + this.MessagingSetting.GetHashCode();
-                
+
                 if (this.OutboundNotificationWebhookUrl != null)
                     hash = hash * 59 + this.OutboundNotificationWebhookUrl.GetHashCode();
-                
+
                 if (this.OutboundNotificationWebhookSignatureSecretToken != null)
                     hash = hash * 59 + this.OutboundNotificationWebhookSignatureSecretToken.GetHashCode();
-                
+
                 if (this.WebhookHeaders != null)
                     hash = hash * 59 + this.WebhookHeaders.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

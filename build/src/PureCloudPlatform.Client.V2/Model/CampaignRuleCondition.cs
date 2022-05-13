@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignRuleCondition :  IEquatable<CampaignRuleCondition>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of condition to evaluate.
         /// </summary>
@@ -53,30 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "campaignAgents")]
             Campaignagents
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of condition to evaluate.
         /// </summary>
         /// <value>The type of condition to evaluate.</value>
         [DataMember(Name="conditionType", EmitDefaultValue=false)]
         public ConditionTypeEnum? ConditionType { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleCondition" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CampaignRuleCondition() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleCondition" /> class.
         /// </summary>
@@ -91,26 +71,26 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The parameters for the CampaignRuleCondition.
         /// </summary>
         /// <value>The parameters for the CampaignRuleCondition.</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public CampaignRuleParameters Parameters { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -119,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleCondition {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("  ConditionType: ").Append(ConditionType).Append("\n");
@@ -191,16 +171,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Parameters != null)
                     hash = hash * 59 + this.Parameters.GetHashCode();
-                
+
                 if (this.ConditionType != null)
                     hash = hash * 59 + this.ConditionType.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GeneralProgramJobRequest :  IEquatable<GeneralProgramJobRequest>
     {
-        
-        
         /// <summary>
         /// The dialect of the topics to link with the general program, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
         /// </summary>
@@ -119,10 +117,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "pt-PT")]
             Ptpt
         }
-        
-        
-        
-        
         /// <summary>
         /// The mode to use for the general program job, default value is Skip
         /// </summary>
@@ -150,35 +144,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Merge")]
             Merge
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// The dialect of the topics to link with the general program, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
         /// </summary>
         /// <value>The dialect of the topics to link with the general program, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard</value>
         [DataMember(Name="dialect", EmitDefaultValue=false)]
         public DialectEnum? Dialect { get; set; }
-        
-        
-        
         /// <summary>
         /// The mode to use for the general program job, default value is Skip
         /// </summary>
         /// <value>The mode to use for the general program job, default value is Skip</value>
         [DataMember(Name="mode", EmitDefaultValue=false)]
         public ModeEnum? Mode { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GeneralProgramJobRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected GeneralProgramJobRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GeneralProgramJobRequest" /> class.
         /// </summary>
@@ -191,11 +174,11 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -204,7 +187,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GeneralProgramJobRequest {\n");
-            
+
             sb.Append("  Dialect: ").Append(Dialect).Append("\n");
             sb.Append("  Mode: ").Append(Mode).Append("\n");
             sb.Append("}\n");
@@ -270,13 +253,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Dialect != null)
                     hash = hash * 59 + this.Dialect.GetHashCode();
-                
+
                 if (this.Mode != null)
                     hash = hash * 59 + this.Mode.GetHashCode();
-                
+
                 return hash;
             }
         }

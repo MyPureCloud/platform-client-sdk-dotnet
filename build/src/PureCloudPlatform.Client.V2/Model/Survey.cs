@@ -18,23 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Survey :  IEquatable<Survey>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -91,54 +74,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Expired")]
             Expired
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Survey" /> class.
         /// </summary>
@@ -165,94 +105,94 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Conversation
         /// </summary>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public Conversation Conversation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Survey form used for this survey.
         /// </summary>
         /// <value>Survey form used for this survey.</value>
         [DataMember(Name="surveyForm", EmitDefaultValue=false)]
         public SurveyForm SurveyForm { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Agent
         /// </summary>
         [DataMember(Name="agent", EmitDefaultValue=false)]
         public DomainEntityRef Agent { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public QueueReference Queue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Answers
         /// </summary>
         [DataMember(Name="answers", EmitDefaultValue=false)]
         public SurveyScoringSet Answers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="completedDate", EmitDefaultValue=false)]
         public DateTime? CompletedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Additional information about what happened when the survey is in Error status.
         /// </summary>
         /// <value>Additional information about what happened when the survey is in Error status.</value>
         [DataMember(Name="surveyErrorDetails", EmitDefaultValue=false)]
         public SurveyErrorDetails SurveyErrorDetails { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -261,7 +201,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Survey {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
@@ -381,40 +321,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
+
                 if (this.SurveyForm != null)
                     hash = hash * 59 + this.SurveyForm.GetHashCode();
-                
+
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
+
                 if (this.Answers != null)
                     hash = hash * 59 + this.Answers.GetHashCode();
-                
+
                 if (this.CompletedDate != null)
                     hash = hash * 59 + this.CompletedDate.GetHashCode();
-                
+
                 if (this.SurveyErrorDetails != null)
                     hash = hash * 59 + this.SurveyErrorDetails.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

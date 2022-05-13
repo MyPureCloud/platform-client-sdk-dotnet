@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EstimatedWaitTimePredictions :  IEquatable<EstimatedWaitTimePredictions>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="EstimatedWaitTimePredictions" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected EstimatedWaitTimePredictions() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EstimatedWaitTimePredictions" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Returned upon a successful estimated wait time request.
         /// </summary>
         /// <value>Returned upon a successful estimated wait time request.</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<PredictionResults> Results { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EstimatedWaitTimePredictions {\n");
-            
+
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
+
                 return hash;
             }
         }

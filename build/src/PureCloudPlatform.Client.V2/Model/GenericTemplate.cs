@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GenericTemplate :  IEquatable<GenericTemplate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GenericTemplate" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Text to show in the title.
         /// </summary>
         /// <value>Text to show in the title.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text to show in the description.
         /// </summary>
         /// <value>Text to show in the description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URL of an image.
         /// </summary>
         /// <value>URL of an image.</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of button components offered with this message content.
         /// </summary>
         /// <value>List of button components offered with this message content.</value>
         [DataMember(Name="components", EmitDefaultValue=false)]
         public List<RecordingButtonComponent> Components { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Actions to be taken.
         /// </summary>
         /// <value>Actions to be taken.</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public RecordingContentActions Actions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GenericTemplate {\n");
-            
+
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.Components != null)
                     hash = hash * 59 + this.Components.GetHashCode();
-                
+
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
+
                 return hash;
             }
         }

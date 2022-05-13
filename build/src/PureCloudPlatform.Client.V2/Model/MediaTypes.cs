@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MediaTypes :  IEquatable<MediaTypes>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaTypes" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Specify allowed media types for inbound and outbound messages. If this field is empty, all inbound and outbound media will be blocked.
         /// </summary>
         /// <value>Specify allowed media types for inbound and outbound messages. If this field is empty, all inbound and outbound media will be blocked.</value>
         [DataMember(Name="allow", EmitDefaultValue=false)]
         public MediaTypeAccess Allow { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MediaTypes {\n");
-            
+
             sb.Append("  Allow: ").Append(Allow).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Allow != null)
                     hash = hash * 59 + this.Allow.GetHashCode();
-                
+
                 return hash;
             }
         }

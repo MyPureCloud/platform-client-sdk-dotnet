@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Attachment :  IEquatable<Attachment>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Attachment" /> class.
         /// </summary>
@@ -71,61 +38,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The unique identifier for the attachment.
         /// </summary>
         /// <value>The unique identifier for the attachment.</value>
         [DataMember(Name="attachmentId", EmitDefaultValue=false)]
         public string AttachmentId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the attachment.
         /// </summary>
         /// <value>The name of the attachment.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The content uri of the attachment. If set, this is commonly a public api download location.
         /// </summary>
         /// <value>The content uri of the attachment. If set, this is commonly a public api download location.</value>
         [DataMember(Name="contentUri", EmitDefaultValue=false)]
         public string ContentUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The type of file the attachment is.
         /// </summary>
         /// <value>The type of file the attachment is.</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The length of the attachment file.
         /// </summary>
         /// <value>The length of the attachment file.</value>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
         public int? ContentLength { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not the attachment was attached inline.,
         /// </summary>
         /// <value>Whether or not the attachment was attached inline.,</value>
         [DataMember(Name="inlineImage", EmitDefaultValue=false)]
         public bool? InlineImage { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Attachment {\n");
-            
+
             sb.Append("  AttachmentId: ").Append(AttachmentId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ContentUri: ").Append(ContentUri).Append("\n");
@@ -224,25 +191,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AttachmentId != null)
                     hash = hash * 59 + this.AttachmentId.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ContentUri != null)
                     hash = hash * 59 + this.ContentUri.GetHashCode();
-                
+
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
+
                 if (this.ContentLength != null)
                     hash = hash * 59 + this.ContentLength.GetHashCode();
-                
+
                 if (this.InlineImage != null)
                     hash = hash * 59 + this.InlineImage.GetHashCode();
-                
+
                 return hash;
             }
         }

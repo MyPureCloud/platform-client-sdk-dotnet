@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannel :  IEquatable<V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannel>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Platform
         /// </summary>
@@ -85,46 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Sms")]
             Sms
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Platform
         /// </summary>
         [DataMember(Name="platform", EmitDefaultValue=false)]
         public PlatformEnum? Platform { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannel" /> class.
         /// </summary>
@@ -134,8 +94,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="To">To.</param>
         /// <param name="From">From.</param>
         /// <param name="Time">Time.</param>
+        /// <param name="DateModified">DateModified.</param>
+        /// <param name="DateDeleted">DateDeleted.</param>
         /// <param name="Metadata">Metadata.</param>
-        public V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannel(string Id = null, PlatformEnum? Platform = null, string MessageId = null, V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingToRecipient To = null, V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingFromRecipient From = null, DateTime? Time = null, V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannelMetadata Metadata = null)
+        public V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannel(string Id = null, PlatformEnum? Platform = null, string MessageId = null, V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingToRecipient To = null, V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingFromRecipient From = null, DateTime? Time = null, DateTime? DateModified = null, DateTime? DateDeleted = null, V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannelMetadata Metadata = null)
         {
             this.Id = Id;
             this.Platform = Platform;
@@ -143,61 +105,79 @@ namespace PureCloudPlatform.Client.V2.Model
             this.To = To;
             this.From = From;
             this.Time = Time;
+            this.DateModified = DateModified;
+            this.DateDeleted = DateDeleted;
             this.Metadata = Metadata;
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets MessageId
         /// </summary>
         [DataMember(Name="messageId", EmitDefaultValue=false)]
         public string MessageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets To
         /// </summary>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingToRecipient To { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets From
         /// </summary>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingFromRecipient From { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Time
         /// </summary>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; set; }
-        
-        
-        
+
+
+
+        /// <summary>
+        /// Gets or Sets DateModified
+        /// </summary>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets DateDeleted
+        /// </summary>
+        [DataMember(Name="dateDeleted", EmitDefaultValue=false)]
+        public DateTime? DateDeleted { get; set; }
+
+
+
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannelMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -206,13 +186,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannel {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Platform: ").Append(Platform).Append("\n");
             sb.Append("  MessageId: ").Append(MessageId).Append("\n");
             sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  From: ").Append(From).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  DateDeleted: ").Append(DateDeleted).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -285,6 +267,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Time.Equals(other.Time)
                 ) &&
                 (
+                    this.DateModified == other.DateModified ||
+                    this.DateModified != null &&
+                    this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.DateDeleted == other.DateDeleted ||
+                    this.DateDeleted != null &&
+                    this.DateDeleted.Equals(other.DateDeleted)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -302,28 +294,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Platform != null)
                     hash = hash * 59 + this.Platform.GetHashCode();
-                
+
                 if (this.MessageId != null)
                     hash = hash * 59 + this.MessageId.GetHashCode();
-                
+
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
-                
+
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
-                
+
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
-                
+
+                if (this.DateModified != null)
+                    hash = hash * 59 + this.DateModified.GetHashCode();
+
+                if (this.DateDeleted != null)
+                    hash = hash * 59 + this.DateDeleted.GetHashCode();
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

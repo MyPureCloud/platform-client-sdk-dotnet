@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkBaseAssignment :  IEquatable<TrunkBaseAssignment>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkBaseAssignment" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The address family to use with the trunk base settings. 2=IPv4, 23=IPv6
         /// </summary>
         /// <value>The address family to use with the trunk base settings. 2=IPv4, 23=IPv6</value>
         [DataMember(Name="family", EmitDefaultValue=false)]
         public int? Family { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A trunk base settings reference.
         /// </summary>
         /// <value>A trunk base settings reference.</value>
         [DataMember(Name="trunkBase", EmitDefaultValue=false)]
         public TrunkBase TrunkBase { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkBaseAssignment {\n");
-            
+
             sb.Append("  Family: ").Append(Family).Append("\n");
             sb.Append("  TrunkBase: ").Append(TrunkBase).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Family != null)
                     hash = hash * 59 + this.Family.GetHashCode();
-                
+
                 if (this.TrunkBase != null)
                     hash = hash * 59 + this.TrunkBase.GetHashCode();
-                
+
                 return hash;
             }
         }

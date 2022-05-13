@@ -18,23 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Predictor :  IEquatable<Predictor>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The predictor state.
         /// </summary>
@@ -68,61 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Active")]
             Active
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The predictor state.
         /// </summary>
         /// <value>The predictor state.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public StateEnum? State { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Predictor" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Predictor() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Predictor" /> class.
         /// </summary>
@@ -141,99 +81,99 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The queue IDs associated with the predictor.
         /// </summary>
         /// <value>The queue IDs associated with the predictor.</value>
         [DataMember(Name="queues", EmitDefaultValue=false)]
         public List<AddressableEntityRef> Queues { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The KPI that the predictor attempts to maximize/minimize.
         /// </summary>
         /// <value>The KPI that the predictor attempts to maximize/minimize.</value>
         [DataMember(Name="kpi", EmitDefaultValue=false)]
         public string Kpi { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of seconds allocated to predictive routing before attempting a different routing method. This is a value between 12 and 900 seconds.
         /// </summary>
         /// <value>Number of seconds allocated to predictive routing before attempting a different routing method. This is a value between 12 and 900 seconds.</value>
         [DataMember(Name="routingTimeoutSeconds", EmitDefaultValue=false)]
         public int? RoutingTimeoutSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The predictor schedule that determines when the predictor is used for routing interactions.
         /// </summary>
         /// <value>The predictor schedule that determines when the predictor is used for routing interactions.</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public PredictorSchedule Schedule { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// DateTime indicating when the predictor was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>DateTime indicating when the predictor was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// DateTime indicating when the predictor was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>DateTime indicating when the predictor was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The predictor balancing configuration to enable workload balancing.
         /// </summary>
         /// <value>The predictor balancing configuration to enable workload balancing.</value>
         [DataMember(Name="workloadBalancingConfig", EmitDefaultValue=false)]
         public PredictorWorkloadBalancing WorkloadBalancingConfig { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Predictor error code - optional details on why the predictor went into error state.
         /// </summary>
         /// <value>Predictor error code - optional details on why the predictor went into error state.</value>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -242,7 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Predictor {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Queues: ").Append(Queues).Append("\n");
             sb.Append("  Kpi: ").Append(Kpi).Append("\n");
@@ -362,40 +302,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Queues != null)
                     hash = hash * 59 + this.Queues.GetHashCode();
-                
+
                 if (this.Kpi != null)
                     hash = hash * 59 + this.Kpi.GetHashCode();
-                
+
                 if (this.RoutingTimeoutSeconds != null)
                     hash = hash * 59 + this.RoutingTimeoutSeconds.GetHashCode();
-                
+
                 if (this.Schedule != null)
                     hash = hash * 59 + this.Schedule.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.WorkloadBalancingConfig != null)
                     hash = hash * 59 + this.WorkloadBalancingConfig.GetHashCode();
-                
+
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

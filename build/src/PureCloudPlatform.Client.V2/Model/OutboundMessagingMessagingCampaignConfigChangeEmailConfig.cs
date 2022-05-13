@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OutboundMessagingMessagingCampaignConfigChangeEmailConfig :  IEquatable<OutboundMessagingMessagingCampaignConfigChangeEmailConfig>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeEmailConfig" /> class.
         /// </summary>
@@ -57,41 +34,41 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The Contact List column specifying the email to send to the contact.
         /// </summary>
         /// <value>The Contact List column specifying the email to send to the contact.</value>
         [DataMember(Name="emailColumns", EmitDefaultValue=false)]
         public List<string> EmailColumns { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A reference for a Response
         /// </summary>
         /// <value>A reference for a Response</value>
         [DataMember(Name="contentTemplate", EmitDefaultValue=false)]
         public OutboundMessagingMessagingCampaignConfigChangeResponseRef ContentTemplate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FromAddress
         /// </summary>
         [DataMember(Name="fromAddress", EmitDefaultValue=false)]
         public OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress FromAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ReplyToAddress
         /// </summary>
         [DataMember(Name="replyToAddress", EmitDefaultValue=false)]
         public OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress ReplyToAddress { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OutboundMessagingMessagingCampaignConfigChangeEmailConfig {\n");
-            
+
             sb.Append("  EmailColumns: ").Append(EmailColumns).Append("\n");
             sb.Append("  ContentTemplate: ").Append(ContentTemplate).Append("\n");
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
@@ -178,19 +155,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EmailColumns != null)
                     hash = hash * 59 + this.EmailColumns.GetHashCode();
-                
+
                 if (this.ContentTemplate != null)
                     hash = hash * 59 + this.ContentTemplate.GetHashCode();
-                
+
                 if (this.FromAddress != null)
                     hash = hash * 59 + this.FromAddress.GetHashCode();
-                
+
                 if (this.ReplyToAddress != null)
                     hash = hash * 59 + this.ReplyToAddress.GetHashCode();
-                
+
                 return hash;
             }
         }

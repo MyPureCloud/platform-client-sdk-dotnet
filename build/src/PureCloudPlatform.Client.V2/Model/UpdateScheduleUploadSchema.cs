@@ -18,45 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UpdateScheduleUploadSchema :  IEquatable<UpdateScheduleUploadSchema>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateScheduleUploadSchema" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UpdateScheduleUploadSchema() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateScheduleUploadSchema" /> class.
         /// </summary>
@@ -77,61 +44,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The description to set for the schedule
         /// </summary>
         /// <value>The description to set for the schedule</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to publish the schedule. Note: a schedule cannot be un-published unless another schedule is published over it
         /// </summary>
         /// <value>Whether to publish the schedule. Note: a schedule cannot be un-published unless another schedule is published over it</value>
         [DataMember(Name="published", EmitDefaultValue=false)]
         public bool? Published { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The short term forecast to associate with the schedule
         /// </summary>
         /// <value>The short term forecast to associate with the schedule</value>
         [DataMember(Name="shortTermForecast", EmitDefaultValue=false)]
         public BuShortTermForecastReference ShortTermForecast { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The headcount forecast to associate with the schedule
         /// </summary>
         /// <value>The headcount forecast to associate with the schedule</value>
         [DataMember(Name="headcountForecast", EmitDefaultValue=false)]
         public BuHeadcountForecast HeadcountForecast { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Individual agent schedules
         /// </summary>
         /// <value>Individual agent schedules</value>
         [DataMember(Name="agentSchedules", EmitDefaultValue=false)]
         public List<BuUpdateAgentScheduleUploadSchema> AgentSchedules { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version metadata for this schedule
         /// </summary>
         /// <value>Version metadata for this schedule</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -140,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UpdateScheduleUploadSchema {\n");
-            
+
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Published: ").Append(Published).Append("\n");
             sb.Append("  ShortTermForecast: ").Append(ShortTermForecast).Append("\n");
@@ -230,25 +197,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Published != null)
                     hash = hash * 59 + this.Published.GetHashCode();
-                
+
                 if (this.ShortTermForecast != null)
                     hash = hash * 59 + this.ShortTermForecast.GetHashCode();
-                
+
                 if (this.HeadcountForecast != null)
                     hash = hash * 59 + this.HeadcountForecast.GetHashCode();
-                
+
                 if (this.AgentSchedules != null)
                     hash = hash * 59 + this.AgentSchedules.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

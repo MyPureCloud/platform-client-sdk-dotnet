@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdherenceCalculationsCompleteNotice :  IEquatable<WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdherenceCalculationsCompleteNotice>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets QueryState
         /// </summary>
@@ -67,25 +56,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets QueryState
         /// </summary>
         [DataMember(Name="queryState", EmitDefaultValue=false)]
         public QueryStateEnum? QueryState { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdherenceCalculationsCompleteNotice" /> class.
         /// </summary>
@@ -102,33 +77,33 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DownloadUrl
         /// </summary>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DownloadUrls
         /// </summary>
         [DataMember(Name="downloadUrls", EmitDefaultValue=false)]
         public List<string> DownloadUrls { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -137,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdherenceCalculationsCompleteNotice {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
             sb.Append("  DownloadUrls: ").Append(DownloadUrls).Append("\n");
@@ -215,19 +190,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
-                
+
                 if (this.DownloadUrls != null)
                     hash = hash * 59 + this.DownloadUrls.GetHashCode();
-                
+
                 if (this.QueryState != null)
                     hash = hash * 59 + this.QueryState.GetHashCode();
-                
+
                 return hash;
             }
         }

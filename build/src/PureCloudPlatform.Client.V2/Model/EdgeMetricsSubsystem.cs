@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeMetricsSubsystem :  IEquatable<EdgeMetricsSubsystem>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsSubsystem" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Delay in milliseconds.
         /// </summary>
         /// <value>Delay in milliseconds.</value>
         [DataMember(Name="delayMs", EmitDefaultValue=false)]
         public int? DelayMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of the Edge process.
         /// </summary>
         /// <value>Name of the Edge process.</value>
         [DataMember(Name="processName", EmitDefaultValue=false)]
         public string ProcessName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Subsystem for an Edge device.
         /// </summary>
         /// <value>Subsystem for an Edge device.</value>
         [DataMember(Name="mediaSubsystem", EmitDefaultValue=false)]
         public EdgeMetricsSubsystem MediaSubsystem { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeMetricsSubsystem {\n");
-            
+
             sb.Append("  DelayMs: ").Append(DelayMs).Append("\n");
             sb.Append("  ProcessName: ").Append(ProcessName).Append("\n");
             sb.Append("  MediaSubsystem: ").Append(MediaSubsystem).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DelayMs != null)
                     hash = hash * 59 + this.DelayMs.GetHashCode();
-                
+
                 if (this.ProcessName != null)
                     hash = hash * 59 + this.ProcessName.GetHashCode();
-                
+
                 if (this.MediaSubsystem != null)
                     hash = hash * 59 + this.MediaSubsystem.GetHashCode();
-                
+
                 return hash;
             }
         }

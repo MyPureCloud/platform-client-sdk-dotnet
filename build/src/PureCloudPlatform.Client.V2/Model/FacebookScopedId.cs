@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FacebookScopedId :  IEquatable<FacebookScopedId>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FacebookScopedId" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The unique page/app-specific scopedId for the user
         /// </summary>
         /// <value>The unique page/app-specific scopedId for the user</value>
         [DataMember(Name="scopedId", EmitDefaultValue=false)]
         public string ScopedId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FacebookScopedId {\n");
-            
+
             sb.Append("  ScopedId: ").Append(ScopedId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ScopedId != null)
                     hash = hash * 59 + this.ScopedId.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AsyncQueryResponse :  IEquatable<AsyncQueryResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AsyncQueryResponse" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Unique identifier for the async query execution. Can be used to check the status of the query and retrieve results.
         /// </summary>
         /// <value>Unique identifier for the async query execution. Can be used to check the status of the query and retrieve results.</value>
         [DataMember(Name="jobId", EmitDefaultValue=false)]
         public string JobId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AsyncQueryResponse {\n");
-            
+
             sb.Append("  JobId: ").Append(JobId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.JobId != null)
                     hash = hash * 59 + this.JobId.GetHashCode();
-                
+
                 return hash;
             }
         }

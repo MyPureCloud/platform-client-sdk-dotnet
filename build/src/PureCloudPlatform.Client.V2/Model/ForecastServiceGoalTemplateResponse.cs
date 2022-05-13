@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ForecastServiceGoalTemplateResponse :  IEquatable<ForecastServiceGoalTemplateResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ForecastServiceGoalTemplateResponse" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The service level goal for this forecast
         /// </summary>
         /// <value>The service level goal for this forecast</value>
         [DataMember(Name="serviceLevel", EmitDefaultValue=false)]
         public ForecastServiceLevelResponse ServiceLevel { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The average speed of answer goal for this forecast
         /// </summary>
         /// <value>The average speed of answer goal for this forecast</value>
         [DataMember(Name="averageSpeedOfAnswer", EmitDefaultValue=false)]
         public ForecastAverageSpeedOfAnswerResponse AverageSpeedOfAnswer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The abandon rate goal for this forecast
         /// </summary>
         /// <value>The abandon rate goal for this forecast</value>
         [DataMember(Name="abandonRate", EmitDefaultValue=false)]
         public ForecastAbandonRateResponse AbandonRate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ForecastServiceGoalTemplateResponse {\n");
-            
+
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
             sb.Append("  AverageSpeedOfAnswer: ").Append(AverageSpeedOfAnswer).Append("\n");
             sb.Append("  AbandonRate: ").Append(AbandonRate).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ServiceLevel != null)
                     hash = hash * 59 + this.ServiceLevel.GetHashCode();
-                
+
                 if (this.AverageSpeedOfAnswer != null)
                     hash = hash * 59 + this.AverageSpeedOfAnswer.GetHashCode();
-                
+
                 if (this.AbandonRate != null)
                     hash = hash * 59 + this.AbandonRate.GetHashCode();
-                
+
                 return hash;
             }
         }

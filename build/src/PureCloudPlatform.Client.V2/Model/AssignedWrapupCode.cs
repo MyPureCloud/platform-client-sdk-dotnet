@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AssignedWrapupCode :  IEquatable<AssignedWrapupCode>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AssignedWrapupCode" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The user configured wrap up code id.
         /// </summary>
         /// <value>The user configured wrap up code id.</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text entered by the agent to describe the call or disposition.
         /// </summary>
         /// <value>Text entered by the agent to describe the call or disposition.</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of tags selected by the agent to describe the call or disposition.
         /// </summary>
         /// <value>List of tags selected by the agent to describe the call or disposition.</value>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The duration in seconds of the wrap-up segment.
         /// </summary>
         /// <value>The duration in seconds of the wrap-up segment.</value>
         [DataMember(Name="durationSeconds", EmitDefaultValue=false)]
         public int? DurationSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when the wrap-up segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp when the wrap-up segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AssignedWrapupCode {\n");
-            
+
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
-                
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
+
                 if (this.DurationSeconds != null)
                     hash = hash * 59 + this.DurationSeconds.GetHashCode();
-                
+
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
+
                 return hash;
             }
         }

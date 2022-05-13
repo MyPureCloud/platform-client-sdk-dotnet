@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallHistoryConversation :  IEquatable<CallHistoryConversation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the call relating to the current user
         /// </summary>
@@ -56,78 +45,19 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the call relating to the current user
         /// </summary>
         /// <value>The direction of the call relating to the current user</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallHistoryConversation" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Participants">The list of participants involved in the conversation..</param>
         /// <param name="Direction">The direction of the call relating to the current user.</param>
-        /// <param name="WentToVoicemail">Did the call end in the current user&#39;s voicemail.</param>
+        /// <param name="WentToVoicemail">Did the call end in the current user's voicemail.</param>
         /// <param name="MissedCall">Did the user not answer this conversation.</param>
         /// <param name="StartTime">The time the user joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="WasConference">Was this conversation a conference.</param>
@@ -151,116 +81,116 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of participants involved in the conversation.
         /// </summary>
         /// <value>The list of participants involved in the conversation.</value>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<CallHistoryParticipant> Participants { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
-        /// Did the call end in the current user&#39;s voicemail
+        /// Did the call end in the current user's voicemail
         /// </summary>
-        /// <value>Did the call end in the current user&#39;s voicemail</value>
+        /// <value>Did the call end in the current user's voicemail</value>
         [DataMember(Name="wentToVoicemail", EmitDefaultValue=false)]
         public bool? WentToVoicemail { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Did the user not answer this conversation
         /// </summary>
         /// <value>Did the user not answer this conversation</value>
         [DataMember(Name="missedCall", EmitDefaultValue=false)]
         public bool? MissedCall { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time the user joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time the user joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Was this conversation a conference
         /// </summary>
         /// <value>Was this conversation a conference</value>
         [DataMember(Name="wasConference", EmitDefaultValue=false)]
         public bool? WasConference { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Was this conversation a callback
         /// </summary>
         /// <value>Was this conversation a callback</value>
         [DataMember(Name="wasCallback", EmitDefaultValue=false)]
         public bool? WasCallback { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Did this conversation have a screen share session
         /// </summary>
         /// <value>Did this conversation have a screen share session</value>
         [DataMember(Name="hadScreenShare", EmitDefaultValue=false)]
         public bool? HadScreenShare { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Did this conversation have a cobrowse session
         /// </summary>
         /// <value>Did this conversation have a cobrowse session</value>
         [DataMember(Name="hadCobrowse", EmitDefaultValue=false)]
         public bool? HadCobrowse { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Was this conversation associated with an outbound campaign
         /// </summary>
         /// <value>Was this conversation associated with an outbound campaign</value>
         [DataMember(Name="wasOutboundCampaign", EmitDefaultValue=false)]
         public bool? WasOutboundCampaign { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -269,7 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallHistoryConversation {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
@@ -401,46 +331,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.WentToVoicemail != null)
                     hash = hash * 59 + this.WentToVoicemail.GetHashCode();
-                
+
                 if (this.MissedCall != null)
                     hash = hash * 59 + this.MissedCall.GetHashCode();
-                
+
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
+
                 if (this.WasConference != null)
                     hash = hash * 59 + this.WasConference.GetHashCode();
-                
+
                 if (this.WasCallback != null)
                     hash = hash * 59 + this.WasCallback.GetHashCode();
-                
+
                 if (this.HadScreenShare != null)
                     hash = hash * 59 + this.HadScreenShare.GetHashCode();
-                
+
                 if (this.HadCobrowse != null)
                     hash = hash * 59 + this.HadCobrowse.GetHashCode();
-                
+
                 if (this.WasOutboundCampaign != null)
                     hash = hash * 59 + this.WasOutboundCampaign.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

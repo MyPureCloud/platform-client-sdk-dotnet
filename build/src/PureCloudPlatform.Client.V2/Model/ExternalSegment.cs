@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ExternalSegment :  IEquatable<ExternalSegment>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The external system where the segment originates from.
         /// </summary>
@@ -53,30 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Custom")]
             Custom
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The external system where the segment originates from.
         /// </summary>
         /// <value>The external system where the segment originates from.</value>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public SourceEnum? Source { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalSegment" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ExternalSegment() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalSegment" /> class.
         /// </summary>
@@ -91,27 +71,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Identifier for the external segment in the system where it originates from.
         /// </summary>
         /// <value>Identifier for the external segment in the system where it originates from.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name for the external segment in the system where it originates from.
         /// </summary>
         /// <value>Name for the external segment in the system where it originates from.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -120,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ExternalSegment {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
@@ -192,16 +172,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
-                
+
                 return hash;
             }
         }

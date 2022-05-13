@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class VoicemailEndDetailEventTopicVoicemailEndEvent :  IEquatable<VoicemailEndDetailEventTopicVoicemailEndEvent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
@@ -148,10 +134,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "UNCALLABLE")]
             Uncallable
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
@@ -220,13 +202,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "MESSAGE")]
             Message
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
@@ -259,75 +234,21 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OUTBOUND")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailEndDetailEventTopicVoicemailEndEvent" /> class.
         /// </summary>
@@ -364,101 +285,101 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
         public int? EventTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ParticipantId
         /// </summary>
         [DataMember(Name="participantId", EmitDefaultValue=false)]
         public string ParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SessionId
         /// </summary>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Provider
         /// </summary>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Ani
         /// </summary>
         [DataMember(Name="ani", EmitDefaultValue=false)]
         public string Ani { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Dnis
         /// </summary>
         [DataMember(Name="dnis", EmitDefaultValue=false)]
         public string Dnis { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets QueueId
         /// </summary>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DivisionId
         /// </summary>
         [DataMember(Name="divisionId", EmitDefaultValue=false)]
         public string DivisionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets VoicemailDurationMs
         /// </summary>
         [DataMember(Name="voicemailDurationMs", EmitDefaultValue=false)]
         public int? VoicemailDurationMs { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -467,7 +388,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VoicemailEndDetailEventTopicVoicemailEndEvent {\n");
-            
+
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
@@ -605,49 +526,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EventTime != null)
                     hash = hash * 59 + this.EventTime.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.ParticipantId != null)
                     hash = hash * 59 + this.ParticipantId.GetHashCode();
-                
+
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
-                
+
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();
-                
+
                 if (this.Dnis != null)
                     hash = hash * 59 + this.Dnis.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
+
                 if (this.DivisionId != null)
                     hash = hash * 59 + this.DivisionId.GetHashCode();
-                
+
                 if (this.VoicemailDurationMs != null)
                     hash = hash * 59 + this.VoicemailDurationMs.GetHashCode();
-                
+
                 return hash;
             }
         }

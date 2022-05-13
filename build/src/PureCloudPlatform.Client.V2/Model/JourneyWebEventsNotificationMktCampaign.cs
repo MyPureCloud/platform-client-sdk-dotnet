@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyWebEventsNotificationMktCampaign :  IEquatable<JourneyWebEventsNotificationMktCampaign>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyWebEventsNotificationMktCampaign" /> class.
         /// </summary>
@@ -78,63 +40,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public string Content { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Medium
         /// </summary>
         [DataMember(Name="medium", EmitDefaultValue=false)]
         public string Medium { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Source
         /// </summary>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public string Source { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Term
         /// </summary>
         [DataMember(Name="term", EmitDefaultValue=false)]
         public string Term { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ClickId
         /// </summary>
         [DataMember(Name="clickId", EmitDefaultValue=false)]
         public string ClickId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Network
         /// </summary>
         [DataMember(Name="network", EmitDefaultValue=false)]
         public string Network { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -143,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyWebEventsNotificationMktCampaign {\n");
-            
+
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  Medium: ").Append(Medium).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -239,28 +201,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
-                
+
                 if (this.Medium != null)
                     hash = hash * 59 + this.Medium.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
-                
+
                 if (this.Term != null)
                     hash = hash * 59 + this.Term.GetHashCode();
-                
+
                 if (this.ClickId != null)
                     hash = hash * 59 + this.ClickId.GetHashCode();
-                
+
                 if (this.Network != null)
                     hash = hash * 59 + this.Network.GetHashCode();
-                
+
                 return hash;
             }
         }

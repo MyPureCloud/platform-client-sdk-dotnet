@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebMessagingGeneric :  IEquatable<WebMessagingGeneric>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WebMessagingGeneric" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Text to show in the title.
         /// </summary>
         /// <value>Text to show in the title.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text to show in the description.
         /// </summary>
         /// <value>Text to show in the description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URL of an image.
         /// </summary>
         /// <value>URL of an image.</value>
         [DataMember(Name="image", EmitDefaultValue=false)]
         public string Image { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Actions to be taken.
         /// </summary>
         /// <value>Actions to be taken.</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public ContentActions Actions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// An array of component objects.
         /// </summary>
         /// <value>An array of component objects.</value>
         [DataMember(Name="components", EmitDefaultValue=false)]
         public List<ButtonComponent> Components { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebMessagingGeneric {\n");
-            
+
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Image != null)
                     hash = hash * 59 + this.Image.GetHashCode();
-                
+
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
+
                 if (this.Components != null)
                     hash = hash * 59 + this.Components.GetHashCode();
-                
+
                 return hash;
             }
         }

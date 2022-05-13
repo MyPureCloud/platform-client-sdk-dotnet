@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimPhoneNumber :  IEquatable<ScimPhoneNumber>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of phone number.
         /// </summary>
@@ -98,27 +93,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ringcentral")]
             Ringcentral
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of phone number.
         /// </summary>
         /// <value>The type of phone number.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimPhoneNumber" /> class.
         /// </summary>
@@ -133,27 +113,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext=xxxxx.
         /// </summary>
         /// <value>The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext=xxxxx.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Indicates whether the phone number is the primary phone number.
         /// </summary>
         /// <value>Indicates whether the phone number is the primary phone number.</value>
         [DataMember(Name="primary", EmitDefaultValue=false)]
         public bool? Primary { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -162,7 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimPhoneNumber {\n");
-            
+
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Primary: ").Append(Primary).Append("\n");
@@ -234,16 +214,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Primary != null)
                     hash = hash * 59 + this.Primary.GetHashCode();
-                
+
                 return hash;
             }
         }

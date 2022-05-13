@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActionTarget :  IEquatable<ActionTarget>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets SupportedMediaTypes
         /// </summary>
@@ -87,10 +74,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "webchat")]
             Webchat
         }
-        
-        
-        
-        
         /// <summary>
         /// Indicates the state of the target.
         /// </summary>
@@ -124,58 +107,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the state of the target.
         /// </summary>
         /// <value>Indicates the state of the target.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionTarget" /> class.
         /// </summary>
@@ -202,98 +139,98 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Additional user data associated with the target in key/value format.
         /// </summary>
         /// <value>Additional user data associated with the target in key/value format.</value>
         [DataMember(Name="userData", EmitDefaultValue=false)]
         public List<KeyValue> UserData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Supported media types of the target.
         /// </summary>
         /// <value>Supported media types of the target.</value>
         [DataMember(Name="supportedMediaTypes", EmitDefaultValue=false)]
         public List<SupportedMediaTypesEnum> SupportedMediaTypes { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Description of the target.
         /// </summary>
         /// <value>Description of the target.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Service Level of the action target. Chat offers for the target will be throttled with the aim of achieving this service level.
         /// </summary>
         /// <value>Service Level of the action target. Chat offers for the target will be throttled with the aim of achieving this service level.</value>
         [DataMember(Name="serviceLevel", EmitDefaultValue=false)]
         public ServiceLevel ServiceLevel { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates the non-default short abandon threshold
         /// </summary>
         /// <value>Indicates the non-default short abandon threshold</value>
         [DataMember(Name="shortAbandonThreshold", EmitDefaultValue=false)]
         public int? ShortAbandonThreshold { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the target was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the target was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the target was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the target was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -302,7 +239,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActionTarget {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UserData: ").Append(UserData).Append("\n");
@@ -422,40 +359,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.UserData != null)
                     hash = hash * 59 + this.UserData.GetHashCode();
-                
+
                 if (this.SupportedMediaTypes != null)
                     hash = hash * 59 + this.SupportedMediaTypes.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.ServiceLevel != null)
                     hash = hash * 59 + this.ServiceLevel.GetHashCode();
-                
+
                 if (this.ShortAbandonThreshold != null)
                     hash = hash * 59 + this.ShortAbandonThreshold.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
+
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
+
                 return hash;
             }
         }

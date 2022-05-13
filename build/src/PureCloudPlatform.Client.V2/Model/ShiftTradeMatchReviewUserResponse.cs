@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ShiftTradeMatchReviewUserResponse :  IEquatable<ShiftTradeMatchReviewUserResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradeMatchReviewUserResponse" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The minimum weekly paid minutes for this user per the work plan tied to the agent schedule
         /// </summary>
         /// <value>The minimum weekly paid minutes for this user per the work plan tied to the agent schedule</value>
         [DataMember(Name="weeklyMinimumPaidMinutes", EmitDefaultValue=false)]
         public int? WeeklyMinimumPaidMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum weekly paid minutes for this user per the work plan tied to the agent schedule
         /// </summary>
         /// <value>The maximum weekly paid minutes for this user per the work plan tied to the agent schedule</value>
         [DataMember(Name="weeklyMaximumPaidMinutes", EmitDefaultValue=false)]
         public int? WeeklyMaximumPaidMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The paid minutes on the week schedule for this user prior to the shift trade
         /// </summary>
         /// <value>The paid minutes on the week schedule for this user prior to the shift trade</value>
         [DataMember(Name="preTradeSchedulePaidMinutes", EmitDefaultValue=false)]
         public int? PreTradeSchedulePaidMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The paid minutes on the week schedule for this user if the shift trade is approved
         /// </summary>
         /// <value>The paid minutes on the week schedule for this user if the shift trade is approved</value>
         [DataMember(Name="postTradeSchedulePaidMinutes", EmitDefaultValue=false)]
         public int? PostTradeSchedulePaidMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Preview of what the shift will look like for the opposite side of this trade after the match is approved
         /// </summary>
         /// <value>Preview of what the shift will look like for the opposite side of this trade after the match is approved</value>
         [DataMember(Name="postTradeNewShift", EmitDefaultValue=false)]
         public ShiftTradePreviewResponse PostTradeNewShift { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ShiftTradeMatchReviewUserResponse {\n");
-            
+
             sb.Append("  WeeklyMinimumPaidMinutes: ").Append(WeeklyMinimumPaidMinutes).Append("\n");
             sb.Append("  WeeklyMaximumPaidMinutes: ").Append(WeeklyMaximumPaidMinutes).Append("\n");
             sb.Append("  PreTradeSchedulePaidMinutes: ").Append(PreTradeSchedulePaidMinutes).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WeeklyMinimumPaidMinutes != null)
                     hash = hash * 59 + this.WeeklyMinimumPaidMinutes.GetHashCode();
-                
+
                 if (this.WeeklyMaximumPaidMinutes != null)
                     hash = hash * 59 + this.WeeklyMaximumPaidMinutes.GetHashCode();
-                
+
                 if (this.PreTradeSchedulePaidMinutes != null)
                     hash = hash * 59 + this.PreTradeSchedulePaidMinutes.GetHashCode();
-                
+
                 if (this.PostTradeSchedulePaidMinutes != null)
                     hash = hash * 59 + this.PostTradeSchedulePaidMinutes.GetHashCode();
-                
+
                 if (this.PostTradeNewShift != null)
                     hash = hash * 59 + this.PostTradeNewShift.GetHashCode();
-                
+
                 return hash;
             }
         }

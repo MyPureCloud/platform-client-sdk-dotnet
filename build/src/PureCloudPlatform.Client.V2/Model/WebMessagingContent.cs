@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebMessagingContent :  IEquatable<WebMessagingContent>
     {
-        
-        
         /// <summary>
         /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.
         /// </summary>
@@ -71,50 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Carousel")]
             Carousel
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.
         /// </summary>
         /// <value>Type of this content element. If contentType = \"Attachment\" only one item is allowed.</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
-        public ContentTypeEnum? ContentType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public ContentTypeEnum? ContentType { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WebMessagingContent" /> class.
         /// </summary>
@@ -133,63 +93,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Attachment content.
         /// </summary>
         /// <value>Attachment content.</value>
         [DataMember(Name="attachment", EmitDefaultValue=false)]
         public WebMessagingAttachment Attachment { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Quick reply content.
         /// </summary>
         /// <value>Quick reply content.</value>
         [DataMember(Name="quickReply", EmitDefaultValue=false)]
         public WebMessagingQuickReply QuickReply { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Button response content.
         /// </summary>
         /// <value>Button response content.</value>
         [DataMember(Name="buttonResponse", EmitDefaultValue=false)]
         public WebMessagingButtonResponse ButtonResponse { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Generic content.
         /// </summary>
         /// <value>Generic content.</value>
         [DataMember(Name="generic", EmitDefaultValue=false)]
         public WebMessagingGeneric Generic { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Card content
         /// </summary>
         /// <value>Card content</value>
         [DataMember(Name="card", EmitDefaultValue=false)]
         public ContentCard Card { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Carousel content
         /// </summary>
         /// <value>Carousel content</value>
         [DataMember(Name="carousel", EmitDefaultValue=false)]
         public ContentCarousel Carousel { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -198,7 +158,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebMessagingContent {\n");
-            
+
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  Attachment: ").Append(Attachment).Append("\n");
             sb.Append("  QuickReply: ").Append(QuickReply).Append("\n");
@@ -294,28 +254,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
+
                 if (this.Attachment != null)
                     hash = hash * 59 + this.Attachment.GetHashCode();
-                
+
                 if (this.QuickReply != null)
                     hash = hash * 59 + this.QuickReply.GetHashCode();
-                
+
                 if (this.ButtonResponse != null)
                     hash = hash * 59 + this.ButtonResponse.GetHashCode();
-                
+
                 if (this.Generic != null)
                     hash = hash * 59 + this.Generic.GetHashCode();
-                
+
                 if (this.Card != null)
                     hash = hash * 59 + this.Card.GetHashCode();
-                
+
                 if (this.Carousel != null)
                     hash = hash * 59 + this.Carousel.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsReportingSettings :  IEquatable<AnalyticsReportingSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsReportingSettings" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Indication of whether or not personal data is masked in data export and the Analytics/Reporting UI
         /// </summary>
         /// <value>Indication of whether or not personal data is masked in data export and the Analytics/Reporting UI</value>
         [DataMember(Name="piiMaskingEnabled", EmitDefaultValue=false)]
         public bool? PiiMaskingEnabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indication of whether or not to obfuscate export data from the Queue Agent Details view based on User ACL
         /// </summary>
         /// <value>Indication of whether or not to obfuscate export data from the Queue Agent Details view based on User ACL</value>
         [DataMember(Name="queueAgentAccessObfuscation", EmitDefaultValue=false)]
         public bool? QueueAgentAccessObfuscation { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsReportingSettings {\n");
-            
+
             sb.Append("  PiiMaskingEnabled: ").Append(PiiMaskingEnabled).Append("\n");
             sb.Append("  QueueAgentAccessObfuscation: ").Append(QueueAgentAccessObfuscation).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PiiMaskingEnabled != null)
                     hash = hash * 59 + this.PiiMaskingEnabled.GetHashCode();
-                
+
                 if (this.QueueAgentAccessObfuscation != null)
                     hash = hash * 59 + this.QueueAgentAccessObfuscation.GetHashCode();
-                
+
                 return hash;
             }
         }

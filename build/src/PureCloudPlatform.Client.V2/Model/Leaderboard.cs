@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Leaderboard :  IEquatable<Leaderboard>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Leaderboard" /> class.
         /// </summary>
@@ -64,70 +26,70 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The targeted division for this leaderboard
         /// </summary>
         /// <value>The targeted division for this leaderboard</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public Division Division { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The metric id if the leaderboard is about a specific metric
         /// </summary>
         /// <value>The metric id if the leaderboard is about a specific metric</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public AddressableEntityRef Metric { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Start workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Start workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateStartWorkday", EmitDefaultValue=false)]
         public String DateStartWorkday { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// End workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>End workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateEndWorkday", EmitDefaultValue=false)]
         public String DateEndWorkday { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of leaders generated.
         /// </summary>
         /// <value>The list of leaders generated.</value>
         [DataMember(Name="leaders", EmitDefaultValue=false)]
         public List<LeaderboardItem> Leaders { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The requesting user&#39;s rank
+        /// The requesting user's rank
         /// </summary>
-        /// <value>The requesting user&#39;s rank</value>
+        /// <value>The requesting user's rank</value>
         [DataMember(Name="userRank", EmitDefaultValue=false)]
         public LeaderboardItem UserRank { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The targeted performance profile for the average points
         /// </summary>
         /// <value>The targeted performance profile for the average points</value>
         [DataMember(Name="performanceProfile", EmitDefaultValue=false)]
         public AddressableEntityRef PerformanceProfile { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -136,7 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Leaderboard {\n");
-            
+
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  DateStartWorkday: ").Append(DateStartWorkday).Append("\n");
@@ -232,28 +194,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 if (this.DateStartWorkday != null)
                     hash = hash * 59 + this.DateStartWorkday.GetHashCode();
-                
+
                 if (this.DateEndWorkday != null)
                     hash = hash * 59 + this.DateEndWorkday.GetHashCode();
-                
+
                 if (this.Leaders != null)
                     hash = hash * 59 + this.Leaders.GetHashCode();
-                
+
                 if (this.UserRank != null)
                     hash = hash * 59 + this.UserRank.GetHashCode();
-                
+
                 if (this.PerformanceProfile != null)
                     hash = hash * 59 + this.PerformanceProfile.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallableContactsDiagnostic :  IEquatable<CallableContactsDiagnostic>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableContactsDiagnostic" /> class.
         /// </summary>
@@ -49,43 +26,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// Attempt limits for the campaign&#39;s contact list
+        /// Attempt limits for the campaign's contact list
         /// </summary>
-        /// <value>Attempt limits for the campaign&#39;s contact list</value>
+        /// <value>Attempt limits for the campaign's contact list</value>
         [DataMember(Name="attemptLimits", EmitDefaultValue=false)]
         public DomainEntityRef AttemptLimits { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Do not call lists for the campaign
         /// </summary>
         /// <value>Do not call lists for the campaign</value>
         [DataMember(Name="dncLists", EmitDefaultValue=false)]
         public List<DomainEntityRef> DncLists { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Callable time sets for the campaign
         /// </summary>
         /// <value>Callable time sets for the campaign</value>
         [DataMember(Name="callableTimeSet", EmitDefaultValue=false)]
         public DomainEntityRef CallableTimeSet { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Rule sets for the campaign
         /// </summary>
         /// <value>Rule sets for the campaign</value>
         [DataMember(Name="ruleSets", EmitDefaultValue=false)]
         public List<DomainEntityRef> RuleSets { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -94,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallableContactsDiagnostic {\n");
-            
+
             sb.Append("  AttemptLimits: ").Append(AttemptLimits).Append("\n");
             sb.Append("  DncLists: ").Append(DncLists).Append("\n");
             sb.Append("  CallableTimeSet: ").Append(CallableTimeSet).Append("\n");
@@ -172,19 +149,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AttemptLimits != null)
                     hash = hash * 59 + this.AttemptLimits.GetHashCode();
-                
+
                 if (this.DncLists != null)
                     hash = hash * 59 + this.DncLists.GetHashCode();
-                
+
                 if (this.CallableTimeSet != null)
                     hash = hash * 59 + this.CallableTimeSet.GetHashCode();
-                
+
                 if (this.RuleSets != null)
                     hash = hash * 59 + this.RuleSets.GetHashCode();
-                
+
                 return hash;
             }
         }

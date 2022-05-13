@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuForecastGenerationResult :  IEquatable<BuForecastGenerationResult>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuForecastGenerationResult" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Generation results, broken down by planning group
         /// </summary>
         /// <value>Generation results, broken down by planning group</value>
         [DataMember(Name="planningGroupResults", EmitDefaultValue=false)]
         public List<BuForecastGenerationPlanningGroupResult> PlanningGroupResults { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuForecastGenerationResult {\n");
-            
+
             sb.Append("  PlanningGroupResults: ").Append(PlanningGroupResults).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PlanningGroupResults != null)
                     hash = hash * 59 + this.PlanningGroupResults.GetHashCode();
-                
+
                 return hash;
             }
         }

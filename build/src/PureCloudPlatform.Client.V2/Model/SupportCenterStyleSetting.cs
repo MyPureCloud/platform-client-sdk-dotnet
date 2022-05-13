@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterStyleSetting :  IEquatable<SupportCenterStyleSetting>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterStyleSetting" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Support center hero customizations
         /// </summary>
         /// <value>Support center hero customizations</value>
         [DataMember(Name="heroStyle", EmitDefaultValue=false)]
         public SupportCenterHeroStyle HeroStyle { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Support center global customizations
         /// </summary>
         /// <value>Support center global customizations</value>
         [DataMember(Name="globalStyle", EmitDefaultValue=false)]
         public SupportCenterGlobalStyle GlobalStyle { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SupportCenterStyleSetting {\n");
-            
+
             sb.Append("  HeroStyle: ").Append(HeroStyle).Append("\n");
             sb.Append("  GlobalStyle: ").Append(GlobalStyle).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.HeroStyle != null)
                     hash = hash * 59 + this.HeroStyle.GetHashCode();
-                
+
                 if (this.GlobalStyle != null)
                     hash = hash * 59 + this.GlobalStyle.GetHashCode();
-                
+
                 return hash;
             }
         }

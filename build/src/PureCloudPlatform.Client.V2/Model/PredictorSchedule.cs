@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PredictorSchedule :  IEquatable<PredictorSchedule>
     {
-        
-        
         /// <summary>
         /// The predictor schedule type.
         /// </summary>
@@ -47,31 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OngoingValueMonitoring")]
             Ongoingvaluemonitoring
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The predictor schedule type.
         /// </summary>
         /// <value>The predictor schedule type.</value>
         [DataMember(Name="scheduleType", EmitDefaultValue=false)]
         public ScheduleTypeEnum? ScheduleType { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PredictorSchedule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PredictorSchedule() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PredictorSchedule" /> class.
         /// </summary>
@@ -82,18 +67,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// DateTime indicating when the predictor schedule was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>DateTime indicating when the predictor schedule was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateStarted", EmitDefaultValue=false)]
         public DateTime? DateStarted { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PredictorSchedule {\n");
-            
+
             sb.Append("  ScheduleType: ").Append(ScheduleType).Append("\n");
             sb.Append("  DateStarted: ").Append(DateStarted).Append("\n");
             sb.Append("}\n");
@@ -168,13 +153,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ScheduleType != null)
                     hash = hash * 59 + this.ScheduleType.GetHashCode();
-                
+
                 if (this.DateStarted != null)
                     hash = hash * 59 + this.DateStarted.GetHashCode();
-                
+
                 return hash;
             }
         }

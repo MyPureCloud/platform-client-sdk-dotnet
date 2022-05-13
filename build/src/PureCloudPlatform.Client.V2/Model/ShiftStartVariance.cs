@@ -18,10 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ShiftStartVariance :  IEquatable<ShiftStartVariance>
     {
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ApplicableDays
         /// </summary>
@@ -78,24 +74,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Saturday")]
             Saturday
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftStartVariance" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ShiftStartVariance() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftStartVariance" /> class.
         /// </summary>
@@ -108,25 +92,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Days for which shift start variance is configured
         /// </summary>
         /// <value>Days for which shift start variance is configured</value>
         [DataMember(Name="applicableDays", EmitDefaultValue=false)]
         public List<ApplicableDaysEnum> ApplicableDays { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Maximum variance in minutes across shift starts
         /// </summary>
         /// <value>Maximum variance in minutes across shift starts</value>
         [DataMember(Name="maxShiftStartVarianceMinutes", EmitDefaultValue=false)]
         public int? MaxShiftStartVarianceMinutes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -135,7 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ShiftStartVariance {\n");
-            
+
             sb.Append("  ApplicableDays: ").Append(ApplicableDays).Append("\n");
             sb.Append("  MaxShiftStartVarianceMinutes: ").Append(MaxShiftStartVarianceMinutes).Append("\n");
             sb.Append("}\n");
@@ -201,13 +185,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ApplicableDays != null)
                     hash = hash * 59 + this.ApplicableDays.GetHashCode();
-                
+
                 if (this.MaxShiftStartVarianceMinutes != null)
                     hash = hash * 59 + this.MaxShiftStartVarianceMinutes.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PhoneChangeTopicUserAgentInfo :  IEquatable<PhoneChangeTopicUserAgentInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneChangeTopicUserAgentInfo" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets FirmwareVersion
         /// </summary>
         [DataMember(Name="firmwareVersion", EmitDefaultValue=false)]
         public string FirmwareVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Manufacturer
         /// </summary>
         [DataMember(Name="manufacturer", EmitDefaultValue=false)]
         public string Manufacturer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Model
         /// </summary>
         [DataMember(Name="model", EmitDefaultValue=false)]
         public string Model { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneChangeTopicUserAgentInfo {\n");
-            
+
             sb.Append("  FirmwareVersion: ").Append(FirmwareVersion).Append("\n");
             sb.Append("  Manufacturer: ").Append(Manufacturer).Append("\n");
             sb.Append("  Model: ").Append(Model).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FirmwareVersion != null)
                     hash = hash * 59 + this.FirmwareVersion.GetHashCode();
-                
+
                 if (this.Manufacturer != null)
                     hash = hash * 59 + this.Manufacturer.GetHashCode();
-                
+
                 if (this.Model != null)
                     hash = hash * 59 + this.Model.GetHashCode();
-                
+
                 return hash;
             }
         }

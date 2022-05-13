@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueueMessagingAddresses :  IEquatable<QueueMessagingAddresses>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueMessagingAddresses" /> class.
         /// </summary>
@@ -36,15 +28,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets SmsAddress
         /// </summary>
         [DataMember(Name="smsAddress", EmitDefaultValue=false)]
         public DomainEntityRef SmsAddress { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueueMessagingAddresses {\n");
-            
+
             sb.Append("  SmsAddress: ").Append(SmsAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -113,10 +105,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SmsAddress != null)
                     hash = hash * 59 + this.SmsAddress.GetHashCode();
-                
+
                 return hash;
             }
         }

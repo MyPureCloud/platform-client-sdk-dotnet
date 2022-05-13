@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuQueryAgentSchedulesRequest :  IEquatable<BuQueryAgentSchedulesRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BuQueryAgentSchedulesRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BuQueryAgentSchedulesRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuQueryAgentSchedulesRequest" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the management unit to query
         /// </summary>
         /// <value>The ID of the management unit to query</value>
         [DataMember(Name="managementUnitId", EmitDefaultValue=false)]
         public string ManagementUnitId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The IDs of the users to query.  Omit to query all user schedules in the management unit. 
         /// </summary>
         /// <value>The IDs of the users to query.  Omit to query all user schedules in the management unit. </value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuQueryAgentSchedulesRequest {\n");
-            
+
             sb.Append("  ManagementUnitId: ").Append(ManagementUnitId).Append("\n");
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ManagementUnitId != null)
                     hash = hash * 59 + this.ManagementUnitId.GetHashCode();
-                
+
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DocumentThumbnail :  IEquatable<DocumentThumbnail>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentThumbnail" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Resolution
         /// </summary>
         [DataMember(Name="resolution", EmitDefaultValue=false)]
         public string Resolution { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ImageUri
         /// </summary>
         [DataMember(Name="imageUri", EmitDefaultValue=false)]
         public string ImageUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Height
         /// </summary>
         [DataMember(Name="height", EmitDefaultValue=false)]
         public int? Height { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Width
         /// </summary>
         [DataMember(Name="width", EmitDefaultValue=false)]
         public int? Width { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DocumentThumbnail {\n");
-            
+
             sb.Append("  Resolution: ").Append(Resolution).Append("\n");
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
             sb.Append("  Height: ").Append(Height).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Resolution != null)
                     hash = hash * 59 + this.Resolution.GetHashCode();
-                
+
                 if (this.ImageUri != null)
                     hash = hash * 59 + this.ImageUri.GetHashCode();
-                
+
                 if (this.Height != null)
                     hash = hash * 59 + this.Height.GetHashCode();
-                
+
                 if (this.Width != null)
                     hash = hash * 59 + this.Width.GetHashCode();
-                
+
                 return hash;
             }
         }

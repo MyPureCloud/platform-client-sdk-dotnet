@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuIntradayDataUpdateTopicBuIntradayForecastData :  IEquatable<WfmBuIntradayDataUpdateTopicBuIntradayForecastData>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuIntradayDataUpdateTopicBuIntradayForecastData" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Offered
         /// </summary>
         [DataMember(Name="offered", EmitDefaultValue=false)]
         public double? Offered { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AverageHandleTimeSeconds
         /// </summary>
         [DataMember(Name="averageHandleTimeSeconds", EmitDefaultValue=false)]
         public double? AverageHandleTimeSeconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuIntradayDataUpdateTopicBuIntradayForecastData {\n");
-            
+
             sb.Append("  Offered: ").Append(Offered).Append("\n");
             sb.Append("  AverageHandleTimeSeconds: ").Append(AverageHandleTimeSeconds).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Offered != null)
                     hash = hash * 59 + this.Offered.GetHashCode();
-                
+
                 if (this.AverageHandleTimeSeconds != null)
                     hash = hash * 59 + this.AverageHandleTimeSeconds.GetHashCode();
-                
+
                 return hash;
             }
         }

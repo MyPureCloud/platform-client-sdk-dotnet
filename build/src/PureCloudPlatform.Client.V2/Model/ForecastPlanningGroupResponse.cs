@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ForecastPlanningGroupResponse :  IEquatable<ForecastPlanningGroupResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ForecastPlanningGroupResponse" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the planning group
         /// </summary>
         /// <value>The ID of the planning group</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the planning group
         /// </summary>
         /// <value>The name of the planning group</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Route path configuration for this planning group
         /// </summary>
         /// <value>Route path configuration for this planning group</value>
         [DataMember(Name="routePaths", EmitDefaultValue=false)]
         public List<RoutePathResponse> RoutePaths { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Service goals for this planning group
         /// </summary>
         /// <value>Service goals for this planning group</value>
         [DataMember(Name="serviceGoalTemplate", EmitDefaultValue=false)]
         public ForecastServiceGoalTemplateResponse ServiceGoalTemplate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ForecastPlanningGroupResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  RoutePaths: ").Append(RoutePaths).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.RoutePaths != null)
                     hash = hash * 59 + this.RoutePaths.GetHashCode();
-                
+
                 if (this.ServiceGoalTemplate != null)
                     hash = hash * 59 + this.ServiceGoalTemplate.GetHashCode();
-                
+
                 return hash;
             }
         }

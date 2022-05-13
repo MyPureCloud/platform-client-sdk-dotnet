@@ -18,49 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserConversationsEventUserConversationSummary :  IEquatable<UserConversationsEventUserConversationSummary>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserConversationsEventUserConversationSummary" /> class.
         /// </summary>
@@ -85,71 +42,71 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Call
         /// </summary>
         [DataMember(Name="call", EmitDefaultValue=false)]
         public UserConversationsEventMediaSummary Call { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Callback
         /// </summary>
         [DataMember(Name="callback", EmitDefaultValue=false)]
         public UserConversationsEventMediaSummary Callback { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public UserConversationsEventMediaSummary Email { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public UserConversationsEventMediaSummary Message { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Chat
         /// </summary>
         [DataMember(Name="chat", EmitDefaultValue=false)]
         public UserConversationsEventMediaSummary Chat { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SocialExpression
         /// </summary>
         [DataMember(Name="socialExpression", EmitDefaultValue=false)]
         public UserConversationsEventMediaSummary SocialExpression { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Video
         /// </summary>
         [DataMember(Name="video", EmitDefaultValue=false)]
         public UserConversationsEventMediaSummary Video { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -158,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserConversationsEventUserConversationSummary {\n");
-            
+
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Call: ").Append(Call).Append("\n");
             sb.Append("  Callback: ").Append(Callback).Append("\n");
@@ -260,31 +217,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.Call != null)
                     hash = hash * 59 + this.Call.GetHashCode();
-                
+
                 if (this.Callback != null)
                     hash = hash * 59 + this.Callback.GetHashCode();
-                
+
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
+
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 if (this.Chat != null)
                     hash = hash * 59 + this.Chat.GetHashCode();
-                
+
                 if (this.SocialExpression != null)
                     hash = hash * 59 + this.SocialExpression.GetHashCode();
-                
+
                 if (this.Video != null)
                     hash = hash * 59 + this.Video.GetHashCode();
-                
+
                 return hash;
             }
         }

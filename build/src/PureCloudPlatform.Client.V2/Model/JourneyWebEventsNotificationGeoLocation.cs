@@ -18,59 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyWebEventsNotificationGeoLocation :  IEquatable<JourneyWebEventsNotificationGeoLocation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyWebEventsNotificationGeoLocation" /> class.
         /// </summary>
@@ -99,87 +46,87 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CountryName
         /// </summary>
         [DataMember(Name="countryName", EmitDefaultValue=false)]
         public string CountryName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Latitude
         /// </summary>
         [DataMember(Name="latitude", EmitDefaultValue=false)]
         public double? Latitude { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Longitude
         /// </summary>
         [DataMember(Name="longitude", EmitDefaultValue=false)]
         public double? Longitude { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Locality
         /// </summary>
         [DataMember(Name="locality", EmitDefaultValue=false)]
         public string Locality { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PostalCode
         /// </summary>
         [DataMember(Name="postalCode", EmitDefaultValue=false)]
         public string PostalCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Region
         /// </summary>
         [DataMember(Name="region", EmitDefaultValue=false)]
         public string Region { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RegionName
         /// </summary>
         [DataMember(Name="regionName", EmitDefaultValue=false)]
         public string RegionName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Timezone
         /// </summary>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public string Timezone { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Source
         /// </summary>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public string Source { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,7 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyWebEventsNotificationGeoLocation {\n");
-            
+
             sb.Append("  Country: ").Append(Country).Append("\n");
             sb.Append("  CountryName: ").Append(CountryName).Append("\n");
             sb.Append("  Latitude: ").Append(Latitude).Append("\n");
@@ -302,37 +249,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Country != null)
                     hash = hash * 59 + this.Country.GetHashCode();
-                
+
                 if (this.CountryName != null)
                     hash = hash * 59 + this.CountryName.GetHashCode();
-                
+
                 if (this.Latitude != null)
                     hash = hash * 59 + this.Latitude.GetHashCode();
-                
+
                 if (this.Longitude != null)
                     hash = hash * 59 + this.Longitude.GetHashCode();
-                
+
                 if (this.Locality != null)
                     hash = hash * 59 + this.Locality.GetHashCode();
-                
+
                 if (this.PostalCode != null)
                     hash = hash * 59 + this.PostalCode.GetHashCode();
-                
+
                 if (this.Region != null)
                     hash = hash * 59 + this.Region.GetHashCode();
-                
+
                 if (this.RegionName != null)
                     hash = hash * 59 + this.RegionName.GetHashCode();
-                
+
                 if (this.Timezone != null)
                     hash = hash * 59 + this.Timezone.GetHashCode();
-                
+
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
-                
+
                 return hash;
             }
         }

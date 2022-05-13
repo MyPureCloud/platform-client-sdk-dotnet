@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterSettings :  IEquatable<SupportCenterSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Router type for support center
         /// </summary>
@@ -56,41 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Browser")]
             Browser
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Router type for support center
         /// </summary>
         /// <value>Router type for support center</value>
         [DataMember(Name="routerType", EmitDefaultValue=false)]
         public RouterTypeEnum? RouterType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterSettings" /> class.
         /// </summary>
@@ -113,63 +73,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether or not support center is enabled
         /// </summary>
         /// <value>Whether or not support center is enabled</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The knowledge base for support center
         /// </summary>
         /// <value>The knowledge base for support center</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
         public AddressableEntityRef KnowledgeBase { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Customizable display texts for support center
         /// </summary>
         /// <value>Customizable display texts for support center</value>
         [DataMember(Name="customMessages", EmitDefaultValue=false)]
         public List<SupportCenterCustomMessage> CustomMessages { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Available screens for the support center with its modules
         /// </summary>
         /// <value>Available screens for the support center with its modules</value>
         [DataMember(Name="screens", EmitDefaultValue=false)]
         public List<SupportCenterScreen> Screens { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Enabled article categories for support center
         /// </summary>
         /// <value>Enabled article categories for support center</value>
         [DataMember(Name="enabledCategories", EmitDefaultValue=false)]
         public List<AddressableEntityRef> EnabledCategories { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Style attributes for support center
         /// </summary>
         /// <value>Style attributes for support center</value>
         [DataMember(Name="styleSetting", EmitDefaultValue=false)]
         public SupportCenterStyleSetting StyleSetting { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -178,7 +138,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SupportCenterSettings {\n");
-            
+
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  KnowledgeBase: ").Append(KnowledgeBase).Append("\n");
             sb.Append("  CustomMessages: ").Append(CustomMessages).Append("\n");
@@ -274,28 +234,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.KnowledgeBase != null)
                     hash = hash * 59 + this.KnowledgeBase.GetHashCode();
-                
+
                 if (this.CustomMessages != null)
                     hash = hash * 59 + this.CustomMessages.GetHashCode();
-                
+
                 if (this.RouterType != null)
                     hash = hash * 59 + this.RouterType.GetHashCode();
-                
+
                 if (this.Screens != null)
                     hash = hash * 59 + this.Screens.GetHashCode();
-                
+
                 if (this.EnabledCategories != null)
                     hash = hash * 59 + this.EnabledCategories.GetHashCode();
-                
+
                 if (this.StyleSetting != null)
                     hash = hash * 59 + this.StyleSetting.GetHashCode();
-                
+
                 return hash;
             }
         }

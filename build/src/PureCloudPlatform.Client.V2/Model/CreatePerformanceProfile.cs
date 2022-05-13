@@ -18,70 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreatePerformanceProfile :  IEquatable<CreatePerformanceProfile>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatePerformanceProfile" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreatePerformanceProfile() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatePerformanceProfile" /> class.
         /// </summary>
@@ -102,106 +44,106 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A name for this performance profile
         /// </summary>
         /// <value>A name for this performance profile</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The associated division for this Performance Profile
         /// </summary>
         /// <value>The associated division for this Performance Profile</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public WritableDivision Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A description about this performance profile
         /// </summary>
         /// <value>A description about this performance profile</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Order of the associated metrics. The list should contain valid ids for metrics
         /// </summary>
         /// <value>Order of the associated metrics. The list should contain valid ids for metrics</value>
         [DataMember(Name="metricOrders", EmitDefaultValue=false)]
         public List<string> MetricOrders { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Creation date for this performance profile. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Creation date for this performance profile. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The reporting interval periods for this performance profile
         /// </summary>
         /// <value>The reporting interval periods for this performance profile</value>
         [DataMember(Name="reportingIntervals", EmitDefaultValue=false)]
         public List<ReportingInterval> ReportingIntervals { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The flag for active profiles
         /// </summary>
         /// <value>The flag for active profiles</value>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of members in this performance profile
         /// </summary>
         /// <value>The number of members in this performance profile</value>
         [DataMember(Name="memberCount", EmitDefaultValue=false)]
         public int? MemberCount { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum rank size for the leaderboard. This counts the number of ranks can be retrieved in a leaderboard queries
         /// </summary>
         /// <value>The maximum rank size for the leaderboard. This counts the number of ranks can be retrieved in a leaderboard queries</value>
         [DataMember(Name="maxLeaderboardRankSize", EmitDefaultValue=false)]
         public int? MaxLeaderboardRankSize { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -210,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreatePerformanceProfile {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
@@ -330,40 +272,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.MetricOrders != null)
                     hash = hash * 59 + this.MetricOrders.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.ReportingIntervals != null)
                     hash = hash * 59 + this.ReportingIntervals.GetHashCode();
-                
+
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
-                
+
                 if (this.MemberCount != null)
                     hash = hash * 59 + this.MemberCount.GetHashCode();
-                
+
                 if (this.MaxLeaderboardRankSize != null)
                     hash = hash * 59 + this.MaxLeaderboardRankSize.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

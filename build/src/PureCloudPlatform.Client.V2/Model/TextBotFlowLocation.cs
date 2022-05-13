@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotFlowLocation :  IEquatable<TextBotFlowLocation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotFlowLocation" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotFlowLocation() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotFlowLocation" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the action that was active when the event of interest happened.
         /// </summary>
         /// <value>The name of the action that was active when the event of interest happened.</value>
         [DataMember(Name="actionName", EmitDefaultValue=false)]
         public string ActionName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of the action that was active when the event of interest happened.
         /// </summary>
         /// <value>The number of the action that was active when the event of interest happened.</value>
         [DataMember(Name="actionNumber", EmitDefaultValue=false)]
         public int? ActionNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the state or task which was active when the event of interest happened.
         /// </summary>
         /// <value>The name of the state or task which was active when the event of interest happened.</value>
         [DataMember(Name="sequenceName", EmitDefaultValue=false)]
         public string SequenceName { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotFlowLocation {\n");
-            
+
             sb.Append("  ActionName: ").Append(ActionName).Append("\n");
             sb.Append("  ActionNumber: ").Append(ActionNumber).Append("\n");
             sb.Append("  SequenceName: ").Append(SequenceName).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ActionName != null)
                     hash = hash * 59 + this.ActionName.GetHashCode();
-                
+
                 if (this.ActionNumber != null)
                     hash = hash * 59 + this.ActionNumber.GetHashCode();
-                
+
                 if (this.SequenceName != null)
                     hash = hash * 59 + this.SequenceName.GetHashCode();
-                
+
                 return hash;
             }
         }

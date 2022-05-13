@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyOutcomeEventsNotificationOutcomeTouchpointChannel :  IEquatable<JourneyOutcomeEventsNotificationOutcomeTouchpointChannel>
     {
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -52,19 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Webchat")]
             Webchat
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyOutcomeEventsNotificationOutcomeTouchpointChannel" /> class.
         /// </summary>
@@ -75,9 +65,9 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyOutcomeEventsNotificationOutcomeTouchpointChannel {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -146,10 +136,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 return hash;
             }
         }

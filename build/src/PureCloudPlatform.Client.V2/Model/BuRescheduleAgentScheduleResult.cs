@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuRescheduleAgentScheduleResult :  IEquatable<BuRescheduleAgentScheduleResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuRescheduleAgentScheduleResult" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The management unit to which this part of the result applies
         /// </summary>
         /// <value>The management unit to which this part of the result applies</value>
         [DataMember(Name="managementUnit", EmitDefaultValue=false)]
         public ManagementUnitReference ManagementUnit { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The agent schedules.  Result will always come via the downloadUrl; however the schema is included for documentation
         /// </summary>
         /// <value>The agent schedules.  Result will always come via the downloadUrl; however the schema is included for documentation</value>
         [DataMember(Name="downloadResult", EmitDefaultValue=false)]
         public MuRescheduleResultWrapper DownloadResult { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The download URL from which to fetch the result
         /// </summary>
         /// <value>The download URL from which to fetch the result</value>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuRescheduleAgentScheduleResult {\n");
-            
+
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
             sb.Append("  DownloadResult: ").Append(DownloadResult).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ManagementUnit != null)
                     hash = hash * 59 + this.ManagementUnit.GetHashCode();
-                
+
                 if (this.DownloadResult != null)
                     hash = hash * 59 + this.DownloadResult.GetHashCode();
-                
+
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
-                
+
                 return hash;
             }
         }

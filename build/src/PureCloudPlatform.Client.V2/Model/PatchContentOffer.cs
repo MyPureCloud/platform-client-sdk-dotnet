@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchContentOffer :  IEquatable<PatchContentOffer>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The display mode of Genesys Widgets when displaying content offer.
         /// </summary>
@@ -56,10 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Toast")]
             Toast
         }
-        
-        
-        
-        
         /// <summary>
         /// The layout mode of the text shown to the user when displaying content offer.
         /// </summary>
@@ -111,56 +102,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "BottomText")]
             Bottomtext
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The display mode of Genesys Widgets when displaying content offer.
         /// </summary>
         /// <value>The display mode of Genesys Widgets when displaying content offer.</value>
         [DataMember(Name="displayMode", EmitDefaultValue=false)]
         public DisplayModeEnum? DisplayMode { get; set; }
-        
-        
-        
         /// <summary>
         /// The layout mode of the text shown to the user when displaying content offer.
         /// </summary>
         /// <value>The layout mode of the text shown to the user when displaying content offer.</value>
         [DataMember(Name="layoutMode", EmitDefaultValue=false)]
         public LayoutModeEnum? LayoutMode { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchContentOffer" /> class.
         /// </summary>
@@ -185,65 +138,65 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// URL for image displayed to the customer when displaying content offer.
         /// </summary>
         /// <value>URL for image displayed to the customer when displaying content offer.</value>
         [DataMember(Name="imageUrl", EmitDefaultValue=false)]
         public string ImageUrl { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Title used in the header of the content offer.
         /// </summary>
         /// <value>Title used in the header of the content offer.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Headline displayed above the body text of the content offer.
         /// </summary>
         /// <value>Headline displayed above the body text of the content offer.</value>
         [DataMember(Name="headline", EmitDefaultValue=false)]
         public string Headline { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Body text of the content offer.
         /// </summary>
         /// <value>Body text of the content offer.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public string Body { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Properties customizing the call to action button on the content offer.
         /// </summary>
         /// <value>Properties customizing the call to action button on the content offer.</value>
         [DataMember(Name="callToAction", EmitDefaultValue=false)]
         public PatchCallToAction CallToAction { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Properties customizing the styling of the content offer.
         /// </summary>
         /// <value>Properties customizing the styling of the content offer.</value>
         [DataMember(Name="style", EmitDefaultValue=false)]
         public PatchContentOfferStylingConfiguration Style { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -252,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PatchContentOffer {\n");
-            
+
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  DisplayMode: ").Append(DisplayMode).Append("\n");
             sb.Append("  LayoutMode: ").Append(LayoutMode).Append("\n");
@@ -354,31 +307,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ImageUrl != null)
                     hash = hash * 59 + this.ImageUrl.GetHashCode();
-                
+
                 if (this.DisplayMode != null)
                     hash = hash * 59 + this.DisplayMode.GetHashCode();
-                
+
                 if (this.LayoutMode != null)
                     hash = hash * 59 + this.LayoutMode.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Headline != null)
                     hash = hash * 59 + this.Headline.GetHashCode();
-                
+
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
-                
+
                 if (this.CallToAction != null)
                     hash = hash * 59 + this.CallToAction.GetHashCode();
-                
+
                 if (this.Style != null)
                     hash = hash * 59 + this.Style.GetHashCode();
-                
+
                 return hash;
             }
         }

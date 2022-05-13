@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResponseQueryRequest :  IEquatable<ResponseQueryRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseQueryRequest" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Query phrase to search response text and name. If not set will match all.
         /// </summary>
         /// <value>Query phrase to search response text and name. If not set will match all.</value>
         [DataMember(Name="queryPhrase", EmitDefaultValue=false)]
         public string QueryPhrase { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum number of hits to return. Default: 25, Maximum: 500.
         /// </summary>
         /// <value>The maximum number of hits to return. Default: 25, Maximum: 500.</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filter the query results.
         /// </summary>
         /// <value>Filter the query results.</value>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<ResponseFilter> Filters { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResponseQueryRequest {\n");
-            
+
             sb.Append("  QueryPhrase: ").Append(QueryPhrase).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QueryPhrase != null)
                     hash = hash * 59 + this.QueryPhrase.GetHashCode();
-                
+
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
+
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
-                
+
                 return hash;
             }
         }

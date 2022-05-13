@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class HistoryEntry :  IEquatable<HistoryEntry>
     {
-        
-        
         /// <summary>
         /// The action performed
         /// </summary>
@@ -107,50 +105,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "UPLOAD")]
             Upload
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The action performed
         /// </summary>
         /// <value>The action performed</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="HistoryEntry" /> class.
         /// </summary>
@@ -173,61 +133,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// For actions performed not on the item itself, but on a sub-item, this field identifies the sub-item by name.  For example, for actions performed on prompt resources, this will be the prompt resource name.
         /// </summary>
         /// <value>For actions performed not on the item itself, but on a sub-item, this field identifies the sub-item by name.  For example, for actions performed on prompt resources, this will be the prompt resource name.</value>
         [DataMember(Name="resource", EmitDefaultValue=false)]
         public string Resource { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User associated with this entry.
         /// </summary>
         /// <value>User associated with this entry.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// OAuth client associated with this entry.
         /// </summary>
         /// <value>OAuth client associated with this entry.</value>
         [DataMember(Name="client", EmitDefaultValue=false)]
         public DomainEntityRef Client { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Secure
         /// </summary>
         [DataMember(Name="secure", EmitDefaultValue=false)]
         public bool? Secure { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -236,7 +196,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HistoryEntry {\n");
-            
+
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  Resource: ").Append(Resource).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
@@ -332,28 +292,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.Resource != null)
                     hash = hash * 59 + this.Resource.GetHashCode();
-                
+
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Client != null)
                     hash = hash * 59 + this.Client.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.Secure != null)
                     hash = hash * 59 + this.Secure.GetHashCode();
-                
+
                 return hash;
             }
         }

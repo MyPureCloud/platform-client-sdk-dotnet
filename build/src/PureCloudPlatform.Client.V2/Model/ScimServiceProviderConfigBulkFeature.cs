@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimServiceProviderConfigBulkFeature :  IEquatable<ScimServiceProviderConfigBulkFeature>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfigBulkFeature" /> class.
         /// </summary>
@@ -44,34 +26,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Indicates whether configuration options are supported.
         /// </summary>
         /// <value>Indicates whether configuration options are supported.</value>
         [DataMember(Name="supported", EmitDefaultValue=false)]
         public bool? Supported { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum number of operations for each bulk request.
         /// </summary>
         /// <value>The maximum number of operations for each bulk request.</value>
         [DataMember(Name="maxOperations", EmitDefaultValue=false)]
         public int? MaxOperations { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum payload size.
         /// </summary>
         /// <value>The maximum payload size.</value>
         [DataMember(Name="maxPayloadSize", EmitDefaultValue=false)]
         public int? MaxPayloadSize { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimServiceProviderConfigBulkFeature {\n");
-            
+
             sb.Append("  Supported: ").Append(Supported).Append("\n");
             sb.Append("  MaxOperations: ").Append(MaxOperations).Append("\n");
             sb.Append("  MaxPayloadSize: ").Append(MaxPayloadSize).Append("\n");
@@ -152,16 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Supported != null)
                     hash = hash * 59 + this.Supported.GetHashCode();
-                
+
                 if (this.MaxOperations != null)
                     hash = hash * 59 + this.MaxOperations.GetHashCode();
-                
+
                 if (this.MaxPayloadSize != null)
                     hash = hash * 59 + this.MaxPayloadSize.GetHashCode();
-                
+
                 return hash;
             }
         }

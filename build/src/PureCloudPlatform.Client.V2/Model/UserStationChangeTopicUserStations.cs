@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserStationChangeTopicUserStations :  IEquatable<UserStationChangeTopicUserStations>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStationChangeTopicUserStations" /> class.
         /// </summary>
@@ -36,15 +28,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets AssociatedStation
         /// </summary>
         [DataMember(Name="associatedStation", EmitDefaultValue=false)]
         public UserStationChangeTopicUserStation AssociatedStation { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserStationChangeTopicUserStations {\n");
-            
+
             sb.Append("  AssociatedStation: ").Append(AssociatedStation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -113,10 +105,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AssociatedStation != null)
                     hash = hash * 59 + this.AssociatedStation.GetHashCode();
-                
+
                 return hash;
             }
         }

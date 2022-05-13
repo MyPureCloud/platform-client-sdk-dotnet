@@ -18,35 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EvaluationQualityV2TopicEvaluationV2 :  IEquatable<EvaluationQualityV2TopicEvaluationV2>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -79,97 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Finished")]
             Finished
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationQualityV2TopicEvaluationV2" /> class.
         /// </summary>
@@ -222,177 +107,177 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Agent
         /// </summary>
         [DataMember(Name="agent", EmitDefaultValue=false)]
         public EvaluationQualityV2TopicUser Agent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Evaluator
         /// </summary>
         [DataMember(Name="evaluator", EmitDefaultValue=false)]
         public EvaluationQualityV2TopicUser Evaluator { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
         public DateTime? EventTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EvaluationFormId
         /// </summary>
         [DataMember(Name="evaluationFormId", EmitDefaultValue=false)]
         public string EvaluationFormId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FormName
         /// </summary>
         [DataMember(Name="formName", EmitDefaultValue=false)]
         public string FormName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ScoringSet
         /// </summary>
         [DataMember(Name="scoringSet", EmitDefaultValue=false)]
         public EvaluationQualityV2TopicEvaluationScoringSet ScoringSet { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ContextId
         /// </summary>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets AgentHasRead
         /// </summary>
         [DataMember(Name="agentHasRead", EmitDefaultValue=false)]
         public bool? AgentHasRead { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ReleaseDate
         /// </summary>
         [DataMember(Name="releaseDate", EmitDefaultValue=false)]
         public DateTime? ReleaseDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AssignedDate
         /// </summary>
         [DataMember(Name="assignedDate", EmitDefaultValue=false)]
         public DateTime? AssignedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ChangedDate
         /// </summary>
         [DataMember(Name="changedDate", EmitDefaultValue=false)]
         public DateTime? ChangedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EventType
         /// </summary>
         [DataMember(Name="eventType", EmitDefaultValue=false)]
         public string EventType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ResourceId
         /// </summary>
         [DataMember(Name="resourceId", EmitDefaultValue=false)]
         public string ResourceId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ResourceType
         /// </summary>
         [DataMember(Name="resourceType", EmitDefaultValue=false)]
         public string ResourceType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DivisionIds
         /// </summary>
         [DataMember(Name="divisionIds", EmitDefaultValue=false)]
         public List<string> DivisionIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Rescore
         /// </summary>
         [DataMember(Name="rescore", EmitDefaultValue=false)]
         public bool? Rescore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConversationDate
         /// </summary>
         [DataMember(Name="conversationDate", EmitDefaultValue=false)]
         public DateTime? ConversationDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public List<string> MediaType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Calibration
         /// </summary>
         [DataMember(Name="calibration", EmitDefaultValue=false)]
         public EvaluationQualityV2TopicCalibration Calibration { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -401,7 +286,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EvaluationQualityV2TopicEvaluationV2 {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  Agent: ").Append(Agent).Append("\n");
@@ -587,73 +472,72 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();
-                
+
                 if (this.Evaluator != null)
                     hash = hash * 59 + this.Evaluator.GetHashCode();
-                
+
                 if (this.EventTime != null)
                     hash = hash * 59 + this.EventTime.GetHashCode();
-                
+
                 if (this.EvaluationFormId != null)
                     hash = hash * 59 + this.EvaluationFormId.GetHashCode();
-                
+
                 if (this.FormName != null)
                     hash = hash * 59 + this.FormName.GetHashCode();
-                
+
                 if (this.ScoringSet != null)
                     hash = hash * 59 + this.ScoringSet.GetHashCode();
-                
+
                 if (this.ContextId != null)
                     hash = hash * 59 + this.ContextId.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.AgentHasRead != null)
                     hash = hash * 59 + this.AgentHasRead.GetHashCode();
-                
+
                 if (this.ReleaseDate != null)
                     hash = hash * 59 + this.ReleaseDate.GetHashCode();
-                
+
                 if (this.AssignedDate != null)
                     hash = hash * 59 + this.AssignedDate.GetHashCode();
-                
+
                 if (this.ChangedDate != null)
                     hash = hash * 59 + this.ChangedDate.GetHashCode();
-                
+
                 if (this.EventType != null)
                     hash = hash * 59 + this.EventType.GetHashCode();
-                
+
                 if (this.ResourceId != null)
                     hash = hash * 59 + this.ResourceId.GetHashCode();
-                
+
                 if (this.ResourceType != null)
                     hash = hash * 59 + this.ResourceType.GetHashCode();
-                
+
                 if (this.DivisionIds != null)
                     hash = hash * 59 + this.DivisionIds.GetHashCode();
-                
+
                 if (this.Rescore != null)
                     hash = hash * 59 + this.Rescore.GetHashCode();
-                
+
                 if (this.ConversationDate != null)
                     hash = hash * 59 + this.ConversationDate.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.Calibration != null)
                     hash = hash * 59 + this.Calibration.GetHashCode();
-                
+
                 return hash;
             }
         }

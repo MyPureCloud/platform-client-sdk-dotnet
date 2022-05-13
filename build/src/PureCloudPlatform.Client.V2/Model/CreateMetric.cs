@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateMetric :  IEquatable<CreateMetric>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateMetric" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateMetric() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateMetric" /> class.
         /// </summary>
@@ -70,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The id of associated metric definition
         /// </summary>
         /// <value>The id of associated metric definition</value>
         [DataMember(Name="metricDefinitionId", EmitDefaultValue=false)]
         public string MetricDefinitionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of associated external metric definition
         /// </summary>
         /// <value>The id of associated external metric definition</value>
         [DataMember(Name="externalMetricDefinitionId", EmitDefaultValue=false)]
         public string ExternalMetricDefinitionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Associated objective for this metric
         /// </summary>
         /// <value>Associated objective for this metric</value>
         [DataMember(Name="objective", EmitDefaultValue=false)]
         public CreateObjective Objective { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Performance profile id of this metric
         /// </summary>
         /// <value>Performance profile id of this metric</value>
         [DataMember(Name="performanceProfileId", EmitDefaultValue=false)]
         public string PerformanceProfileId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of this metric
         /// </summary>
         /// <value>The name of this metric</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateMetric {\n");
-            
+
             sb.Append("  MetricDefinitionId: ").Append(MetricDefinitionId).Append("\n");
             sb.Append("  ExternalMetricDefinitionId: ").Append(ExternalMetricDefinitionId).Append("\n");
             sb.Append("  Objective: ").Append(Objective).Append("\n");
@@ -208,22 +180,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MetricDefinitionId != null)
                     hash = hash * 59 + this.MetricDefinitionId.GetHashCode();
-                
+
                 if (this.ExternalMetricDefinitionId != null)
                     hash = hash * 59 + this.ExternalMetricDefinitionId.GetHashCode();
-                
+
                 if (this.Objective != null)
                     hash = hash * 59 + this.Objective.GetHashCode();
-                
+
                 if (this.PerformanceProfileId != null)
                     hash = hash * 59 + this.PerformanceProfileId.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 return hash;
             }
         }

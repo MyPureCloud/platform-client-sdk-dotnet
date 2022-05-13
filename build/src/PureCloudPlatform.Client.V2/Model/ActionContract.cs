@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActionContract :  IEquatable<ActionContract>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionContract" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The output to expect when executing this action.
         /// </summary>
         /// <value>The output to expect when executing this action.</value>
         [DataMember(Name="output", EmitDefaultValue=false)]
         public ActionOutput Output { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The input required when executing this action.
         /// </summary>
         /// <value>The input required when executing this action.</value>
         [DataMember(Name="input", EmitDefaultValue=false)]
         public ActionInput Input { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActionContract {\n");
-            
+
             sb.Append("  Output: ").Append(Output).Append("\n");
             sb.Append("  Input: ").Append(Input).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Output != null)
                     hash = hash * 59 + this.Output.GetHashCode();
-                
+
                 if (this.Input != null)
                     hash = hash * 59 + this.Input.GetHashCode();
-                
+
                 return hash;
             }
         }

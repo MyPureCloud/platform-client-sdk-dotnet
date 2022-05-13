@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SystemMessageSystemMessage :  IEquatable<SystemMessageSystemMessage>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets SystemTopicType
         /// </summary>
@@ -55,22 +50,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "token_revoked")]
             TokenRevoked
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Reason
         /// </summary>
@@ -97,47 +76,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "user_tokens_revoked")]
             UserTokensRevoked
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets SystemTopicType
         /// </summary>
         [DataMember(Name="systemTopicType", EmitDefaultValue=false)]
         public SystemTopicTypeEnum? SystemTopicType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Reason
         /// </summary>
         [DataMember(Name="reason", EmitDefaultValue=false)]
         public ReasonEnum? Reason { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemMessageSystemMessage" /> class.
         /// </summary>
@@ -150,7 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Reason">Reason.</param>
         /// <param name="Message">Message.</param>
         /// <param name="Data">Data.</param>
-        public SystemMessageSystemMessage(string ChannelId = null, SystemTopicTypeEnum? SystemTopicType = null, string CorrelationId = null, string OrganizationId = null, string UserId = null, string OauthClientId = null, ReasonEnum? Reason = null, string Message = null, Dictionary<string, SystemMessageObject> Data = null)
+        public SystemMessageSystemMessage(string ChannelId = null, SystemTopicTypeEnum? SystemTopicType = null, string CorrelationId = null, string OrganizationId = null, string UserId = null, string OauthClientId = null, ReasonEnum? Reason = null, string Message = null, Dictionary<string, Object> Data = null)
         {
             this.ChannelId = ChannelId;
             this.SystemTopicType = SystemTopicType;
@@ -164,67 +112,67 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ChannelId
         /// </summary>
         [DataMember(Name="channelId", EmitDefaultValue=false)]
         public string ChannelId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets CorrelationId
         /// </summary>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OrganizationId
         /// </summary>
         [DataMember(Name="organizationId", EmitDefaultValue=false)]
         public string OrganizationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OauthClientId
         /// </summary>
         [DataMember(Name="oauthClientId", EmitDefaultValue=false)]
         public string OauthClientId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public Dictionary<string, SystemMessageObject> Data { get; set; }
-        
-        
+        public Dictionary<string, Object> Data { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -233,7 +181,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SystemMessageSystemMessage {\n");
-            
+
             sb.Append("  ChannelId: ").Append(ChannelId).Append("\n");
             sb.Append("  SystemTopicType: ").Append(SystemTopicType).Append("\n");
             sb.Append("  CorrelationId: ").Append(CorrelationId).Append("\n");
@@ -341,34 +289,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ChannelId != null)
                     hash = hash * 59 + this.ChannelId.GetHashCode();
-                
+
                 if (this.SystemTopicType != null)
                     hash = hash * 59 + this.SystemTopicType.GetHashCode();
-                
+
                 if (this.CorrelationId != null)
                     hash = hash * 59 + this.CorrelationId.GetHashCode();
-                
+
                 if (this.OrganizationId != null)
                     hash = hash * 59 + this.OrganizationId.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.OauthClientId != null)
                     hash = hash * 59 + this.OauthClientId.GetHashCode();
-                
+
                 if (this.Reason != null)
                     hash = hash * 59 + this.Reason.GetHashCode();
-                
+
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
-                
+
                 return hash;
             }
         }

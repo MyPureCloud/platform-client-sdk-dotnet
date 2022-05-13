@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AggregationResultEntry :  IEquatable<AggregationResultEntry>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregationResultEntry" /> class.
         /// </summary>
@@ -57,42 +34,42 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public long? Count { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// For termFrequency aggregations
         /// </summary>
         /// <value>For termFrequency aggregations</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// For numericRange aggregations
         /// </summary>
         /// <value>For numericRange aggregations</value>
         [DataMember(Name="gte", EmitDefaultValue=false)]
         public double? Gte { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// For numericRange aggregations
         /// </summary>
         /// <value>For numericRange aggregations</value>
         [DataMember(Name="lt", EmitDefaultValue=false)]
         public double? Lt { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -101,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AggregationResultEntry {\n");
-            
+
             sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Gte: ").Append(Gte).Append("\n");
@@ -179,19 +156,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.Gte != null)
                     hash = hash * 59 + this.Gte.GetHashCode();
-                
+
                 if (this.Lt != null)
                     hash = hash * 59 + this.Lt.GetHashCode();
-                
+
                 return hash;
             }
         }

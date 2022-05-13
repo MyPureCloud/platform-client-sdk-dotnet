@@ -18,42 +18,19 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserListScheduleRequestBody :  IEquatable<UserListScheduleRequestBody>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UserListScheduleRequestBody" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UserListScheduleRequestBody() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserListScheduleRequestBody" /> class.
         /// </summary>
         /// <param name="UserIds">The user ids for which to fetch schedules (required).</param>
         /// <param name="StartDate">Beginning of the range of schedules to fetch, in ISO-8601 format (required).</param>
         /// <param name="EndDate">End of the range of schedules to fetch, in ISO-8601 format (required).</param>
-        /// <param name="LoadFullWeeks">Whether to load the full week&#39;s schedule (for the requested users) of any week overlapping the start/end date query parameters, defaults to false.</param>
+        /// <param name="LoadFullWeeks">Whether to load the full week's schedule (for the requested users) of any week overlapping the start/end date query parameters, defaults to false.</param>
         public UserListScheduleRequestBody(List<string> UserIds = null, DateTime? StartDate = null, DateTime? EndDate = null, bool? LoadFullWeeks = null)
         {
             this.UserIds = UserIds;
@@ -63,43 +40,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The user ids for which to fetch schedules
         /// </summary>
         /// <value>The user ids for which to fetch schedules</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Beginning of the range of schedules to fetch, in ISO-8601 format
         /// </summary>
         /// <value>Beginning of the range of schedules to fetch, in ISO-8601 format</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// End of the range of schedules to fetch, in ISO-8601 format
         /// </summary>
         /// <value>End of the range of schedules to fetch, in ISO-8601 format</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Whether to load the full week&#39;s schedule (for the requested users) of any week overlapping the start/end date query parameters, defaults to false
+        /// Whether to load the full week's schedule (for the requested users) of any week overlapping the start/end date query parameters, defaults to false
         /// </summary>
-        /// <value>Whether to load the full week&#39;s schedule (for the requested users) of any week overlapping the start/end date query parameters, defaults to false</value>
+        /// <value>Whether to load the full week's schedule (for the requested users) of any week overlapping the start/end date query parameters, defaults to false</value>
         [DataMember(Name="loadFullWeeks", EmitDefaultValue=false)]
         public bool? LoadFullWeeks { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserListScheduleRequestBody {\n");
-            
+
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
@@ -186,19 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 if (this.LoadFullWeeks != null)
                     hash = hash * 59 + this.LoadFullWeeks.GetHashCode();
-                
+
                 return hash;
             }
         }

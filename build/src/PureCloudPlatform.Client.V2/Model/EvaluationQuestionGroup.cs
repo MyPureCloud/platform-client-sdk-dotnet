@@ -18,59 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EvaluationQuestionGroup :  IEquatable<EvaluationQuestionGroup>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationQuestionGroup" /> class.
         /// </summary>
@@ -99,87 +46,87 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DefaultAnswersToHighest
         /// </summary>
         [DataMember(Name="defaultAnswersToHighest", EmitDefaultValue=false)]
         public bool? DefaultAnswersToHighest { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DefaultAnswersToNA
         /// </summary>
         [DataMember(Name="defaultAnswersToNA", EmitDefaultValue=false)]
         public bool? DefaultAnswersToNA { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NaEnabled
         /// </summary>
         [DataMember(Name="naEnabled", EmitDefaultValue=false)]
         public bool? NaEnabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Weight
         /// </summary>
         [DataMember(Name="weight", EmitDefaultValue=false)]
         public float? Weight { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ManualWeight
         /// </summary>
         [DataMember(Name="manualWeight", EmitDefaultValue=false)]
         public bool? ManualWeight { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Questions
         /// </summary>
         [DataMember(Name="questions", EmitDefaultValue=false)]
         public List<EvaluationQuestion> Questions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets VisibilityCondition
         /// </summary>
         [DataMember(Name="visibilityCondition", EmitDefaultValue=false)]
         public VisibilityCondition VisibilityCondition { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,7 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EvaluationQuestionGroup {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -302,37 +249,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.DefaultAnswersToHighest != null)
                     hash = hash * 59 + this.DefaultAnswersToHighest.GetHashCode();
-                
+
                 if (this.DefaultAnswersToNA != null)
                     hash = hash * 59 + this.DefaultAnswersToNA.GetHashCode();
-                
+
                 if (this.NaEnabled != null)
                     hash = hash * 59 + this.NaEnabled.GetHashCode();
-                
+
                 if (this.Weight != null)
                     hash = hash * 59 + this.Weight.GetHashCode();
-                
+
                 if (this.ManualWeight != null)
                     hash = hash * 59 + this.ManualWeight.GetHashCode();
-                
+
                 if (this.Questions != null)
                     hash = hash * 59 + this.Questions.GetHashCode();
-                
+
                 if (this.VisibilityCondition != null)
                     hash = hash * 59 + this.VisibilityCondition.GetHashCode();
-                
+
                 return hash;
             }
         }

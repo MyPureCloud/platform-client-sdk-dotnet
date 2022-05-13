@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallableTime :  IEquatable<CallableTime>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableTime" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CallableTime() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableTime" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The time intervals for which it is acceptable to place outbound calls.
         /// </summary>
         /// <value>The time intervals for which it is acceptable to place outbound calls.</value>
         [DataMember(Name="timeSlots", EmitDefaultValue=false)]
         public List<CampaignTimeSlot> TimeSlots { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time zone for the time slots; for example, Africa/Abidjan
         /// </summary>
         /// <value>The time zone for the time slots; for example, Africa/Abidjan</value>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallableTime {\n");
-            
+
             sb.Append("  TimeSlots: ").Append(TimeSlots).Append("\n");
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeSlots != null)
                     hash = hash * 59 + this.TimeSlots.GetHashCode();
-                
+
                 if (this.TimeZoneId != null)
                     hash = hash * 59 + this.TimeZoneId.GetHashCode();
-                
+
                 return hash;
             }
         }

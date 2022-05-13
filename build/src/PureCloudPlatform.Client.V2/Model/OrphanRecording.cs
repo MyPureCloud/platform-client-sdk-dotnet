@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OrphanRecording :  IEquatable<OrphanRecording>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ProviderType
         /// </summary>
@@ -82,13 +68,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PURECONNECT")]
             Pureconnect
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
@@ -127,10 +106,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SCREEN")]
             Screen
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets FileState
         /// </summary>
@@ -181,16 +156,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "UPLOADING")]
             Uploading
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the orphaned recording's conversation.
         /// </summary>
@@ -236,68 +201,27 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EVALUATED")]
             Evaluated
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ProviderType
         /// </summary>
         [DataMember(Name="providerType", EmitDefaultValue=false)]
         public ProviderTypeEnum? ProviderType { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets FileState
         /// </summary>
         [DataMember(Name="fileState", EmitDefaultValue=false)]
         public FileStateEnum? FileState { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the orphaned recording's conversation.
         /// </summary>
         /// <value>The status of the orphaned recording's conversation.</value>
         [DataMember(Name="orphanStatus", EmitDefaultValue=false)]
         public OrphanStatusEnum? OrphanStatus { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OrphanRecording" /> class.
         /// </summary>
@@ -310,7 +234,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FileState">FileState.</param>
         /// <param name="ProviderEndpoint">ProviderEndpoint.</param>
         /// <param name="Recording">Recording.</param>
-        /// <param name="OrphanStatus">The status of the orphaned recording&#39;s conversation..</param>
+        /// <param name="OrphanStatus">The status of the orphaned recording's conversation..</param>
         /// <param name="SourceOrphaningId">An identifier used during recovery operations by the supplying hybrid platform to track back and determine which interaction this recording is associated with.</param>
         public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null, OrphanStatusEnum? OrphanStatus = null, string SourceOrphaningId = null)
         {
@@ -328,92 +252,92 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createdTime", EmitDefaultValue=false)]
         public DateTime? CreatedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="recoveredTime", EmitDefaultValue=false)]
         public DateTime? RecoveredTime { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets MediaSizeBytes
         /// </summary>
         [DataMember(Name="mediaSizeBytes", EmitDefaultValue=false)]
         public long? MediaSizeBytes { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Gets or Sets ProviderEndpoint
         /// </summary>
         [DataMember(Name="providerEndpoint", EmitDefaultValue=false)]
         public Endpoint ProviderEndpoint { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Recording
         /// </summary>
         [DataMember(Name="recording", EmitDefaultValue=false)]
         public Recording Recording { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// An identifier used during recovery operations by the supplying hybrid platform to track back and determine which interaction this recording is associated with
         /// </summary>
         /// <value>An identifier used during recovery operations by the supplying hybrid platform to track back and determine which interaction this recording is associated with</value>
         [DataMember(Name="sourceOrphaningId", EmitDefaultValue=false)]
         public string SourceOrphaningId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -422,7 +346,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OrphanRecording {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  CreatedTime: ").Append(CreatedTime).Append("\n");
@@ -554,46 +478,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.CreatedTime != null)
                     hash = hash * 59 + this.CreatedTime.GetHashCode();
-                
+
                 if (this.RecoveredTime != null)
                     hash = hash * 59 + this.RecoveredTime.GetHashCode();
-                
+
                 if (this.ProviderType != null)
                     hash = hash * 59 + this.ProviderType.GetHashCode();
-                
+
                 if (this.MediaSizeBytes != null)
                     hash = hash * 59 + this.MediaSizeBytes.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.FileState != null)
                     hash = hash * 59 + this.FileState.GetHashCode();
-                
+
                 if (this.ProviderEndpoint != null)
                     hash = hash * 59 + this.ProviderEndpoint.GetHashCode();
-                
+
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
-                
+
                 if (this.OrphanStatus != null)
                     hash = hash * 59 + this.OrphanStatus.GetHashCode();
-                
+
                 if (this.SourceOrphaningId != null)
                     hash = hash * 59 + this.SourceOrphaningId.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

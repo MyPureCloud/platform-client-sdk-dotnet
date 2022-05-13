@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactAddress :  IEquatable<ContactAddress>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactAddress" /> class.
         /// </summary>
@@ -71,55 +38,55 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Address1
         /// </summary>
         [DataMember(Name="address1", EmitDefaultValue=false)]
         public string Address1 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Address2
         /// </summary>
         [DataMember(Name="address2", EmitDefaultValue=false)]
         public string Address2 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets City
         /// </summary>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public string State { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PostalCode
         /// </summary>
         [DataMember(Name="postalCode", EmitDefaultValue=false)]
         public string PostalCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CountryCode
         /// </summary>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactAddress {\n");
-            
+
             sb.Append("  Address1: ").Append(Address1).Append("\n");
             sb.Append("  Address2: ").Append(Address2).Append("\n");
             sb.Append("  City: ").Append(City).Append("\n");
@@ -218,25 +185,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Address1 != null)
                     hash = hash * 59 + this.Address1.GetHashCode();
-                
+
                 if (this.Address2 != null)
                     hash = hash * 59 + this.Address2.GetHashCode();
-                
+
                 if (this.City != null)
                     hash = hash * 59 + this.City.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.PostalCode != null)
                     hash = hash * 59 + this.PostalCode.GetHashCode();
-                
+
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
-                
+
                 return hash;
             }
         }

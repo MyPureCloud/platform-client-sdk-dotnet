@@ -18,34 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateResponseAssetRequest :  IEquatable<CreateResponseAssetRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateResponseAssetRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateResponseAssetRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateResponseAssetRequest" /> class.
         /// </summary>
-        /// <param name="Name">Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\&quot;&gt;[~&lt;#| (required).</param>
+        /// <param name="Name">Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\">[~<#| (required).</param>
         /// <param name="DivisionId">Division to associate to this asset. Can only be used with this division..</param>
         /// <param name="ContentMd5">Content MD-5 of the file to upload.</param>
         public CreateResponseAssetRequest(string Name = null, string DivisionId = null, string ContentMd5 = null)
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\&quot;&gt;[~&lt;#|
+        /// Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\">[~<#|
         /// </summary>
-        /// <value>Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\&quot;&gt;[~&lt;#|</value>
+        /// <value>Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\">[~<#|</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Division to associate to this asset. Can only be used with this division.
         /// </summary>
         /// <value>Division to associate to this asset. Can only be used with this division.</value>
         [DataMember(Name="divisionId", EmitDefaultValue=false)]
         public string DivisionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Content MD-5 of the file to upload
         /// </summary>
         /// <value>Content MD-5 of the file to upload</value>
         [DataMember(Name="contentMd5", EmitDefaultValue=false)]
         public string ContentMd5 { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateResponseAssetRequest {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("  ContentMd5: ").Append(ContentMd5).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DivisionId != null)
                     hash = hash * 59 + this.DivisionId.GetHashCode();
-                
+
                 if (this.ContentMd5 != null)
                     hash = hash * 59 + this.ContentMd5.GetHashCode();
-                
+
                 return hash;
             }
         }

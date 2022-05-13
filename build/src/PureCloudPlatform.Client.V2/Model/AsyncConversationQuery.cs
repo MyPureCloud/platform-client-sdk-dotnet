@@ -18,23 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AsyncConversationQuery :  IEquatable<AsyncConversationQuery>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
@@ -62,10 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "desc")]
             Desc
         }
-        
-        
-        
-        
         /// <summary>
         /// Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart
         /// </summary>
@@ -105,60 +84,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "segmentEnd")]
             Segmentend
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
         /// <value>Sort the result set in ascending/descending order. Default is ascending</value>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public OrderEnum? Order { get; set; }
-        
-        
-        
         /// <summary>
         /// Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart
         /// </summary>
         /// <value>Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart</value>
         [DataMember(Name="orderBy", EmitDefaultValue=false)]
         public OrderByEnum? OrderBy { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AsyncConversationQuery" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AsyncConversationQuery() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AsyncConversationQuery" /> class.
         /// </summary>
@@ -187,83 +130,83 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Filters that target conversation-level data
         /// </summary>
         /// <value>Filters that target conversation-level data</value>
         [DataMember(Name="conversationFilters", EmitDefaultValue=false)]
         public List<ConversationDetailQueryFilter> ConversationFilters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filters that target individual segments within a conversation
         /// </summary>
         /// <value>Filters that target individual segments within a conversation</value>
         [DataMember(Name="segmentFilters", EmitDefaultValue=false)]
         public List<SegmentDetailQueryFilter> SegmentFilters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filters that target evaluations
         /// </summary>
         /// <value>Filters that target evaluations</value>
         [DataMember(Name="evaluationFilters", EmitDefaultValue=false)]
         public List<EvaluationDetailQueryFilter> EvaluationFilters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filters that target surveys
         /// </summary>
         /// <value>Filters that target surveys</value>
         [DataMember(Name="surveyFilters", EmitDefaultValue=false)]
         public List<SurveyDetailQueryFilter> SurveyFilters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filters that target resolutions
         /// </summary>
         /// <value>Filters that target resolutions</value>
         [DataMember(Name="resolutionFilters", EmitDefaultValue=false)]
         public List<ResolutionDetailQueryFilter> ResolutionFilters { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Specifies the date and time range of data being queried. Results will include all conversations that had activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
         /// <value>Specifies the date and time range of data being queried. Results will include all conversations that had activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Specify number of results to be returned
         /// </summary>
         /// <value>Specify number of results to be returned</value>
         [DataMember(Name="limit", EmitDefaultValue=false)]
         public int? Limit { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Add a filter to only include conversations that started after the beginning of the interval start date (UTC)
         /// </summary>
         /// <value>Add a filter to only include conversations that started after the beginning of the interval start date (UTC)</value>
         [DataMember(Name="startOfDayIntervalMatching", EmitDefaultValue=false)]
         public bool? StartOfDayIntervalMatching { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -272,7 +215,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AsyncConversationQuery {\n");
-            
+
             sb.Append("  ConversationFilters: ").Append(ConversationFilters).Append("\n");
             sb.Append("  SegmentFilters: ").Append(SegmentFilters).Append("\n");
             sb.Append("  EvaluationFilters: ").Append(EvaluationFilters).Append("\n");
@@ -386,37 +329,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ConversationFilters != null)
                     hash = hash * 59 + this.ConversationFilters.GetHashCode();
-                
+
                 if (this.SegmentFilters != null)
                     hash = hash * 59 + this.SegmentFilters.GetHashCode();
-                
+
                 if (this.EvaluationFilters != null)
                     hash = hash * 59 + this.EvaluationFilters.GetHashCode();
-                
+
                 if (this.SurveyFilters != null)
                     hash = hash * 59 + this.SurveyFilters.GetHashCode();
-                
+
                 if (this.ResolutionFilters != null)
                     hash = hash * 59 + this.ResolutionFilters.GetHashCode();
-                
+
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
-                
+
                 if (this.OrderBy != null)
                     hash = hash * 59 + this.OrderBy.GetHashCode();
-                
+
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
+
                 if (this.Limit != null)
                     hash = hash * 59 + this.Limit.GetHashCode();
-                
+
                 if (this.StartOfDayIntervalMatching != null)
                     hash = hash * 59 + this.StartOfDayIntervalMatching.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DocumentArticle :  IEquatable<DocumentArticle>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentArticle" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DocumentArticle() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentArticle" /> class.
         /// </summary>
@@ -54,34 +36,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The title of the Article.
         /// </summary>
         /// <value>The title of the Article.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The content of the Article.
         /// </summary>
         /// <value>The content of the Article.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public ArticleContent Content { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of Alternative questions related to the title which helps in improving the likelihood of a match to user query.
         /// </summary>
         /// <value>List of Alternative questions related to the title which helps in improving the likelihood of a match to user query.</value>
         [DataMember(Name="alternatives", EmitDefaultValue=false)]
         public List<string> Alternatives { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DocumentArticle {\n");
-            
+
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  Alternatives: ").Append(Alternatives).Append("\n");
@@ -162,16 +144,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
-                
+
                 if (this.Alternatives != null)
                     hash = hash * 59 + this.Alternatives.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KnowledgeTraining :  IEquatable<KnowledgeTraining>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Training status.
         /// </summary>
@@ -68,19 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Failed")]
             Failed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// State of the Trained Documents, which can be one of these Draft, Active, Discarded, Archived.
         /// </summary>
@@ -120,51 +96,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Archived")]
             Archived
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Training status.
         /// </summary>
         /// <value>Training status.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        public StatusEnum? Status { get; private set; }
         /// <summary>
         /// State of the Trained Documents, which can be one of these Draft, Active, Discarded, Archived.
         /// </summary>
         /// <value>State of the Trained Documents, which can be one of these Draft, Active, Discarded, Archived.</value>
         [DataMember(Name="knowledgeDocumentsState", EmitDefaultValue=false)]
-        public KnowledgeDocumentsStateEnum? KnowledgeDocumentsState { get; set; }
-        
-        
-        
-        
-        
-        
-    
+        public KnowledgeDocumentsStateEnum? KnowledgeDocumentsState { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeTraining" /> class.
         /// </summary>
@@ -173,83 +116,83 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Trigger date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Trigger date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateTriggered", EmitDefaultValue=false)]
         public DateTime? DateTriggered { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Training completed date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Training completed date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
         public DateTime? DateCompleted { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Language of the documents that are trained.
         /// </summary>
         /// <value>Language of the documents that are trained.</value>
         [DataMember(Name="languageCode", EmitDefaultValue=false)]
         public string LanguageCode { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Knowledge Base that the training belongs to.
         /// </summary>
         /// <value>Knowledge Base that the training belongs to.</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
         public KnowledgeBase KnowledgeBase { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Any error message during the Training or Promote action.
         /// </summary>
         /// <value>Any error message during the Training or Promote action.</value>
         [DataMember(Name="errorMessage", EmitDefaultValue=false)]
         public string ErrorMessage { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Trained Documents Promoted date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Trained Documents Promoted date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="datePromoted", EmitDefaultValue=false)]
         public DateTime? DatePromoted { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -258,7 +201,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class KnowledgeTraining {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DateTriggered: ").Append(DateTriggered).Append("\n");
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
@@ -372,37 +315,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.DateTriggered != null)
                     hash = hash * 59 + this.DateTriggered.GetHashCode();
-                
+
                 if (this.DateCompleted != null)
                     hash = hash * 59 + this.DateCompleted.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.LanguageCode != null)
                     hash = hash * 59 + this.LanguageCode.GetHashCode();
-                
+
                 if (this.KnowledgeBase != null)
                     hash = hash * 59 + this.KnowledgeBase.GetHashCode();
-                
+
                 if (this.ErrorMessage != null)
                     hash = hash * 59 + this.ErrorMessage.GetHashCode();
-                
+
                 if (this.KnowledgeDocumentsState != null)
                     hash = hash * 59 + this.KnowledgeDocumentsState.GetHashCode();
-                
+
                 if (this.DatePromoted != null)
                     hash = hash * 59 + this.DatePromoted.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

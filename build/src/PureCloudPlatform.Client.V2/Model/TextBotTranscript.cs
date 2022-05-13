@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotTranscript :  IEquatable<TextBotTranscript>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotTranscript" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotTranscript() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotTranscript" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The text of the transcript item.
         /// </summary>
         /// <value>The text of the transcript item.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The confidence factor, expressed as a decimal between 0.0 and 1.0, of the transcript item.
         /// </summary>
         /// <value>The confidence factor, expressed as a decimal between 0.0 and 1.0, of the transcript item.</value>
         [DataMember(Name="confidence", EmitDefaultValue=false)]
         public float? Confidence { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotTranscript {\n");
-            
+
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Confidence: ").Append(Confidence).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Confidence != null)
                     hash = hash * 59 + this.Confidence.GetHashCode();
-                
+
                 return hash;
             }
         }

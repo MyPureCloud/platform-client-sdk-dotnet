@@ -18,30 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActivityCodeContainer :  IEquatable<ActivityCodeContainer>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityCodeContainer" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ActivityCodeContainer() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityCodeContainer" /> class.
         /// </summary>
         /// <param name="ActivityCodes">Map of activity code id to activity code.</param>
-        /// <param name="Metadata">Version metadata for the associated management unit&#39;s list of activity codes (required).</param>
+        /// <param name="Metadata">Version metadata for the associated management unit's list of activity codes (required).</param>
         public ActivityCodeContainer(Dictionary<string, ActivityCode> ActivityCodes = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.ActivityCodes = ActivityCodes;
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Map of activity code id to activity code
         /// </summary>
         /// <value>Map of activity code id to activity code</value>
         [DataMember(Name="activityCodes", EmitDefaultValue=false)]
         public Dictionary<string, ActivityCode> ActivityCodes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Version metadata for the associated management unit&#39;s list of activity codes
+        /// Version metadata for the associated management unit's list of activity codes
         /// </summary>
-        /// <value>Version metadata for the associated management unit&#39;s list of activity codes</value>
+        /// <value>Version metadata for the associated management unit's list of activity codes</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActivityCodeContainer {\n");
-            
+
             sb.Append("  ActivityCodes: ").Append(ActivityCodes).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ActivityCodes != null)
                     hash = hash * 59 + this.ActivityCodes.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

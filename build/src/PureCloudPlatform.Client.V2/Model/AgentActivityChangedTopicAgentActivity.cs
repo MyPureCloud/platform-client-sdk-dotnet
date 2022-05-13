@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AgentActivityChangedTopicAgentActivity :  IEquatable<AgentActivityChangedTopicAgentActivity>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentActivityChangedTopicAgentActivity" /> class.
         /// </summary>
@@ -71,55 +38,55 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RoutingStatus
         /// </summary>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public AgentActivityChangedTopicRoutingStatus RoutingStatus { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Presence
         /// </summary>
         [DataMember(Name="presence", EmitDefaultValue=false)]
         public AgentActivityChangedTopicPresence Presence { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OutOfOffice
         /// </summary>
         [DataMember(Name="outOfOffice", EmitDefaultValue=false)]
         public AgentActivityChangedTopicOutOfOffice OutOfOffice { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActiveQueueIds
         /// </summary>
         [DataMember(Name="activeQueueIds", EmitDefaultValue=false)]
         public List<string> ActiveQueueIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DateActiveQueuesChanged
         /// </summary>
         [DataMember(Name="dateActiveQueuesChanged", EmitDefaultValue=false)]
         public DateTime? DateActiveQueuesChanged { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AgentActivityChangedTopicAgentActivity {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
             sb.Append("  Presence: ").Append(Presence).Append("\n");
@@ -218,25 +185,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
-                
+
                 if (this.Presence != null)
                     hash = hash * 59 + this.Presence.GetHashCode();
-                
+
                 if (this.OutOfOffice != null)
                     hash = hash * 59 + this.OutOfOffice.GetHashCode();
-                
+
                 if (this.ActiveQueueIds != null)
                     hash = hash * 59 + this.ActiveQueueIds.GetHashCode();
-                
+
                 if (this.DateActiveQueuesChanged != null)
                     hash = hash * 59 + this.DateActiveQueuesChanged.GetHashCode();
-                
+
                 return hash;
             }
         }

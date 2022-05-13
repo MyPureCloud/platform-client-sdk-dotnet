@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NluUtterance :  IEquatable<NluUtterance>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NluUtterance" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected NluUtterance() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NluUtterance" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of segments that that constitute this utterance for the given intent.
         /// </summary>
         /// <value>The list of segments that that constitute this utterance for the given intent.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<NluUtteranceSegment> Segments { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NluUtterance {\n");
-            
+
             sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
-                
+
                 return hash;
             }
         }

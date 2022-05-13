@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuScheduleTopicBuScheduleGenerationResultSummary :  IEquatable<WfmBuScheduleTopicBuScheduleGenerationResultSummary>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuScheduleTopicBuScheduleGenerationResultSummary" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Failed
         /// </summary>
         [DataMember(Name="failed", EmitDefaultValue=false)]
         public bool? Failed { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RunId
         /// </summary>
         [DataMember(Name="runId", EmitDefaultValue=false)]
         public string RunId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessageCount
         /// </summary>
         [DataMember(Name="messageCount", EmitDefaultValue=false)]
         public int? MessageCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessageSeverityCounts
         /// </summary>
         [DataMember(Name="messageSeverityCounts", EmitDefaultValue=false)]
         public List<WfmBuScheduleTopicSchedulerMessageSeverityCount> MessageSeverityCounts { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuScheduleTopicBuScheduleGenerationResultSummary {\n");
-            
+
             sb.Append("  Failed: ").Append(Failed).Append("\n");
             sb.Append("  RunId: ").Append(RunId).Append("\n");
             sb.Append("  MessageCount: ").Append(MessageCount).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Failed != null)
                     hash = hash * 59 + this.Failed.GetHashCode();
-                
+
                 if (this.RunId != null)
                     hash = hash * 59 + this.RunId.GetHashCode();
-                
+
                 if (this.MessageCount != null)
                     hash = hash * 59 + this.MessageCount.GetHashCode();
-                
+
                 if (this.MessageSeverityCounts != null)
                     hash = hash * 59 + this.MessageSeverityCounts.GetHashCode();
-                
+
                 return hash;
             }
         }

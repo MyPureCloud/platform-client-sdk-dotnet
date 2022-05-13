@@ -18,84 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Script :  IEquatable<Script>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Script" /> class.
         /// </summary>
@@ -130,134 +52,134 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The division to which this entity belongs.
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public Division Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets VersionId
         /// </summary>
         [DataMember(Name="versionId", EmitDefaultValue=false)]
         public string VersionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="publishedDate", EmitDefaultValue=false)]
         public DateTime? PublishedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="versionDate", EmitDefaultValue=false)]
         public DateTime? VersionDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets StartPageId
         /// </summary>
         [DataMember(Name="startPageId", EmitDefaultValue=false)]
         public string StartPageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets StartPageName
         /// </summary>
         [DataMember(Name="startPageName", EmitDefaultValue=false)]
         public string StartPageName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Features
         /// </summary>
         [DataMember(Name="features", EmitDefaultValue=false)]
         public Object Features { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Variables
         /// </summary>
         [DataMember(Name="variables", EmitDefaultValue=false)]
         public Object Variables { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CustomActions
         /// </summary>
         [DataMember(Name="customActions", EmitDefaultValue=false)]
         public Object CustomActions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Pages
         /// </summary>
         [DataMember(Name="pages", EmitDefaultValue=false)]
         public List<Page> Pages { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -266,7 +188,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Script {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
@@ -410,52 +332,51 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.VersionId != null)
                     hash = hash * 59 + this.VersionId.GetHashCode();
-                
+
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
+
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
+
                 if (this.PublishedDate != null)
                     hash = hash * 59 + this.PublishedDate.GetHashCode();
-                
+
                 if (this.VersionDate != null)
                     hash = hash * 59 + this.VersionDate.GetHashCode();
-                
+
                 if (this.StartPageId != null)
                     hash = hash * 59 + this.StartPageId.GetHashCode();
-                
+
                 if (this.StartPageName != null)
                     hash = hash * 59 + this.StartPageName.GetHashCode();
-                
+
                 if (this.Features != null)
                     hash = hash * 59 + this.Features.GetHashCode();
-                
+
                 if (this.Variables != null)
                     hash = hash * 59 + this.Variables.GetHashCode();
-                
+
                 if (this.CustomActions != null)
                     hash = hash * 59 + this.CustomActions.GetHashCode();
-                
+
                 if (this.Pages != null)
                     hash = hash * 59 + this.Pages.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

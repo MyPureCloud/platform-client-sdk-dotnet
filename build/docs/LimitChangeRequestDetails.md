@@ -9,7 +9,7 @@ title: LimitChangeRequestDetails
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Key** | **string** | Limit key to be overridden (see https://developer.mypurecloud.com/api/rest/v2/organization/limits.html#available_limits) | |
-| **_Namespace** | **string** | Namespace the key belongs to (see https://developer.mypurecloud.com/api/rest/v2/organization/limits.html#available_limits) | |
+| **Namespace** | **string** | Namespace the key belongs to (see https://developer.mypurecloud.com/api/rest/v2/organization/limits.html#available_limits) | |
 | **RequestedValue** | **double?** | Requested limit value for a given key | |
 | **Description** | **string** | Description of the need for the limit change request | |
 | **SupportCaseUrl** | **string** | The support case url created by Care | |

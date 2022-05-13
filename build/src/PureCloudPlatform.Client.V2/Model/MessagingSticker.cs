@@ -18,23 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MessagingSticker :  IEquatable<MessagingSticker>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of the messenger provider.
         /// </summary>
@@ -98,10 +81,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "open")]
             Open
         }
-        
-        
-        
-        
         /// <summary>
         /// The type of the sticker.
         /// </summary>
@@ -135,60 +114,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "paid")]
             Paid
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of the messenger provider.
         /// </summary>
         /// <value>The type of the messenger provider.</value>
         [DataMember(Name="messengerType", EmitDefaultValue=false)]
         public MessengerTypeEnum? MessengerType { get; set; }
-        
-        
-        
         /// <summary>
         /// The type of the sticker.
         /// </summary>
         /// <value>The type of the sticker.</value>
         [DataMember(Name="stickerType", EmitDefaultValue=false)]
         public StickerTypeEnum? StickerType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagingSticker" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected MessagingSticker() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagingSticker" /> class.
         /// </summary>
@@ -213,81 +156,81 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The sticker Id of the sticker, assigned by the sticker provider.
         /// </summary>
         /// <value>The sticker Id of the sticker, assigned by the sticker provider.</value>
         [DataMember(Name="providerStickerId", EmitDefaultValue=false)]
         public int? ProviderStickerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The package Id of the sticker, assigned by the sticker provider.
         /// </summary>
         /// <value>The package Id of the sticker, assigned by the sticker provider.</value>
         [DataMember(Name="providerPackageId", EmitDefaultValue=false)]
         public int? ProviderPackageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The package name of the sticker, assigned by the sticker provider.
         /// </summary>
         /// <value>The package name of the sticker, assigned by the sticker provider.</value>
         [DataMember(Name="packageName", EmitDefaultValue=false)]
         public string PackageName { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// The version of the sticker, assigned by the provider.
         /// </summary>
         /// <value>The version of the sticker, assigned by the provider.</value>
         [DataMember(Name="providerVersion", EmitDefaultValue=false)]
         public long? ProviderVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UriLocation
         /// </summary>
         [DataMember(Name="uriLocation", EmitDefaultValue=false)]
         public string UriLocation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -296,7 +239,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MessagingSticker {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ProviderStickerId: ").Append(ProviderStickerId).Append("\n");
@@ -410,37 +353,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ProviderStickerId != null)
                     hash = hash * 59 + this.ProviderStickerId.GetHashCode();
-                
+
                 if (this.ProviderPackageId != null)
                     hash = hash * 59 + this.ProviderPackageId.GetHashCode();
-                
+
                 if (this.PackageName != null)
                     hash = hash * 59 + this.PackageName.GetHashCode();
-                
+
                 if (this.MessengerType != null)
                     hash = hash * 59 + this.MessengerType.GetHashCode();
-                
+
                 if (this.StickerType != null)
                     hash = hash * 59 + this.StickerType.GetHashCode();
-                
+
                 if (this.ProviderVersion != null)
                     hash = hash * 59 + this.ProviderVersion.GetHashCode();
-                
+
                 if (this.UriLocation != null)
                     hash = hash * 59 + this.UriLocation.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

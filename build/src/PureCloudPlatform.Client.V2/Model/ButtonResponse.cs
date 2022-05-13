@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ButtonResponse :  IEquatable<ButtonResponse>
     {
-        
-        
         /// <summary>
         /// Button response type that captures Button and QuickReply type responses
         /// </summary>
@@ -47,16 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "QuickReply")]
             Quickreply
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Button response message type that captures QuickReply , Cards and Carousel .This is used  as label for Card selection
         /// </summary>
@@ -90,33 +78,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Carousel")]
             Carousel
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// Button response type that captures Button and QuickReply type responses
         /// </summary>
         /// <value>Button response type that captures Button and QuickReply type responses</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Button response message type that captures QuickReply , Cards and Carousel .This is used  as label for Card selection
         /// </summary>
         /// <value>Button response message type that captures QuickReply , Cards and Carousel .This is used  as label for Card selection</value>
         [DataMember(Name="messageType", EmitDefaultValue=false)]
         public MessageTypeEnum? MessageType { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ButtonResponse" /> class.
         /// </summary>
@@ -133,29 +106,29 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Text to show inside the Button reply. This is also used as the response text after clicking on the Button.
         /// </summary>
         /// <value>Text to show inside the Button reply. This is also used as the response text after clicking on the Button.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Content of the textback payload after clicking a button
         /// </summary>
         /// <value>Content of the textback payload after clicking a button</value>
         [DataMember(Name="payload", EmitDefaultValue=false)]
         public string Payload { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -164,7 +137,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ButtonResponse {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Payload: ").Append(Payload).Append("\n");
@@ -242,19 +215,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Payload != null)
                     hash = hash * 59 + this.Payload.GetHashCode();
-                
+
                 if (this.MessageType != null)
                     hash = hash * 59 + this.MessageType.GetHashCode();
-                
+
                 return hash;
             }
         }

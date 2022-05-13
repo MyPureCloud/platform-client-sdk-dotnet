@@ -8,6 +8,7 @@ title: WfmBuIntradayDataUpdateTopicBuScheduleReference
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
+| **WeekDate** | **DateTime?** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactColumnTimeZone :  IEquatable<ContactColumnTimeZone>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Column Type will be either PHONE or ZIP
         /// </summary>
@@ -50,22 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ZIP")]
             Zip
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Column Type will be either PHONE or ZIP
         /// </summary>
         /// <value>Column Type will be either PHONE or ZIP</value>
         [DataMember(Name="columnType", EmitDefaultValue=false)]
-        public ColumnTypeEnum? ColumnType { get; set; }
-        
-        
-    
+        public ColumnTypeEnum? ColumnType { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactColumnTimeZone" /> class.
         /// </summary>
@@ -76,18 +61,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Time zone that the column matched to. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
         /// </summary>
         /// <value>Time zone that the column matched to. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactColumnTimeZone {\n");
-            
+
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  ColumnType: ").Append(ColumnType).Append("\n");
             sb.Append("}\n");
@@ -162,13 +147,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
+
                 if (this.ColumnType != null)
                     hash = hash * 59 + this.ColumnType.GetHashCode();
-                
+
                 return hash;
             }
         }

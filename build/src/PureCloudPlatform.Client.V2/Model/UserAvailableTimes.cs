@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserAvailableTimes :  IEquatable<UserAvailableTimes>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAvailableTimes" /> class.
         /// </summary>
@@ -39,25 +26,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// User reference
         /// </summary>
         /// <value>User reference</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UserReference User { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Periods of availability to schedule coaching appointment for an user
         /// </summary>
         /// <value>Periods of availability to schedule coaching appointment for an user</value>
         [DataMember(Name="availableTimes", EmitDefaultValue=false)]
         public List<AvailableTime> AvailableTimes { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserAvailableTimes {\n");
-            
+
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  AvailableTimes: ").Append(AvailableTimes).Append("\n");
             sb.Append("}\n");
@@ -132,13 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.AvailableTimes != null)
                     hash = hash * 59 + this.AvailableTimes.GetHashCode();
-                
+
                 return hash;
             }
         }

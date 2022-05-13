@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkInstanceTopicTrunk :  IEquatable<TrunkInstanceTopicTrunk>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkInstanceTopicTrunk" /> class.
         /// </summary>
@@ -64,47 +36,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConnectedStatus
         /// </summary>
         [DataMember(Name="connectedStatus", EmitDefaultValue=false)]
         public TrunkInstanceTopicTrunkConnectedStatus ConnectedStatus { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OptionsStatus
         /// </summary>
         [DataMember(Name="optionsStatus", EmitDefaultValue=false)]
         public List<TrunkInstanceTopicTrunkMetricsOptions> OptionsStatus { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RegistersStatus
         /// </summary>
         [DataMember(Name="registersStatus", EmitDefaultValue=false)]
         public List<TrunkInstanceTopicTrunkMetricsRegisters> RegistersStatus { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IpStatus
         /// </summary>
         [DataMember(Name="ipStatus", EmitDefaultValue=false)]
         public TrunkInstanceTopicTrunkMetricsNetworkTypeIp IpStatus { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkInstanceTopicTrunk {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ConnectedStatus: ").Append(ConnectedStatus).Append("\n");
             sb.Append("  OptionsStatus: ").Append(OptionsStatus).Append("\n");
@@ -197,22 +169,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.ConnectedStatus != null)
                     hash = hash * 59 + this.ConnectedStatus.GetHashCode();
-                
+
                 if (this.OptionsStatus != null)
                     hash = hash * 59 + this.OptionsStatus.GetHashCode();
-                
+
                 if (this.RegistersStatus != null)
                     hash = hash * 59 + this.RegistersStatus.GetHashCode();
-                
+
                 if (this.IpStatus != null)
                     hash = hash * 59 + this.IpStatus.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BotList :  IEquatable<BotList>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BotList" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BotList() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BotList" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A list of botConnector Bots. Max 50
         /// </summary>
         /// <value>A list of botConnector Bots. Max 50</value>
         [DataMember(Name="chatBots", EmitDefaultValue=false)]
         public List<BotConnectorBot> ChatBots { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BotList {\n");
-            
+
             sb.Append("  ChatBots: ").Append(ChatBots).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ChatBots != null)
                     hash = hash * 59 + this.ChatBots.GetHashCode();
-                
+
                 return hash;
             }
         }

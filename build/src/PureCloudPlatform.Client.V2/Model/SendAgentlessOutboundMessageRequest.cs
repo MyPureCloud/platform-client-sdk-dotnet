@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SendAgentlessOutboundMessageRequest :  IEquatable<SendAgentlessOutboundMessageRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The recipient messaging address messenger type.
         /// </summary>
@@ -59,45 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "open")]
             Open
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The recipient messaging address messenger type.
         /// </summary>
         /// <value>The recipient messaging address messenger type.</value>
         [DataMember(Name="toAddressMessengerType", EmitDefaultValue=false)]
         public ToAddressMessengerTypeEnum? ToAddressMessengerType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SendAgentlessOutboundMessageRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SendAgentlessOutboundMessageRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SendAgentlessOutboundMessageRequest" /> class.
         /// </summary>
@@ -106,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ToAddressMessengerType">The recipient messaging address messenger type. (required).</param>
         /// <param name="TextBody">The text of the message to send. This field is required in the case of SMS messenger type. Maximum character counts are: SMS - 765 characters, other channels - 2000 characters..</param>
         /// <param name="MessagingTemplate">The messaging template to use in the case of WhatsApp messenger type. This field is required when using WhatsApp messenger type.</param>
-        /// <param name="UseExistingActiveConversation">Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false.</param>
+        /// <param name="UseExistingActiveConversation">Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false.</param>
         public SendAgentlessOutboundMessageRequest(string FromAddress = null, string ToAddress = null, ToAddressMessengerTypeEnum? ToAddressMessengerType = null, string TextBody = null, MessagingTemplateRequest MessagingTemplate = null, bool? UseExistingActiveConversation = null)
         {
             this.FromAddress = FromAddress;
@@ -118,54 +83,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned SMS phone number. For a WhatsApp messenger type use the provisioned WhatsApp integration’s ID
         /// </summary>
         /// <value>The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned SMS phone number. For a WhatsApp messenger type use the provisioned WhatsApp integration’s ID</value>
         [DataMember(Name="fromAddress", EmitDefaultValue=false)]
         public string FromAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234.
         /// </summary>
         /// <value>The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234.</value>
         [DataMember(Name="toAddress", EmitDefaultValue=false)]
         public string ToAddress { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The text of the message to send. This field is required in the case of SMS messenger type. Maximum character counts are: SMS - 765 characters, other channels - 2000 characters.
         /// </summary>
         /// <value>The text of the message to send. This field is required in the case of SMS messenger type. Maximum character counts are: SMS - 765 characters, other channels - 2000 characters.</value>
         [DataMember(Name="textBody", EmitDefaultValue=false)]
         public string TextBody { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The messaging template to use in the case of WhatsApp messenger type. This field is required when using WhatsApp messenger type
         /// </summary>
         /// <value>The messaging template to use in the case of WhatsApp messenger type. This field is required when using WhatsApp messenger type</value>
         [DataMember(Name="messagingTemplate", EmitDefaultValue=false)]
         public MessagingTemplateRequest MessagingTemplate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false
+        /// Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false
         /// </summary>
-        /// <value>Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false</value>
+        /// <value>Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false</value>
         [DataMember(Name="useExistingActiveConversation", EmitDefaultValue=false)]
         public bool? UseExistingActiveConversation { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -174,7 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SendAgentlessOutboundMessageRequest {\n");
-            
+
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
             sb.Append("  ToAddressMessengerType: ").Append(ToAddressMessengerType).Append("\n");
@@ -264,25 +229,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FromAddress != null)
                     hash = hash * 59 + this.FromAddress.GetHashCode();
-                
+
                 if (this.ToAddress != null)
                     hash = hash * 59 + this.ToAddress.GetHashCode();
-                
+
                 if (this.ToAddressMessengerType != null)
                     hash = hash * 59 + this.ToAddressMessengerType.GetHashCode();
-                
+
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
-                
+
                 if (this.MessagingTemplate != null)
                     hash = hash * 59 + this.MessagingTemplate.GetHashCode();
-                
+
                 if (this.UseExistingActiveConversation != null)
                     hash = hash * 59 + this.UseExistingActiveConversation.GetHashCode();
-                
+
                 return hash;
             }
         }

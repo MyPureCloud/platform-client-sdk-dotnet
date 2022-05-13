@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuIntradayDataUpdateTopicBuIntradayDataGroup :  IEquatable<WfmBuIntradayDataUpdateTopicBuIntradayDataGroup>
     {
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
@@ -64,49 +62,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Message")]
             Message
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuIntradayDataUpdateTopicBuIntradayDataGroup" /> class.
         /// </summary>
@@ -129,57 +89,57 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets ForecastDataSummary
         /// </summary>
         [DataMember(Name="forecastDataSummary", EmitDefaultValue=false)]
         public WfmBuIntradayDataUpdateTopicBuIntradayForecastData ForecastDataSummary { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ForecastDataPerInterval
         /// </summary>
         [DataMember(Name="forecastDataPerInterval", EmitDefaultValue=false)]
         public List<WfmBuIntradayDataUpdateTopicBuIntradayForecastData> ForecastDataPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ScheduleDataSummary
         /// </summary>
         [DataMember(Name="scheduleDataSummary", EmitDefaultValue=false)]
         public WfmBuIntradayDataUpdateTopicBuIntradayScheduleData ScheduleDataSummary { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ScheduleDataPerInterval
         /// </summary>
         [DataMember(Name="scheduleDataPerInterval", EmitDefaultValue=false)]
         public List<WfmBuIntradayDataUpdateTopicBuIntradayScheduleData> ScheduleDataPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PerformancePredictionDataSummary
         /// </summary>
         [DataMember(Name="performancePredictionDataSummary", EmitDefaultValue=false)]
         public WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData PerformancePredictionDataSummary { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PerformancePredictionDataPerInterval
         /// </summary>
         [DataMember(Name="performancePredictionDataPerInterval", EmitDefaultValue=false)]
         public List<WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData> PerformancePredictionDataPerInterval { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,7 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuIntradayDataUpdateTopicBuIntradayDataGroup {\n");
-            
+
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  ForecastDataSummary: ").Append(ForecastDataSummary).Append("\n");
             sb.Append("  ForecastDataPerInterval: ").Append(ForecastDataPerInterval).Append("\n");
@@ -284,28 +244,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.ForecastDataSummary != null)
                     hash = hash * 59 + this.ForecastDataSummary.GetHashCode();
-                
+
                 if (this.ForecastDataPerInterval != null)
                     hash = hash * 59 + this.ForecastDataPerInterval.GetHashCode();
-                
+
                 if (this.ScheduleDataSummary != null)
                     hash = hash * 59 + this.ScheduleDataSummary.GetHashCode();
-                
+
                 if (this.ScheduleDataPerInterval != null)
                     hash = hash * 59 + this.ScheduleDataPerInterval.GetHashCode();
-                
+
                 if (this.PerformancePredictionDataSummary != null)
                     hash = hash * 59 + this.PerformancePredictionDataSummary.GetHashCode();
-                
+
                 if (this.PerformancePredictionDataPerInterval != null)
                     hash = hash * 59 + this.PerformancePredictionDataPerInterval.GetHashCode();
-                
+
                 return hash;
             }
         }

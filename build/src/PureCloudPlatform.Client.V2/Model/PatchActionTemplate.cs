@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchActionTemplate :  IEquatable<PatchActionTemplate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Media type of action described by the action template.
         /// </summary>
@@ -77,10 +69,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "openAction")]
             Openaction
         }
-        
-        
-        
-        
         /// <summary>
         /// Whether the action template is currently active, inactive or deleted.
         /// </summary>
@@ -114,49 +102,29 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Deleted")]
             Deleted
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Media type of action described by the action template.
         /// </summary>
         /// <value>Media type of action described by the action template.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
         /// <summary>
         /// Whether the action template is currently active, inactive or deleted.
         /// </summary>
         /// <value>Whether the action template is currently active, inactive or deleted.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchActionTemplate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PatchActionTemplate() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchActionTemplate" /> class.
         /// </summary>
         /// <param name="Name">Name of the action template. (required).</param>
-        /// <param name="Description">Description of the action template&#39;s functionality..</param>
+        /// <param name="Description">Description of the action template's functionality..</param>
         /// <param name="MediaType">Media type of action described by the action template..</param>
         /// <param name="State">Whether the action template is currently active, inactive or deleted..</param>
         /// <param name="ContentOffer">Properties used to configure an action of type content offer.</param>
@@ -170,38 +138,38 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Name of the action template.
         /// </summary>
         /// <value>Name of the action template.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Description of the action template&#39;s functionality.
+        /// Description of the action template's functionality.
         /// </summary>
-        /// <value>Description of the action template&#39;s functionality.</value>
+        /// <value>Description of the action template's functionality.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Properties used to configure an action of type content offer
         /// </summary>
         /// <value>Properties used to configure an action of type content offer</value>
         [DataMember(Name="contentOffer", EmitDefaultValue=false)]
         public PatchContentOffer ContentOffer { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -210,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PatchActionTemplate {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
@@ -294,22 +262,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.ContentOffer != null)
                     hash = hash * 59 + this.ContentOffer.GetHashCode();
-                
+
                 return hash;
             }
         }

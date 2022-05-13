@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FileUploadSettings :  IEquatable<FileUploadSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FileUploadSettings" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of supported file upload modes
         /// </summary>
         /// <value>The list of supported file upload modes</value>
         [DataMember(Name="modes", EmitDefaultValue=false)]
         public List<FileUploadMode> Modes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FileUploadSettings {\n");
-            
+
             sb.Append("  Modes: ").Append(Modes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Modes != null)
                     hash = hash * 59 + this.Modes.GetHashCode();
-                
+
                 return hash;
             }
         }

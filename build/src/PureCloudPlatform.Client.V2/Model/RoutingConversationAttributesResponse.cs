@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RoutingConversationAttributesResponse :  IEquatable<RoutingConversationAttributesResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingConversationAttributesResponse" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Current priority value on in-queue conversation. Range:[-25000000, 25000000]
         /// </summary>
         /// <value>Current priority value on in-queue conversation. Range:[-25000000, 25000000]</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current routing skills on in-queue conversation
         /// </summary>
         /// <value>Current routing skills on in-queue conversation</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
         public List<RoutingSkill> Skills { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current language on in-queue conversation
         /// </summary>
         /// <value>Current language on in-queue conversation</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public Language Language { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current scored agents on in-queue conversation
         /// </summary>
         /// <value>Current scored agents on in-queue conversation</value>
         [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
         public List<ScoredAgent> ScoredAgents { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RoutingConversationAttributesResponse {\n");
-            
+
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  Skills: ").Append(Skills).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
-                
+
                 if (this.Skills != null)
                     hash = hash * 59 + this.Skills.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.ScoredAgents != null)
                     hash = hash * 59 + this.ScoredAgents.GetHashCode();
-                
+
                 return hash;
             }
         }

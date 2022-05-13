@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayPerformancePredictionData :  IEquatable<IntradayPerformancePredictionData>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayPerformancePredictionData" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Percentage of interactions that meets service level target as defined in the matching service goal templates
         /// </summary>
         /// <value>Percentage of interactions that meets service level target as defined in the matching service goal templates</value>
         [DataMember(Name="serviceLevelPercent", EmitDefaultValue=false)]
         public double? ServiceLevelPercent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Predicted average time in seconds it takes to answer an interaction once the interaction becomes available to be routed
         /// </summary>
         /// <value>Predicted average time in seconds it takes to answer an interaction once the interaction becomes available to be routed</value>
         [DataMember(Name="averageSpeedOfAnswerSeconds", EmitDefaultValue=false)]
         public double? AverageSpeedOfAnswerSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percentage of on-queue time for all agents in this group that are occupied handling interactions
         /// </summary>
         /// <value>Percentage of on-queue time for all agents in this group that are occupied handling interactions</value>
         [DataMember(Name="occupancyPercent", EmitDefaultValue=false)]
         public double? OccupancyPercent { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayPerformancePredictionData {\n");
-            
+
             sb.Append("  ServiceLevelPercent: ").Append(ServiceLevelPercent).Append("\n");
             sb.Append("  AverageSpeedOfAnswerSeconds: ").Append(AverageSpeedOfAnswerSeconds).Append("\n");
             sb.Append("  OccupancyPercent: ").Append(OccupancyPercent).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ServiceLevelPercent != null)
                     hash = hash * 59 + this.ServiceLevelPercent.GetHashCode();
-                
+
                 if (this.AverageSpeedOfAnswerSeconds != null)
                     hash = hash * 59 + this.AverageSpeedOfAnswerSeconds.GetHashCode();
-                
+
                 if (this.OccupancyPercent != null)
                     hash = hash * 59 + this.OccupancyPercent.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -450,6 +450,8 @@ Batch-delete a list of prompts
 
 Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
 
+
+
 Requires ALL permissions: 
 
 * architect:userPrompt:delete
@@ -773,6 +775,8 @@ Batch-delete a list of flows
 
 Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
 
+
+
 Requires ANY permissions: 
 
 * architect:flow:delete
@@ -837,6 +841,8 @@ namespace Example
 deletes a specific datatable by id
 
 Deletes an entire datatable (including the schema and data) with a given datatableId
+
+
 
 Requires ANY permissions: 
 
@@ -904,6 +910,8 @@ Delete a row entry
 
 Deletes a row with a given rowId (the value of the key field).
 
+
+
 Requires ANY permissions: 
 
 * architect:datatable:delete
@@ -963,7 +971,7 @@ void (empty response body)
 
 <a name="deleteflowsmilestone"></a>
 
-## [**Empty**](Empty.html) DeleteFlowsMilestone (string milestoneId)
+## **Object** DeleteFlowsMilestone (string milestoneId)
 
 
 
@@ -1002,7 +1010,7 @@ namespace Example
             try
             { 
                 // Delete a flow milestone.
-                Empty result = apiInstance.DeleteFlowsMilestone(milestoneId);
+                Object result = apiInstance.DeleteFlowsMilestone(milestoneId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1024,7 +1032,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="getarchitectdependencytracking"></a>
 
@@ -1783,8 +1791,8 @@ namespace Example
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "name")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ASC")
             var name = name_example;  // string | Name of the Emergency Group to filter by. (optional) 
 
             try
@@ -1809,8 +1817,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
-| **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **sortBy** | **string**| Sort by | [optional] [default to "name"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
 | **name** | **string**| Name of the Emergency Group to filter by. | [optional]  |
 {: class="table table-striped"}
 
@@ -1921,8 +1929,8 @@ namespace Example
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "name")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ASC")
             var name = name_example;  // string | Name of the IVR to filter by. (optional) 
 
             try
@@ -1947,8 +1955,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
-| **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **sortBy** | **string**| Sort by | [optional] [default to "name"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
 | **name** | **string**| Name of the IVR to filter by. | [optional]  |
 {: class="table table-striped"}
 
@@ -2061,7 +2069,7 @@ namespace Example
             var historyId = historyId_example;  // string | History request ID
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to desc)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "desc")
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
             var action = new List<string>(); // List<string> | Flow actions to include (omit to include all) (optional) 
 
@@ -2089,7 +2097,7 @@ namespace Example
 | **historyId** | **string**| History request ID |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortOrder** | **string**| Sort order | [optional] [default to desc] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "desc"] |
 | **sortBy** | **string**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
 | **action** | [**List<string>**](string.html)| Flow actions to include (omit to include all) | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
 {: class="table table-striped"}
@@ -2175,6 +2183,8 @@ Get a pageable list of user prompt resources
 
 The returned list is pageable, and query parameters can be used for filtering.
 
+
+
 Requires ALL permissions: 
 
 * architect:userPrompt:view
@@ -2244,6 +2254,8 @@ Get a pageable list of user prompts
 
 The returned list is pageable, and query parameters can be used for filtering.  Multiple names can be specified, in which case all matching prompts will be returned, and no other filters will be evaluated.
 
+
+
 Requires ALL permissions: 
 
 * architect:userPrompt:view
@@ -2275,8 +2287,8 @@ namespace Example
             var name = new List<string>(); // List<string> | Name (optional) 
             var description = description_example;  // string | Description (optional) 
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "id")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
 
             try
             { 
@@ -2303,8 +2315,8 @@ namespace Example
 | **name** | [**List<string>**](string.html)| Name | [optional]  |
 | **description** | **string**| Description | [optional]  |
 | **nameOrDescription** | **string**| Name or description | [optional]  |
-| **sortBy** | **string**| Sort by | [optional] [default to id] |
-| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+| **sortBy** | **string**| Sort by | [optional] [default to "id"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -2479,8 +2491,8 @@ namespace Example
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "name")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ASC")
             var name = name_example;  // string | Name of the Schedule Group to filter by. (optional) 
             var scheduleIds = scheduleIds_example;  // string | A comma-delimited list of Schedule IDs to filter by. (optional) 
             var divisionId = new List<string>(); // List<string> | List of divisionIds on which to filter. (optional) 
@@ -2507,8 +2519,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
-| **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **sortBy** | **string**| Sort by | [optional] [default to "name"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
 | **name** | **string**| Name of the Schedule Group to filter by. | [optional]  |
 | **scheduleIds** | **string**| A comma-delimited list of Schedule IDs to filter by. | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| List of divisionIds on which to filter. | [optional]  |
@@ -2556,8 +2568,8 @@ namespace Example
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "name")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ASC")
             var name = name_example;  // string | Name of the Schedule to filter by. (optional) 
             var divisionId = new List<string>(); // List<string> | List of divisionIds on which to filter. (optional) 
 
@@ -2583,8 +2595,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
-| **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **sortBy** | **string**| Sort by | [optional] [default to "name"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
 | **name** | **string**| Name of the Schedule to filter by. | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| List of divisionIds on which to filter. | [optional]  |
 {: class="table table-striped"}
@@ -2698,7 +2710,7 @@ namespace Example
             var historyId = historyId_example;  // string | History request ID
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to desc)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "desc")
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
             var action = new List<string>(); // List<string> | Flow actions to include (omit to include all) (optional) 
 
@@ -2726,7 +2738,7 @@ namespace Example
 | **historyId** | **string**| History request ID |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortOrder** | **string**| Sort order | [optional] [default to desc] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "desc"] |
 | **sortBy** | **string**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
 | **action** | [**List<string>**](string.html)| Flow actions to include (omit to include all) | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
 {: class="table table-striped"}
@@ -2841,8 +2853,8 @@ namespace Example
             var promptId = promptId_example;  // string | Prompt ID
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "id")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
 
             try
             { 
@@ -2867,8 +2879,8 @@ namespace Example
 | **promptId** | **string**| Prompt ID |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Sort by | [optional] [default to id] |
-| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+| **sortBy** | **string**| Sort by | [optional] [default to "id"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -2913,8 +2925,8 @@ namespace Example
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "id")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
             var name = name_example;  // string | Name (optional) 
             var description = description_example;  // string | Description (optional) 
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
@@ -2941,8 +2953,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Sort by | [optional] [default to id] |
-| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+| **sortBy** | **string**| Sort by | [optional] [default to "id"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
 | **name** | **string**| Name | [optional]  |
 | **description** | **string**| Description | [optional]  |
 | **nameOrDescription** | **string**| Name or description | [optional]  |
@@ -3059,7 +3071,7 @@ namespace Example
             var historyId = historyId_example;  // string | History request ID
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to desc)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "desc")
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
             var action = new List<string>(); // List<string> | Flow actions to include (omit to include all) (optional) 
 
@@ -3087,7 +3099,7 @@ namespace Example
 | **historyId** | **string**| History request ID |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortOrder** | **string**| Sort order | [optional] [default to desc] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "desc"] |
 | **sortBy** | **string**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
 | **action** | [**List<string>**](string.html)| Flow actions to include (omit to include all) | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
 {: class="table table-striped"}
@@ -3382,6 +3394,8 @@ Get a pageable list of flows, filtered by query parameters
 
 If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
 
+
+
 Requires ANY permissions: 
 
 * architect:flow:view
@@ -3411,8 +3425,8 @@ namespace Example
             var type = new List<string>(); // List<string> | Type (optional) 
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "id")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
             var id = new List<string>(); // List<string> | ID (optional) 
             var name = name_example;  // string | Name (optional) 
             var description = description_example;  // string | Description (optional) 
@@ -3451,8 +3465,8 @@ namespace Example
 | **type** | [**List<string>**](string.html)| Type | [optional] <br />**Values**: bot, commonmodule, digitalbot, inboundcall, inboundchat, inboundemail, inboundshortmessage, outboundcall, inqueuecall, inqueueemail, inqueueshortmessage, speech, securecall, surveyinvite, voice, voicemail, workflow, workitem |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Sort by | [optional] [default to id] |
-| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+| **sortBy** | **string**| Sort by | [optional] [default to "id"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
 | **id** | [**List<string>**](string.html)| ID | [optional]  |
 | **name** | **string**| Name | [optional]  |
 | **description** | **string**| Description | [optional]  |
@@ -3482,6 +3496,8 @@ namespace Example
 Returns a specific datatable by id
 
 Given a datatableId returns the datatable object and schema associated with it.
+
+
 
 Requires ANY permissions: 
 
@@ -3549,6 +3565,8 @@ namespace Example
 Returns the state information about an export job
 
 Returns the state information about an export job.
+
+
 
 Requires ANY permissions: 
 
@@ -3618,6 +3636,8 @@ Returns the state information about an import job
 
 Returns the state information about an import job.
 
+
+
 Requires ANY permissions: 
 
 * architect:datatable:view
@@ -3685,6 +3705,8 @@ namespace Example
 Get all recent import jobs
 
 Get all recent import jobs
+
+
 
 Requires ANY permissions: 
 
@@ -3756,6 +3778,8 @@ Returns a specific row for the datatable
 
 Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
 
+
+
 Requires ANY permissions: 
 
 * architect:datatable:view
@@ -3825,6 +3849,8 @@ namespace Example
 Returns the rows for the datatable with the given id
 
 Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
+
+
 
 Requires ANY permissions: 
 
@@ -3898,6 +3924,8 @@ Retrieve a list of datatables for the org
 
 Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
 
+
+
 Requires ANY permissions: 
 
 * architect:datatable:view
@@ -3928,7 +3956,7 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ascending")
             var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
             var name = name_example;  // string | Name to filter by (optional) 
 
@@ -3956,7 +3984,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Sort by | [optional] [default to id]<br />**Values**: id, name |
-| **sortOrder** | **string**| Sort order | [optional] [default to ascending] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ascending"] |
 | **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
 | **name** | **string**| Name to filter by | [optional]  |
 {: class="table table-striped"}
@@ -3974,6 +4002,8 @@ namespace Example
 Returns a specific datatable by id
 
 Given a datatableId returns the datatable object and schema associated with it.
+
+
 
 Requires ALL permissions: 
 
@@ -4042,6 +4072,8 @@ Retrieve a list of datatables for the org
 
 Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
 
+
+
 Requires ALL permissions: 
 
 * architect:datatable:search
@@ -4072,7 +4104,7 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ascending")
             var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
             var name = name_example;  // string | Name to filter by (optional) 
 
@@ -4100,7 +4132,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Sort by | [optional] [default to id]<br />**Values**: id, name |
-| **sortOrder** | **string**| Sort order | [optional] [default to ascending] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ascending"] |
 | **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
 | **name** | **string**| Name to filter by | [optional]  |
 {: class="table table-striped"}
@@ -4118,6 +4150,8 @@ namespace Example
 Get a pageable list of basic flow information objects filterable by query parameters.
 
 This returns a simplified version of /flow consisting of name and type. If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
+
+
 
 Requires ALL permissions: 
 
@@ -4148,8 +4182,8 @@ namespace Example
             var type = new List<string>(); // List<string> | Type (optional) 
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "id")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
             var id = new List<string>(); // List<string> | ID (optional) 
             var name = name_example;  // string | Name (optional) 
             var publishVersionId = publishVersionId_example;  // string | Publish version ID (optional) 
@@ -4181,8 +4215,8 @@ namespace Example
 | **type** | [**List<string>**](string.html)| Type | [optional] <br />**Values**: bot, commonmodule, digitalbot, inboundcall, inboundchat, inboundemail, inboundshortmessage, outboundcall, inqueuecall, inqueueemail, inqueueshortmessage, speech, securecall, surveyinvite, voice, voicemail, workflow, workitem |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Sort by | [optional] [default to id] |
-| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+| **sortBy** | **string**| Sort by | [optional] [default to "id"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
 | **id** | [**List<string>**](string.html)| ID | [optional]  |
 | **name** | **string**| Name | [optional]  |
 | **publishVersionId** | **string**| Publish version ID | [optional]  |
@@ -4338,6 +4372,8 @@ Get a flow milestone
 
 Returns a specified flow milestone
 
+
+
 Requires ALL permissions: 
 
 * architect:flowMilestone:view
@@ -4403,6 +4439,8 @@ Get a pageable list of flow milestones, filtered by query parameters
 
 Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
 
+
+
 Requires ALL permissions: 
 
 * architect:flowMilestone:view
@@ -4431,8 +4469,8 @@ namespace Example
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "id")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
             var id = new List<string>(); // List<string> | ID (optional) 
             var name = name_example;  // string | Name (optional) 
             var description = description_example;  // string | Description (optional) 
@@ -4461,8 +4499,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Sort by | [optional] [default to id] |
-| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+| **sortBy** | **string**| Sort by | [optional] [default to "id"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
 | **id** | [**List<string>**](string.html)| ID | [optional]  |
 | **name** | **string**| Name | [optional]  |
 | **description** | **string**| Description | [optional]  |
@@ -4483,6 +4521,8 @@ namespace Example
 Get a pageable list of basic flow milestone information objects filterable by query parameters.
 
 This returns flow milestones consisting of name and division. If one or more IDs are specified, the search will fetch flow milestones that match the given ID(s) and not use any additional supplied query parameters in the search.
+
+
 
 Requires ALL permissions: 
 
@@ -4512,8 +4552,8 @@ namespace Example
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "id")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
             var id = new List<string>(); // List<string> | ID (optional) 
             var name = name_example;  // string | Name (optional) 
             var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
@@ -4540,8 +4580,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Sort by | [optional] [default to id] |
-| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+| **sortBy** | **string**| Sort by | [optional] [default to "id"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
 | **id** | [**List<string>**](string.html)| ID | [optional]  |
 | **name** | **string**| Name | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
@@ -4560,6 +4600,8 @@ namespace Example
 Get a flow outcome
 
 Returns a specified flow outcome
+
+
 
 Requires ALL permissions: 
 
@@ -4626,6 +4668,8 @@ Get a pageable list of flow outcomes, filtered by query parameters
 
 Multiple IDs can be specified, in which case all matching flow outcomes will be returned, and no other parameters will be evaluated.
 
+
+
 Requires ALL permissions: 
 
 * architect:flowOutcome:view
@@ -4654,8 +4698,8 @@ namespace Example
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "id")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
             var id = new List<string>(); // List<string> | ID (optional) 
             var name = name_example;  // string | Name (optional) 
             var description = description_example;  // string | Description (optional) 
@@ -4684,8 +4728,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Sort by | [optional] [default to id] |
-| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+| **sortBy** | **string**| Sort by | [optional] [default to "id"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
 | **id** | [**List<string>**](string.html)| ID | [optional]  |
 | **name** | **string**| Name | [optional]  |
 | **description** | **string**| Description | [optional]  |
@@ -4706,6 +4750,8 @@ namespace Example
 Get a pageable list of basic flow outcome information objects filterable by query parameters.
 
 This returns flow outcomes consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+
+
 
 Requires ALL permissions: 
 
@@ -4735,8 +4781,8 @@ namespace Example
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "id")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
             var id = new List<string>(); // List<string> | ID (optional) 
             var name = name_example;  // string | Name (optional) 
             var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
@@ -4763,8 +4809,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Sort by | [optional] [default to id] |
-| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+| **sortBy** | **string**| Sort by | [optional] [default to "id"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
 | **id** | [**List<string>**](string.html)| ID | [optional]  |
 | **name** | **string**| Name | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
@@ -4783,6 +4829,8 @@ namespace Example
 Rebuild Dependency Tracking data for an organization
 
 Asynchronous.  Notification topic: v2.architect.dependencytracking.build
+
+
 
 Requires ALL permissions: 
 
@@ -4972,6 +5020,8 @@ namespace Example
 Generate prompt history
 
 Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+
+
 
 Requires ALL permissions: 
 
@@ -5300,6 +5350,8 @@ Generate system prompt history
 
 Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
 
+
+
 Requires ALL permissions: 
 
 * architect:systemPrompt:view
@@ -5432,6 +5484,8 @@ Generate flow history
 
 Asynchronous.  Notification topic: v2.flows.{flowId}
 
+
+
 Requires ANY permissions: 
 
 * architect:flow:view
@@ -5524,7 +5578,7 @@ namespace Example
 
             var apiInstance = new ArchitectApi();
             var flowId = flowId_example;  // string | Flow ID
-            var body = ;  // Object | 
+            var body = new Object(); // Object | 
 
             try
             { 
@@ -5547,7 +5601,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
-| **body** | **Object**|  |  |
+| **body** | [**Object**](Object.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5630,6 +5684,8 @@ namespace Example
 Check-in flow
 
 Asynchronous.  Notification topic: v2.flows.{flowId}
+
+
 
 Requires ANY permissions: 
 
@@ -5827,6 +5883,8 @@ Publish flow
 
 Asynchronous.  Notification topic: v2.flows.{flowId}
 
+
+
 Requires ANY permissions: 
 
 * architect:flow:unlock
@@ -5960,6 +6018,8 @@ Unlock flow
 
 Allows for unlocking a flow in the case where there is no flow configuration available, and thus a check-in will not unlock the flow. The user must have Architect Admin permissions to perform this action.
 
+
+
 Requires ANY permissions: 
 
 * architect:flow:unlock
@@ -6024,6 +6084,8 @@ namespace Example
 Begin an export process for exporting all rows from a datatable
 
 Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+
+
 
 Requires ANY permissions: 
 
@@ -6090,6 +6152,8 @@ namespace Example
 Begin an import process for importing rows into a datatable
 
 Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+
+
 
 Requires ANY permissions: 
 
@@ -6159,6 +6223,8 @@ Create a new row entry for the datatable.
 
 Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized' stream of key -> value pairs {      \"Field1\": \"XYZZY\",      \"Field2\": false,      \"KEY\": \"27272\"  }
 
+
+
 Requires ANY permissions: 
 
 * architect:datatable:add
@@ -6187,7 +6253,7 @@ namespace Example
 
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
-            var dataTableRow = ;  // Object | 
+            var dataTableRow = new Object(); // Object | 
 
             try
             { 
@@ -6210,7 +6276,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
-| **dataTableRow** | **Object**|  |  |
+| **dataTableRow** | [**Object**](Object.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6226,6 +6292,8 @@ namespace Example
 Create a new datatable with the specified json-schema definition
 
 This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema's title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
+
+
 
 Requires ANY permissions: 
 
@@ -6291,6 +6359,8 @@ namespace Example
 Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
 
 The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+
+
 
 Requires ANY permissions: 
 
@@ -6481,6 +6551,8 @@ namespace Example
 Create a flow outcome
 
 Asynchronous.  Notification topic: v2.flows.outcomes.{flowOutcomeId}
+
+
 
 Requires ALL permissions: 
 
@@ -7087,6 +7159,8 @@ Updates a specific datatable by id
 
 Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
 
+
+
 Requires ANY permissions: 
 
 * architect:datatable:edit
@@ -7156,6 +7230,8 @@ Update a row entry
 
 Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized' stream of key -> value pairs {     \"Field1\": \"XYZZY\",     \"Field2\": false,     \"KEY\": \"27272\" }
 
+
+
 Requires ANY permissions: 
 
 * architect:datatable:edit
@@ -7185,7 +7261,7 @@ namespace Example
             var apiInstance = new ArchitectApi();
             var datatableId = datatableId_example;  // string | id of datatable
             var rowId = rowId_example;  // string | the key for the row
-            var body = ;  // Object | datatable row (optional) 
+            var body = new Object(); // Object | datatable row (optional) 
 
             try
             { 
@@ -7209,7 +7285,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
 | **rowId** | **string**| the key for the row |  |
-| **body** | **Object**| datatable row | [optional]  |
+| **body** | [**Object**](Object.html)| datatable row | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -7292,6 +7368,8 @@ namespace Example
 Updates a flow outcome
 
 Updates a flow outcome.  Asynchronous.  Notification topic: v2.flowoutcomes.{flowoutcomeId}
+
+
 
 Requires ALL permissions: 
 

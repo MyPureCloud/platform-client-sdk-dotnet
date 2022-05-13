@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Manager :  IEquatable<Manager>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Manager" /> class.
         /// </summary>
@@ -41,25 +28,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the manager.
         /// </summary>
         /// <value>The ID of the manager.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The reference URI of the manager&#39;s user record.
+        /// The reference URI of the manager's user record.
         /// </summary>
-        /// <value>The reference URI of the manager&#39;s user record.</value>
+        /// <value>The reference URI of the manager's user record.</value>
         [DataMember(Name="$ref", EmitDefaultValue=false)]
-        public string _Ref { get; private set; }
-        
-        
+        public string Ref { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,9 +55,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Manager {\n");
-            
+
             sb.Append("  Value: ").Append(Value).Append("\n");
-            sb.Append("  _Ref: ").Append(_Ref).Append("\n");
+            sb.Append("  Ref: ").Append(Ref).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -117,9 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Value.Equals(other.Value)
                 ) &&
                 (
-                    this._Ref == other._Ref ||
-                    this._Ref != null &&
-                    this._Ref.Equals(other._Ref)
+                    this.Ref == other.Ref ||
+                    this.Ref != null &&
+                    this.Ref.Equals(other.Ref)
                 );
         }
 
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
-                if (this._Ref != null)
-                    hash = hash * 59 + this._Ref.GetHashCode();
-                
+
+                if (this.Ref != null)
+                    hash = hash * 59 + this.Ref.GetHashCode();
+
                 return hash;
             }
         }

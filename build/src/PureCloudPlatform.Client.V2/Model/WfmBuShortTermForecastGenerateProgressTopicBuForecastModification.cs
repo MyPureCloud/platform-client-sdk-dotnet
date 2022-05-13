@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuShortTermForecastGenerateProgressTopicBuForecastModification :  IEquatable<WfmBuShortTermForecastGenerateProgressTopicBuForecastModification>
     {
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -82,16 +80,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SetValuesForIntervalSet")]
             Setvaluesforintervalset
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
@@ -118,10 +106,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AverageHandleTimeSeconds")]
             Averagehandletimeseconds
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets LegacyMetric
         /// </summary>
@@ -160,69 +144,21 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Offered")]
             Offered
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets LegacyMetric
         /// </summary>
         [DataMember(Name="legacyMetric", EmitDefaultValue=false)]
         public LegacyMetricEnum? LegacyMetric { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuShortTermForecastGenerateProgressTopicBuForecastModification" /> class.
         /// </summary>
@@ -253,77 +189,77 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets StartIntervalIndex
         /// </summary>
         [DataMember(Name="startIntervalIndex", EmitDefaultValue=false)]
         public int? StartIntervalIndex { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EndIntervalIndex
         /// </summary>
         [DataMember(Name="endIntervalIndex", EmitDefaultValue=false)]
         public int? EndIntervalIndex { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public double? Value { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Values
         /// </summary>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue> Values { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Granularity
         /// </summary>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public string Granularity { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DisplayGranularity
         /// </summary>
         [DataMember(Name="displayGranularity", EmitDefaultValue=false)]
         public string DisplayGranularity { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PlanningGroupIds
         /// </summary>
         [DataMember(Name="planningGroupIds", EmitDefaultValue=false)]
         public List<string> PlanningGroupIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -332,7 +268,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuShortTermForecastGenerateProgressTopicBuForecastModification {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  StartIntervalIndex: ").Append(StartIntervalIndex).Append("\n");
             sb.Append("  EndIntervalIndex: ").Append(EndIntervalIndex).Append("\n");
@@ -452,40 +388,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.StartIntervalIndex != null)
                     hash = hash * 59 + this.StartIntervalIndex.GetHashCode();
-                
+
                 if (this.EndIntervalIndex != null)
                     hash = hash * 59 + this.EndIntervalIndex.GetHashCode();
-                
+
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 if (this.LegacyMetric != null)
                     hash = hash * 59 + this.LegacyMetric.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.Granularity != null)
                     hash = hash * 59 + this.Granularity.GetHashCode();
-                
+
                 if (this.DisplayGranularity != null)
                     hash = hash * 59 + this.DisplayGranularity.GetHashCode();
-                
+
                 if (this.PlanningGroupIds != null)
                     hash = hash * 59 + this.PlanningGroupIds.GetHashCode();
-                
+
                 return hash;
             }
         }

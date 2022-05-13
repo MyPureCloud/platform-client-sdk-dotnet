@@ -285,7 +285,7 @@ namespace Example
             var apiInstance = new AnalyticsApi();
             var botFlowId = botFlowId_example;  // string | ID of the bot flow.
             var after = after_example;  // string | The cursor that points to the ID of the last item in the list of entities that has been returned. (optional) 
-            var pageSize = pageSize_example;  // string | Max number of entities to return. Maximum of 250 (optional)  (default to 50)
+            var pageSize = pageSize_example;  // string | Max number of entities to return. Maximum of 250 (optional)  (default to "50")
             var actionId = actionId_example;  // string | Optional action ID to get the reporting turns associated to a particular flow action (optional) 
             var sessionId = sessionId_example;  // string | Optional session ID to get the reporting turns for a particular session (optional) 
 
@@ -311,7 +311,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **botFlowId** | **string**| ID of the bot flow. |  |
 | **after** | **string**| The cursor that points to the ID of the last item in the list of entities that has been returned. | [optional]  |
-| **pageSize** | **string**| Max number of entities to return. Maximum of 250 | [optional] [default to 50] |
+| **pageSize** | **string**| Max number of entities to return. Maximum of 250 | [optional] [default to "50"] |
 | **actionId** | **string**| Optional action ID to get the reporting turns associated to a particular flow action | [optional]  |
 | **sessionId** | **string**| Optional session ID to get the reporting turns for a particular session | [optional]  |
 {: class="table table-striped"}
@@ -921,6 +921,8 @@ Get a list of report formats
 
 Get a list of report formats.
 
+
+
 Requires NO permissions: 
 
 
@@ -1176,6 +1178,8 @@ A completed scheduled report job
 
 A completed scheduled report job.
 
+
+
 Requires NO permissions: 
 
 
@@ -1241,6 +1245,8 @@ namespace Example
 Get a list of scheduled report jobs
 
 Get a list of scheduled report jobs.
+
+
 
 Requires ANY permissions: 
 
@@ -2408,6 +2414,8 @@ Generate a view export request
 
 This API creates a reporting export but the desired way to export analytics data is to use the analytics query APIs instead
 
+
+
 Requires ALL permissions: 
 
 * analytics:dataExport:add
@@ -2537,6 +2545,8 @@ namespace Example
 Create a scheduled report job
 
 Create a scheduled report job.
+
+
 
 Requires ANY permissions: 
 

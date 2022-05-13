@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ShiftTradeNotification :  IEquatable<ShiftTradeNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The new state of the shift trade, null if there was no change
         /// </summary>
@@ -80,46 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Canceled")]
             Canceled
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The new state of the shift trade, null if there was no change
         /// </summary>
         /// <value>The new state of the shift trade, null if there was no change</value>
         [DataMember(Name="newState", EmitDefaultValue=false)]
         public NewStateEnum? NewState { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradeNotification" /> class.
         /// </summary>
@@ -144,72 +99,72 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The start date of the schedule with which this trade is associated
         /// </summary>
         /// <value>The start date of the schedule with which this trade is associated</value>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
         public string WeekDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the shift trade
         /// </summary>
         /// <value>The ID of the shift trade</value>
         [DataMember(Name="tradeId", EmitDefaultValue=false)]
         public string TradeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this is a one sided shift trade
         /// </summary>
         /// <value>Whether this is a one sided shift trade</value>
         [DataMember(Name="oneSided", EmitDefaultValue=false)]
         public bool? OneSided { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The user who initiated the shift trade
         /// </summary>
         /// <value>The user who initiated the shift trade</value>
         [DataMember(Name="initiatingUser", EmitDefaultValue=false)]
         public UserReference InitiatingUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The start date and time of the initiating shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The start date and time of the initiating shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="initiatingShiftDate", EmitDefaultValue=false)]
         public DateTime? InitiatingShiftDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user on the receiving side of this shift trade (null if not matched)
         /// </summary>
         /// <value>The user on the receiving side of this shift trade (null if not matched)</value>
         [DataMember(Name="receivingUser", EmitDefaultValue=false)]
         public UserReference ReceivingUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The start date and time of the receiving shift (null if not matched or if one-sided. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The start date and time of the receiving shift (null if not matched or if one-sided. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="receivingShiftDate", EmitDefaultValue=false)]
         public DateTime? ReceivingShiftDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -218,7 +173,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ShiftTradeNotification {\n");
-            
+
             sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("  TradeId: ").Append(TradeId).Append("\n");
             sb.Append("  OneSided: ").Append(OneSided).Append("\n");
@@ -320,31 +275,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WeekDate != null)
                     hash = hash * 59 + this.WeekDate.GetHashCode();
-                
+
                 if (this.TradeId != null)
                     hash = hash * 59 + this.TradeId.GetHashCode();
-                
+
                 if (this.OneSided != null)
                     hash = hash * 59 + this.OneSided.GetHashCode();
-                
+
                 if (this.NewState != null)
                     hash = hash * 59 + this.NewState.GetHashCode();
-                
+
                 if (this.InitiatingUser != null)
                     hash = hash * 59 + this.InitiatingUser.GetHashCode();
-                
+
                 if (this.InitiatingShiftDate != null)
                     hash = hash * 59 + this.InitiatingShiftDate.GetHashCode();
-                
+
                 if (this.ReceivingUser != null)
                     hash = hash * 59 + this.ReceivingUser.GetHashCode();
-                
+
                 if (this.ReceivingShiftDate != null)
                     hash = hash * 59 + this.ReceivingShiftDate.GetHashCode();
-                
+
                 return hash;
             }
         }

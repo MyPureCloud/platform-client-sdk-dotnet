@@ -18,80 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateWorkPlan :  IEquatable<CreateWorkPlan>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// This constraint ensures that an agent starts each workday within a user-defined time threshold
         /// </summary>
@@ -119,89 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ShiftStartAndPaidDuration")]
             Shiftstartandpaidduration
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// This constraint ensures that an agent starts each workday within a user-defined time threshold
         /// </summary>
         /// <value>This constraint ensures that an agent starts each workday within a user-defined time threshold</value>
         [DataMember(Name="shiftStartVarianceType", EmitDefaultValue=false)]
         public ShiftStartVarianceTypeEnum? ShiftStartVarianceType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWorkPlan" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateWorkPlan() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWorkPlan" /> class.
         /// </summary>
@@ -266,252 +121,252 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Name of this work plan
         /// </summary>
         /// <value>Name of this work plan</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the work plan is enabled for scheduling
         /// </summary>
         /// <value>Whether the work plan is enabled for scheduling</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the weekly paid time constraint is enabled for this work plan
         /// </summary>
         /// <value>Whether the weekly paid time constraint is enabled for this work plan</value>
         [DataMember(Name="constrainWeeklyPaidTime", EmitDefaultValue=false)]
         public bool? ConstrainWeeklyPaidTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the weekly paid time constraint is flexible for this work plan
         /// </summary>
         /// <value>Whether the weekly paid time constraint is flexible for this work plan</value>
         [DataMember(Name="flexibleWeeklyPaidTime", EmitDefaultValue=false)]
         public bool? FlexibleWeeklyPaidTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false
         /// </summary>
         /// <value>Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false</value>
         [DataMember(Name="weeklyExactPaidMinutes", EmitDefaultValue=false)]
         public int? WeeklyExactPaidMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true
         /// </summary>
         /// <value>Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true</value>
         [DataMember(Name="weeklyMinimumPaidMinutes", EmitDefaultValue=false)]
         public int? WeeklyMinimumPaidMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true
         /// </summary>
         /// <value>Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true</value>
         [DataMember(Name="weeklyMaximumPaidMinutes", EmitDefaultValue=false)]
         public int? WeeklyMaximumPaidMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether paid time granularity should be constrained for this workplan
         /// </summary>
         /// <value>Whether paid time granularity should be constrained for this workplan</value>
         [DataMember(Name="constrainPaidTimeGranularity", EmitDefaultValue=false)]
         public bool? ConstrainPaidTimeGranularity { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity == true
         /// </summary>
         /// <value>Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity == true</value>
         [DataMember(Name="paidTimeGranularityMinutes", EmitDefaultValue=false)]
         public int? PaidTimeGranularityMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the minimum time between shifts constraint is enabled for this work plan
         /// </summary>
         /// <value>Whether the minimum time between shifts constraint is enabled for this work plan</value>
         [DataMember(Name="constrainMinimumTimeBetweenShifts", EmitDefaultValue=false)]
         public bool? ConstrainMinimumTimeBetweenShifts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts == true
         /// </summary>
         /// <value>Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts == true</value>
         [DataMember(Name="minimumTimeBetweenShiftsMinutes", EmitDefaultValue=false)]
         public int? MinimumTimeBetweenShiftsMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Maximum number days in a week allowed to be scheduled for this work plan
         /// </summary>
         /// <value>Maximum number days in a week allowed to be scheduled for this work plan</value>
         [DataMember(Name="maximumDays", EmitDefaultValue=false)]
         public int? MaximumDays { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Minimum amount of consecutive non working minutes per week that agents who are assigned this work plan are allowed to have off
         /// </summary>
         /// <value>Minimum amount of consecutive non working minutes per week that agents who are assigned this work plan are allowed to have off</value>
         [DataMember(Name="minimumConsecutiveNonWorkingMinutesPerWeek", EmitDefaultValue=false)]
         public int? MinimumConsecutiveNonWorkingMinutesPerWeek { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to constrain the maximum consecutive working weekends
         /// </summary>
         /// <value>Whether to constrain the maximum consecutive working weekends</value>
         [DataMember(Name="constrainMaximumConsecutiveWorkingWeekends", EmitDefaultValue=false)]
         public bool? ConstrainMaximumConsecutiveWorkingWeekends { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum number of consecutive weekends that agents who are assigned to this work plan are allowed to work
         /// </summary>
         /// <value>The maximum number of consecutive weekends that agents who are assigned to this work plan are allowed to work</value>
         [DataMember(Name="maximumConsecutiveWorkingWeekends", EmitDefaultValue=false)]
         public int? MaximumConsecutiveWorkingWeekends { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The minimum number of days that agents assigned to a work plan must work per week
         /// </summary>
         /// <value>The minimum number of days that agents assigned to a work plan must work per week</value>
         [DataMember(Name="minimumWorkingDaysPerWeek", EmitDefaultValue=false)]
         public int? MinimumWorkingDaysPerWeek { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to constrain the maximum consecutive working days
         /// </summary>
         /// <value>Whether to constrain the maximum consecutive working days</value>
         [DataMember(Name="constrainMaximumConsecutiveWorkingDays", EmitDefaultValue=false)]
         public bool? ConstrainMaximumConsecutiveWorkingDays { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum number of consecutive days that agents assigned to this work plan are allowed to work. Used if constrainMaximumConsecutiveWorkingDays == true
         /// </summary>
         /// <value>The maximum number of consecutive days that agents assigned to this work plan are allowed to work. Used if constrainMaximumConsecutiveWorkingDays == true</value>
         [DataMember(Name="maximumConsecutiveWorkingDays", EmitDefaultValue=false)]
         public int? MaximumConsecutiveWorkingDays { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time period in minutes for the duration between the start times of two consecutive working days
         /// </summary>
         /// <value>The time period in minutes for the duration between the start times of two consecutive working days</value>
         [DataMember(Name="minimumShiftStartDistanceMinutes", EmitDefaultValue=false)]
         public int? MinimumShiftStartDistanceMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Minimum days off in the planning period
         /// </summary>
         /// <value>Minimum days off in the planning period</value>
         [DataMember(Name="minimumDaysOffPerPlanningPeriod", EmitDefaultValue=false)]
         public int? MinimumDaysOffPerPlanningPeriod { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Maximum days off in the planning period
         /// </summary>
         /// <value>Maximum days off in the planning period</value>
         [DataMember(Name="maximumDaysOffPerPlanningPeriod", EmitDefaultValue=false)]
         public int? MaximumDaysOffPerPlanningPeriod { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Minimum paid minutes in the planning period
         /// </summary>
         /// <value>Minimum paid minutes in the planning period</value>
         [DataMember(Name="minimumPaidMinutesPerPlanningPeriod", EmitDefaultValue=false)]
         public int? MinimumPaidMinutesPerPlanningPeriod { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Maximum paid minutes in the planning period
         /// </summary>
         /// <value>Maximum paid minutes in the planning period</value>
         [DataMember(Name="maximumPaidMinutesPerPlanningPeriod", EmitDefaultValue=false)]
         public int? MaximumPaidMinutesPerPlanningPeriod { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Optional days to schedule for this work plan
         /// </summary>
         /// <value>Optional days to schedule for this work plan</value>
         [DataMember(Name="optionalDays", EmitDefaultValue=false)]
         public SetWrapperDayOfWeek OptionalDays { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Variance in minutes among start times of shifts in this work plan
         /// </summary>
         /// <value>Variance in minutes among start times of shifts in this work plan</value>
         [DataMember(Name="shiftStartVariances", EmitDefaultValue=false)]
         public ListWrapperShiftStartVariance ShiftStartVariances { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Shifts in this work plan
         /// </summary>
         /// <value>Shifts in this work plan</value>
         [DataMember(Name="shifts", EmitDefaultValue=false)]
         public List<CreateWorkPlanShift> Shifts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Agents in this work plan
         /// </summary>
         /// <value>Agents in this work plan</value>
         [DataMember(Name="agents", EmitDefaultValue=false)]
         public List<UserReference> Agents { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -520,7 +375,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateWorkPlan {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  ConstrainWeeklyPaidTime: ").Append(ConstrainWeeklyPaidTime).Append("\n");
@@ -742,91 +597,90 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.ConstrainWeeklyPaidTime != null)
                     hash = hash * 59 + this.ConstrainWeeklyPaidTime.GetHashCode();
-                
+
                 if (this.FlexibleWeeklyPaidTime != null)
                     hash = hash * 59 + this.FlexibleWeeklyPaidTime.GetHashCode();
-                
+
                 if (this.WeeklyExactPaidMinutes != null)
                     hash = hash * 59 + this.WeeklyExactPaidMinutes.GetHashCode();
-                
+
                 if (this.WeeklyMinimumPaidMinutes != null)
                     hash = hash * 59 + this.WeeklyMinimumPaidMinutes.GetHashCode();
-                
+
                 if (this.WeeklyMaximumPaidMinutes != null)
                     hash = hash * 59 + this.WeeklyMaximumPaidMinutes.GetHashCode();
-                
+
                 if (this.ConstrainPaidTimeGranularity != null)
                     hash = hash * 59 + this.ConstrainPaidTimeGranularity.GetHashCode();
-                
+
                 if (this.PaidTimeGranularityMinutes != null)
                     hash = hash * 59 + this.PaidTimeGranularityMinutes.GetHashCode();
-                
+
                 if (this.ConstrainMinimumTimeBetweenShifts != null)
                     hash = hash * 59 + this.ConstrainMinimumTimeBetweenShifts.GetHashCode();
-                
+
                 if (this.MinimumTimeBetweenShiftsMinutes != null)
                     hash = hash * 59 + this.MinimumTimeBetweenShiftsMinutes.GetHashCode();
-                
+
                 if (this.MaximumDays != null)
                     hash = hash * 59 + this.MaximumDays.GetHashCode();
-                
+
                 if (this.MinimumConsecutiveNonWorkingMinutesPerWeek != null)
                     hash = hash * 59 + this.MinimumConsecutiveNonWorkingMinutesPerWeek.GetHashCode();
-                
+
                 if (this.ConstrainMaximumConsecutiveWorkingWeekends != null)
                     hash = hash * 59 + this.ConstrainMaximumConsecutiveWorkingWeekends.GetHashCode();
-                
+
                 if (this.MaximumConsecutiveWorkingWeekends != null)
                     hash = hash * 59 + this.MaximumConsecutiveWorkingWeekends.GetHashCode();
-                
+
                 if (this.MinimumWorkingDaysPerWeek != null)
                     hash = hash * 59 + this.MinimumWorkingDaysPerWeek.GetHashCode();
-                
+
                 if (this.ConstrainMaximumConsecutiveWorkingDays != null)
                     hash = hash * 59 + this.ConstrainMaximumConsecutiveWorkingDays.GetHashCode();
-                
+
                 if (this.MaximumConsecutiveWorkingDays != null)
                     hash = hash * 59 + this.MaximumConsecutiveWorkingDays.GetHashCode();
-                
+
                 if (this.MinimumShiftStartDistanceMinutes != null)
                     hash = hash * 59 + this.MinimumShiftStartDistanceMinutes.GetHashCode();
-                
+
                 if (this.MinimumDaysOffPerPlanningPeriod != null)
                     hash = hash * 59 + this.MinimumDaysOffPerPlanningPeriod.GetHashCode();
-                
+
                 if (this.MaximumDaysOffPerPlanningPeriod != null)
                     hash = hash * 59 + this.MaximumDaysOffPerPlanningPeriod.GetHashCode();
-                
+
                 if (this.MinimumPaidMinutesPerPlanningPeriod != null)
                     hash = hash * 59 + this.MinimumPaidMinutesPerPlanningPeriod.GetHashCode();
-                
+
                 if (this.MaximumPaidMinutesPerPlanningPeriod != null)
                     hash = hash * 59 + this.MaximumPaidMinutesPerPlanningPeriod.GetHashCode();
-                
+
                 if (this.OptionalDays != null)
                     hash = hash * 59 + this.OptionalDays.GetHashCode();
-                
+
                 if (this.ShiftStartVarianceType != null)
                     hash = hash * 59 + this.ShiftStartVarianceType.GetHashCode();
-                
+
                 if (this.ShiftStartVariances != null)
                     hash = hash * 59 + this.ShiftStartVariances.GetHashCode();
-                
+
                 if (this.Shifts != null)
                     hash = hash * 59 + this.Shifts.GetHashCode();
-                
+
                 if (this.Agents != null)
                     hash = hash * 59 + this.Agents.GetHashCode();
-                
+
                 return hash;
             }
         }

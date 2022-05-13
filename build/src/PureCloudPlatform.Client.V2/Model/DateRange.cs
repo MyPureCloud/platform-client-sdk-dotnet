@@ -18,24 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DateRange :  IEquatable<DateRange>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DateRange" /> class.
         /// </summary>
-        /// <param name="StartDate">The inclusive start of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone..</param>
-        /// <param name="EndDate">The inclusive end of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone..</param>
+        /// <param name="StartDate">The inclusive start of a date range in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone..</param>
+        /// <param name="EndDate">The inclusive end of a date range in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone..</param>
         public DateRange(string StartDate = null, string EndDate = null)
         {
             this.StartDate = StartDate;
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The inclusive start of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone.
+        /// The inclusive start of a date range in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone.
         /// </summary>
-        /// <value>The inclusive start of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone.</value>
+        /// <value>The inclusive start of a date range in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone.</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public string StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The inclusive end of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone.
+        /// The inclusive end of a date range in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone.
         /// </summary>
-        /// <value>The inclusive end of a date range in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone.</value>
+        /// <value>The inclusive end of a date range in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone.</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public string EndDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DateRange {\n");
-            
+
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 return hash;
             }
         }

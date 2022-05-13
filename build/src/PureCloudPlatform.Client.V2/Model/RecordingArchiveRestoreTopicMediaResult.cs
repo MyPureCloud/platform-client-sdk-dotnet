@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RecordingArchiveRestoreTopicMediaResult :  IEquatable<RecordingArchiveRestoreTopicMediaResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingArchiveRestoreTopicMediaResult" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ChannelId
         /// </summary>
         [DataMember(Name="channelId", EmitDefaultValue=false)]
         public string ChannelId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets WaveUri
         /// </summary>
         [DataMember(Name="waveUri", EmitDefaultValue=false)]
         public string WaveUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MediaUri
         /// </summary>
         [DataMember(Name="mediaUri", EmitDefaultValue=false)]
         public string MediaUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets WaveformData
         /// </summary>
         [DataMember(Name="waveformData", EmitDefaultValue=false)]
         public List<double?> WaveformData { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RecordingArchiveRestoreTopicMediaResult {\n");
-            
+
             sb.Append("  ChannelId: ").Append(ChannelId).Append("\n");
             sb.Append("  WaveUri: ").Append(WaveUri).Append("\n");
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ChannelId != null)
                     hash = hash * 59 + this.ChannelId.GetHashCode();
-                
+
                 if (this.WaveUri != null)
                     hash = hash * 59 + this.WaveUri.GetHashCode();
-                
+
                 if (this.MediaUri != null)
                     hash = hash * 59 + this.MediaUri.GetHashCode();
-                
+
                 if (this.WaveformData != null)
                     hash = hash * 59 + this.WaveformData.GetHashCode();
-                
+
                 return hash;
             }
         }

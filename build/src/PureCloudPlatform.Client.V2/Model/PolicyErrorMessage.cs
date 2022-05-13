@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PolicyErrorMessage :  IEquatable<PolicyErrorMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyErrorMessage" /> class.
         /// </summary>
@@ -78,64 +40,64 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets StatusCode
         /// </summary>
         [DataMember(Name="statusCode", EmitDefaultValue=false)]
         public int? StatusCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserMessage
         /// </summary>
         [DataMember(Name="userMessage", EmitDefaultValue=false)]
         public Object UserMessage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserParamsMessage
         /// </summary>
         [DataMember(Name="userParamsMessage", EmitDefaultValue=false)]
         public string UserParamsMessage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CorrelationId
         /// </summary>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserParams
         /// </summary>
         [DataMember(Name="userParams", EmitDefaultValue=false)]
         public List<UserParam> UserParams { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="insertDate", EmitDefaultValue=false)]
         public DateTime? InsertDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -144,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PolicyErrorMessage {\n");
-            
+
             sb.Append("  StatusCode: ").Append(StatusCode).Append("\n");
             sb.Append("  UserMessage: ").Append(UserMessage).Append("\n");
             sb.Append("  UserParamsMessage: ").Append(UserParamsMessage).Append("\n");
@@ -240,28 +202,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StatusCode != null)
                     hash = hash * 59 + this.StatusCode.GetHashCode();
-                
+
                 if (this.UserMessage != null)
                     hash = hash * 59 + this.UserMessage.GetHashCode();
-                
+
                 if (this.UserParamsMessage != null)
                     hash = hash * 59 + this.UserParamsMessage.GetHashCode();
-                
+
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
-                
+
                 if (this.CorrelationId != null)
                     hash = hash * 59 + this.CorrelationId.GetHashCode();
-                
+
                 if (this.UserParams != null)
                     hash = hash * 59 + this.UserParams.GetHashCode();
-                
+
                 if (this.InsertDate != null)
                     hash = hash * 59 + this.InsertDate.GetHashCode();
-                
+
                 return hash;
             }
         }

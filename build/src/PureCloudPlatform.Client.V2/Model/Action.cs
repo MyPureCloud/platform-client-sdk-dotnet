@@ -18,54 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Action :  IEquatable<Action>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Action" /> class.
         /// </summary>
@@ -88,87 +40,87 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the integration for which this action is associated
         /// </summary>
         /// <value>The ID of the integration for which this action is associated</value>
         [DataMember(Name="integrationId", EmitDefaultValue=false)]
         public string IntegrationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Category of Action
         /// </summary>
         /// <value>Category of Action</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public string Category { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Action contract
         /// </summary>
         /// <value>Action contract</value>
         [DataMember(Name="contract", EmitDefaultValue=false)]
         public ActionContract Contract { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version of this action
         /// </summary>
         /// <value>Version of this action</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indication of whether or not the action is designed to accept sensitive data
         /// </summary>
         /// <value>Indication of whether or not the action is designed to accept sensitive data</value>
         [DataMember(Name="secure", EmitDefaultValue=false)]
         public bool? Secure { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Configuration to support request and response processing
         /// </summary>
         /// <value>Configuration to support request and response processing</value>
         [DataMember(Name="config", EmitDefaultValue=false)]
         public ActionConfig Config { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -177,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Action {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
@@ -285,34 +237,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.IntegrationId != null)
                     hash = hash * 59 + this.IntegrationId.GetHashCode();
-                
+
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
-                
+
                 if (this.Contract != null)
                     hash = hash * 59 + this.Contract.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.Secure != null)
                     hash = hash * 59 + this.Secure.GetHashCode();
-                
+
                 if (this.Config != null)
                     hash = hash * 59 + this.Config.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

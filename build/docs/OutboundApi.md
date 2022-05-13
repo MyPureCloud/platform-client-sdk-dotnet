@@ -2633,6 +2633,8 @@ Get a basic Campaign information object
 
 This returns a simplified version of a Campaign, consisting of name and division.
 
+
+
 Requires ALL permissions: 
 
 * outbound:campaign:search
@@ -2697,6 +2699,8 @@ namespace Example
 Query a list of basic Campaign information objects
 
 This returns a simplified version of a Campaign, consisting of name and division.
+
+
 
 Requires ALL permissions: 
 
@@ -2939,7 +2943,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var contactListId = contactListId_example;  // string | ContactList ID
-            var download = download_example;  // string | Redirect to download uri (optional)  (default to false)
+            var download = download_example;  // string | Redirect to download uri (optional)  (default to "false")
 
             try
             { 
@@ -2962,7 +2966,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| ContactList ID |  |
-| **download** | **string**| Redirect to download uri | [optional] [default to false] |
+| **download** | **string**| Redirect to download uri | [optional] [default to "false"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -3338,6 +3342,8 @@ Get a basic ContactList information object
 
 This returns a simplified version of a ContactList, consisting of the name, division, column names, phone columns, import status, and size.
 
+
+
 Requires ALL permissions: 
 
 * outbound:contactList:search
@@ -3406,6 +3412,8 @@ namespace Example
 Query a list of simplified contact list objects.
 
 This return a simplified version of contact lists, consisting of the name, division, column names, phone columns, import status, and size.
+
+
 
 Requires ALL permissions: 
 
@@ -3585,7 +3593,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var dncListId = dncListId_example;  // string | DncList ID
-            var download = download_example;  // string | Redirect to download uri (optional)  (default to false)
+            var download = download_example;  // string | Redirect to download uri (optional)  (default to "false")
 
             try
             { 
@@ -3608,7 +3616,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
-| **download** | **string**| Redirect to download uri | [optional] [default to false] |
+| **download** | **string**| Redirect to download uri | [optional] [default to "false"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -3775,6 +3783,8 @@ Get a basic DncList information object
 
 This returns a simplified version of a DncList, consisting of the name, division, import status, and size.
 
+
+
 Requires ALL permissions: 
 
 * outbound:dncList:search
@@ -3843,6 +3853,8 @@ namespace Example
 Query a list of simplified dnc list objects.
 
 This return a simplified version of dnc lists, consisting of the name, division, import status, and size.
+
+
 
 Requires ALL permissions: 
 
@@ -4285,6 +4297,8 @@ Get a basic Messaging Campaign information object
 
 This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
 
+
+
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:search
@@ -4350,6 +4364,8 @@ namespace Example
 Query a list of basic Messaging Campaign information objects
 
 This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
+
+
 
 Requires ANY permissions: 
 
@@ -5491,8 +5507,8 @@ namespace Example
             var body = new DialerAuditRequest(); // DialerAuditRequest | AuditSearch
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to entity.name)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "entity.name")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ascending")
             var facetsOnly = true;  // bool? | Facets only (optional)  (default to false)
 
             try
@@ -5518,8 +5534,8 @@ namespace Example
 | **body** | [**DialerAuditRequest**](DialerAuditRequest.html)| AuditSearch |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to entity.name] |
-| **sortOrder** | **string**| Sort order | [optional] [default to ascending] |
+| **sortBy** | **string**| Sort by | [optional] [default to "entity.name"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ascending"] |
 | **facetsOnly** | **bool?**| Facets only | [optional] [default to false] |
 {: class="table table-striped"}
 
@@ -5659,7 +5675,7 @@ namespace Example
 
 <a name="postoutboundcampaignagentownedmappingpreview"></a>
 
-## [**Empty**](Empty.html) PostOutboundCampaignAgentownedmappingpreview (string campaignId)
+## **Object** PostOutboundCampaignAgentownedmappingpreview (string campaignId)
 
 
 
@@ -5700,7 +5716,7 @@ namespace Example
             try
             { 
                 // Initiate request for a preview of how agents will be mapped to this campaign's contact list.
-                Empty result = apiInstance.PostOutboundCampaignAgentownedmappingpreview(campaignId);
+                Object result = apiInstance.PostOutboundCampaignAgentownedmappingpreview(campaignId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5722,7 +5738,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="postoutboundcampaigncallbackschedule"></a>
 
@@ -5733,6 +5749,8 @@ namespace Example
 Schedule a Callback for a Dialer Campaign (Deprecated)
 
 This endpoint is deprecated and may have unexpected results. Please use \"/conversations/{conversationId}/participants/{participantId}/callbacks instead.\"
+
+
 
 Requires NO permissions: 
 
@@ -5956,7 +5974,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new OutboundApi();
-            var body = ;  // List<string> | Campaign IDs
+            var body = new List<string>(); // List<string> | Campaign IDs
 
             try
             { 
@@ -5978,7 +5996,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | **List<string>**| Campaign IDs |  |
+| **body** | [**List<string>**](string.html)| Campaign IDs |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6159,7 +6177,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var contactListId = contactListId_example;  // string | Contact List ID
-            var body = ;  // List<string> | ContactIds to get.
+            var body = new List<string>(); // List<string> | ContactIds to get.
 
             try
             { 
@@ -6182,7 +6200,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
-| **body** | **List<string>**| ContactIds to get. |  |
+| **body** | [**List<string>**](string.html)| ContactIds to get. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6198,6 +6216,8 @@ namespace Example
 Initiate the export of a contact list.
 
 Returns 200 if received OK.
+
+
 
 Requires ALL permissions: 
 
@@ -6524,6 +6544,8 @@ Initiate the export of a dnc list.
 
 Returns 200 if received OK.
 
+
+
 Requires ALL permissions: 
 
 * outbound:dnc:view
@@ -6590,6 +6612,8 @@ Add phone numbers to a DNC list.
 
 Only Internal DNC lists may be appended to
 
+
+
 Requires ANY permissions: 
 
 * outbound:dnc:add
@@ -6617,7 +6641,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var dncListId = dncListId_example;  // string | DncList ID
-            var body = ;  // List<string> | DNC Phone Numbers
+            var body = new List<string>(); // List<string> | DNC Phone Numbers
             var expirationDateTime = expirationDateTime_example;  // string | Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional) 
 
             try
@@ -6640,7 +6664,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
-| **body** | **List<string>**| DNC Phone Numbers |  |
+| **body** | [**List<string>**](string.html)| DNC Phone Numbers |  |
 | **expirationDateTime** | **string**| Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format | [optional]  |
 {: class="table table-striped"}
 
@@ -6816,7 +6840,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new OutboundApi();
-            var body = ;  // List<string> | Messaging Campaign IDs
+            var body = new List<string>(); // List<string> | Messaging Campaign IDs
 
             try
             { 
@@ -6838,7 +6862,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | **List<string>**| Messaging Campaign IDs |  |
+| **body** | [**List<string>**](string.html)| Messaging Campaign IDs |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -7252,6 +7276,8 @@ namespace Example
 Send notification that an agent's state changed 
 
 New agent state.
+
+
 
 Requires NO permissions: 
 

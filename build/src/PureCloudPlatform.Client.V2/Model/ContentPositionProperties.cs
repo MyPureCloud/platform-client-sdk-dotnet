@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContentPositionProperties :  IEquatable<ContentPositionProperties>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentPositionProperties" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Top positioning offset.
         /// </summary>
         /// <value>Top positioning offset.</value>
         [DataMember(Name="top", EmitDefaultValue=false)]
         public string Top { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Bottom positioning offset.
         /// </summary>
         /// <value>Bottom positioning offset.</value>
         [DataMember(Name="bottom", EmitDefaultValue=false)]
         public string Bottom { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Left positioning offset.
         /// </summary>
         /// <value>Left positioning offset.</value>
         [DataMember(Name="left", EmitDefaultValue=false)]
         public string Left { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Right positioning offset.
         /// </summary>
         /// <value>Right positioning offset.</value>
         [DataMember(Name="right", EmitDefaultValue=false)]
         public string Right { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContentPositionProperties {\n");
-            
+
             sb.Append("  Top: ").Append(Top).Append("\n");
             sb.Append("  Bottom: ").Append(Bottom).Append("\n");
             sb.Append("  Left: ").Append(Left).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Top != null)
                     hash = hash * 59 + this.Top.GetHashCode();
-                
+
                 if (this.Bottom != null)
                     hash = hash * 59 + this.Bottom.GetHashCode();
-                
+
                 if (this.Left != null)
                     hash = hash * 59 + this.Left.GetHashCode();
-                
+
                 if (this.Right != null)
                     hash = hash * 59 + this.Right.GetHashCode();
-                
+
                 return hash;
             }
         }

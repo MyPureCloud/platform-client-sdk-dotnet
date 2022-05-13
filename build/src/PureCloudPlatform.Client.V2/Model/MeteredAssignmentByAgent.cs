@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MeteredAssignmentByAgent :  IEquatable<MeteredAssignmentByAgent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MeteredAssignmentByAgent" /> class.
         /// </summary>
@@ -71,55 +38,55 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets EvaluationContextId
         /// </summary>
         [DataMember(Name="evaluationContextId", EmitDefaultValue=false)]
         public string EvaluationContextId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Evaluators
         /// </summary>
         [DataMember(Name="evaluators", EmitDefaultValue=false)]
         public List<User> Evaluators { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MaxNumberEvaluations
         /// </summary>
         [DataMember(Name="maxNumberEvaluations", EmitDefaultValue=false)]
         public int? MaxNumberEvaluations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EvaluationForm
         /// </summary>
         [DataMember(Name="evaluationForm", EmitDefaultValue=false)]
         public EvaluationForm EvaluationForm { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TimeInterval
         /// </summary>
         [DataMember(Name="timeInterval", EmitDefaultValue=false)]
         public TimeInterval TimeInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TimeZone
         /// </summary>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MeteredAssignmentByAgent {\n");
-            
+
             sb.Append("  EvaluationContextId: ").Append(EvaluationContextId).Append("\n");
             sb.Append("  Evaluators: ").Append(Evaluators).Append("\n");
             sb.Append("  MaxNumberEvaluations: ").Append(MaxNumberEvaluations).Append("\n");
@@ -218,25 +185,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EvaluationContextId != null)
                     hash = hash * 59 + this.EvaluationContextId.GetHashCode();
-                
+
                 if (this.Evaluators != null)
                     hash = hash * 59 + this.Evaluators.GetHashCode();
-                
+
                 if (this.MaxNumberEvaluations != null)
                     hash = hash * 59 + this.MaxNumberEvaluations.GetHashCode();
-                
+
                 if (this.EvaluationForm != null)
                     hash = hash * 59 + this.EvaluationForm.GetHashCode();
-                
+
                 if (this.TimeInterval != null)
                     hash = hash * 59 + this.TimeInterval.GetHashCode();
-                
+
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
+
                 return hash;
             }
         }

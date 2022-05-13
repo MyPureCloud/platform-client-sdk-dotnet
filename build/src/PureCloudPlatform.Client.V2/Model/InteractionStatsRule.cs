@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class InteractionStatsRule :  IEquatable<InteractionStatsRule>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The dimension of concern.
         /// </summary>
@@ -53,13 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "userId")]
             Userid
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The metric to be assessed.
         /// </summary>
@@ -135,10 +120,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "tAcw")]
             Tacw
         }
-        
-        
-        
-        
         /// <summary>
         /// The media type.
         /// </summary>
@@ -184,10 +165,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "message")]
             Message
         }
-        
-        
-        
-        
         /// <summary>
         /// The comparison descriptor used against the metric's value.
         /// </summary>
@@ -239,10 +216,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ne")]
             Ne
         }
-        
-        
-        
-        
         /// <summary>
         /// The statistic of concern for the metric.
         /// </summary>
@@ -282,24 +255,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "max")]
             Max
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
@@ -332,83 +287,42 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The dimension of concern.
         /// </summary>
         /// <value>The dimension of concern.</value>
         [DataMember(Name="dimension", EmitDefaultValue=false)]
         public DimensionEnum? Dimension { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// The metric to be assessed.
         /// </summary>
         /// <value>The metric to be assessed.</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
-        
-        
-        
         /// <summary>
         /// The media type.
         /// </summary>
         /// <value>The media type.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
         /// <summary>
         /// The comparison descriptor used against the metric's value.
         /// </summary>
         /// <value>The comparison descriptor used against the metric's value.</value>
         [DataMember(Name="numericRange", EmitDefaultValue=false)]
         public NumericRangeEnum? NumericRange { get; set; }
-        
-        
-        
         /// <summary>
         /// The statistic of concern for the metric.
         /// </summary>
         /// <value>The statistic of concern for the metric.</value>
         [DataMember(Name="statistic", EmitDefaultValue=false)]
         public StatisticEnum? Statistic { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="InteractionStatsRule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected InteractionStatsRule() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="InteractionStatsRule" /> class.
         /// </summary>
@@ -417,7 +331,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DimensionValue">The value of the dimension. (required).</param>
         /// <param name="Metric">The metric to be assessed. (required).</param>
         /// <param name="MediaType">The media type. (required).</param>
-        /// <param name="NumericRange">The comparison descriptor used against the metric&#39;s value. (required).</param>
+        /// <param name="NumericRange">The comparison descriptor used against the metric's value. (required).</param>
         /// <param name="Statistic">The statistic of concern for the metric. (required).</param>
         /// <param name="Value">The threshold value. (required).</param>
         /// <param name="Enabled">Indicates if the rule is enabled. (required).</param>
@@ -439,98 +353,98 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of the rule
         /// </summary>
         /// <value>Name of the rule</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The value of the dimension.
         /// </summary>
         /// <value>The value of the dimension.</value>
         [DataMember(Name="dimensionValue", EmitDefaultValue=false)]
         public string DimensionValue { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// The threshold value.
         /// </summary>
         /// <value>The threshold value.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public double? Value { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if the rule is enabled.
         /// </summary>
         /// <value>Indicates if the rule is enabled.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if the rule is in alarm state.
         /// </summary>
         /// <value>Indicates if the rule is in alarm state.</value>
         [DataMember(Name="inAlarm", EmitDefaultValue=false)]
         public bool? InAlarm { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ids of users who will be notified of alarm state change.
         /// </summary>
         /// <value>The ids of users who will be notified of alarm state change.</value>
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
         public List<User> NotificationUsers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A collection of notification methods.
         /// </summary>
         /// <value>A collection of notification methods.</value>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
         public List<AlertTypesEnum> AlertTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -539,7 +453,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InteractionStatsRule {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
@@ -677,49 +591,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Dimension != null)
                     hash = hash * 59 + this.Dimension.GetHashCode();
-                
+
                 if (this.DimensionValue != null)
                     hash = hash * 59 + this.DimensionValue.GetHashCode();
-                
+
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.NumericRange != null)
                     hash = hash * 59 + this.NumericRange.GetHashCode();
-                
+
                 if (this.Statistic != null)
                     hash = hash * 59 + this.Statistic.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.InAlarm != null)
                     hash = hash * 59 + this.InAlarm.GetHashCode();
-                
+
                 if (this.NotificationUsers != null)
                     hash = hash * 59 + this.NotificationUsers.GetHashCode();
-                
+
                 if (this.AlertTypes != null)
                     hash = hash * 59 + this.AlertTypes.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

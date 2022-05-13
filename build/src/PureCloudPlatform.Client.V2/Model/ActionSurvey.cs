@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActionSurvey :  IEquatable<ActionSurvey>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionSurvey" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ActionSurvey() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionSurvey" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Questions shown to the user.
         /// </summary>
         /// <value>Questions shown to the user.</value>
         [DataMember(Name="questions", EmitDefaultValue=false)]
         public List<JourneySurveyQuestion> Questions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActionSurvey {\n");
-            
+
             sb.Append("  Questions: ").Append(Questions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Questions != null)
                     hash = hash * 59 + this.Questions.GetHashCode();
-                
+
                 return hash;
             }
         }

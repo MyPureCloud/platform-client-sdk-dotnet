@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContentOfferStylingConfiguration :  IEquatable<ContentOfferStylingConfiguration>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentOfferStylingConfiguration" /> class.
         /// </summary>
@@ -78,70 +40,70 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Properties for customizing the positioning of the content offer.
         /// </summary>
         /// <value>Properties for customizing the positioning of the content offer.</value>
         [DataMember(Name="position", EmitDefaultValue=false)]
         public ContentPositionProperties Position { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Properties for customizing the appearance of the content offer.
         /// </summary>
         /// <value>Properties for customizing the appearance of the content offer.</value>
         [DataMember(Name="offer", EmitDefaultValue=false)]
         public ContentOfferStyleProperties Offer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Properties for customizing the appearance of the close button.
         /// </summary>
         /// <value>Properties for customizing the appearance of the close button.</value>
         [DataMember(Name="closeButton", EmitDefaultValue=false)]
         public CloseButtonStyleProperties CloseButton { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Properties for customizing the appearance of the CTA button.
         /// </summary>
         /// <value>Properties for customizing the appearance of the CTA button.</value>
         [DataMember(Name="ctaButton", EmitDefaultValue=false)]
         public CtaButtonStyleProperties CtaButton { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Properties for customizing the appearance of the title text.
         /// </summary>
         /// <value>Properties for customizing the appearance of the title text.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public TextStyleProperties Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Properties for customizing the appearance of the headline text.
         /// </summary>
         /// <value>Properties for customizing the appearance of the headline text.</value>
         [DataMember(Name="headline", EmitDefaultValue=false)]
         public TextStyleProperties Headline { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Properties for customizing the appearance of the body text.
         /// </summary>
         /// <value>Properties for customizing the appearance of the body text.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public TextStyleProperties Body { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -150,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContentOfferStylingConfiguration {\n");
-            
+
             sb.Append("  Position: ").Append(Position).Append("\n");
             sb.Append("  Offer: ").Append(Offer).Append("\n");
             sb.Append("  CloseButton: ").Append(CloseButton).Append("\n");
@@ -246,28 +208,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Position != null)
                     hash = hash * 59 + this.Position.GetHashCode();
-                
+
                 if (this.Offer != null)
                     hash = hash * 59 + this.Offer.GetHashCode();
-                
+
                 if (this.CloseButton != null)
                     hash = hash * 59 + this.CloseButton.GetHashCode();
-                
+
                 if (this.CtaButton != null)
                     hash = hash * 59 + this.CtaButton.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Headline != null)
                     hash = hash * 59 + this.Headline.GetHashCode();
-                
+
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
-                
+
                 return hash;
             }
         }

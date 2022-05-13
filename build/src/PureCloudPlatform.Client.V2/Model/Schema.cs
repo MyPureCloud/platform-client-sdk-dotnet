@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Schema :  IEquatable<Schema>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Schema" /> class.
         /// </summary>
@@ -54,52 +26,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// A core type&#39;s title
+        /// A core type's title
         /// </summary>
-        /// <value>A core type&#39;s title</value>
+        /// <value>A core type's title</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// A core type&#39;s description
+        /// A core type's description
         /// </summary>
-        /// <value>A core type&#39;s description</value>
+        /// <value>A core type's description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// An array of fundamental JSON Schema primitive types on which the core type is based
         /// </summary>
         /// <value>An array of fundamental JSON Schema primitive types on which the core type is based</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public List<string> Type { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Denotes the type and pattern of the items in an enum core type
         /// </summary>
         /// <value>Denotes the type and pattern of the items in an enum core type</value>
         [DataMember(Name="items", EmitDefaultValue=false)]
         public Items Items { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// For the \&quot;date\&quot; and \&quot;datetime\&quot; core types, denotes the regex prescribing the allowable date/datetime format
+        /// For the \"date\" and \"datetime\" core types, denotes the regex prescribing the allowable date/datetime format
         /// </summary>
-        /// <value>For the \&quot;date\&quot; and \&quot;datetime\&quot; core types, denotes the regex prescribing the allowable date/datetime format</value>
+        /// <value>For the \"date\" and \"datetime\" core types, denotes the regex prescribing the allowable date/datetime format</value>
         [DataMember(Name="pattern", EmitDefaultValue=false)]
         public string Pattern { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Schema {\n");
-            
+
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -192,22 +164,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Items != null)
                     hash = hash * 59 + this.Items.GetHashCode();
-                
+
                 if (this.Pattern != null)
                     hash = hash * 59 + this.Pattern.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RoutingConversationAttributesRequest :  IEquatable<RoutingConversationAttributesRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingConversationAttributesRequest" /> class.
         /// </summary>
         /// <param name="Priority">Priority for the conversation.  Each point of priority is equivalent to one minute of time in queue.  Range:[-25000000, 25000000].  To reset, specify 0..</param>
         /// <param name="SkillIds">Skill requirements for the conversation.  To remove all skill requirements, specify an empty list, i.e. []..</param>
-        /// <param name="LanguageId">Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \&quot;\&quot;..</param>
+        /// <param name="LanguageId">Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \"\"..</param>
         /// <param name="RequestScoredAgents">RequestScoredAgents.</param>
         public RoutingConversationAttributesRequest(int? Priority = null, List<string> SkillIds = null, string LanguageId = null, List<RequestScoredAgent> RequestScoredAgents = null)
         {
@@ -57,42 +34,42 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Priority for the conversation.  Each point of priority is equivalent to one minute of time in queue.  Range:[-25000000, 25000000].  To reset, specify 0.
         /// </summary>
         /// <value>Priority for the conversation.  Each point of priority is equivalent to one minute of time in queue.  Range:[-25000000, 25000000].  To reset, specify 0.</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Skill requirements for the conversation.  To remove all skill requirements, specify an empty list, i.e. [].
         /// </summary>
         /// <value>Skill requirements for the conversation.  To remove all skill requirements, specify an empty list, i.e. [].</value>
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
         public List<string> SkillIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \&quot;\&quot;.
+        /// Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \"\".
         /// </summary>
-        /// <value>Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \&quot;\&quot;.</value>
+        /// <value>Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \"\".</value>
         [DataMember(Name="languageId", EmitDefaultValue=false)]
         public string LanguageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RequestScoredAgents
         /// </summary>
         [DataMember(Name="requestScoredAgents", EmitDefaultValue=false)]
         public List<RequestScoredAgent> RequestScoredAgents { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -101,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RoutingConversationAttributesRequest {\n");
-            
+
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
@@ -179,19 +156,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
-                
+
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();
-                
+
                 if (this.LanguageId != null)
                     hash = hash * 59 + this.LanguageId.GetHashCode();
-                
+
                 if (this.RequestScoredAgents != null)
                     hash = hash * 59 + this.RequestScoredAgents.GetHashCode();
-                
+
                 return hash;
             }
         }

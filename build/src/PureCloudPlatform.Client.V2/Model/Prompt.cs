@@ -18,45 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Prompt :  IEquatable<Prompt>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Prompt" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Prompt() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Prompt" /> class.
         /// </summary>
@@ -71,60 +38,60 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The prompt identifier
         /// </summary>
         /// <value>The prompt identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The prompt name.
         /// </summary>
         /// <value>The prompt name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of resources associated with this prompt
         /// </summary>
         /// <value>List of resources associated with this prompt</value>
         [DataMember(Name="resources", EmitDefaultValue=false)]
         public List<PromptAsset> Resources { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current prompt operation status
         /// </summary>
         /// <value>Current prompt operation status</value>
         [DataMember(Name="currentOperation", EmitDefaultValue=false)]
         public Operation CurrentOperation { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -133,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Prompt {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -223,25 +190,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Resources != null)
                     hash = hash * 59 + this.Resources.GetHashCode();
-                
+
                 if (this.CurrentOperation != null)
                     hash = hash * 59 + this.CurrentOperation.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

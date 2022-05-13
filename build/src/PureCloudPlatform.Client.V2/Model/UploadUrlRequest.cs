@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UploadUrlRequest :  IEquatable<UploadUrlRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ServerSideEncryption
         /// </summary>
@@ -49,29 +38,15 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AES256")]
             Aes256
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ServerSideEncryption
         /// </summary>
         [DataMember(Name="serverSideEncryption", EmitDefaultValue=false)]
         public ServerSideEncryptionEnum? ServerSideEncryption { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UploadUrlRequest" /> class.
         /// </summary>
-        /// <param name="FileName">Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\&quot;&gt;[~&lt;#|.</param>
+        /// <param name="FileName">Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\">[~<#|.</param>
         /// <param name="ContentMd5">Content MD5 of the file to upload.</param>
         /// <param name="SignedUrlTimeoutSeconds">The number of seconds the presigned URL is valid for (from 1 to 604800 seconds). If none provided, defaults to 600 seconds.</param>
         /// <param name="ServerSideEncryption">ServerSideEncryption.</param>
@@ -84,36 +59,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\&quot;&gt;[~&lt;#|
+        /// Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\">[~<#|
         /// </summary>
-        /// <value>Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\&quot;&gt;[~&lt;#|</value>
+        /// <value>Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\">[~<#|</value>
         [DataMember(Name="fileName", EmitDefaultValue=false)]
         public string FileName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Content MD5 of the file to upload
         /// </summary>
         /// <value>Content MD5 of the file to upload</value>
         [DataMember(Name="contentMd5", EmitDefaultValue=false)]
         public string ContentMd5 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of seconds the presigned URL is valid for (from 1 to 604800 seconds). If none provided, defaults to 600 seconds
         /// </summary>
         /// <value>The number of seconds the presigned URL is valid for (from 1 to 604800 seconds). If none provided, defaults to 600 seconds</value>
         [DataMember(Name="signedUrlTimeoutSeconds", EmitDefaultValue=false)]
         public int? SignedUrlTimeoutSeconds { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,7 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UploadUrlRequest {\n");
-            
+
             sb.Append("  FileName: ").Append(FileName).Append("\n");
             sb.Append("  ContentMd5: ").Append(ContentMd5).Append("\n");
             sb.Append("  SignedUrlTimeoutSeconds: ").Append(SignedUrlTimeoutSeconds).Append("\n");
@@ -200,19 +175,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FileName != null)
                     hash = hash * 59 + this.FileName.GetHashCode();
-                
+
                 if (this.ContentMd5 != null)
                     hash = hash * 59 + this.ContentMd5.GetHashCode();
-                
+
                 if (this.SignedUrlTimeoutSeconds != null)
                     hash = hash * 59 + this.SignedUrlTimeoutSeconds.GetHashCode();
-                
+
                 if (this.ServerSideEncryption != null)
                     hash = hash * 59 + this.ServerSideEncryption.GetHashCode();
-                
+
                 return hash;
             }
         }

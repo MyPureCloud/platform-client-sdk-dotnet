@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AgentMaxUtilization :  IEquatable<AgentMaxUtilization>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
@@ -49,21 +44,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Organization")]
             Organization
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
         [DataMember(Name="level", EmitDefaultValue=false)]
         public LevelEnum? Level { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentMaxUtilization" /> class.
         /// </summary>
@@ -76,18 +61,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Map of media type to utilization settings.  Valid media types include call, callback, chat, email, and message.
         /// </summary>
         /// <value>Map of media type to utilization settings.  Valid media types include call, callback, chat, email, and message.</value>
         [DataMember(Name="utilization", EmitDefaultValue=false)]
         public Dictionary<string, MediaUtilization> Utilization { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AgentMaxUtilization {\n");
-            
+
             sb.Append("  Utilization: ").Append(Utilization).Append("\n");
             sb.Append("  Level: ").Append(Level).Append("\n");
             sb.Append("}\n");
@@ -162,13 +147,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Utilization != null)
                     hash = hash * 59 + this.Utilization.GetHashCode();
-                
+
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
-                
+
                 return hash;
             }
         }

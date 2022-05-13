@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SchedulingTestingOptionsRequest :  IEquatable<SchedulingTestingOptionsRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulingTestingOptionsRequest" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether to enable fast scheduling
         /// </summary>
         /// <value>Whether to enable fast scheduling</value>
         [DataMember(Name="fastScheduling", EmitDefaultValue=false)]
         public bool? FastScheduling { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to force delayed scheduling
         /// </summary>
         /// <value>Whether to force delayed scheduling</value>
         [DataMember(Name="delayScheduling", EmitDefaultValue=false)]
         public bool? DelayScheduling { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to force scheduling to fail
         /// </summary>
         /// <value>Whether to force scheduling to fail</value>
         [DataMember(Name="failScheduling", EmitDefaultValue=false)]
         public bool? FailScheduling { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to populate warnings in the generated schedule
         /// </summary>
         /// <value>Whether to populate warnings in the generated schedule</value>
         [DataMember(Name="populateWarnings", EmitDefaultValue=false)]
         public bool? PopulateWarnings { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to populate deprecated warnings in the generated schedule
         /// </summary>
         /// <value>Whether to populate deprecated warnings in the generated schedule</value>
         [DataMember(Name="populateDeprecatedWarnings", EmitDefaultValue=false)]
         public bool? PopulateDeprecatedWarnings { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SchedulingTestingOptionsRequest {\n");
-            
+
             sb.Append("  FastScheduling: ").Append(FastScheduling).Append("\n");
             sb.Append("  DelayScheduling: ").Append(DelayScheduling).Append("\n");
             sb.Append("  FailScheduling: ").Append(FailScheduling).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FastScheduling != null)
                     hash = hash * 59 + this.FastScheduling.GetHashCode();
-                
+
                 if (this.DelayScheduling != null)
                     hash = hash * 59 + this.DelayScheduling.GetHashCode();
-                
+
                 if (this.FailScheduling != null)
                     hash = hash * 59 + this.FailScheduling.GetHashCode();
-                
+
                 if (this.PopulateWarnings != null)
                     hash = hash * 59 + this.PopulateWarnings.GetHashCode();
-                
+
                 if (this.PopulateDeprecatedWarnings != null)
                     hash = hash * 59 + this.PopulateDeprecatedWarnings.GetHashCode();
-                
+
                 return hash;
             }
         }

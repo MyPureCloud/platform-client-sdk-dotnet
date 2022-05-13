@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeMetricsDisk :  IEquatable<EdgeMetricsDisk>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsDisk" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Available memory in bytes.
         /// </summary>
         /// <value>Available memory in bytes.</value>
         [DataMember(Name="availableBytes", EmitDefaultValue=false)]
         public double? AvailableBytes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Disk partition name.
         /// </summary>
         /// <value>Disk partition name.</value>
         [DataMember(Name="partitionName", EmitDefaultValue=false)]
         public string PartitionName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total memory in bytes.
         /// </summary>
         /// <value>Total memory in bytes.</value>
         [DataMember(Name="totalBytes", EmitDefaultValue=false)]
         public double? TotalBytes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeMetricsDisk {\n");
-            
+
             sb.Append("  AvailableBytes: ").Append(AvailableBytes).Append("\n");
             sb.Append("  PartitionName: ").Append(PartitionName).Append("\n");
             sb.Append("  TotalBytes: ").Append(TotalBytes).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AvailableBytes != null)
                     hash = hash * 59 + this.AvailableBytes.GetHashCode();
-                
+
                 if (this.PartitionName != null)
                     hash = hash * 59 + this.PartitionName.GetHashCode();
-                
+
                 if (this.TotalBytes != null)
                     hash = hash * 59 + this.TotalBytes.GetHashCode();
-                
+
                 return hash;
             }
         }

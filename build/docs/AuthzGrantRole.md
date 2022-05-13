@@ -11,7 +11,7 @@ title: AuthzGrantRole
 | **Name** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **Policies** | [**List&lt;AuthzGrantPolicy&gt;**](AuthzGrantPolicy.html) |  | [optional] |
-| **_Default** | **bool?** |  | [optional] |
+| **Default** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

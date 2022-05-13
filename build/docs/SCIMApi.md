@@ -41,7 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deletescimuser"></a>
 
-## [**Empty**](Empty.html) DeleteScimUser (string userId, string ifMatch = null)
+## **Object** DeleteScimUser (string userId, string ifMatch = null)
 
 
 
@@ -81,7 +81,7 @@ namespace Example
             try
             { 
                 // Delete a user
-                Empty result = apiInstance.DeleteScimUser(userId, ifMatch);
+                Object result = apiInstance.DeleteScimUser(userId, ifMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -104,11 +104,11 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deletescimv2user"></a>
 
-## [**Empty**](Empty.html) DeleteScimV2User (string userId, string ifMatch = null)
+## **Object** DeleteScimV2User (string userId, string ifMatch = null)
 
 
 
@@ -148,7 +148,7 @@ namespace Example
             try
             { 
                 // Delete a user
-                Empty result = apiInstance.DeleteScimV2User(userId, ifMatch);
+                Object result = apiInstance.DeleteScimV2User(userId, ifMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -171,7 +171,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="getscimgroup"></a>
 
@@ -711,6 +711,8 @@ namespace Example
 Get a list of users
 
 To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \"active eq false\". By default, returns SCIM attributes \"externalId\", \"enterprise-user:manager\", and \"roles\". To exclude these attributes, set the attributes parameter to \"id,active\" or the excludeAttributes parameter to \"externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\".
+
+
 
 Requires NO permissions: 
 
@@ -1312,6 +1314,8 @@ namespace Example
 Get a list of users
 
 To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \"active eq false\". By default, returns SCIM attributes \"externalId\", \"enterprise-user:manager\", and \"roles\". To exclude these attributes, set the attributes parameter to \"id,active\" or the excludeAttributes parameter to \"externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\".
+
+
 
 Requires NO permissions: 
 

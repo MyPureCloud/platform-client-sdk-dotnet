@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class VisibilityCondition :  IEquatable<VisibilityCondition>
     {
-        
-        
         /// <summary>
         /// Gets or Sets CombiningOperation
         /// </summary>
@@ -46,29 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OR")]
             Or
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets CombiningOperation
         /// </summary>
         [DataMember(Name="combiningOperation", EmitDefaultValue=false)]
         public CombiningOperationEnum? CombiningOperation { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="VisibilityCondition" /> class.
         /// </summary>
         /// <param name="CombiningOperation">CombiningOperation.</param>
-        /// <param name="Predicates">A list of strings, each representing the location in the form of the Answer Option to depend on. In the format of \&quot;/form/questionGroup/{questionGroupIndex}/question/{questionIndex}/answer/{answerIndex}\&quot; or, to assume the current question group, \&quot;../question/{questionIndex}/answer/{answerIndex}\&quot;. Note: Indexes are zero-based.</param>
+        /// <param name="Predicates">A list of strings, each representing the location in the form of the Answer Option to depend on. In the format of \"/form/questionGroup/{questionGroupIndex}/question/{questionIndex}/answer/{answerIndex}\" or, to assume the current question group, \"../question/{questionIndex}/answer/{answerIndex}\". Note: Indexes are zero-based.</param>
         public VisibilityCondition(CombiningOperationEnum? CombiningOperation = null, List<Object> Predicates = null)
         {
             this.CombiningOperation = CombiningOperation;
@@ -76,18 +61,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
-        /// A list of strings, each representing the location in the form of the Answer Option to depend on. In the format of \&quot;/form/questionGroup/{questionGroupIndex}/question/{questionIndex}/answer/{answerIndex}\&quot; or, to assume the current question group, \&quot;../question/{questionIndex}/answer/{answerIndex}\&quot;. Note: Indexes are zero-based
+        /// A list of strings, each representing the location in the form of the Answer Option to depend on. In the format of \"/form/questionGroup/{questionGroupIndex}/question/{questionIndex}/answer/{answerIndex}\" or, to assume the current question group, \"../question/{questionIndex}/answer/{answerIndex}\". Note: Indexes are zero-based
         /// </summary>
-        /// <value>A list of strings, each representing the location in the form of the Answer Option to depend on. In the format of \&quot;/form/questionGroup/{questionGroupIndex}/question/{questionIndex}/answer/{answerIndex}\&quot; or, to assume the current question group, \&quot;../question/{questionIndex}/answer/{answerIndex}\&quot;. Note: Indexes are zero-based</value>
+        /// <value>A list of strings, each representing the location in the form of the Answer Option to depend on. In the format of \"/form/questionGroup/{questionGroupIndex}/question/{questionIndex}/answer/{answerIndex}\" or, to assume the current question group, \"../question/{questionIndex}/answer/{answerIndex}\". Note: Indexes are zero-based</value>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<Object> Predicates { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VisibilityCondition {\n");
-            
+
             sb.Append("  CombiningOperation: ").Append(CombiningOperation).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
             sb.Append("}\n");
@@ -162,13 +147,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CombiningOperation != null)
                     hash = hash * 59 + this.CombiningOperation.GetHashCode();
-                
+
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BillingUsage :  IEquatable<BillingUsage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingUsage" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BillingUsage() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingUsage" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Identifies the billable usage.
         /// </summary>
         /// <value>Identifies the billable usage.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total amount of usage, expressed as a decimal number in string format.
         /// </summary>
         /// <value>The total amount of usage, expressed as a decimal number in string format.</value>
         [DataMember(Name="totalUsage", EmitDefaultValue=false)]
         public string TotalUsage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The resources for which usage was observed (e.g. license users, devices).
         /// </summary>
         /// <value>The resources for which usage was observed (e.g. license users, devices).</value>
         [DataMember(Name="resources", EmitDefaultValue=false)]
         public List<BillingUsageResource> Resources { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BillingUsage {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  TotalUsage: ").Append(TotalUsage).Append("\n");
             sb.Append("  Resources: ").Append(Resources).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.TotalUsage != null)
                     hash = hash * 59 + this.TotalUsage.GetHashCode();
-                
+
                 if (this.Resources != null)
                     hash = hash * 59 + this.Resources.GetHashCode();
-                
+
                 return hash;
             }
         }

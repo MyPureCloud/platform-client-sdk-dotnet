@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmHistoricalAdherenceResultWrapper :  IEquatable<WfmHistoricalAdherenceResultWrapper>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmHistoricalAdherenceResultWrapper" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The operation ID of the historical adherence query
         /// </summary>
         /// <value>The operation ID of the historical adherence query</value>
         [DataMember(Name="entityId", EmitDefaultValue=false)]
         public string EntityId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of historical adherence query results
         /// </summary>
         /// <value>The list of historical adherence query results</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public List<HistoricalAdherenceQueryResult> Data { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Map of secondary presence lookup ID to corresponding secondary presence ID
         /// </summary>
         /// <value>Map of secondary presence lookup ID to corresponding secondary presence ID</value>
         [DataMember(Name="lookupIdToSecondaryPresenceId", EmitDefaultValue=false)]
         public Dictionary<string, string> LookupIdToSecondaryPresenceId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmHistoricalAdherenceResultWrapper {\n");
-            
+
             sb.Append("  EntityId: ").Append(EntityId).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  LookupIdToSecondaryPresenceId: ").Append(LookupIdToSecondaryPresenceId).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EntityId != null)
                     hash = hash * 59 + this.EntityId.GetHashCode();
-                
+
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
-                
+
                 if (this.LookupIdToSecondaryPresenceId != null)
                     hash = hash * 59 + this.LookupIdToSecondaryPresenceId.GetHashCode();
-                
+
                 return hash;
             }
         }

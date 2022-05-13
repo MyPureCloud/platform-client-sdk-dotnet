@@ -1,7 +1,7 @@
 ---
-title: ModelVoid
+title: Void
 ---
-## ININ.PureCloudApi.Model.ModelVoid
+## ININ.PureCloudApi.Model.Void
 
 ## Properties
 

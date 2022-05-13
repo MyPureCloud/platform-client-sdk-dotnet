@@ -9,7 +9,7 @@ title: BulkResponseResultVoidEntity
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Success** | **bool?** |  | [optional] |
-| **Entity** | [**ModelVoid**](ModelVoid.html) |  | [optional] |
+| **Entity** | **Object** |  | [optional] |
 | **Error** | [**BulkErrorEntity**](BulkErrorEntity.html) |  | [optional] |
 {: class="table table-striped"}
 

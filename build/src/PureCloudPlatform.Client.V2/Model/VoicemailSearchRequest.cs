@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class VoicemailSearchRequest :  IEquatable<VoicemailSearchRequest>
     {
-        
-        
         /// <summary>
         /// The sort order for results
         /// </summary>
@@ -53,50 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SCORE")]
             Score
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The sort order for results
         /// </summary>
         /// <value>The sort order for results</value>
         [DataMember(Name="sortOrder", EmitDefaultValue=false)]
         public SortOrderEnum? SortOrder { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailSearchRequest" /> class.
         /// </summary>
@@ -119,62 +79,62 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The field in the resource that you want to sort the results by
         /// </summary>
         /// <value>The field in the resource that you want to sort the results by</value>
         [DataMember(Name="sortBy", EmitDefaultValue=false)]
         public string SortBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of results per page
         /// </summary>
         /// <value>The number of results per page</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The page of resources you want to retrieve
         /// </summary>
         /// <value>The page of resources you want to retrieve</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Multi-value sort order, list of multiple sort values
         /// </summary>
         /// <value>Multi-value sort order, list of multiple sort values</value>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public List<SearchSort> Sort { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Provides more details about a specified resource
         /// </summary>
         /// <value>Provides more details about a specified resource</value>
         [DataMember(Name="expand", EmitDefaultValue=false)]
         public List<string> Expand { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Query
         /// </summary>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public List<VoicemailSearchCriteria> Query { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -183,7 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VoicemailSearchRequest {\n");
-            
+
             sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
             sb.Append("  SortBy: ").Append(SortBy).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
@@ -279,28 +239,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SortOrder != null)
                     hash = hash * 59 + this.SortOrder.GetHashCode();
-                
+
                 if (this.SortBy != null)
                     hash = hash * 59 + this.SortBy.GetHashCode();
-                
+
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
+
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
+
                 if (this.Sort != null)
                     hash = hash * 59 + this.Sort.GetHashCode();
-                
+
                 if (this.Expand != null)
                     hash = hash * 59 + this.Expand.GetHashCode();
-                
+
                 if (this.Query != null)
                     hash = hash * 59 + this.Query.GetHashCode();
-                
+
                 return hash;
             }
         }

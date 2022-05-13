@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateBenefitAssessmentRequest :  IEquatable<CreateBenefitAssessmentRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateBenefitAssessmentRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateBenefitAssessmentRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateBenefitAssessmentRequest" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of queue ids that are to be assessed for Predictive Routing benefit.
         /// </summary>
         /// <value>The list of queue ids that are to be assessed for Predictive Routing benefit.</value>
         [DataMember(Name="queueIds", EmitDefaultValue=false)]
         public List<string> QueueIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateBenefitAssessmentRequest {\n");
-            
+
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QueueIds != null)
                     hash = hash * 59 + this.QueueIds.GetHashCode();
-                
+
                 return hash;
             }
         }

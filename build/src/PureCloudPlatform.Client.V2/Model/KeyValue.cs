@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KeyValue :  IEquatable<KeyValue>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="KeyValue" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected KeyValue() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="KeyValue" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Key for free-form data.
         /// </summary>
         /// <value>Key for free-form data.</value>
         [DataMember(Name="key", EmitDefaultValue=false)]
         public string Key { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Value for free-form data.
         /// </summary>
         /// <value>Value for free-form data.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class KeyValue {\n");
-            
+
             sb.Append("  Key: ").Append(Key).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Key != null)
                     hash = hash * 59 + this.Key.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 return hash;
             }
         }

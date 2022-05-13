@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LineStatus :  IEquatable<LineStatus>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LineStatus" /> class.
         /// </summary>
         /// <param name="Id">The id of this line.</param>
         /// <param name="Reachable">Indicates whether the edge can reach the line..</param>
-        /// <param name="AddressOfRecord">The line&#39;s address of record..</param>
+        /// <param name="AddressOfRecord">The line's address of record..</param>
         /// <param name="ContactAddresses">The addresses used to contact the line..</param>
         /// <param name="ReachableStateTime">The time the line entered its current reachable state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public LineStatus(string Id = null, bool? Reachable = null, string AddressOfRecord = null, List<string> ContactAddresses = null, DateTime? ReachableStateTime = null)
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The id of this line
         /// </summary>
         /// <value>The id of this line</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether the edge can reach the line.
         /// </summary>
         /// <value>Indicates whether the edge can reach the line.</value>
         [DataMember(Name="reachable", EmitDefaultValue=false)]
         public bool? Reachable { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The line&#39;s address of record.
+        /// The line's address of record.
         /// </summary>
-        /// <value>The line&#39;s address of record.</value>
+        /// <value>The line's address of record.</value>
         [DataMember(Name="addressOfRecord", EmitDefaultValue=false)]
         public string AddressOfRecord { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The addresses used to contact the line.
         /// </summary>
         /// <value>The addresses used to contact the line.</value>
         [DataMember(Name="contactAddresses", EmitDefaultValue=false)]
         public List<string> ContactAddresses { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time the line entered its current reachable state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time the line entered its current reachable state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="reachableStateTime", EmitDefaultValue=false)]
         public DateTime? ReachableStateTime { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LineStatus {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Reachable: ").Append(Reachable).Append("\n");
             sb.Append("  AddressOfRecord: ").Append(AddressOfRecord).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Reachable != null)
                     hash = hash * 59 + this.Reachable.GetHashCode();
-                
+
                 if (this.AddressOfRecord != null)
                     hash = hash * 59 + this.AddressOfRecord.GetHashCode();
-                
+
                 if (this.ContactAddresses != null)
                     hash = hash * 59 + this.ContactAddresses.GetHashCode();
-                
+
                 if (this.ReachableStateTime != null)
                     hash = hash * 59 + this.ReachableStateTime.GetHashCode();
-                
+
                 return hash;
             }
         }

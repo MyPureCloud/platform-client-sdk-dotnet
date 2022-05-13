@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class StatisticalResponse :  IEquatable<StatisticalResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="StatisticalResponse" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Interval
         /// </summary>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Metrics
         /// </summary>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
         public List<AggregateMetricData> Metrics { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Views
         /// </summary>
         [DataMember(Name="views", EmitDefaultValue=false)]
         public List<AggregateViewData> Views { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StatisticalResponse {\n");
-            
+
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
             sb.Append("  Views: ").Append(Views).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
+
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
-                
+
                 if (this.Views != null)
                     hash = hash * 59 + this.Views.GetHashCode();
-                
+
                 return hash;
             }
         }

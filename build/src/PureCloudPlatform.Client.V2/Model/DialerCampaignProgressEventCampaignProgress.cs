@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerCampaignProgressEventCampaignProgress :  IEquatable<DialerCampaignProgressEventCampaignProgress>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCampaignProgressEventCampaignProgress" /> class.
         /// </summary>
@@ -64,51 +36,51 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Campaign
         /// </summary>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
         public DialerCampaignProgressEventUriReference Campaign { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of contacts that have been called so far
         /// </summary>
         /// <value>The number of contacts that have been called so far</value>
         [DataMember(Name="numberOfContactsCalled", EmitDefaultValue=false)]
         public double? NumberOfContactsCalled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of contacts that have been messaged so far
         /// </summary>
         /// <value>The number of contacts that have been messaged so far</value>
         [DataMember(Name="numberOfContactsMessaged", EmitDefaultValue=false)]
         public double? NumberOfContactsMessaged { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of contacts in the contact list
         /// </summary>
         /// <value>The total number of contacts in the contact list</value>
         [DataMember(Name="totalNumberOfContacts", EmitDefaultValue=false)]
         public double? TotalNumberOfContacts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// numberOfContactsContacted/totalNumberOfContacts*100
         /// </summary>
         /// <value>numberOfContactsContacted/totalNumberOfContacts*100</value>
         [DataMember(Name="percentage", EmitDefaultValue=false)]
         public int? Percentage { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -117,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerCampaignProgressEventCampaignProgress {\n");
-            
+
             sb.Append("  Campaign: ").Append(Campaign).Append("\n");
             sb.Append("  NumberOfContactsCalled: ").Append(NumberOfContactsCalled).Append("\n");
             sb.Append("  NumberOfContactsMessaged: ").Append(NumberOfContactsMessaged).Append("\n");
@@ -201,22 +173,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Campaign != null)
                     hash = hash * 59 + this.Campaign.GetHashCode();
-                
+
                 if (this.NumberOfContactsCalled != null)
                     hash = hash * 59 + this.NumberOfContactsCalled.GetHashCode();
-                
+
                 if (this.NumberOfContactsMessaged != null)
                     hash = hash * 59 + this.NumberOfContactsMessaged.GetHashCode();
-                
+
                 if (this.TotalNumberOfContacts != null)
                     hash = hash * 59 + this.TotalNumberOfContacts.GetHashCode();
-                
+
                 if (this.Percentage != null)
                     hash = hash * 59 + this.Percentage.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,32 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Operation :  IEquatable<Operation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Action name
         /// </summary>
@@ -113,10 +87,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "VALIDATE")]
             Validate
         }
-        
-        
-        
-        
         /// <summary>
         /// Action status
         /// </summary>
@@ -174,45 +144,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILURE")]
             Failure
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Action name
         /// </summary>
         /// <value>Action name</value>
         [DataMember(Name="actionName", EmitDefaultValue=false)]
         public ActionNameEnum? ActionName { get; set; }
-        
-        
-        
         /// <summary>
         /// Action status
         /// </summary>
         /// <value>Action status</value>
         [DataMember(Name="actionStatus", EmitDefaultValue=false)]
         public ActionStatusEnum? ActionStatus { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Operation" /> class.
         /// </summary>
@@ -241,75 +184,75 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Complete
         /// </summary>
         [DataMember(Name="complete", EmitDefaultValue=false)]
         public bool? Complete { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Client
         /// </summary>
         [DataMember(Name="client", EmitDefaultValue=false)]
         public DomainEntityRef Client { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorMessage
         /// </summary>
         [DataMember(Name="errorMessage", EmitDefaultValue=false)]
         public string ErrorMessage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorDetails
         /// </summary>
         [DataMember(Name="errorDetails", EmitDefaultValue=false)]
         public List<Detail> ErrorDetails { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorMessageParams
         /// </summary>
         [DataMember(Name="errorMessageParams", EmitDefaultValue=false)]
         public Dictionary<string, string> ErrorMessageParams { get; set; }
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -318,7 +261,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Operation {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Complete: ").Append(Complete).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -432,37 +375,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Complete != null)
                     hash = hash * 59 + this.Complete.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Client != null)
                     hash = hash * 59 + this.Client.GetHashCode();
-                
+
                 if (this.ErrorMessage != null)
                     hash = hash * 59 + this.ErrorMessage.GetHashCode();
-                
+
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
-                
+
                 if (this.ErrorDetails != null)
                     hash = hash * 59 + this.ErrorDetails.GetHashCode();
-                
+
                 if (this.ErrorMessageParams != null)
                     hash = hash * 59 + this.ErrorMessageParams.GetHashCode();
-                
+
                 if (this.ActionName != null)
                     hash = hash * 59 + this.ActionName.GetHashCode();
-                
+
                 if (this.ActionStatus != null)
                     hash = hash * 59 + this.ActionStatus.GetHashCode();
-                
+
                 return hash;
             }
         }

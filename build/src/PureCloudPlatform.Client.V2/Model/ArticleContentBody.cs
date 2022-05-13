@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ArticleContentBody :  IEquatable<ArticleContentBody>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ArticleContentBody" /> class.
         /// </summary>
@@ -34,16 +26,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Presigned URL to retrieve the document content.
         /// </summary>
         /// <value>Presigned URL to retrieve the document content.</value>
         [DataMember(Name="locationUrl", EmitDefaultValue=false)]
         public string LocationUrl { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ArticleContentBody {\n");
-            
+
             sb.Append("  LocationUrl: ").Append(LocationUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -112,10 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LocationUrl != null)
                     hash = hash * 59 + this.LocationUrl.GetHashCode();
-                
+
                 return hash;
             }
         }

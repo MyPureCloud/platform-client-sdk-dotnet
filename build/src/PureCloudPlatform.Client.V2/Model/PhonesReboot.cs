@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PhonesReboot :  IEquatable<PhonesReboot>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhonesReboot" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of phone Ids to reboot.
         /// </summary>
         /// <value>The list of phone Ids to reboot.</value>
         [DataMember(Name="phoneIds", EmitDefaultValue=false)]
         public List<string> PhoneIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ID of the site for which to reboot all phones at that site. no.active.edge and phone.cannot.resolve errors are ignored.
         /// </summary>
         /// <value>ID of the site for which to reboot all phones at that site. no.active.edge and phone.cannot.resolve errors are ignored.</value>
         [DataMember(Name="siteId", EmitDefaultValue=false)]
         public string SiteId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhonesReboot {\n");
-            
+
             sb.Append("  PhoneIds: ").Append(PhoneIds).Append("\n");
             sb.Append("  SiteId: ").Append(SiteId).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PhoneIds != null)
                     hash = hash * 59 + this.PhoneIds.GetHashCode();
-                
+
                 if (this.SiteId != null)
                     hash = hash * 59 + this.SiteId.GetHashCode();
-                
+
                 return hash;
             }
         }

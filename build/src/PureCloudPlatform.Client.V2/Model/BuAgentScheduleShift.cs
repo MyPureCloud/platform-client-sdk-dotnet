@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuAgentScheduleShift :  IEquatable<BuAgentScheduleShift>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAgentScheduleShift" /> class.
         /// </summary>
@@ -65,61 +32,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the shift
         /// </summary>
         /// <value>The ID of the shift</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The start date of this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The start date of this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The length of this shift in minutes
         /// </summary>
         /// <value>The length of this shift in minutes</value>
         [DataMember(Name="lengthMinutes", EmitDefaultValue=false)]
         public int? LengthMinutes { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The activities associated with this shift
         /// </summary>
         /// <value>The activities associated with this shift</value>
         [DataMember(Name="activities", EmitDefaultValue=false)]
         public List<BuAgentScheduleActivity> Activities { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this shift was manually edited. This is only set by clients and is used for rescheduling
         /// </summary>
         /// <value>Whether this shift was manually edited. This is only set by clients and is used for rescheduling</value>
         [DataMember(Name="manuallyEdited", EmitDefaultValue=false)]
         public bool? ManuallyEdited { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The schedule to which this shift belongs
         /// </summary>
         /// <value>The schedule to which this shift belongs</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public BuScheduleReference Schedule { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuAgentScheduleShift {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  LengthMinutes: ").Append(LengthMinutes).Append("\n");
@@ -218,25 +185,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.LengthMinutes != null)
                     hash = hash * 59 + this.LengthMinutes.GetHashCode();
-                
+
                 if (this.Activities != null)
                     hash = hash * 59 + this.Activities.GetHashCode();
-                
+
                 if (this.ManuallyEdited != null)
                     hash = hash * 59 + this.ManuallyEdited.GetHashCode();
-                
+
                 if (this.Schedule != null)
                     hash = hash * 59 + this.Schedule.GetHashCode();
-                
+
                 return hash;
             }
         }

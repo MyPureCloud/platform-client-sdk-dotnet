@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScheduleGenerationWarning :  IEquatable<ScheduleGenerationWarning>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets UnableToScheduleRequiredDays
         /// </summary>
@@ -87,18 +74,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Saturday")]
             Saturday
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets NoNeedDays
         /// </summary>
@@ -155,30 +130,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Saturday")]
             Saturday
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScheduleGenerationWarning" /> class.
         /// </summary>
@@ -203,79 +154,79 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// ID of the user in the warning
         /// </summary>
         /// <value>ID of the user in the warning</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the user does not have the appropriate license to be scheduled
         /// </summary>
         /// <value>Whether the user does not have the appropriate license to be scheduled</value>
         [DataMember(Name="userNotLicensed", EmitDefaultValue=false)]
         public bool? UserNotLicensed { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the number of scheduled days exceeded the maximum days to schedule defined in the agent work plan
         /// </summary>
         /// <value>Whether the number of scheduled days exceeded the maximum days to schedule defined in the agent work plan</value>
         [DataMember(Name="unableToMeetMaxDays", EmitDefaultValue=false)]
         public bool? UnableToMeetMaxDays { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Days indicated as required to work in agent work plan where no viable shift was found to schedule
         /// </summary>
         /// <value>Days indicated as required to work in agent work plan where no viable shift was found to schedule</value>
         [DataMember(Name="unableToScheduleRequiredDays", EmitDefaultValue=false)]
         public List<UnableToScheduleRequiredDaysEnum> UnableToScheduleRequiredDays { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the schedule did not meet the minimum paid time for the week defined in the agent work plan
         /// </summary>
         /// <value>Whether the schedule did not meet the minimum paid time for the week defined in the agent work plan</value>
         [DataMember(Name="unableToMeetMinPaidForTheWeek", EmitDefaultValue=false)]
         public bool? UnableToMeetMinPaidForTheWeek { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the schedule exceeded the maximum paid time for the week defined in the agent work plan
         /// </summary>
         /// <value>Whether the schedule exceeded the maximum paid time for the week defined in the agent work plan</value>
         [DataMember(Name="unableToMeetMaxPaidForTheWeek", EmitDefaultValue=false)]
         public bool? UnableToMeetMaxPaidForTheWeek { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Days agent was scheduled but there was no need to meet. The scheduled days have no effect on service levels
         /// </summary>
         /// <value>Days agent was scheduled but there was no need to meet. The scheduled days have no effect on service levels</value>
         [DataMember(Name="noNeedDays", EmitDefaultValue=false)]
         public List<NoNeedDaysEnum> NoNeedDays { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the schedule did not meet the minimum time between shifts defined in the agent work plan
         /// </summary>
         /// <value>Whether the schedule did not meet the minimum time between shifts defined in the agent work plan</value>
         [DataMember(Name="shiftsTooCloseTogether", EmitDefaultValue=false)]
         public bool? ShiftsTooCloseTogether { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -284,7 +235,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScheduleGenerationWarning {\n");
-            
+
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  UserNotLicensed: ").Append(UserNotLicensed).Append("\n");
             sb.Append("  UnableToMeetMaxDays: ").Append(UnableToMeetMaxDays).Append("\n");
@@ -386,31 +337,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.UserNotLicensed != null)
                     hash = hash * 59 + this.UserNotLicensed.GetHashCode();
-                
+
                 if (this.UnableToMeetMaxDays != null)
                     hash = hash * 59 + this.UnableToMeetMaxDays.GetHashCode();
-                
+
                 if (this.UnableToScheduleRequiredDays != null)
                     hash = hash * 59 + this.UnableToScheduleRequiredDays.GetHashCode();
-                
+
                 if (this.UnableToMeetMinPaidForTheWeek != null)
                     hash = hash * 59 + this.UnableToMeetMinPaidForTheWeek.GetHashCode();
-                
+
                 if (this.UnableToMeetMaxPaidForTheWeek != null)
                     hash = hash * 59 + this.UnableToMeetMaxPaidForTheWeek.GetHashCode();
-                
+
                 if (this.NoNeedDays != null)
                     hash = hash * 59 + this.NoNeedDays.GetHashCode();
-                
+
                 if (this.ShiftsTooCloseTogether != null)
                     hash = hash * 59 + this.ShiftsTooCloseTogether.GetHashCode();
-                
+
                 return hash;
             }
         }

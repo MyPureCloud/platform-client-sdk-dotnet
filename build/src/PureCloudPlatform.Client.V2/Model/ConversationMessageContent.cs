@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationMessageContent :  IEquatable<ConversationMessageContent>
     {
-        
-        
         /// <summary>
         /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.
         /// </summary>
@@ -89,75 +87,22 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Carousel")]
             Carousel
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.
         /// </summary>
         /// <value>Type of this content element. If contentType = \"Attachment\" only one item is allowed.</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public ContentTypeEnum? ContentType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMessageContent" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConversationMessageContent() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMessageContent" /> class.
         /// </summary>
-        /// <param name="ContentType">Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. (required).</param>
+        /// <param name="ContentType">Type of this content element. If contentType = \"Attachment\" only one item is allowed. (required).</param>
         /// <param name="Location">Location content..</param>
         /// <param name="Story">Ephemeral story content..</param>
         /// <param name="Attachment">Attachment content..</param>
@@ -182,90 +127,90 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Location content.
         /// </summary>
         /// <value>Location content.</value>
         [DataMember(Name="location", EmitDefaultValue=false)]
         public ConversationContentLocation Location { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Ephemeral story content.
         /// </summary>
         /// <value>Ephemeral story content.</value>
         [DataMember(Name="story", EmitDefaultValue=false)]
         public ConversationContentStory Story { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Attachment content.
         /// </summary>
         /// <value>Attachment content.</value>
         [DataMember(Name="attachment", EmitDefaultValue=false)]
         public ConversationContentAttachment Attachment { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Quick reply content.
         /// </summary>
         /// <value>Quick reply content.</value>
         [DataMember(Name="quickReply", EmitDefaultValue=false)]
         public ConversationContentQuickReply QuickReply { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Template notification content.
         /// </summary>
         /// <value>Template notification content.</value>
         [DataMember(Name="template", EmitDefaultValue=false)]
         public ConversationContentNotificationTemplate Template { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Button response content.
         /// </summary>
         /// <value>Button response content.</value>
         [DataMember(Name="buttonResponse", EmitDefaultValue=false)]
         public ConversationContentButtonResponse ButtonResponse { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Generic Template Object
         /// </summary>
         /// <value>Generic Template Object</value>
         [DataMember(Name="generic", EmitDefaultValue=false)]
         public ConversationContentGeneric Generic { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Card (Generic Template) Object
         /// </summary>
         /// <value>Card (Generic Template) Object</value>
         [DataMember(Name="card", EmitDefaultValue=false)]
         public ConversationContentCard Card { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Carousel (Multiple Generic Template) Object
         /// </summary>
         /// <value>Carousel (Multiple Generic Template) Object</value>
         [DataMember(Name="carousel", EmitDefaultValue=false)]
         public ConversationContentCarousel Carousel { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -274,7 +219,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationMessageContent {\n");
-            
+
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  Location: ").Append(Location).Append("\n");
             sb.Append("  Story: ").Append(Story).Append("\n");
@@ -388,37 +333,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
+
                 if (this.Location != null)
                     hash = hash * 59 + this.Location.GetHashCode();
-                
+
                 if (this.Story != null)
                     hash = hash * 59 + this.Story.GetHashCode();
-                
+
                 if (this.Attachment != null)
                     hash = hash * 59 + this.Attachment.GetHashCode();
-                
+
                 if (this.QuickReply != null)
                     hash = hash * 59 + this.QuickReply.GetHashCode();
-                
+
                 if (this.Template != null)
                     hash = hash * 59 + this.Template.GetHashCode();
-                
+
                 if (this.ButtonResponse != null)
                     hash = hash * 59 + this.ButtonResponse.GetHashCode();
-                
+
                 if (this.Generic != null)
                     hash = hash * 59 + this.Generic.GetHashCode();
-                
+
                 if (this.Card != null)
                     hash = hash * 59 + this.Card.GetHashCode();
-                
+
                 if (this.Carousel != null)
                     hash = hash * 59 + this.Carousel.GetHashCode();
-                
+
                 return hash;
             }
         }

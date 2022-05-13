@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PhoneNumber :  IEquatable<PhoneNumber>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumber" /> class.
         /// </summary>
@@ -71,55 +38,55 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Display
         /// </summary>
         [DataMember(Name="display", EmitDefaultValue=false)]
         public string Display { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Extension
         /// </summary>
         [DataMember(Name="extension", EmitDefaultValue=false)]
         public long? Extension { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AcceptsSMS
         /// </summary>
         [DataMember(Name="acceptsSMS", EmitDefaultValue=false)]
         public bool? AcceptsSMS { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserInput
         /// </summary>
         [DataMember(Name="userInput", EmitDefaultValue=false)]
         public string UserInput { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets E164
         /// </summary>
         [DataMember(Name="e164", EmitDefaultValue=false)]
         public string E164 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CountryCode
         /// </summary>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneNumber {\n");
-            
+
             sb.Append("  Display: ").Append(Display).Append("\n");
             sb.Append("  Extension: ").Append(Extension).Append("\n");
             sb.Append("  AcceptsSMS: ").Append(AcceptsSMS).Append("\n");
@@ -218,25 +185,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Display != null)
                     hash = hash * 59 + this.Display.GetHashCode();
-                
+
                 if (this.Extension != null)
                     hash = hash * 59 + this.Extension.GetHashCode();
-                
+
                 if (this.AcceptsSMS != null)
                     hash = hash * 59 + this.AcceptsSMS.GetHashCode();
-                
+
                 if (this.UserInput != null)
                     hash = hash * 59 + this.UserInput.GetHashCode();
-                
+
                 if (this.E164 != null)
                     hash = hash * 59 + this.E164.GetHashCode();
-                
+
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
-                
+
                 return hash;
             }
         }

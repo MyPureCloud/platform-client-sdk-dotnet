@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningAssignmentRuleRunTopicLearningAssignmentsCreated :  IEquatable<LearningAssignmentRuleRunTopicLearningAssignmentsCreated>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignmentRuleRunTopicLearningAssignmentsCreated" /> class.
         /// </summary>
@@ -36,15 +28,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Module
         /// </summary>
         [DataMember(Name="module", EmitDefaultValue=false)]
         public LearningAssignmentRuleRunTopicLearningModuleReference Module { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningAssignmentRuleRunTopicLearningAssignmentsCreated {\n");
-            
+
             sb.Append("  Module: ").Append(Module).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -113,10 +105,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Module != null)
                     hash = hash * 59 + this.Module.GetHashCode();
-                
+
                 return hash;
             }
         }

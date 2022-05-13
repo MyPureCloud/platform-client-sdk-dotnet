@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FreeSeatingConfiguration :  IEquatable<FreeSeatingConfiguration>
     {
-        
-        
         /// <summary>
         /// The FreeSeatingState for FreeSeatingConfiguration. Can be ON, OFF, or PARTIAL. ON meaning disassociate the user after the ttl expires, OFF meaning never disassociate the user, and PARTIAL meaning only disassociate when a user explicitly clicks log out.
         /// </summary>
@@ -53,25 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PARTIAL")]
             Partial
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The FreeSeatingState for FreeSeatingConfiguration. Can be ON, OFF, or PARTIAL. ON meaning disassociate the user after the ttl expires, OFF meaning never disassociate the user, and PARTIAL meaning only disassociate when a user explicitly clicks log out.
         /// </summary>
         /// <value>The FreeSeatingState for FreeSeatingConfiguration. Can be ON, OFF, or PARTIAL. ON meaning disassociate the user after the ttl expires, OFF meaning never disassociate the user, and PARTIAL meaning only disassociate when a user explicitly clicks log out.</value>
         [DataMember(Name="freeSeatingState", EmitDefaultValue=false)]
         public FreeSeatingStateEnum? FreeSeatingState { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FreeSeatingConfiguration" /> class.
         /// </summary>
@@ -84,18 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The amount of time in minutes until an offline user is disassociated from their station
         /// </summary>
         /// <value>The amount of time in minutes until an offline user is disassociated from their station</value>
         [DataMember(Name="ttlMinutes", EmitDefaultValue=false)]
         public int? TtlMinutes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FreeSeatingConfiguration {\n");
-            
+
             sb.Append("  FreeSeatingState: ").Append(FreeSeatingState).Append("\n");
             sb.Append("  TtlMinutes: ").Append(TtlMinutes).Append("\n");
             sb.Append("}\n");
@@ -170,13 +155,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FreeSeatingState != null)
                     hash = hash * 59 + this.FreeSeatingState.GetHashCode();
-                
+
                 if (this.TtlMinutes != null)
                     hash = hash * 59 + this.TtlMinutes.GetHashCode();
-                
+
                 return hash;
             }
         }

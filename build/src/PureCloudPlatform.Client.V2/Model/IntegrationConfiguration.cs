@@ -18,55 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntegrationConfiguration :  IEquatable<IntegrationConfiguration>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationConfiguration" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected IntegrationConfiguration() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationConfiguration" /> class.
         /// </summary>
@@ -87,79 +44,79 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the integration, used to distinguish this integration from others of the same type.
         /// </summary>
         /// <value>The name of the integration, used to distinguish this integration from others of the same type.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version number required for updates.
         /// </summary>
         /// <value>Version number required for updates.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Key-value configuration settings described by the schema in the propertiesSchemaUri field.
         /// </summary>
         /// <value>Key-value configuration settings described by the schema in the propertiesSchemaUri field.</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public Object Properties { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Advanced configuration described by the schema in the advancedSchemaUri field.
         /// </summary>
         /// <value>Advanced configuration described by the schema in the advancedSchemaUri field.</value>
         [DataMember(Name="advanced", EmitDefaultValue=false)]
         public Object Advanced { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Notes about the integration.
         /// </summary>
         /// <value>Notes about the integration.</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Credentials required by the integration. The required keys are indicated in the credentials property of the Integration Type
         /// </summary>
         /// <value>Credentials required by the integration. The required keys are indicated in the credentials property of the Integration Type</value>
         [DataMember(Name="credentials", EmitDefaultValue=false)]
         public Dictionary<string, CredentialInfo> Credentials { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -168,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntegrationConfiguration {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
@@ -270,31 +227,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
-                
+
                 if (this.Advanced != null)
                     hash = hash * 59 + this.Advanced.GetHashCode();
-                
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 if (this.Credentials != null)
                     hash = hash * 59 + this.Credentials.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

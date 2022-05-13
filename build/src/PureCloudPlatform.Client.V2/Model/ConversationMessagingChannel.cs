@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationMessagingChannel :  IEquatable<ConversationMessagingChannel>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The provider type.
         /// </summary>
@@ -86,52 +81,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Sms")]
             Sms
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The provider type.
         /// </summary>
         /// <value>The provider type.</value>
         [DataMember(Name="platform", EmitDefaultValue=false)]
-        public PlatformEnum? Platform { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public PlatformEnum? Platform { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMessagingChannel" /> class.
         /// </summary>
@@ -140,72 +95,72 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The integration ID.
         /// </summary>
         /// <value>The integration ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Unique provider ID of the message such as a Facebook message ID.
         /// </summary>
         /// <value>Unique provider ID of the message such as a Facebook message ID.</value>
         [DataMember(Name="messageId", EmitDefaultValue=false)]
         public string MessageId { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Information about the recipient the message is sent to.
         /// </summary>
         /// <value>Information about the recipient the message is sent to.</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public ConversationMessagingToRecipient To { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Information about the recipient the message is received from.
         /// </summary>
         /// <value>Information about the recipient the message is received from.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public ConversationMessagingFromRecipient From { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Original time of the event. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Original time of the event. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Time the message was edited. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Time the message was edited. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Time the message was deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Time the message was deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateDeleted", EmitDefaultValue=false)]
         public DateTime? DateDeleted { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -214,7 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationMessagingChannel {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Platform: ").Append(Platform).Append("\n");
             sb.Append("  MessageId: ").Append(MessageId).Append("\n");
@@ -316,31 +271,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Platform != null)
                     hash = hash * 59 + this.Platform.GetHashCode();
-                
+
                 if (this.MessageId != null)
                     hash = hash * 59 + this.MessageId.GetHashCode();
-                
+
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
-                
+
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
-                
+
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.DateDeleted != null)
                     hash = hash * 59 + this.DateDeleted.GetHashCode();
-                
+
                 return hash;
             }
         }

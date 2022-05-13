@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebChatMemberInfo :  IEquatable<WebChatMemberInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The role of the member, one of [agent, customer, acd, workflow]
         /// </summary>
@@ -80,22 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ACD")]
             Acd
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The connection state of this member.
         /// </summary>
@@ -129,57 +90,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ALERTING")]
             Alerting
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The role of the member, one of [agent, customer, acd, workflow]
         /// </summary>
         /// <value>The role of the member, one of [agent, customer, acd, workflow]</value>
         [DataMember(Name="role", EmitDefaultValue=false)]
         public RoleEnum? Role { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The connection state of this member.
         /// </summary>
         /// <value>The connection state of this member.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatMemberInfo" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WebChatMemberInfo() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatMemberInfo" /> class.
         /// </summary>
@@ -214,110 +142,110 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The communicationId of this member.
         /// </summary>
         /// <value>The communicationId of this member.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The display name of the member.
         /// </summary>
         /// <value>The display name of the member.</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The first name of the member.
         /// </summary>
         /// <value>The first name of the member.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The last name of the member.
         /// </summary>
         /// <value>The last name of the member.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The email address of the member.
         /// </summary>
         /// <value>The email address of the member.</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The phone number of the member.
         /// </summary>
         /// <value>The phone number of the member.</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The url to the avatar image of the member.
         /// </summary>
         /// <value>The url to the avatar image of the member.</value>
         [DataMember(Name="avatarImageUrl", EmitDefaultValue=false)]
         public string AvatarImageUrl { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The time the member joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time the member joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="joinDate", EmitDefaultValue=false)]
         public DateTime? JoinDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time the member left the conversation, or null if the member is still active in the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time the member left the conversation, or null if the member is still active in the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="leaveDate", EmitDefaultValue=false)]
         public DateTime? LeaveDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If true, the guest member is an authenticated guest.
         /// </summary>
         /// <value>If true, the guest member is an authenticated guest.</value>
         [DataMember(Name="authenticatedGuest", EmitDefaultValue=false)]
         public bool? AuthenticatedGuest { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Any custom fields of information pertaining to this member.
         /// </summary>
         /// <value>Any custom fields of information pertaining to this member.</value>
         [DataMember(Name="customFields", EmitDefaultValue=false)]
         public Dictionary<string, string> CustomFields { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -326,7 +254,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebChatMemberInfo {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
@@ -458,46 +386,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
-                
+
                 if (this.FirstName != null)
                     hash = hash * 59 + this.FirstName.GetHashCode();
-                
+
                 if (this.LastName != null)
                     hash = hash * 59 + this.LastName.GetHashCode();
-                
+
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
+
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
-                
+
                 if (this.AvatarImageUrl != null)
                     hash = hash * 59 + this.AvatarImageUrl.GetHashCode();
-                
+
                 if (this.Role != null)
                     hash = hash * 59 + this.Role.GetHashCode();
-                
+
                 if (this.JoinDate != null)
                     hash = hash * 59 + this.JoinDate.GetHashCode();
-                
+
                 if (this.LeaveDate != null)
                     hash = hash * 59 + this.LeaveDate.GetHashCode();
-                
+
                 if (this.AuthenticatedGuest != null)
                     hash = hash * 59 + this.AuthenticatedGuest.GetHashCode();
-                
+
                 if (this.CustomFields != null)
                     hash = hash * 59 + this.CustomFields.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 return hash;
             }
         }

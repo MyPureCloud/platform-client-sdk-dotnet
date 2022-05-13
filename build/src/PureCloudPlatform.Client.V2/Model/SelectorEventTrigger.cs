@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SelectorEventTrigger :  IEquatable<SelectorEventTrigger>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SelectorEventTrigger" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SelectorEventTrigger() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SelectorEventTrigger" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Element that triggers event.
         /// </summary>
         /// <value>Element that triggers event.</value>
         [DataMember(Name="selector", EmitDefaultValue=false)]
         public string Selector { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of event triggered when element matching selector is interacted with.
         /// </summary>
         /// <value>Name of event triggered when element matching selector is interacted with.</value>
         [DataMember(Name="eventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SelectorEventTrigger {\n");
-            
+
             sb.Append("  Selector: ").Append(Selector).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Selector != null)
                     hash = hash * 59 + this.Selector.GetHashCode();
-                
+
                 if (this.EventName != null)
                     hash = hash * 59 + this.EventName.GetHashCode();
-                
+
                 return hash;
             }
         }

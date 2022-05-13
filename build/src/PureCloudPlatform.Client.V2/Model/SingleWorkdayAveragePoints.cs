@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SingleWorkdayAveragePoints :  IEquatable<SingleWorkdayAveragePoints>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SingleWorkdayAveragePoints" /> class.
         /// </summary>
@@ -49,43 +26,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Queried target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Queried target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateWorkday", EmitDefaultValue=false)]
         public String DateWorkday { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The targeted division for the average points
         /// </summary>
         /// <value>The targeted division for the average points</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public Division Division { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The average points per agent earned within the division
         /// </summary>
         /// <value>The average points per agent earned within the division</value>
         [DataMember(Name="averagePoints", EmitDefaultValue=false)]
         public double? AveragePoints { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The targeted performance profile for the average points
         /// </summary>
         /// <value>The targeted performance profile for the average points</value>
         [DataMember(Name="performanceProfile", EmitDefaultValue=false)]
         public AddressableEntityRef PerformanceProfile { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -94,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SingleWorkdayAveragePoints {\n");
-            
+
             sb.Append("  DateWorkday: ").Append(DateWorkday).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  AveragePoints: ").Append(AveragePoints).Append("\n");
@@ -172,19 +149,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DateWorkday != null)
                     hash = hash * 59 + this.DateWorkday.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.AveragePoints != null)
                     hash = hash * 59 + this.AveragePoints.GetHashCode();
-                
+
                 if (this.PerformanceProfile != null)
                     hash = hash * 59 + this.PerformanceProfile.GetHashCode();
-                
+
                 return hash;
             }
         }

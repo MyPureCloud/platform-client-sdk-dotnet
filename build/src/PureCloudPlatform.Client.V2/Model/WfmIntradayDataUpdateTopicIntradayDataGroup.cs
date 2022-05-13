@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmIntradayDataUpdateTopicIntradayDataGroup :  IEquatable<WfmIntradayDataUpdateTopicIntradayDataGroup>
     {
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
@@ -64,49 +62,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Message")]
             Message
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmIntradayDataUpdateTopicIntradayDataGroup" /> class.
         /// </summary>
@@ -129,57 +89,57 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets ForecastDataPerInterval
         /// </summary>
         [DataMember(Name="forecastDataPerInterval", EmitDefaultValue=false)]
         public List<WfmIntradayDataUpdateTopicIntradayForecastData> ForecastDataPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ScheduleDataPerInterval
         /// </summary>
         [DataMember(Name="scheduleDataPerInterval", EmitDefaultValue=false)]
         public List<WfmIntradayDataUpdateTopicIntradayScheduleData> ScheduleDataPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets HistoricalAgentDataPerInterval
         /// </summary>
         [DataMember(Name="historicalAgentDataPerInterval", EmitDefaultValue=false)]
         public List<WfmIntradayDataUpdateTopicIntradayHistoricalAgentData> HistoricalAgentDataPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets HistoricalQueueDataPerInterval
         /// </summary>
         [DataMember(Name="historicalQueueDataPerInterval", EmitDefaultValue=false)]
         public List<WfmIntradayDataUpdateTopicIntradayHistoricalQueueData> HistoricalQueueDataPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PerformancePredictionAgentDataPerInterval
         /// </summary>
         [DataMember(Name="performancePredictionAgentDataPerInterval", EmitDefaultValue=false)]
         public List<WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData> PerformancePredictionAgentDataPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PerformancePredictionQueueDataPerInterval
         /// </summary>
         [DataMember(Name="performancePredictionQueueDataPerInterval", EmitDefaultValue=false)]
         public List<WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData> PerformancePredictionQueueDataPerInterval { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,7 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmIntradayDataUpdateTopicIntradayDataGroup {\n");
-            
+
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  ForecastDataPerInterval: ").Append(ForecastDataPerInterval).Append("\n");
             sb.Append("  ScheduleDataPerInterval: ").Append(ScheduleDataPerInterval).Append("\n");
@@ -284,28 +244,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.ForecastDataPerInterval != null)
                     hash = hash * 59 + this.ForecastDataPerInterval.GetHashCode();
-                
+
                 if (this.ScheduleDataPerInterval != null)
                     hash = hash * 59 + this.ScheduleDataPerInterval.GetHashCode();
-                
+
                 if (this.HistoricalAgentDataPerInterval != null)
                     hash = hash * 59 + this.HistoricalAgentDataPerInterval.GetHashCode();
-                
+
                 if (this.HistoricalQueueDataPerInterval != null)
                     hash = hash * 59 + this.HistoricalQueueDataPerInterval.GetHashCode();
-                
+
                 if (this.PerformancePredictionAgentDataPerInterval != null)
                     hash = hash * 59 + this.PerformancePredictionAgentDataPerInterval.GetHashCode();
-                
+
                 if (this.PerformancePredictionQueueDataPerInterval != null)
                     hash = hash * 59 + this.PerformancePredictionQueueDataPerInterval.GetHashCode();
-                
+
                 return hash;
             }
         }

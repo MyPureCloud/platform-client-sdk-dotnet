@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuIntradayDataUpdateTopicBuIntradayNotification :  IEquatable<WfmBuIntradayDataUpdateTopicBuIntradayNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuIntradayDataUpdateTopicBuIntradayNotification" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets OperationId
         /// </summary>
         [DataMember(Name="operationId", EmitDefaultValue=false)]
         public string OperationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Result
         /// </summary>
         [DataMember(Name="result", EmitDefaultValue=false)]
         public WfmBuIntradayDataUpdateTopicBuIntradayResult Result { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuIntradayDataUpdateTopicBuIntradayNotification {\n");
-            
+
             sb.Append("  OperationId: ").Append(OperationId).Append("\n");
             sb.Append("  Result: ").Append(Result).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OperationId != null)
                     hash = hash * 59 + this.OperationId.GetHashCode();
-                
+
                 if (this.Result != null)
                     hash = hash * 59 + this.Result.GetHashCode();
-                
+
                 return hash;
             }
         }

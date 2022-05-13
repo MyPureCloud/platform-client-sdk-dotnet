@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkMetrics :  IEquatable<TrunkMetrics>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetrics" /> class.
         /// </summary>
@@ -64,48 +36,48 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
         public DateTime? EventTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LogicalInterface
         /// </summary>
         [DataMember(Name="logicalInterface", EmitDefaultValue=false)]
         public DomainEntityRef LogicalInterface { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Trunk
         /// </summary>
         [DataMember(Name="trunk", EmitDefaultValue=false)]
         public DomainEntityRef Trunk { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Calls
         /// </summary>
         [DataMember(Name="calls", EmitDefaultValue=false)]
         public TrunkMetricsCalls Calls { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Qos
         /// </summary>
         [DataMember(Name="qos", EmitDefaultValue=false)]
         public TrunkMetricsQoS Qos { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -114,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkMetrics {\n");
-            
+
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  LogicalInterface: ").Append(LogicalInterface).Append("\n");
             sb.Append("  Trunk: ").Append(Trunk).Append("\n");
@@ -198,22 +170,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EventTime != null)
                     hash = hash * 59 + this.EventTime.GetHashCode();
-                
+
                 if (this.LogicalInterface != null)
                     hash = hash * 59 + this.LogicalInterface.GetHashCode();
-                
+
                 if (this.Trunk != null)
                     hash = hash * 59 + this.Trunk.GetHashCode();
-                
+
                 if (this.Calls != null)
                     hash = hash * 59 + this.Calls.GetHashCode();
-                
+
                 if (this.Qos != null)
                     hash = hash * 59 + this.Qos.GetHashCode();
-                
+
                 return hash;
             }
         }

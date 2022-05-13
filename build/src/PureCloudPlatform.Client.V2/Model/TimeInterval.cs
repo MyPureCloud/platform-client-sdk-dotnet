@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TimeInterval :  IEquatable<TimeInterval>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeInterval" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Months
         /// </summary>
         [DataMember(Name="months", EmitDefaultValue=false)]
         public int? Months { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Weeks
         /// </summary>
         [DataMember(Name="weeks", EmitDefaultValue=false)]
         public int? Weeks { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Days
         /// </summary>
         [DataMember(Name="days", EmitDefaultValue=false)]
         public int? Days { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Hours
         /// </summary>
         [DataMember(Name="hours", EmitDefaultValue=false)]
         public int? Hours { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimeInterval {\n");
-            
+
             sb.Append("  Months: ").Append(Months).Append("\n");
             sb.Append("  Weeks: ").Append(Weeks).Append("\n");
             sb.Append("  Days: ").Append(Days).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Months != null)
                     hash = hash * 59 + this.Months.GetHashCode();
-                
+
                 if (this.Weeks != null)
                     hash = hash * 59 + this.Weeks.GetHashCode();
-                
+
                 if (this.Days != null)
                     hash = hash * 59 + this.Days.GetHashCode();
-                
+
                 if (this.Hours != null)
                     hash = hash * 59 + this.Hours.GetHashCode();
-                
+
                 return hash;
             }
         }

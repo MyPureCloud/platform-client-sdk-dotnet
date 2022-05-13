@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContentList :  IEquatable<ContentList>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of list this instance represents.
         /// </summary>
@@ -50,47 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Vertical")]
             Vertical
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of list this instance represents.
         /// </summary>
         /// <value>The type of list this instance represents.</value>
         [DataMember(Name="listType", EmitDefaultValue=false)]
         public ListTypeEnum? ListType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentList" /> class.
         /// </summary>
@@ -113,63 +73,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A unique ID assigned to this rich message content.
         /// </summary>
         /// <value>A unique ID assigned to this rich message content.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Text to show in the title.
         /// </summary>
         /// <value>Text to show in the title.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text to show in the description.
         /// </summary>
         /// <value>Text to show in the description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Label for Submit button.
         /// </summary>
         /// <value>Label for Submit button.</value>
         [DataMember(Name="submitLabel", EmitDefaultValue=false)]
         public string SubmitLabel { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list actions (Deprecated).
         /// </summary>
         /// <value>The list actions (Deprecated).</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public ContentActions Actions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// An array of component objects.
         /// </summary>
         /// <value>An array of component objects.</value>
         [DataMember(Name="components", EmitDefaultValue=false)]
         public List<ListItemComponent> Components { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -178,7 +138,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContentList {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ListType: ").Append(ListType).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
@@ -274,28 +234,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.ListType != null)
                     hash = hash * 59 + this.ListType.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.SubmitLabel != null)
                     hash = hash * 59 + this.SubmitLabel.GetHashCode();
-                
+
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
+
                 if (this.Components != null)
                     hash = hash * 59 + this.Components.GetHashCode();
-                
+
                 return hash;
             }
         }

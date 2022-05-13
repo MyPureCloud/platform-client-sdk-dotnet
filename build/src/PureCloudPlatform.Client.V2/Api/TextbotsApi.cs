@@ -8,14 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
-    
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface ITextbotsApi : IApiAccessor
     {
         #region Synchronous Operations
-        
+
         /// <summary>
         /// Find bots using the currently configured friendly name or ID.
         /// </summary>
@@ -43,7 +43,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
         /// <returns>ApiResponse of BotSearchResponseEntityListing</returns>
         ApiResponse<BotSearchResponseEntityListing> GetTextbotsBotsSearchWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Issue a bot flow turn event
         /// </summary>
@@ -67,12 +67,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="turnRequest"></param>
         /// <returns>ApiResponse of TextBotFlowTurnResponse</returns>
         ApiResponse<TextBotFlowTurnResponse> PostTextbotsBotflowsSessionTurnsWithHttpInfo (string sessionId, TextBotFlowTurnRequest turnRequest);
-        
+
         /// <summary>
         /// Create an execution instance of a bot flow definition.
         /// </summary>
         /// <remarks>
-        /// The launch is asynchronous; use the returned instance ID to post turns to it using &#39;POST /api/v2/textbots/botflows/sessions/{sessionId}/turns&#39;.
+        /// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="launchRequest"></param>
@@ -83,13 +83,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create an execution instance of a bot flow definition.
         /// </summary>
         /// <remarks>
-        /// The launch is asynchronous; use the returned instance ID to post turns to it using &#39;POST /api/v2/textbots/botflows/sessions/{sessionId}/turns&#39;.
+        /// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="launchRequest"></param>
         /// <returns>ApiResponse of TextBotFlowLaunchResponse</returns>
         ApiResponse<TextBotFlowLaunchResponse> PostTextbotsBotflowsSessionsWithHttpInfo (TextBotFlowLaunchRequest launchRequest);
-        
+
         /// <summary>
         /// Send an intent to a bot to start a dialog/interact with it via text
         /// </summary>
@@ -111,11 +111,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="postTextRequest"></param>
         /// <returns>ApiResponse of PostTextResponse</returns>
         ApiResponse<PostTextResponse> PostTextbotsBotsExecuteWithHttpInfo (PostTextRequest postTextRequest);
-        
+
         #endregion Synchronous Operations
-        
+
         #region Asynchronous Operations
-        
+
         /// <summary>
         /// Find bots using the currently configured friendly name or ID.
         /// </summary>
@@ -143,7 +143,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (BotSearchResponseEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<BotSearchResponseEntityListing>> GetTextbotsBotsSearchAsyncWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Issue a bot flow turn event
         /// </summary>
@@ -167,12 +167,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="turnRequest"></param>
         /// <returns>Task of ApiResponse (TextBotFlowTurnResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TextBotFlowTurnResponse>> PostTextbotsBotflowsSessionTurnsAsyncWithHttpInfo (string sessionId, TextBotFlowTurnRequest turnRequest);
-        
+
         /// <summary>
         /// Create an execution instance of a bot flow definition.
         /// </summary>
         /// <remarks>
-        /// The launch is asynchronous; use the returned instance ID to post turns to it using &#39;POST /api/v2/textbots/botflows/sessions/{sessionId}/turns&#39;.
+        /// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="launchRequest"></param>
@@ -183,13 +183,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create an execution instance of a bot flow definition.
         /// </summary>
         /// <remarks>
-        /// The launch is asynchronous; use the returned instance ID to post turns to it using &#39;POST /api/v2/textbots/botflows/sessions/{sessionId}/turns&#39;.
+        /// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="launchRequest"></param>
         /// <returns>Task of ApiResponse (TextBotFlowLaunchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TextBotFlowLaunchResponse>> PostTextbotsBotflowsSessionsAsyncWithHttpInfo (TextBotFlowLaunchRequest launchRequest);
-        
+
         /// <summary>
         /// Send an intent to a bot to start a dialog/interact with it via text
         /// </summary>
@@ -211,9 +211,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="postTextRequest"></param>
         /// <returns>Task of ApiResponse (PostTextResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PostTextResponse>> PostTextbotsBotsExecuteAsyncWithHttpInfo (PostTextRequest postTextRequest);
-        
+
         #endregion Asynchronous Operations
-        
+
     }
 
     /// <summary>
@@ -303,7 +303,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
-        
+
         /// <summary>
         /// Find bots using the currently configured friendly name or ID. The name does allow case-insensitive partial string matches or by IDs (up to 50), but not both at the same time. Optionally you can limit the scope of the search by providing one or more bot types.  You can specify the maximum results to return, up to a limit of 100
         /// </summary>
@@ -341,17 +341,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -375,7 +374,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -404,7 +403,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Find bots using the currently configured friendly name or ID. The name does allow case-insensitive partial string matches or by IDs (up to 50), but not both at the same time. Optionally you can limit the scope of the search by providing one or more bot types.  You can specify the maximum results to return, up to a limit of 100
         /// </summary>
@@ -443,16 +442,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -477,7 +475,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -506,8 +504,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Issue a bot flow turn event Send a turn event to an executing bot flow and produce the next action to take.
         /// </summary>
@@ -547,7 +545,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -555,9 +552,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -581,9 +579,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(turnRequest); // http body (model) parameter
             else
                 localVarPostBody = turnRequest; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -612,7 +610,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Issue a bot flow turn event Send a turn event to an executing bot flow and produce the next action to take.
         /// </summary>
@@ -655,7 +653,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -663,8 +660,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -689,9 +687,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(turnRequest); // http body (model) parameter
             else
                 localVarPostBody = turnRequest; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -720,10 +718,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Create an execution instance of a bot flow definition. The launch is asynchronous; use the returned instance ID to post turns to it using &#39;POST /api/v2/textbots/botflows/sessions/{sessionId}/turns&#39;.
+        /// Create an execution instance of a bot flow definition. The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="launchRequest"></param>
@@ -735,7 +733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create an execution instance of a bot flow definition. The launch is asynchronous; use the returned instance ID to post turns to it using &#39;POST /api/v2/textbots/botflows/sessions/{sessionId}/turns&#39;.
+        /// Create an execution instance of a bot flow definition. The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="launchRequest"></param>
@@ -756,7 +754,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -764,9 +761,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -789,9 +787,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(launchRequest); // http body (model) parameter
             else
                 localVarPostBody = launchRequest; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -820,9 +818,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Create an execution instance of a bot flow definition. The launch is asynchronous; use the returned instance ID to post turns to it using &#39;POST /api/v2/textbots/botflows/sessions/{sessionId}/turns&#39;.
+        /// Create an execution instance of a bot flow definition. The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="launchRequest"></param>
@@ -835,7 +833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create an execution instance of a bot flow definition. The launch is asynchronous; use the returned instance ID to post turns to it using &#39;POST /api/v2/textbots/botflows/sessions/{sessionId}/turns&#39;.
+        /// Create an execution instance of a bot flow definition. The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="launchRequest"></param>
@@ -857,7 +855,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -865,8 +862,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -890,9 +888,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(launchRequest); // http body (model) parameter
             else
                 localVarPostBody = launchRequest; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -921,8 +919,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Send an intent to a bot to start a dialog/interact with it via text This will either start a bot with the given id or relay a communication to an existing bot session.
         /// </summary>
@@ -957,7 +955,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -965,9 +962,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -990,9 +988,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(postTextRequest); // http body (model) parameter
             else
                 localVarPostBody = postTextRequest; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1021,7 +1019,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Send an intent to a bot to start a dialog/interact with it via text This will either start a bot with the given id or relay a communication to an existing bot session.
         /// </summary>
@@ -1058,7 +1056,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -1066,8 +1063,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -1091,9 +1089,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(postTextRequest); // http body (model) parameter
             else
                 localVarPostBody = postTextRequest; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -1122,8 +1120,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
     }
-    
+
 }

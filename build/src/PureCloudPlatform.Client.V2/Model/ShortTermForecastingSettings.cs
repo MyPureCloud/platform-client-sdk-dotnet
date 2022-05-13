@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ShortTermForecastingSettings :  IEquatable<ShortTermForecastingSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ShortTermForecastingSettings" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The number of weeks to consider by default when generating a volume forecast
         /// </summary>
         /// <value>The number of weeks to consider by default when generating a volume forecast</value>
         [DataMember(Name="defaultHistoryWeeks", EmitDefaultValue=false)]
         public int? DefaultHistoryWeeks { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ShortTermForecastingSettings {\n");
-            
+
             sb.Append("  DefaultHistoryWeeks: ").Append(DefaultHistoryWeeks).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DefaultHistoryWeeks != null)
                     hash = hash * 59 + this.DefaultHistoryWeeks.GetHashCode();
-                
+
                 return hash;
             }
         }

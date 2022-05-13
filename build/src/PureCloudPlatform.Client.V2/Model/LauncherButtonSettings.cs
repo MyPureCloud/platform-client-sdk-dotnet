@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LauncherButtonSettings :  IEquatable<LauncherButtonSettings>
     {
-        
-        
         /// <summary>
         /// The visibility settings for the button
         /// </summary>
@@ -53,20 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OnDemand")]
             Ondemand
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// The visibility settings for the button
         /// </summary>
         /// <value>The visibility settings for the button</value>
         [DataMember(Name="visibility", EmitDefaultValue=false)]
         public VisibilityEnum? Visibility { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LauncherButtonSettings" /> class.
         /// </summary>
@@ -77,9 +67,9 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -88,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LauncherButtonSettings {\n");
-            
+
             sb.Append("  Visibility: ").Append(Visibility).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -148,10 +138,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Visibility != null)
                     hash = hash * 59 + this.Visibility.GetHashCode();
-                
+
                 return hash;
             }
         }

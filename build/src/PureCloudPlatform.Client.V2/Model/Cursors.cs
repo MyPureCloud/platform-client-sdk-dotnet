@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Cursors :  IEquatable<Cursors>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Cursors" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Before
         /// </summary>
         [DataMember(Name="before", EmitDefaultValue=false)]
         public string Before { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets After
         /// </summary>
         [DataMember(Name="after", EmitDefaultValue=false)]
         public string After { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Cursors {\n");
-            
+
             sb.Append("  Before: ").Append(Before).Append("\n");
             sb.Append("  After: ").Append(After).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Before != null)
                     hash = hash * 59 + this.Before.GetHashCode();
-                
+
                 if (this.After != null)
                     hash = hash * 59 + this.After.GetHashCode();
-                
+
                 return hash;
             }
         }

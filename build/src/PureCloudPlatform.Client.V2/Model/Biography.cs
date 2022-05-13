@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Biography :  IEquatable<Biography>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Biography" /> class.
         /// </summary>
@@ -64,49 +36,49 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Personal detailed description
         /// </summary>
         /// <value>Personal detailed description</value>
         [DataMember(Name="biography", EmitDefaultValue=false)]
         public string _Biography { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Interests
         /// </summary>
         [DataMember(Name="interests", EmitDefaultValue=false)]
         public List<string> Interests { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Hobbies
         /// </summary>
         [DataMember(Name="hobbies", EmitDefaultValue=false)]
         public List<string> Hobbies { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Spouse
         /// </summary>
         [DataMember(Name="spouse", EmitDefaultValue=false)]
         public string Spouse { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User education details
         /// </summary>
         /// <value>User education details</value>
         [DataMember(Name="education", EmitDefaultValue=false)]
         public List<Education> Education { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -115,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Biography {\n");
-            
+
             sb.Append("  _Biography: ").Append(_Biography).Append("\n");
             sb.Append("  Interests: ").Append(Interests).Append("\n");
             sb.Append("  Hobbies: ").Append(Hobbies).Append("\n");
@@ -199,22 +171,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this._Biography != null)
                     hash = hash * 59 + this._Biography.GetHashCode();
-                
+
                 if (this.Interests != null)
                     hash = hash * 59 + this.Interests.GetHashCode();
-                
+
                 if (this.Hobbies != null)
                     hash = hash * 59 + this.Hobbies.GetHashCode();
-                
+
                 if (this.Spouse != null)
                     hash = hash * 59 + this.Spouse.GetHashCode();
-                
+
                 if (this.Education != null)
                     hash = hash * 59 + this.Education.GetHashCode();
-                
+
                 return hash;
             }
         }

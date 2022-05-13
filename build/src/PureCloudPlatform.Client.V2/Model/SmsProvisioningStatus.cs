@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SmsProvisioningStatus :  IEquatable<SmsProvisioningStatus>
     {
-        
-        
         /// <summary>
         /// Provisioning action
         /// </summary>
@@ -59,10 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Delete")]
             Delete
         }
-        
-        
-        
-        
         /// <summary>
         /// Provisioning state
         /// </summary>
@@ -96,39 +90,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Failed")]
             Failed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Provisioning action
         /// </summary>
         /// <value>Provisioning action</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
-        
         /// <summary>
         /// Provisioning state
         /// </summary>
         /// <value>Provisioning state</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsProvisioningStatus" /> class.
         /// </summary>
@@ -145,29 +118,29 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         /// <summary>
         /// Any error associated with a Failed state
         /// </summary>
         /// <value>Any error associated with a Failed state</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public ErrorBody Error { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The phone number version associated with the provisioning action
         /// </summary>
         /// <value>The phone number version associated with the provisioning action</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public long? Version { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -176,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SmsProvisioningStatus {\n");
-            
+
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
@@ -254,19 +227,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 return hash;
             }
         }

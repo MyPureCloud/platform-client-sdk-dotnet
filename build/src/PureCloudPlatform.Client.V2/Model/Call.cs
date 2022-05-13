@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Call :  IEquatable<Call>
     {
-        
-        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -101,13 +99,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "none")]
             None
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the call
         /// </summary>
@@ -135,13 +126,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// State of recording on this call.
         /// </summary>
@@ -175,28 +159,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "paused")]
             Paused
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
@@ -308,148 +270,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "uncallable")]
             Uncallable
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
         /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the call
         /// </summary>
         /// <value>The direction of the call</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// State of recording on this call.
         /// </summary>
         /// <value>State of recording on this call.</value>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Call" /> class.
         /// </summary>
@@ -458,11 +302,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Direction">The direction of the call.</param>
         /// <param name="Recording">True if this call is being recorded..</param>
         /// <param name="RecordingState">State of recording on this call..</param>
-        /// <param name="Muted">True if this call is muted so that remote participants can&#39;t hear any audio from this end..</param>
+        /// <param name="Muted">True if this call is muted so that remote participants can't hear any audio from this end..</param>
         /// <param name="Confined">True if this call is held and the person on this side hears hold music..</param>
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
         /// <param name="RecordingId">A globally unique identifier for the recording associated with this call..</param>
-        /// <param name="Segments">The time line of the participant&#39;s call, divided into activity segments..</param>
+        /// <param name="Segments">The time line of the participant's call, divided into activity segments..</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="StartHoldTime">The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -516,239 +360,239 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// A globally unique identifier for this communication.
         /// </summary>
         /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// True if this call is being recorded.
         /// </summary>
         /// <value>True if this call is being recorded.</value>
         [DataMember(Name="recording", EmitDefaultValue=false)]
         public bool? Recording { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
-        /// True if this call is muted so that remote participants can&#39;t hear any audio from this end.
+        /// True if this call is muted so that remote participants can't hear any audio from this end.
         /// </summary>
-        /// <value>True if this call is muted so that remote participants can&#39;t hear any audio from this end.</value>
+        /// <value>True if this call is muted so that remote participants can't hear any audio from this end.</value>
         [DataMember(Name="muted", EmitDefaultValue=false)]
         public bool? Muted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if this call is held and the person on this side hears hold music.
         /// </summary>
         /// <value>True if this call is held and the person on this side hears hold music.</value>
         [DataMember(Name="confined", EmitDefaultValue=false)]
         public bool? Confined { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if this call is held and the person on this side hears silence.
         /// </summary>
         /// <value>True if this call is held and the person on this side hears silence.</value>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A globally unique identifier for the recording associated with this call.
         /// </summary>
         /// <value>A globally unique identifier for the recording associated with this call.</value>
         [DataMember(Name="recordingId", EmitDefaultValue=false)]
         public string RecordingId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The time line of the participant&#39;s call, divided into activity segments.
+        /// The time line of the participant's call, divided into activity segments.
         /// </summary>
-        /// <value>The time line of the participant&#39;s call, divided into activity segments.</value>
+        /// <value>The time line of the participant's call, divided into activity segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ErrorInfo ErrorInfo { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If call is an outbound fax of a document from content management, then this is the id in content management.
         /// </summary>
         /// <value>If call is an outbound fax of a document from content management, then this is the id in content management.</value>
         [DataMember(Name="documentId", EmitDefaultValue=false)]
         public string DocumentId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startAlertingTime", EmitDefaultValue=false)]
         public DateTime? StartAlertingTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of reasons that this call was disconnected. This will be set once the call disconnects.
         /// </summary>
         /// <value>List of reasons that this call was disconnected. This will be set once the call disconnects.</value>
         [DataMember(Name="disconnectReasons", EmitDefaultValue=false)]
         public List<DisconnectReason> DisconnectReasons { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Extra information on fax transmission.
         /// </summary>
         /// <value>Extra information on fax transmission.</value>
         [DataMember(Name="faxStatus", EmitDefaultValue=false)]
         public FaxStatus FaxStatus { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The source provider for the call.
         /// </summary>
         /// <value>The source provider for the call.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The UUID of the script to use.
         /// </summary>
         /// <value>The UUID of the script to use.</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the peer communication corresponding to a matching leg for this communication.
         /// </summary>
         /// <value>The id of the peer communication corresponding to a matching leg for this communication.</value>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User to User Information (UUI) data managed by SIP session application.
         /// </summary>
         /// <value>User to User Information (UUI) data managed by SIP session application.</value>
         [DataMember(Name="uuiData", EmitDefaultValue=false)]
         public string UuiData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Address and name data for a call endpoint.
         /// </summary>
         /// <value>Address and name data for a call endpoint.</value>
         [DataMember(Name="self", EmitDefaultValue=false)]
         public Address Self { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Address and name data for a call endpoint.
         /// </summary>
         /// <value>Address and name data for a call endpoint.</value>
         [DataMember(Name="other", EmitDefaultValue=false)]
         public Address Other { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Call wrap up or disposition data.
         /// </summary>
         /// <value>Call wrap up or disposition data.</value>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public Wrapup Wrapup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// After-call work for the communication.
         /// </summary>
         /// <value>After-call work for the communication.</value>
         [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
         public AfterCallWork AfterCallWork { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested.
         /// </summary>
         /// <value>Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested.</value>
         [DataMember(Name="afterCallWorkRequired", EmitDefaultValue=false)]
         public bool? AfterCallWorkRequired { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation.
         /// </summary>
         /// <value>UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation.</value>
         [DataMember(Name="agentAssistantId", EmitDefaultValue=false)]
         public string AgentAssistantId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -757,7 +601,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Call {\n");
-            
+
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
@@ -985,94 +829,93 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
-                
+
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
-                
+
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();
-                
+
                 if (this.Confined != null)
                     hash = hash * 59 + this.Confined.GetHashCode();
-                
+
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
-                
+
                 if (this.RecordingId != null)
                     hash = hash * 59 + this.RecordingId.GetHashCode();
-                
+
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
-                
+
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
+
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
+
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
-                
+
                 if (this.DocumentId != null)
                     hash = hash * 59 + this.DocumentId.GetHashCode();
-                
+
                 if (this.StartAlertingTime != null)
                     hash = hash * 59 + this.StartAlertingTime.GetHashCode();
-                
+
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
-                
+
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
-                
+
                 if (this.DisconnectReasons != null)
                     hash = hash * 59 + this.DisconnectReasons.GetHashCode();
-                
+
                 if (this.FaxStatus != null)
                     hash = hash * 59 + this.FaxStatus.GetHashCode();
-                
+
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                
+
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
-                
+
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
-                
+
                 if (this.UuiData != null)
                     hash = hash * 59 + this.UuiData.GetHashCode();
-                
+
                 if (this.Self != null)
                     hash = hash * 59 + this.Self.GetHashCode();
-                
+
                 if (this.Other != null)
                     hash = hash * 59 + this.Other.GetHashCode();
-                
+
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
-                
+
                 if (this.AfterCallWork != null)
                     hash = hash * 59 + this.AfterCallWork.GetHashCode();
-                
+
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
-                
+
                 if (this.AgentAssistantId != null)
                     hash = hash * 59 + this.AgentAssistantId.GetHashCode();
-                
+
                 return hash;
             }
         }

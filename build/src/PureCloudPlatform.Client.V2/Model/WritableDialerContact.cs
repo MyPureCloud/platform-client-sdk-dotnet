@@ -18,51 +18,18 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WritableDialerContact :  IEquatable<WritableDialerContact>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WritableDialerContact" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WritableDialerContact() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WritableDialerContact" /> class.
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="ContactListId">The identifier of the contact list containing this contact. (required).</param>
-        /// <param name="Data">An ordered map of the contact&#39;s columns and corresponding values. (required).</param>
+        /// <param name="Data">An ordered map of the contact's columns and corresponding values. (required).</param>
         /// <param name="Callable">Indicates whether or not the contact can be called..</param>
         /// <param name="PhoneNumberStatus">A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not..</param>
         public WritableDialerContact(string Id = null, string ContactListId = null, Dictionary<string, Object> Data = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
@@ -75,61 +42,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The identifier of the contact list containing this contact.
         /// </summary>
         /// <value>The identifier of the contact list containing this contact.</value>
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// An ordered map of the contact&#39;s columns and corresponding values.
+        /// An ordered map of the contact's columns and corresponding values.
         /// </summary>
-        /// <value>An ordered map of the contact&#39;s columns and corresponding values.</value>
+        /// <value>An ordered map of the contact's columns and corresponding values.</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public Dictionary<string, Object> Data { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A map of SMS records for the contact phone columns.
         /// </summary>
         /// <value>A map of SMS records for the contact phone columns.</value>
         [DataMember(Name="latestSmsEvaluations", EmitDefaultValue=false)]
         public Dictionary<string, MessageEvaluation> LatestSmsEvaluations { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether or not the contact can be called.
         /// </summary>
         /// <value>Indicates whether or not the contact can be called.</value>
         [DataMember(Name="callable", EmitDefaultValue=false)]
         public bool? Callable { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not.
         /// </summary>
         /// <value>A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not.</value>
         [DataMember(Name="phoneNumberStatus", EmitDefaultValue=false)]
         public Dictionary<string, PhoneNumberStatus> PhoneNumberStatus { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -138,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WritableDialerContact {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
@@ -228,25 +195,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.ContactListId != null)
                     hash = hash * 59 + this.ContactListId.GetHashCode();
-                
+
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
-                
+
                 if (this.LatestSmsEvaluations != null)
                     hash = hash * 59 + this.LatestSmsEvaluations.GetHashCode();
-                
+
                 if (this.Callable != null)
                     hash = hash * 59 + this.Callable.GetHashCode();
-                
+
                 if (this.PhoneNumberStatus != null)
                     hash = hash * 59 + this.PhoneNumberStatus.GetHashCode();
-                
+
                 return hash;
             }
         }

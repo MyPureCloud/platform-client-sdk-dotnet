@@ -18,49 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeMetrics :  IEquatable<EdgeMetrics>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetrics" /> class.
         /// </summary>
@@ -85,72 +42,72 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Edge
         /// </summary>
         [DataMember(Name="edge", EmitDefaultValue=false)]
         public DomainEntityRef Edge { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
         public DateTime? EventTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UpTimeMsec
         /// </summary>
         [DataMember(Name="upTimeMsec", EmitDefaultValue=false)]
         public long? UpTimeMsec { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Processors
         /// </summary>
         [DataMember(Name="processors", EmitDefaultValue=false)]
         public List<EdgeMetricsProcessor> Processors { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Memory
         /// </summary>
         [DataMember(Name="memory", EmitDefaultValue=false)]
         public List<EdgeMetricsMemory> Memory { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Disks
         /// </summary>
         [DataMember(Name="disks", EmitDefaultValue=false)]
         public List<EdgeMetricsDisk> Disks { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Subsystems
         /// </summary>
         [DataMember(Name="subsystems", EmitDefaultValue=false)]
         public List<EdgeMetricsSubsystem> Subsystems { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Networks
         /// </summary>
         [DataMember(Name="networks", EmitDefaultValue=false)]
         public List<EdgeMetricsNetwork> Networks { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -159,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeMetrics {\n");
-            
+
             sb.Append("  Edge: ").Append(Edge).Append("\n");
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  UpTimeMsec: ").Append(UpTimeMsec).Append("\n");
@@ -261,31 +218,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Edge != null)
                     hash = hash * 59 + this.Edge.GetHashCode();
-                
+
                 if (this.EventTime != null)
                     hash = hash * 59 + this.EventTime.GetHashCode();
-                
+
                 if (this.UpTimeMsec != null)
                     hash = hash * 59 + this.UpTimeMsec.GetHashCode();
-                
+
                 if (this.Processors != null)
                     hash = hash * 59 + this.Processors.GetHashCode();
-                
+
                 if (this.Memory != null)
                     hash = hash * 59 + this.Memory.GetHashCode();
-                
+
                 if (this.Disks != null)
                     hash = hash * 59 + this.Disks.GetHashCode();
-                
+
                 if (this.Subsystems != null)
                     hash = hash * 59 + this.Subsystems.GetHashCode();
-                
+
                 if (this.Networks != null)
                     hash = hash * 59 + this.Networks.GetHashCode();
-                
+
                 return hash;
             }
         }

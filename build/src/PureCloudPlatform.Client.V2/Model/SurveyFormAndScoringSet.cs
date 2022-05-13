@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SurveyFormAndScoringSet :  IEquatable<SurveyFormAndScoringSet>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyFormAndScoringSet" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets SurveyForm
         /// </summary>
         [DataMember(Name="surveyForm", EmitDefaultValue=false)]
         public SurveyForm SurveyForm { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Answers
         /// </summary>
         [DataMember(Name="answers", EmitDefaultValue=false)]
         public SurveyScoringSet Answers { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SurveyFormAndScoringSet {\n");
-            
+
             sb.Append("  SurveyForm: ").Append(SurveyForm).Append("\n");
             sb.Append("  Answers: ").Append(Answers).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SurveyForm != null)
                     hash = hash * 59 + this.SurveyForm.GetHashCode();
-                
+
                 if (this.Answers != null)
                     hash = hash * 59 + this.Answers.GetHashCode();
-                
+
                 return hash;
             }
         }

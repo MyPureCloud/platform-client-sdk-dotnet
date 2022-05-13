@@ -211,6 +211,8 @@ Delete media retention policies
 
 Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
 
+
+
 Requires ANY permissions: 
 
 * recording:crossPlatformRetentionPolicy:delete
@@ -403,6 +405,8 @@ Delete media retention policies
 
 Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
 
+
+
 Requires ANY permissions: 
 
 * recording:retentionPolicy:delete
@@ -564,7 +568,7 @@ namespace Example
             var emailFormatId = emailFormatId_example;  // string | The desired media format when downloading an email recording. Valid values:EML,NONE (optional)  (default to EML)
             var chatFormatId = chatFormatId_example;  // string | The desired media format when downloading a chat recording. Valid values:ZIP,NONE  (optional)  (default to ZIP)
             var messageFormatId = messageFormatId_example;  // string | The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional)  (default to ZIP)
-            var download = true;  // bool? | requesting a download format of the recording. Valid values:true,false (optional)  (default to false)
+            var download = download_example;  // bool? | requesting a download format of the recording. Valid values:true,false (optional)  (default to false)
             var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
             var locale = locale_example;  // string | The locale for the requested file when downloading, as an ISO 639-1 code (optional) 
             var mediaFormats = new List<string>(); // List<string> | All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional) 
@@ -595,7 +599,7 @@ namespace Example
 | **emailFormatId** | **string**| The desired media format when downloading an email recording. Valid values:EML,NONE | [optional] [default to EML]<br />**Values**: EML, NONE |
 | **chatFormatId** | **string**| The desired media format when downloading a chat recording. Valid values:ZIP,NONE  | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
 | **messageFormatId** | **string**| The desired media format when downloading a message recording. Valid values:ZIP,NONE | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
-| **download** | **bool?**| requesting a download format of the recording. Valid values:true,false | [optional] [default to false] |
+| **download** | **bool?**| requesting a download format of the recording. Valid values:true,false | [optional] [default to false]<br />**Values**: true, false |
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
 | **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
 | **mediaFormats** | [**List<string>**](string.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional]  |
@@ -1022,6 +1026,8 @@ Gets the media of a single orphan recording
 
 A 202 response means the orphaned media is currently transcoding and will be available shortly.A 200 response denotes the transcoded orphan media is available now and is contained in the response body.
 
+
+
 Requires ANY permissions: 
 
 * recording:orphan:view
@@ -1053,7 +1059,7 @@ namespace Example
             var emailFormatId = emailFormatId_example;  // string | The desired media format when downloading an email recording. (optional)  (default to EML)
             var chatFormatId = chatFormatId_example;  // string | The desired media format when downloading a chat recording. (optional)  (default to ZIP)
             var messageFormatId = messageFormatId_example;  // string | The desired media format when downloading a message recording. (optional)  (default to ZIP)
-            var download = true;  // bool? | requesting a download format of the recording (optional)  (default to false)
+            var download = download_example;  // bool? | requesting a download format of the recording (optional)  (default to false)
             var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
             var locale = locale_example;  // string | The locale for the requested file when downloading, as an ISO 639-1 code (optional) 
             var mediaFormats = new List<string>(); // List<string> | All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional) 
@@ -1083,7 +1089,7 @@ namespace Example
 | **emailFormatId** | **string**| The desired media format when downloading an email recording. | [optional] [default to EML]<br />**Values**: EML, NONE |
 | **chatFormatId** | **string**| The desired media format when downloading a chat recording. | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
 | **messageFormatId** | **string**| The desired media format when downloading a message recording. | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
-| **download** | **bool?**| requesting a download format of the recording | [optional] [default to false] |
+| **download** | **bool?**| requesting a download format of the recording | [optional] [default to false]<br />**Values**: true, false |
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
 | **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
 | **mediaFormats** | [**List<string>**](string.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional]  |
@@ -1246,6 +1252,8 @@ Gets media retention policy list with query options to filter on name and enable
 
 for a less verbose response, add summary=true to this endpoint
 
+
+
 Requires ANY permissions: 
 
 * recording:crossPlatformRetentionPolicy:view
@@ -1311,7 +1319,7 @@ namespace Example
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **name** | **string**| the policy name - used for filtering results in searches. | [optional]  |
-| **enabled** | **bool?**| checks to see if policy is enabled - use enabled = true or enabled = false | [optional]  |
+| **enabled** | **bool?**| checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false | [optional]  |
 | **summary** | **bool?**| provides a less verbose response of policy lists. | [optional] [default to false] |
 | **hasErrors** | **bool?**| provides a way to fetch all policies with errors or policies that do not have errors | [optional]  |
 | **deleteDaysThreshold** | **int?**| provides a way to fetch all policies with any actions having deleteDays exceeding the provided value | [optional]  |
@@ -1863,6 +1871,8 @@ Gets media retention policy list with query options to filter on name and enable
 
 for a less verbose response, add summary=true to this endpoint
 
+
+
 Requires ANY permissions: 
 
 * recording:retentionPolicy:view
@@ -1928,7 +1938,7 @@ namespace Example
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **name** | **string**| the policy name - used for filtering results in searches. | [optional]  |
-| **enabled** | **bool?**| checks to see if policy is enabled - use enabled = true or enabled = false | [optional]  |
+| **enabled** | **bool?**| checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false | [optional]  |
 | **summary** | **bool?**| provides a less verbose response of policy lists. | [optional] [default to false] |
 | **hasErrors** | **bool?**| provides a way to fetch all policies with errors or policies that do not have errors | [optional]  |
 | **deleteDaysThreshold** | **int?**| provides a way to fetch all policies with any actions having deleteDays exceeding the provided value | [optional]  |
@@ -2606,6 +2616,8 @@ Create media retention policy
 
 Policy does not work retroactively
 
+
+
 Requires ANY permissions: 
 
 * recording:crossPlatformRetentionPolicy:add
@@ -2670,6 +2682,8 @@ namespace Example
 Create a recording bulk job.
 
 Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state.
+
+
 
 Requires ALL permissions: 
 
@@ -2996,6 +3010,8 @@ Create media retention policy
 
 Policy does not work retroactively
 
+
+
 Requires ANY permissions: 
 
 * recording:retentionPolicy:add
@@ -3311,6 +3327,8 @@ Updates the retention records on a recording.
 
 Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. The recording:recording:view permission is required for the recording, as well as either the recording:recording:editRetention or recording:screenRecording:editRetention permissions depending on the type of recording.
 
+
+
 Requires ANY permissions: 
 
 * recording:recording:view
@@ -3455,6 +3473,8 @@ Updates an orphan recording to a regular recording with retention values
 
 If this operation is successful the orphan will no longer exist. It will be replaced by the resulting recording in the response. This replacement recording is accessible by the normal Recording api.
 
+
+
 Requires ANY permissions: 
 
 * recording:orphan:edit
@@ -3522,6 +3542,8 @@ Update a media retention policy
 
 Policy does not work retroactively
 
+
+
 Requires ANY permissions: 
 
 * recording:crossPlatformRetentionPolicy:edit
@@ -3588,6 +3610,8 @@ namespace Example
 Execute the recording bulk job.
 
 A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
+
+
 
 Requires ALL permissions: 
 
@@ -3791,6 +3815,8 @@ namespace Example
 Update a media retention policy
 
 Policy does not work retroactively
+
+
 
 Requires ANY permissions: 
 

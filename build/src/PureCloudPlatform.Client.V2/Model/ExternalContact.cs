@@ -18,86 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ExternalContact :  IEquatable<ExternalContact>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of contact
         /// </summary>
@@ -131,98 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Curated")]
             Curated
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of contact
         /// </summary>
         /// <value>The type of contact</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public TypeEnum? Type { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalContact" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ExternalContact() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalContact" /> class.
         /// </summary>
@@ -281,262 +121,262 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The first name of the contact.
         /// </summary>
         /// <value>The first name of the contact.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MiddleName
         /// </summary>
         [DataMember(Name="middleName", EmitDefaultValue=false)]
         public string MiddleName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The last name of the contact.
         /// </summary>
         /// <value>The last name of the contact.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Salutation
         /// </summary>
         [DataMember(Name="salutation", EmitDefaultValue=false)]
         public string Salutation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets WorkPhone
         /// </summary>
         [DataMember(Name="workPhone", EmitDefaultValue=false)]
         public PhoneNumber WorkPhone { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CellPhone
         /// </summary>
         [DataMember(Name="cellPhone", EmitDefaultValue=false)]
         public PhoneNumber CellPhone { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets HomePhone
         /// </summary>
         [DataMember(Name="homePhone", EmitDefaultValue=false)]
         public PhoneNumber HomePhone { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OtherPhone
         /// </summary>
         [DataMember(Name="otherPhone", EmitDefaultValue=false)]
         public PhoneNumber OtherPhone { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets WorkEmail
         /// </summary>
         [DataMember(Name="workEmail", EmitDefaultValue=false)]
         public string WorkEmail { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PersonalEmail
         /// </summary>
         [DataMember(Name="personalEmail", EmitDefaultValue=false)]
         public string PersonalEmail { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OtherEmail
         /// </summary>
         [DataMember(Name="otherEmail", EmitDefaultValue=false)]
         public string OtherEmail { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public ContactAddress Address { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TwitterId
         /// </summary>
         [DataMember(Name="twitterId", EmitDefaultValue=false)]
         public TwitterId TwitterId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LineId
         /// </summary>
         [DataMember(Name="lineId", EmitDefaultValue=false)]
         public LineId LineId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets WhatsAppId
         /// </summary>
         [DataMember(Name="whatsAppId", EmitDefaultValue=false)]
         public WhatsAppId WhatsAppId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FacebookId
         /// </summary>
         [DataMember(Name="facebookId", EmitDefaultValue=false)]
         public FacebookId FacebookId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modifyDate", EmitDefaultValue=false)]
         public DateTime? ModifyDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createDate", EmitDefaultValue=false)]
         public DateTime? CreateDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ExternalOrganization
         /// </summary>
         [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
         public ExternalOrganization ExternalOrganization { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SurveyOptOut
         /// </summary>
         [DataMember(Name="surveyOptOut", EmitDefaultValue=false)]
         public bool? SurveyOptOut { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace.
         /// </summary>
         /// <value>A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace.</value>
         [DataMember(Name="externalSystemUrl", EmitDefaultValue=false)]
         public string ExternalSystemUrl { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The schema defining custom fields for this contact
         /// </summary>
         /// <value>The schema defining custom fields for this contact</value>
         [DataMember(Name="schema", EmitDefaultValue=false)]
         public DataSchema Schema { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Custom fields defined in the schema referenced by schemaId and schemaVersion.
         /// </summary>
         /// <value>Custom fields defined in the schema referenced by schemaId and schemaVersion.</value>
         [DataMember(Name="customFields", EmitDefaultValue=false)]
         public Dictionary<string, Object> CustomFields { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
         /// </summary>
         /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
         [DataMember(Name="externalDataSources", EmitDefaultValue=false)]
         public List<ExternalDataSource> ExternalDataSources { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The contact at the head of the merge tree. If null, this contact is not a part of any merge.
         /// </summary>
         /// <value>The contact at the head of the merge tree. If null, this contact is not a part of any merge.</value>
         [DataMember(Name="canonicalContact", EmitDefaultValue=false)]
         public ContactAddressableEntityRef CanonicalContact { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The set of all contacts that are a part of the merge tree. If null, this contact is not a part of any merge.
         /// </summary>
         /// <value>The set of all contacts that are a part of the merge tree. If null, this contact is not a part of any merge.</value>
         [DataMember(Name="mergeSet", EmitDefaultValue=false)]
         public List<ContactAddressableEntityRef> MergeSet { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Information about the merge history of this contact. If null, this contact is not a part of any merge.
         /// </summary>
         /// <value>Information about the merge history of this contact. If null, this contact is not a part of any merge.</value>
         [DataMember(Name="mergeOperation", EmitDefaultValue=false)]
         public MergeOperation MergeOperation { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -545,7 +385,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ExternalContact {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  MiddleName: ").Append(MiddleName).Append("\n");
@@ -785,100 +625,99 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.FirstName != null)
                     hash = hash * 59 + this.FirstName.GetHashCode();
-                
+
                 if (this.MiddleName != null)
                     hash = hash * 59 + this.MiddleName.GetHashCode();
-                
+
                 if (this.LastName != null)
                     hash = hash * 59 + this.LastName.GetHashCode();
-                
+
                 if (this.Salutation != null)
                     hash = hash * 59 + this.Salutation.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.WorkPhone != null)
                     hash = hash * 59 + this.WorkPhone.GetHashCode();
-                
+
                 if (this.CellPhone != null)
                     hash = hash * 59 + this.CellPhone.GetHashCode();
-                
+
                 if (this.HomePhone != null)
                     hash = hash * 59 + this.HomePhone.GetHashCode();
-                
+
                 if (this.OtherPhone != null)
                     hash = hash * 59 + this.OtherPhone.GetHashCode();
-                
+
                 if (this.WorkEmail != null)
                     hash = hash * 59 + this.WorkEmail.GetHashCode();
-                
+
                 if (this.PersonalEmail != null)
                     hash = hash * 59 + this.PersonalEmail.GetHashCode();
-                
+
                 if (this.OtherEmail != null)
                     hash = hash * 59 + this.OtherEmail.GetHashCode();
-                
+
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
+
                 if (this.TwitterId != null)
                     hash = hash * 59 + this.TwitterId.GetHashCode();
-                
+
                 if (this.LineId != null)
                     hash = hash * 59 + this.LineId.GetHashCode();
-                
+
                 if (this.WhatsAppId != null)
                     hash = hash * 59 + this.WhatsAppId.GetHashCode();
-                
+
                 if (this.FacebookId != null)
                     hash = hash * 59 + this.FacebookId.GetHashCode();
-                
+
                 if (this.ModifyDate != null)
                     hash = hash * 59 + this.ModifyDate.GetHashCode();
-                
+
                 if (this.CreateDate != null)
                     hash = hash * 59 + this.CreateDate.GetHashCode();
-                
+
                 if (this.ExternalOrganization != null)
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
-                
+
                 if (this.SurveyOptOut != null)
                     hash = hash * 59 + this.SurveyOptOut.GetHashCode();
-                
+
                 if (this.ExternalSystemUrl != null)
                     hash = hash * 59 + this.ExternalSystemUrl.GetHashCode();
-                
+
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();
-                
+
                 if (this.CustomFields != null)
                     hash = hash * 59 + this.CustomFields.GetHashCode();
-                
+
                 if (this.ExternalDataSources != null)
                     hash = hash * 59 + this.ExternalDataSources.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.CanonicalContact != null)
                     hash = hash * 59 + this.CanonicalContact.GetHashCode();
-                
+
                 if (this.MergeSet != null)
                     hash = hash * 59 + this.MergeSet.GetHashCode();
-                
+
                 if (this.MergeOperation != null)
                     hash = hash * 59 + this.MergeOperation.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

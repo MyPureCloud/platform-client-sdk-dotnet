@@ -18,26 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmUserNotificationTopicAdherenceExplanationNotification :  IEquatable<WfmUserNotificationTopicAdherenceExplanationNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -70,10 +50,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Denied")]
             Denied
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -94,44 +70,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Late")]
             Late
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmUserNotificationTopicAdherenceExplanationNotification" /> class.
         /// </summary>
@@ -158,67 +106,67 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Agent
         /// </summary>
         [DataMember(Name="agent", EmitDefaultValue=false)]
         public WfmUserNotificationTopicUserReference Agent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ManagementUnit
         /// </summary>
         [DataMember(Name="managementUnit", EmitDefaultValue=false)]
         public WfmUserNotificationTopicManagementUnit ManagementUnit { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets BusinessUnit
         /// </summary>
         [DataMember(Name="businessUnit", EmitDefaultValue=false)]
         public WfmUserNotificationTopicBusinessUnit BusinessUnit { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LengthMinutes
         /// </summary>
         [DataMember(Name="lengthMinutes", EmitDefaultValue=false)]
         public int? LengthMinutes { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Notes
         /// </summary>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -227,7 +175,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmUserNotificationTopicAdherenceExplanationNotification {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Agent: ").Append(Agent).Append("\n");
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
@@ -335,34 +283,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();
-                
+
                 if (this.ManagementUnit != null)
                     hash = hash * 59 + this.ManagementUnit.GetHashCode();
-                
+
                 if (this.BusinessUnit != null)
                     hash = hash * 59 + this.BusinessUnit.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.LengthMinutes != null)
                     hash = hash * 59 + this.LengthMinutes.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 return hash;
             }
         }

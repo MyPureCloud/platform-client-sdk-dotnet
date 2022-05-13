@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult :  IEquatable<WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -73,16 +68,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Canceled")]
             Canceled
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets FailureReason
         /// </summary>
@@ -139,38 +124,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "TransitionNotAllowed")]
             Transitionnotallowed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets FailureReason
         /// </summary>
         [DataMember(Name="failureReason", EmitDefaultValue=false)]
         public FailureReasonEnum? FailureReason { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult" /> class.
         /// </summary>
@@ -191,43 +154,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets ReviewedBy
         /// </summary>
         [DataMember(Name="reviewedBy", EmitDefaultValue=false)]
         public WfmBulkShiftTradeStateUpdateNotificationTopicUserReference ReviewedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ReviewedDate
         /// </summary>
         [DataMember(Name="reviewedDate", EmitDefaultValue=false)]
         public DateTime? ReviewedDate { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -236,7 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  ReviewedBy: ").Append(ReviewedBy).Append("\n");
@@ -326,25 +289,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.ReviewedBy != null)
                     hash = hash * 59 + this.ReviewedBy.GetHashCode();
-                
+
                 if (this.ReviewedDate != null)
                     hash = hash * 59 + this.ReviewedDate.GetHashCode();
-                
+
                 if (this.FailureReason != null)
                     hash = hash * 59 + this.FailureReason.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

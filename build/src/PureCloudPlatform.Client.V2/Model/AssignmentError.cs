@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AssignmentError :  IEquatable<AssignmentError>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AssignmentError" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A user that is failed to be removed from the performance profile
         /// </summary>
         /// <value>A user that is failed to be removed from the performance profile</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UserReference User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Error message from membership assignment
         /// </summary>
         /// <value>Error message from membership assignment</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AssignmentError {\n");
-            
+
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 return hash;
             }
         }

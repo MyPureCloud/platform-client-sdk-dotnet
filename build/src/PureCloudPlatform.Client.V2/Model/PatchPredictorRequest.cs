@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchPredictorRequest :  IEquatable<PatchPredictorRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchPredictorRequest" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Number of seconds allocated to predictive routing before attempting a different routing method. This is a value between 12 and 900 seconds.
         /// </summary>
         /// <value>Number of seconds allocated to predictive routing before attempting a different routing method. This is a value between 12 and 900 seconds.</value>
         [DataMember(Name="routingTimeoutSeconds", EmitDefaultValue=false)]
         public int? RoutingTimeoutSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The predictor schedule that determines when the predictor is used for routing interactions.
         /// </summary>
         /// <value>The predictor schedule that determines when the predictor is used for routing interactions.</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public PredictorSchedule Schedule { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The predictor balancing configuration to enable workload balancing
         /// </summary>
         /// <value>The predictor balancing configuration to enable workload balancing</value>
         [DataMember(Name="workloadBalancingConfig", EmitDefaultValue=false)]
         public PredictorWorkloadBalancing WorkloadBalancingConfig { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PatchPredictorRequest {\n");
-            
+
             sb.Append("  RoutingTimeoutSeconds: ").Append(RoutingTimeoutSeconds).Append("\n");
             sb.Append("  Schedule: ").Append(Schedule).Append("\n");
             sb.Append("  WorkloadBalancingConfig: ").Append(WorkloadBalancingConfig).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RoutingTimeoutSeconds != null)
                     hash = hash * 59 + this.RoutingTimeoutSeconds.GetHashCode();
-                
+
                 if (this.Schedule != null)
                     hash = hash * 59 + this.Schedule.GetHashCode();
-                
+
                 if (this.WorkloadBalancingConfig != null)
                     hash = hash * 59 + this.WorkloadBalancingConfig.GetHashCode();
-                
+
                 return hash;
             }
         }

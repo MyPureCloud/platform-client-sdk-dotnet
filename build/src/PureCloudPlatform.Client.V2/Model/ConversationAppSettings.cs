@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationAppSettings :  IEquatable<ConversationAppSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Deprecated. The auto start type for the messenger conversation
         /// </summary>
@@ -53,34 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Automatic")]
             Automatic
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Deprecated. The auto start type for the messenger conversation
         /// </summary>
         /// <value>Deprecated. The auto start type for the messenger conversation</value>
         [DataMember(Name="autoStartType", EmitDefaultValue=false)]
         public AutoStartTypeEnum? AutoStartType { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationAppSettings" /> class.
         /// </summary>
@@ -99,45 +69,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The toggle to enable or disable typing indicator for messenger
         /// </summary>
         /// <value>The toggle to enable or disable typing indicator for messenger</value>
         [DataMember(Name="showAgentTypingIndicator", EmitDefaultValue=false)]
         public bool? ShowAgentTypingIndicator { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The toggle to enable or disable typing indicator for messenger
         /// </summary>
         /// <value>The toggle to enable or disable typing indicator for messenger</value>
         [DataMember(Name="showUserTypingIndicator", EmitDefaultValue=false)]
         public bool? ShowUserTypingIndicator { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The auto start for the messenger conversation
         /// </summary>
         /// <value>The auto start for the messenger conversation</value>
         [DataMember(Name="autoStart", EmitDefaultValue=false)]
         public AutoStart AutoStart { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The markdown for the messenger app
         /// </summary>
         /// <value>The markdown for the messenger app</value>
         [DataMember(Name="markdown", EmitDefaultValue=false)]
         public Markdown Markdown { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationAppSettings {\n");
-            
+
             sb.Append("  ShowAgentTypingIndicator: ").Append(ShowAgentTypingIndicator).Append("\n");
             sb.Append("  ShowUserTypingIndicator: ").Append(ShowUserTypingIndicator).Append("\n");
             sb.Append("  AutoStartType: ").Append(AutoStartType).Append("\n");
@@ -230,22 +200,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ShowAgentTypingIndicator != null)
                     hash = hash * 59 + this.ShowAgentTypingIndicator.GetHashCode();
-                
+
                 if (this.ShowUserTypingIndicator != null)
                     hash = hash * 59 + this.ShowUserTypingIndicator.GetHashCode();
-                
+
                 if (this.AutoStartType != null)
                     hash = hash * 59 + this.AutoStartType.GetHashCode();
-                
+
                 if (this.AutoStart != null)
                     hash = hash * 59 + this.AutoStart.GetHashCode();
-                
+
                 if (this.Markdown != null)
                     hash = hash * 59 + this.Markdown.GetHashCode();
-                
+
                 return hash;
             }
         }

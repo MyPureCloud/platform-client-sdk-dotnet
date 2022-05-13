@@ -18,47 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignInteraction :  IEquatable<CampaignInteraction>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Describes what happened with call analysis for instance: disposition.classification.callable.person, disposition.classification.callable.noanswer
         /// </summary>
@@ -122,81 +81,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAX")]
             Fax
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Describes what happened with call analysis for instance: disposition.classification.callable.person, disposition.classification.callable.noanswer
         /// </summary>
         /// <value>Describes what happened with call analysis for instance: disposition.classification.callable.person, disposition.classification.callable.noanswer</value>
         [DataMember(Name="disposition", EmitDefaultValue=false)]
         public DispositionEnum? Disposition { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignInteraction" /> class.
         /// </summary>
@@ -247,178 +137,178 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Campaign
         /// </summary>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
         public DomainEntityRef Campaign { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Agent
         /// </summary>
         [DataMember(Name="agent", EmitDefaultValue=false)]
         public DomainEntityRef Agent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Contact
         /// </summary>
         [DataMember(Name="contact", EmitDefaultValue=false)]
         public DomainEntityRef Contact { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DestinationAddress
         /// </summary>
         [DataMember(Name="destinationAddress", EmitDefaultValue=false)]
         public string DestinationAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Boolean value if there is an active preview call on the interaction
         /// </summary>
         /// <value>Boolean value if there is an active preview call on the interaction</value>
         [DataMember(Name="activePreviewCall", EmitDefaultValue=false)]
         public bool? ActivePreviewCall { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when the last preview of the interaction was wrapped up. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when the last preview of the interaction was wrapped up. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="lastActivePreviewWrapupTime", EmitDefaultValue=false)]
         public DateTime? LastActivePreviewWrapupTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when dialer created the interaction. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when dialer created the interaction. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="creationTime", EmitDefaultValue=false)]
         public DateTime? CreationTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when the agent or system places the call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when the agent or system places the call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="callPlacedTime", EmitDefaultValue=false)]
         public DateTime? CallPlacedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when the agent was connected to the call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when the agent was connected to the call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="callRoutedTime", EmitDefaultValue=false)]
         public DateTime? CallRoutedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when the customer and routing participant are connected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when the customer and routing participant are connected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="previewConnectedTime", EmitDefaultValue=false)]
         public DateTime? PreviewConnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public DomainEntityRef Queue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Script
         /// </summary>
         [DataMember(Name="script", EmitDefaultValue=false)]
         public DomainEntityRef Script { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets CallerName
         /// </summary>
         [DataMember(Name="callerName", EmitDefaultValue=false)]
         public string CallerName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CallerAddress
         /// </summary>
         [DataMember(Name="callerAddress", EmitDefaultValue=false)]
         public string CallerAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="previewPopDeliveredTime", EmitDefaultValue=false)]
         public DateTime? PreviewPopDeliveredTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Conversation
         /// </summary>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public ConversationBasic Conversation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// conversation participant id that is the dialer system participant to monitor the call from dialer perspective
         /// </summary>
         /// <value>conversation participant id that is the dialer system participant to monitor the call from dialer perspective</value>
         [DataMember(Name="dialerSystemParticipantId", EmitDefaultValue=false)]
         public string DialerSystemParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DialingMode
         /// </summary>
         [DataMember(Name="dialingMode", EmitDefaultValue=false)]
         public string DialingMode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Any skills that are attached to the call for routing
         /// </summary>
         /// <value>Any skills that are attached to the call for routing</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
         public List<DomainEntityRef> Skills { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -427,7 +317,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignInteraction {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Campaign: ").Append(Campaign).Append("\n");
             sb.Append("  Agent: ").Append(Agent).Append("\n");
@@ -607,70 +497,69 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Campaign != null)
                     hash = hash * 59 + this.Campaign.GetHashCode();
-                
+
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();
-                
+
                 if (this.Contact != null)
                     hash = hash * 59 + this.Contact.GetHashCode();
-                
+
                 if (this.DestinationAddress != null)
                     hash = hash * 59 + this.DestinationAddress.GetHashCode();
-                
+
                 if (this.ActivePreviewCall != null)
                     hash = hash * 59 + this.ActivePreviewCall.GetHashCode();
-                
+
                 if (this.LastActivePreviewWrapupTime != null)
                     hash = hash * 59 + this.LastActivePreviewWrapupTime.GetHashCode();
-                
+
                 if (this.CreationTime != null)
                     hash = hash * 59 + this.CreationTime.GetHashCode();
-                
+
                 if (this.CallPlacedTime != null)
                     hash = hash * 59 + this.CallPlacedTime.GetHashCode();
-                
+
                 if (this.CallRoutedTime != null)
                     hash = hash * 59 + this.CallRoutedTime.GetHashCode();
-                
+
                 if (this.PreviewConnectedTime != null)
                     hash = hash * 59 + this.PreviewConnectedTime.GetHashCode();
-                
+
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
+
                 if (this.Script != null)
                     hash = hash * 59 + this.Script.GetHashCode();
-                
+
                 if (this.Disposition != null)
                     hash = hash * 59 + this.Disposition.GetHashCode();
-                
+
                 if (this.CallerName != null)
                     hash = hash * 59 + this.CallerName.GetHashCode();
-                
+
                 if (this.CallerAddress != null)
                     hash = hash * 59 + this.CallerAddress.GetHashCode();
-                
+
                 if (this.PreviewPopDeliveredTime != null)
                     hash = hash * 59 + this.PreviewPopDeliveredTime.GetHashCode();
-                
+
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
+
                 if (this.DialerSystemParticipantId != null)
                     hash = hash * 59 + this.DialerSystemParticipantId.GetHashCode();
-                
+
                 if (this.DialingMode != null)
                     hash = hash * 59 + this.DialingMode.GetHashCode();
-                
+
                 if (this.Skills != null)
                     hash = hash * 59 + this.Skills.GetHashCode();
-                
+
                 return hash;
             }
         }

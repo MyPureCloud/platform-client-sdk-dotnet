@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class V2ConversationMessageTypingEventForUserTopicConversationContentLocation :  IEquatable<V2ConversationMessageTypingEventForUserTopicConversationContentLocation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="V2ConversationMessageTypingEventForUserTopicConversationContentLocation" /> class.
         /// </summary>
@@ -64,47 +36,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Text
         /// </summary>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Latitude
         /// </summary>
         [DataMember(Name="latitude", EmitDefaultValue=false)]
         public double? Latitude { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Longitude
         /// </summary>
         [DataMember(Name="longitude", EmitDefaultValue=false)]
         public double? Longitude { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class V2ConversationMessageTypingEventForUserTopicConversationContentLocation {\n");
-            
+
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
@@ -197,22 +169,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Latitude != null)
                     hash = hash * 59 + this.Latitude.GetHashCode();
-                
+
                 if (this.Longitude != null)
                     hash = hash * 59 + this.Longitude.GetHashCode();
-                
+
                 return hash;
             }
         }

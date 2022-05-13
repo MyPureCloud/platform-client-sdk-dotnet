@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotFlowTurnRequest :  IEquatable<TextBotFlowTurnRequest>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the type of input event being requested. If appropriate, fill out the matching user input object details on this request.
         /// </summary>
@@ -74,38 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "UserDisconnect")]
             Userdisconnect
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the type of input event being requested. If appropriate, fill out the matching user input object details on this request.
         /// </summary>
         /// <value>Indicates the type of input event being requested. If appropriate, fill out the matching user input object details on this request.</value>
         [DataMember(Name="inputEventType", EmitDefaultValue=false)]
         public InputEventTypeEnum? InputEventType { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotFlowTurnRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotFlowTurnRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotFlowTurnRequest" /> class.
         /// </summary>
@@ -122,36 +97,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The reference to a previous turn if appropriate, used to avoid race conditions.
         /// </summary>
         /// <value>The reference to a previous turn if appropriate, used to avoid race conditions.</value>
         [DataMember(Name="previousTurn", EmitDefaultValue=false)]
         public TextBotTurnReference PreviousTurn { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The data for the input event of this turn if it is a user input event. Only one inputEvent may be set.
         /// </summary>
         /// <value>The data for the input event of this turn if it is a user input event. Only one inputEvent may be set.</value>
         [DataMember(Name="inputEventUserInput", EmitDefaultValue=false)]
         public TextBotUserInputEvent InputEventUserInput { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The data for the input event of this turn if it is an error event. Only one inputEvent may be set.
         /// </summary>
         /// <value>The data for the input event of this turn if it is an error event. Only one inputEvent may be set.</value>
         [DataMember(Name="inputEventError", EmitDefaultValue=false)]
         public TextBotErrorInputEvent InputEventError { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -160,7 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotFlowTurnRequest {\n");
-            
+
             sb.Append("  PreviousTurn: ").Append(PreviousTurn).Append("\n");
             sb.Append("  InputEventType: ").Append(InputEventType).Append("\n");
             sb.Append("  InputEventUserInput: ").Append(InputEventUserInput).Append("\n");
@@ -238,19 +213,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PreviousTurn != null)
                     hash = hash * 59 + this.PreviousTurn.GetHashCode();
-                
+
                 if (this.InputEventType != null)
                     hash = hash * 59 + this.InputEventType.GetHashCode();
-                
+
                 if (this.InputEventUserInput != null)
                     hash = hash * 59 + this.InputEventUserInput.GetHashCode();
-                
+
                 if (this.InputEventError != null)
                     hash = hash * 59 + this.InputEventError.GetHashCode();
-                
+
                 return hash;
             }
         }

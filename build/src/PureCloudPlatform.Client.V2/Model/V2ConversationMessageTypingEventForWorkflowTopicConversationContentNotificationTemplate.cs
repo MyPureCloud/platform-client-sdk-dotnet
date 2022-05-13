@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class V2ConversationMessageTypingEventForWorkflowTopicConversationContentNotificationTemplate :  IEquatable<V2ConversationMessageTypingEventForWorkflowTopicConversationContentNotificationTemplate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="V2ConversationMessageTypingEventForWorkflowTopicConversationContentNotificationTemplate" /> class.
         /// </summary>
@@ -64,47 +36,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Language
         /// </summary>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Header
         /// </summary>
         [DataMember(Name="header", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForWorkflowTopicConversationNotificationTemplateHeader Header { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Body
         /// </summary>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForWorkflowTopicConversationNotificationTemplateBody Body { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Footer
         /// </summary>
         [DataMember(Name="footer", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForWorkflowTopicConversationNotificationTemplateFooter Footer { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class V2ConversationMessageTypingEventForWorkflowTopicConversationContentNotificationTemplate {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Header: ").Append(Header).Append("\n");
@@ -197,22 +169,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.Header != null)
                     hash = hash * 59 + this.Header.GetHashCode();
-                
+
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
-                
+
                 if (this.Footer != null)
                     hash = hash * 59 + this.Footer.GetHashCode();
-                
+
                 return hash;
             }
         }

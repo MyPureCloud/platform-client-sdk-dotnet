@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class InboundDomain :  IEquatable<InboundDomain>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Mx Record Status
         /// </summary>
@@ -59,50 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NOT_AVAILABLE")]
             NotAvailable
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Mx Record Status
         /// </summary>
         /// <value>Mx Record Status</value>
         [DataMember(Name="mxRecordStatus", EmitDefaultValue=false)]
         public MxRecordStatusEnum? MxRecordStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundDomain" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected InboundDomain() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundDomain" /> class.
         /// </summary>
@@ -123,62 +83,62 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Unique Id of the domain such as: example.com
         /// </summary>
         /// <value>Unique Id of the domain such as: example.com</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email.
         /// </summary>
         /// <value>Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email.</value>
         [DataMember(Name="subDomain", EmitDefaultValue=false)]
         public bool? SubDomain { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false.
         /// </summary>
         /// <value>The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false.</value>
         [DataMember(Name="mailFromSettings", EmitDefaultValue=false)]
         public MailFromResult MailFromSettings { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The custom SMTP server integration to use when sending outbound emails from this domain.
         /// </summary>
         /// <value>The custom SMTP server integration to use when sending outbound emails from this domain.</value>
         [DataMember(Name="customSMTPServer", EmitDefaultValue=false)]
         public DomainEntityRef CustomSMTPServer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -187,7 +147,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InboundDomain {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  MxRecordStatus: ").Append(MxRecordStatus).Append("\n");
@@ -283,28 +243,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.MxRecordStatus != null)
                     hash = hash * 59 + this.MxRecordStatus.GetHashCode();
-                
+
                 if (this.SubDomain != null)
                     hash = hash * 59 + this.SubDomain.GetHashCode();
-                
+
                 if (this.MailFromSettings != null)
                     hash = hash * 59 + this.MailFromSettings.GetHashCode();
-                
+
                 if (this.CustomSMTPServer != null)
                     hash = hash * 59 + this.CustomSMTPServer.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PromptAsset :  IEquatable<PromptAsset>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Audio upload status
         /// </summary>
@@ -80,59 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "transcodeFailed")]
             Transcodefailed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Audio upload status
         /// </summary>
         /// <value>Audio upload status</value>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
-        public UploadStatusEnum? UploadStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public UploadStatusEnum? UploadStatus { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="PromptAsset" /> class.
         /// </summary>
@@ -151,114 +81,114 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Associated prompt ID
         /// </summary>
         /// <value>Associated prompt ID</value>
         [DataMember(Name="promptId", EmitDefaultValue=false)]
         public string PromptId { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Prompt resource language
         /// </summary>
         /// <value>Prompt resource language</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URI of the resource audio
         /// </summary>
         /// <value>URI of the resource audio</value>
         [DataMember(Name="mediaUri", EmitDefaultValue=false)]
         public string MediaUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text to speech of the resource
         /// </summary>
         /// <value>Text to speech of the resource</value>
         [DataMember(Name="ttsString", EmitDefaultValue=false)]
         public string TtsString { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text of the resource
         /// </summary>
         /// <value>Text of the resource</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Upload URI for the resource audio
         /// </summary>
         /// <value>Upload URI for the resource audio</value>
         [DataMember(Name="uploadUri", EmitDefaultValue=false)]
         public string UploadUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not this resource locale is the default for the language
         /// </summary>
         /// <value>Whether or not this resource locale is the default for the language</value>
         [DataMember(Name="languageDefault", EmitDefaultValue=false)]
         public bool? LanguageDefault { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public Dictionary<string, List<string>> Tags { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DurationSeconds
         /// </summary>
         [DataMember(Name="durationSeconds", EmitDefaultValue=false)]
         public double? DurationSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -267,7 +197,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PromptAsset {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  PromptId: ").Append(PromptId).Append("\n");
@@ -399,46 +329,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.PromptId != null)
                     hash = hash * 59 + this.PromptId.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.MediaUri != null)
                     hash = hash * 59 + this.MediaUri.GetHashCode();
-                
+
                 if (this.TtsString != null)
                     hash = hash * 59 + this.TtsString.GetHashCode();
-                
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.UploadStatus != null)
                     hash = hash * 59 + this.UploadStatus.GetHashCode();
-                
+
                 if (this.UploadUri != null)
                     hash = hash * 59 + this.UploadUri.GetHashCode();
-                
+
                 if (this.LanguageDefault != null)
                     hash = hash * 59 + this.LanguageDefault.GetHashCode();
-                
+
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
+
                 if (this.DurationSeconds != null)
                     hash = hash * 59 + this.DurationSeconds.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

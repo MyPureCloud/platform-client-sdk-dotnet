@@ -18,30 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EmailColumn :  IEquatable<EmailColumn>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailColumn" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected EmailColumn() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailColumn" /> class.
         /// </summary>
         /// <param name="ColumnName">The name of the email column. (required).</param>
-        /// <param name="Type">Indicates the type of the email column. For example, &#39;work&#39; or &#39;personal&#39;. (required).</param>
+        /// <param name="Type">Indicates the type of the email column. For example, 'work' or 'personal'. (required).</param>
         public EmailColumn(string ColumnName = null, string Type = null)
         {
             this.ColumnName = ColumnName;
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the email column.
         /// </summary>
         /// <value>The name of the email column.</value>
         [DataMember(Name="columnName", EmitDefaultValue=false)]
         public string ColumnName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Indicates the type of the email column. For example, &#39;work&#39; or &#39;personal&#39;.
+        /// Indicates the type of the email column. For example, 'work' or 'personal'.
         /// </summary>
-        /// <value>Indicates the type of the email column. For example, &#39;work&#39; or &#39;personal&#39;.</value>
+        /// <value>Indicates the type of the email column. For example, 'work' or 'personal'.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EmailColumn {\n");
-            
+
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ColumnName != null)
                     hash = hash * 59 + this.ColumnName.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,50 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TestMessage :  IEquatable<TestMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TestMessage" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TestMessage() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TestMessage" /> class.
         /// </summary>
@@ -82,70 +44,70 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// After the message has been sent, this is the value of the Message-ID email header.
         /// </summary>
         /// <value>After the message has been sent, this is the value of the Message-ID email header.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The recipients of the email message.
         /// </summary>
         /// <value>The recipients of the email message.</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public List<EmailAddress> To { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The sender of the email message.
         /// </summary>
         /// <value>The sender of the email message.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public EmailAddress From { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The subject of the email message.
         /// </summary>
         /// <value>The subject of the email message.</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The text body of the email message.
         /// </summary>
         /// <value>The text body of the email message.</value>
         [DataMember(Name="textBody", EmitDefaultValue=false)]
         public string TextBody { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The html body of the email message
         /// </summary>
         /// <value>The html body of the email message</value>
         [DataMember(Name="htmlBody", EmitDefaultValue=false)]
         public string HtmlBody { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -154,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TestMessage {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  From: ").Append(From).Append("\n");
@@ -250,28 +212,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
-                
+
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
-                
+
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
-                
+
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
-                
+
                 if (this.HtmlBody != null)
                     hash = hash * 59 + this.HtmlBody.GetHashCode();
-                
+
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationNotificationTemplateHeader :  IEquatable<ConversationNotificationTemplateHeader>
     {
-        
-        
         /// <summary>
         /// Template header type.
         /// </summary>
@@ -47,41 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Media")]
             Media
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Template header type.
         /// </summary>
         /// <value>Template header type.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationTemplateHeader" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConversationNotificationTemplateHeader() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationTemplateHeader" /> class.
         /// </summary>
@@ -98,36 +73,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Header text. For WhatsApp, ignored.
         /// </summary>
         /// <value>Header text. For WhatsApp, ignored.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Media template header image.
         /// </summary>
         /// <value>Media template header image.</value>
         [DataMember(Name="media", EmitDefaultValue=false)]
         public ConversationContentAttachment Media { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Template parameters for placeholders in template.
         /// </summary>
         /// <value>Template parameters for placeholders in template.</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public List<ConversationNotificationTemplateParameter> Parameters { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -136,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationNotificationTemplateHeader {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Media: ").Append(Media).Append("\n");
@@ -214,19 +189,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Media != null)
                     hash = hash * 59 + this.Media.GetHashCode();
-                
+
                 if (this.Parameters != null)
                     hash = hash * 59 + this.Parameters.GetHashCode();
-                
+
                 return hash;
             }
         }

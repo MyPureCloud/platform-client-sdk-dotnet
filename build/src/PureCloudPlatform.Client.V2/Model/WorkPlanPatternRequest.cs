@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkPlanPatternRequest :  IEquatable<WorkPlanPatternRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanPatternRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WorkPlanPatternRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanPatternRequest" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// List of work plan IDs in order of rotation on a weekly basis. Values in the list cannot be null or empty
         /// </summary>
         /// <value>List of work plan IDs in order of rotation on a weekly basis. Values in the list cannot be null or empty</value>
         [DataMember(Name="workPlanIds", EmitDefaultValue=false)]
         public List<string> WorkPlanIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkPlanPatternRequest {\n");
-            
+
             sb.Append("  WorkPlanIds: ").Append(WorkPlanIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WorkPlanIds != null)
                     hash = hash * 59 + this.WorkPlanIds.GetHashCode();
-                
+
                 return hash;
             }
         }

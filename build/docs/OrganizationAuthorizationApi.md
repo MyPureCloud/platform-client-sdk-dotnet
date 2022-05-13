@@ -640,6 +640,8 @@ The list of cloned users from the trustee organization (i.e. users with a native
 
 There can be no more than 5 cloned users per organization, so results are represented as simple list and not paged
 
+
+
 Requires ANY permissions: 
 
 * directory:user:view
@@ -1626,7 +1628,7 @@ namespace Example
 
 <a name="postorgauthorizationtrusteesaudits"></a>
 
-## [**AuditQueryResponse**](AuditQueryResponse.html) PostOrgauthorizationTrusteesAudits (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+## **Object** PostOrgauthorizationTrusteesAudits (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -1663,13 +1665,13 @@ namespace Example
             var body = new TrusteeAuditQueryRequest(); // TrusteeAuditQueryRequest | Values to scope the request.
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to descending)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "timestamp")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "descending")
 
             try
             { 
                 // Get Org Trustee Audits
-                AuditQueryResponse result = apiInstance.PostOrgauthorizationTrusteesAudits(body, pageSize, pageNumber, sortBy, sortOrder);
+                Object result = apiInstance.PostOrgauthorizationTrusteesAudits(body, pageSize, pageNumber, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1689,13 +1691,13 @@ namespace Example
 | **body** | [**TrusteeAuditQueryRequest**](TrusteeAuditQueryRequest.html)| Values to scope the request. |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to timestamp] |
-| **sortOrder** | **string**| Sort order | [optional] [default to descending] |
+| **sortBy** | **string**| Sort by | [optional] [default to "timestamp"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "descending"] |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AuditQueryResponse**](AuditQueryResponse.html)
+**Object**
 
 <a name="postorgauthorizationtrusteesdefault"></a>
 
@@ -1767,7 +1769,7 @@ namespace Example
 
 <a name="postorgauthorizationtrustoraudits"></a>
 
-## [**AuditQueryResponse**](AuditQueryResponse.html) PostOrgauthorizationTrustorAudits (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+## **Object** PostOrgauthorizationTrustorAudits (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -1804,13 +1806,13 @@ namespace Example
             var body = new TrustorAuditQueryRequest(); // TrustorAuditQueryRequest | Values to scope the request.
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to descending)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "timestamp")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "descending")
 
             try
             { 
                 // Get Org Trustor Audits
-                AuditQueryResponse result = apiInstance.PostOrgauthorizationTrustorAudits(body, pageSize, pageNumber, sortBy, sortOrder);
+                Object result = apiInstance.PostOrgauthorizationTrustorAudits(body, pageSize, pageNumber, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1830,13 +1832,13 @@ namespace Example
 | **body** | [**TrustorAuditQueryRequest**](TrustorAuditQueryRequest.html)| Values to scope the request. |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to timestamp] |
-| **sortOrder** | **string**| Sort order | [optional] [default to descending] |
+| **sortBy** | **string**| Sort by | [optional] [default to "timestamp"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "descending"] |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AuditQueryResponse**](AuditQueryResponse.html)
+**Object**
 
 <a name="putorgauthorizationtrustee"></a>
 
@@ -2012,7 +2014,7 @@ namespace Example
             var apiInstance = new OrganizationAuthorizationApi();
             var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
             var trusteeUserId = trusteeUserId_example;  // string | Trustee User Id
-            var body = ;  // List<string> | List of roles
+            var body = new List<string>(); // List<string> | List of roles
 
             try
             { 
@@ -2036,7 +2038,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **trusteeOrgId** | **string**| Trustee Organization Id |  |
 | **trusteeUserId** | **string**| Trustee User Id |  |
-| **body** | **List<string>**| List of roles |  |
+| **body** | [**List<string>**](string.html)| List of roles |  |
 {: class="table table-striped"}
 
 ### Return type

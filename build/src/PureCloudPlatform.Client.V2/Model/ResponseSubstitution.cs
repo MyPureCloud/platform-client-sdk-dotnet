@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResponseSubstitution :  IEquatable<ResponseSubstitution>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseSubstitution" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ResponseSubstitution() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseSubstitution" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Response substitution identifier.
         /// </summary>
         /// <value>Response substitution identifier.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Response substitution description.
         /// </summary>
         /// <value>Response substitution description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Response substitution default value.
         /// </summary>
         /// <value>Response substitution default value.</value>
         [DataMember(Name="defaultValue", EmitDefaultValue=false)]
         public string DefaultValue { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResponseSubstitution {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  DefaultValue: ").Append(DefaultValue).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.DefaultValue != null)
                     hash = hash * 59 + this.DefaultValue.GetHashCode();
-                
+
                 return hash;
             }
         }

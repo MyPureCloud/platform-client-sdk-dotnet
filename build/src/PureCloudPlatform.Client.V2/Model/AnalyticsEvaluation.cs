@@ -18,79 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsEvaluation :  IEquatable<AnalyticsEvaluation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsEvaluation" /> class.
         /// </summary>
@@ -127,131 +54,131 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The calibration ID used for the purpose of training evaluators
         /// </summary>
         /// <value>The calibration ID used for the purpose of training evaluators</value>
         [DataMember(Name="calibrationId", EmitDefaultValue=false)]
         public string CalibrationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A unique identifier for an evaluation form, regardless of version
         /// </summary>
         /// <value>A unique identifier for an evaluation form, regardless of version</value>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the evaluation has been deleted
         /// </summary>
         /// <value>Whether the evaluation has been deleted</value>
         [DataMember(Name="deleted", EmitDefaultValue=false)]
         public bool? Deleted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for the evaluation
         /// </summary>
         /// <value>Unique identifier for the evaluation</value>
         [DataMember(Name="evaluationId", EmitDefaultValue=false)]
         public string EvaluationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A unique identifier of the user who evaluated the interaction
         /// </summary>
         /// <value>A unique identifier of the user who evaluated the interaction</value>
         [DataMember(Name="evaluatorId", EmitDefaultValue=false)]
         public string EvaluatorId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
         public DateTime? EventTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ID of the evaluation form used
         /// </summary>
         /// <value>ID of the evaluation form used</value>
         [DataMember(Name="formId", EmitDefaultValue=false)]
         public string FormId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of the evaluation form used
         /// </summary>
         /// <value>Name of the evaluation form used</value>
         [DataMember(Name="formName", EmitDefaultValue=false)]
         public string FormName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the associated queue
         /// </summary>
         /// <value>The ID of the associated queue</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the evaluation has been released
         /// </summary>
         /// <value>Whether the evaluation has been released</value>
         [DataMember(Name="released", EmitDefaultValue=false)]
         public bool? Released { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the evaluation has been rescored at least once
         /// </summary>
         /// <value>Whether the evaluation has been rescored at least once</value>
         [DataMember(Name="rescored", EmitDefaultValue=false)]
         public bool? Rescored { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ID of the agent the evaluation was performed against
         /// </summary>
         /// <value>ID of the agent the evaluation was performed against</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OTotalCriticalScore
         /// </summary>
         [DataMember(Name="oTotalCriticalScore", EmitDefaultValue=false)]
         public long? OTotalCriticalScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OTotalScore
         /// </summary>
         [DataMember(Name="oTotalScore", EmitDefaultValue=false)]
         public long? OTotalScore { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -260,7 +187,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsEvaluation {\n");
-            
+
             sb.Append("  CalibrationId: ").Append(CalibrationId).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
@@ -398,49 +325,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CalibrationId != null)
                     hash = hash * 59 + this.CalibrationId.GetHashCode();
-                
+
                 if (this.ContextId != null)
                     hash = hash * 59 + this.ContextId.GetHashCode();
-                
+
                 if (this.Deleted != null)
                     hash = hash * 59 + this.Deleted.GetHashCode();
-                
+
                 if (this.EvaluationId != null)
                     hash = hash * 59 + this.EvaluationId.GetHashCode();
-                
+
                 if (this.EvaluatorId != null)
                     hash = hash * 59 + this.EvaluatorId.GetHashCode();
-                
+
                 if (this.EventTime != null)
                     hash = hash * 59 + this.EventTime.GetHashCode();
-                
+
                 if (this.FormId != null)
                     hash = hash * 59 + this.FormId.GetHashCode();
-                
+
                 if (this.FormName != null)
                     hash = hash * 59 + this.FormName.GetHashCode();
-                
+
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
+
                 if (this.Released != null)
                     hash = hash * 59 + this.Released.GetHashCode();
-                
+
                 if (this.Rescored != null)
                     hash = hash * 59 + this.Rescored.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.OTotalCriticalScore != null)
                     hash = hash * 59 + this.OTotalCriticalScore.GetHashCode();
-                
+
                 if (this.OTotalScore != null)
                     hash = hash * 59 + this.OTotalScore.GetHashCode();
-                
+
                 return hash;
             }
         }

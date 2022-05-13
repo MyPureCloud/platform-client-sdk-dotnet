@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactListFilterClause :  IEquatable<ContactListFilterClause>
     {
-        
-        
         /// <summary>
         /// How to join predicates together.
         /// </summary>
@@ -47,25 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OR")]
             Or
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// How to join predicates together.
         /// </summary>
         /// <value>How to join predicates together.</value>
         [DataMember(Name="filterType", EmitDefaultValue=false)]
         public FilterTypeEnum? FilterType { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterClause" /> class.
         /// </summary>
@@ -78,18 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Conditions to filter the contacts by.
         /// </summary>
         /// <value>Conditions to filter the contacts by.</value>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<ContactListFilterPredicate> Predicates { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactListFilterClause {\n");
-            
+
             sb.Append("  FilterType: ").Append(FilterType).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
             sb.Append("}\n");
@@ -164,13 +149,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FilterType != null)
                     hash = hash * 59 + this.FilterType.GetHashCode();
-                
+
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
-                
+
                 return hash;
             }
         }

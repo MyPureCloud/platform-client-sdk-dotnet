@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserConversationsEventMediaSummaryDetail :  IEquatable<UserConversationsEventMediaSummaryDetail>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserConversationsEventMediaSummaryDetail" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public int? Active { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Acw
         /// </summary>
         [DataMember(Name="acw", EmitDefaultValue=false)]
         public int? Acw { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserConversationsEventMediaSummaryDetail {\n");
-            
+
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  Acw: ").Append(Acw).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
-                
+
                 if (this.Acw != null)
                     hash = hash * 59 + this.Acw.GetHashCode();
-                
+
                 return hash;
             }
         }

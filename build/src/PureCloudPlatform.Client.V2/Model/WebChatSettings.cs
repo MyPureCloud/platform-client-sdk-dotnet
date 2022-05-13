@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebChatSettings :  IEquatable<WebChatSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatSettings" /> class.
         /// </summary>
@@ -36,15 +28,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets RequireDeployment
         /// </summary>
         [DataMember(Name="requireDeployment", EmitDefaultValue=false)]
         public bool? RequireDeployment { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebChatSettings {\n");
-            
+
             sb.Append("  RequireDeployment: ").Append(RequireDeployment).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -113,10 +105,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RequireDeployment != null)
                     hash = hash * 59 + this.RequireDeployment.GetHashCode();
-                
+
                 return hash;
             }
         }

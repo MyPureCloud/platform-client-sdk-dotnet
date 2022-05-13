@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotTextModeConstraints :  IEquatable<TextBotTextModeConstraints>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotTextModeConstraints" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotTextModeConstraints() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotTextModeConstraints" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of language preferences by their ISO language code.
         /// </summary>
         /// <value>The list of language preferences by their ISO language code.</value>
         [DataMember(Name="languagePreferences", EmitDefaultValue=false)]
         public List<string> LanguagePreferences { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotTextModeConstraints {\n");
-            
+
             sb.Append("  LanguagePreferences: ").Append(LanguagePreferences).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LanguagePreferences != null)
                     hash = hash * 59 + this.LanguagePreferences.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CoachingAnnotationCreateRequest :  IEquatable<CoachingAnnotationCreateRequest>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Determines the permissions required to view this item.
         /// </summary>
@@ -50,28 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Private")]
             Private
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Determines the permissions required to view this item.
         /// </summary>
         /// <value>Determines the permissions required to view this item.</value>
         [DataMember(Name="accessType", EmitDefaultValue=false)]
         public AccessTypeEnum? AccessType { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingAnnotationCreateRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CoachingAnnotationCreateRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingAnnotationCreateRequest" /> class.
         /// </summary>
@@ -84,18 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The text of the annotation.
         /// </summary>
         /// <value>The text of the annotation.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CoachingAnnotationCreateRequest {\n");
-            
+
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  AccessType: ").Append(AccessType).Append("\n");
             sb.Append("}\n");
@@ -170,13 +155,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.AccessType != null)
                     hash = hash * 59 + this.AccessType.GetHashCode();
-                
+
                 return hash;
             }
         }

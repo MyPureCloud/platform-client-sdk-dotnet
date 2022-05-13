@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ChatBadgeTopicChatBadge :  IEquatable<ChatBadgeTopicChatBadge>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatBadgeTopicChatBadge" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public ChatBadgeTopicBadgeEntity Entity { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UnreadCount
         /// </summary>
         [DataMember(Name="unreadCount", EmitDefaultValue=false)]
         public int? UnreadCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LastUnreadNotificationDate
         /// </summary>
         [DataMember(Name="lastUnreadNotificationDate", EmitDefaultValue=false)]
         public DateTime? LastUnreadNotificationDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ChatBadgeTopicChatBadge {\n");
-            
+
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  UnreadCount: ").Append(UnreadCount).Append("\n");
             sb.Append("  LastUnreadNotificationDate: ").Append(LastUnreadNotificationDate).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
-                
+
                 if (this.UnreadCount != null)
                     hash = hash * 59 + this.UnreadCount.GetHashCode();
-                
+
                 if (this.LastUnreadNotificationDate != null)
                     hash = hash * 59 + this.LastUnreadNotificationDate.GetHashCode();
-                
+
                 return hash;
             }
         }

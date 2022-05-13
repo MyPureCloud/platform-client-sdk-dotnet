@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuScheduleRun :  IEquatable<BuScheduleRun>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The state of the generation run
         /// </summary>
@@ -80,96 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Complete")]
             Complete
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The state of the generation run
         /// </summary>
         /// <value>The state of the generation run</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuScheduleRun" /> class.
         /// </summary>
@@ -210,162 +115,162 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The scheduler run ID.  Reference this value for support
         /// </summary>
         /// <value>The scheduler run ID.  Reference this value for support</value>
         [DataMember(Name="schedulerRunId", EmitDefaultValue=false)]
         public string SchedulerRunId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this is an intraday rescheduling run
         /// </summary>
         /// <value>Whether this is an intraday rescheduling run</value>
         [DataMember(Name="intradayRescheduling", EmitDefaultValue=false)]
         public bool? IntradayRescheduling { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The number of weeks spanned by the schedule
         /// </summary>
         /// <value>The number of weeks spanned by the schedule</value>
         [DataMember(Name="weekCount", EmitDefaultValue=false)]
         public int? WeekCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percent completion of the schedule run
         /// </summary>
         /// <value>Percent completion of the schedule run</value>
         [DataMember(Name="percentComplete", EmitDefaultValue=false)]
         public double? PercentComplete { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The start date of the target week. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>The start date of the target week. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="targetWeek", EmitDefaultValue=false)]
         public String TargetWeek { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The generated schedule.  Null unless the schedule run is complete
         /// </summary>
         /// <value>The generated schedule.  Null unless the schedule run is complete</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public BuScheduleReference Schedule { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of the generated schedule
         /// </summary>
         /// <value>The description of the generated schedule</value>
         [DataMember(Name="scheduleDescription", EmitDefaultValue=false)]
         public string ScheduleDescription { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// When the schedule generation run started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>When the schedule generation run started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="schedulingStartTime", EmitDefaultValue=false)]
         public DateTime? SchedulingStartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user who started the scheduling run
         /// </summary>
         /// <value>The user who started the scheduling run</value>
         [DataMember(Name="schedulingStartedBy", EmitDefaultValue=false)]
         public UserReference SchedulingStartedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user who canceled the scheduling run, if applicable
         /// </summary>
         /// <value>The user who canceled the scheduling run, if applicable</value>
         [DataMember(Name="schedulingCanceledBy", EmitDefaultValue=false)]
         public UserReference SchedulingCanceledBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// When the scheduling run was completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>When the scheduling run was completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="schedulingCompletedTime", EmitDefaultValue=false)]
         public DateTime? SchedulingCompletedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of schedule generation messages for this schedule generation run
         /// </summary>
         /// <value>The number of schedule generation messages for this schedule generation run</value>
         [DataMember(Name="messageCount", EmitDefaultValue=false)]
         public int? MessageCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of schedule generation message counts by severity for this schedule generation run
         /// </summary>
         /// <value>The list of schedule generation message counts by severity for this schedule generation run</value>
         [DataMember(Name="messageSeverityCounts", EmitDefaultValue=false)]
         public List<SchedulerMessageSeverityCount> MessageSeverityCounts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Rescheduling options for this run.  Null unless intradayRescheduling is true
         /// </summary>
         /// <value>Rescheduling options for this run.  Null unless intradayRescheduling is true</value>
         [DataMember(Name="reschedulingOptions", EmitDefaultValue=false)]
         public ReschedulingOptionsRunResponse ReschedulingOptions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="reschedulingResultExpiration", EmitDefaultValue=false)]
         public DateTime? ReschedulingResultExpiration { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -374,7 +279,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuScheduleRun {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  SchedulerRunId: ").Append(SchedulerRunId).Append("\n");
             sb.Append("  IntradayRescheduling: ").Append(IntradayRescheduling).Append("\n");
@@ -536,61 +441,60 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.SchedulerRunId != null)
                     hash = hash * 59 + this.SchedulerRunId.GetHashCode();
-                
+
                 if (this.IntradayRescheduling != null)
                     hash = hash * 59 + this.IntradayRescheduling.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.WeekCount != null)
                     hash = hash * 59 + this.WeekCount.GetHashCode();
-                
+
                 if (this.PercentComplete != null)
                     hash = hash * 59 + this.PercentComplete.GetHashCode();
-                
+
                 if (this.TargetWeek != null)
                     hash = hash * 59 + this.TargetWeek.GetHashCode();
-                
+
                 if (this.Schedule != null)
                     hash = hash * 59 + this.Schedule.GetHashCode();
-                
+
                 if (this.ScheduleDescription != null)
                     hash = hash * 59 + this.ScheduleDescription.GetHashCode();
-                
+
                 if (this.SchedulingStartTime != null)
                     hash = hash * 59 + this.SchedulingStartTime.GetHashCode();
-                
+
                 if (this.SchedulingStartedBy != null)
                     hash = hash * 59 + this.SchedulingStartedBy.GetHashCode();
-                
+
                 if (this.SchedulingCanceledBy != null)
                     hash = hash * 59 + this.SchedulingCanceledBy.GetHashCode();
-                
+
                 if (this.SchedulingCompletedTime != null)
                     hash = hash * 59 + this.SchedulingCompletedTime.GetHashCode();
-                
+
                 if (this.MessageCount != null)
                     hash = hash * 59 + this.MessageCount.GetHashCode();
-                
+
                 if (this.MessageSeverityCounts != null)
                     hash = hash * 59 + this.MessageSeverityCounts.GetHashCode();
-                
+
                 if (this.ReschedulingOptions != null)
                     hash = hash * 59 + this.ReschedulingOptions.GetHashCode();
-                
+
                 if (this.ReschedulingResultExpiration != null)
                     hash = hash * 59 + this.ReschedulingResultExpiration.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

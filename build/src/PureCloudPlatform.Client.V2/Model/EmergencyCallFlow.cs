@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EmergencyCallFlow :  IEquatable<EmergencyCallFlow>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EmergencyCallFlow" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The call flow to execute in an emergency.
         /// </summary>
         /// <value>The call flow to execute in an emergency.</value>
         [DataMember(Name="emergencyFlow", EmitDefaultValue=false)]
         public DomainEntityRef EmergencyFlow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The IVR(s) to route to the call flow during an emergency.
         /// </summary>
         /// <value>The IVR(s) to route to the call flow during an emergency.</value>
         [DataMember(Name="ivrs", EmitDefaultValue=false)]
         public List<DomainEntityRef> Ivrs { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EmergencyCallFlow {\n");
-            
+
             sb.Append("  EmergencyFlow: ").Append(EmergencyFlow).Append("\n");
             sb.Append("  Ivrs: ").Append(Ivrs).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EmergencyFlow != null)
                     hash = hash * 59 + this.EmergencyFlow.GetHashCode();
-                
+
                 if (this.Ivrs != null)
                     hash = hash * 59 + this.Ivrs.GetHashCode();
-                
+
                 return hash;
             }
         }

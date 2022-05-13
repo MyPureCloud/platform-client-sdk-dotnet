@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EmailsSettings :  IEquatable<EmailsSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailsSettings" /> class.
         /// </summary>
@@ -36,15 +28,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets SendingSizeLimit
         /// </summary>
         [DataMember(Name="sendingSizeLimit", EmitDefaultValue=false)]
         public int? SendingSizeLimit { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EmailsSettings {\n");
-            
+
             sb.Append("  SendingSizeLimit: ").Append(SendingSizeLimit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -113,10 +105,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SendingSizeLimit != null)
                     hash = hash * 59 + this.SendingSizeLimit.GetHashCode();
-                
+
                 return hash;
             }
         }

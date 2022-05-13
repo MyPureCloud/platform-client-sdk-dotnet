@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SiteConnection :  IEquatable<SiteConnection>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Connection method from site to site (Direct, Indirect, CloudProxy
         /// </summary>
@@ -65,13 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CloudProxy")]
             Cloudproxy
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Media model for the current site.
         /// </summary>
@@ -99,59 +78,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Cloud")]
             Cloud
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Connection method from site to site (Direct, Indirect, CloudProxy
         /// </summary>
         /// <value>Connection method from site to site (Direct, Indirect, CloudProxy</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Media model for the current site.
         /// </summary>
         /// <value>Media model for the current site.</value>
         [DataMember(Name="mediaModel", EmitDefaultValue=false)]
-        public MediaModelEnum? MediaModel { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public MediaModelEnum? MediaModel { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SiteConnection" /> class.
         /// </summary>
@@ -172,88 +110,88 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Managed
         /// </summary>
         [DataMember(Name="managed", EmitDefaultValue=false)]
         public bool? Managed { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Indicates if the current site is linked
         /// </summary>
         /// <value>Indicates if the current site is linked</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// All of the edges to which the site connects
         /// </summary>
         /// <value>All of the edges to which the site connects</value>
         [DataMember(Name="edgeList", EmitDefaultValue=false)]
         public List<ConnectedEdge> EdgeList { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The core site
         /// </summary>
         /// <value>The core site</value>
         [DataMember(Name="coreSite", EmitDefaultValue=false)]
         public bool? CoreSite { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of site ids names and selfUris for the primary core sites
         /// </summary>
         /// <value>List of site ids names and selfUris for the primary core sites</value>
         [DataMember(Name="primaryCoreSites", EmitDefaultValue=false)]
         public List<DomainEntityRef> PrimaryCoreSites { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of site ids names and selfUris for the secondary core sites
         /// </summary>
         /// <value>List of site ids names and selfUris for the secondary core sites</value>
         [DataMember(Name="secondaryCoreSites", EmitDefaultValue=false)]
         public List<DomainEntityRef> SecondaryCoreSites { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -262,7 +200,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SiteConnection {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -382,40 +320,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.Managed != null)
                     hash = hash * 59 + this.Managed.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.MediaModel != null)
                     hash = hash * 59 + this.MediaModel.GetHashCode();
-                
+
                 if (this.EdgeList != null)
                     hash = hash * 59 + this.EdgeList.GetHashCode();
-                
+
                 if (this.CoreSite != null)
                     hash = hash * 59 + this.CoreSite.GetHashCode();
-                
+
                 if (this.PrimaryCoreSites != null)
                     hash = hash * 59 + this.PrimaryCoreSites.GetHashCode();
-                
+
                 if (this.SecondaryCoreSites != null)
                     hash = hash * 59 + this.SecondaryCoreSites.GetHashCode();
-                
+
                 return hash;
             }
         }

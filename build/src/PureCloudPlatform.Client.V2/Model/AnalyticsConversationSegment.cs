@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsConversationSegment :  IEquatable<AnalyticsConversationSegment>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The session disconnect type
         /// </summary>
@@ -143,37 +129,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "uncallable")]
             Uncallable
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The activity that takes place in the segment, such as hold or interact
         /// </summary>
@@ -303,105 +258,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "wrapup")]
             Wrapup
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The session disconnect type
         /// </summary>
         /// <value>The session disconnect type</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The activity that takes place in the segment, such as hold or interact
         /// </summary>
         /// <value>The activity that takes place in the segment, such as hold or interact</value>
         [DataMember(Name="segmentType", EmitDefaultValue=false)]
         public SegmentTypeEnum? SegmentType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversationSegment" /> class.
         /// </summary>
@@ -460,218 +328,218 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Flag indicating if audio is muted or not (true/false)
         /// </summary>
         /// <value>Flag indicating if audio is muted or not (true/false)</value>
         [DataMember(Name="audioMuted", EmitDefaultValue=false)]
         public bool? AudioMuted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether the segment was a conference
         /// </summary>
         /// <value>Indicates whether the segment was a conference</value>
         [DataMember(Name="conference", EmitDefaultValue=false)]
         public bool? Conference { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The unique identifier of a new conversation when a conversation is ended for a conference
         /// </summary>
         /// <value>The unique identifier of a new conversation when a conversation is ended for a conference</value>
         [DataMember(Name="destinationConversationId", EmitDefaultValue=false)]
         public string DestinationConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The unique identifier of a new session when a session is ended for a conference
         /// </summary>
         /// <value>The unique identifier of a new session when a session is ended for a conference</value>
         [DataMember(Name="destinationSessionId", EmitDefaultValue=false)]
         public string DestinationSessionId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// A code corresponding to the error that occurred
         /// </summary>
         /// <value>A code corresponding to the error that occurred</value>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for a PureCloud group
         /// </summary>
         /// <value>Unique identifier for a PureCloud group</value>
         [DataMember(Name="groupId", EmitDefaultValue=false)]
         public string GroupId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Q.850 response code(s)
         /// </summary>
         /// <value>Q.850 response code(s)</value>
         [DataMember(Name="q850ResponseCodes", EmitDefaultValue=false)]
         public List<long?> Q850ResponseCodes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Queue identifier
         /// </summary>
         /// <value>Queue identifier</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for the language requested for an interaction
         /// </summary>
         /// <value>Unique identifier for the language requested for an interaction</value>
         [DataMember(Name="requestedLanguageId", EmitDefaultValue=false)]
         public string RequestedLanguageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier(s) for skill(s) requested for an interaction
         /// </summary>
         /// <value>Unique identifier(s) for skill(s) requested for an interaction</value>
         [DataMember(Name="requestedRoutingSkillIds", EmitDefaultValue=false)]
         public List<string> RequestedRoutingSkillIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier(s) for agent(s) requested for an interaction
         /// </summary>
         /// <value>Unique identifier(s) for agent(s) requested for an interaction</value>
         [DataMember(Name="requestedRoutingUserIds", EmitDefaultValue=false)]
         public List<string> RequestedRoutingUserIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The end time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The end time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="segmentEnd", EmitDefaultValue=false)]
         public DateTime? SegmentEnd { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The start time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The start time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="segmentStart", EmitDefaultValue=false)]
         public DateTime? SegmentStart { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// SIP response code(s)
         /// </summary>
         /// <value>SIP response code(s)</value>
         [DataMember(Name="sipResponseCodes", EmitDefaultValue=false)]
         public List<long?> SipResponseCodes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The unique identifier of the previous conversation when a new conversation is created for a conference
         /// </summary>
         /// <value>The unique identifier of the previous conversation when a new conversation is created for a conference</value>
         [DataMember(Name="sourceConversationId", EmitDefaultValue=false)]
         public string SourceConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The unique identifier of the previous session when a new session is created for a conference
         /// </summary>
         /// <value>The unique identifier of the previous session when a new session is created for a conference</value>
         [DataMember(Name="sourceSessionId", EmitDefaultValue=false)]
         public string SourceSessionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The subject for the initial email that started this conversation
         /// </summary>
         /// <value>The subject for the initial email that started this conversation</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Flag indicating if video is muted/paused or not (true/false)
         /// </summary>
         /// <value>Flag indicating if video is muted/paused or not (true/false)</value>
         [DataMember(Name="videoMuted", EmitDefaultValue=false)]
         public bool? VideoMuted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Wrap up code
         /// </summary>
         /// <value>Wrap up code</value>
         [DataMember(Name="wrapUpCode", EmitDefaultValue=false)]
         public string WrapUpCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Note entered by an agent during after-call work
         /// </summary>
         /// <value>Note entered by an agent during after-call work</value>
         [DataMember(Name="wrapUpNote", EmitDefaultValue=false)]
         public string WrapUpNote { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Tag(s) assigned during after-call work
         /// </summary>
         /// <value>Tag(s) assigned during after-call work</value>
         [DataMember(Name="wrapUpTags", EmitDefaultValue=false)]
         public List<string> WrapUpTags { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Scored agents
         /// </summary>
         /// <value>Scored agents</value>
         [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
         public List<AnalyticsScoredAgent> ScoredAgents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Additional segment properties
         /// </summary>
         /// <value>Additional segment properties</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public List<AnalyticsProperty> Properties { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -680,7 +548,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsConversationSegment {\n");
-            
+
             sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
             sb.Append("  Conference: ").Append(Conference).Append("\n");
             sb.Append("  DestinationConversationId: ").Append(DestinationConversationId).Append("\n");
@@ -884,82 +752,81 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AudioMuted != null)
                     hash = hash * 59 + this.AudioMuted.GetHashCode();
-                
+
                 if (this.Conference != null)
                     hash = hash * 59 + this.Conference.GetHashCode();
-                
+
                 if (this.DestinationConversationId != null)
                     hash = hash * 59 + this.DestinationConversationId.GetHashCode();
-                
+
                 if (this.DestinationSessionId != null)
                     hash = hash * 59 + this.DestinationSessionId.GetHashCode();
-                
+
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
+
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
-                
+
                 if (this.GroupId != null)
                     hash = hash * 59 + this.GroupId.GetHashCode();
-                
+
                 if (this.Q850ResponseCodes != null)
                     hash = hash * 59 + this.Q850ResponseCodes.GetHashCode();
-                
+
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
+
                 if (this.RequestedLanguageId != null)
                     hash = hash * 59 + this.RequestedLanguageId.GetHashCode();
-                
+
                 if (this.RequestedRoutingSkillIds != null)
                     hash = hash * 59 + this.RequestedRoutingSkillIds.GetHashCode();
-                
+
                 if (this.RequestedRoutingUserIds != null)
                     hash = hash * 59 + this.RequestedRoutingUserIds.GetHashCode();
-                
+
                 if (this.SegmentEnd != null)
                     hash = hash * 59 + this.SegmentEnd.GetHashCode();
-                
+
                 if (this.SegmentStart != null)
                     hash = hash * 59 + this.SegmentStart.GetHashCode();
-                
+
                 if (this.SegmentType != null)
                     hash = hash * 59 + this.SegmentType.GetHashCode();
-                
+
                 if (this.SipResponseCodes != null)
                     hash = hash * 59 + this.SipResponseCodes.GetHashCode();
-                
+
                 if (this.SourceConversationId != null)
                     hash = hash * 59 + this.SourceConversationId.GetHashCode();
-                
+
                 if (this.SourceSessionId != null)
                     hash = hash * 59 + this.SourceSessionId.GetHashCode();
-                
+
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
-                
+
                 if (this.VideoMuted != null)
                     hash = hash * 59 + this.VideoMuted.GetHashCode();
-                
+
                 if (this.WrapUpCode != null)
                     hash = hash * 59 + this.WrapUpCode.GetHashCode();
-                
+
                 if (this.WrapUpNote != null)
                     hash = hash * 59 + this.WrapUpNote.GetHashCode();
-                
+
                 if (this.WrapUpTags != null)
                     hash = hash * 59 + this.WrapUpTags.GetHashCode();
-                
+
                 if (this.ScoredAgents != null)
                     hash = hash * 59 + this.ScoredAgents.GetHashCode();
-                
+
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
-                
+
                 return hash;
             }
         }

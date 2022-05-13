@@ -8,7 +8,7 @@ title: BuAbandonRate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Include** | **bool?** | Whether to include abandon rate in the associated configuration | |
-| **Percent** | **int?** | Abandon rate percent goal. Required if include == true | [optional] |
+| **Percent** | **int?** | Abandon rate percent goal. Required if include &#x3D;&#x3D; true | [optional] |
 {: class="table table-striped"}
 
 

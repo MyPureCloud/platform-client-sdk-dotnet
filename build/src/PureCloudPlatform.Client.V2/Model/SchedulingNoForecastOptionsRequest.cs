@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SchedulingNoForecastOptionsRequest :  IEquatable<SchedulingNoForecastOptionsRequest>
     {
-        
-        
         /// <summary>
         /// The shift length option to apply if no forecast is supplied
         /// </summary>
@@ -59,10 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Random")]
             Random
         }
-        
-        
-        
-        
         /// <summary>
         /// The shift start option to apply if no forecast is supplied
         /// </summary>
@@ -102,29 +96,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Random")]
             Random
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// The shift length option to apply if no forecast is supplied
         /// </summary>
         /// <value>The shift length option to apply if no forecast is supplied</value>
         [DataMember(Name="shiftLength", EmitDefaultValue=false)]
         public ShiftLengthEnum? ShiftLength { get; set; }
-        
-        
-        
         /// <summary>
         /// The shift start option to apply if no forecast is supplied
         /// </summary>
         /// <value>The shift start option to apply if no forecast is supplied</value>
         [DataMember(Name="shiftStart", EmitDefaultValue=false)]
         public ShiftStartEnum? ShiftStart { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulingNoForecastOptionsRequest" /> class.
         /// </summary>
@@ -137,11 +120,11 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -150,7 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SchedulingNoForecastOptionsRequest {\n");
-            
+
             sb.Append("  ShiftLength: ").Append(ShiftLength).Append("\n");
             sb.Append("  ShiftStart: ").Append(ShiftStart).Append("\n");
             sb.Append("}\n");
@@ -216,13 +199,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ShiftLength != null)
                     hash = hash * 59 + this.ShiftLength.GetHashCode();
-                
+
                 if (this.ShiftStart != null)
                     hash = hash * 59 + this.ShiftStart.GetHashCode();
-                
+
                 return hash;
             }
         }

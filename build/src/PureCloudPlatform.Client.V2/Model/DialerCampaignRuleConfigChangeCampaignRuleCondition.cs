@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerCampaignRuleConfigChangeCampaignRuleCondition :  IEquatable<DialerCampaignRuleConfigChangeCampaignRuleCondition>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of this condition
         /// </summary>
@@ -53,24 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "campaignAgents")]
             Campaignagents
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of this condition
         /// </summary>
         /// <value>The type of this condition</value>
         [DataMember(Name="conditionType", EmitDefaultValue=false)]
         public ConditionTypeEnum? ConditionType { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCampaignRuleConfigChangeCampaignRuleCondition" /> class.
         /// </summary>
@@ -85,27 +65,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the condition
         /// </summary>
         /// <value>The globally unique identifier for the condition</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The parameters to match this condition
         /// </summary>
         /// <value>The parameters to match this condition</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public Dictionary<string, string> Parameters { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -114,7 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerCampaignRuleConfigChangeCampaignRuleCondition {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("  ConditionType: ").Append(ConditionType).Append("\n");
@@ -186,16 +166,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Parameters != null)
                     hash = hash * 59 + this.Parameters.GetHashCode();
-                
+
                 if (this.ConditionType != null)
                     hash = hash * 59 + this.ConditionType.GetHashCode();
-                
+
                 return hash;
             }
         }

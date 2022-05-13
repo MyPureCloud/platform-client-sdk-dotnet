@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyAggregateQueryPredicate :  IEquatable<JourneyAggregateQueryPredicate>
     {
-        
-        
         /// <summary>
         /// Optional type, can usually be inferred
         /// </summary>
@@ -53,10 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "metric")]
             Metric
         }
-        
-        
-        
-        
         /// <summary>
         /// Left hand side for dimension predicates
         /// </summary>
@@ -252,10 +246,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "touchpointActionMapId")]
             Touchpointactionmapid
         }
-        
-        
-        
-        
         /// <summary>
         /// Optional operator, default is matches
         /// </summary>
@@ -289,91 +279,67 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "notExists")]
             Notexists
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Optional type, can usually be inferred
         /// </summary>
         /// <value>Optional type, can usually be inferred</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
         /// <summary>
         /// Left hand side for dimension predicates
         /// </summary>
         /// <value>Left hand side for dimension predicates</value>
         [DataMember(Name="dimension", EmitDefaultValue=false)]
         public DimensionEnum? Dimension { get; set; }
-        
-        
-        
         /// <summary>
         /// Optional operator, default is matches
         /// </summary>
         /// <value>Optional operator, default is matches</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public OperatorEnum? _Operator { get; set; }
-        
-        
-        
-        
-        
-        
-    
+        public OperatorEnum? Operator { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyAggregateQueryPredicate" /> class.
         /// </summary>
         /// <param name="Type">Optional type, can usually be inferred.</param>
         /// <param name="Dimension">Left hand side for dimension predicates.</param>
-        /// <param name="_Operator">Optional operator, default is matches.</param>
+        /// <param name="Operator">Optional operator, default is matches.</param>
         /// <param name="Value">Right hand side for dimension predicates.</param>
         /// <param name="Range">Right hand side for dimension predicates.</param>
-        public JourneyAggregateQueryPredicate(TypeEnum? Type = null, DimensionEnum? Dimension = null, OperatorEnum? _Operator = null, string Value = null, NumericRange Range = null)
+        public JourneyAggregateQueryPredicate(TypeEnum? Type = null, DimensionEnum? Dimension = null, OperatorEnum? Operator = null, string Value = null, NumericRange Range = null)
         {
             this.Type = Type;
             this.Dimension = Dimension;
-            this._Operator = _Operator;
+            this.Operator = Operator;
             this.Value = Value;
             this.Range = Range;
             
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
         /// <summary>
         /// Right hand side for dimension predicates
         /// </summary>
         /// <value>Right hand side for dimension predicates</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Right hand side for dimension predicates
         /// </summary>
         /// <value>Right hand side for dimension predicates</value>
         [DataMember(Name="range", EmitDefaultValue=false)]
         public NumericRange Range { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -382,10 +348,10 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyAggregateQueryPredicate {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Range: ").Append(Range).Append("\n");
             sb.Append("}\n");
@@ -439,9 +405,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Dimension.Equals(other.Dimension)
                 ) &&
                 (
-                    this._Operator == other._Operator ||
-                    this._Operator != null &&
-                    this._Operator.Equals(other._Operator)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
                 ) &&
                 (
                     this.Value == other.Value ||
@@ -466,22 +432,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Dimension != null)
                     hash = hash * 59 + this.Dimension.GetHashCode();
-                
-                if (this._Operator != null)
-                    hash = hash * 59 + this._Operator.GetHashCode();
-                
+
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.Range != null)
                     hash = hash * 59 + this.Range.GetHashCode();
-                
+
                 return hash;
             }
         }

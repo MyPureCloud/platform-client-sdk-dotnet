@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterScreen :  IEquatable<SupportCenterScreen>
     {
-        
-        
         /// <summary>
         /// The type of the screen
         /// </summary>
@@ -59,25 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Article")]
             Article
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of the screen
         /// </summary>
         /// <value>The type of the screen</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterScreen" /> class.
         /// </summary>
@@ -90,18 +75,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Module settings for the screen
         /// </summary>
         /// <value>Module settings for the screen</value>
         [DataMember(Name="moduleSettings", EmitDefaultValue=false)]
         public List<SupportCenterModuleSetting> ModuleSettings { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SupportCenterScreen {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ModuleSettings: ").Append(ModuleSettings).Append("\n");
             sb.Append("}\n");
@@ -176,13 +161,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.ModuleSettings != null)
                     hash = hash * 59 + this.ModuleSettings.GetHashCode();
-                
+
                 return hash;
             }
         }

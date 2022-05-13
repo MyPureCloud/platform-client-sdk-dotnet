@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConditionalGroupRouting :  IEquatable<ConditionalGroupRouting>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConditionalGroupRouting" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The set of rules that defines Conditional Group Routing for this queue
         /// </summary>
         /// <value>The set of rules that defines Conditional Group Routing for this queue</value>
         [DataMember(Name="rules", EmitDefaultValue=false)]
         public List<ConditionalGroupRoutingRule> Rules { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConditionalGroupRouting {\n");
-            
+
             sb.Append("  Rules: ").Append(Rules).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Rules != null)
                     hash = hash * 59 + this.Rules.GetHashCode();
-                
+
                 return hash;
             }
         }

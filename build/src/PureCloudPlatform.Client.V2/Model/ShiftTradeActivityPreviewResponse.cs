@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ShiftTradeActivityPreviewResponse :  IEquatable<ShiftTradeActivityPreviewResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradeActivityPreviewResponse" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The start date and time of this activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The start date and time of this activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The length in minutes of this activity
         /// </summary>
         /// <value>The length in minutes of this activity</value>
         [DataMember(Name="lengthMinutes", EmitDefaultValue=false)]
         public int? LengthMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the activity code for this activity
         /// </summary>
         /// <value>The ID of the activity code for this activity</value>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this activity counts as paid time
         /// </summary>
         /// <value>Whether this activity counts as paid time</value>
         [DataMember(Name="countsAsPaidTime", EmitDefaultValue=false)]
         public bool? CountsAsPaidTime { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ShiftTradeActivityPreviewResponse {\n");
-            
+
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  LengthMinutes: ").Append(LengthMinutes).Append("\n");
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.LengthMinutes != null)
                     hash = hash * 59 + this.LengthMinutes.GetHashCode();
-                
+
                 if (this.ActivityCodeId != null)
                     hash = hash * 59 + this.ActivityCodeId.GetHashCode();
-                
+
                 if (this.CountsAsPaidTime != null)
                     hash = hash * 59 + this.CountsAsPaidTime.GetHashCode();
-                
+
                 return hash;
             }
         }

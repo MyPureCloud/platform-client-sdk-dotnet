@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AssignUsers :  IEquatable<AssignUsers>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AssignUsers" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AssignUsers() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AssignUsers" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// List of user ids to assign to a performance profile
         /// </summary>
         /// <value>List of user ids to assign to a performance profile</value>
         [DataMember(Name="membersToAssign", EmitDefaultValue=false)]
         public List<string> MembersToAssign { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of user ids to remove from a performance profile
         /// </summary>
         /// <value>List of user ids to remove from a performance profile</value>
         [DataMember(Name="membersToRemove", EmitDefaultValue=false)]
         public List<string> MembersToRemove { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AssignUsers {\n");
-            
+
             sb.Append("  MembersToAssign: ").Append(MembersToAssign).Append("\n");
             sb.Append("  MembersToRemove: ").Append(MembersToRemove).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MembersToAssign != null)
                     hash = hash * 59 + this.MembersToAssign.GetHashCode();
-                
+
                 if (this.MembersToRemove != null)
                     hash = hash * 59 + this.MembersToRemove.GetHashCode();
-                
+
                 return hash;
             }
         }

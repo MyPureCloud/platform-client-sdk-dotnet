@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class StatEventCampaignTopicMetricStats :  IEquatable<StatEventCampaignTopicMetricStats>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="StatEventCampaignTopicMetricStats" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public string Metric { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Qualifier
         /// </summary>
         [DataMember(Name="qualifier", EmitDefaultValue=false)]
         public string Qualifier { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Stats
         /// </summary>
         [DataMember(Name="stats", EmitDefaultValue=false)]
         public Dictionary<string, double?> Stats { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StatEventCampaignTopicMetricStats {\n");
-            
+
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  Qualifier: ").Append(Qualifier).Append("\n");
             sb.Append("  Stats: ").Append(Stats).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 if (this.Qualifier != null)
                     hash = hash * 59 + this.Qualifier.GetHashCode();
-                
+
                 if (this.Stats != null)
                     hash = hash * 59 + this.Stats.GetHashCode();
-                
+
                 return hash;
             }
         }

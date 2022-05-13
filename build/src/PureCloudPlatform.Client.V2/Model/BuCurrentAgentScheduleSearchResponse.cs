@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuCurrentAgentScheduleSearchResponse :  IEquatable<BuCurrentAgentScheduleSearchResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuCurrentAgentScheduleSearchResponse" /> class.
         /// </summary>
@@ -71,61 +38,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The requested agent schedules
         /// </summary>
         /// <value>The requested agent schedules</value>
         [DataMember(Name="agentSchedules", EmitDefaultValue=false)]
         public List<BuAgentScheduleSearchResponse> AgentSchedules { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time zone configured for the business unit to which this schedule applies
         /// </summary>
         /// <value>The time zone configured for the business unit to which this schedule applies</value>
         [DataMember(Name="businessUnitTimeZone", EmitDefaultValue=false)]
         public string BusinessUnitTimeZone { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// References to all published week schedules overlapping the start/end date query parameters
         /// </summary>
         /// <value>References to all published week schedules overlapping the start/end date query parameters</value>
         [DataMember(Name="publishedSchedules", EmitDefaultValue=false)]
         public List<BuAgentSchedulePublishedScheduleReference> PublishedSchedules { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The start date of the schedules. Only populated on notifications. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The start date of the schedules. Only populated on notifications. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The end date of the schedules. Only populated on notifications. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The end date of the schedules. Only populated on notifications. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of updates for the schedule. Only used in notifications
         /// </summary>
         /// <value>The list of updates for the schedule. Only used in notifications</value>
         [DataMember(Name="updates", EmitDefaultValue=false)]
         public List<BuAgentScheduleUpdate> Updates { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuCurrentAgentScheduleSearchResponse {\n");
-            
+
             sb.Append("  AgentSchedules: ").Append(AgentSchedules).Append("\n");
             sb.Append("  BusinessUnitTimeZone: ").Append(BusinessUnitTimeZone).Append("\n");
             sb.Append("  PublishedSchedules: ").Append(PublishedSchedules).Append("\n");
@@ -224,25 +191,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AgentSchedules != null)
                     hash = hash * 59 + this.AgentSchedules.GetHashCode();
-                
+
                 if (this.BusinessUnitTimeZone != null)
                     hash = hash * 59 + this.BusinessUnitTimeZone.GetHashCode();
-                
+
                 if (this.PublishedSchedules != null)
                     hash = hash * 59 + this.PublishedSchedules.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 if (this.Updates != null)
                     hash = hash * 59 + this.Updates.GetHashCode();
-                
+
                 return hash;
             }
         }

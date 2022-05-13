@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AcknowledgeScreenRecordingRequest :  IEquatable<AcknowledgeScreenRecordingRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AcknowledgeScreenRecordingRequest" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ParticipantJid
         /// </summary>
         [DataMember(Name="participantJid", EmitDefaultValue=false)]
         public string ParticipantJid { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RoomId
         /// </summary>
         [DataMember(Name="roomId", EmitDefaultValue=false)]
         public string RoomId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AcknowledgeScreenRecordingRequest {\n");
-            
+
             sb.Append("  ParticipantJid: ").Append(ParticipantJid).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ParticipantJid != null)
                     hash = hash * 59 + this.ParticipantJid.GetHashCode();
-                
+
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 return hash;
             }
         }

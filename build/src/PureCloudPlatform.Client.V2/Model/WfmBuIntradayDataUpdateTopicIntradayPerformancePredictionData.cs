@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData :  IEquatable<WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ServiceLevelPercent
         /// </summary>
         [DataMember(Name="serviceLevelPercent", EmitDefaultValue=false)]
         public double? ServiceLevelPercent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AverageSpeedOfAnswerSeconds
         /// </summary>
         [DataMember(Name="averageSpeedOfAnswerSeconds", EmitDefaultValue=false)]
         public double? AverageSpeedOfAnswerSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OccupancyPercent
         /// </summary>
         [DataMember(Name="occupancyPercent", EmitDefaultValue=false)]
         public double? OccupancyPercent { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData {\n");
-            
+
             sb.Append("  ServiceLevelPercent: ").Append(ServiceLevelPercent).Append("\n");
             sb.Append("  AverageSpeedOfAnswerSeconds: ").Append(AverageSpeedOfAnswerSeconds).Append("\n");
             sb.Append("  OccupancyPercent: ").Append(OccupancyPercent).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ServiceLevelPercent != null)
                     hash = hash * 59 + this.ServiceLevelPercent.GetHashCode();
-                
+
                 if (this.AverageSpeedOfAnswerSeconds != null)
                     hash = hash * 59 + this.AverageSpeedOfAnswerSeconds.GetHashCode();
-                
+
                 if (this.OccupancyPercent != null)
                     hash = hash * 59 + this.OccupancyPercent.GetHashCode();
-                
+
                 return hash;
             }
         }

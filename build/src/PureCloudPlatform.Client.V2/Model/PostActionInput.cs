@@ -18,45 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PostActionInput :  IEquatable<PostActionInput>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PostActionInput" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PostActionInput() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PostActionInput" /> class.
         /// </summary>
@@ -77,61 +44,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Category of action, Can be up to 256 characters long
         /// </summary>
         /// <value>Category of action, Can be up to 256 characters long</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public string Category { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of action, Can be up to 256 characters long
         /// </summary>
         /// <value>Name of action, Can be up to 256 characters long</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the integration this action is associated to
         /// </summary>
         /// <value>The ID of the integration this action is associated to</value>
         [DataMember(Name="integrationId", EmitDefaultValue=false)]
         public string IntegrationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Configuration to support request and response processing
         /// </summary>
         /// <value>Configuration to support request and response processing</value>
         [DataMember(Name="config", EmitDefaultValue=false)]
         public ActionConfig Config { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Action contract
         /// </summary>
         /// <value>Action contract</value>
         [DataMember(Name="contract", EmitDefaultValue=false)]
         public ActionContractInput Contract { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indication of whether or not the action is designed to accept sensitive data
         /// </summary>
         /// <value>Indication of whether or not the action is designed to accept sensitive data</value>
         [DataMember(Name="secure", EmitDefaultValue=false)]
         public bool? Secure { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -140,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PostActionInput {\n");
-            
+
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
@@ -230,25 +197,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.IntegrationId != null)
                     hash = hash * 59 + this.IntegrationId.GetHashCode();
-                
+
                 if (this.Config != null)
                     hash = hash * 59 + this.Config.GetHashCode();
-                
+
                 if (this.Contract != null)
                     hash = hash * 59 + this.Contract.GetHashCode();
-                
+
                 if (this.Secure != null)
                     hash = hash * 59 + this.Secure.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -7,7 +7,7 @@ title: ConversationMessageContent
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ContentType** | **string** | Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. | |
+| **ContentType** | **string** | Type of this content element. If contentType &#x3D; \&quot;Attachment\&quot; only one item is allowed. | |
 | **Location** | [**ConversationContentLocation**](ConversationContentLocation.html) | Location content. | [optional] |
 | **Story** | [**ConversationContentStory**](ConversationContentStory.html) | Ephemeral story content. | [optional] |
 | **Attachment** | [**ConversationContentAttachment**](ConversationContentAttachment.html) | Attachment content. | [optional] |

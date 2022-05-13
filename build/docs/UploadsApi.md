@@ -81,7 +81,7 @@ namespace Example
 
 <a name="postlanguageunderstandingmineruploads"></a>
 
-## [**UploadUrlResponse**](UploadUrlResponse.html) PostLanguageunderstandingMinerUploads (string minerId, Empty body)
+## [**UploadUrlResponse**](UploadUrlResponse.html) PostLanguageunderstandingMinerUploads (string minerId, Object body)
 
 
 
@@ -116,7 +116,7 @@ namespace Example
 
             var apiInstance = new UploadsApi();
             var minerId = minerId_example;  // string | Miner ID
-            var body = new Empty(); // Empty | query
+            var body = ;  // Object | query
 
             try
             { 
@@ -139,7 +139,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
-| **body** | [**Empty**](Empty.html)| query |  |
+| **body** | **Object**| query |  |
 {: class="table table-striped"}
 
 ### Return type

@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Reaction :  IEquatable<Reaction>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reaction to take for a given call analysis result.
         /// </summary>
@@ -65,30 +57,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "play_file")]
             PlayFile
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reaction to take for a given call analysis result.
         /// </summary>
         /// <value>The reaction to take for a given call analysis result.</value>
         [DataMember(Name="reactionType", EmitDefaultValue=false)]
         public ReactionTypeEnum? ReactionType { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Reaction" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Reaction() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Reaction" /> class.
         /// </summary>
@@ -103,27 +83,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Parameter for this reaction. For transfer_flow, this would be the outbound flow id.
         /// </summary>
         /// <value>Parameter for this reaction. For transfer_flow, this would be the outbound flow id.</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public string Data { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of the parameter for this reaction. For transfer_flow, this would be the outbound flow name.
         /// </summary>
         /// <value>Name of the parameter for this reaction. For transfer_flow, this would be the outbound flow name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -132,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Reaction {\n");
-            
+
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ReactionType: ").Append(ReactionType).Append("\n");
@@ -204,16 +184,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ReactionType != null)
                     hash = hash * 59 + this.ReactionType.GetHashCode();
-                
+
                 return hash;
             }
         }

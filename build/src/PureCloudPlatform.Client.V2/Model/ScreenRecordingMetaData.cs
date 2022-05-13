@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScreenRecordingMetaData :  IEquatable<ScreenRecordingMetaData>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScreenRecordingMetaData" /> class.
         /// </summary>
@@ -78,63 +40,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets TrackId
         /// </summary>
         [DataMember(Name="trackId", EmitDefaultValue=false)]
         public string TrackId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MediaId
         /// </summary>
         [DataMember(Name="mediaId", EmitDefaultValue=false)]
         public string MediaId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ScreenId
         /// </summary>
         [DataMember(Name="screenId", EmitDefaultValue=false)]
         public string ScreenId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OriginX
         /// </summary>
         [DataMember(Name="originX", EmitDefaultValue=false)]
         public int? OriginX { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OriginY
         /// </summary>
         [DataMember(Name="originY", EmitDefaultValue=false)]
         public int? OriginY { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Primary
         /// </summary>
         [DataMember(Name="primary", EmitDefaultValue=false)]
         public bool? Primary { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Main
         /// </summary>
         [DataMember(Name="main", EmitDefaultValue=false)]
         public bool? Main { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -143,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScreenRecordingMetaData {\n");
-            
+
             sb.Append("  TrackId: ").Append(TrackId).Append("\n");
             sb.Append("  MediaId: ").Append(MediaId).Append("\n");
             sb.Append("  ScreenId: ").Append(ScreenId).Append("\n");
@@ -239,28 +201,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TrackId != null)
                     hash = hash * 59 + this.TrackId.GetHashCode();
-                
+
                 if (this.MediaId != null)
                     hash = hash * 59 + this.MediaId.GetHashCode();
-                
+
                 if (this.ScreenId != null)
                     hash = hash * 59 + this.ScreenId.GetHashCode();
-                
+
                 if (this.OriginX != null)
                     hash = hash * 59 + this.OriginX.GetHashCode();
-                
+
                 if (this.OriginY != null)
                     hash = hash * 59 + this.OriginY.GetHashCode();
-                
+
                 if (this.Primary != null)
                     hash = hash * 59 + this.Primary.GetHashCode();
-                
+
                 if (this.Main != null)
                     hash = hash * 59 + this.Main.GetHashCode();
-                
+
                 return hash;
             }
         }

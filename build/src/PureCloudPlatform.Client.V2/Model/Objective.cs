@@ -18,22 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Objective :  IEquatable<Objective>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaTypes
         /// </summary>
@@ -102,16 +86,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "voice")]
             Voice
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\".
         /// </summary>
@@ -139,49 +113,22 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "or")]
             Or
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\".
         /// </summary>
         /// <value>A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\".</value>
         [DataMember(Name="topicIdsFilterType", EmitDefaultValue=false)]
         public TopicIdsFilterTypeEnum? TopicIdsFilterType { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Objective" /> class.
         /// </summary>
-        /// <param name="TemplateId">The id of this objective&#39;s base template.</param>
+        /// <param name="TemplateId">The id of this objective's base template.</param>
         /// <param name="Zones">Objective zone specifies min,max points and values for the associated metric.</param>
         /// <param name="Enabled">A flag for whether this objective is enabled for the related metric.</param>
         /// <param name="MediaTypes">A list of media types for the metric.</param>
         /// <param name="Queues">A list of queues for the metric.</param>
         /// <param name="Topics">A list of topic ids for detected topic metrics.</param>
-        /// <param name="TopicIdsFilterType">A filter type for topic Ids. It&#39;s only used for objectives with topicIds. Default filter behavior is \&quot;or\&quot;..</param>
+        /// <param name="TopicIdsFilterType">A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\"..</param>
         /// <param name="DateStart">start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         public Objective(string TemplateId = null, List<ObjectiveZone> Zones = null, bool? Enabled = null, List<MediaTypesEnum> MediaTypes = null, List<AddressableEntityRef> Queues = null, List<AddressableEntityRef> Topics = null, TopicIdsFilterTypeEnum? TopicIdsFilterType = null, String DateStart = null)
         {
@@ -196,81 +143,81 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The id of this objective&#39;s base template
+        /// The id of this objective's base template
         /// </summary>
-        /// <value>The id of this objective&#39;s base template</value>
+        /// <value>The id of this objective's base template</value>
         [DataMember(Name="templateId", EmitDefaultValue=false)]
         public string TemplateId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Objective zone specifies min,max points and values for the associated metric
         /// </summary>
         /// <value>Objective zone specifies min,max points and values for the associated metric</value>
         [DataMember(Name="zones", EmitDefaultValue=false)]
         public List<ObjectiveZone> Zones { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A flag for whether this objective is enabled for the related metric
         /// </summary>
         /// <value>A flag for whether this objective is enabled for the related metric</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of media types for the metric
         /// </summary>
         /// <value>A list of media types for the metric</value>
         [DataMember(Name="mediaTypes", EmitDefaultValue=false)]
         public List<MediaTypesEnum> MediaTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of queues for the metric
         /// </summary>
         /// <value>A list of queues for the metric</value>
         [DataMember(Name="queues", EmitDefaultValue=false)]
         public List<AddressableEntityRef> Queues { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of topic ids for detected topic metrics
         /// </summary>
         /// <value>A list of topic ids for detected topic metrics</value>
         [DataMember(Name="topics", EmitDefaultValue=false)]
         public List<AddressableEntityRef> Topics { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateStart", EmitDefaultValue=false)]
         public String DateStart { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -279,7 +226,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Objective {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  TemplateId: ").Append(TemplateId).Append("\n");
             sb.Append("  Zones: ").Append(Zones).Append("\n");
@@ -387,34 +334,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.TemplateId != null)
                     hash = hash * 59 + this.TemplateId.GetHashCode();
-                
+
                 if (this.Zones != null)
                     hash = hash * 59 + this.Zones.GetHashCode();
-                
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.MediaTypes != null)
                     hash = hash * 59 + this.MediaTypes.GetHashCode();
-                
+
                 if (this.Queues != null)
                     hash = hash * 59 + this.Queues.GetHashCode();
-                
+
                 if (this.Topics != null)
                     hash = hash * 59 + this.Topics.GetHashCode();
-                
+
                 if (this.TopicIdsFilterType != null)
                     hash = hash * 59 + this.TopicIdsFilterType.GetHashCode();
-                
+
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();
-                
+
                 return hash;
             }
         }

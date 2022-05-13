@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastProgressNotification :  IEquatable<WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastProgressNotification>
     {
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -58,34 +56,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastProgressNotification" /> class.
         /// </summary>
@@ -102,33 +77,33 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets Result
         /// </summary>
         [DataMember(Name="result", EmitDefaultValue=false)]
         public WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast Result { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OperationId
         /// </summary>
         [DataMember(Name="operationId", EmitDefaultValue=false)]
         public string OperationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Progress
         /// </summary>
         [DataMember(Name="progress", EmitDefaultValue=false)]
         public int? Progress { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -137,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastProgressNotification {\n");
-            
+
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Result: ").Append(Result).Append("\n");
             sb.Append("  OperationId: ").Append(OperationId).Append("\n");
@@ -215,19 +190,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Result != null)
                     hash = hash * 59 + this.Result.GetHashCode();
-                
+
                 if (this.OperationId != null)
                     hash = hash * 59 + this.OperationId.GetHashCode();
-                
+
                 if (this.Progress != null)
                     hash = hash * 59 + this.Progress.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -286,7 +286,7 @@ void (empty response body)
 
 <a name="deleteuser"></a>
 
-## [**Empty**](Empty.html) DeleteUser (string userId)
+## **Object** DeleteUser (string userId)
 
 
 
@@ -325,7 +325,7 @@ namespace Example
             try
             { 
                 // Delete user
-                Empty result = apiInstance.DeleteUser(userId);
+                Object result = apiInstance.DeleteUser(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -347,7 +347,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteuserroutinglanguage"></a>
 
@@ -814,6 +814,8 @@ Returns which divisions the current user has the given permission in.
 
 This route is deprecated, use authorization/divisionspermitted/paged/me instead.
 
+
+
 Requires NO permissions: 
 
 
@@ -947,6 +949,8 @@ namespace Example
 Returns which divisions the specified user has the given permission in.
 
 This route is deprecated, use authorization/divisionspermitted/paged/me instead.
+
+
 
 Requires NO permissions: 
 
@@ -1205,6 +1209,8 @@ namespace Example
 Get a user profile listing
 
 This api is deprecated. User /api/v2/users
+
+
 
 Requires NO permissions: 
 
@@ -1642,7 +1648,7 @@ namespace Example
             var userId = userId_example;  // string | User ID
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ASC")
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
@@ -1668,7 +1674,7 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
 {: class="table table-striped"}
 
@@ -1815,6 +1821,8 @@ namespace Example
 Get user profile
 
 This api has been deprecated. Use api/v2/users instead
+
+
 
 Requires NO permissions: 
 
@@ -2635,6 +2643,8 @@ Get list of Development Activities
 
 Either moduleId or userId is required. Results are filtered based on the applicable permissions.
 
+
+
 Requires ANY permissions: 
 
 * learning:assignment:view
@@ -2721,6 +2731,8 @@ Get list of Development Activities for current user
 
 Results are filtered based on the applicable permissions.
 
+
+
 Requires NO permissions: 
 
 
@@ -2803,6 +2815,8 @@ Get a Development Activity
 
 Permission not required if you are the attendee, creator or facilitator of the coaching appointment or you are the assigned user of the learning assignment.
 
+
+
 Requires ANY permissions: 
 
 * learning:assignment:view
@@ -2870,6 +2884,8 @@ namespace Example
 Get current user details.
 
 This request is not valid when using the Client Credentials OAuth grant.
+
+
 
 Requires NO permissions: 
 
@@ -3139,6 +3155,8 @@ namespace Example
 Patch a user's Geolocation
 
 The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+
+
 
 Requires NO permissions: 
 
@@ -3907,7 +3925,7 @@ namespace Example
             var apiInstance = new UsersApi();
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
             var body = new RoleDivisionGrants(); // RoleDivisionGrants | Pairs of role and division IDs
-            var subjectType = subjectType_example;  // string | what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional)  (default to PC_USER)
+            var subjectType = subjectType_example;  // string | what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional)  (default to "PC_USER")
 
             try
             { 
@@ -3930,7 +3948,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs |  |
-| **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
+| **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to "PC_USER"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -4013,6 +4031,8 @@ Replace subject's roles and divisions with the exact list supplied in the reques
 
 This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
 
+
+
 Requires ALL permissions: 
 
 * authorization:grant:add
@@ -4042,7 +4062,7 @@ namespace Example
             var apiInstance = new UsersApi();
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
             var body = new RoleDivisionGrants(); // RoleDivisionGrants | Pairs of role and division IDs
-            var subjectType = subjectType_example;  // string | what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional)  (default to PC_USER)
+            var subjectType = subjectType_example;  // string | what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional)  (default to "PC_USER")
 
             try
             { 
@@ -4065,7 +4085,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs |  |
-| **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
+| **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to "PC_USER"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -4111,7 +4131,7 @@ namespace Example
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
             var divisionId = divisionId_example;  // string | the id of the division to which to make the grant
             var roleId = roleId_example;  // string | the id of the role to grant
-            var subjectType = subjectType_example;  // string | what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional)  (default to PC_USER)
+            var subjectType = subjectType_example;  // string | what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional)  (default to "PC_USER")
 
             try
             { 
@@ -4135,7 +4155,7 @@ namespace Example
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **divisionId** | **string**| the id of the division to which to make the grant |  |
 | **roleId** | **string**| the id of the role to grant |  |
-| **subjectType** | **string**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to PC_USER] |
+| **subjectType** | **string**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to "PC_USER"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -4483,6 +4503,8 @@ namespace Example
 Retrieve aggregated development activity data
 
 Results are filtered based on the applicable permissions.
+
+
 
 Requires ANY permissions: 
 
@@ -4905,7 +4927,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var body = ;  // List<string> | Skills
+            var body = new List<string>(); // List<string> | Skills
 
             try
             { 
@@ -4928,7 +4950,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | **List<string>**| Skills |  |
+| **body** | [**List<string>**](string.html)| Skills |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4972,7 +4994,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var body = ;  // List<string> | List of roles
+            var body = new List<string>(); // List<string> | List of roles
 
             try
             { 
@@ -4995,7 +5017,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | **List<string>**| List of roles |  |
+| **body** | [**List<string>**](string.html)| List of roles |  |
 {: class="table table-striped"}
 
 ### Return type

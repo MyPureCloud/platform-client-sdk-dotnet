@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FromEmailAddress :  IEquatable<FromEmailAddress>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="FromEmailAddress" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected FromEmailAddress() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FromEmailAddress" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The OutboundDomain used for the email address.
         /// </summary>
         /// <value>The OutboundDomain used for the email address.</value>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public DomainEntityRef Domain { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The friendly name of the email address.
         /// </summary>
         /// <value>The friendly name of the email address.</value>
         [DataMember(Name="friendlyName", EmitDefaultValue=false)]
         public string FriendlyName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The local part of the email address.
         /// </summary>
         /// <value>The local part of the email address.</value>
         [DataMember(Name="localPart", EmitDefaultValue=false)]
         public string LocalPart { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FromEmailAddress {\n");
-            
+
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  FriendlyName: ").Append(FriendlyName).Append("\n");
             sb.Append("  LocalPart: ").Append(LocalPart).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
+
                 if (this.FriendlyName != null)
                     hash = hash * 59 + this.FriendlyName.GetHashCode();
-                
+
                 if (this.LocalPart != null)
                     hash = hash * 59 + this.LocalPart.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CoachingAppointmentStatusRequest :  IEquatable<CoachingAppointmentStatusRequest>
     {
-        
-        
         /// <summary>
         /// The status of the coaching appointment
         /// </summary>
@@ -53,26 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Completed")]
             Completed
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the coaching appointment
         /// </summary>
         /// <value>The status of the coaching appointment</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingAppointmentStatusRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CoachingAppointmentStatusRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingAppointmentStatusRequest" /> class.
         /// </summary>
@@ -83,9 +73,9 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -94,7 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CoachingAppointmentStatusRequest {\n");
-            
+
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -154,10 +144,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 return hash;
             }
         }

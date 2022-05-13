@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class VmPairingInfo :  IEquatable<VmPairingInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="VmPairingInfo" /> class.
         /// </summary>
@@ -57,40 +34,40 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// This is to be used to complete the setup process of a locally deployed virtual edge device.
         /// </summary>
         /// <value>This is to be used to complete the setup process of a locally deployed virtual edge device.</value>
         [DataMember(Name="meta-data", EmitDefaultValue=false)]
         public MetaData MetaData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EdgeId
         /// </summary>
         [DataMember(Name="edge-id", EmitDefaultValue=false)]
         public string EdgeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AuthToken
         /// </summary>
         [DataMember(Name="auth-token", EmitDefaultValue=false)]
         public string AuthToken { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OrgId
         /// </summary>
         [DataMember(Name="org-id", EmitDefaultValue=false)]
         public string OrgId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -99,7 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VmPairingInfo {\n");
-            
+
             sb.Append("  MetaData: ").Append(MetaData).Append("\n");
             sb.Append("  EdgeId: ").Append(EdgeId).Append("\n");
             sb.Append("  AuthToken: ").Append(AuthToken).Append("\n");
@@ -177,19 +154,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MetaData != null)
                     hash = hash * 59 + this.MetaData.GetHashCode();
-                
+
                 if (this.EdgeId != null)
                     hash = hash * 59 + this.EdgeId.GetHashCode();
-                
+
                 if (this.AuthToken != null)
                     hash = hash * 59 + this.AuthToken.GetHashCode();
-                
+
                 if (this.OrgId != null)
                     hash = hash * 59 + this.OrgId.GetHashCode();
-                
+
                 return hash;
             }
         }

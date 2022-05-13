@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DevelopmentActivityAggregateQueryRequestPredicate :  IEquatable<DevelopmentActivityAggregateQueryRequestPredicate>
     {
-        
-        
         /// <summary>
         /// Each predicates specifies a dimension.
         /// </summary>
@@ -59,31 +57,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "isPassed")]
             Ispassed
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Each predicates specifies a dimension.
         /// </summary>
         /// <value>Each predicates specifies a dimension.</value>
         [DataMember(Name="dimension", EmitDefaultValue=false)]
         public DimensionEnum? Dimension { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DevelopmentActivityAggregateQueryRequestPredicate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DevelopmentActivityAggregateQueryRequestPredicate() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DevelopmentActivityAggregateQueryRequestPredicate" /> class.
         /// </summary>
@@ -96,18 +81,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational, AssessedContent, Assessment, Coaching
         /// </summary>
         /// <value>Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational, AssessedContent, Assessment, Coaching</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -116,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DevelopmentActivityAggregateQueryRequestPredicate {\n");
-            
+
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -182,13 +167,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Dimension != null)
                     hash = hash * 59 + this.Dimension.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 return hash;
             }
         }

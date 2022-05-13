@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportingTurnKnowledgeSearch :  IEquatable<ReportingTurnKnowledgeSearch>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingTurnKnowledgeSearch" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of this knowledge search.
         /// </summary>
         /// <value>The ID of this knowledge search.</value>
         [DataMember(Name="searchId", EmitDefaultValue=false)]
         public string SearchId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of search documents captured during this reporting turn.
         /// </summary>
         /// <value>The list of search documents captured during this reporting turn.</value>
         [DataMember(Name="documents", EmitDefaultValue=false)]
         public List<ReportingTurnKnowledgeDocument> Documents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The search query that was used to search the Knowledge Base documents for a matching question.
         /// </summary>
         /// <value>The search query that was used to search the Knowledge Base documents for a matching question.</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public string Query { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportingTurnKnowledgeSearch {\n");
-            
+
             sb.Append("  SearchId: ").Append(SearchId).Append("\n");
             sb.Append("  Documents: ").Append(Documents).Append("\n");
             sb.Append("  Query: ").Append(Query).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SearchId != null)
                     hash = hash * 59 + this.SearchId.GetHashCode();
-                
+
                 if (this.Documents != null)
                     hash = hash * 59 + this.Documents.GetHashCode();
-                
+
                 if (this.Query != null)
                     hash = hash * 59 + this.Query.GetHashCode();
-                
+
                 return hash;
             }
         }

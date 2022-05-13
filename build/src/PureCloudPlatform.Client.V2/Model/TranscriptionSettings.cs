@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TranscriptionSettings :  IEquatable<TranscriptionSettings>
     {
-        
-        
         /// <summary>
         /// Setting to enable/disable transcription capability
         /// </summary>
@@ -53,36 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EnabledQueueFlow")]
             Enabledqueueflow
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Setting to enable/disable transcription capability
         /// </summary>
         /// <value>Setting to enable/disable transcription capability</value>
         [DataMember(Name="transcription", EmitDefaultValue=false)]
         public TranscriptionEnum? Transcription { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TranscriptionSettings" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TranscriptionSettings() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TranscriptionSettings" /> class.
         /// </summary>
@@ -97,27 +77,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Configure confidence threshold. The possible values are from 1 to 100.
         /// </summary>
         /// <value>Configure confidence threshold. The possible values are from 1 to 100.</value>
         [DataMember(Name="transcriptionConfidenceThreshold", EmitDefaultValue=false)]
         public int? TranscriptionConfidenceThreshold { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Setting to enable/disable content search
         /// </summary>
         /// <value>Setting to enable/disable content search</value>
         [DataMember(Name="contentSearchEnabled", EmitDefaultValue=false)]
         public bool? ContentSearchEnabled { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -126,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TranscriptionSettings {\n");
-            
+
             sb.Append("  Transcription: ").Append(Transcription).Append("\n");
             sb.Append("  TranscriptionConfidenceThreshold: ").Append(TranscriptionConfidenceThreshold).Append("\n");
             sb.Append("  ContentSearchEnabled: ").Append(ContentSearchEnabled).Append("\n");
@@ -198,16 +178,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Transcription != null)
                     hash = hash * 59 + this.Transcription.GetHashCode();
-                
+
                 if (this.TranscriptionConfidenceThreshold != null)
                     hash = hash * 59 + this.TranscriptionConfidenceThreshold.GetHashCode();
-                
+
                 if (this.ContentSearchEnabled != null)
                     hash = hash * 59 + this.ContentSearchEnabled.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallbackDisconnectIdentifier :  IEquatable<CallbackDisconnectIdentifier>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CallbackDisconnectIdentifier" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CallbackDisconnectIdentifier() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallbackDisconnectIdentifier" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The Conversation Id.
         /// </summary>
         /// <value>The Conversation Id.</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The callback id.
         /// </summary>
         /// <value>The callback id.</value>
         [DataMember(Name="callbackId", EmitDefaultValue=false)]
         public string CallbackId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallbackDisconnectIdentifier {\n");
-            
+
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  CallbackId: ").Append(CallbackId).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.CallbackId != null)
                     hash = hash * 59 + this.CallbackId.GetHashCode();
-                
+
                 return hash;
             }
         }

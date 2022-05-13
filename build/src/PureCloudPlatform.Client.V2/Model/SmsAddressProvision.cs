@@ -18,60 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SmsAddressProvision :  IEquatable<SmsAddressProvision>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsAddressProvision" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SmsAddressProvision() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsAddressProvision" /> class.
         /// </summary>
@@ -94,88 +46,88 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name associated with this address
         /// </summary>
         /// <value>Name associated with this address</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number and street address where this address is located.
         /// </summary>
         /// <value>The number and street address where this address is located.</value>
         [DataMember(Name="street", EmitDefaultValue=false)]
         public string Street { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The city in which this address is in
         /// </summary>
         /// <value>The city in which this address is in</value>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The state or region this address is in
         /// </summary>
         /// <value>The state or region this address is in</value>
         [DataMember(Name="region", EmitDefaultValue=false)]
         public string Region { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The postal code this address is in
         /// </summary>
         /// <value>The postal code this address is in</value>
         [DataMember(Name="postalCode", EmitDefaultValue=false)]
         public string PostalCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ISO country code of this address
         /// </summary>
         /// <value>The ISO country code of this address</value>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// This is used when the address is created. If the value is not set or true, then the system will, if necessary, auto-correct the address you provide. Set this value to false if the system should not auto-correct the address.
         /// </summary>
         /// <value>This is used when the address is created. If the value is not set or true, then the system will, if necessary, auto-correct the address you provide. Set this value to false if the system should not auto-correct the address.</value>
         [DataMember(Name="autoCorrectAddress", EmitDefaultValue=false)]
         public bool? AutoCorrectAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -184,7 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SmsAddressProvision {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Street: ").Append(Street).Append("\n");
@@ -292,34 +244,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Street != null)
                     hash = hash * 59 + this.Street.GetHashCode();
-                
+
                 if (this.City != null)
                     hash = hash * 59 + this.City.GetHashCode();
-                
+
                 if (this.Region != null)
                     hash = hash * 59 + this.Region.GetHashCode();
-                
+
                 if (this.PostalCode != null)
                     hash = hash * 59 + this.PostalCode.GetHashCode();
-                
+
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
-                
+
                 if (this.AutoCorrectAddress != null)
                     hash = hash * 59 + this.AutoCorrectAddress.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

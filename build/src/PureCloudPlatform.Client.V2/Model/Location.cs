@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Location :  IEquatable<Location>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Location" /> class.
         /// </summary>
@@ -62,51 +34,51 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Unique identifier for the location
         /// </summary>
         /// <value>Unique identifier for the location</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for the location floorplan image
         /// </summary>
         /// <value>Unique identifier for the location floorplan image</value>
         [DataMember(Name="floorplanId", EmitDefaultValue=false)]
         public string FloorplanId { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Users coordinates on the floorplan. Only used when floorplanImage is set
         /// </summary>
         /// <value>Users coordinates on the floorplan. Only used when floorplanImage is set</value>
         [DataMember(Name="coordinates", EmitDefaultValue=false)]
         public Dictionary<string, double?> Coordinates { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Optional description on the users location
         /// </summary>
         /// <value>Optional description on the users location</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LocationDefinition
         /// </summary>
         [DataMember(Name="locationDefinition", EmitDefaultValue=false)]
         public LocationDefinition LocationDefinition { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -115,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Location {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  FloorplanId: ").Append(FloorplanId).Append("\n");
             sb.Append("  Coordinates: ").Append(Coordinates).Append("\n");
@@ -199,22 +171,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.FloorplanId != null)
                     hash = hash * 59 + this.FloorplanId.GetHashCode();
-                
+
                 if (this.Coordinates != null)
                     hash = hash * 59 + this.Coordinates.GetHashCode();
-                
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 if (this.LocationDefinition != null)
                     hash = hash * 59 + this.LocationDefinition.GetHashCode();
-                
+
                 return hash;
             }
         }

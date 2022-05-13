@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationDivisionMembership :  IEquatable<ConversationDivisionMembership>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationDivisionMembership" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A division the conversation belongs to.
         /// </summary>
         /// <value>A division the conversation belongs to.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public DomainEntityRef Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The entities on the conversation within the division. These are the users, queues, work flows, etc. that can be on conversations and and be assigned to different divisions.
         /// </summary>
         /// <value>The entities on the conversation within the division. These are the users, queues, work flows, etc. that can be on conversations and and be assigned to different divisions.</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<DomainEntityRef> Entities { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationDivisionMembership {\n");
-            
+
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
+
                 return hash;
             }
         }

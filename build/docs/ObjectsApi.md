@@ -120,7 +120,7 @@ namespace Example
 
             var apiInstance = new ObjectsApi();
             var divisionId = divisionId_example;  // string | Division ID
-            var objectCount = true;  // bool? | Get count of objects in this division, grouped by type (optional)  (default to false)
+            var objectCount = objectCount_example;  // bool? | Get count of objects in this division, grouped by type (optional)  (default to false)
 
             try
             { 
@@ -143,7 +143,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
-| **objectCount** | **bool?**| Get count of objects in this division, grouped by type | [optional] [default to false] |
+| **objectCount** | **bool?**| Get count of objects in this division, grouped by type | [optional] [default to false]<br />**Values**: true, false |
 {: class="table table-striped"}
 
 ### Return type
@@ -159,6 +159,8 @@ namespace Example
 Retrieve a list of all divisions defined for the organization
 
 Request specific divisions by id using a query param \"id\", e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&id=72e9fb25-c484-488d-9312-7acba82435b3
+
+
 
 Requires NO permissions: 
 
@@ -239,6 +241,8 @@ namespace Example
 Retrieve the home division for the organization.
 
 Will not include object counts.
+
+
 
 Requires NO permissions: 
 
@@ -358,6 +362,8 @@ Assign a list of objects to a division
 
 Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, DATATABLES or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\"206ce31f-61ec-40ed-a8b1-be6f06303998\",\"250a754e-f5e4-4f51-800f-a92f09d3bf8c\"]
 
+
+
 Requires NO permissions: 
 
 
@@ -385,7 +391,7 @@ namespace Example
             var apiInstance = new ObjectsApi();
             var divisionId = divisionId_example;  // string | Division ID
             var objectType = objectType_example;  // string | The type of the objects. Must be one of the valid object types
-            var body = ;  // List<string> | Object Id List
+            var body = new List<string>(); // List<string> | Object Id List
 
             try
             { 
@@ -408,7 +414,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
 | **objectType** | **string**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, EMAILCAMPAIGN, MESSAGINGCAMPAIGN, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, FLOWMILESTONE, FLOWOUTCOME, USER, CALLROUTE, EMERGENCYGROUPS, ROUTINGSCHEDULES, ROUTINGSCHEDULEGROUPS, DATATABLES, TEAM, WORKBIN, WORKTYPE, EXTENSIONPOOL, SKILLGROUP, SCRIPT |
-| **body** | **List<string>**| Object Id List |  |
+| **body** | [**List<string>**](string.html)| Object Id List |  |
 {: class="table table-striped"}
 
 ### Return type

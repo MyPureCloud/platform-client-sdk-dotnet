@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CalibrationAssignment :  IEquatable<CalibrationAssignment>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CalibrationAssignment" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Calibrator
         /// </summary>
         [DataMember(Name="calibrator", EmitDefaultValue=false)]
         public User Calibrator { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Evaluators
         /// </summary>
         [DataMember(Name="evaluators", EmitDefaultValue=false)]
         public List<User> Evaluators { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EvaluationForm
         /// </summary>
         [DataMember(Name="evaluationForm", EmitDefaultValue=false)]
         public EvaluationForm EvaluationForm { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ExpertEvaluator
         /// </summary>
         [DataMember(Name="expertEvaluator", EmitDefaultValue=false)]
         public User ExpertEvaluator { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CalibrationAssignment {\n");
-            
+
             sb.Append("  Calibrator: ").Append(Calibrator).Append("\n");
             sb.Append("  Evaluators: ").Append(Evaluators).Append("\n");
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Calibrator != null)
                     hash = hash * 59 + this.Calibrator.GetHashCode();
-                
+
                 if (this.Evaluators != null)
                     hash = hash * 59 + this.Evaluators.GetHashCode();
-                
+
                 if (this.EvaluationForm != null)
                     hash = hash * 59 + this.EvaluationForm.GetHashCode();
-                
+
                 if (this.ExpertEvaluator != null)
                     hash = hash * 59 + this.ExpertEvaluator.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ColumnStatus :  IEquatable<ColumnStatus>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ColumnStatus" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Indicates whether or not an individual contact method column is contactable.
         /// </summary>
         /// <value>Indicates whether or not an individual contact method column is contactable.</value>
         [DataMember(Name="contactable", EmitDefaultValue=false)]
         public bool? Contactable { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ColumnStatus {\n");
-            
+
             sb.Append("  Contactable: ").Append(Contactable).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Contactable != null)
                     hash = hash * 59 + this.Contactable.GetHashCode();
-                
+
                 return hash;
             }
         }

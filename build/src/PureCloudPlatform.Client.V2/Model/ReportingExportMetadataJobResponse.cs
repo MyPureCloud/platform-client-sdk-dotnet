@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportingExportMetadataJobResponse :  IEquatable<ReportingExportMetadataJobResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The view type of the export metadata
         /// </summary>
@@ -515,59 +507,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PREDICTIVE_ROUTING_MODEL_VIEW")]
             PredictiveRoutingModelView
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The view type of the export metadata
         /// </summary>
         /// <value>The view type of the export metadata</value>
         [DataMember(Name="viewType", EmitDefaultValue=false)]
         public ViewTypeEnum? ViewType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportMetadataJobResponse" /> class.
         /// </summary>
@@ -592,89 +537,89 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The date limitations of the export metadata
         /// </summary>
         /// <value>The date limitations of the export metadata</value>
         [DataMember(Name="dateLimitations", EmitDefaultValue=false)]
         public string DateLimitations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of required filters for the export metadata
         /// </summary>
         /// <value>The list of required filters for the export metadata</value>
         [DataMember(Name="requiredFilters", EmitDefaultValue=false)]
         public List<string> RequiredFilters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of supported filters for the export metadata
         /// </summary>
         /// <value>The list of supported filters for the export metadata</value>
         [DataMember(Name="supportedFilters", EmitDefaultValue=false)]
         public List<string> SupportedFilters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of required column ids for the export metadata
         /// </summary>
         /// <value>The list of required column ids for the export metadata</value>
         [DataMember(Name="requiredColumnIds", EmitDefaultValue=false)]
         public List<string> RequiredColumnIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of dependent column ids for the export metadata
         /// </summary>
         /// <value>The list of dependent column ids for the export metadata</value>
         [DataMember(Name="dependentColumnIds", EmitDefaultValue=false)]
         public Dictionary<string, List<string>> DependentColumnIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of available column ids for the export metadata
         /// </summary>
         /// <value>The list of available column ids for the export metadata</value>
         [DataMember(Name="availableColumnIds", EmitDefaultValue=false)]
         public List<string> AvailableColumnIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -683,7 +628,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportingExportMetadataJobResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
@@ -797,37 +742,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ViewType != null)
                     hash = hash * 59 + this.ViewType.GetHashCode();
-                
+
                 if (this.DateLimitations != null)
                     hash = hash * 59 + this.DateLimitations.GetHashCode();
-                
+
                 if (this.RequiredFilters != null)
                     hash = hash * 59 + this.RequiredFilters.GetHashCode();
-                
+
                 if (this.SupportedFilters != null)
                     hash = hash * 59 + this.SupportedFilters.GetHashCode();
-                
+
                 if (this.RequiredColumnIds != null)
                     hash = hash * 59 + this.RequiredColumnIds.GetHashCode();
-                
+
                 if (this.DependentColumnIds != null)
                     hash = hash * 59 + this.DependentColumnIds.GetHashCode();
-                
+
                 if (this.AvailableColumnIds != null)
                     hash = hash * 59 + this.AvailableColumnIds.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

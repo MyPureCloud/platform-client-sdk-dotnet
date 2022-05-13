@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResponseAssetSearchResults :  IEquatable<ResponseAssetSearchResults>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseAssetSearchResults" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The total number of results found
         /// </summary>
         /// <value>The total number of results found</value>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public long? Total { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of pages
         /// </summary>
         /// <value>The total number of pages</value>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public int? PageCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The current page size
         /// </summary>
         /// <value>The current page size</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The current page number
         /// </summary>
         /// <value>The current page number</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Search results
         /// </summary>
         /// <value>Search results</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<ResponseAsset> Results { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResponseAssetSearchResults {\n");
-            
+
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
-                
+
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
-                
+
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
+
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
+
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
+
                 return hash;
             }
         }

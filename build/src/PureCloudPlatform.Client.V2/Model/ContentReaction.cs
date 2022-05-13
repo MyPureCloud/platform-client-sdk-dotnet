@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContentReaction :  IEquatable<ContentReaction>
     {
-        
-        
         /// <summary>
         /// Type of reaction.
         /// </summary>
@@ -89,31 +87,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Care")]
             Care
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of reaction.
         /// </summary>
         /// <value>Type of reaction.</value>
         [DataMember(Name="reactionType", EmitDefaultValue=false)]
         public ReactionTypeEnum? ReactionType { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentReaction" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ContentReaction() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentReaction" /> class.
         /// </summary>
@@ -126,18 +111,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Number of users that reacted this way to the message.
         /// </summary>
         /// <value>Number of users that reacted this way to the message.</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,7 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContentReaction {\n");
-            
+
             sb.Append("  ReactionType: ").Append(ReactionType).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("}\n");
@@ -212,13 +197,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ReactionType != null)
                     hash = hash * 59 + this.ReactionType.GetHashCode();
-                
+
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-                
+
                 return hash;
             }
         }

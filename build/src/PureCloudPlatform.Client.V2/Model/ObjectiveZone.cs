@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ObjectiveZone :  IEquatable<ObjectiveZone>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// direction type
         /// </summary>
@@ -56,10 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Flat")]
             Flat
         }
-        
-        
-        
-        
         /// <summary>
         /// zone type
         /// </summary>
@@ -99,57 +90,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Out")]
             Out
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// direction type
         /// </summary>
         /// <value>direction type</value>
         [DataMember(Name="directionType", EmitDefaultValue=false)]
         public DirectionTypeEnum? DirectionType { get; set; }
-        
-        
-        
         /// <summary>
         /// zone type
         /// </summary>
         /// <value>zone type</value>
         [DataMember(Name="zoneType", EmitDefaultValue=false)]
         public ZoneTypeEnum? ZoneType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ObjectiveZone" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ObjectiveZone() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ObjectiveZone" /> class.
         /// </summary>
@@ -172,56 +130,56 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// label
         /// </summary>
         /// <value>label</value>
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// upper limit points
         /// </summary>
         /// <value>upper limit points</value>
         [DataMember(Name="upperLimitPoints", EmitDefaultValue=false)]
         public int? UpperLimitPoints { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// lower limit points
         /// </summary>
         /// <value>lower limit points</value>
         [DataMember(Name="lowerLimitPoints", EmitDefaultValue=false)]
         public int? LowerLimitPoints { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// upper limit value
         /// </summary>
         /// <value>upper limit value</value>
         [DataMember(Name="upperLimitValue", EmitDefaultValue=false)]
         public int? UpperLimitValue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// lower limit value
         /// </summary>
         /// <value>lower limit value</value>
         [DataMember(Name="lowerLimitValue", EmitDefaultValue=false)]
         public int? LowerLimitValue { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -230,7 +188,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ObjectiveZone {\n");
-            
+
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  DirectionType: ").Append(DirectionType).Append("\n");
             sb.Append("  ZoneType: ").Append(ZoneType).Append("\n");
@@ -326,28 +284,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Label != null)
                     hash = hash * 59 + this.Label.GetHashCode();
-                
+
                 if (this.DirectionType != null)
                     hash = hash * 59 + this.DirectionType.GetHashCode();
-                
+
                 if (this.ZoneType != null)
                     hash = hash * 59 + this.ZoneType.GetHashCode();
-                
+
                 if (this.UpperLimitPoints != null)
                     hash = hash * 59 + this.UpperLimitPoints.GetHashCode();
-                
+
                 if (this.LowerLimitPoints != null)
                     hash = hash * 59 + this.LowerLimitPoints.GetHashCode();
-                
+
                 if (this.UpperLimitValue != null)
                     hash = hash * 59 + this.UpperLimitValue.GetHashCode();
-                
+
                 if (this.LowerLimitValue != null)
                     hash = hash * 59 + this.LowerLimitValue.GetHashCode();
-                
+
                 return hash;
             }
         }

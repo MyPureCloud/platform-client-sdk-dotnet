@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmProcessUploadRequest :  IEquatable<WfmProcessUploadRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmProcessUploadRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WfmProcessUploadRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmProcessUploadRequest" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The uploadKey provided by the request to get an upload URL
         /// </summary>
         /// <value>The uploadKey provided by the request to get an upload URL</value>
         [DataMember(Name="uploadKey", EmitDefaultValue=false)]
         public string UploadKey { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmProcessUploadRequest {\n");
-            
+
             sb.Append("  UploadKey: ").Append(UploadKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UploadKey != null)
                     hash = hash * 59 + this.UploadKey.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KnowledgeImport :  IEquatable<KnowledgeImport>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// file type of the document
         /// </summary>
@@ -56,13 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "JsonLines")]
             Jsonlines
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of the operation
         /// </summary>
@@ -132,16 +114,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Failed")]
             Failed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Language code
         /// </summary>
@@ -217,71 +189,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "it-IT")]
             Itit
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// file type of the document
         /// </summary>
         /// <value>file type of the document</value>
         [DataMember(Name="fileType", EmitDefaultValue=false)]
         public FileTypeEnum? FileType { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of the operation
         /// </summary>
         /// <value>Status of the operation</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
+        public StatusEnum? Status { get; private set; }
         /// <summary>
         /// Language code
         /// </summary>
         /// <value>Language code</value>
         [DataMember(Name="languageCode", EmitDefaultValue=false)]
-        public LanguageCodeEnum? LanguageCode { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public LanguageCodeEnum? LanguageCode { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeImport" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected KnowledgeImport() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeImport" /> class.
         /// </summary>
@@ -298,94 +229,94 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Id of the import operation
         /// </summary>
         /// <value>Id of the import operation</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of the import operation
         /// </summary>
         /// <value>Name of the import operation</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Upload key
         /// </summary>
         /// <value>Upload key</value>
         [DataMember(Name="uploadKey", EmitDefaultValue=false)]
         public string UploadKey { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Ignore headers for the specified file
         /// </summary>
         /// <value>Ignore headers for the specified file</value>
         [DataMember(Name="ignoreHeaders", EmitDefaultValue=false)]
         public bool? IgnoreHeaders { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Report of the import operation
         /// </summary>
         /// <value>Report of the import operation</value>
         [DataMember(Name="report", EmitDefaultValue=false)]
         public ImportReport Report { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Knowledge base which document import does belong to
         /// </summary>
         /// <value>Knowledge base which document import does belong to</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
         public KnowledgeBase KnowledgeBase { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Created date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Created date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last modified date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Last modified date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -394,7 +325,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class KnowledgeImport {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UploadKey: ").Append(UploadKey).Append("\n");
@@ -520,43 +451,42 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.UploadKey != null)
                     hash = hash * 59 + this.UploadKey.GetHashCode();
-                
+
                 if (this.FileType != null)
                     hash = hash * 59 + this.FileType.GetHashCode();
-                
+
                 if (this.IgnoreHeaders != null)
                     hash = hash * 59 + this.IgnoreHeaders.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Report != null)
                     hash = hash * 59 + this.Report.GetHashCode();
-                
+
                 if (this.KnowledgeBase != null)
                     hash = hash * 59 + this.KnowledgeBase.GetHashCode();
-                
+
                 if (this.LanguageCode != null)
                     hash = hash * 59 + this.LanguageCode.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

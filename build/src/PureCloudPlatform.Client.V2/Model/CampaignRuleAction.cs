@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignRuleAction :  IEquatable<CampaignRuleAction>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The action to take on the campaignRuleActionEntities.
         /// </summary>
@@ -83,35 +75,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "setCampaignDialingMode")]
             Setcampaigndialingmode
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The action to take on the campaignRuleActionEntities.
         /// </summary>
         /// <value>The action to take on the campaignRuleActionEntities.</value>
         [DataMember(Name="actionType", EmitDefaultValue=false)]
         public ActionTypeEnum? ActionType { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleAction" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CampaignRuleAction() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleAction" /> class.
         /// </summary>
@@ -128,35 +103,35 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The parameters for the CampaignRuleAction. Required for certain actionTypes.
         /// </summary>
         /// <value>The parameters for the CampaignRuleAction. Required for certain actionTypes.</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public CampaignRuleParameters Parameters { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The list of entities that this action will apply to.
         /// </summary>
         /// <value>The list of entities that this action will apply to.</value>
         [DataMember(Name="campaignRuleActionEntities", EmitDefaultValue=false)]
         public CampaignRuleActionEntities CampaignRuleActionEntities { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -165,7 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleAction {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("  ActionType: ").Append(ActionType).Append("\n");
@@ -243,19 +218,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Parameters != null)
                     hash = hash * 59 + this.Parameters.GetHashCode();
-                
+
                 if (this.ActionType != null)
                     hash = hash * 59 + this.ActionType.GetHashCode();
-                
+
                 if (this.CampaignRuleActionEntities != null)
                     hash = hash * 59 + this.CampaignRuleActionEntities.GetHashCode();
-                
+
                 return hash;
             }
         }

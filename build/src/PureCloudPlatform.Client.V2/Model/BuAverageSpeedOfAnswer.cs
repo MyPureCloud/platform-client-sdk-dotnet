@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuAverageSpeedOfAnswer :  IEquatable<BuAverageSpeedOfAnswer>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAverageSpeedOfAnswer" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BuAverageSpeedOfAnswer() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAverageSpeedOfAnswer" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether to include average speed of answer (ASA) in the associated configuration
         /// </summary>
         /// <value>Whether to include average speed of answer (ASA) in the associated configuration</value>
         [DataMember(Name="include", EmitDefaultValue=false)]
         public bool? Include { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The target average speed of answer (ASA) in seconds. Required if include == true
         /// </summary>
         /// <value>The target average speed of answer (ASA) in seconds. Required if include == true</value>
         [DataMember(Name="seconds", EmitDefaultValue=false)]
         public int? Seconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuAverageSpeedOfAnswer {\n");
-            
+
             sb.Append("  Include: ").Append(Include).Append("\n");
             sb.Append("  Seconds: ").Append(Seconds).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Include != null)
                     hash = hash * 59 + this.Include.GetHashCode();
-                
+
                 if (this.Seconds != null)
                     hash = hash * 59 + this.Seconds.GetHashCode();
-                
+
                 return hash;
             }
         }

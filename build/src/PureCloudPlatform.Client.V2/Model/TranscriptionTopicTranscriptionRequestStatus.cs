@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TranscriptionTopicTranscriptionRequestStatus :  IEquatable<TranscriptionTopicTranscriptionRequestStatus>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -55,21 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SESSION_ENDED")]
             SessionEnded
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TranscriptionTopicTranscriptionRequestStatus" /> class.
         /// </summary>
@@ -82,17 +67,17 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets OffsetMs
         /// </summary>
         [DataMember(Name="offsetMs", EmitDefaultValue=false)]
         public int? OffsetMs { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -101,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TranscriptionTopicTranscriptionRequestStatus {\n");
-            
+
             sb.Append("  OffsetMs: ").Append(OffsetMs).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("}\n");
@@ -167,13 +152,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OffsetMs != null)
                     hash = hash * 59 + this.OffsetMs.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 return hash;
             }
         }

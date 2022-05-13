@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SurveyAssignment :  IEquatable<SurveyAssignment>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyAssignment" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SurveyAssignment() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyAssignment" /> class.
         /// </summary>
@@ -70,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The survey form used for this survey.
         /// </summary>
         /// <value>The survey form used for this survey.</value>
         [DataMember(Name="surveyForm", EmitDefaultValue=false)]
         public PublishedSurveyFormReference SurveyForm { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI reference to the flow associated with this survey.
         /// </summary>
         /// <value>The URI reference to the flow associated with this survey.</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
         public DomainEntityRef Flow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// An ISO 8601 repeated interval consisting of the number of repetitions, the start datetime, and the interval (e.g. R2/2018-03-01T13:00:00Z/P1M10DT2H30M). Total duration must not exceed 90 days.
         /// </summary>
         /// <value>An ISO 8601 repeated interval consisting of the number of repetitions, the start datetime, and the interval (e.g. R2/2018-03-01T13:00:00Z/P1M10DT2H30M). Total duration must not exceed 90 days.</value>
         [DataMember(Name="inviteTimeInterval", EmitDefaultValue=false)]
         public string InviteTimeInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User together with sendingDomain used to send email, null to use no-reply
         /// </summary>
         /// <value>User together with sendingDomain used to send email, null to use no-reply</value>
         [DataMember(Name="sendingUser", EmitDefaultValue=false)]
         public string SendingUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Validated email domain, required
         /// </summary>
         /// <value>Validated email domain, required</value>
         [DataMember(Name="sendingDomain", EmitDefaultValue=false)]
         public string SendingDomain { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SurveyAssignment {\n");
-            
+
             sb.Append("  SurveyForm: ").Append(SurveyForm).Append("\n");
             sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  InviteTimeInterval: ").Append(InviteTimeInterval).Append("\n");
@@ -208,22 +180,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SurveyForm != null)
                     hash = hash * 59 + this.SurveyForm.GetHashCode();
-                
+
                 if (this.Flow != null)
                     hash = hash * 59 + this.Flow.GetHashCode();
-                
+
                 if (this.InviteTimeInterval != null)
                     hash = hash * 59 + this.InviteTimeInterval.GetHashCode();
-                
+
                 if (this.SendingUser != null)
                     hash = hash * 59 + this.SendingUser.GetHashCode();
-                
+
                 if (this.SendingDomain != null)
                     hash = hash * 59 + this.SendingDomain.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportingTurnKnowledgeFeedback :  IEquatable<ReportingTurnKnowledgeFeedback>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingTurnKnowledgeFeedback" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the original knowledge search that this feedback relates to.
         /// </summary>
         /// <value>The ID of the original knowledge search that this feedback relates to.</value>
         [DataMember(Name="searchId", EmitDefaultValue=false)]
         public string SearchId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The feedback rating for the search (1.0 - 5.0). 1 = Negative, 5 = Positive.
         /// </summary>
         /// <value>The feedback rating for the search (1.0 - 5.0). 1 = Negative, 5 = Positive.</value>
         [DataMember(Name="rating", EmitDefaultValue=false)]
         public int? Rating { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of search documents that the feedback applies to.
         /// </summary>
         /// <value>The list of search documents that the feedback applies to.</value>
         [DataMember(Name="documents", EmitDefaultValue=false)]
         public List<ReportingTurnKnowledgeDocument> Documents { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportingTurnKnowledgeFeedback {\n");
-            
+
             sb.Append("  SearchId: ").Append(SearchId).Append("\n");
             sb.Append("  Rating: ").Append(Rating).Append("\n");
             sb.Append("  Documents: ").Append(Documents).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SearchId != null)
                     hash = hash * 59 + this.SearchId.GetHashCode();
-                
+
                 if (this.Rating != null)
                     hash = hash * 59 + this.Rating.GetHashCode();
-                
+
                 if (this.Documents != null)
                     hash = hash * 59 + this.Documents.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebMessagingEvent :  IEquatable<WebMessagingEvent>
     {
-        
-        
         /// <summary>
         /// Type of this event element
         /// </summary>
@@ -47,36 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Presence")]
             Presence
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of this event element
         /// </summary>
         /// <value>Type of this event element</value>
         [DataMember(Name="eventType", EmitDefaultValue=false)]
         public EventTypeEnum? EventType { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WebMessagingEvent" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WebMessagingEvent() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WebMessagingEvent" /> class.
         /// </summary>
@@ -91,27 +71,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Cobrowse event.
         /// </summary>
         /// <value>Cobrowse event.</value>
         [DataMember(Name="coBrowse", EmitDefaultValue=false)]
         public WebMessagingEventCoBrowse CoBrowse { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Presence event.
         /// </summary>
         /// <value>Presence event.</value>
         [DataMember(Name="presence", EmitDefaultValue=false)]
         public WebMessagingEventPresence Presence { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -120,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebMessagingEvent {\n");
-            
+
             sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  CoBrowse: ").Append(CoBrowse).Append("\n");
             sb.Append("  Presence: ").Append(Presence).Append("\n");
@@ -192,16 +172,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EventType != null)
                     hash = hash * 59 + this.EventType.GetHashCode();
-                
+
                 if (this.CoBrowse != null)
                     hash = hash * 59 + this.CoBrowse.GetHashCode();
-                
+
                 if (this.Presence != null)
                     hash = hash * 59 + this.Presence.GetHashCode();
-                
+
                 return hash;
             }
         }

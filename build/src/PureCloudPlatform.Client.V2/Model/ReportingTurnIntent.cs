@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportingTurnIntent :  IEquatable<ReportingTurnIntent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingTurnIntent" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the intent detected during this reporting turn.
         /// </summary>
         /// <value>The name of the intent detected during this reporting turn.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The confidence score of the intent detected during this reporting turn.
         /// </summary>
         /// <value>The confidence score of the intent detected during this reporting turn.</value>
         [DataMember(Name="confidence", EmitDefaultValue=false)]
         public double? Confidence { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The slots detected during this reporting turn.
         /// </summary>
         /// <value>The slots detected during this reporting turn.</value>
         [DataMember(Name="slots", EmitDefaultValue=false)]
         public List<ReportingTurnIntentSlot> Slots { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportingTurnIntent {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Confidence: ").Append(Confidence).Append("\n");
             sb.Append("  Slots: ").Append(Slots).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Confidence != null)
                     hash = hash * 59 + this.Confidence.GetHashCode();
-                
+
                 if (this.Slots != null)
                     hash = hash * 59 + this.Slots.GetHashCode();
-                
+
                 return hash;
             }
         }

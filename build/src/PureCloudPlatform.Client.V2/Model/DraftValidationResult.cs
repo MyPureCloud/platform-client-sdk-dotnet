@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DraftValidationResult :  IEquatable<DraftValidationResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DraftValidationResult" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Indicates if configuration is valid
         /// </summary>
         /// <value>Indicates if configuration is valid</value>
         [DataMember(Name="valid", EmitDefaultValue=false)]
         public bool? Valid { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of errors causing validation failure
         /// </summary>
         /// <value>List of errors causing validation failure</value>
         [DataMember(Name="errors", EmitDefaultValue=false)]
         public List<ErrorBody> Errors { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DraftValidationResult {\n");
-            
+
             sb.Append("  Valid: ").Append(Valid).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Valid != null)
                     hash = hash * 59 + this.Valid.GetHashCode();
-                
+
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();
-                
+
                 return hash;
             }
         }

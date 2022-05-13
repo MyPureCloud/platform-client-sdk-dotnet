@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Check :  IEquatable<Check>
     {
-        
-        
         /// <summary>
         /// The result of a check executed. This indicates if the check was successful or not.
         /// </summary>
@@ -65,10 +63,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
         /// <summary>
         /// The type of check executed.
         /// </summary>
@@ -120,29 +114,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ModelQuality")]
             Modelquality
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// The result of a check executed. This indicates if the check was successful or not.
         /// </summary>
         /// <value>The result of a check executed. This indicates if the check was successful or not.</value>
         [DataMember(Name="result", EmitDefaultValue=false)]
-        public ResultEnum? Result { get; set; }
-        
-        
-        
+        public ResultEnum? Result { get; private set; }
         /// <summary>
         /// The type of check executed.
         /// </summary>
         /// <value>The type of check executed.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-        
-        
-    
+        public TypeEnum? Type { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Check" /> class.
         /// </summary>
@@ -151,11 +134,11 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -164,7 +147,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Check {\n");
-            
+
             sb.Append("  Result: ").Append(Result).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
@@ -230,13 +213,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Result != null)
                     hash = hash * 59 + this.Result.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 return hash;
             }
         }

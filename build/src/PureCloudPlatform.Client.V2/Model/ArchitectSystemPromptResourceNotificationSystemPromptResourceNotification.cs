@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ArchitectSystemPromptResourceNotificationSystemPromptResourceNotification :  IEquatable<ArchitectSystemPromptResourceNotificationSystemPromptResourceNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectSystemPromptResourceNotificationSystemPromptResourceNotification" /> class.
         /// </summary>
@@ -71,61 +38,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Id of the prompt that this notification is for.
         /// </summary>
         /// <value>Id of the prompt that this notification is for.</value>
         [DataMember(Name="promptId", EmitDefaultValue=false)]
         public string PromptId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Id of the prompt resource that this notification is for.
         /// </summary>
         /// <value>Id of the prompt resource that this notification is for.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Language resource that this notification is for.
         /// </summary>
         /// <value>Language resource that this notification is for.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Uri to the file for this system prompt resource.
         /// </summary>
         /// <value>Uri to the file for this system prompt resource.</value>
         [DataMember(Name="mediaUri", EmitDefaultValue=false)]
         public string MediaUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current upload status of the prompt resource (created, uploaded, transcoded, transcodeFailed).
         /// </summary>
         /// <value>Current upload status of the prompt resource (created, uploaded, transcoded, transcodeFailed).</value>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
         public string UploadStatus { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Duration (in seconds) for the transcoded audio file.
         /// </summary>
         /// <value>Duration (in seconds) for the transcoded audio file.</value>
         [DataMember(Name="durationSeconds", EmitDefaultValue=false)]
         public double? DurationSeconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ArchitectSystemPromptResourceNotificationSystemPromptResourceNotification {\n");
-            
+
             sb.Append("  PromptId: ").Append(PromptId).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
@@ -224,25 +191,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PromptId != null)
                     hash = hash * 59 + this.PromptId.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.MediaUri != null)
                     hash = hash * 59 + this.MediaUri.GetHashCode();
-                
+
                 if (this.UploadStatus != null)
                     hash = hash * 59 + this.UploadStatus.GetHashCode();
-                
+
                 if (this.DurationSeconds != null)
                     hash = hash * 59 + this.DurationSeconds.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DisallowedEntityLearningAssignmentReference :  IEquatable<DisallowedEntityLearningAssignmentReference>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DisallowedEntityLearningAssignmentReference" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The error code associated with this disallowed entity
         /// </summary>
         /// <value>The error code associated with this disallowed entity</value>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The entity that was disallowed
         /// </summary>
         /// <value>The entity that was disallowed</value>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public LearningAssignmentReference Entity { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DisallowedEntityLearningAssignmentReference {\n");
-            
+
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
-                
+
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
-                
+
                 return hash;
             }
         }

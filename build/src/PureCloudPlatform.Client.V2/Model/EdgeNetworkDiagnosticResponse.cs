@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeNetworkDiagnosticResponse :  IEquatable<EdgeNetworkDiagnosticResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeNetworkDiagnosticResponse" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// UUID of each executed command on edge
         /// </summary>
         /// <value>UUID of each executed command on edge</value>
         [DataMember(Name="commandCorrelationId", EmitDefaultValue=false)]
         public string CommandCorrelationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Response string of executed command from edge
         /// </summary>
         /// <value>Response string of executed command from edge</value>
         [DataMember(Name="diagnostics", EmitDefaultValue=false)]
         public string Diagnostics { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeNetworkDiagnosticResponse {\n");
-            
+
             sb.Append("  CommandCorrelationId: ").Append(CommandCorrelationId).Append("\n");
             sb.Append("  Diagnostics: ").Append(Diagnostics).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CommandCorrelationId != null)
                     hash = hash * 59 + this.CommandCorrelationId.GetHashCode();
-                
+
                 if (this.Diagnostics != null)
                     hash = hash * 59 + this.Diagnostics.GetHashCode();
-                
+
                 return hash;
             }
         }

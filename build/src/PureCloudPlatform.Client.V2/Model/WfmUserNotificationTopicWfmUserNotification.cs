@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmUserNotificationTopicWfmUserNotification :  IEquatable<WfmUserNotificationTopicWfmUserNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -61,55 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AdherenceExplanation")]
             Adherenceexplanation
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmUserNotificationTopicWfmUserNotification" /> class.
         /// </summary>
@@ -138,81 +83,81 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MutableGroupId
         /// </summary>
         [DataMember(Name="mutableGroupId", EmitDefaultValue=false)]
         public string MutableGroupId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Timestamp
         /// </summary>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets ShiftTrade
         /// </summary>
         [DataMember(Name="shiftTrade", EmitDefaultValue=false)]
         public WfmUserNotificationTopicShiftTradeNotification ShiftTrade { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TimeOffRequest
         /// </summary>
         [DataMember(Name="timeOffRequest", EmitDefaultValue=false)]
         public WfmUserNotificationTopicTimeOffRequestNotification TimeOffRequest { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AdherenceExplanation
         /// </summary>
         [DataMember(Name="adherenceExplanation", EmitDefaultValue=false)]
         public WfmUserNotificationTopicAdherenceExplanationNotification AdherenceExplanation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AgentNotification
         /// </summary>
         [DataMember(Name="agentNotification", EmitDefaultValue=false)]
         public bool? AgentNotification { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OtherNotificationIdsInGroup
         /// </summary>
         [DataMember(Name="otherNotificationIdsInGroup", EmitDefaultValue=false)]
         public List<string> OtherNotificationIdsInGroup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MarkedAsRead
         /// </summary>
         [DataMember(Name="markedAsRead", EmitDefaultValue=false)]
         public bool? MarkedAsRead { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -221,7 +166,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmUserNotificationTopicWfmUserNotification {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  MutableGroupId: ").Append(MutableGroupId).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
@@ -335,37 +280,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.MutableGroupId != null)
                     hash = hash * 59 + this.MutableGroupId.GetHashCode();
-                
+
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.ShiftTrade != null)
                     hash = hash * 59 + this.ShiftTrade.GetHashCode();
-                
+
                 if (this.TimeOffRequest != null)
                     hash = hash * 59 + this.TimeOffRequest.GetHashCode();
-                
+
                 if (this.AdherenceExplanation != null)
                     hash = hash * 59 + this.AdherenceExplanation.GetHashCode();
-                
+
                 if (this.AgentNotification != null)
                     hash = hash * 59 + this.AgentNotification.GetHashCode();
-                
+
                 if (this.OtherNotificationIdsInGroup != null)
                     hash = hash * 59 + this.OtherNotificationIdsInGroup.GetHashCode();
-                
+
                 if (this.MarkedAsRead != null)
                     hash = hash * 59 + this.MarkedAsRead.GetHashCode();
-                
+
                 return hash;
             }
         }

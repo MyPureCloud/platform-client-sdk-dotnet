@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate :  IEquatable<WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets RoutingStatus
         /// </summary>
@@ -97,16 +74,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OFFLINE")]
             Offline
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets AdherenceState
         /// </summary>
@@ -157,80 +124,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Explained")]
             Explained
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets RoutingStatus
         /// </summary>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public RoutingStatusEnum? RoutingStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets AdherenceState
         /// </summary>
         [DataMember(Name="adherenceState", EmitDefaultValue=false)]
         public AdherenceStateEnum? AdherenceState { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate" /> class.
         /// </summary>
@@ -275,139 +178,139 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public WfmUserScheduleAdherenceUpdatedTeamTopicUserReference User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ManagementUnitId
         /// </summary>
         [DataMember(Name="managementUnitId", EmitDefaultValue=false)]
         public string ManagementUnitId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Team
         /// </summary>
         [DataMember(Name="team", EmitDefaultValue=false)]
         public WfmUserScheduleAdherenceUpdatedTeamTopicUriReference Team { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ScheduledActivityCategory
         /// </summary>
         [DataMember(Name="scheduledActivityCategory", EmitDefaultValue=false)]
         public string ScheduledActivityCategory { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ScheduledActivityCode
         /// </summary>
         [DataMember(Name="scheduledActivityCode", EmitDefaultValue=false)]
         public WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference ScheduledActivityCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SystemPresence
         /// </summary>
         [DataMember(Name="systemPresence", EmitDefaultValue=false)]
         public string SystemPresence { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OrganizationSecondaryPresenceId
         /// </summary>
         [DataMember(Name="organizationSecondaryPresenceId", EmitDefaultValue=false)]
         public string OrganizationSecondaryPresenceId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets ActualActivityCategory
         /// </summary>
         [DataMember(Name="actualActivityCategory", EmitDefaultValue=false)]
         public string ActualActivityCategory { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IsOutOfOffice
         /// </summary>
         [DataMember(Name="isOutOfOffice", EmitDefaultValue=false)]
         public bool? IsOutOfOffice { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Impact
         /// </summary>
         [DataMember(Name="impact", EmitDefaultValue=false)]
         public string Impact { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AdherenceExplanation
         /// </summary>
         [DataMember(Name="adherenceExplanation", EmitDefaultValue=false)]
         public WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation AdherenceExplanation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AdherenceChangeTime
         /// </summary>
         [DataMember(Name="adherenceChangeTime", EmitDefaultValue=false)]
         public DateTime? AdherenceChangeTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PresenceUpdateTime
         /// </summary>
         [DataMember(Name="presenceUpdateTime", EmitDefaultValue=false)]
         public DateTime? PresenceUpdateTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActiveQueues
         /// </summary>
         [DataMember(Name="activeQueues", EmitDefaultValue=false)]
         public List<WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference> ActiveQueues { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActiveQueuesModifiedTime
         /// </summary>
         [DataMember(Name="activeQueuesModifiedTime", EmitDefaultValue=false)]
         public DateTime? ActiveQueuesModifiedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RemovedFromManagementUnit
         /// </summary>
         [DataMember(Name="removedFromManagementUnit", EmitDefaultValue=false)]
         public bool? RemovedFromManagementUnit { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -416,7 +319,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate {\n");
-            
+
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ManagementUnitId: ").Append(ManagementUnitId).Append("\n");
             sb.Append("  Team: ").Append(Team).Append("\n");
@@ -578,61 +481,60 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.ManagementUnitId != null)
                     hash = hash * 59 + this.ManagementUnitId.GetHashCode();
-                
+
                 if (this.Team != null)
                     hash = hash * 59 + this.Team.GetHashCode();
-                
+
                 if (this.ScheduledActivityCategory != null)
                     hash = hash * 59 + this.ScheduledActivityCategory.GetHashCode();
-                
+
                 if (this.ScheduledActivityCode != null)
                     hash = hash * 59 + this.ScheduledActivityCode.GetHashCode();
-                
+
                 if (this.SystemPresence != null)
                     hash = hash * 59 + this.SystemPresence.GetHashCode();
-                
+
                 if (this.OrganizationSecondaryPresenceId != null)
                     hash = hash * 59 + this.OrganizationSecondaryPresenceId.GetHashCode();
-                
+
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
-                
+
                 if (this.ActualActivityCategory != null)
                     hash = hash * 59 + this.ActualActivityCategory.GetHashCode();
-                
+
                 if (this.IsOutOfOffice != null)
                     hash = hash * 59 + this.IsOutOfOffice.GetHashCode();
-                
+
                 if (this.AdherenceState != null)
                     hash = hash * 59 + this.AdherenceState.GetHashCode();
-                
+
                 if (this.Impact != null)
                     hash = hash * 59 + this.Impact.GetHashCode();
-                
+
                 if (this.AdherenceExplanation != null)
                     hash = hash * 59 + this.AdherenceExplanation.GetHashCode();
-                
+
                 if (this.AdherenceChangeTime != null)
                     hash = hash * 59 + this.AdherenceChangeTime.GetHashCode();
-                
+
                 if (this.PresenceUpdateTime != null)
                     hash = hash * 59 + this.PresenceUpdateTime.GetHashCode();
-                
+
                 if (this.ActiveQueues != null)
                     hash = hash * 59 + this.ActiveQueues.GetHashCode();
-                
+
                 if (this.ActiveQueuesModifiedTime != null)
                     hash = hash * 59 + this.ActiveQueuesModifiedTime.GetHashCode();
-                
+
                 if (this.RemovedFromManagementUnit != null)
                     hash = hash * 59 + this.RemovedFromManagementUnit.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrustMemberCreate :  IEquatable<TrustMemberCreate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustMemberCreate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TrustMemberCreate() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustMemberCreate" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Trustee User or Group Id
         /// </summary>
         /// <value>Trustee User or Group Id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of roles to be granted to this user or group. Roles will be granted in all divisions.
         /// </summary>
         /// <value>The list of roles to be granted to this user or group. Roles will be granted in all divisions.</value>
         [DataMember(Name="roleIds", EmitDefaultValue=false)]
         public List<string> RoleIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of trustor organization roles granting this user or group access paired with the divisions for those roles.
         /// </summary>
         /// <value>The list of trustor organization roles granting this user or group access paired with the divisions for those roles.</value>
         [DataMember(Name="roleDivisions", EmitDefaultValue=false)]
         public RoleDivisionGrants RoleDivisions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrustMemberCreate {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RoleIds: ").Append(RoleIds).Append("\n");
             sb.Append("  RoleDivisions: ").Append(RoleDivisions).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.RoleIds != null)
                     hash = hash * 59 + this.RoleIds.GetHashCode();
-                
+
                 if (this.RoleDivisions != null)
                     hash = hash * 59 + this.RoleDivisions.GetHashCode();
-                
+
                 return hash;
             }
         }

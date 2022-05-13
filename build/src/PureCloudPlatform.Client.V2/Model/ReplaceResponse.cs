@@ -18,23 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReplaceResponse :  IEquatable<ReplaceResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets UploadMethod
         /// </summary>
@@ -61,29 +44,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "MULTIPART_POST")]
             MultipartPost
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets UploadMethod
         /// </summary>
         [DataMember(Name="uploadMethod", EmitDefaultValue=false)]
         public UploadMethodEnum? UploadMethod { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceResponse" /> class.
         /// </summary>
@@ -104,49 +69,49 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ChangeNumber
         /// </summary>
         [DataMember(Name="changeNumber", EmitDefaultValue=false)]
         public int? ChangeNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UploadStatus
         /// </summary>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
         public DomainEntityRef UploadStatus { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UploadDestinationUri
         /// </summary>
         [DataMember(Name="uploadDestinationUri", EmitDefaultValue=false)]
         public string UploadDestinationUri { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -155,7 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReplaceResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ChangeNumber: ").Append(ChangeNumber).Append("\n");
@@ -245,25 +210,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ChangeNumber != null)
                     hash = hash * 59 + this.ChangeNumber.GetHashCode();
-                
+
                 if (this.UploadStatus != null)
                     hash = hash * 59 + this.UploadStatus.GetHashCode();
-                
+
                 if (this.UploadDestinationUri != null)
                     hash = hash * 59 + this.UploadDestinationUri.GetHashCode();
-                
+
                 if (this.UploadMethod != null)
                     hash = hash * 59 + this.UploadMethod.GetHashCode();
-                
+
                 return hash;
             }
         }

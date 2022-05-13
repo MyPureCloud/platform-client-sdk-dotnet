@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NluDetectionRequest :  IEquatable<NluDetectionRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDetectionRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected NluDetectionRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDetectionRequest" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The input subject to NLU detection.
         /// </summary>
         /// <value>The input subject to NLU detection.</value>
         [DataMember(Name="input", EmitDefaultValue=false)]
         public NluDetectionInput Input { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The context for the input to NLU detection.
         /// </summary>
         /// <value>The context for the input to NLU detection.</value>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public NluDetectionContext Context { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NluDetectionRequest {\n");
-            
+
             sb.Append("  Input: ").Append(Input).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Input != null)
                     hash = hash * 59 + this.Input.GetHashCode();
-                
+
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
-                
+
                 return hash;
             }
         }

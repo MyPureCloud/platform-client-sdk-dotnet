@@ -18,125 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ExternalOrganization :  IEquatable<ExternalOrganization>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalOrganization" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ExternalOrganization() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalOrganization" /> class.
         /// </summary>
@@ -185,192 +72,192 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the company.
         /// </summary>
         /// <value>The name of the company.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CompanyType
         /// </summary>
         [DataMember(Name="companyType", EmitDefaultValue=false)]
         public string CompanyType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Industry
         /// </summary>
         [DataMember(Name="industry", EmitDefaultValue=false)]
         public string Industry { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PrimaryContactId
         /// </summary>
         [DataMember(Name="primaryContactId", EmitDefaultValue=false)]
         public string PrimaryContactId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public ContactAddress Address { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public PhoneNumber PhoneNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FaxNumber
         /// </summary>
         [DataMember(Name="faxNumber", EmitDefaultValue=false)]
         public PhoneNumber FaxNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EmployeeCount
         /// </summary>
         [DataMember(Name="employeeCount", EmitDefaultValue=false)]
         public long? EmployeeCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Revenue
         /// </summary>
         [DataMember(Name="revenue", EmitDefaultValue=false)]
         public long? Revenue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Websites
         /// </summary>
         [DataMember(Name="websites", EmitDefaultValue=false)]
         public List<string> Websites { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Tickers
         /// </summary>
         [DataMember(Name="tickers", EmitDefaultValue=false)]
         public List<Ticker> Tickers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TwitterId
         /// </summary>
         [DataMember(Name="twitterId", EmitDefaultValue=false)]
         public TwitterId TwitterId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A string that identifies an external system-of-record resource that may have more detailed information on the organization. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace.
         /// </summary>
         /// <value>A string that identifies an external system-of-record resource that may have more detailed information on the organization. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace.</value>
         [DataMember(Name="externalSystemUrl", EmitDefaultValue=false)]
         public string ExternalSystemUrl { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modifyDate", EmitDefaultValue=false)]
         public DateTime? ModifyDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createDate", EmitDefaultValue=false)]
         public DateTime? CreateDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Trustor
         /// </summary>
         [DataMember(Name="trustor", EmitDefaultValue=false)]
         public Trustor Trustor { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The schema defining custom fields for this contact
         /// </summary>
         /// <value>The schema defining custom fields for this contact</value>
         [DataMember(Name="schema", EmitDefaultValue=false)]
         public DataSchema Schema { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Custom fields defined in the schema referenced by schemaId and schemaVersion.
         /// </summary>
         /// <value>Custom fields defined in the schema referenced by schemaId and schemaVersion.</value>
         [DataMember(Name="customFields", EmitDefaultValue=false)]
         public Dictionary<string, Object> CustomFields { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
         /// </summary>
         /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
         [DataMember(Name="externalDataSources", EmitDefaultValue=false)]
         public List<ExternalDataSource> ExternalDataSources { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -379,7 +266,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ExternalOrganization {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  CompanyType: ").Append(CompanyType).Append("\n");
@@ -565,73 +452,72 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.CompanyType != null)
                     hash = hash * 59 + this.CompanyType.GetHashCode();
-                
+
                 if (this.Industry != null)
                     hash = hash * 59 + this.Industry.GetHashCode();
-                
+
                 if (this.PrimaryContactId != null)
                     hash = hash * 59 + this.PrimaryContactId.GetHashCode();
-                
+
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
+
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
-                
+
                 if (this.FaxNumber != null)
                     hash = hash * 59 + this.FaxNumber.GetHashCode();
-                
+
                 if (this.EmployeeCount != null)
                     hash = hash * 59 + this.EmployeeCount.GetHashCode();
-                
+
                 if (this.Revenue != null)
                     hash = hash * 59 + this.Revenue.GetHashCode();
-                
+
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
+
                 if (this.Websites != null)
                     hash = hash * 59 + this.Websites.GetHashCode();
-                
+
                 if (this.Tickers != null)
                     hash = hash * 59 + this.Tickers.GetHashCode();
-                
+
                 if (this.TwitterId != null)
                     hash = hash * 59 + this.TwitterId.GetHashCode();
-                
+
                 if (this.ExternalSystemUrl != null)
                     hash = hash * 59 + this.ExternalSystemUrl.GetHashCode();
-                
+
                 if (this.ModifyDate != null)
                     hash = hash * 59 + this.ModifyDate.GetHashCode();
-                
+
                 if (this.CreateDate != null)
                     hash = hash * 59 + this.CreateDate.GetHashCode();
-                
+
                 if (this.Trustor != null)
                     hash = hash * 59 + this.Trustor.GetHashCode();
-                
+
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();
-                
+
                 if (this.CustomFields != null)
                     hash = hash * 59 + this.CustomFields.GetHashCode();
-                
+
                 if (this.ExternalDataSources != null)
                     hash = hash * 59 + this.ExternalDataSources.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

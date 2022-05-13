@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuditTopicPropertyChange :  IEquatable<AuditTopicPropertyChange>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditTopicPropertyChange" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Property
         /// </summary>
         [DataMember(Name="property", EmitDefaultValue=false)]
         public string Property { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OldValues
         /// </summary>
         [DataMember(Name="oldValues", EmitDefaultValue=false)]
         public List<string> OldValues { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NewValues
         /// </summary>
         [DataMember(Name="newValues", EmitDefaultValue=false)]
         public List<string> NewValues { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuditTopicPropertyChange {\n");
-            
+
             sb.Append("  Property: ").Append(Property).Append("\n");
             sb.Append("  OldValues: ").Append(OldValues).Append("\n");
             sb.Append("  NewValues: ").Append(NewValues).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Property != null)
                     hash = hash * 59 + this.Property.GetHashCode();
-                
+
                 if (this.OldValues != null)
                     hash = hash * 59 + this.OldValues.GetHashCode();
-                
+
                 if (this.NewValues != null)
                     hash = hash * 59 + this.NewValues.GetHashCode();
-                
+
                 return hash;
             }
         }

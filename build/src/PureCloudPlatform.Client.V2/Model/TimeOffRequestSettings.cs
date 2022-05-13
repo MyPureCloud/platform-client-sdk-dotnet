@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TimeOffRequestSettings :  IEquatable<TimeOffRequestSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestSettings" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether to enforce a submission range for agent time off requests
         /// </summary>
         /// <value>Whether to enforce a submission range for agent time off requests</value>
         [DataMember(Name="submissionRangeEnforced", EmitDefaultValue=false)]
         public bool? SubmissionRangeEnforced { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The earliest number of days from now for which an agent can submit a time off request.  Use negative numbers to indicate days in the past
         /// </summary>
         /// <value>The earliest number of days from now for which an agent can submit a time off request.  Use negative numbers to indicate days in the past</value>
         [DataMember(Name="submissionEarliestDaysFromNow", EmitDefaultValue=false)]
         public int? SubmissionEarliestDaysFromNow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The latest number of days from now for which an agent can submit a time off request
         /// </summary>
         /// <value>The latest number of days from now for which an agent can submit a time off request</value>
         [DataMember(Name="submissionLatestDaysFromNow", EmitDefaultValue=false)]
         public int? SubmissionLatestDaysFromNow { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimeOffRequestSettings {\n");
-            
+
             sb.Append("  SubmissionRangeEnforced: ").Append(SubmissionRangeEnforced).Append("\n");
             sb.Append("  SubmissionEarliestDaysFromNow: ").Append(SubmissionEarliestDaysFromNow).Append("\n");
             sb.Append("  SubmissionLatestDaysFromNow: ").Append(SubmissionLatestDaysFromNow).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SubmissionRangeEnforced != null)
                     hash = hash * 59 + this.SubmissionRangeEnforced.GetHashCode();
-                
+
                 if (this.SubmissionEarliestDaysFromNow != null)
                     hash = hash * 59 + this.SubmissionEarliestDaysFromNow.GetHashCode();
-                
+
                 if (this.SubmissionLatestDaysFromNow != null)
                     hash = hash * 59 + this.SubmissionLatestDaysFromNow.GetHashCode();
-                
+
                 return hash;
             }
         }

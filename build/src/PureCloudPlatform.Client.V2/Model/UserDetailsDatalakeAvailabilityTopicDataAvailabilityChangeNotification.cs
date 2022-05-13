@@ -18,18 +18,26 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification :  IEquatable<UserDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification>
     {
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification" /> class.
         /// </summary>
-        public UserDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification()
+        /// <param name="DataAvailabilityDate">Date and time before which data is guaranteed to be available in the datalake.</param>
+        public UserDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification(DateTime? DataAvailabilityDate = null)
         {
+            this.DataAvailabilityDate = DataAvailabilityDate;
             
         }
         
-        
+
+
+        /// <summary>
+        /// Date and time before which data is guaranteed to be available in the datalake
+        /// </summary>
+        /// <value>Date and time before which data is guaranteed to be available in the datalake</value>
+        [DataMember(Name="dataAvailabilityDate", EmitDefaultValue=false)]
+        public DateTime? DataAvailabilityDate { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -38,7 +46,8 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification {\n");
-            
+
+            sb.Append("  DataAvailabilityDate: ").Append(DataAvailabilityDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -78,7 +87,12 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.DataAvailabilityDate == other.DataAvailabilityDate ||
+                    this.DataAvailabilityDate != null &&
+                    this.DataAvailabilityDate.Equals(other.DataAvailabilityDate)
+                );
         }
 
         /// <summary>
@@ -92,7 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
+                if (this.DataAvailabilityDate != null)
+                    hash = hash * 59 + this.DataAvailabilityDate.GetHashCode();
+
                 return hash;
             }
         }

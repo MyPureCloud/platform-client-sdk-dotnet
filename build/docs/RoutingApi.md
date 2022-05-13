@@ -2597,7 +2597,7 @@ namespace Example
             var routingStatus = new List<string>(); // List<string> | Filter by routing status (optional) 
             var presence = new List<string>(); // List<string> | Filter by presence (optional) 
             var memberBy = memberBy_example;  // string | Filter by member type (optional) 
-            var joined = true;  // bool? | Filter by joined status (optional) 
+            var joined = joined_example;  // bool? | Filter by joined status (optional) 
 
             try
             { 
@@ -2631,7 +2631,7 @@ namespace Example
 | **routingStatus** | [**List<string>**](string.html)| Filter by routing status | [optional]  |
 | **presence** | [**List<string>**](string.html)| Filter by presence | [optional]  |
 | **memberBy** | **string**| Filter by member type | [optional] <br />**Values**: user, group |
-| **joined** | **bool?**| Filter by joined status | [optional]  |
+| **joined** | **bool?**| Filter by joined status | [optional] <br />**Values**: true, false |
 {: class="table table-striped"}
 
 ### Return type
@@ -3053,7 +3053,7 @@ namespace Example
             var apiInstance = new RoutingApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var joined = true;  // bool? | Filter by joined status. (optional) 
+            var joined = joined_example;  // bool? | Filter by joined status. (optional) 
             var sortOrder = sortOrder_example;  // string | Note: results are sorted by name. (optional)  (default to asc)
 
             try
@@ -3078,7 +3078,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **joined** | **bool?**| Filter by joined status. | [optional]  |
+| **joined** | **bool?**| Filter by joined status. | [optional] <br />**Values**: true, false |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
 {: class="table table-striped"}
 
@@ -3540,6 +3540,8 @@ Get a list of available phone numbers for SMS provisioning.
 
 This request will return up to 30 random phone numbers matching the criteria specified.  To get additional phone numbers repeat the request.
 
+
+
 Requires ALL permissions: 
 
 * sms:phoneNumber:add
@@ -3716,7 +3718,7 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | Optional field to sort results (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
-            var language = en-US;  // string | A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations (optional)  (default to en-US)
+            var language = en-US;  // string | A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations (optional)  (default to "en-US")
 
             try
             { 
@@ -3746,7 +3748,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Optional field to sort results | [optional] <br />**Values**: phoneNumber, countryCode, country, phoneNumberStatus, phoneNumberType, purchaseDate, supportsMms, supportsSms, supportsVoice |
 | **sortOrder** | **string**| Sort order | [optional] <br />**Values**: ascending, descending |
-| **language** | **string**| A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations | [optional] [default to en-US] |
+| **language** | **string**| A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations | [optional] [default to "en-US"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -4242,6 +4244,8 @@ namespace Example
 Update attributes of an in-queue conversation
 
 Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
+
+
 
 Requires ANY permissions: 
 
@@ -5457,6 +5461,8 @@ namespace Example
 Tests the custom SMTP server integration connection set on this domain
 
 The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+
+
 
 Requires ALL permissions: 
 

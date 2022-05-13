@@ -18,47 +18,19 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotFlowLaunchRequest :  IEquatable<TextBotFlowLaunchRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotFlowLaunchRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotFlowLaunchRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotFlowLaunchRequest" /> class.
         /// </summary>
         /// <param name="Flow">Specifies which Bot Flow to launch. (required).</param>
         /// <param name="ExternalSessionId">The ID of the external session that is associated with the bot flow. (required).</param>
         /// <param name="ConversationId">A conversation ID to associate with the bot flow, if available..</param>
-        /// <param name="InputData">Input values to the flow. Valid values are defined by the flow&#39;s input JSON schema..</param>
+        /// <param name="InputData">Input values to the flow. Valid values are defined by the flow's input JSON schema..</param>
         /// <param name="Channel">Channel information relevant to the bot flow. (required).</param>
         public TextBotFlowLaunchRequest(TextBotFlow Flow = null, string ExternalSessionId = null, string ConversationId = null, TextBotInputOutputData InputData = null, TextBotChannel Channel = null)
         {
@@ -70,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Specifies which Bot Flow to launch.
         /// </summary>
         /// <value>Specifies which Bot Flow to launch.</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
         public TextBotFlow Flow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the external session that is associated with the bot flow.
         /// </summary>
         /// <value>The ID of the external session that is associated with the bot flow.</value>
         [DataMember(Name="externalSessionId", EmitDefaultValue=false)]
         public string ExternalSessionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A conversation ID to associate with the bot flow, if available.
         /// </summary>
         /// <value>A conversation ID to associate with the bot flow, if available.</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Input values to the flow. Valid values are defined by the flow&#39;s input JSON schema.
+        /// Input values to the flow. Valid values are defined by the flow's input JSON schema.
         /// </summary>
-        /// <value>Input values to the flow. Valid values are defined by the flow&#39;s input JSON schema.</value>
+        /// <value>Input values to the flow. Valid values are defined by the flow's input JSON schema.</value>
         [DataMember(Name="inputData", EmitDefaultValue=false)]
         public TextBotInputOutputData InputData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Channel information relevant to the bot flow.
         /// </summary>
         /// <value>Channel information relevant to the bot flow.</value>
         [DataMember(Name="channel", EmitDefaultValue=false)]
         public TextBotChannel Channel { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotFlowLaunchRequest {\n");
-            
+
             sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  ExternalSessionId: ").Append(ExternalSessionId).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
@@ -208,22 +180,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Flow != null)
                     hash = hash * 59 + this.Flow.GetHashCode();
-                
+
                 if (this.ExternalSessionId != null)
                     hash = hash * 59 + this.ExternalSessionId.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.InputData != null)
                     hash = hash * 59 + this.InputData.GetHashCode();
-                
+
                 if (this.Channel != null)
                     hash = hash * 59 + this.Channel.GetHashCode();
-                
+
                 return hash;
             }
         }

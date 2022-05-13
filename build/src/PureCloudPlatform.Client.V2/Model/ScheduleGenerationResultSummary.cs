@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScheduleGenerationResultSummary :  IEquatable<ScheduleGenerationResultSummary>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScheduleGenerationResultSummary" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether the schedule generation run failed
         /// </summary>
         /// <value>Whether the schedule generation run failed</value>
         [DataMember(Name="failed", EmitDefaultValue=false)]
         public bool? Failed { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the schedule generation run. Reference this when requesting support
         /// </summary>
         /// <value>The ID of the schedule generation run. Reference this when requesting support</value>
         [DataMember(Name="runId", EmitDefaultValue=false)]
         public string RunId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of schedule generation messages for this schedule generation run
         /// </summary>
         /// <value>The number of schedule generation messages for this schedule generation run</value>
         [DataMember(Name="messageCount", EmitDefaultValue=false)]
         public int? MessageCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of schedule generation message counts by severity for this schedule generation run
         /// </summary>
         /// <value>The list of schedule generation message counts by severity for this schedule generation run</value>
         [DataMember(Name="messageSeverityCounts", EmitDefaultValue=false)]
         public List<SchedulerMessageSeverityCount> MessageSeverityCounts { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScheduleGenerationResultSummary {\n");
-            
+
             sb.Append("  Failed: ").Append(Failed).Append("\n");
             sb.Append("  RunId: ").Append(RunId).Append("\n");
             sb.Append("  MessageCount: ").Append(MessageCount).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Failed != null)
                     hash = hash * 59 + this.Failed.GetHashCode();
-                
+
                 if (this.RunId != null)
                     hash = hash * 59 + this.RunId.GetHashCode();
-                
+
                 if (this.MessageCount != null)
                     hash = hash * 59 + this.MessageCount.GetHashCode();
-                
+
                 if (this.MessageSeverityCounts != null)
                     hash = hash * 59 + this.MessageSeverityCounts.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueryFacetInfo :  IEquatable<QueryFacetInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryFacetInfo" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public List<FacetKeyAttribute> Attributes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Facets
         /// </summary>
         [DataMember(Name="facets", EmitDefaultValue=false)]
         public List<FacetEntry> Facets { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueryFacetInfo {\n");
-            
+
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  Facets: ").Append(Facets).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
+
                 if (this.Facets != null)
                     hash = hash * 59 + this.Facets.GetHashCode();
-                
+
                 return hash;
             }
         }

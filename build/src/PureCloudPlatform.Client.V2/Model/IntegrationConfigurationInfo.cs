@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntegrationConfigurationInfo :  IEquatable<IntegrationConfigurationInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationConfigurationInfo" /> class.
         /// </summary>
@@ -34,16 +26,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The current, active configuration for the integration.
         /// </summary>
         /// <value>The current, active configuration for the integration.</value>
         [DataMember(Name="current", EmitDefaultValue=false)]
         public IntegrationConfiguration Current { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntegrationConfigurationInfo {\n");
-            
+
             sb.Append("  Current: ").Append(Current).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -112,10 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Current != null)
                     hash = hash * 59 + this.Current.GetHashCode();
-                
+
                 return hash;
             }
         }

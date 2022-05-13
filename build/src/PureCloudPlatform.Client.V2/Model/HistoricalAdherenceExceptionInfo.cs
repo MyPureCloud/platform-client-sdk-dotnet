@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class HistoricalAdherenceExceptionInfo :  IEquatable<HistoricalAdherenceExceptionInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Activity for which the user is scheduled
         /// </summary>
@@ -98,10 +87,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unscheduled")]
             Unscheduled
         }
-        
-        
-        
-        
         /// <summary>
         /// Activity for which the user is actually engaged
         /// </summary>
@@ -171,10 +156,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unscheduled")]
             Unscheduled
         }
-        
-        
-        
-        
         /// <summary>
         /// Actual underlying system presence value
         /// </summary>
@@ -250,10 +231,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Break")]
             Break
         }
-        
-        
-        
-        
         /// <summary>
         /// Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue
         /// </summary>
@@ -299,10 +276,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "COMMUNICATING")]
             Communicating
         }
-        
-        
-        
-        
         /// <summary>
         /// The impact of the current adherence state for this user
         /// </summary>
@@ -342,67 +315,36 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unknown")]
             Unknown
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Activity for which the user is scheduled
         /// </summary>
         /// <value>Activity for which the user is scheduled</value>
         [DataMember(Name="scheduledActivityCategory", EmitDefaultValue=false)]
         public ScheduledActivityCategoryEnum? ScheduledActivityCategory { get; set; }
-        
-        
-        
         /// <summary>
         /// Activity for which the user is actually engaged
         /// </summary>
         /// <value>Activity for which the user is actually engaged</value>
         [DataMember(Name="actualActivityCategory", EmitDefaultValue=false)]
         public ActualActivityCategoryEnum? ActualActivityCategory { get; set; }
-        
-        
-        
         /// <summary>
         /// Actual underlying system presence value
         /// </summary>
         /// <value>Actual underlying system presence value</value>
         [DataMember(Name="systemPresence", EmitDefaultValue=false)]
         public SystemPresenceEnum? SystemPresence { get; set; }
-        
-        
-        
         /// <summary>
         /// Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue
         /// </summary>
         /// <value>Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue</value>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public RoutingStatusEnum? RoutingStatus { get; set; }
-        
-        
-        
         /// <summary>
         /// The impact of the current adherence state for this user
         /// </summary>
         /// <value>The impact of the current adherence state for this user</value>
         [DataMember(Name="impact", EmitDefaultValue=false)]
         public ImpactEnum? Impact { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="HistoricalAdherenceExceptionInfo" /> class.
         /// </summary>
@@ -429,53 +371,53 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Exception start offset in seconds relative to query start time
         /// </summary>
         /// <value>Exception start offset in seconds relative to query start time</value>
         [DataMember(Name="startOffsetSeconds", EmitDefaultValue=false)]
         public int? StartOffsetSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Exception end offset in seconds relative to query start time
         /// </summary>
         /// <value>Exception end offset in seconds relative to query start time</value>
         [DataMember(Name="endOffsetSeconds", EmitDefaultValue=false)]
         public int? EndOffsetSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the scheduled activity code for this user
         /// </summary>
         /// <value>The ID of the scheduled activity code for this user</value>
         [DataMember(Name="scheduledActivityCodeId", EmitDefaultValue=false)]
         public string ScheduledActivityCodeId { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID
         /// </summary>
         /// <value>The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID</value>
         [DataMember(Name="secondaryPresenceLookupId", EmitDefaultValue=false)]
         public string SecondaryPresenceLookupId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -484,7 +426,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HistoricalAdherenceExceptionInfo {\n");
-            
+
             sb.Append("  StartOffsetSeconds: ").Append(StartOffsetSeconds).Append("\n");
             sb.Append("  EndOffsetSeconds: ").Append(EndOffsetSeconds).Append("\n");
             sb.Append("  ScheduledActivityCodeId: ").Append(ScheduledActivityCodeId).Append("\n");
@@ -592,34 +534,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartOffsetSeconds != null)
                     hash = hash * 59 + this.StartOffsetSeconds.GetHashCode();
-                
+
                 if (this.EndOffsetSeconds != null)
                     hash = hash * 59 + this.EndOffsetSeconds.GetHashCode();
-                
+
                 if (this.ScheduledActivityCodeId != null)
                     hash = hash * 59 + this.ScheduledActivityCodeId.GetHashCode();
-                
+
                 if (this.ScheduledActivityCategory != null)
                     hash = hash * 59 + this.ScheduledActivityCategory.GetHashCode();
-                
+
                 if (this.ActualActivityCategory != null)
                     hash = hash * 59 + this.ActualActivityCategory.GetHashCode();
-                
+
                 if (this.SystemPresence != null)
                     hash = hash * 59 + this.SystemPresence.GetHashCode();
-                
+
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
-                
+
                 if (this.Impact != null)
                     hash = hash * 59 + this.Impact.GetHashCode();
-                
+
                 if (this.SecondaryPresenceLookupId != null)
                     hash = hash * 59 + this.SecondaryPresenceLookupId.GetHashCode();
-                
+
                 return hash;
             }
         }

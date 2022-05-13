@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationNormalizedMessage :  IEquatable<ConversationNormalizedMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Message type.
         /// </summary>
@@ -65,19 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Event")]
             Event
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Message receipt status, only used with type Receipt.
         /// </summary>
@@ -129,13 +108,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Removed")]
             Removed
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies.
         /// </summary>
@@ -163,13 +135,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Bot")]
             Bot
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the message.
         /// </summary>
@@ -197,72 +162,36 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Outbound")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Message type.
         /// </summary>
         /// <value>Message type.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Message receipt status, only used with type Receipt.
         /// </summary>
         /// <value>Message receipt status, only used with type Receipt.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
+        public StatusEnum? Status { get; private set; }
         /// <summary>
         /// Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies.
         /// </summary>
         /// <value>Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies.</value>
         [DataMember(Name="originatingEntity", EmitDefaultValue=false)]
         public OriginatingEntityEnum? OriginatingEntity { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the message.
         /// </summary>
         /// <value>The direction of the message.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
-        public DirectionEnum? Direction { get; set; }
-        
-        
-        
-        
-    
+        public DirectionEnum? Direction { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNormalizedMessage" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConversationNormalizedMessage() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNormalizedMessage" /> class.
         /// </summary>
@@ -283,87 +212,87 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Unique ID of the message. Message receipts will have the same ID as the message they reference.
         /// </summary>
         /// <value>Unique ID of the message. Message receipts will have the same ID as the message they reference.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Channel-specific information that describes the message and the message channel/provider.
         /// </summary>
         /// <value>Channel-specific information that describes the message and the message channel/provider.</value>
         [DataMember(Name="channel", EmitDefaultValue=false)]
         public ConversationMessagingChannel Channel { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Message text.
         /// </summary>
         /// <value>Message text.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of content elements
         /// </summary>
         /// <value>List of content elements</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public List<ConversationMessageContent> Content { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of event elements.
         /// </summary>
         /// <value>List of event elements.</value>
         [DataMember(Name="events", EmitDefaultValue=false)]
         public List<ConversationMessageEvent> Events { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// List of reasons for a message receipt that indicates the message has failed. Only used with Failed status.
         /// </summary>
         /// <value>List of reasons for a message receipt that indicates the message has failed. Only used with Failed status.</value>
         [DataMember(Name="reasons", EmitDefaultValue=false)]
         public List<ConversationReason> Reasons { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Indicates if this is the last message receipt for this message, or if another message receipt can be expected.
         /// </summary>
         /// <value>Indicates if this is the last message receipt for this message, or if another message receipt can be expected.</value>
         [DataMember(Name="isFinalReceipt", EmitDefaultValue=false)]
         public bool? IsFinalReceipt { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Additional metadata about this message.
         /// </summary>
         /// <value>Additional metadata about this message.</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public Dictionary<string, string> Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -372,7 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationNormalizedMessage {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Channel: ").Append(Channel).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -498,43 +427,42 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Channel != null)
                     hash = hash * 59 + this.Channel.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
-                
+
                 if (this.Events != null)
                     hash = hash * 59 + this.Events.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Reasons != null)
                     hash = hash * 59 + this.Reasons.GetHashCode();
-                
+
                 if (this.OriginatingEntity != null)
                     hash = hash * 59 + this.OriginatingEntity.GetHashCode();
-                
+
                 if (this.IsFinalReceipt != null)
                     hash = hash * 59 + this.IsFinalReceipt.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

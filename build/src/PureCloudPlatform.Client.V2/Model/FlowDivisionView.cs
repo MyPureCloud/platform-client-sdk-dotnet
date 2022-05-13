@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FlowDivisionView :  IEquatable<FlowDivisionView>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -151,66 +140,17 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "WORKITEM")]
             Workitem
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowDivisionView" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected FlowDivisionView() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowDivisionView" /> class.
         /// </summary>
@@ -237,99 +177,99 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The flow identifier
         /// </summary>
         /// <value>The flow identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The flow name
         /// </summary>
         /// <value>The flow name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The division to which this entity belongs.
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public WritableDivision Division { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// the flow description
         /// </summary>
         /// <value>the flow description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// json schema describing the inputs for the flow
         /// </summary>
         /// <value>json schema describing the inputs for the flow</value>
         [DataMember(Name="inputSchema", EmitDefaultValue=false)]
         public JsonSchemaDocument InputSchema { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// json schema describing the outputs for the flow
         /// </summary>
         /// <value>json schema describing the outputs for the flow</value>
         [DataMember(Name="outputSchema", EmitDefaultValue=false)]
         public JsonSchemaDocument OutputSchema { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of supported languages for the published version of the flow.
         /// </summary>
         /// <value>List of supported languages for the published version of the flow.</value>
         [DataMember(Name="supportedLanguages", EmitDefaultValue=false)]
         public List<SupportedLanguage> SupportedLanguages { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// published version information if there is a published version
         /// </summary>
         /// <value>published version information if there is a published version</value>
         [DataMember(Name="publishedVersion", EmitDefaultValue=false)]
         public FlowVersion PublishedVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// debug version information if there is a debug version
         /// </summary>
         /// <value>debug version information if there is a debug version</value>
         [DataMember(Name="debugVersion", EmitDefaultValue=false)]
         public FlowVersion DebugVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -338,7 +278,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FlowDivisionView {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
@@ -458,40 +398,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.InputSchema != null)
                     hash = hash * 59 + this.InputSchema.GetHashCode();
-                
+
                 if (this.OutputSchema != null)
                     hash = hash * 59 + this.OutputSchema.GetHashCode();
-                
+
                 if (this.SupportedLanguages != null)
                     hash = hash * 59 + this.SupportedLanguages.GetHashCode();
-                
+
                 if (this.PublishedVersion != null)
                     hash = hash * 59 + this.PublishedVersion.GetHashCode();
-                
+
                 if (this.DebugVersion != null)
                     hash = hash * 59 + this.DebugVersion.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

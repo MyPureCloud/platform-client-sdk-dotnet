@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ListItemComponent :  IEquatable<ListItemComponent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of list item to render.
         /// </summary>
@@ -53,44 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ListItemBig")]
             Listitembig
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of list item to render.
         /// </summary>
         /// <value>The type of list item to render.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ListItemComponent" /> class.
         /// </summary>
@@ -113,63 +73,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// An ID assigned to this list item.
         /// </summary>
         /// <value>An ID assigned to this list item.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// An ID of the rich message instance.
         /// </summary>
         /// <value>An ID of the rich message instance.</value>
         [DataMember(Name="rmid", EmitDefaultValue=false)]
         public string Rmid { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// URL of an image.
         /// </summary>
         /// <value>URL of an image.</value>
         [DataMember(Name="image", EmitDefaultValue=false)]
         public string Image { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The main headline of the list item.
         /// </summary>
         /// <value>The main headline of the list item.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text to show in the list item description.
         /// </summary>
         /// <value>Text to show in the list item description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list item actions (Deprecated).
         /// </summary>
         /// <value>The list item actions (Deprecated).</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public ContentActions Actions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -178,7 +138,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ListItemComponent {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Rmid: ").Append(Rmid).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -274,28 +234,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Rmid != null)
                     hash = hash * 59 + this.Rmid.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Image != null)
                     hash = hash * 59 + this.Image.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
+
                 return hash;
             }
         }

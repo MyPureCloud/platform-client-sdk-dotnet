@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchSurveyQuestion :  IEquatable<PatchSurveyQuestion>
     {
-        
-        
         /// <summary>
         /// Type of survey question.
         /// </summary>
@@ -65,13 +63,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "textarea")]
             Textarea
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The customer property that the answer maps to.
         /// </summary>
@@ -123,47 +114,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "companyName")]
             Companyname
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of survey question.
         /// </summary>
         /// <value>Type of survey question.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// The customer property that the answer maps to.
         /// </summary>
         /// <value>The customer property that the answer maps to.</value>
         [DataMember(Name="customerProperty", EmitDefaultValue=false)]
         public CustomerPropertyEnum? CustomerProperty { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchSurveyQuestion" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PatchSurveyQuestion() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchSurveyQuestion" /> class.
         /// </summary>
@@ -182,38 +150,38 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Label of question.
         /// </summary>
         /// <value>Label of question.</value>
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Choices available to user.
         /// </summary>
         /// <value>Choices available to user.</value>
         [DataMember(Name="choices", EmitDefaultValue=false)]
         public List<string> Choices { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether answering this question is mandatory.
         /// </summary>
         /// <value>Whether answering this question is mandatory.</value>
         [DataMember(Name="isMandatory", EmitDefaultValue=false)]
         public bool? IsMandatory { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -222,7 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PatchSurveyQuestion {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  CustomerProperty: ").Append(CustomerProperty).Append("\n");
@@ -306,22 +274,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Label != null)
                     hash = hash * 59 + this.Label.GetHashCode();
-                
+
                 if (this.CustomerProperty != null)
                     hash = hash * 59 + this.CustomerProperty.GetHashCode();
-                
+
                 if (this.Choices != null)
                     hash = hash * 59 + this.Choices.GetHashCode();
-                
+
                 if (this.IsMandatory != null)
                     hash = hash * 59 + this.IsMandatory.GetHashCode();
-                
+
                 return hash;
             }
         }

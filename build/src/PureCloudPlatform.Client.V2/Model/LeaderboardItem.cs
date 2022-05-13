@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LeaderboardItem :  IEquatable<LeaderboardItem>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LeaderboardItem" /> class.
         /// </summary>
@@ -44,34 +26,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The user object for this leaderboard rank
         /// </summary>
         /// <value>The user object for this leaderboard rank</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UserReference User { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The rank of the user
         /// </summary>
         /// <value>The rank of the user</value>
         [DataMember(Name="rank", EmitDefaultValue=false)]
         public int? Rank { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The points collected by the user
         /// </summary>
         /// <value>The points collected by the user</value>
         [DataMember(Name="points", EmitDefaultValue=false)]
         public long? Points { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LeaderboardItem {\n");
-            
+
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Rank: ").Append(Rank).Append("\n");
             sb.Append("  Points: ").Append(Points).Append("\n");
@@ -152,16 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Rank != null)
                     hash = hash * 59 + this.Rank.GetHashCode();
-                
+
                 if (this.Points != null)
                     hash = hash * 59 + this.Points.GetHashCode();
-                
+
                 return hash;
             }
         }

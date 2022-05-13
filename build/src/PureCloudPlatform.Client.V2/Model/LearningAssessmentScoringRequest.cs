@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningAssessmentScoringRequest :  IEquatable<LearningAssessmentScoringRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssessmentScoringRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LearningAssessmentScoringRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssessmentScoringRequest" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The assessment form to score against
         /// </summary>
         /// <value>The assessment form to score against</value>
         [DataMember(Name="assessmentForm", EmitDefaultValue=false)]
         public AssessmentForm AssessmentForm { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The answers to score
         /// </summary>
         /// <value>The answers to score</value>
         [DataMember(Name="answers", EmitDefaultValue=false)]
         public AssessmentScoringSet Answers { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningAssessmentScoringRequest {\n");
-            
+
             sb.Append("  AssessmentForm: ").Append(AssessmentForm).Append("\n");
             sb.Append("  Answers: ").Append(Answers).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AssessmentForm != null)
                     hash = hash * 59 + this.AssessmentForm.GetHashCode();
-                
+
                 if (this.Answers != null)
                     hash = hash * 59 + this.Answers.GetHashCode();
-                
+
                 return hash;
             }
         }

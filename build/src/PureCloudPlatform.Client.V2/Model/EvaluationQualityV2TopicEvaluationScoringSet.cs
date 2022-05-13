@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EvaluationQualityV2TopicEvaluationScoringSet :  IEquatable<EvaluationQualityV2TopicEvaluationScoringSet>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationQualityV2TopicEvaluationScoringSet" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets TotalScore
         /// </summary>
         [DataMember(Name="totalScore", EmitDefaultValue=false)]
         public int? TotalScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TotalCriticalScore
         /// </summary>
         [DataMember(Name="totalCriticalScore", EmitDefaultValue=false)]
         public int? TotalCriticalScore { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EvaluationQualityV2TopicEvaluationScoringSet {\n");
-            
+
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
             sb.Append("  TotalCriticalScore: ").Append(TotalCriticalScore).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TotalScore != null)
                     hash = hash * 59 + this.TotalScore.GetHashCode();
-                
+
                 if (this.TotalCriticalScore != null)
                     hash = hash * 59 + this.TotalCriticalScore.GetHashCode();
-                
+
                 return hash;
             }
         }

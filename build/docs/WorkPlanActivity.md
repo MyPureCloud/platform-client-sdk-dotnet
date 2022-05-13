@@ -12,9 +12,9 @@ title: WorkPlanActivity
 | **LengthMinutes** | **int?** | Length of the activity in minutes | [optional] |
 | **StartTimeIsRelativeToShiftStart** | **bool?** | Whether the start time of the activity is relative to the start time of the shift it belongs to | [optional] |
 | **FlexibleStartTime** | **bool?** | Whether the start time of the activity is flexible | [optional] |
-| **EarliestStartTimeMinutes** | **int?** | Earliest activity start in offset minutes relative to shift start time if startTimeIsRelativeToShiftStart == true else its based on midnight. Used if flexibleStartTime == true | [optional] |
-| **LatestStartTimeMinutes** | **int?** | Latest activity start in offset minutes relative to shift start time if startTimeIsRelativeToShiftStart == true else its based on midnight. Used if flexibleStartTime == true | [optional] |
-| **ExactStartTimeMinutes** | **int?** | Exact activity start in offset minutes relative to shift start time if startTimeIsRelativeToShiftStart == true else its based on midnight. Used if flexibleStartTime == false | [optional] |
+| **EarliestStartTimeMinutes** | **int?** | Earliest activity start in offset minutes relative to shift start time if startTimeIsRelativeToShiftStart &#x3D;&#x3D; true else its based on midnight. Used if flexibleStartTime &#x3D;&#x3D; true | [optional] |
+| **LatestStartTimeMinutes** | **int?** | Latest activity start in offset minutes relative to shift start time if startTimeIsRelativeToShiftStart &#x3D;&#x3D; true else its based on midnight. Used if flexibleStartTime &#x3D;&#x3D; true | [optional] |
+| **ExactStartTimeMinutes** | **int?** | Exact activity start in offset minutes relative to shift start time if startTimeIsRelativeToShiftStart &#x3D;&#x3D; true else its based on midnight. Used if flexibleStartTime &#x3D;&#x3D; false | [optional] |
 | **StartTimeIncrementMinutes** | **int?** | Increment in offset minutes that would contribute to different possible start times for the activity | [optional] |
 | **CountsAsPaidTime** | **bool?** | Whether the activity is paid | [optional] |
 | **CountsAsContiguousWorkTime** | **bool?** | Whether the activity duration is counted towards contiguous work time | [optional] |

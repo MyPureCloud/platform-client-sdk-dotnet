@@ -18,74 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateWorkPlanActivity :  IEquatable<CreateWorkPlanActivity>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWorkPlanActivity" /> class.
         /// </summary>
@@ -120,124 +52,124 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// ID of the activity code associated with this activity
         /// </summary>
         /// <value>ID of the activity code associated with this activity</value>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Description of the activity
         /// </summary>
         /// <value>Description of the activity</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Length of the activity in minutes
         /// </summary>
         /// <value>Length of the activity in minutes</value>
         [DataMember(Name="lengthMinutes", EmitDefaultValue=false)]
         public int? LengthMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the start time of the activity is relative to the start time of the shift it belongs to
         /// </summary>
         /// <value>Whether the start time of the activity is relative to the start time of the shift it belongs to</value>
         [DataMember(Name="startTimeIsRelativeToShiftStart", EmitDefaultValue=false)]
         public bool? StartTimeIsRelativeToShiftStart { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the start time of the activity is flexible
         /// </summary>
         /// <value>Whether the start time of the activity is flexible</value>
         [DataMember(Name="flexibleStartTime", EmitDefaultValue=false)]
         public bool? FlexibleStartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Earliest activity start in offset minutes relative to shift start time if startTimeIsRelativeToShiftStart == true else its based on midnight. Used if flexibleStartTime == true
         /// </summary>
         /// <value>Earliest activity start in offset minutes relative to shift start time if startTimeIsRelativeToShiftStart == true else its based on midnight. Used if flexibleStartTime == true</value>
         [DataMember(Name="earliestStartTimeMinutes", EmitDefaultValue=false)]
         public int? EarliestStartTimeMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Latest activity start in offset minutes relative to shift start time if startTimeIsRelativeToShiftStart == true else its based on midnight. Used if flexibleStartTime == true
         /// </summary>
         /// <value>Latest activity start in offset minutes relative to shift start time if startTimeIsRelativeToShiftStart == true else its based on midnight. Used if flexibleStartTime == true</value>
         [DataMember(Name="latestStartTimeMinutes", EmitDefaultValue=false)]
         public int? LatestStartTimeMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Exact activity start in offset minutes relative to shift start time if startTimeIsRelativeToShiftStart == true else its based on midnight. Used if flexibleStartTime == false
         /// </summary>
         /// <value>Exact activity start in offset minutes relative to shift start time if startTimeIsRelativeToShiftStart == true else its based on midnight. Used if flexibleStartTime == false</value>
         [DataMember(Name="exactStartTimeMinutes", EmitDefaultValue=false)]
         public int? ExactStartTimeMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Increment in offset minutes that would contribute to different possible start times for the activity
         /// </summary>
         /// <value>Increment in offset minutes that would contribute to different possible start times for the activity</value>
         [DataMember(Name="startTimeIncrementMinutes", EmitDefaultValue=false)]
         public int? StartTimeIncrementMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the activity is paid
         /// </summary>
         /// <value>Whether the activity is paid</value>
         [DataMember(Name="countsAsPaidTime", EmitDefaultValue=false)]
         public bool? CountsAsPaidTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the activity duration is counted towards contiguous work time
         /// </summary>
         /// <value>Whether the activity duration is counted towards contiguous work time</value>
         [DataMember(Name="countsAsContiguousWorkTime", EmitDefaultValue=false)]
         public bool? CountsAsContiguousWorkTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The minimum duration between shift start and shift item (e.g., break or meal) start in minutes
         /// </summary>
         /// <value>The minimum duration between shift start and shift item (e.g., break or meal) start in minutes</value>
         [DataMember(Name="minimumLengthFromShiftStartMinutes", EmitDefaultValue=false)]
         public int? MinimumLengthFromShiftStartMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The minimum duration between shift item (e.g., break or meal) end and shift end in minutes
         /// </summary>
         /// <value>The minimum duration between shift item (e.g., break or meal) end and shift end in minutes</value>
         [DataMember(Name="minimumLengthFromShiftEndMinutes", EmitDefaultValue=false)]
         public int? MinimumLengthFromShiftEndMinutes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -246,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateWorkPlanActivity {\n");
-            
+
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  LengthMinutes: ").Append(LengthMinutes).Append("\n");
@@ -378,46 +310,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ActivityCodeId != null)
                     hash = hash * 59 + this.ActivityCodeId.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.LengthMinutes != null)
                     hash = hash * 59 + this.LengthMinutes.GetHashCode();
-                
+
                 if (this.StartTimeIsRelativeToShiftStart != null)
                     hash = hash * 59 + this.StartTimeIsRelativeToShiftStart.GetHashCode();
-                
+
                 if (this.FlexibleStartTime != null)
                     hash = hash * 59 + this.FlexibleStartTime.GetHashCode();
-                
+
                 if (this.EarliestStartTimeMinutes != null)
                     hash = hash * 59 + this.EarliestStartTimeMinutes.GetHashCode();
-                
+
                 if (this.LatestStartTimeMinutes != null)
                     hash = hash * 59 + this.LatestStartTimeMinutes.GetHashCode();
-                
+
                 if (this.ExactStartTimeMinutes != null)
                     hash = hash * 59 + this.ExactStartTimeMinutes.GetHashCode();
-                
+
                 if (this.StartTimeIncrementMinutes != null)
                     hash = hash * 59 + this.StartTimeIncrementMinutes.GetHashCode();
-                
+
                 if (this.CountsAsPaidTime != null)
                     hash = hash * 59 + this.CountsAsPaidTime.GetHashCode();
-                
+
                 if (this.CountsAsContiguousWorkTime != null)
                     hash = hash * 59 + this.CountsAsContiguousWorkTime.GetHashCode();
-                
+
                 if (this.MinimumLengthFromShiftStartMinutes != null)
                     hash = hash * 59 + this.MinimumLengthFromShiftStartMinutes.GetHashCode();
-                
+
                 if (this.MinimumLengthFromShiftEndMinutes != null)
                     hash = hash * 59 + this.MinimumLengthFromShiftEndMinutes.GetHashCode();
-                
+
                 return hash;
             }
         }

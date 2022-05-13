@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ArticleContent :  IEquatable<ArticleContent>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ArticleContent" /> class.
         /// </summary>
@@ -34,16 +26,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Body of the article content.
         /// </summary>
         /// <value>Body of the article content.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public ArticleContentBody Body { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ArticleContent {\n");
-            
+
             sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -112,10 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
-                
+
                 return hash;
             }
         }

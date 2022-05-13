@@ -18,69 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Annotation :  IEquatable<Annotation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Annotation" /> class.
         /// </summary>
@@ -109,113 +46,113 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Offset of annotation in milliseconds.
         /// </summary>
         /// <value>Offset of annotation in milliseconds.</value>
         [DataMember(Name="location", EmitDefaultValue=false)]
         public long? Location { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Duration of annotation in milliseconds.
         /// </summary>
         /// <value>Duration of annotation in milliseconds.</value>
         [DataMember(Name="durationMs", EmitDefaultValue=false)]
         public long? DurationMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Offset of annotation (milliseconds) from start of recording.
         /// </summary>
         /// <value>Offset of annotation (milliseconds) from start of recording.</value>
         [DataMember(Name="absoluteLocation", EmitDefaultValue=false)]
         public long? AbsoluteLocation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Duration of annotation (milliseconds).
         /// </summary>
         /// <value>Duration of annotation (milliseconds).</value>
         [DataMember(Name="absoluteDurationMs", EmitDefaultValue=false)]
         public long? AbsoluteDurationMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Offset of annotation (milliseconds) from start of recording, adjusted for any recording cuts
         /// </summary>
         /// <value>Offset of annotation (milliseconds) from start of recording, adjusted for any recording cuts</value>
         [DataMember(Name="recordingLocation", EmitDefaultValue=false)]
         public long? RecordingLocation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Duration of annotation (milliseconds), adjusted for any recording cuts.
         /// </summary>
         /// <value>Duration of annotation (milliseconds), adjusted for any recording cuts.</value>
         [DataMember(Name="recordingDurationMs", EmitDefaultValue=false)]
         public long? RecordingDurationMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User that created this annotation (if any).
         /// </summary>
         /// <value>User that created this annotation (if any).</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text of annotation. Maximum character limit is 500.
         /// </summary>
         /// <value>Text of annotation. Maximum character limit is 500.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -224,7 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Annotation {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -350,43 +287,42 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Location != null)
                     hash = hash * 59 + this.Location.GetHashCode();
-                
+
                 if (this.DurationMs != null)
                     hash = hash * 59 + this.DurationMs.GetHashCode();
-                
+
                 if (this.AbsoluteLocation != null)
                     hash = hash * 59 + this.AbsoluteLocation.GetHashCode();
-                
+
                 if (this.AbsoluteDurationMs != null)
                     hash = hash * 59 + this.AbsoluteDurationMs.GetHashCode();
-                
+
                 if (this.RecordingLocation != null)
                     hash = hash * 59 + this.RecordingLocation.GetHashCode();
-                
+
                 if (this.RecordingDurationMs != null)
                     hash = hash * 59 + this.RecordingDurationMs.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

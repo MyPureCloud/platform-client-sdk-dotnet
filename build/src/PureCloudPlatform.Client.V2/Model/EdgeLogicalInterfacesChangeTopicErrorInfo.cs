@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeLogicalInterfacesChangeTopicErrorInfo :  IEquatable<EdgeLogicalInterfacesChangeTopicErrorInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogicalInterfacesChangeTopicErrorInfo" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessageWithParams
         /// </summary>
         [DataMember(Name="messageWithParams", EmitDefaultValue=false)]
         public string MessageWithParams { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessageParams
         /// </summary>
         [DataMember(Name="messageParams", EmitDefaultValue=false)]
         public Dictionary<string, string> MessageParams { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeLogicalInterfacesChangeTopicErrorInfo {\n");
-            
+
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  MessageWithParams: ").Append(MessageWithParams).Append("\n");
             sb.Append("  MessageParams: ").Append(MessageParams).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 if (this.MessageWithParams != null)
                     hash = hash * 59 + this.MessageWithParams.GetHashCode();
-                
+
                 if (this.MessageParams != null)
                     hash = hash * 59 + this.MessageParams.GetHashCode();
-                
+
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
-                
+
                 return hash;
             }
         }

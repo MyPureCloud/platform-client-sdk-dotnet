@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrustCreate :  IEquatable<TrustCreate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustCreate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TrustCreate() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustCreate" /> class.
         /// </summary>
@@ -70,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The pairing Id created by the trustee. This is required to prove that the trustee agrees to the relationship.  Not required when creating a default pairing with Customer Care.
         /// </summary>
         /// <value>The pairing Id created by the trustee. This is required to prove that the trustee agrees to the relationship.  Not required when creating a default pairing with Customer Care.</value>
         [DataMember(Name="pairingId", EmitDefaultValue=false)]
         public string PairingId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If disabled no trustee user will have access, even if they were previously added.
         /// </summary>
         /// <value>If disabled no trustee user will have access, even if they were previously added.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor. If no users are specified, at least one group is required.
         /// </summary>
         /// <value>The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor. If no users are specified, at least one group is required.</value>
         [DataMember(Name="users", EmitDefaultValue=false)]
         public List<TrustMemberCreate> Users { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of groups and their roles to which access will be granted. The groups are from the trustee and the roles are from the trustor. If no groups are specified, at least one user is required.
         /// </summary>
         /// <value>The list of groups and their roles to which access will be granted. The groups are from the trustee and the roles are from the trustor. If no groups are specified, at least one user is required.</value>
         [DataMember(Name="groups", EmitDefaultValue=false)]
         public List<TrustMemberCreate> Groups { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateExpired", EmitDefaultValue=false)]
         public DateTime? DateExpired { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrustCreate {\n");
-            
+
             sb.Append("  PairingId: ").Append(PairingId).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  Users: ").Append(Users).Append("\n");
@@ -208,22 +180,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PairingId != null)
                     hash = hash * 59 + this.PairingId.GetHashCode();
-                
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.Users != null)
                     hash = hash * 59 + this.Users.GetHashCode();
-                
+
                 if (this.Groups != null)
                     hash = hash * 59 + this.Groups.GetHashCode();
-                
+
                 if (this.DateExpired != null)
                     hash = hash * 59 + this.DateExpired.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SendAgentlessOutboundMessageResponse :  IEquatable<SendAgentlessOutboundMessageResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of messenger.
         /// </summary>
@@ -65,58 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "open")]
             Open
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of messenger.
         /// </summary>
         /// <value>Type of messenger.</value>
         [DataMember(Name="messengerType", EmitDefaultValue=false)]
         public MessengerTypeEnum? MessengerType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SendAgentlessOutboundMessageResponse" /> class.
         /// </summary>
@@ -126,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessengerType">Type of messenger..</param>
         /// <param name="TextBody">The body of the text message..</param>
         /// <param name="MessagingTemplate">The messaging template sent.</param>
-        /// <param name="UseExistingActiveConversation">Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false.</param>
+        /// <param name="UseExistingActiveConversation">Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false.</param>
         /// <param name="Timestamp">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         public SendAgentlessOutboundMessageResponse(string ConversationId = null, string FromAddress = null, string ToAddress = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, MessagingTemplateRequest MessagingTemplate = null, bool? UseExistingActiveConversation = null, DateTime? Timestamp = null)
         {
@@ -141,99 +81,99 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The identifier of the conversation.
         /// </summary>
         /// <value>The identifier of the conversation.</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The sender of the message.
         /// </summary>
         /// <value>The sender of the message.</value>
         [DataMember(Name="fromAddress", EmitDefaultValue=false)]
         public string FromAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The recipient of the message.
         /// </summary>
         /// <value>The recipient of the message.</value>
         [DataMember(Name="toAddress", EmitDefaultValue=false)]
         public string ToAddress { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The body of the text message.
         /// </summary>
         /// <value>The body of the text message.</value>
         [DataMember(Name="textBody", EmitDefaultValue=false)]
         public string TextBody { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The messaging template sent
         /// </summary>
         /// <value>The messaging template sent</value>
         [DataMember(Name="messagingTemplate", EmitDefaultValue=false)]
         public MessagingTemplateRequest MessagingTemplate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false
+        /// Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false
         /// </summary>
-        /// <value>Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false</value>
+        /// <value>Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false</value>
         [DataMember(Name="useExistingActiveConversation", EmitDefaultValue=false)]
         public bool? UseExistingActiveConversation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Details of the user created the job
         /// </summary>
         /// <value>Details of the user created the job</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public AddressableEntityRef User { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -242,7 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SendAgentlessOutboundMessageResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
@@ -362,40 +302,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.FromAddress != null)
                     hash = hash * 59 + this.FromAddress.GetHashCode();
-                
+
                 if (this.ToAddress != null)
                     hash = hash * 59 + this.ToAddress.GetHashCode();
-                
+
                 if (this.MessengerType != null)
                     hash = hash * 59 + this.MessengerType.GetHashCode();
-                
+
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
-                
+
                 if (this.MessagingTemplate != null)
                     hash = hash * 59 + this.MessagingTemplate.GetHashCode();
-                
+
                 if (this.UseExistingActiveConversation != null)
                     hash = hash * 59 + this.UseExistingActiveConversation.GetHashCode();
-                
+
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 return hash;
             }
         }

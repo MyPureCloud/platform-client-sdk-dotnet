@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AmazonLexRequest :  IEquatable<AmazonLexRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AmazonLexRequest" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// AttributeName/AttributeValue pairs of User Defined Request Attributes to be sent to the amazon bot See - https://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html#context-mgmt-request-attribs
         /// </summary>
         /// <value>AttributeName/AttributeValue pairs of User Defined Request Attributes to be sent to the amazon bot See - https://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html#context-mgmt-request-attribs</value>
         [DataMember(Name="requestAttributes", EmitDefaultValue=false)]
         public Dictionary<string, string> RequestAttributes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// AttributeName/AttributeValue pairs of Session Attributes to be sent to the amazon bot. See - https://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html#context-mgmt-session-attribs
         /// </summary>
         /// <value>AttributeName/AttributeValue pairs of Session Attributes to be sent to the amazon bot. See - https://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html#context-mgmt-session-attribs</value>
         [DataMember(Name="sessionAttributes", EmitDefaultValue=false)]
         public Dictionary<string, string> SessionAttributes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AmazonLexRequest {\n");
-            
+
             sb.Append("  RequestAttributes: ").Append(RequestAttributes).Append("\n");
             sb.Append("  SessionAttributes: ").Append(SessionAttributes).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RequestAttributes != null)
                     hash = hash * 59 + this.RequestAttributes.GetHashCode();
-                
+
                 if (this.SessionAttributes != null)
                     hash = hash * 59 + this.SessionAttributes.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CustomEventAttribute :  IEquatable<CustomEventAttribute>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEventAttribute" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CustomEventAttribute() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEventAttribute" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The data type of the custom attribute.
         /// </summary>
         /// <value>The data type of the custom attribute.</value>
         [DataMember(Name="dataType", EmitDefaultValue=false)]
         public string DataType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The value of the custom attribute.
         /// </summary>
         /// <value>The value of the custom attribute.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CustomEventAttribute {\n");
-            
+
             sb.Append("  DataType: ").Append(DataType).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DataType != null)
                     hash = hash * 59 + this.DataType.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 return hash;
             }
         }

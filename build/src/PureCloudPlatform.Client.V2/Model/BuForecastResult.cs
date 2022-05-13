@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuForecastResult :  IEquatable<BuForecastResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuForecastResult" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="referenceStartDate", EmitDefaultValue=false)]
         public DateTime? ReferenceStartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The forecast data broken up by planning group
         /// </summary>
         /// <value>The forecast data broken up by planning group</value>
         [DataMember(Name="planningGroups", EmitDefaultValue=false)]
         public List<ForecastPlanningGroupData> PlanningGroups { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The week number represented by this response
         /// </summary>
         /// <value>The week number represented by this response</value>
         [DataMember(Name="weekNumber", EmitDefaultValue=false)]
         public int? WeekNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of weeks in this forecast
         /// </summary>
         /// <value>The number of weeks in this forecast</value>
         [DataMember(Name="weekCount", EmitDefaultValue=false)]
         public int? WeekCount { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuForecastResult {\n");
-            
+
             sb.Append("  ReferenceStartDate: ").Append(ReferenceStartDate).Append("\n");
             sb.Append("  PlanningGroups: ").Append(PlanningGroups).Append("\n");
             sb.Append("  WeekNumber: ").Append(WeekNumber).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ReferenceStartDate != null)
                     hash = hash * 59 + this.ReferenceStartDate.GetHashCode();
-                
+
                 if (this.PlanningGroups != null)
                     hash = hash * 59 + this.PlanningGroups.GetHashCode();
-                
+
                 if (this.WeekNumber != null)
                     hash = hash * 59 + this.WeekNumber.GetHashCode();
-                
+
                 if (this.WeekCount != null)
                     hash = hash * 59 + this.WeekCount.GetHashCode();
-                
+
                 return hash;
             }
         }

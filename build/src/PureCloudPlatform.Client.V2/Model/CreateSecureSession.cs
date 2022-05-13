@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateSecureSession :  IEquatable<CreateSecureSession>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSecureSession" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateSecureSession() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSecureSession" /> class.
         /// </summary>
@@ -63,43 +40,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// requesting participant
         /// </summary>
         /// <value>requesting participant</value>
         [DataMember(Name="sourceParticipantId", EmitDefaultValue=false)]
         public string SourceParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// the flow id to execute in the secure session
         /// </summary>
         /// <value>the flow id to execute in the secure session</value>
         [DataMember(Name="flowId", EmitDefaultValue=false)]
         public string FlowId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// user data for the secure session
         /// </summary>
         /// <value>user data for the secure session</value>
         [DataMember(Name="userData", EmitDefaultValue=false)]
         public string UserData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// if true, disconnect the agent after creating the session
         /// </summary>
         /// <value>if true, disconnect the agent after creating the session</value>
         [DataMember(Name="disconnect", EmitDefaultValue=false)]
         public bool? Disconnect { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateSecureSession {\n");
-            
+
             sb.Append("  SourceParticipantId: ").Append(SourceParticipantId).Append("\n");
             sb.Append("  FlowId: ").Append(FlowId).Append("\n");
             sb.Append("  UserData: ").Append(UserData).Append("\n");
@@ -186,19 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SourceParticipantId != null)
                     hash = hash * 59 + this.SourceParticipantId.GetHashCode();
-                
+
                 if (this.FlowId != null)
                     hash = hash * 59 + this.FlowId.GetHashCode();
-                
+
                 if (this.UserData != null)
                     hash = hash * 59 + this.UserData.GetHashCode();
-                
+
                 if (this.Disconnect != null)
                     hash = hash * 59 + this.Disconnect.GetHashCode();
-                
+
                 return hash;
             }
         }

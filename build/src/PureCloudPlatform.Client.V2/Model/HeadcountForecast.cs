@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class HeadcountForecast :  IEquatable<HeadcountForecast>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="HeadcountForecast" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected HeadcountForecast() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="HeadcountForecast" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Headcount information with shrinkage
         /// </summary>
         /// <value>Headcount information with shrinkage</value>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public List<HeadcountInterval> Required { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Headcount information without shrinkage
         /// </summary>
         /// <value>Headcount information without shrinkage</value>
         [DataMember(Name="requiredWithoutShrinkage", EmitDefaultValue=false)]
         public List<HeadcountInterval> RequiredWithoutShrinkage { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HeadcountForecast {\n");
-            
+
             sb.Append("  Required: ").Append(Required).Append("\n");
             sb.Append("  RequiredWithoutShrinkage: ").Append(RequiredWithoutShrinkage).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Required != null)
                     hash = hash * 59 + this.Required.GetHashCode();
-                
+
                 if (this.RequiredWithoutShrinkage != null)
                     hash = hash * 59 + this.RequiredWithoutShrinkage.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkMetricsOptions :  IEquatable<TrunkMetricsOptions>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetricsOptions" /> class.
         /// </summary>
         /// <param name="ProxyAddress">Server proxy address that this options array element represents..</param>
         /// <param name="OptionState">OptionState.</param>
-        /// <param name="OptionStateTime">ISO 8601 format UTC absolute date &amp; time of the last change of the option state..</param>
+        /// <param name="OptionStateTime">ISO 8601 format UTC absolute date & time of the last change of the option state..</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
         public TrunkMetricsOptions(string ProxyAddress = null, bool? OptionState = null, DateTime? OptionStateTime = null, TrunkErrorInfo ErrorInfo = null)
         {
@@ -57,41 +34,41 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Server proxy address that this options array element represents.
         /// </summary>
         /// <value>Server proxy address that this options array element represents.</value>
         [DataMember(Name="proxyAddress", EmitDefaultValue=false)]
         public string ProxyAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OptionState
         /// </summary>
         [DataMember(Name="optionState", EmitDefaultValue=false)]
         public bool? OptionState { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// ISO 8601 format UTC absolute date &amp; time of the last change of the option state.
+        /// ISO 8601 format UTC absolute date & time of the last change of the option state.
         /// </summary>
-        /// <value>ISO 8601 format UTC absolute date &amp; time of the last change of the option state.</value>
+        /// <value>ISO 8601 format UTC absolute date & time of the last change of the option state.</value>
         [DataMember(Name="optionStateTime", EmitDefaultValue=false)]
         public DateTime? OptionStateTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public TrunkErrorInfo ErrorInfo { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkMetricsOptions {\n");
-            
+
             sb.Append("  ProxyAddress: ").Append(ProxyAddress).Append("\n");
             sb.Append("  OptionState: ").Append(OptionState).Append("\n");
             sb.Append("  OptionStateTime: ").Append(OptionStateTime).Append("\n");
@@ -178,19 +155,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ProxyAddress != null)
                     hash = hash * 59 + this.ProxyAddress.GetHashCode();
-                
+
                 if (this.OptionState != null)
                     hash = hash * 59 + this.OptionState.GetHashCode();
-                
+
                 if (this.OptionStateTime != null)
                     hash = hash * 59 + this.OptionStateTime.GetHashCode();
-                
+
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
+
                 return hash;
             }
         }

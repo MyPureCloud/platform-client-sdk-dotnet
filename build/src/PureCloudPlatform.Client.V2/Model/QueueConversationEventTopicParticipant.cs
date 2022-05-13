@@ -18,83 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueueConversationEventTopicParticipant :  IEquatable<QueueConversationEventTopicParticipant>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current screen recording state for this participant.
         /// </summary>
@@ -146,125 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "timeout")]
             Timeout
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current screen recording state for this participant.
         /// </summary>
         /// <value>The current screen recording state for this participant.</value>
         [DataMember(Name="screenRecordingState", EmitDefaultValue=false)]
         public ScreenRecordingStateEnum? ScreenRecordingState { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationEventTopicParticipant" /> class.
         /// </summary>
@@ -347,322 +157,322 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A globally unique identifier for this conversation.
         /// </summary>
         /// <value>A globally unique identifier for this conversation.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this participant was connected to the conversation in the provider clock.
         /// </summary>
         /// <value>The timestamp when this participant was connected to the conversation in the provider clock.</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this participant disconnected from the conversation in the provider clock.
         /// </summary>
         /// <value>The timestamp when this participant disconnected from the conversation in the provider clock.</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If this participant represents a user, then this will be the globally unique identifier for the user.
         /// </summary>
         /// <value>If this participant represents a user, then this will be the globally unique identifier for the user.</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If this participant represents an external contact, then this will be the globally unique identifier for the external contact.
         /// </summary>
         /// <value>If this participant represents an external contact, then this will be the globally unique identifier for the external contact.</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If this participant represents an external org, then this will be the globally unique identifier for the external org.
         /// </summary>
         /// <value>If this participant represents an external org, then this will be the globally unique identifier for the external org.</value>
         [DataMember(Name="externalOrganizationId", EmitDefaultValue=false)]
         public string ExternalOrganizationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A human readable name identifying the participant.
         /// </summary>
         /// <value>A human readable name identifying the participant.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If present, the queue id that the communication channel came in on.
         /// </summary>
         /// <value>If present, the queue id that the communication channel came in on.</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If present, the group id that the participant represents.
         /// </summary>
         /// <value>If present, the group id that the participant represents.</value>
         [DataMember(Name="groupId", EmitDefaultValue=false)]
         public string GroupId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The team id that this participant is a member of when added to the conversation.
         /// </summary>
         /// <value>The team id that this participant is a member of when added to the conversation.</value>
         [DataMember(Name="teamId", EmitDefaultValue=false)]
         public string TeamId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A well known string that specifies the purpose or type of this participant.
         /// </summary>
         /// <value>A well known string that specifies the purpose or type of this participant.</value>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public string Purpose { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If this participant is part of a consult transfer, then this will be the participant id of the participant being transferred.
         /// </summary>
         /// <value>If this participant is part of a consult transfer, then this will be the participant id of the participant being transferred.</value>
         [DataMember(Name="consultParticipantId", EmitDefaultValue=false)]
         public string ConsultParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The address for the this participant. For a phone call this will be the ANI.
         /// </summary>
         /// <value>The address for the this participant. For a phone call this will be the ANI.</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True iff this participant is required to enter wrapup for this conversation.
         /// </summary>
         /// <value>True iff this participant is required to enter wrapup for this conversation.</value>
         [DataMember(Name="wrapupRequired", EmitDefaultValue=false)]
         public bool? WrapupRequired { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True when a participant is expected to enter a wrapup code once the call connects.
         /// </summary>
         /// <value>True when a participant is expected to enter a wrapup code once the call connects.</value>
         [DataMember(Name="wrapupExpected", EmitDefaultValue=false)]
         public bool? WrapupExpected { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// This field controls how the UI prompts the agent for a wrapup.
         /// </summary>
         /// <value>This field controls how the UI prompts the agent for a wrapup.</value>
         [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
         public string WrapupPrompt { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Specifies how long a timed ACW session will last.
         /// </summary>
         /// <value>Specifies how long a timed ACW session will last.</value>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
         public int? WrapupTimeoutMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Wrapup
         /// </summary>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public QueueConversationEventTopicWrapup Wrapup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this participant started after-call work.
         /// </summary>
         /// <value>The timestamp when this participant started after-call work.</value>
         [DataMember(Name="startAcwTime", EmitDefaultValue=false)]
         public DateTime? StartAcwTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this participant ended after-call work.
         /// </summary>
         /// <value>The timestamp when this participant ended after-call work.</value>
         [DataMember(Name="endAcwTime", EmitDefaultValue=false)]
         public DateTime? EndAcwTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConversationRoutingData
         /// </summary>
         [DataMember(Name="conversationRoutingData", EmitDefaultValue=false)]
         public QueueConversationEventTopicConversationRoutingData ConversationRoutingData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Specifies how long the agent has to answer an interaction before being marked as not responding.
         /// </summary>
         /// <value>Specifies how long the agent has to answer an interaction before being marked as not responding.</value>
         [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
         public int? AlertingTimeoutMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If this participant is a monitor, then this will be the id of the participant that is being monitored.
         /// </summary>
         /// <value>If this participant is a monitor, then this will be the id of the participant that is being monitored.</value>
         [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
         public string MonitoredParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If this participant is a coach, then this will be the id of the participant that is being coached.
         /// </summary>
         /// <value>If this participant is a coach, then this will be the id of the participant that is being coached.</value>
         [DataMember(Name="coachedParticipantId", EmitDefaultValue=false)]
         public string CoachedParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If this participant created a barge in conference, then this will be the id of the participant that is barged in.
         /// </summary>
         /// <value>If this participant created a barge in conference, then this will be the id of the participant that is barged in.</value>
         [DataMember(Name="bargedParticipantId", EmitDefaultValue=false)]
         public string BargedParticipantId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// If this participant has flagged the conversation, the reason code given.
         /// </summary>
         /// <value>If this participant has flagged the conversation, the reason code given.</value>
         [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
         public string FlaggedReason { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Additional participant attributes
         /// </summary>
         /// <value>Additional participant attributes</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Calls
         /// </summary>
         [DataMember(Name="calls", EmitDefaultValue=false)]
         public List<QueueConversationEventTopicCall> Calls { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Callbacks
         /// </summary>
         [DataMember(Name="callbacks", EmitDefaultValue=false)]
         public List<QueueConversationEventTopicCallback> Callbacks { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Chats
         /// </summary>
         [DataMember(Name="chats", EmitDefaultValue=false)]
         public List<QueueConversationEventTopicChat> Chats { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Cobrowsesessions
         /// </summary>
         [DataMember(Name="cobrowsesessions", EmitDefaultValue=false)]
         public List<QueueConversationEventTopicCobrowse> Cobrowsesessions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Emails
         /// </summary>
         [DataMember(Name="emails", EmitDefaultValue=false)]
         public List<QueueConversationEventTopicEmail> Emails { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Messages
         /// </summary>
         [DataMember(Name="messages", EmitDefaultValue=false)]
         public List<QueueConversationEventTopicMessage> Messages { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Screenshares
         /// </summary>
         [DataMember(Name="screenshares", EmitDefaultValue=false)]
         public List<QueueConversationEventTopicScreenshare> Screenshares { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SocialExpressions
         /// </summary>
         [DataMember(Name="socialExpressions", EmitDefaultValue=false)]
         public List<QueueConversationEventTopicSocialExpression> SocialExpressions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Videos
         /// </summary>
         [DataMember(Name="videos", EmitDefaultValue=false)]
         public List<QueueConversationEventTopicVideo> Videos { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -671,7 +481,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueueConversationEventTopicParticipant {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
@@ -947,118 +757,117 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
-                
+
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
-                
+
                 if (this.ExternalOrganizationId != null)
                     hash = hash * 59 + this.ExternalOrganizationId.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
+
                 if (this.GroupId != null)
                     hash = hash * 59 + this.GroupId.GetHashCode();
-                
+
                 if (this.TeamId != null)
                     hash = hash * 59 + this.TeamId.GetHashCode();
-                
+
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
-                
+
                 if (this.ConsultParticipantId != null)
                     hash = hash * 59 + this.ConsultParticipantId.GetHashCode();
-                
+
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
+
                 if (this.WrapupRequired != null)
                     hash = hash * 59 + this.WrapupRequired.GetHashCode();
-                
+
                 if (this.WrapupExpected != null)
                     hash = hash * 59 + this.WrapupExpected.GetHashCode();
-                
+
                 if (this.WrapupPrompt != null)
                     hash = hash * 59 + this.WrapupPrompt.GetHashCode();
-                
+
                 if (this.WrapupTimeoutMs != null)
                     hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
-                
+
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
-                
+
                 if (this.StartAcwTime != null)
                     hash = hash * 59 + this.StartAcwTime.GetHashCode();
-                
+
                 if (this.EndAcwTime != null)
                     hash = hash * 59 + this.EndAcwTime.GetHashCode();
-                
+
                 if (this.ConversationRoutingData != null)
                     hash = hash * 59 + this.ConversationRoutingData.GetHashCode();
-                
+
                 if (this.AlertingTimeoutMs != null)
                     hash = hash * 59 + this.AlertingTimeoutMs.GetHashCode();
-                
+
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
-                
+
                 if (this.CoachedParticipantId != null)
                     hash = hash * 59 + this.CoachedParticipantId.GetHashCode();
-                
+
                 if (this.BargedParticipantId != null)
                     hash = hash * 59 + this.BargedParticipantId.GetHashCode();
-                
+
                 if (this.ScreenRecordingState != null)
                     hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
-                
+
                 if (this.FlaggedReason != null)
                     hash = hash * 59 + this.FlaggedReason.GetHashCode();
-                
+
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
+
                 if (this.Calls != null)
                     hash = hash * 59 + this.Calls.GetHashCode();
-                
+
                 if (this.Callbacks != null)
                     hash = hash * 59 + this.Callbacks.GetHashCode();
-                
+
                 if (this.Chats != null)
                     hash = hash * 59 + this.Chats.GetHashCode();
-                
+
                 if (this.Cobrowsesessions != null)
                     hash = hash * 59 + this.Cobrowsesessions.GetHashCode();
-                
+
                 if (this.Emails != null)
                     hash = hash * 59 + this.Emails.GetHashCode();
-                
+
                 if (this.Messages != null)
                     hash = hash * 59 + this.Messages.GetHashCode();
-                
+
                 if (this.Screenshares != null)
                     hash = hash * 59 + this.Screenshares.GetHashCode();
-                
+
                 if (this.SocialExpressions != null)
                     hash = hash * 59 + this.SocialExpressions.GetHashCode();
-                
+
                 if (this.Videos != null)
                     hash = hash * 59 + this.Videos.GetHashCode();
-                
+
                 return hash;
             }
         }

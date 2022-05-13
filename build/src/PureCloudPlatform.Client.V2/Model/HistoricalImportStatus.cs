@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class HistoricalImportStatus :  IEquatable<HistoricalImportStatus>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of the historical import in the organization.
         /// </summary>
@@ -92,22 +81,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PurgePending")]
             Purgepending
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Whether this historical import is of type csv or json
         /// </summary>
@@ -135,43 +108,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Json")]
             Json
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of the historical import in the organization.
         /// </summary>
         /// <value>Status of the historical import in the organization.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        public StatusEnum? Status { get; private set; }
         /// <summary>
         /// Whether this historical import is of type csv or json
         /// </summary>
         /// <value>Whether this historical import is of type csv or json</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-        
-        
-    
+        public TypeEnum? Type { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="HistoricalImportStatus" /> class.
         /// </summary>
@@ -180,74 +128,74 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Request id of the historical import in the organization
         /// </summary>
         /// <value>Request id of the historical import in the organization</value>
         [DataMember(Name="requestId", EmitDefaultValue=false)]
         public string RequestId { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The last day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The last day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateImportEnded", EmitDefaultValue=false)]
         public DateTime? DateImportEnded { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The first day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The first day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateImportStarted", EmitDefaultValue=false)]
         public DateTime? DateImportStarted { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Error occured if the status of the import is failed
         /// </summary>
         /// <value>Error occured if the status of the import is failed</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public string Error { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date in which the historical import is initiated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date in which the historical import is initiated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date in which the historical import is modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date in which the historical import is modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this historical import is active or not
         /// </summary>
         /// <value>Whether this historical import is active or not</value>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; private set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -256,7 +204,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HistoricalImportStatus {\n");
-            
+
             sb.Append("  RequestId: ").Append(RequestId).Append("\n");
             sb.Append("  DateImportEnded: ").Append(DateImportEnded).Append("\n");
             sb.Append("  DateImportStarted: ").Append(DateImportStarted).Append("\n");
@@ -364,34 +312,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RequestId != null)
                     hash = hash * 59 + this.RequestId.GetHashCode();
-                
+
                 if (this.DateImportEnded != null)
                     hash = hash * 59 + this.DateImportEnded.GetHashCode();
-                
+
                 if (this.DateImportStarted != null)
                     hash = hash * 59 + this.DateImportStarted.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,50 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GuestMemberInfo :  IEquatable<GuestMemberInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GuestMemberInfo" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected GuestMemberInfo() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GuestMemberInfo" /> class.
         /// </summary>
@@ -84,70 +46,70 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The display name to use for the guest member in the conversation.
         /// </summary>
         /// <value>The display name to use for the guest member in the conversation.</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The first name to use for the guest member in the conversation.
         /// </summary>
         /// <value>The first name to use for the guest member in the conversation.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The last name to use for the guest member in the conversation.
         /// </summary>
         /// <value>The last name to use for the guest member in the conversation.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The email address to use for the guest member in the conversation.
         /// </summary>
         /// <value>The email address to use for the guest member in the conversation.</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The phone number to use for the guest member in the conversation.
         /// </summary>
         /// <value>The phone number to use for the guest member in the conversation.</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URL to the avatar image to use for the guest member in the conversation, if any.
         /// </summary>
         /// <value>The URL to the avatar image to use for the guest member in the conversation, if any.</value>
         [DataMember(Name="avatarImageUrl", EmitDefaultValue=false)]
         public string AvatarImageUrl { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Any custom fields of information, in key-value format, to attach to the guest member in the conversation.
         /// </summary>
         /// <value>Any custom fields of information, in key-value format, to attach to the guest member in the conversation.</value>
         [DataMember(Name="customFields", EmitDefaultValue=false)]
         public Dictionary<string, string> CustomFields { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -156,7 +118,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GuestMemberInfo {\n");
-            
+
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
@@ -252,28 +214,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
-                
+
                 if (this.FirstName != null)
                     hash = hash * 59 + this.FirstName.GetHashCode();
-                
+
                 if (this.LastName != null)
                     hash = hash * 59 + this.LastName.GetHashCode();
-                
+
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
+
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
-                
+
                 if (this.AvatarImageUrl != null)
                     hash = hash * 59 + this.AvatarImageUrl.GetHashCode();
-                
+
                 if (this.CustomFields != null)
                     hash = hash * 59 + this.CustomFields.GetHashCode();
-                
+
                 return hash;
             }
         }

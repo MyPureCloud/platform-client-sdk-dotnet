@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsQueryAggregation :  IEquatable<AnalyticsQueryAggregation>
     {
-        
-        
         /// <summary>
         /// Optional type, can usually be inferred
         /// </summary>
@@ -47,40 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "numericRange")]
             Numericrange
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Optional type, can usually be inferred
         /// </summary>
         /// <value>Optional type, can usually be inferred</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsQueryAggregation" /> class.
         /// </summary>
@@ -99,45 +69,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// For use with termFrequency aggregations
         /// </summary>
         /// <value>For use with termFrequency aggregations</value>
         [DataMember(Name="dimension", EmitDefaultValue=false)]
         public string Dimension { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// For use with numericRange aggregations
         /// </summary>
         /// <value>For use with numericRange aggregations</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public string Metric { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// For use with termFrequency aggregations
         /// </summary>
         /// <value>For use with termFrequency aggregations</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public int? Size { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// For use with numericRange aggregations
         /// </summary>
         /// <value>For use with numericRange aggregations</value>
         [DataMember(Name="ranges", EmitDefaultValue=false)]
         public List<AggregationRange> Ranges { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsQueryAggregation {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
             sb.Append("  Metric: ").Append(Metric).Append("\n");
@@ -230,22 +200,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Dimension != null)
                     hash = hash * 59 + this.Dimension.GetHashCode();
-                
+
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 if (this.Size != null)
                     hash = hash * 59 + this.Size.GetHashCode();
-                
+
                 if (this.Ranges != null)
                     hash = hash * 59 + this.Ranges.GetHashCode();
-                
+
                 return hash;
             }
         }

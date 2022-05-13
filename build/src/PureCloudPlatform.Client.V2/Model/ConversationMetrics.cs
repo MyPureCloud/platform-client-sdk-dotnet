@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationMetrics :  IEquatable<ConversationMetrics>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The Sentiment Trend Class
         /// </summary>
@@ -80,31 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Improving")]
             Improving
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The Sentiment Trend Class
         /// </summary>
         /// <value>The Sentiment Trend Class</value>
         [DataMember(Name="sentimentTrendClass", EmitDefaultValue=false)]
         public SentimentTrendClassEnum? SentimentTrendClass { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMetrics" /> class.
         /// </summary>
@@ -123,45 +93,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The Conversation Reference
         /// </summary>
         /// <value>The Conversation Reference</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public AddressableEntityRef Conversation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Sentiment Score
         /// </summary>
         /// <value>The Sentiment Score</value>
         [DataMember(Name="sentimentScore", EmitDefaultValue=false)]
         public double? SentimentScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Sentiment Trend
         /// </summary>
         /// <value>The Sentiment Trend</value>
         [DataMember(Name="sentimentTrend", EmitDefaultValue=false)]
         public double? SentimentTrend { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The Participant Metrics
         /// </summary>
         /// <value>The Participant Metrics</value>
         [DataMember(Name="participantMetrics", EmitDefaultValue=false)]
         public ParticipantMetrics ParticipantMetrics { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -170,7 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationMetrics {\n");
-            
+
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("  SentimentScore: ").Append(SentimentScore).Append("\n");
             sb.Append("  SentimentTrend: ").Append(SentimentTrend).Append("\n");
@@ -254,22 +224,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
+
                 if (this.SentimentScore != null)
                     hash = hash * 59 + this.SentimentScore.GetHashCode();
-                
+
                 if (this.SentimentTrend != null)
                     hash = hash * 59 + this.SentimentTrend.GetHashCode();
-                
+
                 if (this.SentimentTrendClass != null)
                     hash = hash * 59 + this.SentimentTrendClass.GetHashCode();
-                
+
                 if (this.ParticipantMetrics != null)
                     hash = hash * 59 + this.ParticipantMetrics.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -8,7 +8,7 @@ title: JourneyWebActionEventsNotificationActionMapPageUrlCondition
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Values** | **List&lt;string&gt;** |  | [optional] |
-| **_Operator** | **string** |  | [optional] |
+| **Operator** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

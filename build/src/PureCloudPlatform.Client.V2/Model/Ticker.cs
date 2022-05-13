@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Ticker :  IEquatable<Ticker>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Ticker" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Ticker() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Ticker" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ticker symbol for this organization. Example: ININ, AAPL, MSFT, etc.
         /// </summary>
         /// <value>The ticker symbol for this organization. Example: ININ, AAPL, MSFT, etc.</value>
         [DataMember(Name="symbol", EmitDefaultValue=false)]
         public string Symbol { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The exchange for this ticker symbol. Examples: NYSE, FTSE, NASDAQ, etc.
         /// </summary>
         /// <value>The exchange for this ticker symbol. Examples: NYSE, FTSE, NASDAQ, etc.</value>
         [DataMember(Name="exchange", EmitDefaultValue=false)]
         public string Exchange { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Ticker {\n");
-            
+
             sb.Append("  Symbol: ").Append(Symbol).Append("\n");
             sb.Append("  Exchange: ").Append(Exchange).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Symbol != null)
                     hash = hash * 59 + this.Symbol.GetHashCode();
-                
+
                 if (this.Exchange != null)
                     hash = hash * 59 + this.Exchange.GetHashCode();
-                
+
                 return hash;
             }
         }

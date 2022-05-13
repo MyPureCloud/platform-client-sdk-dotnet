@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerRule :  IEquatable<DialerRule>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The category of the rule.
         /// </summary>
@@ -45,53 +34,29 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum DialerPrecall for "DIALER_PRECALL"
+            /// Enum Precall for "DIALER_PRECALL"
             /// </summary>
             [EnumMember(Value = "DIALER_PRECALL")]
-            DialerPrecall,
+            Precall,
             
             /// <summary>
-            /// Enum DialerWrapup for "DIALER_WRAPUP"
+            /// Enum Wrapup for "DIALER_WRAPUP"
             /// </summary>
             [EnumMember(Value = "DIALER_WRAPUP")]
-            DialerWrapup
+            Wrapup
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The category of the rule.
         /// </summary>
         /// <value>The category of the rule.</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DialerRule() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRule" /> class.
         /// </summary>
@@ -110,54 +75,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The identifier of the rule.
         /// </summary>
         /// <value>The identifier of the rule.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the rule.
         /// </summary>
         /// <value>The name of the rule.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ranked order of the rule. Rules are processed from lowest number to highest.
         /// </summary>
         /// <value>The ranked order of the rule. Rules are processed from lowest number to highest.</value>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public int? Order { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// A list of Conditions. All of the Conditions must evaluate to true to trigger the actions.
         /// </summary>
         /// <value>A list of Conditions. All of the Conditions must evaluate to true to trigger the actions.</value>
         [DataMember(Name="conditions", EmitDefaultValue=false)]
         public List<Condition> Conditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of actions to be taken if the conditions are true.
         /// </summary>
         /// <value>The list of actions to be taken if the conditions are true.</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public List<DialerAction> Actions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -166,7 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerRule {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
@@ -256,25 +221,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
-                
+
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
-                
+
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
-                
+
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
+
                 return hash;
             }
         }

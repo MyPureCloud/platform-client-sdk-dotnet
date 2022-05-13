@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkMetricsCalls :  IEquatable<TrunkMetricsCalls>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetricsCalls" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets InboundCallCount
         /// </summary>
         [DataMember(Name="inboundCallCount", EmitDefaultValue=false)]
         public int? InboundCallCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OutboundCallCount
         /// </summary>
         [DataMember(Name="outboundCallCount", EmitDefaultValue=false)]
         public int? OutboundCallCount { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkMetricsCalls {\n");
-            
+
             sb.Append("  InboundCallCount: ").Append(InboundCallCount).Append("\n");
             sb.Append("  OutboundCallCount: ").Append(OutboundCallCount).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.InboundCallCount != null)
                     hash = hash * 59 + this.InboundCallCount.GetHashCode();
-                
+
                 if (this.OutboundCallCount != null)
                     hash = hash * 59 + this.OutboundCallCount.GetHashCode();
-                
+
                 return hash;
             }
         }

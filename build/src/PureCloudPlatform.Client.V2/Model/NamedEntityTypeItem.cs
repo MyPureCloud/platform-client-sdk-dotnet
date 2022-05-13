@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NamedEntityTypeItem :  IEquatable<NamedEntityTypeItem>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NamedEntityTypeItem" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected NamedEntityTypeItem() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NamedEntityTypeItem" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A value for an named entity type definition.
         /// </summary>
         /// <value>A value for an named entity type definition.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Synonyms for the given named entity value.
         /// </summary>
         /// <value>Synonyms for the given named entity value.</value>
         [DataMember(Name="synonyms", EmitDefaultValue=false)]
         public List<string> Synonyms { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NamedEntityTypeItem {\n");
-            
+
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Synonyms: ").Append(Synonyms).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.Synonyms != null)
                     hash = hash * 59 + this.Synonyms.GetHashCode();
-                
+
                 return hash;
             }
         }

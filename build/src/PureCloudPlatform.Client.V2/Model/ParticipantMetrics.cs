@@ -18,49 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ParticipantMetrics :  IEquatable<ParticipantMetrics>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ParticipantMetrics" /> class.
         /// </summary>
@@ -85,79 +42,79 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Percentage of Agent duration in the conversation
         /// </summary>
         /// <value>Percentage of Agent duration in the conversation</value>
         [DataMember(Name="agentDurationPercentage", EmitDefaultValue=false)]
         public double? AgentDurationPercentage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percentage of Customer duration in the conversation
         /// </summary>
         /// <value>Percentage of Customer duration in the conversation</value>
         [DataMember(Name="customerDurationPercentage", EmitDefaultValue=false)]
         public double? CustomerDurationPercentage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percentage of Silence duration in the conversation
         /// </summary>
         /// <value>Percentage of Silence duration in the conversation</value>
         [DataMember(Name="silenceDurationPercentage", EmitDefaultValue=false)]
         public double? SilenceDurationPercentage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percentage of IVR duration in the conversation
         /// </summary>
         /// <value>Percentage of IVR duration in the conversation</value>
         [DataMember(Name="ivrDurationPercentage", EmitDefaultValue=false)]
         public double? IvrDurationPercentage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percentage of ACD duration in the conversation
         /// </summary>
         /// <value>Percentage of ACD duration in the conversation</value>
         [DataMember(Name="acdDurationPercentage", EmitDefaultValue=false)]
         public double? AcdDurationPercentage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percentage of Overtalk duration in the conversation
         /// </summary>
         /// <value>Percentage of Overtalk duration in the conversation</value>
         [DataMember(Name="overtalkDurationPercentage", EmitDefaultValue=false)]
         public double? OvertalkDurationPercentage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percentage of Other events duration in the conversation
         /// </summary>
         /// <value>Percentage of Other events duration in the conversation</value>
         [DataMember(Name="otherDurationPercentage", EmitDefaultValue=false)]
         public double? OtherDurationPercentage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of Overtalks in the conversation
         /// </summary>
         /// <value>Number of Overtalks in the conversation</value>
         [DataMember(Name="overtalkCount", EmitDefaultValue=false)]
         public int? OvertalkCount { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -166,7 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ParticipantMetrics {\n");
-            
+
             sb.Append("  AgentDurationPercentage: ").Append(AgentDurationPercentage).Append("\n");
             sb.Append("  CustomerDurationPercentage: ").Append(CustomerDurationPercentage).Append("\n");
             sb.Append("  SilenceDurationPercentage: ").Append(SilenceDurationPercentage).Append("\n");
@@ -268,31 +225,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AgentDurationPercentage != null)
                     hash = hash * 59 + this.AgentDurationPercentage.GetHashCode();
-                
+
                 if (this.CustomerDurationPercentage != null)
                     hash = hash * 59 + this.CustomerDurationPercentage.GetHashCode();
-                
+
                 if (this.SilenceDurationPercentage != null)
                     hash = hash * 59 + this.SilenceDurationPercentage.GetHashCode();
-                
+
                 if (this.IvrDurationPercentage != null)
                     hash = hash * 59 + this.IvrDurationPercentage.GetHashCode();
-                
+
                 if (this.AcdDurationPercentage != null)
                     hash = hash * 59 + this.AcdDurationPercentage.GetHashCode();
-                
+
                 if (this.OvertalkDurationPercentage != null)
                     hash = hash * 59 + this.OvertalkDurationPercentage.GetHashCode();
-                
+
                 if (this.OtherDurationPercentage != null)
                     hash = hash * 59 + this.OtherDurationPercentage.GetHashCode();
-                
+
                 if (this.OvertalkCount != null)
                     hash = hash * 59 + this.OvertalkCount.GetHashCode();
-                
+
                 return hash;
             }
         }

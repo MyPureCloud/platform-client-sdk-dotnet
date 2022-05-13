@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Ring :  IEquatable<Ring>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Ring" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The conditions that will trigger conversations to move to the next bullseye ring.
         /// </summary>
         /// <value>The conditions that will trigger conversations to move to the next bullseye ring.</value>
         [DataMember(Name="expansionCriteria", EmitDefaultValue=false)]
         public List<ExpansionCriterium> ExpansionCriteria { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The actions that will be performed just before moving conversations to the next bullseye ring.
         /// </summary>
         /// <value>The actions that will be performed just before moving conversations to the next bullseye ring.</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public Actions Actions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Ring {\n");
-            
+
             sb.Append("  ExpansionCriteria: ").Append(ExpansionCriteria).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ExpansionCriteria != null)
                     hash = hash * 59 + this.ExpansionCriteria.GetHashCode();
-                
+
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
+
                 return hash;
             }
         }

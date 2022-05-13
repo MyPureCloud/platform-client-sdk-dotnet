@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CobrowseSettings :  IEquatable<CobrowseSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CobrowseSettings" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether or not cobrowse is enabled
         /// </summary>
         /// <value>Whether or not cobrowse is enabled</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the viewer should have option to request control
         /// </summary>
         /// <value>Whether the viewer should have option to request control</value>
         [DataMember(Name="allowAgentControl", EmitDefaultValue=false)]
         public bool? AllowAgentControl { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Mask patterns that will apply to pages being shared
         /// </summary>
         /// <value>Mask patterns that will apply to pages being shared</value>
         [DataMember(Name="maskSelectors", EmitDefaultValue=false)]
         public List<string> MaskSelectors { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CobrowseSettings {\n");
-            
+
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  AllowAgentControl: ").Append(AllowAgentControl).Append("\n");
             sb.Append("  MaskSelectors: ").Append(MaskSelectors).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.AllowAgentControl != null)
                     hash = hash * 59 + this.AllowAgentControl.GetHashCode();
-                
+
                 if (this.MaskSelectors != null)
                     hash = hash * 59 + this.MaskSelectors.GetHashCode();
-                
+
                 return hash;
             }
         }

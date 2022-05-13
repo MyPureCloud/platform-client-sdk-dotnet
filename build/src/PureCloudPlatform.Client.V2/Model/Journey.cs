@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Journey :  IEquatable<Journey>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Journey" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Journey() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Journey" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A list of zero or more patterns to match.
         /// </summary>
         /// <value>A list of zero or more patterns to match.</value>
         [DataMember(Name="patterns", EmitDefaultValue=false)]
         public List<JourneyPattern> Patterns { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Journey {\n");
-            
+
             sb.Append("  Patterns: ").Append(Patterns).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Patterns != null)
                     hash = hash * 59 + this.Patterns.GetHashCode();
-                
+
                 return hash;
             }
         }

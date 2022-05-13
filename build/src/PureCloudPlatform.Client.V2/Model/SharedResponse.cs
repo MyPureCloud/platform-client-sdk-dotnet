@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SharedResponse :  IEquatable<SharedResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SharedResponse" /> class.
         /// </summary>
@@ -64,47 +36,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DownloadUri
         /// </summary>
         [DataMember(Name="downloadUri", EmitDefaultValue=false)]
         public string DownloadUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ViewUri
         /// </summary>
         [DataMember(Name="viewUri", EmitDefaultValue=false)]
         public string ViewUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Document
         /// </summary>
         [DataMember(Name="document", EmitDefaultValue=false)]
         public Document Document { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Share
         /// </summary>
         [DataMember(Name="share", EmitDefaultValue=false)]
         public Share Share { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SharedResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DownloadUri: ").Append(DownloadUri).Append("\n");
             sb.Append("  ViewUri: ").Append(ViewUri).Append("\n");
@@ -197,22 +169,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.DownloadUri != null)
                     hash = hash * 59 + this.DownloadUri.GetHashCode();
-                
+
                 if (this.ViewUri != null)
                     hash = hash * 59 + this.ViewUri.GetHashCode();
-                
+
                 if (this.Document != null)
                     hash = hash * 59 + this.Document.GetHashCode();
-                
+
                 if (this.Share != null)
                     hash = hash * 59 + this.Share.GetHashCode();
-                
+
                 return hash;
             }
         }

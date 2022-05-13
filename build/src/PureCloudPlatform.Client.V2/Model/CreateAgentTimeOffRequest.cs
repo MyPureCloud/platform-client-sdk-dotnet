@@ -18,46 +18,18 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateAgentTimeOffRequest :  IEquatable<CreateAgentTimeOffRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAgentTimeOffRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateAgentTimeOffRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAgentTimeOffRequest" /> class.
         /// </summary>
         /// <param name="ActivityCodeId">The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category (required).</param>
         /// <param name="Notes">Notes about the time off request.</param>
-        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone..</param>
+        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone..</param>
         /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests..</param>
         /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes (required).</param>
         public CreateAgentTimeOffRequest(string ActivityCodeId = null, string Notes = null, List<string> FullDayManagementUnitDates = null, List<DateTime?> PartialDayStartDateTimes = null, int? DailyDurationMinutes = null)
@@ -70,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category
         /// </summary>
         /// <value>The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category</value>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Notes about the time off request
         /// </summary>
         /// <value>Notes about the time off request</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.
+        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.
         /// </summary>
-        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.</value>
+        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.</value>
         [DataMember(Name="fullDayManagementUnitDates", EmitDefaultValue=false)]
         public List<string> FullDayManagementUnitDates { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A set of start date-times in ISO-8601 format for partial day requests.
         /// </summary>
         /// <value>A set of start date-times in ISO-8601 format for partial day requests.</value>
         [DataMember(Name="partialDayStartDateTimes", EmitDefaultValue=false)]
         public List<DateTime?> PartialDayStartDateTimes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The daily duration of this time off request in minutes
         /// </summary>
         /// <value>The daily duration of this time off request in minutes</value>
         [DataMember(Name="dailyDurationMinutes", EmitDefaultValue=false)]
         public int? DailyDurationMinutes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateAgentTimeOffRequest {\n");
-            
+
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
@@ -208,22 +180,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ActivityCodeId != null)
                     hash = hash * 59 + this.ActivityCodeId.GetHashCode();
-                
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 if (this.FullDayManagementUnitDates != null)
                     hash = hash * 59 + this.FullDayManagementUnitDates.GetHashCode();
-                
+
                 if (this.PartialDayStartDateTimes != null)
                     hash = hash * 59 + this.PartialDayStartDateTimes.GetHashCode();
-                
+
                 if (this.DailyDurationMinutes != null)
                     hash = hash * 59 + this.DailyDurationMinutes.GetHashCode();
-                
+
                 return hash;
             }
         }

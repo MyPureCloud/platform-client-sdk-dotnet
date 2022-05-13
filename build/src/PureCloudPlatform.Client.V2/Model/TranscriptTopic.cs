@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TranscriptTopic :  IEquatable<TranscriptTopic>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TranscriptTopic" /> class.
         /// </summary>
@@ -66,69 +28,69 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the object.
         /// </summary>
         /// <value>The name of the object.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The phrase which detected the topic. 
         /// </summary>
         /// <value>The phrase which detected the topic. </value>
         [DataMember(Name="topicPhrase", EmitDefaultValue=false)]
         public string TopicPhrase { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The transcript phrase which detected the topic.
         /// </summary>
         /// <value>The transcript phrase which detected the topic.</value>
         [DataMember(Name="transcriptPhrase", EmitDefaultValue=false)]
         public string TranscriptPhrase { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The detection confidence of the topic.
         /// </summary>
         /// <value>The detection confidence of the topic.</value>
         [DataMember(Name="confidence", EmitDefaultValue=false)]
         public int? Confidence { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The start time of the topic phrase.
         /// </summary>
         /// <value>The start time of the topic phrase.</value>
         [DataMember(Name="startTimeMilliseconds", EmitDefaultValue=false)]
         public long? StartTimeMilliseconds { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Duration
         /// </summary>
         [DataMember(Name="duration", EmitDefaultValue=false)]
         public TopicDuration Duration { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -137,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TranscriptTopic {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  TopicPhrase: ").Append(TopicPhrase).Append("\n");
@@ -233,28 +195,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.TopicPhrase != null)
                     hash = hash * 59 + this.TopicPhrase.GetHashCode();
-                
+
                 if (this.TranscriptPhrase != null)
                     hash = hash * 59 + this.TranscriptPhrase.GetHashCode();
-                
+
                 if (this.Confidence != null)
                     hash = hash * 59 + this.Confidence.GetHashCode();
-                
+
                 if (this.StartTimeMilliseconds != null)
                     hash = hash * 59 + this.StartTimeMilliseconds.GetHashCode();
-                
+
                 if (this.Duration != null)
                     hash = hash * 59 + this.Duration.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningModuleInformStep :  IEquatable<LearningModuleInformStep>
     {
-        
-        
         /// <summary>
         /// The learning module inform step type
         /// </summary>
@@ -59,51 +57,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "RichText")]
             Richtext
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The learning module inform step type
         /// </summary>
         /// <value>The learning module inform step type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModuleInformStep" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LearningModuleInformStep() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModuleInformStep" /> class.
         /// </summary>
@@ -124,54 +89,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The name of the inform step or content
         /// </summary>
         /// <value>The name of the inform step or content</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The value for inform step
         /// </summary>
         /// <value>The value for inform step</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The sharing uri for Content type inform step
         /// </summary>
         /// <value>The sharing uri for Content type inform step</value>
         [DataMember(Name="sharingUri", EmitDefaultValue=false)]
         public string SharingUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The document type for Content type Inform step
         /// </summary>
         /// <value>The document type for Content type Inform step</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The order of inform step in a learning module
         /// </summary>
         /// <value>The order of inform step in a learning module</value>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public int? Order { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -180,7 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningModuleInformStep {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
@@ -270,25 +235,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.SharingUri != null)
                     hash = hash * 59 + this.SharingUri.GetHashCode();
-                
+
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
+
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
-                
+
                 return hash;
             }
         }

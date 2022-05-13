@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimServiceProviderConfigAuthenticationScheme :  IEquatable<ScimServiceProviderConfigAuthenticationScheme>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of authentication scheme.
         /// </summary>
@@ -77,33 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "httpdigest")]
             Httpdigest
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of authentication scheme.
         /// </summary>
         /// <value>The type of authentication scheme.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-    
+        public TypeEnum? Type { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfigAuthenticationScheme" /> class.
         /// </summary>
@@ -112,54 +77,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the authentication scheme, for example, HTTP Basic.
         /// </summary>
         /// <value>The name of the authentication scheme, for example, HTTP Basic.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of the authentication scheme.
         /// </summary>
         /// <value>The description of the authentication scheme.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The HTTP-addressable URL that points to the authentication scheme&#39;s specification.
+        /// The HTTP-addressable URL that points to the authentication scheme's specification.
         /// </summary>
-        /// <value>The HTTP-addressable URL that points to the authentication scheme&#39;s specification.</value>
+        /// <value>The HTTP-addressable URL that points to the authentication scheme's specification.</value>
         [DataMember(Name="specUri", EmitDefaultValue=false)]
         public string SpecUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The HTTP-addressable URL that points to the authentication scheme&#39;s usage documentation.
+        /// The HTTP-addressable URL that points to the authentication scheme's usage documentation.
         /// </summary>
-        /// <value>The HTTP-addressable URL that points to the authentication scheme&#39;s usage documentation.</value>
+        /// <value>The HTTP-addressable URL that points to the authentication scheme's usage documentation.</value>
         [DataMember(Name="documentationUri", EmitDefaultValue=false)]
         public string DocumentationUri { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Indicates whether this authentication scheme is the primary method of authentication.
         /// </summary>
         /// <value>Indicates whether this authentication scheme is the primary method of authentication.</value>
         [DataMember(Name="primary", EmitDefaultValue=false)]
         public bool? Primary { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -168,7 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimServiceProviderConfigAuthenticationScheme {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  SpecUri: ").Append(SpecUri).Append("\n");
@@ -258,25 +223,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.SpecUri != null)
                     hash = hash * 59 + this.SpecUri.GetHashCode();
-                
+
                 if (this.DocumentationUri != null)
                     hash = hash * 59 + this.DocumentationUri.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Primary != null)
                     hash = hash * 59 + this.Primary.GetHashCode();
-                
+
                 return hash;
             }
         }

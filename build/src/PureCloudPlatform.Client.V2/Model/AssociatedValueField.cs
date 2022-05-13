@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AssociatedValueField :  IEquatable<AssociatedValueField>
     {
-        
-        
         /// <summary>
         /// The data type of the value field.
         /// </summary>
@@ -47,31 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Integer")]
             Integer
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The data type of the value field.
         /// </summary>
         /// <value>The data type of the value field.</value>
         [DataMember(Name="dataType", EmitDefaultValue=false)]
         public DataTypeEnum? DataType { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AssociatedValueField" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AssociatedValueField() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AssociatedValueField" /> class.
         /// </summary>
@@ -84,18 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The field name for extracting value from event.
         /// </summary>
         /// <value>The field name for extracting value from event.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AssociatedValueField {\n");
-            
+
             sb.Append("  DataType: ").Append(DataType).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
@@ -170,13 +155,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DataType != null)
                     hash = hash * 59 + this.DataType.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 return hash;
             }
         }

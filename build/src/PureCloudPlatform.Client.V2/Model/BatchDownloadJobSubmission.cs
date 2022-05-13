@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BatchDownloadJobSubmission :  IEquatable<BatchDownloadJobSubmission>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchDownloadJobSubmission" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BatchDownloadJobSubmission() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchDownloadJobSubmission" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// List of up to 100 items requested
         /// </summary>
         /// <value>List of up to 100 items requested</value>
         [DataMember(Name="batchDownloadRequestList", EmitDefaultValue=false)]
         public List<BatchDownloadRequest> BatchDownloadRequestList { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BatchDownloadJobSubmission {\n");
-            
+
             sb.Append("  BatchDownloadRequestList: ").Append(BatchDownloadRequestList).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.BatchDownloadRequestList != null)
                     hash = hash * 59 + this.BatchDownloadRequestList.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -157,6 +157,8 @@ Delete business unit
 
 A business unit cannot be deleted if it contains one or more management units
 
+
+
 Requires ANY permissions: 
 
 * wfm:businessUnit:delete
@@ -553,6 +555,8 @@ namespace Example
 Delete a short term forecast
 
 Must not be tied to any schedules
+
+
 
 Requires ANY permissions: 
 
@@ -1324,6 +1328,8 @@ This endpoint does require any parameters.
 Get business unit
 
 Expanding \"settings\" will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
+
+
 
 Requires ANY permissions: 
 
@@ -2542,6 +2548,8 @@ Get the list of week schedules for the specified week
 
 Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
 
+
+
 Requires ANY permissions: 
 
 * wfm:schedule:view
@@ -2685,6 +2693,8 @@ Get the result of a short term forecast calculation
 
 Includes modifications unless you pass the doNotApplyModifications query parameter
 
+
+
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:view
@@ -2827,6 +2837,8 @@ Get the result of a long term forecast calculation
 
 Includes modifications unless you pass the doNotApplyModifications query parameter
 
+
+
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:view
@@ -2968,6 +2980,8 @@ namespace Example
 Get short term forecasts
 
 Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+
+
 
 Requires ANY permissions: 
 
@@ -3406,6 +3420,8 @@ This endpoint does require any parameters.
 Get management unit
 
 settings.shortTermForecasting is deprecated and now lives on the business unit
+
+
 
 Requires ANY permissions: 
 
@@ -3971,6 +3987,8 @@ Gets a time off limit object
 
 Returns properties of time off limit object, but not daily values.
 
+
+
 Requires ANY permissions: 
 
 * wfm:timeOffLimit:view
@@ -4037,6 +4055,8 @@ namespace Example
 Gets a list of time off limit objects under management unit.
 
 Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
+
+
 
 Requires ANY permissions: 
 
@@ -4940,6 +4960,8 @@ Get work plans
 
 \"expand=details\" is deprecated
 
+
+
 Requires ANY permissions: 
 
 * wfm:agent:view
@@ -5147,6 +5169,8 @@ namespace Example
 Get a list of notifications for the current user
 
 Notifications are only initially sent if you have the relevant Notify and Edit permissions
+
+
 
 Requires NO permissions: 
 
@@ -5940,6 +5964,8 @@ Updates a time off limit object.
 
 Updates time off limit object properties, but not daily values.
 
+
+
 Requires ANY permissions: 
 
 * wfm:timeOffLimit:edit
@@ -6141,7 +6167,7 @@ namespace Example
 
 <a name="patchworkforcemanagementmanagementunitweekshifttrade"></a>
 
-## [**ShiftTradeResponse**](ShiftTradeResponse.html) PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, String weekDateId, PatchShiftTradeRequest body, string tradeId)
+## [**ShiftTradeResponse**](ShiftTradeResponse.html) PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body)
 
 
 
@@ -6177,13 +6203,13 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var body = new PatchShiftTradeRequest(); // PatchShiftTradeRequest | body
             var tradeId = tradeId_example;  // string | The ID of the shift trade to update
+            var body = new PatchShiftTradeRequest(); // PatchShiftTradeRequest | body
 
             try
             { 
                 // Updates a shift trade. This route can only be called by the initiating agent
-                ShiftTradeResponse result = apiInstance.PatchWorkforcemanagementManagementunitWeekShifttrade(managementUnitId, weekDateId, body, tradeId);
+                ShiftTradeResponse result = apiInstance.PatchWorkforcemanagementManagementunitWeekShifttrade(managementUnitId, weekDateId, tradeId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6202,8 +6228,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **body** | [**PatchShiftTradeRequest**](PatchShiftTradeRequest.html)| body |  |
 | **tradeId** | **string**| The ID of the shift trade to update |  |
+| **body** | [**PatchShiftTradeRequest**](PatchShiftTradeRequest.html)| body |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6212,7 +6238,7 @@ namespace Example
 
 <a name="patchworkforcemanagementmanagementunitworkplan"></a>
 
-## [**WorkPlan**](WorkPlan.html) PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, WorkPlan body = null, string validationMode = null)
+## [**WorkPlan**](WorkPlan.html) PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null)
 
 
 
@@ -6248,13 +6274,13 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var workPlanId = workPlanId_example;  // string | The ID of the work plan to update
-            var body = new WorkPlan(); // WorkPlan | body (optional) 
             var validationMode = validationMode_example;  // string | Allows to update work plan even if validation result is invalid (optional) 
+            var body = new WorkPlan(); // WorkPlan | body (optional) 
 
             try
             { 
                 // Update a work plan
-                WorkPlan result = apiInstance.PatchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, body, validationMode);
+                WorkPlan result = apiInstance.PatchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, validationMode, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6273,8 +6299,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **workPlanId** | **string**| The ID of the work plan to update |  |
-| **body** | [**WorkPlan**](WorkPlan.html)| body | [optional]  |
 | **validationMode** | **string**| Allows to update work plan even if validation result is invalid | [optional] <br />**Values**: Ignore |
+| **body** | [**WorkPlan**](WorkPlan.html)| body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6616,7 +6642,7 @@ namespace Example
 
 <a name="postworkforcemanagementbusinessunitagentschedulessearch"></a>
 
-## [**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse.html) PostWorkforcemanagementBusinessunitAgentschedulesSearch (string businessUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+## [**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse.html) PostWorkforcemanagementBusinessunitAgentschedulesSearch (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
 
 
 
@@ -6652,14 +6678,14 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
-            var body = new BuSearchAgentSchedulesRequest(); // BuSearchAgentSchedulesRequest | body (optional) 
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
+            var body = new BuSearchAgentSchedulesRequest(); // BuSearchAgentSchedulesRequest | body (optional) 
 
             try
             { 
                 // Search published schedules
-                BuAsyncAgentSchedulesSearchResponse result = apiInstance.PostWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId, body, forceAsync, forceDownloadService);
+                BuAsyncAgentSchedulesSearchResponse result = apiInstance.PostWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId, forceAsync, forceDownloadService, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6677,9 +6703,9 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
-| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional]  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
 | **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
+| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -7117,6 +7143,8 @@ Starts processing a schedule update
 
 Call after uploading the schedule data to the url supplied by the /update/uploadurl route
 
+
+
 Requires ANY permissions: 
 
 * wfm:schedule:edit
@@ -7187,6 +7215,8 @@ namespace Example
 Creates a signed upload URL for updating a schedule
 
 Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
+
+
 
 Requires ANY permissions: 
 
@@ -7397,6 +7427,8 @@ Starts processing a schedule import
 
 Call after uploading the schedule data to the url supplied by the /import/uploadurl route
 
+
+
 Requires ANY permissions: 
 
 * wfm:schedule:add
@@ -7465,6 +7497,8 @@ namespace Example
 Creates a signed upload URL for importing a schedule
 
 Once the upload is complete, call the /import route to start the schedule import process
+
+
 
 Requires ANY permissions: 
 
@@ -7679,6 +7713,8 @@ Starts importing the uploaded short term forecast
 
 Call after uploading the forecast data to the url supplied by the /import/uploadurl route
 
+
+
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:add
@@ -7748,6 +7784,8 @@ Creates a signed upload URL for importing a short term forecast
 
 Once the upload is complete, call the /import route to start the short term forecast import process
 
+
+
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:add
@@ -7816,6 +7854,8 @@ namespace Example
 Add a new business unit
 
 It may take a minute or two for a new business unit to be available for api operations
+
+
 
 Requires ANY permissions: 
 
@@ -7909,7 +7949,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var language = en-US;  // string | A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize default activity code names in the ics-formatted calendar (optional)  (default to en-US)
+            var language = en-US;  // string | A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize default activity code names in the ics-formatted calendar (optional)  (default to "en-US")
 
             try
             { 
@@ -7931,7 +7971,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **language** | **string**| A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar | [optional] [default to en-US] |
+| **language** | **string**| A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar | [optional] [default to "en-US"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -8064,7 +8104,7 @@ void (empty response body)
 
 <a name="postworkforcemanagementmanagementunitagentschedulessearch"></a>
 
-## [**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse.html) PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+## [**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse.html) PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
 
 
 
@@ -8100,14 +8140,14 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new BuSearchAgentSchedulesRequest(); // BuSearchAgentSchedulesRequest | body (optional) 
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
+            var body = new BuSearchAgentSchedulesRequest(); // BuSearchAgentSchedulesRequest | body (optional) 
 
             try
             { 
                 // Query published schedules for given given time range for set of users
-                BuAsyncAgentSchedulesSearchResponse result = apiInstance.PostWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId, body, forceAsync, forceDownloadService);
+                BuAsyncAgentSchedulesSearchResponse result = apiInstance.PostWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId, forceAsync, forceDownloadService, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8125,9 +8165,9 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional]  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
 | **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
+| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -8143,6 +8183,8 @@ namespace Example
 Request a historical adherence report
 
 The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
+
+
 
 Requires ANY permissions: 
 
@@ -8210,6 +8252,8 @@ namespace Example
 Move the requested management unit to a new business unit
 
 Returns status 200 if the management unit is already in the requested business unit
+
+
 
 Requires ALL permissions: 
 
@@ -8345,6 +8389,8 @@ namespace Example
 Creates a new time off limit object under management unit.
 
 Only one limit object is allowed under management unit, so an attempt to create second object will fail.
+
+
 
 Requires ANY permissions: 
 
@@ -8614,6 +8660,8 @@ Fetches time off requests matching the conditions specified in the request body
 
 Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
 
+
+
 Requires ANY permissions: 
 
 * wfm:timeOffRequest:view
@@ -8740,7 +8788,7 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitweekshifttradematch"></a>
 
-## [**MatchShiftTradeResponse**](MatchShiftTradeResponse.html) PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, String weekDateId, MatchShiftTradeRequest body, string tradeId)
+## [**MatchShiftTradeResponse**](MatchShiftTradeResponse.html) PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body)
 
 
 
@@ -8776,13 +8824,13 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekDateId = 2013-10-20;  // String | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var body = new MatchShiftTradeRequest(); // MatchShiftTradeRequest | body
             var tradeId = tradeId_example;  // string | The ID of the shift trade to update
+            var body = new MatchShiftTradeRequest(); // MatchShiftTradeRequest | body
 
             try
             { 
                 // Matches a shift trade. This route can only be called by the receiving agent
-                MatchShiftTradeResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShifttradeMatch(managementUnitId, weekDateId, body, tradeId);
+                MatchShiftTradeResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShifttradeMatch(managementUnitId, weekDateId, tradeId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8801,8 +8849,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekDateId** | **String**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **body** | [**MatchShiftTradeRequest**](MatchShiftTradeRequest.html)| body |  |
 | **tradeId** | **string**| The ID of the shift trade to update |  |
+| **body** | [**MatchShiftTradeRequest**](MatchShiftTradeRequest.html)| body |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -8957,6 +9005,8 @@ Updates the state of a batch of shift trades
 
 Admin functionality is not supported with \"mine\".
 
+
+
 Requires ANY permissions: 
 
 * wfm:agentShiftTradeRequest:participate
@@ -9090,7 +9140,7 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitworkplanvalidate"></a>
 
-## [**ValidateWorkPlanResponse**](ValidateWorkPlanResponse.html) PostWorkforcemanagementManagementunitWorkplanValidate (string managementUnitId, string workPlanId, WorkPlanValidationRequest body = null, List<string> expand = null)
+## [**ValidateWorkPlanResponse**](ValidateWorkPlanResponse.html) PostWorkforcemanagementManagementunitWorkplanValidate (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null)
 
 
 
@@ -9127,13 +9177,13 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var workPlanId = workPlanId_example;  // string | The ID of the work plan to validate. For new work plan, use the word 'new' for the ID.
-            var body = new WorkPlanValidationRequest(); // WorkPlanValidationRequest | body (optional) 
             var expand = new List<string>(); // List<string> |  (optional) 
+            var body = new WorkPlanValidationRequest(); // WorkPlanValidationRequest | body (optional) 
 
             try
             { 
                 // Validate Work Plan
-                ValidateWorkPlanResponse result = apiInstance.PostWorkforcemanagementManagementunitWorkplanValidate(managementUnitId, workPlanId, body, expand);
+                ValidateWorkPlanResponse result = apiInstance.PostWorkforcemanagementManagementunitWorkplanValidate(managementUnitId, workPlanId, expand, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9152,8 +9202,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **workPlanId** | **string**| The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID. |  |
-| **body** | [**WorkPlanValidationRequest**](WorkPlanValidationRequest.html)| body | [optional]  |
 | **expand** | [**List<string>**](string.html)|  | [optional] <br />**Values**: messages |
+| **body** | [**WorkPlanValidationRequest**](WorkPlanValidationRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -9298,7 +9348,7 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitworkplans"></a>
 
-## [**WorkPlan**](WorkPlan.html) PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, CreateWorkPlan body = null, string validationMode = null)
+## [**WorkPlan**](WorkPlan.html) PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, string validationMode = null, CreateWorkPlan body = null)
 
 
 
@@ -9333,13 +9383,13 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new CreateWorkPlan(); // CreateWorkPlan | body (optional) 
             var validationMode = validationMode_example;  // string | Allows to create work plan even if the validation result is invalid (optional) 
+            var body = new CreateWorkPlan(); // CreateWorkPlan | body (optional) 
 
             try
             { 
                 // Create a new work plan
-                WorkPlan result = apiInstance.PostWorkforcemanagementManagementunitWorkplans(managementUnitId, body, validationMode);
+                WorkPlan result = apiInstance.PostWorkforcemanagementManagementunitWorkplans(managementUnitId, validationMode, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9357,8 +9407,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**CreateWorkPlan**](CreateWorkPlan.html)| body | [optional]  |
 | **validationMode** | **string**| Allows to create work plan even if the validation result is invalid | [optional] <br />**Values**: Ignore |
+| **body** | [**CreateWorkPlan**](CreateWorkPlan.html)| body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -9374,6 +9424,8 @@ namespace Example
 Add a management unit
 
 It may take a minute or two for a new management unit to be available for api operations
+
+
 
 Requires ALL permissions: 
 
@@ -9698,6 +9750,8 @@ namespace Example
 Sets daily values for a date range of time off limit object
 
 Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
+
+
 
 Requires ANY permissions: 
 

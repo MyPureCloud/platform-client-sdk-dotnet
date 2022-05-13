@@ -18,36 +18,13 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WaitlistPosition :  IEquatable<WaitlistPosition>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WaitlistPosition" /> class.
         /// </summary>
         /// <param name="TimeOffRequest">The time off request for this wait list position.</param>
         /// <param name="TimeOffLimit">The time off limit for which time off request is waitlisted.</param>
         /// <param name="Date">The date to which this wait list position applies, as defined by the time zone of the business unit. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
-        /// <param name="_WaitlistPosition">The time off request&#39;s position in the waitlist on the date. 1 means time off is the first in the waitlist.</param>
+        /// <param name="_WaitlistPosition">The time off request's position in the waitlist on the date. 1 means time off is the first in the waitlist.</param>
         public WaitlistPosition(TimeOffRequestReference TimeOffRequest = null, TimeOffLimitReference TimeOffLimit = null, String Date = null, int? _WaitlistPosition = null)
         {
             this.TimeOffRequest = TimeOffRequest;
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The time off request for this wait list position
         /// </summary>
         /// <value>The time off request for this wait list position</value>
         [DataMember(Name="timeOffRequest", EmitDefaultValue=false)]
         public TimeOffRequestReference TimeOffRequest { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time off limit for which time off request is waitlisted
         /// </summary>
         /// <value>The time off limit for which time off request is waitlisted</value>
         [DataMember(Name="timeOffLimit", EmitDefaultValue=false)]
         public TimeOffLimitReference TimeOffLimit { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date to which this wait list position applies, as defined by the time zone of the business unit. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>The date to which this wait list position applies, as defined by the time zone of the business unit. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public String Date { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The time off request&#39;s position in the waitlist on the date. 1 means time off is the first in the waitlist
+        /// The time off request's position in the waitlist on the date. 1 means time off is the first in the waitlist
         /// </summary>
-        /// <value>The time off request&#39;s position in the waitlist on the date. 1 means time off is the first in the waitlist</value>
+        /// <value>The time off request's position in the waitlist on the date. 1 means time off is the first in the waitlist</value>
         [DataMember(Name="waitlistPosition", EmitDefaultValue=false)]
         public int? _WaitlistPosition { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WaitlistPosition {\n");
-            
+
             sb.Append("  TimeOffRequest: ").Append(TimeOffRequest).Append("\n");
             sb.Append("  TimeOffLimit: ").Append(TimeOffLimit).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeOffRequest != null)
                     hash = hash * 59 + this.TimeOffRequest.GetHashCode();
-                
+
                 if (this.TimeOffLimit != null)
                     hash = hash * 59 + this.TimeOffLimit.GetHashCode();
-                
+
                 if (this.Date != null)
                     hash = hash * 59 + this.Date.GetHashCode();
-                
+
                 if (this._WaitlistPosition != null)
                     hash = hash * 59 + this._WaitlistPosition.GetHashCode();
-                
+
                 return hash;
             }
         }

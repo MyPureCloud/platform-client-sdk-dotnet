@@ -18,49 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TranscriptionTopicTranscriptionMessage :  IEquatable<TranscriptionTopicTranscriptionMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TranscriptionTopicTranscriptionMessage" /> class.
         /// </summary>
@@ -85,71 +42,71 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
         public DateTime? EventTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OrganizationId
         /// </summary>
         [DataMember(Name="organizationId", EmitDefaultValue=false)]
         public string OrganizationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CommunicationId
         /// </summary>
         [DataMember(Name="communicationId", EmitDefaultValue=false)]
         public string CommunicationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SessionStartTimeMs
         /// </summary>
         [DataMember(Name="sessionStartTimeMs", EmitDefaultValue=false)]
         public int? SessionStartTimeMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TranscriptionStartTimeMs
         /// </summary>
         [DataMember(Name="transcriptionStartTimeMs", EmitDefaultValue=false)]
         public int? TranscriptionStartTimeMs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Transcripts
         /// </summary>
         [DataMember(Name="transcripts", EmitDefaultValue=false)]
         public List<TranscriptionTopicTranscriptResult> Transcripts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public TranscriptionTopicTranscriptionRequestStatus Status { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -158,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TranscriptionTopicTranscriptionMessage {\n");
-            
+
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  OrganizationId: ").Append(OrganizationId).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
@@ -260,31 +217,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EventTime != null)
                     hash = hash * 59 + this.EventTime.GetHashCode();
-                
+
                 if (this.OrganizationId != null)
                     hash = hash * 59 + this.OrganizationId.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.CommunicationId != null)
                     hash = hash * 59 + this.CommunicationId.GetHashCode();
-                
+
                 if (this.SessionStartTimeMs != null)
                     hash = hash * 59 + this.SessionStartTimeMs.GetHashCode();
-                
+
                 if (this.TranscriptionStartTimeMs != null)
                     hash = hash * 59 + this.TranscriptionStartTimeMs.GetHashCode();
-                
+
                 if (this.Transcripts != null)
                     hash = hash * 59 + this.Transcripts.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 return hash;
             }
         }

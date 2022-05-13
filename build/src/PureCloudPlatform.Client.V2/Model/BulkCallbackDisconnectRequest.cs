@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BulkCallbackDisconnectRequest :  IEquatable<BulkCallbackDisconnectRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BulkCallbackDisconnectRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BulkCallbackDisconnectRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BulkCallbackDisconnectRequest" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of requests to disconnect callbacks in bulk
         /// </summary>
         /// <value>The list of requests to disconnect callbacks in bulk</value>
         [DataMember(Name="callbackDisconnectIdentifiers", EmitDefaultValue=false)]
         public List<CallbackDisconnectIdentifier> CallbackDisconnectIdentifiers { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BulkCallbackDisconnectRequest {\n");
-            
+
             sb.Append("  CallbackDisconnectIdentifiers: ").Append(CallbackDisconnectIdentifiers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CallbackDisconnectIdentifiers != null)
                     hash = hash * 59 + this.CallbackDisconnectIdentifiers.GetHashCode();
-                
+
                 return hash;
             }
         }

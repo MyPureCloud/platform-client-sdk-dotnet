@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OverallBestPoints :  IEquatable<OverallBestPoints>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OverallBestPoints" /> class.
         /// </summary>
@@ -44,34 +26,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The requested division
         /// </summary>
         /// <value>The requested division</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public Division Division { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of gamification best point items
         /// </summary>
         /// <value>List of gamification best point items</value>
         [DataMember(Name="bestPoints", EmitDefaultValue=false)]
         public List<OverallBestPointsItem> BestPoints { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The targeted performance profile for the average points
         /// </summary>
         /// <value>The targeted performance profile for the average points</value>
         [DataMember(Name="performanceProfile", EmitDefaultValue=false)]
         public AddressableEntityRef PerformanceProfile { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OverallBestPoints {\n");
-            
+
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  BestPoints: ").Append(BestPoints).Append("\n");
             sb.Append("  PerformanceProfile: ").Append(PerformanceProfile).Append("\n");
@@ -152,16 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.BestPoints != null)
                     hash = hash * 59 + this.BestPoints.GetHashCode();
-                
+
                 if (this.PerformanceProfile != null)
                     hash = hash * 59 + this.PerformanceProfile.GetHashCode();
-                
+
                 return hash;
             }
         }

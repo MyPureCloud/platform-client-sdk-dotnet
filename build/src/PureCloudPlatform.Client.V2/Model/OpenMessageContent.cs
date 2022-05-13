@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OpenMessageContent :  IEquatable<OpenMessageContent>
     {
-        
-        
         /// <summary>
         /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.
         /// </summary>
@@ -41,35 +39,22 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Attachment")]
             Attachment
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.
         /// </summary>
         /// <value>Type of this content element. If contentType = \"Attachment\" only one item is allowed.</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public ContentTypeEnum? ContentType { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenMessageContent" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected OpenMessageContent() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenMessageContent" /> class.
         /// </summary>
-        /// <param name="ContentType">Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. (required).</param>
+        /// <param name="ContentType">Type of this content element. If contentType = \"Attachment\" only one item is allowed. (required).</param>
         /// <param name="Attachment">Attachment content..</param>
         public OpenMessageContent(ContentTypeEnum? ContentType = null, ContentAttachment Attachment = null)
         {
@@ -78,18 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Attachment content.
         /// </summary>
         /// <value>Attachment content.</value>
         [DataMember(Name="attachment", EmitDefaultValue=false)]
         public ContentAttachment Attachment { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OpenMessageContent {\n");
-            
+
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  Attachment: ").Append(Attachment).Append("\n");
             sb.Append("}\n");
@@ -164,13 +149,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
+
                 if (this.Attachment != null)
                     hash = hash * 59 + this.Attachment.GetHashCode();
-                
+
                 return hash;
             }
         }

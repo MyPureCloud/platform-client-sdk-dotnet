@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MinerExecuteRequest :  IEquatable<MinerExecuteRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Media type for filtering conversations.
         /// </summary>
@@ -62,31 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Message")]
             Message
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Media type for filtering conversations.
         /// </summary>
         /// <value>Media type for filtering conversations.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MinerExecuteRequest" /> class.
         /// </summary>
@@ -105,45 +75,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Start date for the date range to mine. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Start date for the date range to mine. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateStart", EmitDefaultValue=false)]
         public String DateStart { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// End date for the date range to mine. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>End date for the date range to mine. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateEnd", EmitDefaultValue=false)]
         public String DateEnd { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Location of input conversations.
         /// </summary>
         /// <value>Location of input conversations.</value>
         [DataMember(Name="uploadKey", EmitDefaultValue=false)]
         public string UploadKey { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// List of queue IDs for filtering conversations.
         /// </summary>
         /// <value>List of queue IDs for filtering conversations.</value>
         [DataMember(Name="queueIds", EmitDefaultValue=false)]
         public List<string> QueueIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MinerExecuteRequest {\n");
-            
+
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
             sb.Append("  DateEnd: ").Append(DateEnd).Append("\n");
             sb.Append("  UploadKey: ").Append(UploadKey).Append("\n");
@@ -236,22 +206,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();
-                
+
                 if (this.DateEnd != null)
                     hash = hash * 59 + this.DateEnd.GetHashCode();
-                
+
                 if (this.UploadKey != null)
                     hash = hash * 59 + this.UploadKey.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.QueueIds != null)
                     hash = hash * 59 + this.QueueIds.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OutcomeEventScore :  IEquatable<OutcomeEventScore>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OutcomeEventScore" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The outcome that the score was calculated for.
         /// </summary>
         /// <value>The outcome that the score was calculated for.</value>
         [DataMember(Name="outcome", EmitDefaultValue=false)]
         public AddressableEntityRef Outcome { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Represents the max probability reached in the session.
         /// </summary>
         /// <value>Represents the max probability reached in the session.</value>
         [DataMember(Name="sessionMaxProbability", EmitDefaultValue=false)]
         public float? SessionMaxProbability { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Represents the likelihood of a customer reaching or achieving a given outcome.
         /// </summary>
         /// <value>Represents the likelihood of a customer reaching or achieving a given outcome.</value>
         [DataMember(Name="probability", EmitDefaultValue=false)]
         public float? Probability { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OutcomeEventScore {\n");
-            
+
             sb.Append("  Outcome: ").Append(Outcome).Append("\n");
             sb.Append("  SessionMaxProbability: ").Append(SessionMaxProbability).Append("\n");
             sb.Append("  Probability: ").Append(Probability).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Outcome != null)
                     hash = hash * 59 + this.Outcome.GetHashCode();
-                
+
                 if (this.SessionMaxProbability != null)
                     hash = hash * 59 + this.SessionMaxProbability.GetHashCode();
-                
+
                 if (this.Probability != null)
                     hash = hash * 59 + this.Probability.GetHashCode();
-                
+
                 return hash;
             }
         }

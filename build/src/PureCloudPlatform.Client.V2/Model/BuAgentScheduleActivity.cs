@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuAgentScheduleActivity :  IEquatable<BuAgentScheduleActivity>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of the external activity associated with this activity, if applicable
         /// </summary>
@@ -62,34 +39,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Coaching")]
             Coaching
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of the external activity associated with this activity, if applicable
         /// </summary>
         /// <value>The type of the external activity associated with this activity, if applicable</value>
         [DataMember(Name="externalActivityType", EmitDefaultValue=false)]
         public ExternalActivityTypeEnum? ExternalActivityType { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAgentScheduleActivity" /> class.
         /// </summary>
@@ -114,72 +69,72 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The start date/time of this activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The start date/time of this activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The length of this activity in minutes
         /// </summary>
         /// <value>The length of this activity in minutes</value>
         [DataMember(Name="lengthMinutes", EmitDefaultValue=false)]
         public int? LengthMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of this activity
         /// </summary>
         /// <value>The description of this activity</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the activity code associated with this activity
         /// </summary>
         /// <value>The ID of the activity code associated with this activity</value>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this activity is paid
         /// </summary>
         /// <value>Whether this activity is paid</value>
         [DataMember(Name="paid", EmitDefaultValue=false)]
         public bool? Paid { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the time off request associated with this activity, if applicable
         /// </summary>
         /// <value>The ID of the time off request associated with this activity, if applicable</value>
         [DataMember(Name="timeOffRequestId", EmitDefaultValue=false)]
         public string TimeOffRequestId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the external activity associated with this activity, if applicable
         /// </summary>
         /// <value>The ID of the external activity associated with this activity, if applicable</value>
         [DataMember(Name="externalActivityId", EmitDefaultValue=false)]
         public string ExternalActivityId { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,7 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuAgentScheduleActivity {\n");
-            
+
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  LengthMinutes: ").Append(LengthMinutes).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -290,31 +245,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.LengthMinutes != null)
                     hash = hash * 59 + this.LengthMinutes.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.ActivityCodeId != null)
                     hash = hash * 59 + this.ActivityCodeId.GetHashCode();
-                
+
                 if (this.Paid != null)
                     hash = hash * 59 + this.Paid.GetHashCode();
-                
+
                 if (this.TimeOffRequestId != null)
                     hash = hash * 59 + this.TimeOffRequestId.GetHashCode();
-                
+
                 if (this.ExternalActivityId != null)
                     hash = hash * 59 + this.ExternalActivityId.GetHashCode();
-                
+
                 if (this.ExternalActivityType != null)
                     hash = hash * 59 + this.ExternalActivityType.GetHashCode();
-                
+
                 return hash;
             }
         }

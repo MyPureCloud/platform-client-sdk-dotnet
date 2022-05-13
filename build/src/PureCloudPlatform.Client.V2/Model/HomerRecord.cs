@@ -18,264 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class HomerRecord :  IEquatable<HomerRecord>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="HomerRecord" /> class.
         /// </summary>
@@ -382,465 +124,465 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>metadata associated to the SIP calls. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public DateTime? Date { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="milliTs", EmitDefaultValue=false)]
         public string MilliTs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="microTs", EmitDefaultValue=false)]
         public string MicroTs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="method", EmitDefaultValue=false)]
         public string Method { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="replyReason", EmitDefaultValue=false)]
         public string ReplyReason { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="ruri", EmitDefaultValue=false)]
         public string Ruri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="ruriUser", EmitDefaultValue=false)]
         public string RuriUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="ruriDomain", EmitDefaultValue=false)]
         public string RuriDomain { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="fromUser", EmitDefaultValue=false)]
         public string FromUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="fromDomain", EmitDefaultValue=false)]
         public string FromDomain { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="fromTag", EmitDefaultValue=false)]
         public string FromTag { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="toUser", EmitDefaultValue=false)]
         public string ToUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="toDomain", EmitDefaultValue=false)]
         public string ToDomain { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="toTag", EmitDefaultValue=false)]
         public string ToTag { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="pidUser", EmitDefaultValue=false)]
         public string PidUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="contactUser", EmitDefaultValue=false)]
         public string ContactUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="authUser", EmitDefaultValue=false)]
         public string AuthUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="callid", EmitDefaultValue=false)]
         public string Callid { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="callidAleg", EmitDefaultValue=false)]
         public string CallidAleg { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="via1", EmitDefaultValue=false)]
         public string Via1 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="via1Branch", EmitDefaultValue=false)]
         public string Via1Branch { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="cseq", EmitDefaultValue=false)]
         public string Cseq { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="diversion", EmitDefaultValue=false)]
         public string Diversion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="reason", EmitDefaultValue=false)]
         public string Reason { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="auth", EmitDefaultValue=false)]
         public string Auth { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="userAgent", EmitDefaultValue=false)]
         public string UserAgent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="sourceIp", EmitDefaultValue=false)]
         public string SourceIp { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="sourcePort", EmitDefaultValue=false)]
         public string SourcePort { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="destinationIp", EmitDefaultValue=false)]
         public string DestinationIp { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="destinationPort", EmitDefaultValue=false)]
         public string DestinationPort { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="contactIp", EmitDefaultValue=false)]
         public string ContactIp { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="contactPort", EmitDefaultValue=false)]
         public string ContactPort { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="originatorIp", EmitDefaultValue=false)]
         public string OriginatorIp { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="originatorPort", EmitDefaultValue=false)]
         public string OriginatorPort { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="proto", EmitDefaultValue=false)]
         public string Proto { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="family", EmitDefaultValue=false)]
         public string Family { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="rtpStat", EmitDefaultValue=false)]
         public string RtpStat { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="node", EmitDefaultValue=false)]
         public string Node { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="trans", EmitDefaultValue=false)]
         public string Trans { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="dbnode", EmitDefaultValue=false)]
         public string Dbnode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="msg", EmitDefaultValue=false)]
         public string Msg { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="sourceAlias", EmitDefaultValue=false)]
         public string SourceAlias { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="destinationAlias", EmitDefaultValue=false)]
         public string DestinationAlias { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// metadata associated to the SIP calls
         /// </summary>
         /// <value>metadata associated to the SIP calls</value>
         [DataMember(Name="participantId", EmitDefaultValue=false)]
         public string ParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -849,7 +591,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HomerRecord {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
@@ -1209,160 +951,159 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Date != null)
                     hash = hash * 59 + this.Date.GetHashCode();
-                
+
                 if (this.MilliTs != null)
                     hash = hash * 59 + this.MilliTs.GetHashCode();
-                
+
                 if (this.MicroTs != null)
                     hash = hash * 59 + this.MicroTs.GetHashCode();
-                
+
                 if (this.Method != null)
                     hash = hash * 59 + this.Method.GetHashCode();
-                
+
                 if (this.ReplyReason != null)
                     hash = hash * 59 + this.ReplyReason.GetHashCode();
-                
+
                 if (this.Ruri != null)
                     hash = hash * 59 + this.Ruri.GetHashCode();
-                
+
                 if (this.RuriUser != null)
                     hash = hash * 59 + this.RuriUser.GetHashCode();
-                
+
                 if (this.RuriDomain != null)
                     hash = hash * 59 + this.RuriDomain.GetHashCode();
-                
+
                 if (this.FromUser != null)
                     hash = hash * 59 + this.FromUser.GetHashCode();
-                
+
                 if (this.FromDomain != null)
                     hash = hash * 59 + this.FromDomain.GetHashCode();
-                
+
                 if (this.FromTag != null)
                     hash = hash * 59 + this.FromTag.GetHashCode();
-                
+
                 if (this.ToUser != null)
                     hash = hash * 59 + this.ToUser.GetHashCode();
-                
+
                 if (this.ToDomain != null)
                     hash = hash * 59 + this.ToDomain.GetHashCode();
-                
+
                 if (this.ToTag != null)
                     hash = hash * 59 + this.ToTag.GetHashCode();
-                
+
                 if (this.PidUser != null)
                     hash = hash * 59 + this.PidUser.GetHashCode();
-                
+
                 if (this.ContactUser != null)
                     hash = hash * 59 + this.ContactUser.GetHashCode();
-                
+
                 if (this.AuthUser != null)
                     hash = hash * 59 + this.AuthUser.GetHashCode();
-                
+
                 if (this.Callid != null)
                     hash = hash * 59 + this.Callid.GetHashCode();
-                
+
                 if (this.CallidAleg != null)
                     hash = hash * 59 + this.CallidAleg.GetHashCode();
-                
+
                 if (this.Via1 != null)
                     hash = hash * 59 + this.Via1.GetHashCode();
-                
+
                 if (this.Via1Branch != null)
                     hash = hash * 59 + this.Via1Branch.GetHashCode();
-                
+
                 if (this.Cseq != null)
                     hash = hash * 59 + this.Cseq.GetHashCode();
-                
+
                 if (this.Diversion != null)
                     hash = hash * 59 + this.Diversion.GetHashCode();
-                
+
                 if (this.Reason != null)
                     hash = hash * 59 + this.Reason.GetHashCode();
-                
+
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
+
                 if (this.Auth != null)
                     hash = hash * 59 + this.Auth.GetHashCode();
-                
+
                 if (this.UserAgent != null)
                     hash = hash * 59 + this.UserAgent.GetHashCode();
-                
+
                 if (this.SourceIp != null)
                     hash = hash * 59 + this.SourceIp.GetHashCode();
-                
+
                 if (this.SourcePort != null)
                     hash = hash * 59 + this.SourcePort.GetHashCode();
-                
+
                 if (this.DestinationIp != null)
                     hash = hash * 59 + this.DestinationIp.GetHashCode();
-                
+
                 if (this.DestinationPort != null)
                     hash = hash * 59 + this.DestinationPort.GetHashCode();
-                
+
                 if (this.ContactIp != null)
                     hash = hash * 59 + this.ContactIp.GetHashCode();
-                
+
                 if (this.ContactPort != null)
                     hash = hash * 59 + this.ContactPort.GetHashCode();
-                
+
                 if (this.OriginatorIp != null)
                     hash = hash * 59 + this.OriginatorIp.GetHashCode();
-                
+
                 if (this.OriginatorPort != null)
                     hash = hash * 59 + this.OriginatorPort.GetHashCode();
-                
+
                 if (this.CorrelationId != null)
                     hash = hash * 59 + this.CorrelationId.GetHashCode();
-                
+
                 if (this.Proto != null)
                     hash = hash * 59 + this.Proto.GetHashCode();
-                
+
                 if (this.Family != null)
                     hash = hash * 59 + this.Family.GetHashCode();
-                
+
                 if (this.RtpStat != null)
                     hash = hash * 59 + this.RtpStat.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Node != null)
                     hash = hash * 59 + this.Node.GetHashCode();
-                
+
                 if (this.Trans != null)
                     hash = hash * 59 + this.Trans.GetHashCode();
-                
+
                 if (this.Dbnode != null)
                     hash = hash * 59 + this.Dbnode.GetHashCode();
-                
+
                 if (this.Msg != null)
                     hash = hash * 59 + this.Msg.GetHashCode();
-                
+
                 if (this.SourceAlias != null)
                     hash = hash * 59 + this.SourceAlias.GetHashCode();
-                
+
                 if (this.DestinationAlias != null)
                     hash = hash * 59 + this.DestinationAlias.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.ParticipantId != null)
                     hash = hash * 59 + this.ParticipantId.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

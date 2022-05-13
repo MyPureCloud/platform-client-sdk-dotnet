@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuthzGrantPolicy :  IEquatable<AuthzGrantPolicy>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthzGrantPolicy" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Actions
         /// </summary>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public List<string> Actions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Condition
         /// </summary>
         [DataMember(Name="condition", EmitDefaultValue=false)]
         public string Condition { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EntityName
         /// </summary>
         [DataMember(Name="entityName", EmitDefaultValue=false)]
         public string EntityName { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuthzGrantPolicy {\n");
-            
+
             sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("  Condition: ").Append(Condition).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
+
                 if (this.Condition != null)
                     hash = hash * 59 + this.Condition.GetHashCode();
-                
+
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
+
                 if (this.EntityName != null)
                     hash = hash * 59 + this.EntityName.GetHashCode();
-                
+
                 return hash;
             }
         }

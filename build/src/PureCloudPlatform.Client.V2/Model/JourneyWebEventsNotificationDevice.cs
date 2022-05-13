@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyWebEventsNotificationDevice :  IEquatable<JourneyWebEventsNotificationDevice>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
@@ -79,33 +56,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "other")]
             Other
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyWebEventsNotificationDevice" /> class.
         /// </summary>
@@ -130,65 +85,65 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IsMobile
         /// </summary>
         [DataMember(Name="isMobile", EmitDefaultValue=false)]
         public bool? IsMobile { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ScreenHeight
         /// </summary>
         [DataMember(Name="screenHeight", EmitDefaultValue=false)]
         public int? ScreenHeight { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ScreenWidth
         /// </summary>
         [DataMember(Name="screenWidth", EmitDefaultValue=false)]
         public int? ScreenWidth { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Fingerprint
         /// </summary>
         [DataMember(Name="fingerprint", EmitDefaultValue=false)]
         public string Fingerprint { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OsFamily
         /// </summary>
         [DataMember(Name="osFamily", EmitDefaultValue=false)]
         public string OsFamily { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OsVersion
         /// </summary>
         [DataMember(Name="osVersion", EmitDefaultValue=false)]
         public string OsVersion { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -197,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyWebEventsNotificationDevice {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  IsMobile: ").Append(IsMobile).Append("\n");
             sb.Append("  ScreenHeight: ").Append(ScreenHeight).Append("\n");
@@ -299,31 +254,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.IsMobile != null)
                     hash = hash * 59 + this.IsMobile.GetHashCode();
-                
+
                 if (this.ScreenHeight != null)
                     hash = hash * 59 + this.ScreenHeight.GetHashCode();
-                
+
                 if (this.ScreenWidth != null)
                     hash = hash * 59 + this.ScreenWidth.GetHashCode();
-                
+
                 if (this.Fingerprint != null)
                     hash = hash * 59 + this.Fingerprint.GetHashCode();
-                
+
                 if (this.OsFamily != null)
                     hash = hash * 59 + this.OsFamily.GetHashCode();
-                
+
                 if (this.OsVersion != null)
                     hash = hash * 59 + this.OsVersion.GetHashCode();
-                
+
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
-                
+
                 return hash;
             }
         }

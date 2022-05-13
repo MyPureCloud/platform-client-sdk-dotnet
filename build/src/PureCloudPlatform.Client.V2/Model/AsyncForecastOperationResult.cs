@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AsyncForecastOperationResult :  IEquatable<AsyncForecastOperationResult>
     {
-        
-        
         /// <summary>
         /// The status of the operation
         /// </summary>
@@ -59,35 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the operation
         /// </summary>
         /// <value>The status of the operation</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AsyncForecastOperationResult" /> class.
         /// </summary>
@@ -104,36 +79,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The ID for the operation
         /// </summary>
         /// <value>The ID for the operation</value>
         [DataMember(Name="operationId", EmitDefaultValue=false)]
         public string OperationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The result of the operation.  Null unless status == Complete
         /// </summary>
         /// <value>The result of the operation.  Null unless status == Complete</value>
         [DataMember(Name="result", EmitDefaultValue=false)]
         public BuShortTermForecast Result { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percent progress for the operation
         /// </summary>
         /// <value>Percent progress for the operation</value>
         [DataMember(Name="progress", EmitDefaultValue=false)]
         public int? Progress { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -142,7 +117,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AsyncForecastOperationResult {\n");
-            
+
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  OperationId: ").Append(OperationId).Append("\n");
             sb.Append("  Result: ").Append(Result).Append("\n");
@@ -220,19 +195,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.OperationId != null)
                     hash = hash * 59 + this.OperationId.GetHashCode();
-                
+
                 if (this.Result != null)
                     hash = hash * 59 + this.Result.GetHashCode();
-                
+
                 if (this.Progress != null)
                     hash = hash * 59 + this.Progress.GetHashCode();
-                
+
                 return hash;
             }
         }

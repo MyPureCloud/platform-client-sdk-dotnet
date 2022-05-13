@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Transcripts :  IEquatable<Transcripts>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Transcripts" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// List of transcript contents which needs to satisfy exact match criteria
         /// </summary>
         /// <value>List of transcript contents which needs to satisfy exact match criteria</value>
         [DataMember(Name="exactMatch", EmitDefaultValue=false)]
         public List<string> ExactMatch { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of transcript contents which needs to satisfy contains criteria
         /// </summary>
         /// <value>List of transcript contents which needs to satisfy contains criteria</value>
         [DataMember(Name="contains", EmitDefaultValue=false)]
         public List<string> Contains { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of transcript contents which needs to satisfy does not contain criteria
         /// </summary>
         /// <value>List of transcript contents which needs to satisfy does not contain criteria</value>
         [DataMember(Name="doesNotContain", EmitDefaultValue=false)]
         public List<string> DoesNotContain { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Transcripts {\n");
-            
+
             sb.Append("  ExactMatch: ").Append(ExactMatch).Append("\n");
             sb.Append("  Contains: ").Append(Contains).Append("\n");
             sb.Append("  DoesNotContain: ").Append(DoesNotContain).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ExactMatch != null)
                     hash = hash * 59 + this.ExactMatch.GetHashCode();
-                
+
                 if (this.Contains != null)
                     hash = hash * 59 + this.Contains.GetHashCode();
-                
+
                 if (this.DoesNotContain != null)
                     hash = hash * 59 + this.DoesNotContain.GetHashCode();
-                
+
                 return hash;
             }
         }

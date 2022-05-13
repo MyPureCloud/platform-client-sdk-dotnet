@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserScheduleActivity :  IEquatable<UserScheduleActivity>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleActivity" /> class.
         /// </summary>
@@ -78,70 +40,70 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The id for the activity code.  Look up a map of activity codes with the activities route
         /// </summary>
         /// <value>The id for the activity code.  Look up a map of activity codes with the activities route</value>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Start time in UTC for this activity, in ISO-8601 format
         /// </summary>
         /// <value>Start time in UTC for this activity, in ISO-8601 format</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Length in minutes for this activity
         /// </summary>
         /// <value>Length in minutes for this activity</value>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Description for this activity
         /// </summary>
         /// <value>Description for this activity</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this activity is paid
         /// </summary>
         /// <value>Whether this activity is paid</value>
         [DataMember(Name="countsAsPaidTime", EmitDefaultValue=false)]
         public bool? CountsAsPaidTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this activity spans a DST fallback
         /// </summary>
         /// <value>Whether this activity spans a DST fallback</value>
         [DataMember(Name="isDstFallback", EmitDefaultValue=false)]
         public bool? IsDstFallback { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Time off request id of this activity
         /// </summary>
         /// <value>Time off request id of this activity</value>
         [DataMember(Name="timeOffRequestId", EmitDefaultValue=false)]
         public string TimeOffRequestId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -150,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserScheduleActivity {\n");
-            
+
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
@@ -246,28 +208,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ActivityCodeId != null)
                     hash = hash * 59 + this.ActivityCodeId.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.CountsAsPaidTime != null)
                     hash = hash * 59 + this.CountsAsPaidTime.GetHashCode();
-                
+
                 if (this.IsDstFallback != null)
                     hash = hash * 59 + this.IsDstFallback.GetHashCode();
-                
+
                 if (this.TimeOffRequestId != null)
                     hash = hash * 59 + this.TimeOffRequestId.GetHashCode();
-                
+
                 return hash;
             }
         }

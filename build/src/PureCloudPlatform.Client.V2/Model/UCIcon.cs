@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UCIcon :  IEquatable<UCIcon>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UCIcon" /> class.
         /// </summary>
@@ -34,16 +26,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// vector
         /// </summary>
         /// <value>vector</value>
         [DataMember(Name="vector", EmitDefaultValue=false)]
         public string Vector { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UCIcon {\n");
-            
+
             sb.Append("  Vector: ").Append(Vector).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -112,10 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Vector != null)
                     hash = hash * 59 + this.Vector.GetHashCode();
-                
+
                 return hash;
             }
         }

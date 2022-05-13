@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SentimentFeedback :  IEquatable<SentimentFeedback>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The sentiment feedback value for the given phrase
         /// </summary>
@@ -62,42 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Negative")]
             Negative
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The sentiment feedback value for the given phrase
         /// </summary>
         /// <value>The sentiment feedback value for the given phrase</value>
         [DataMember(Name="feedbackValue", EmitDefaultValue=false)]
         public FeedbackValueEnum? FeedbackValue { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SentimentFeedback" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SentimentFeedback() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SentimentFeedback" /> class.
         /// </summary>
@@ -112,54 +77,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The phrase for which sentiment feedback is provided
         /// </summary>
         /// <value>The phrase for which sentiment feedback is provided</value>
         [DataMember(Name="phrase", EmitDefaultValue=false)]
         public string Phrase { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The dialect for the given phrase, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
         /// </summary>
         /// <value>The dialect for the given phrase, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard</value>
         [DataMember(Name="dialect", EmitDefaultValue=false)]
         public string Dialect { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The Timestamp when sentiment feedback created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The Timestamp when sentiment feedback created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Id of user who created the sentiment feedback
         /// </summary>
         /// <value>The Id of user who created the sentiment feedback</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public AddressableEntityRef CreatedBy { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -168,7 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SentimentFeedback {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Phrase: ").Append(Phrase).Append("\n");
             sb.Append("  Dialect: ").Append(Dialect).Append("\n");
@@ -258,25 +223,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Phrase != null)
                     hash = hash * 59 + this.Phrase.GetHashCode();
-                
+
                 if (this.Dialect != null)
                     hash = hash * 59 + this.Dialect.GetHashCode();
-                
+
                 if (this.FeedbackValue != null)
                     hash = hash * 59 + this.FeedbackValue.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 return hash;
             }
         }

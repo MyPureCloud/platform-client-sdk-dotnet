@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GamificationStatus :  IEquatable<GamificationStatus>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GamificationStatus" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gamification status of the organization.
         /// </summary>
         /// <value>Gamification status of the organization.</value>
         [DataMember(Name="isActive", EmitDefaultValue=false)]
         public bool? IsActive { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gamification start date. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Gamification start date. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateStart", EmitDefaultValue=false)]
         public String DateStart { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Automatic assignment of users to the default profile
         /// </summary>
         /// <value>Automatic assignment of users to the default profile</value>
         [DataMember(Name="automaticUserAssignment", EmitDefaultValue=false)]
         public bool? AutomaticUserAssignment { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Personal best aggregation starting date. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Personal best aggregation starting date. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateStartPersonalBest", EmitDefaultValue=false)]
         public String DateStartPersonalBest { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GamificationStatus {\n");
-            
+
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
             sb.Append("  AutomaticUserAssignment: ").Append(AutomaticUserAssignment).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.IsActive != null)
                     hash = hash * 59 + this.IsActive.GetHashCode();
-                
+
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();
-                
+
                 if (this.AutomaticUserAssignment != null)
                     hash = hash * 59 + this.AutomaticUserAssignment.GetHashCode();
-                
+
                 if (this.DateStartPersonalBest != null)
                     hash = hash * 59 + this.DateStartPersonalBest.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueryWaitlistPositionsRequest :  IEquatable<QueryWaitlistPositionsRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryWaitlistPositionsRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected QueryWaitlistPositionsRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryWaitlistPositionsRequest" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of the time off request ids for which to fetch the daily waitlist positions
         /// </summary>
         /// <value>The list of the time off request ids for which to fetch the daily waitlist positions</value>
         [DataMember(Name="timeOffRequests", EmitDefaultValue=false)]
         public List<UserTimeOffRequestReference> TimeOffRequests { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueryWaitlistPositionsRequest {\n");
-            
+
             sb.Append("  TimeOffRequests: ").Append(TimeOffRequests).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeOffRequests != null)
                     hash = hash * 59 + this.TimeOffRequests.GetHashCode();
-                
+
                 return hash;
             }
         }

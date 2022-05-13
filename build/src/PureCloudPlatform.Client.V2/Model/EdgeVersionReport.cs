@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeVersionReport :  IEquatable<EdgeVersionReport>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeVersionReport" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets OldestVersion
         /// </summary>
         [DataMember(Name="oldestVersion", EmitDefaultValue=false)]
         public EdgeVersionInformation OldestVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NewestVersion
         /// </summary>
         [DataMember(Name="newestVersion", EmitDefaultValue=false)]
         public EdgeVersionInformation NewestVersion { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeVersionReport {\n");
-            
+
             sb.Append("  OldestVersion: ").Append(OldestVersion).Append("\n");
             sb.Append("  NewestVersion: ").Append(NewestVersion).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OldestVersion != null)
                     hash = hash * 59 + this.OldestVersion.GetHashCode();
-                
+
                 if (this.NewestVersion != null)
                     hash = hash * 59 + this.NewestVersion.GetHashCode();
-                
+
                 return hash;
             }
         }

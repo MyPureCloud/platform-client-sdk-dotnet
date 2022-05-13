@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuAbandonRate :  IEquatable<BuAbandonRate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAbandonRate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BuAbandonRate() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAbandonRate" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether to include abandon rate in the associated configuration
         /// </summary>
         /// <value>Whether to include abandon rate in the associated configuration</value>
         [DataMember(Name="include", EmitDefaultValue=false)]
         public bool? Include { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Abandon rate percent goal. Required if include == true
         /// </summary>
         /// <value>Abandon rate percent goal. Required if include == true</value>
         [DataMember(Name="percent", EmitDefaultValue=false)]
         public int? Percent { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuAbandonRate {\n");
-            
+
             sb.Append("  Include: ").Append(Include).Append("\n");
             sb.Append("  Percent: ").Append(Percent).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Include != null)
                     hash = hash * 59 + this.Include.GetHashCode();
-                
+
                 if (this.Percent != null)
                     hash = hash * 59 + this.Percent.GetHashCode();
-                
+
                 return hash;
             }
         }

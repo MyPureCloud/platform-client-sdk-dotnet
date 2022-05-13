@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmHistoricalAdherenceResponse :  IEquatable<WfmHistoricalAdherenceResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The state of the adherence query
         /// </summary>
@@ -65,28 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The state of the adherence query
         /// </summary>
         /// <value>The state of the adherence query</value>
         [DataMember(Name="queryState", EmitDefaultValue=false)]
         public QueryStateEnum? QueryState { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmHistoricalAdherenceResponse" /> class.
         /// </summary>
@@ -105,45 +75,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The query ID to listen for
         /// </summary>
         /// <value>The query ID to listen for</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Deprecated. Use downloadUrls instead.
         /// </summary>
         /// <value>Deprecated. Use downloadUrls instead.</value>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Result will always come via downloadUrls; however the schema is included for documentation
         /// </summary>
         /// <value>Result will always come via downloadUrls; however the schema is included for documentation</value>
         [DataMember(Name="downloadResult", EmitDefaultValue=false)]
         public WfmHistoricalAdherenceResultWrapper DownloadResult { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The uri list to GET the results of the Historical Adherence query. For notification purposes only
         /// </summary>
         /// <value>The uri list to GET the results of the Historical Adherence query. For notification purposes only</value>
         [DataMember(Name="downloadUrls", EmitDefaultValue=false)]
         public List<string> DownloadUrls { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmHistoricalAdherenceResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
             sb.Append("  DownloadResult: ").Append(DownloadResult).Append("\n");
@@ -236,22 +206,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
-                
+
                 if (this.DownloadResult != null)
                     hash = hash * 59 + this.DownloadResult.GetHashCode();
-                
+
                 if (this.DownloadUrls != null)
                     hash = hash * 59 + this.DownloadUrls.GetHashCode();
-                
+
                 if (this.QueryState != null)
                     hash = hash * 59 + this.QueryState.GetHashCode();
-                
+
                 return hash;
             }
         }

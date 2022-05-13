@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RecordingJob :  IEquatable<RecordingJob>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The current state of the job.
         /// </summary>
@@ -74,88 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILED")]
             Failed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current state of the job.
         /// </summary>
         /// <value>The current state of the job.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingJob" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected RecordingJob() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingJob" /> class.
         /// </summary>
@@ -166,126 +91,126 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Original query of the job.
         /// </summary>
         /// <value>Original query of the job.</value>
         [DataMember(Name="recordingJobsQuery", EmitDefaultValue=false)]
         public RecordingJobsQuery RecordingJobsQuery { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date when the job was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date when the job was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total number of conversations affected.
         /// </summary>
         /// <value>Total number of conversations affected.</value>
         [DataMember(Name="totalConversations", EmitDefaultValue=false)]
         public int? TotalConversations { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total number of recordings affected.
         /// </summary>
         /// <value>Total number of recordings affected.</value>
         [DataMember(Name="totalRecordings", EmitDefaultValue=false)]
         public int? TotalRecordings { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total number of recordings that have been skipped.
         /// </summary>
         /// <value>Total number of recordings that have been skipped.</value>
         [DataMember(Name="totalSkippedRecordings", EmitDefaultValue=false)]
         public int? TotalSkippedRecordings { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total number of recordings that the bulk job failed to process.
         /// </summary>
         /// <value>Total number of recordings that the bulk job failed to process.</value>
         [DataMember(Name="totalFailedRecordings", EmitDefaultValue=false)]
         public int? TotalFailedRecordings { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total number of recordings have been processed.
         /// </summary>
         /// <value>Total number of recordings have been processed.</value>
         [DataMember(Name="totalProcessedRecordings", EmitDefaultValue=false)]
         public int? TotalProcessedRecordings { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Progress in percentage based on the number of recordings
         /// </summary>
         /// <value>Progress in percentage based on the number of recordings</value>
         [DataMember(Name="percentProgress", EmitDefaultValue=false)]
         public int? PercentProgress { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Error occurred during the job execution
         /// </summary>
         /// <value>Error occurred during the job execution</value>
         [DataMember(Name="errorMessage", EmitDefaultValue=false)]
         public string ErrorMessage { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Get IDs of recordings that the bulk job failed for
         /// </summary>
         /// <value>Get IDs of recordings that the bulk job failed for</value>
         [DataMember(Name="failedRecordings", EmitDefaultValue=false)]
         public string FailedRecordings { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Details of the user created the job
         /// </summary>
         /// <value>Details of the user created the job</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public AddressableEntityRef User { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -294,7 +219,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RecordingJob {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  RecordingJobsQuery: ").Append(RecordingJobsQuery).Append("\n");
@@ -432,49 +357,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.RecordingJobsQuery != null)
                     hash = hash * 59 + this.RecordingJobsQuery.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.TotalConversations != null)
                     hash = hash * 59 + this.TotalConversations.GetHashCode();
-                
+
                 if (this.TotalRecordings != null)
                     hash = hash * 59 + this.TotalRecordings.GetHashCode();
-                
+
                 if (this.TotalSkippedRecordings != null)
                     hash = hash * 59 + this.TotalSkippedRecordings.GetHashCode();
-                
+
                 if (this.TotalFailedRecordings != null)
                     hash = hash * 59 + this.TotalFailedRecordings.GetHashCode();
-                
+
                 if (this.TotalProcessedRecordings != null)
                     hash = hash * 59 + this.TotalProcessedRecordings.GetHashCode();
-                
+
                 if (this.PercentProgress != null)
                     hash = hash * 59 + this.PercentProgress.GetHashCode();
-                
+
                 if (this.ErrorMessage != null)
                     hash = hash * 59 + this.ErrorMessage.GetHashCode();
-                
+
                 if (this.FailedRecordings != null)
                     hash = hash * 59 + this.FailedRecordings.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 return hash;
             }
         }

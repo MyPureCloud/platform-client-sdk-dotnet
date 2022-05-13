@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportingTurnKnowledge :  IEquatable<ReportingTurnKnowledge>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingTurnKnowledge" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The Knowledge Base ID that the captured knowledge data relates to.
         /// </summary>
         /// <value>The Knowledge Base ID that the captured knowledge data relates to.</value>
         [DataMember(Name="knowledgeBaseId", EmitDefaultValue=false)]
         public string KnowledgeBaseId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The knowledge feedback data that was captured during this reporting turn.
         /// </summary>
         /// <value>The knowledge feedback data that was captured during this reporting turn.</value>
         [DataMember(Name="feedback", EmitDefaultValue=false)]
         public ReportingTurnKnowledgeFeedback Feedback { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The knowledge search data that was captured during this reporting turn.
         /// </summary>
         /// <value>The knowledge search data that was captured during this reporting turn.</value>
         [DataMember(Name="search", EmitDefaultValue=false)]
         public ReportingTurnKnowledgeSearch Search { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportingTurnKnowledge {\n");
-            
+
             sb.Append("  KnowledgeBaseId: ").Append(KnowledgeBaseId).Append("\n");
             sb.Append("  Feedback: ").Append(Feedback).Append("\n");
             sb.Append("  Search: ").Append(Search).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.KnowledgeBaseId != null)
                     hash = hash * 59 + this.KnowledgeBaseId.GetHashCode();
-                
+
                 if (this.Feedback != null)
                     hash = hash * 59 + this.Feedback.GetHashCode();
-                
+
                 if (this.Search != null)
                     hash = hash * 59 + this.Search.GetHashCode();
-                
+
                 return hash;
             }
         }

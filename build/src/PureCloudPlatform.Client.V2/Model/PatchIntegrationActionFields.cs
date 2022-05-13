@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchIntegrationActionFields :  IEquatable<PatchIntegrationActionFields>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchIntegrationActionFields" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Reference to the Integration Action to be used when integrationAction type is qualified
         /// </summary>
         /// <value>Reference to the Integration Action to be used when integrationAction type is qualified</value>
         [DataMember(Name="integrationAction", EmitDefaultValue=false)]
         public PatchIntegrationAction IntegrationAction { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Collection of Request Mappings to use
         /// </summary>
         /// <value>Collection of Request Mappings to use</value>
         [DataMember(Name="requestMappings", EmitDefaultValue=false)]
         public List<RequestMapping> RequestMappings { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PatchIntegrationActionFields {\n");
-            
+
             sb.Append("  IntegrationAction: ").Append(IntegrationAction).Append("\n");
             sb.Append("  RequestMappings: ").Append(RequestMappings).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.IntegrationAction != null)
                     hash = hash * 59 + this.IntegrationAction.GetHashCode();
-                
+
                 if (this.RequestMappings != null)
                     hash = hash * 59 + this.RequestMappings.GetHashCode();
-                
+
                 return hash;
             }
         }

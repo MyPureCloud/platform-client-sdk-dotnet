@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TestExecutionResult :  IEquatable<TestExecutionResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TestExecutionResult" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Execution operations performed as part of the test
         /// </summary>
         /// <value>Execution operations performed as part of the test</value>
         [DataMember(Name="operations", EmitDefaultValue=false)]
         public List<TestExecutionOperationResult> Operations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The final error encountered during the test that resulted in test failure
         /// </summary>
         /// <value>The final error encountered during the test that resulted in test failure</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public ErrorBody Error { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The final result of the test. This is the response that would be returned during normal action execution
         /// </summary>
         /// <value>The final result of the test. This is the response that would be returned during normal action execution</value>
         [DataMember(Name="finalResult", EmitDefaultValue=false)]
         public Object FinalResult { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether or not the test was a success
         /// </summary>
         /// <value>Indicates whether or not the test was a success</value>
         [DataMember(Name="success", EmitDefaultValue=false)]
         public bool? Success { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TestExecutionResult {\n");
-            
+
             sb.Append("  Operations: ").Append(Operations).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  FinalResult: ").Append(FinalResult).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Operations != null)
                     hash = hash * 59 + this.Operations.GetHashCode();
-                
+
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();
-                
+
                 if (this.FinalResult != null)
                     hash = hash * 59 + this.FinalResult.GetHashCode();
-                
+
                 if (this.Success != null)
                     hash = hash * 59 + this.Success.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GroupContact :  IEquatable<GroupContact>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Contact type of the address
         /// </summary>
@@ -56,10 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "GROUPPHONE")]
             Groupphone
         }
-        
-        
-        
-        
         /// <summary>
         /// Media type of the address
         /// </summary>
@@ -81,41 +66,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PHONE")]
             Phone
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Contact type of the address
         /// </summary>
         /// <value>Contact type of the address</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
         /// <summary>
         /// Media type of the address
         /// </summary>
         /// <value>Media type of the address</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupContact" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected GroupContact() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupContact" /> class.
         /// </summary>
@@ -132,38 +100,38 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Phone number for this contact type
         /// </summary>
         /// <value>Phone number for this contact type</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Extension is set if the number is e164 valid
         /// </summary>
         /// <value>Extension is set if the number is e164 valid</value>
         [DataMember(Name="extension", EmitDefaultValue=false)]
         public string Extension { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Formatted version of the address property
         /// </summary>
         /// <value>Formatted version of the address property</value>
         [DataMember(Name="display", EmitDefaultValue=false)]
         public string Display { get; private set; }
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -172,7 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GroupContact {\n");
-            
+
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Extension: ").Append(Extension).Append("\n");
             sb.Append("  Display: ").Append(Display).Append("\n");
@@ -256,22 +224,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
+
                 if (this.Extension != null)
                     hash = hash * 59 + this.Extension.GetHashCode();
-                
+
                 if (this.Display != null)
                     hash = hash * 59 + this.Display.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,79 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class VoicemailMessagesTopicVoicemailMessage :  IEquatable<VoicemailMessagesTopicVoicemailMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMessagesTopicVoicemailMessage" /> class.
         /// </summary>
@@ -127,119 +54,119 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Read
         /// </summary>
         [DataMember(Name="read", EmitDefaultValue=false)]
         public bool? Read { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AudioRecordingDurationSeconds
         /// </summary>
         [DataMember(Name="audioRecordingDurationSeconds", EmitDefaultValue=false)]
         public int? AudioRecordingDurationSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AudioRecordingSizeBytes
         /// </summary>
         [DataMember(Name="audioRecordingSizeBytes", EmitDefaultValue=false)]
         public int? AudioRecordingSizeBytes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CreatedDate
         /// </summary>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ModifiedDate
         /// </summary>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CallerAddress
         /// </summary>
         [DataMember(Name="callerAddress", EmitDefaultValue=false)]
         public string CallerAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CallerName
         /// </summary>
         [DataMember(Name="callerName", EmitDefaultValue=false)]
         public string CallerName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public string Action { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Note
         /// </summary>
         [DataMember(Name="note", EmitDefaultValue=false)]
         public string Note { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Deleted
         /// </summary>
         [DataMember(Name="deleted", EmitDefaultValue=false)]
         public bool? Deleted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ModifiedByUserId
         /// </summary>
         [DataMember(Name="modifiedByUserId", EmitDefaultValue=false)]
         public string ModifiedByUserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CopiedTo
         /// </summary>
         [DataMember(Name="copiedTo", EmitDefaultValue=false)]
         public List<VoicemailMessagesTopicVoicemailCopyRecord> CopiedTo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CopiedFrom
         /// </summary>
         [DataMember(Name="copiedFrom", EmitDefaultValue=false)]
         public VoicemailMessagesTopicVoicemailCopyRecord CopiedFrom { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -248,7 +175,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VoicemailMessagesTopicVoicemailMessage {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Read: ").Append(Read).Append("\n");
             sb.Append("  AudioRecordingDurationSeconds: ").Append(AudioRecordingDurationSeconds).Append("\n");
@@ -386,49 +313,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Read != null)
                     hash = hash * 59 + this.Read.GetHashCode();
-                
+
                 if (this.AudioRecordingDurationSeconds != null)
                     hash = hash * 59 + this.AudioRecordingDurationSeconds.GetHashCode();
-                
+
                 if (this.AudioRecordingSizeBytes != null)
                     hash = hash * 59 + this.AudioRecordingSizeBytes.GetHashCode();
-                
+
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
+
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
+
                 if (this.CallerAddress != null)
                     hash = hash * 59 + this.CallerAddress.GetHashCode();
-                
+
                 if (this.CallerName != null)
                     hash = hash * 59 + this.CallerName.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.Note != null)
                     hash = hash * 59 + this.Note.GetHashCode();
-                
+
                 if (this.Deleted != null)
                     hash = hash * 59 + this.Deleted.GetHashCode();
-                
+
                 if (this.ModifiedByUserId != null)
                     hash = hash * 59 + this.ModifiedByUserId.GetHashCode();
-                
+
                 if (this.CopiedTo != null)
                     hash = hash * 59 + this.CopiedTo.GetHashCode();
-                
+
                 if (this.CopiedFrom != null)
                     hash = hash * 59 + this.CopiedFrom.GetHashCode();
-                
+
                 return hash;
             }
         }

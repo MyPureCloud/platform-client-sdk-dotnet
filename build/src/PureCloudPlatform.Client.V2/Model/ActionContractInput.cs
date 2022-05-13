@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActionContractInput :  IEquatable<ActionContractInput>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionContractInput" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ActionContractInput() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionContractInput" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Execution input contract
         /// </summary>
         /// <value>Execution input contract</value>
         [DataMember(Name="input", EmitDefaultValue=false)]
         public PostInputContract Input { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Execution output contract
         /// </summary>
         /// <value>Execution output contract</value>
         [DataMember(Name="output", EmitDefaultValue=false)]
         public PostOutputContract Output { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActionContractInput {\n");
-            
+
             sb.Append("  Input: ").Append(Input).Append("\n");
             sb.Append("  Output: ").Append(Output).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Input != null)
                     hash = hash * 59 + this.Input.GetHashCode();
-                
+
                 if (this.Output != null)
                     hash = hash * 59 + this.Output.GetHashCode();
-                
+
                 return hash;
             }
         }

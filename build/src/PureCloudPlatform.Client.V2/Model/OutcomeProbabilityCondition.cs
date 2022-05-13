@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OutcomeProbabilityCondition :  IEquatable<OutcomeProbabilityCondition>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OutcomeProbabilityCondition" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected OutcomeProbabilityCondition() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OutcomeProbabilityCondition" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The outcome ID.
         /// </summary>
         /// <value>The outcome ID.</value>
         [DataMember(Name="outcomeId", EmitDefaultValue=false)]
         public string OutcomeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Probability value for the selected outcome at or above which the action map will trigger.
         /// </summary>
         /// <value>Probability value for the selected outcome at or above which the action map will trigger.</value>
         [DataMember(Name="maximumProbability", EmitDefaultValue=false)]
         public float? MaximumProbability { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Additional probability condition, where if set, the action map will trigger if the current outcome probability is lower or equal to the value.
         /// </summary>
         /// <value>Additional probability condition, where if set, the action map will trigger if the current outcome probability is lower or equal to the value.</value>
         [DataMember(Name="probability", EmitDefaultValue=false)]
         public float? Probability { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OutcomeProbabilityCondition {\n");
-            
+
             sb.Append("  OutcomeId: ").Append(OutcomeId).Append("\n");
             sb.Append("  MaximumProbability: ").Append(MaximumProbability).Append("\n");
             sb.Append("  Probability: ").Append(Probability).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OutcomeId != null)
                     hash = hash * 59 + this.OutcomeId.GetHashCode();
-                
+
                 if (this.MaximumProbability != null)
                     hash = hash * 59 + this.MaximumProbability.GetHashCode();
-                
+
                 if (this.Probability != null)
                     hash = hash * 59 + this.Probability.GetHashCode();
-                
+
                 return hash;
             }
         }

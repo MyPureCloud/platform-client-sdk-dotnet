@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KpiResult :  IEquatable<KpiResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Media type used for the KPI
         /// </summary>
@@ -65,28 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "message")]
             Message
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Media type used for the KPI
         /// </summary>
         /// <value>Media type used for the KPI</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
-        public MediaTypeEnum? MediaType { get; set; }
-        
-        
-    
+        public MediaTypeEnum? MediaType { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="KpiResult" /> class.
         /// </summary>
@@ -95,45 +65,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Absolute metric (in which the KPI is based) total for the interactions handled by predictive routing (GPR was on)
         /// </summary>
         /// <value>Absolute metric (in which the KPI is based) total for the interactions handled by predictive routing (GPR was on)</value>
         [DataMember(Name="kpiTotalOn", EmitDefaultValue=false)]
         public long? KpiTotalOn { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Absolute metric (in which the KPI is based) total for the interactions not routed by predictive routing (GPR was off)
         /// </summary>
         /// <value>Absolute metric (in which the KPI is based) total for the interactions not routed by predictive routing (GPR was off)</value>
         [DataMember(Name="kpiTotalOff", EmitDefaultValue=false)]
         public long? KpiTotalOff { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total interactions handled by predictive routing (GPR was on)
         /// </summary>
         /// <value>Total interactions handled by predictive routing (GPR was on)</value>
         [DataMember(Name="interactionCountOn", EmitDefaultValue=false)]
         public long? InteractionCountOn { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total interactions not routed by predictive routing (GPR was off)
         /// </summary>
         /// <value>Total interactions not routed by predictive routing (GPR was off)</value>
         [DataMember(Name="interactionCountOff", EmitDefaultValue=false)]
         public long? InteractionCountOff { get; private set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -142,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class KpiResult {\n");
-            
+
             sb.Append("  KpiTotalOn: ").Append(KpiTotalOn).Append("\n");
             sb.Append("  KpiTotalOff: ").Append(KpiTotalOff).Append("\n");
             sb.Append("  InteractionCountOn: ").Append(InteractionCountOn).Append("\n");
@@ -226,22 +196,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.KpiTotalOn != null)
                     hash = hash * 59 + this.KpiTotalOn.GetHashCode();
-                
+
                 if (this.KpiTotalOff != null)
                     hash = hash * 59 + this.KpiTotalOff.GetHashCode();
-                
+
                 if (this.InteractionCountOn != null)
                     hash = hash * 59 + this.InteractionCountOn.GetHashCode();
-                
+
                 if (this.InteractionCountOff != null)
                     hash = hash * 59 + this.InteractionCountOff.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmAgentScheduleUpdateTopicWfmScheduleShift :  IEquatable<WfmAgentScheduleUpdateTopicWfmScheduleShift>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmAgentScheduleUpdateTopicWfmScheduleShift" /> class.
         /// </summary>
@@ -71,55 +38,55 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets WeekDate
         /// </summary>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
         public string WeekDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets WeekScheduleId
         /// </summary>
         [DataMember(Name="weekScheduleId", EmitDefaultValue=false)]
         public string WeekScheduleId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LengthInMinutes
         /// </summary>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Activities
         /// </summary>
         [DataMember(Name="activities", EmitDefaultValue=false)]
         public List<WfmAgentScheduleUpdateTopicWfmScheduleActivity> Activities { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmAgentScheduleUpdateTopicWfmScheduleShift {\n");
-            
+
             sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("  WeekScheduleId: ").Append(WeekScheduleId).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -218,25 +185,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WeekDate != null)
                     hash = hash * 59 + this.WeekDate.GetHashCode();
-                
+
                 if (this.WeekScheduleId != null)
                     hash = hash * 59 + this.WeekScheduleId.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
-                
+
                 if (this.Activities != null)
                     hash = hash * 59 + this.Activities.GetHashCode();
-                
+
                 return hash;
             }
         }

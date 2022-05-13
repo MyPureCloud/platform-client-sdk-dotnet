@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IpAddressRange :  IEquatable<IpAddressRange>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Service
         /// </summary>
@@ -49,26 +44,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "smtp")]
             Smtp
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Service
         /// </summary>
         [DataMember(Name="service", EmitDefaultValue=false)]
         public ServiceEnum? Service { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="IpAddressRange" /> class.
         /// </summary>
@@ -83,25 +63,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Cidr
         /// </summary>
         [DataMember(Name="cidr", EmitDefaultValue=false)]
         public string Cidr { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Region
         /// </summary>
         [DataMember(Name="region", EmitDefaultValue=false)]
         public string Region { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IpAddressRange {\n");
-            
+
             sb.Append("  Cidr: ").Append(Cidr).Append("\n");
             sb.Append("  Service: ").Append(Service).Append("\n");
             sb.Append("  Region: ").Append(Region).Append("\n");
@@ -182,16 +162,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Cidr != null)
                     hash = hash * 59 + this.Cidr.GetHashCode();
-                
+
                 if (this.Service != null)
                     hash = hash * 59 + this.Service.GetHashCode();
-                
+
                 if (this.Region != null)
                     hash = hash * 59 + this.Region.GetHashCode();
-                
+
                 return hash;
             }
         }

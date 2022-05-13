@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterCustomMessage :  IEquatable<SupportCenterCustomMessage>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of the message
         /// </summary>
@@ -50,22 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Fallback")]
             Fallback
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of the message
         /// </summary>
         /// <value>Type of the message</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterCustomMessage" /> class.
         /// </summary>
@@ -78,18 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Default value for the message
         /// </summary>
         /// <value>Default value for the message</value>
         [DataMember(Name="defaultValue", EmitDefaultValue=false)]
         public string DefaultValue { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SupportCenterCustomMessage {\n");
-            
+
             sb.Append("  DefaultValue: ").Append(DefaultValue).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
@@ -164,13 +149,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DefaultValue != null)
                     hash = hash * 59 + this.DefaultValue.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 return hash;
             }
         }

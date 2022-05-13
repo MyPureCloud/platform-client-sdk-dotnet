@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScheduleGenerationResult :  IEquatable<ScheduleGenerationResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScheduleGenerationResult" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether the schedule generation run failed
         /// </summary>
         /// <value>Whether the schedule generation run failed</value>
         [DataMember(Name="failed", EmitDefaultValue=false)]
         public bool? Failed { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the schedule generation run. Reference this when requesting support
         /// </summary>
         /// <value>The ID of the schedule generation run. Reference this when requesting support</value>
         [DataMember(Name="runId", EmitDefaultValue=false)]
         public string RunId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of schedule generation messages for this schedule generation run
         /// </summary>
         /// <value>The number of schedule generation messages for this schedule generation run</value>
         [DataMember(Name="messageCount", EmitDefaultValue=false)]
         public int? MessageCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User facing messages related to the schedule generation run
         /// </summary>
         /// <value>User facing messages related to the schedule generation run</value>
         [DataMember(Name="messages", EmitDefaultValue=false)]
         public List<ScheduleGenerationMessage> Messages { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of messages by severity in this schedule generation run
         /// </summary>
         /// <value>The list of messages by severity in this schedule generation run</value>
         [DataMember(Name="messageSeverities", EmitDefaultValue=false)]
         public List<SchedulerMessageTypeSeverity> MessageSeverities { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScheduleGenerationResult {\n");
-            
+
             sb.Append("  Failed: ").Append(Failed).Append("\n");
             sb.Append("  RunId: ").Append(RunId).Append("\n");
             sb.Append("  MessageCount: ").Append(MessageCount).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Failed != null)
                     hash = hash * 59 + this.Failed.GetHashCode();
-                
+
                 if (this.RunId != null)
                     hash = hash * 59 + this.RunId.GetHashCode();
-                
+
                 if (this.MessageCount != null)
                     hash = hash * 59 + this.MessageCount.GetHashCode();
-                
+
                 if (this.Messages != null)
                     hash = hash * 59 + this.Messages.GetHashCode();
-                
+
                 if (this.MessageSeverities != null)
                     hash = hash * 59 + this.MessageSeverities.GetHashCode();
-                
+
                 return hash;
             }
         }

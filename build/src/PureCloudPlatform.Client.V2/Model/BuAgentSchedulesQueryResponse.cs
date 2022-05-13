@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuAgentSchedulesQueryResponse :  IEquatable<BuAgentSchedulesQueryResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAgentSchedulesQueryResponse" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The requested agent schedules
         /// </summary>
         /// <value>The requested agent schedules</value>
         [DataMember(Name="agentSchedules", EmitDefaultValue=false)]
         public List<BuAgentScheduleQueryResponse> AgentSchedules { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time zone configured for the business unit to which these schedules apply
         /// </summary>
         /// <value>The time zone configured for the business unit to which these schedules apply</value>
         [DataMember(Name="businessUnitTimeZone", EmitDefaultValue=false)]
         public string BusinessUnitTimeZone { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuAgentSchedulesQueryResponse {\n");
-            
+
             sb.Append("  AgentSchedules: ").Append(AgentSchedules).Append("\n");
             sb.Append("  BusinessUnitTimeZone: ").Append(BusinessUnitTimeZone).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AgentSchedules != null)
                     hash = hash * 59 + this.AgentSchedules.GetHashCode();
-                
+
                 if (this.BusinessUnitTimeZone != null)
                     hash = hash * 59 + this.BusinessUnitTimeZone.GetHashCode();
-                
+
                 return hash;
             }
         }

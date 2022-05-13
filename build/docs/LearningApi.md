@@ -103,6 +103,8 @@ Delete a learning module
 
 This will delete a learning module if it is unpublished or it will delete a published and archived learning module
 
+
+
 Requires ANY permissions: 
 
 * learning:module:delete
@@ -166,6 +168,8 @@ void (empty response body)
 Get Learning Assignment
 
 Permission not required if you are the assigned user of the learning assignment
+
+
 
 Requires ANY permissions: 
 
@@ -234,6 +238,8 @@ List of Learning module Assignments
 
 Either moduleId or user value is required
 
+
+
 Requires ANY permissions: 
 
 * learning:assignment:view
@@ -267,8 +273,8 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pass = pass_example;  // string | Specifies if only the failed (pass is \"False\") or passed (pass is \"True\") assignments (completed with assessment)are returned. If pass is \"Any\" or if the pass parameter is not supplied, all assignments are returned (optional)  (default to Any)
-            var minPercentageScore = 3.4;  // float? | The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
-            var maxPercentageScore = 3.4;  // float? | The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
+            var minPercentageScore = 3.4F;  // float? | The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
+            var maxPercentageScore = 3.4F;  // float? | The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
             var sortOrder = sortOrder_example;  // string | Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)
             var sortBy = sortBy_example;  // string | Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional) 
             var userId = new List<string>(); // List<string> | Specifies the list of user IDs to be queried, up to 100 user IDs. (optional) 
@@ -359,8 +365,8 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pass = pass_example;  // string | Specifies if only the failed (pass is \"False\") or passed (pass is \"True\") assignments (completed with assessment)are returned. If pass is \"Any\" or if the pass parameter is not supplied, all assignments are returned (optional)  (default to Any)
-            var minPercentageScore = 3.4;  // float? | The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
-            var maxPercentageScore = 3.4;  // float? | The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
+            var minPercentageScore = 3.4F;  // float? | The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
+            var maxPercentageScore = 3.4F;  // float? | The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
             var sortOrder = sortOrder_example;  // string | Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)
             var sortBy = sortBy_example;  // string | Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional) 
             var types = new List<string>(); // List<string> | Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional) 
@@ -1053,7 +1059,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LearningApi();
-            var body = ;  // List<string> | The IDs of the learning assignments to be removed (optional) 
+            var body = new List<string>(); // List<string> | The IDs of the learning assignments to be removed (optional) 
 
             try
             { 
@@ -1075,7 +1081,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | **List<string>**| The IDs of the learning assignments to be removed | [optional]  |
+| **body** | [**List<string>**](string.html)| The IDs of the learning assignments to be removed | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1157,6 +1163,8 @@ Create a new learning module
 
 This will create a new unpublished learning module with the specified fields.
 
+
+
 Requires ANY permissions: 
 
 * learning:module:add
@@ -1221,6 +1229,8 @@ namespace Example
 Get users for learning module rule
 
 This will get the users who matches the given rule.
+
+
 
 Requires ANY permissions: 
 
@@ -1291,6 +1301,8 @@ Update a learning module
 
 This will update the name, description, completion time in days and inform steps for a learning module
 
+
+
 Requires ANY permissions: 
 
 * learning:module:edit
@@ -1357,6 +1369,8 @@ namespace Example
 Update a learning module rule
 
 This will update a learning module rule with the specified fields.
+
+
 
 Requires ANY permissions: 
 

@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningAssignmentCreate :  IEquatable<LearningAssignmentCreate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignmentCreate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LearningAssignmentCreate() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignmentCreate" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The Learning module Id associated with this assignment
         /// </summary>
         /// <value>The Learning module Id associated with this assignment</value>
         [DataMember(Name="moduleId", EmitDefaultValue=false)]
         public string ModuleId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The User for whom the assignment is assigned
         /// </summary>
         /// <value>The User for whom the assignment is assigned</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The recommended completion date of assignment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The recommended completion date of assignment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="recommendedCompletionDate", EmitDefaultValue=false)]
         public DateTime? RecommendedCompletionDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningAssignmentCreate {\n");
-            
+
             sb.Append("  ModuleId: ").Append(ModuleId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  RecommendedCompletionDate: ").Append(RecommendedCompletionDate).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ModuleId != null)
                     hash = hash * 59 + this.ModuleId.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.RecommendedCompletionDate != null)
                     hash = hash * 59 + this.RecommendedCompletionDate.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -283,6 +283,8 @@ Get a page of users and their licenses
 
 Retrieve a page of users in an organization along with the licenses they possess.
 
+
+
 Requires NO permissions: 
 
 
@@ -374,7 +376,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LicenseApi();
-            var body = ;  // List<string> | The roleIds to use while inferring licenses (optional) 
+            var body = new List<string>(); // List<string> | The roleIds to use while inferring licenses (optional) 
 
             try
             { 
@@ -396,7 +398,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | **List<string>**| The roleIds to use while inferring licenses | [optional]  |
+| **body** | [**List<string>**](string.html)| The roleIds to use while inferring licenses | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -569,7 +571,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LicenseApi();
-            var body = ;  // List<string> | The user IDs to fetch. (optional) 
+            var body = new List<string>(); // List<string> | The user IDs to fetch. (optional) 
 
             try
             { 
@@ -591,7 +593,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | **List<string>**| The user IDs to fetch. | [optional]  |
+| **body** | [**List<string>**](string.html)| The user IDs to fetch. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

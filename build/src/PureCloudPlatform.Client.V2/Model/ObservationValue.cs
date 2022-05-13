@@ -18,32 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ObservationValue :  IEquatable<ObservationValue>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the communication
         /// </summary>
@@ -71,33 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets RequestedRoutings
         /// </summary>
@@ -154,10 +101,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Standard")]
             Standard
         }
-        
-        
-        
-        
         /// <summary>
         /// Complete routing method
         /// </summary>
@@ -215,72 +158,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Standard")]
             Standard
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the communication
         /// </summary>
         /// <value>The direction of the communication</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Complete routing method
         /// </summary>
         /// <value>Complete routing method</value>
         [DataMember(Name="usedRouting", EmitDefaultValue=false)]
         public UsedRoutingEnum? UsedRouting { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ObservationValue" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ObservationValue() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ObservationValue" /> class.
         /// </summary>
@@ -297,7 +192,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConvertedTo">Session media type that was converted to in case of a media type conversion.</param>
         /// <param name="AddressFrom">The address that initiated an action.</param>
         /// <param name="AddressTo">The address receiving an action.</param>
-        /// <param name="Ani">Automatic Number Identification (caller&#39;s number).</param>
+        /// <param name="Ani">Automatic Number Identification (caller's number).</param>
         /// <param name="Dnis">Dialed number identification service (number dialed by the calling party).</param>
         /// <param name="TeamId">The team id the user is a member of.</param>
         /// <param name="RequestedRoutings">All routing types for requested/attempted routing methods.</param>
@@ -327,163 +222,163 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The time at which the observation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time at which the observation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="observationDate", EmitDefaultValue=false)]
         public DateTime? ObservationDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for the conversation
         /// </summary>
         /// <value>Unique identifier for the conversation</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The unique identifier of this session
         /// </summary>
         /// <value>The unique identifier of this session</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for a skill requested for an interaction
         /// </summary>
         /// <value>Unique identifier for a skill requested for an interaction</value>
         [DataMember(Name="requestedRoutingSkillIds", EmitDefaultValue=false)]
         public List<string> RequestedRoutingSkillIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for the language requested for an interaction
         /// </summary>
         /// <value>Unique identifier for the language requested for an interaction</value>
         [DataMember(Name="requestedLanguageId", EmitDefaultValue=false)]
         public string RequestedLanguageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Routing priority for the current interaction
         /// </summary>
         /// <value>Routing priority for the current interaction</value>
         [DataMember(Name="routingPriority", EmitDefaultValue=false)]
         public long? RoutingPriority { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A human readable name identifying the participant
         /// </summary>
         /// <value>A human readable name identifying the participant</value>
         [DataMember(Name="participantName", EmitDefaultValue=false)]
         public string ParticipantName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for the user
         /// </summary>
         /// <value>Unique identifier for the user</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Session media type that was converted from in case of a media type conversion
         /// </summary>
         /// <value>Session media type that was converted from in case of a media type conversion</value>
         [DataMember(Name="convertedFrom", EmitDefaultValue=false)]
         public string ConvertedFrom { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Session media type that was converted to in case of a media type conversion
         /// </summary>
         /// <value>Session media type that was converted to in case of a media type conversion</value>
         [DataMember(Name="convertedTo", EmitDefaultValue=false)]
         public string ConvertedTo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The address that initiated an action
         /// </summary>
         /// <value>The address that initiated an action</value>
         [DataMember(Name="addressFrom", EmitDefaultValue=false)]
         public string AddressFrom { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The address receiving an action
         /// </summary>
         /// <value>The address receiving an action</value>
         [DataMember(Name="addressTo", EmitDefaultValue=false)]
         public string AddressTo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Automatic Number Identification (caller&#39;s number)
+        /// Automatic Number Identification (caller's number)
         /// </summary>
-        /// <value>Automatic Number Identification (caller&#39;s number)</value>
+        /// <value>Automatic Number Identification (caller's number)</value>
         [DataMember(Name="ani", EmitDefaultValue=false)]
         public string Ani { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Dialed number identification service (number dialed by the calling party)
         /// </summary>
         /// <value>Dialed number identification service (number dialed by the calling party)</value>
         [DataMember(Name="dnis", EmitDefaultValue=false)]
         public string Dnis { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The team id the user is a member of
         /// </summary>
         /// <value>The team id the user is a member of</value>
         [DataMember(Name="teamId", EmitDefaultValue=false)]
         public string TeamId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// All routing types for requested/attempted routing methods
         /// </summary>
         /// <value>All routing types for requested/attempted routing methods</value>
         [DataMember(Name="requestedRoutings", EmitDefaultValue=false)]
         public List<RequestedRoutingsEnum> RequestedRoutings { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets ScoredAgents
         /// </summary>
         [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
         public List<AnalyticsScoredAgent> ScoredAgents { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -492,7 +387,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ObservationValue {\n");
-            
+
             sb.Append("  ObservationDate: ").Append(ObservationDate).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
@@ -660,64 +555,63 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ObservationDate != null)
                     hash = hash * 59 + this.ObservationDate.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
-                
+
                 if (this.RequestedRoutingSkillIds != null)
                     hash = hash * 59 + this.RequestedRoutingSkillIds.GetHashCode();
-                
+
                 if (this.RequestedLanguageId != null)
                     hash = hash * 59 + this.RequestedLanguageId.GetHashCode();
-                
+
                 if (this.RoutingPriority != null)
                     hash = hash * 59 + this.RoutingPriority.GetHashCode();
-                
+
                 if (this.ParticipantName != null)
                     hash = hash * 59 + this.ParticipantName.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.ConvertedFrom != null)
                     hash = hash * 59 + this.ConvertedFrom.GetHashCode();
-                
+
                 if (this.ConvertedTo != null)
                     hash = hash * 59 + this.ConvertedTo.GetHashCode();
-                
+
                 if (this.AddressFrom != null)
                     hash = hash * 59 + this.AddressFrom.GetHashCode();
-                
+
                 if (this.AddressTo != null)
                     hash = hash * 59 + this.AddressTo.GetHashCode();
-                
+
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();
-                
+
                 if (this.Dnis != null)
                     hash = hash * 59 + this.Dnis.GetHashCode();
-                
+
                 if (this.TeamId != null)
                     hash = hash * 59 + this.TeamId.GetHashCode();
-                
+
                 if (this.RequestedRoutings != null)
                     hash = hash * 59 + this.RequestedRoutings.GetHashCode();
-                
+
                 if (this.UsedRouting != null)
                     hash = hash * 59 + this.UsedRouting.GetHashCode();
-                
+
                 if (this.ScoredAgents != null)
                     hash = hash * 59 + this.ScoredAgents.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RecordingSettings :  IEquatable<RecordingSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingSettings" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Maximum number of simultaneous screen recording streams
         /// </summary>
         /// <value>Maximum number of simultaneous screen recording streams</value>
         [DataMember(Name="maxSimultaneousStreams", EmitDefaultValue=false)]
         public int? MaxSimultaneousStreams { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Upper limit that maxSimultaneousStreams can be configured
         /// </summary>
         /// <value>Upper limit that maxSimultaneousStreams can be configured</value>
         [DataMember(Name="maxConfigurableScreenRecordingStreams", EmitDefaultValue=false)]
         public int? MaxConfigurableScreenRecordingStreams { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RecordingSettings {\n");
-            
+
             sb.Append("  MaxSimultaneousStreams: ").Append(MaxSimultaneousStreams).Append("\n");
             sb.Append("  MaxConfigurableScreenRecordingStreams: ").Append(MaxConfigurableScreenRecordingStreams).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MaxSimultaneousStreams != null)
                     hash = hash * 59 + this.MaxSimultaneousStreams.GetHashCode();
-                
+
                 if (this.MaxConfigurableScreenRecordingStreams != null)
                     hash = hash * 59 + this.MaxConfigurableScreenRecordingStreams.GetHashCode();
-                
+
                 return hash;
             }
         }

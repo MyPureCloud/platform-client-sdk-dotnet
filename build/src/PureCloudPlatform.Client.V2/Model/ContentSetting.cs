@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContentSetting :  IEquatable<ContentSetting>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentSetting" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Settings relating to facebook and instagram stories feature
         /// </summary>
         /// <value>Settings relating to facebook and instagram stories feature</value>
         [DataMember(Name="story", EmitDefaultValue=false)]
         public StorySetting Story { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContentSetting {\n");
-            
+
             sb.Append("  Story: ").Append(Story).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Story != null)
                     hash = hash * 59 + this.Story.GetHashCode();
-                
+
                 return hash;
             }
         }

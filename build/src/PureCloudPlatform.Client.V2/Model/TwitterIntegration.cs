@@ -18,35 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TwitterIntegration :  IEquatable<TwitterIntegration>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of twitter account to be used for the integration
         /// </summary>
@@ -74,31 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "enterprise")]
             Enterprise
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of asynchronous create operation
         /// </summary>
@@ -132,77 +78,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of twitter account to be used for the integration
         /// </summary>
         /// <value>The type of twitter account to be used for the integration</value>
         [DataMember(Name="tier", EmitDefaultValue=false)]
         public TierEnum? Tier { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of asynchronous create operation
         /// </summary>
         /// <value>Status of asynchronous create operation</value>
         [DataMember(Name="createStatus", EmitDefaultValue=false)]
-        public CreateStatusEnum? CreateStatus { get; set; }
-        
-        
-        
-        
-        
-        
-    
+        public CreateStatusEnum? CreateStatus { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TwitterIntegration" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TwitterIntegration() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TwitterIntegration" /> class.
         /// </summary>
@@ -241,172 +134,172 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A unique Integration Id
         /// </summary>
         /// <value>A unique Integration Id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the Twitter Integration
         /// </summary>
         /// <value>The name of the Twitter Integration</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Defines the SupportedContent profile configured for an integration
         /// </summary>
         /// <value>Defines the SupportedContent profile configured for an integration</value>
         [DataMember(Name="supportedContent", EmitDefaultValue=false)]
         public SupportedContentReference SupportedContent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessagingSetting
         /// </summary>
         [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
         public MessagingSettingReference MessagingSetting { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Access Token Key from Twitter messenger
         /// </summary>
         /// <value>The Access Token Key from Twitter messenger</value>
         [DataMember(Name="accessTokenKey", EmitDefaultValue=false)]
         public string AccessTokenKey { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Consumer Key from Twitter messenger
         /// </summary>
         /// <value>The Consumer Key from Twitter messenger</value>
         [DataMember(Name="consumerKey", EmitDefaultValue=false)]
         public string ConsumerKey { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Username from Twitter
         /// </summary>
         /// <value>The Username from Twitter</value>
         [DataMember(Name="username", EmitDefaultValue=false)]
         public string Username { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The UserId from Twitter
         /// </summary>
         /// <value>The UserId from Twitter</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The status of the Twitter Integration
         /// </summary>
         /// <value>The status of the Twitter Integration</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The Twitter environment name, e.g.: env-beta (required for premium tier)
         /// </summary>
         /// <value>The Twitter environment name, e.g.: env-beta (required for premium tier)</value>
         [DataMember(Name="envName", EmitDefaultValue=false)]
         public string EnvName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The recipient associated to the Twitter Integration. This recipient is used to associate a flow to an integration
         /// </summary>
         /// <value>The recipient associated to the Twitter Integration. This recipient is used to associate a flow to an integration</value>
         [DataMember(Name="recipient", EmitDefaultValue=false)]
         public DomainEntityRef Recipient { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User reference that created this Integration
         /// </summary>
         /// <value>User reference that created this Integration</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public DomainEntityRef CreatedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User reference that last modified this Integration
         /// </summary>
         /// <value>User reference that last modified this Integration</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public DomainEntityRef ModifiedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version number required for updates.
         /// </summary>
         /// <value>Version number required for updates.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Error information returned, if createStatus is set to Error
         /// </summary>
         /// <value>Error information returned, if createStatus is set to Error</value>
         [DataMember(Name="createError", EmitDefaultValue=false)]
         public ErrorBody CreateError { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -415,7 +308,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TwitterIntegration {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
@@ -589,67 +482,66 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.SupportedContent != null)
                     hash = hash * 59 + this.SupportedContent.GetHashCode();
-                
+
                 if (this.MessagingSetting != null)
                     hash = hash * 59 + this.MessagingSetting.GetHashCode();
-                
+
                 if (this.AccessTokenKey != null)
                     hash = hash * 59 + this.AccessTokenKey.GetHashCode();
-                
+
                 if (this.ConsumerKey != null)
                     hash = hash * 59 + this.ConsumerKey.GetHashCode();
-                
+
                 if (this.Username != null)
                     hash = hash * 59 + this.Username.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Tier != null)
                     hash = hash * 59 + this.Tier.GetHashCode();
-                
+
                 if (this.EnvName != null)
                     hash = hash * 59 + this.EnvName.GetHashCode();
-                
+
                 if (this.Recipient != null)
                     hash = hash * 59 + this.Recipient.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.CreateStatus != null)
                     hash = hash * 59 + this.CreateStatus.GetHashCode();
-                
+
                 if (this.CreateError != null)
                     hash = hash * 59 + this.CreateError.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

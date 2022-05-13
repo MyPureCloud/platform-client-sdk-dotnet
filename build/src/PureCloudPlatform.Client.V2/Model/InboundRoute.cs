@@ -18,85 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class InboundRoute :  IEquatable<InboundRoute>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundRoute" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected InboundRoute() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundRoute" /> class.
         /// </summary>
@@ -129,132 +56,132 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The search pattern that the mailbox name should match.
         /// </summary>
         /// <value>The search pattern that the mailbox name should match.</value>
         [DataMember(Name="pattern", EmitDefaultValue=false)]
         public string Pattern { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The queue to route the emails to.
         /// </summary>
         /// <value>The queue to route the emails to.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public DomainEntityRef Queue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The priority to use for routing.
         /// </summary>
         /// <value>The priority to use for routing.</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The skills to use for routing.
         /// </summary>
         /// <value>The skills to use for routing.</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
         public List<DomainEntityRef> Skills { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The language to use for routing.
         /// </summary>
         /// <value>The language to use for routing.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public DomainEntityRef Language { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The sender name to use for outgoing replies.
         /// </summary>
         /// <value>The sender name to use for outgoing replies.</value>
         [DataMember(Name="fromName", EmitDefaultValue=false)]
         public string FromName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The sender email to use for outgoing replies.
         /// </summary>
         /// <value>The sender email to use for outgoing replies.</value>
         [DataMember(Name="fromEmail", EmitDefaultValue=false)]
         public string FromEmail { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The flow to use for processing the email.
         /// </summary>
         /// <value>The flow to use for processing the email.</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
         public DomainEntityRef Flow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The route to use for email replies.
         /// </summary>
         /// <value>The route to use for email replies.</value>
         [DataMember(Name="replyEmailAddress", EmitDefaultValue=false)]
         public QueueEmailAddress ReplyEmailAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute.
         /// </summary>
         /// <value>The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute.</value>
         [DataMember(Name="autoBcc", EmitDefaultValue=false)]
         public List<EmailAddress> AutoBcc { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The flow to use for processing inbound emails that have been marked as spam.
         /// </summary>
         /// <value>The flow to use for processing inbound emails that have been marked as spam.</value>
         [DataMember(Name="spamFlow", EmitDefaultValue=false)]
         public DomainEntityRef SpamFlow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -263,7 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InboundRoute {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Pattern: ").Append(Pattern).Append("\n");
@@ -401,49 +328,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Pattern != null)
                     hash = hash * 59 + this.Pattern.GetHashCode();
-                
+
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
+
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
-                
+
                 if (this.Skills != null)
                     hash = hash * 59 + this.Skills.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.FromName != null)
                     hash = hash * 59 + this.FromName.GetHashCode();
-                
+
                 if (this.FromEmail != null)
                     hash = hash * 59 + this.FromEmail.GetHashCode();
-                
+
                 if (this.Flow != null)
                     hash = hash * 59 + this.Flow.GetHashCode();
-                
+
                 if (this.ReplyEmailAddress != null)
                     hash = hash * 59 + this.ReplyEmailAddress.GetHashCode();
-                
+
                 if (this.AutoBcc != null)
                     hash = hash * 59 + this.AutoBcc.GetHashCode();
-                
+
                 if (this.SpamFlow != null)
                     hash = hash * 59 + this.SpamFlow.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

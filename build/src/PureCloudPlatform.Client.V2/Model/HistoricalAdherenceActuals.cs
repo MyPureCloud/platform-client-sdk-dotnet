@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class HistoricalAdherenceActuals :  IEquatable<HistoricalAdherenceActuals>
     {
-        
-        
         /// <summary>
         /// Activity in which the user is actually engaged
         /// </summary>
@@ -89,30 +87,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unscheduled")]
             Unscheduled
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Activity in which the user is actually engaged
         /// </summary>
         /// <value>Activity in which the user is actually engaged</value>
         [DataMember(Name="actualActivityCategory", EmitDefaultValue=false)]
         public ActualActivityCategoryEnum? ActualActivityCategory { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="HistoricalAdherenceActuals" /> class.
         /// </summary>
@@ -127,27 +107,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Actual start offset in seconds relative to query start time
         /// </summary>
         /// <value>Actual start offset in seconds relative to query start time</value>
         [DataMember(Name="startOffsetSeconds", EmitDefaultValue=false)]
         public int? StartOffsetSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Actual end offset in seconds relative to query start time
         /// </summary>
         /// <value>Actual end offset in seconds relative to query start time</value>
         [DataMember(Name="endOffsetSeconds", EmitDefaultValue=false)]
         public int? EndOffsetSeconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -156,7 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HistoricalAdherenceActuals {\n");
-            
+
             sb.Append("  ActualActivityCategory: ").Append(ActualActivityCategory).Append("\n");
             sb.Append("  StartOffsetSeconds: ").Append(StartOffsetSeconds).Append("\n");
             sb.Append("  EndOffsetSeconds: ").Append(EndOffsetSeconds).Append("\n");
@@ -228,16 +208,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ActualActivityCategory != null)
                     hash = hash * 59 + this.ActualActivityCategory.GetHashCode();
-                
+
                 if (this.StartOffsetSeconds != null)
                     hash = hash * 59 + this.StartOffsetSeconds.GetHashCode();
-                
+
                 if (this.EndOffsetSeconds != null)
                     hash = hash * 59 + this.EndOffsetSeconds.GetHashCode();
-                
+
                 return hash;
             }
         }

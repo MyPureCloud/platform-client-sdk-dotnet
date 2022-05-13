@@ -18,39 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class VoicemailUserPolicy :  IEquatable<VoicemailUserPolicy>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailUserPolicy" /> class.
         /// </summary>
-        /// <param name="AlertTimeoutSeconds">The number of seconds to ring the user&#39;s phone before a call is transfered to voicemail.</param>
-        /// <param name="Pin">The user&#39;s PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security.</param>
+        /// <param name="AlertTimeoutSeconds">The number of seconds to ring the user's phone before a call is transfered to voicemail.</param>
+        /// <param name="Pin">The user's PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security.</param>
         /// <param name="SendEmailNotifications">Whether email notifications are sent to the user when a new voicemail is received.</param>
         public VoicemailUserPolicy(int? AlertTimeoutSeconds = null, string Pin = null, bool? SendEmailNotifications = null)
         {
@@ -60,52 +32,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether the user has voicemail enabled
         /// </summary>
         /// <value>Whether the user has voicemail enabled</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The number of seconds to ring the user&#39;s phone before a call is transfered to voicemail
+        /// The number of seconds to ring the user's phone before a call is transfered to voicemail
         /// </summary>
-        /// <value>The number of seconds to ring the user&#39;s phone before a call is transfered to voicemail</value>
+        /// <value>The number of seconds to ring the user's phone before a call is transfered to voicemail</value>
         [DataMember(Name="alertTimeoutSeconds", EmitDefaultValue=false)]
         public int? AlertTimeoutSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The user&#39;s PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security
+        /// The user's PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security
         /// </summary>
-        /// <value>The user&#39;s PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security</value>
+        /// <value>The user's PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security</value>
         [DataMember(Name="pin", EmitDefaultValue=false)]
         public string Pin { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether email notifications are sent to the user when a new voicemail is received
         /// </summary>
         /// <value>Whether email notifications are sent to the user when a new voicemail is received</value>
         [DataMember(Name="sendEmailNotifications", EmitDefaultValue=false)]
         public bool? SendEmailNotifications { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -114,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VoicemailUserPolicy {\n");
-            
+
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  AlertTimeoutSeconds: ").Append(AlertTimeoutSeconds).Append("\n");
             sb.Append("  Pin: ").Append(Pin).Append("\n");
@@ -198,22 +170,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.AlertTimeoutSeconds != null)
                     hash = hash * 59 + this.AlertTimeoutSeconds.GetHashCode();
-                
+
                 if (this.Pin != null)
                     hash = hash * 59 + this.Pin.GetHashCode();
-                
+
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
+
                 if (this.SendEmailNotifications != null)
                     hash = hash * 59 + this.SendEmailNotifications.GetHashCode();
-                
+
                 return hash;
             }
         }

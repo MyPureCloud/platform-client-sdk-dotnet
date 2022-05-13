@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AgentOwnedMappingPreview :  IEquatable<AgentOwnedMappingPreview>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentOwnedMappingPreview" /> class.
         /// </summary>
@@ -59,61 +26,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The raw value of the agent-owned column
         /// </summary>
         /// <value>The raw value of the agent-owned column</value>
         [DataMember(Name="agentOwnedColumn", EmitDefaultValue=false)]
         public string AgentOwnedColumn { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The email address of the user, if it exists
         /// </summary>
         /// <value>The email address of the user, if it exists</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the user, if it exists
         /// </summary>
         /// <value>The id of the user, if it exists</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the user exists
         /// </summary>
         /// <value>Whether the user exists</value>
         [DataMember(Name="exists", EmitDefaultValue=false)]
         public bool? Exists { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Whether the user is a member of the campaign&#39;s queue
+        /// Whether the user is a member of the campaign's queue
         /// </summary>
-        /// <value>Whether the user is a member of the campaign&#39;s queue</value>
+        /// <value>Whether the user is a member of the campaign's queue</value>
         [DataMember(Name="isQueueMember", EmitDefaultValue=false)]
         public bool? IsQueueMember { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of contact records whose agent-owned column matches the raw value
         /// </summary>
         /// <value>The number of contact records whose agent-owned column matches the raw value</value>
         [DataMember(Name="recordCount", EmitDefaultValue=false)]
         public int? RecordCount { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AgentOwnedMappingPreview {\n");
-            
+
             sb.Append("  AgentOwnedColumn: ").Append(AgentOwnedColumn).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
@@ -212,25 +179,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AgentOwnedColumn != null)
                     hash = hash * 59 + this.AgentOwnedColumn.GetHashCode();
-                
+
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.Exists != null)
                     hash = hash * 59 + this.Exists.GetHashCode();
-                
+
                 if (this.IsQueueMember != null)
                     hash = hash * 59 + this.IsQueueMember.GetHashCode();
-                
+
                 if (this.RecordCount != null)
                     hash = hash * 59 + this.RecordCount.GetHashCode();
-                
+
                 return hash;
             }
         }

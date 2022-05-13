@@ -18,26 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallHistoryParticipant :  IEquatable<CallHistoryParticipant>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The participant's direction.  Values can be: 'inbound' or 'outbound'
         /// </summary>
@@ -65,25 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reason the participant was disconnected from the conversation.
         /// </summary>
@@ -183,22 +144,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "spam")]
             Spam
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reason specifying why participant flagged the conversation.
         /// </summary>
@@ -220,73 +165,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "general")]
             General
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The participant's direction.  Values can be: 'inbound' or 'outbound'
         /// </summary>
         /// <value>The participant's direction.  Values can be: 'inbound' or 'outbound'</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reason the participant was disconnected from the conversation.
         /// </summary>
         /// <value>The reason the participant was disconnected from the conversation.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reason specifying why participant flagged the conversation.
         /// </summary>
         /// <value>The reason specifying why participant flagged the conversation.</value>
         [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
         public FlaggedReasonEnum? FlaggedReason { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallHistoryParticipant" /> class.
         /// </summary>
@@ -295,8 +191,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Address">The participant address..</param>
         /// <param name="StartTime">The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndTime">The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="Purpose">The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr.</param>
-        /// <param name="Direction">The participant&#39;s direction.  Values can be: &#39;inbound&#39; or &#39;outbound&#39;.</param>
+        /// <param name="Purpose">The participant's purpose.  Values can be: 'agent', 'user', 'customer', 'external', 'acd', 'ivr.</param>
+        /// <param name="Direction">The participant's direction.  Values can be: 'inbound' or 'outbound'.</param>
         /// <param name="Ani">The call ANI..</param>
         /// <param name="Dnis">The call DNIS..</param>
         /// <param name="User">The PureCloud user for this participant..</param>
@@ -333,157 +229,157 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The unique participant ID.
         /// </summary>
         /// <value>The unique participant ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The display friendly name of the participant.
         /// </summary>
         /// <value>The display friendly name of the participant.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The participant address.
         /// </summary>
         /// <value>The participant address.</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr
+        /// The participant's purpose.  Values can be: 'agent', 'user', 'customer', 'external', 'acd', 'ivr
         /// </summary>
-        /// <value>The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr</value>
+        /// <value>The participant's purpose.  Values can be: 'agent', 'user', 'customer', 'external', 'acd', 'ivr</value>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public string Purpose { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The call ANI.
         /// </summary>
         /// <value>The call ANI.</value>
         [DataMember(Name="ani", EmitDefaultValue=false)]
         public string Ani { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The call DNIS.
         /// </summary>
         /// <value>The call DNIS.</value>
         [DataMember(Name="dnis", EmitDefaultValue=false)]
         public string Dnis { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The PureCloud user for this participant.
         /// </summary>
         /// <value>The PureCloud user for this participant.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The PureCloud queue for this participant.
         /// </summary>
         /// <value>The PureCloud queue for this participant.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public Queue Queue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The group involved in the group ring call.
         /// </summary>
         /// <value>The group involved in the group ring call.</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public Group Group { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The PureCloud external contact
         /// </summary>
         /// <value>The PureCloud external contact</value>
         [DataMember(Name="externalContact", EmitDefaultValue=false)]
         public ExternalContact ExternalContact { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The PureCloud external organization
         /// </summary>
         /// <value>The PureCloud external organization</value>
         [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
         public ExternalOrganization ExternalOrganization { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether the contact ever connected
         /// </summary>
         /// <value>Indicates whether the contact ever connected</value>
         [DataMember(Name="didInteract", EmitDefaultValue=false)]
         public bool? DidInteract { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates SIP Response codes associated with the participant
         /// </summary>
         /// <value>Indicates SIP Response codes associated with the participant</value>
         [DataMember(Name="sipResponseCodes", EmitDefaultValue=false)]
         public List<long?> SipResponseCodes { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The outbound campaign associated with the participant
         /// </summary>
         /// <value>The outbound campaign associated with the participant</value>
         [DataMember(Name="outboundCampaign", EmitDefaultValue=false)]
         public Campaign OutboundCampaign { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -492,7 +388,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallHistoryParticipant {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
@@ -660,64 +556,63 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
+
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
+
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
+
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();
-                
+
                 if (this.Dnis != null)
                     hash = hash * 59 + this.Dnis.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
+
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
-                
+
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
+
                 if (this.ExternalContact != null)
                     hash = hash * 59 + this.ExternalContact.GetHashCode();
-                
+
                 if (this.ExternalOrganization != null)
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
-                
+
                 if (this.DidInteract != null)
                     hash = hash * 59 + this.DidInteract.GetHashCode();
-                
+
                 if (this.SipResponseCodes != null)
                     hash = hash * 59 + this.SipResponseCodes.GetHashCode();
-                
+
                 if (this.FlaggedReason != null)
                     hash = hash * 59 + this.FlaggedReason.GetHashCode();
-                
+
                 if (this.OutboundCampaign != null)
                     hash = hash * 59 + this.OutboundCampaign.GetHashCode();
-                
+
                 return hash;
             }
         }

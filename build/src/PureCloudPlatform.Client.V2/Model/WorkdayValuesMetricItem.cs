@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkdayValuesMetricItem :  IEquatable<WorkdayValuesMetricItem>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The unit type of the metric value
         /// </summary>
@@ -86,31 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unit")]
             Unit
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The unit type of the metric value
         /// </summary>
         /// <value>The unit type of the metric value</value>
         [DataMember(Name="unitType", EmitDefaultValue=false)]
-        public UnitTypeEnum? UnitType { get; set; }
-        
-        
-        
-        
-    
+        public UnitTypeEnum? UnitType { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkdayValuesMetricItem" /> class.
         /// </summary>
@@ -119,45 +89,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gamification metric for the average and the trend
         /// </summary>
         /// <value>Gamification metric for the average and the trend</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public AddressableEntityRef Metric { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gamification metric definition for the average and the trend
         /// </summary>
         /// <value>Gamification metric definition for the average and the trend</value>
         [DataMember(Name="metricDefinition", EmitDefaultValue=false)]
         public DomainEntityRef MetricDefinition { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The average value of the metric
         /// </summary>
         /// <value>The average value of the metric</value>
         [DataMember(Name="average", EmitDefaultValue=false)]
         public double? Average { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The metric value trend
         /// </summary>
         /// <value>The metric value trend</value>
         [DataMember(Name="trend", EmitDefaultValue=false)]
         public List<WorkdayValuesTrendItem> Trend { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -166,7 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkdayValuesMetricItem {\n");
-            
+
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  MetricDefinition: ").Append(MetricDefinition).Append("\n");
             sb.Append("  Average: ").Append(Average).Append("\n");
@@ -250,22 +220,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 if (this.MetricDefinition != null)
                     hash = hash * 59 + this.MetricDefinition.GetHashCode();
-                
+
                 if (this.Average != null)
                     hash = hash * 59 + this.Average.GetHashCode();
-                
+
                 if (this.UnitType != null)
                     hash = hash * 59 + this.UnitType.GetHashCode();
-                
+
                 if (this.Trend != null)
                     hash = hash * 59 + this.Trend.GetHashCode();
-                
+
                 return hash;
             }
         }

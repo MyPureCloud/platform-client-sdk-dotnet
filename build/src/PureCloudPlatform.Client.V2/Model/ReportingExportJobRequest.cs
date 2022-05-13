@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportingExportJobRequest :  IEquatable<ReportingExportJobRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The requested format of the exported data
         /// </summary>
@@ -53,16 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PDF")]
             Pdf
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of view export job to be created
         /// </summary>
@@ -552,34 +534,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PREDICTIVE_ROUTING_MODEL_VIEW")]
             PredictiveRoutingModelView
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request
         /// </summary>
@@ -607,83 +561,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "COMMA")]
             Comma
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The requested format of the exported data
         /// </summary>
         /// <value>The requested format of the exported data</value>
         [DataMember(Name="exportFormat", EmitDefaultValue=false)]
         public ExportFormatEnum? ExportFormat { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of view export job to be created
         /// </summary>
         /// <value>The type of view export job to be created</value>
         [DataMember(Name="viewType", EmitDefaultValue=false)]
         public ViewTypeEnum? ViewType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request
         /// </summary>
         /// <value>The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request</value>
         [DataMember(Name="csvDelimiter", EmitDefaultValue=false)]
         public CsvDelimiterEnum? CsvDelimiter { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ReportingExportJobRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobRequest" /> class.
         /// </summary>
@@ -701,7 +602,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExcludeEmptyRows">Excludes empty rows from the exports.</param>
         /// <param name="HasSplitByMedia">Indicates if media type will be split in aggregate detail exports.</param>
         /// <param name="HasSummaryRow">Indicates if summary row needs to be present in exports.</param>
-        /// <param name="CsvDelimiter">The user supplied csv delimiter string value either of type &#39;comma&#39; or &#39;semicolon&#39; permitted for the export request.</param>
+        /// <param name="CsvDelimiter">The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request.</param>
         /// <param name="SelectedColumns">The list of ordered selected columns from the export view by the user.</param>
         /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
         /// <param name="RecipientEmails">The list of email recipients for the exports.</param>
@@ -728,148 +629,148 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The user supplied name of the export request
         /// </summary>
         /// <value>The user supplied name of the export request</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
         /// </summary>
         /// <value>The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
         /// <value>The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H
         /// </summary>
         /// <value>The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
         [DataMember(Name="period", EmitDefaultValue=false)]
         public string Period { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Filters to apply to create the view
         /// </summary>
         /// <value>Filters to apply to create the view</value>
         [DataMember(Name="filter", EmitDefaultValue=false)]
         public ViewFilter Filter { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if the request has been marked as read
         /// </summary>
         /// <value>Indicates if the request has been marked as read</value>
         [DataMember(Name="read", EmitDefaultValue=false)]
         public bool? Read { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The locale use for localization of the exported data, i.e. en-us, es-mx  
         /// </summary>
         /// <value>The locale use for localization of the exported data, i.e. en-us, es-mx  </value>
         [DataMember(Name="locale", EmitDefaultValue=false)]
         public string Locale { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if durations are formatted in hh:mm:ss format instead of ms
         /// </summary>
         /// <value>Indicates if durations are formatted in hh:mm:ss format instead of ms</value>
         [DataMember(Name="hasFormatDurations", EmitDefaultValue=false)]
         public bool? HasFormatDurations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if filters will be split in aggregate detail exports
         /// </summary>
         /// <value>Indicates if filters will be split in aggregate detail exports</value>
         [DataMember(Name="hasSplitFilters", EmitDefaultValue=false)]
         public bool? HasSplitFilters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Excludes empty rows from the exports
         /// </summary>
         /// <value>Excludes empty rows from the exports</value>
         [DataMember(Name="excludeEmptyRows", EmitDefaultValue=false)]
         public bool? ExcludeEmptyRows { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if media type will be split in aggregate detail exports
         /// </summary>
         /// <value>Indicates if media type will be split in aggregate detail exports</value>
         [DataMember(Name="hasSplitByMedia", EmitDefaultValue=false)]
         public bool? HasSplitByMedia { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if summary row needs to be present in exports
         /// </summary>
         /// <value>Indicates if summary row needs to be present in exports</value>
         [DataMember(Name="hasSummaryRow", EmitDefaultValue=false)]
         public bool? HasSummaryRow { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The list of ordered selected columns from the export view by the user
         /// </summary>
         /// <value>The list of ordered selected columns from the export view by the user</value>
         [DataMember(Name="selectedColumns", EmitDefaultValue=false)]
         public List<SelectedColumns> SelectedColumns { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if custom participant attributes will be exported
         /// </summary>
         /// <value>Indicates if custom participant attributes will be exported</value>
         [DataMember(Name="hasCustomParticipantAttributes", EmitDefaultValue=false)]
         public bool? HasCustomParticipantAttributes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of email recipients for the exports
         /// </summary>
         /// <value>The list of email recipients for the exports</value>
         [DataMember(Name="recipientEmails", EmitDefaultValue=false)]
         public List<string> RecipientEmails { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -878,7 +779,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportingExportJobRequest {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  ExportFormat: ").Append(ExportFormat).Append("\n");
@@ -1040,61 +941,60 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
+
                 if (this.ExportFormat != null)
                     hash = hash * 59 + this.ExportFormat.GetHashCode();
-                
+
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
+
                 if (this.Period != null)
                     hash = hash * 59 + this.Period.GetHashCode();
-                
+
                 if (this.ViewType != null)
                     hash = hash * 59 + this.ViewType.GetHashCode();
-                
+
                 if (this.Filter != null)
                     hash = hash * 59 + this.Filter.GetHashCode();
-                
+
                 if (this.Read != null)
                     hash = hash * 59 + this.Read.GetHashCode();
-                
+
                 if (this.Locale != null)
                     hash = hash * 59 + this.Locale.GetHashCode();
-                
+
                 if (this.HasFormatDurations != null)
                     hash = hash * 59 + this.HasFormatDurations.GetHashCode();
-                
+
                 if (this.HasSplitFilters != null)
                     hash = hash * 59 + this.HasSplitFilters.GetHashCode();
-                
+
                 if (this.ExcludeEmptyRows != null)
                     hash = hash * 59 + this.ExcludeEmptyRows.GetHashCode();
-                
+
                 if (this.HasSplitByMedia != null)
                     hash = hash * 59 + this.HasSplitByMedia.GetHashCode();
-                
+
                 if (this.HasSummaryRow != null)
                     hash = hash * 59 + this.HasSummaryRow.GetHashCode();
-                
+
                 if (this.CsvDelimiter != null)
                     hash = hash * 59 + this.CsvDelimiter.GetHashCode();
-                
+
                 if (this.SelectedColumns != null)
                     hash = hash * 59 + this.SelectedColumns.GetHashCode();
-                
+
                 if (this.HasCustomParticipantAttributes != null)
                     hash = hash * 59 + this.HasCustomParticipantAttributes.GetHashCode();
-                
+
                 if (this.RecipientEmails != null)
                     hash = hash * 59 + this.RecipientEmails.GetHashCode();
-                
+
                 return hash;
             }
         }

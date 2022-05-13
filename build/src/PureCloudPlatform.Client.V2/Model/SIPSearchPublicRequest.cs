@@ -18,65 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SIPSearchPublicRequest :  IEquatable<SIPSearchPublicRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SIPSearchPublicRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SIPSearchPublicRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SIPSearchPublicRequest" /> class.
         /// </summary>
@@ -101,96 +48,96 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// unique identification of the placed call
         /// </summary>
         /// <value>unique identification of the placed call</value>
         [DataMember(Name="callId", EmitDefaultValue=false)]
         public string CallId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// SIP user to who the call was placed
         /// </summary>
         /// <value>SIP user to who the call was placed</value>
         [DataMember(Name="toUser", EmitDefaultValue=false)]
         public string ToUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// SIP user who placed the call
         /// </summary>
         /// <value>SIP user who placed the call</value>
         [DataMember(Name="fromUser", EmitDefaultValue=false)]
         public string FromUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identification of the conversation
         /// </summary>
         /// <value>Unique identification of the conversation</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identification of the participant
         /// </summary>
         /// <value>Unique identification of the participant</value>
         [DataMember(Name="participantId", EmitDefaultValue=false)]
         public string ParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateStart", EmitDefaultValue=false)]
         public DateTime? DateStart { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateEnd", EmitDefaultValue=false)]
         public DateTime? DateEnd { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -199,7 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SIPSearchPublicRequest {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  CallId: ").Append(CallId).Append("\n");
@@ -313,37 +260,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.CallId != null)
                     hash = hash * 59 + this.CallId.GetHashCode();
-                
+
                 if (this.ToUser != null)
                     hash = hash * 59 + this.ToUser.GetHashCode();
-                
+
                 if (this.FromUser != null)
                     hash = hash * 59 + this.FromUser.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.ParticipantId != null)
                     hash = hash * 59 + this.ParticipantId.GetHashCode();
-                
+
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();
-                
+
                 if (this.DateEnd != null)
                     hash = hash * 59 + this.DateEnd.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

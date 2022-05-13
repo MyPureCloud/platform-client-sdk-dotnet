@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ChangePasswordRequest :  IEquatable<ChangePasswordRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangePasswordRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ChangePasswordRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangePasswordRequest" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The new password
         /// </summary>
         /// <value>The new password</value>
         [DataMember(Name="newPassword", EmitDefaultValue=false)]
         public string NewPassword { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ChangePasswordRequest {\n");
-            
+
             sb.Append("  NewPassword: ").Append(NewPassword).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.NewPassword != null)
                     hash = hash * 59 + this.NewPassword.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntegrationExport :  IEquatable<IntegrationExport>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationExport" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected IntegrationExport() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationExport" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The aws-s3-recording-bulk-actions-integration that the policy uses for exports.
         /// </summary>
         /// <value>The aws-s3-recording-bulk-actions-integration that the policy uses for exports.</value>
         [DataMember(Name="integration", EmitDefaultValue=false)]
         public DomainEntityRef Integration { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if the policy should export screen recordings in addition to the other conversation media. Default = true
         /// </summary>
         /// <value>True if the policy should export screen recordings in addition to the other conversation media. Default = true</value>
         [DataMember(Name="shouldExportScreenRecordings", EmitDefaultValue=false)]
         public bool? ShouldExportScreenRecordings { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntegrationExport {\n");
-            
+
             sb.Append("  Integration: ").Append(Integration).Append("\n");
             sb.Append("  ShouldExportScreenRecordings: ").Append(ShouldExportScreenRecordings).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Integration != null)
                     hash = hash * 59 + this.Integration.GetHashCode();
-                
+
                 if (this.ShouldExportScreenRecordings != null)
                     hash = hash * 59 + this.ShouldExportScreenRecordings.GetHashCode();
-                
+
                 return hash;
             }
         }

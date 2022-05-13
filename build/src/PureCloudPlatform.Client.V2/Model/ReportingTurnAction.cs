@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportingTurnAction :  IEquatable<ReportingTurnAction>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ActionType
         /// </summary>
@@ -253,25 +242,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unknown")]
             Unknown
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ActionType
         /// </summary>
         [DataMember(Name="actionType", EmitDefaultValue=false)]
         public ActionTypeEnum? ActionType { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingTurnAction" /> class.
         /// </summary>
@@ -288,36 +263,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the action in the bot flow.
         /// </summary>
         /// <value>The ID of the action in the bot flow.</value>
         [DataMember(Name="actionId", EmitDefaultValue=false)]
         public string ActionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the action in the bot flow.
         /// </summary>
         /// <value>The name of the action in the bot flow.</value>
         [DataMember(Name="actionName", EmitDefaultValue=false)]
         public string ActionName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of the action in the bot flow.
         /// </summary>
         /// <value>The number of the action in the bot flow.</value>
         [DataMember(Name="actionNumber", EmitDefaultValue=false)]
         public int? ActionNumber { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -326,7 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportingTurnAction {\n");
-            
+
             sb.Append("  ActionId: ").Append(ActionId).Append("\n");
             sb.Append("  ActionName: ").Append(ActionName).Append("\n");
             sb.Append("  ActionNumber: ").Append(ActionNumber).Append("\n");
@@ -404,19 +379,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ActionId != null)
                     hash = hash * 59 + this.ActionId.GetHashCode();
-                
+
                 if (this.ActionName != null)
                     hash = hash * 59 + this.ActionName.GetHashCode();
-                
+
                 if (this.ActionNumber != null)
                     hash = hash * 59 + this.ActionNumber.GetHashCode();
-                
+
                 if (this.ActionType != null)
                     hash = hash * 59 + this.ActionType.GetHashCode();
-                
+
                 return hash;
             }
         }

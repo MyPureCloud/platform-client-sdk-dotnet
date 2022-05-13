@@ -18,74 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateCallRequest :  IEquatable<CreateCallRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallRequest" /> class.
         /// </summary>
@@ -97,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallUserId">The user ID to call..</param>
         /// <param name="Priority">The priority to assign to this call (if calling a queue)..</param>
         /// <param name="LanguageId">The language skill ID to use for routing this call (if calling a queue)..</param>
-        /// <param name="RoutingSkillsIds">The skill ID&#39;s to use for routing this call (if calling a queue)..</param>
+        /// <param name="RoutingSkillsIds">The skill ID's to use for routing this call (if calling a queue)..</param>
         /// <param name="ConversationIds">The list of existing call conversations to merge into a new ad-hoc conference..</param>
         /// <param name="Participants">The list of participants to call to create a new ad-hoc conference..</param>
         /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
@@ -120,124 +52,124 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The phone number to dial.
         /// </summary>
         /// <value>The phone number to dial.</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The caller id phone number for this outbound call.
         /// </summary>
         /// <value>The caller id phone number for this outbound call.</value>
         [DataMember(Name="callerId", EmitDefaultValue=false)]
         public string CallerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The caller id name for this outbound call.
         /// </summary>
         /// <value>The caller id name for this outbound call.</value>
         [DataMember(Name="callerIdName", EmitDefaultValue=false)]
         public string CallerIdName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The queue ID to call on behalf of.
         /// </summary>
         /// <value>The queue ID to call on behalf of.</value>
         [DataMember(Name="callFromQueueId", EmitDefaultValue=false)]
         public string CallFromQueueId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The queue ID to call.
         /// </summary>
         /// <value>The queue ID to call.</value>
         [DataMember(Name="callQueueId", EmitDefaultValue=false)]
         public string CallQueueId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user ID to call.
         /// </summary>
         /// <value>The user ID to call.</value>
         [DataMember(Name="callUserId", EmitDefaultValue=false)]
         public string CallUserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The priority to assign to this call (if calling a queue).
         /// </summary>
         /// <value>The priority to assign to this call (if calling a queue).</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The language skill ID to use for routing this call (if calling a queue).
         /// </summary>
         /// <value>The language skill ID to use for routing this call (if calling a queue).</value>
         [DataMember(Name="languageId", EmitDefaultValue=false)]
         public string LanguageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The skill ID&#39;s to use for routing this call (if calling a queue).
+        /// The skill ID's to use for routing this call (if calling a queue).
         /// </summary>
-        /// <value>The skill ID&#39;s to use for routing this call (if calling a queue).</value>
+        /// <value>The skill ID's to use for routing this call (if calling a queue).</value>
         [DataMember(Name="routingSkillsIds", EmitDefaultValue=false)]
         public List<string> RoutingSkillsIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of existing call conversations to merge into a new ad-hoc conference.
         /// </summary>
         /// <value>The list of existing call conversations to merge into a new ad-hoc conference.</value>
         [DataMember(Name="conversationIds", EmitDefaultValue=false)]
         public List<string> ConversationIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of participants to call to create a new ad-hoc conference.
         /// </summary>
         /// <value>The list of participants to call to create a new ad-hoc conference.</value>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<Destination> Participants { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User to User Information (UUI) data managed by SIP session application.
         /// </summary>
         /// <value>User to User Information (UUI) data managed by SIP session application.</value>
         [DataMember(Name="uuiData", EmitDefaultValue=false)]
         public string UuiData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The external contact with which to associate the call.
         /// </summary>
         /// <value>The external contact with which to associate the call.</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -246,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateCallRequest {\n");
-            
+
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  CallerId: ").Append(CallerId).Append("\n");
             sb.Append("  CallerIdName: ").Append(CallerIdName).Append("\n");
@@ -378,46 +310,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
-                
+
                 if (this.CallerId != null)
                     hash = hash * 59 + this.CallerId.GetHashCode();
-                
+
                 if (this.CallerIdName != null)
                     hash = hash * 59 + this.CallerIdName.GetHashCode();
-                
+
                 if (this.CallFromQueueId != null)
                     hash = hash * 59 + this.CallFromQueueId.GetHashCode();
-                
+
                 if (this.CallQueueId != null)
                     hash = hash * 59 + this.CallQueueId.GetHashCode();
-                
+
                 if (this.CallUserId != null)
                     hash = hash * 59 + this.CallUserId.GetHashCode();
-                
+
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
-                
+
                 if (this.LanguageId != null)
                     hash = hash * 59 + this.LanguageId.GetHashCode();
-                
+
                 if (this.RoutingSkillsIds != null)
                     hash = hash * 59 + this.RoutingSkillsIds.GetHashCode();
-                
+
                 if (this.ConversationIds != null)
                     hash = hash * 59 + this.ConversationIds.GetHashCode();
-                
+
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
-                
+
                 if (this.UuiData != null)
                     hash = hash * 59 + this.UuiData.GetHashCode();
-                
+
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
-                
+
                 return hash;
             }
         }

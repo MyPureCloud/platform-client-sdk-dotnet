@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CopyVoicemailMessage :  IEquatable<CopyVoicemailMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CopyVoicemailMessage" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CopyVoicemailMessage() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CopyVoicemailMessage" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The id of the VoicemailMessage to copy
         /// </summary>
         /// <value>The id of the VoicemailMessage to copy</value>
         [DataMember(Name="voicemailMessageId", EmitDefaultValue=false)]
         public string VoicemailMessageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the User to copy the VoicemailMessage to
         /// </summary>
         /// <value>The id of the User to copy the VoicemailMessage to</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the Group to copy the VoicemailMessage to
         /// </summary>
         /// <value>The id of the Group to copy the VoicemailMessage to</value>
         [DataMember(Name="groupId", EmitDefaultValue=false)]
         public string GroupId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CopyVoicemailMessage {\n");
-            
+
             sb.Append("  VoicemailMessageId: ").Append(VoicemailMessageId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.VoicemailMessageId != null)
                     hash = hash * 59 + this.VoicemailMessageId.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.GroupId != null)
                     hash = hash * 59 + this.GroupId.GetHashCode();
-                
+
                 return hash;
             }
         }

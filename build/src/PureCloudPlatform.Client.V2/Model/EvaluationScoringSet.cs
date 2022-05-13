@@ -18,49 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EvaluationScoringSet :  IEquatable<EvaluationScoringSet>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationScoringSet" /> class.
         /// </summary>
@@ -71,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AnyFailedKillQuestions">Indicates that at least one fatal question was answered without having the highest score available for the question.</param>
         /// <param name="Comments">Overall comments from the evaluator.</param>
         /// <param name="AgentComments">Comments from the agent while reviewing evaluation results.</param>
-        /// <param name="TranscriptTopics">List of topics found within the conversation&#39;s transcripts.</param>
+        /// <param name="TranscriptTopics">List of topics found within the conversation's transcripts.</param>
         public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, float? TotalNonCriticalScore = null, List<EvaluationQuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string AgentComments = null, List<TranscriptTopic> TranscriptTopics = null)
         {
             this.TotalScore = TotalScore;
@@ -85,78 +42,78 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Score of all questions
         /// </summary>
         /// <value>Score of all questions</value>
         [DataMember(Name="totalScore", EmitDefaultValue=false)]
         public float? TotalScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Score of only the critical questions
         /// </summary>
         /// <value>Score of only the critical questions</value>
         [DataMember(Name="totalCriticalScore", EmitDefaultValue=false)]
         public float? TotalCriticalScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Score of only the non-critical questions
         /// </summary>
         /// <value>Score of only the non-critical questions</value>
         [DataMember(Name="totalNonCriticalScore", EmitDefaultValue=false)]
         public float? TotalNonCriticalScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets QuestionGroupScores
         /// </summary>
         [DataMember(Name="questionGroupScores", EmitDefaultValue=false)]
         public List<EvaluationQuestionGroupScore> QuestionGroupScores { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates that at least one fatal question was answered without having the highest score available for the question
         /// </summary>
         /// <value>Indicates that at least one fatal question was answered without having the highest score available for the question</value>
         [DataMember(Name="anyFailedKillQuestions", EmitDefaultValue=false)]
         public bool? AnyFailedKillQuestions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Overall comments from the evaluator
         /// </summary>
         /// <value>Overall comments from the evaluator</value>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Comments from the agent while reviewing evaluation results
         /// </summary>
         /// <value>Comments from the agent while reviewing evaluation results</value>
         [DataMember(Name="agentComments", EmitDefaultValue=false)]
         public string AgentComments { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// List of topics found within the conversation&#39;s transcripts
+        /// List of topics found within the conversation's transcripts
         /// </summary>
-        /// <value>List of topics found within the conversation&#39;s transcripts</value>
+        /// <value>List of topics found within the conversation's transcripts</value>
         [DataMember(Name="transcriptTopics", EmitDefaultValue=false)]
         public List<TranscriptTopic> TranscriptTopics { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -165,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EvaluationScoringSet {\n");
-            
+
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
             sb.Append("  TotalCriticalScore: ").Append(TotalCriticalScore).Append("\n");
             sb.Append("  TotalNonCriticalScore: ").Append(TotalNonCriticalScore).Append("\n");
@@ -267,31 +224,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TotalScore != null)
                     hash = hash * 59 + this.TotalScore.GetHashCode();
-                
+
                 if (this.TotalCriticalScore != null)
                     hash = hash * 59 + this.TotalCriticalScore.GetHashCode();
-                
+
                 if (this.TotalNonCriticalScore != null)
                     hash = hash * 59 + this.TotalNonCriticalScore.GetHashCode();
-                
+
                 if (this.QuestionGroupScores != null)
                     hash = hash * 59 + this.QuestionGroupScores.GetHashCode();
-                
+
                 if (this.AnyFailedKillQuestions != null)
                     hash = hash * 59 + this.AnyFailedKillQuestions.GetHashCode();
-                
+
                 if (this.Comments != null)
                     hash = hash * 59 + this.Comments.GetHashCode();
-                
+
                 if (this.AgentComments != null)
                     hash = hash * 59 + this.AgentComments.GetHashCode();
-                
+
                 if (this.TranscriptTopics != null)
                     hash = hash * 59 + this.TranscriptTopics.GetHashCode();
-                
+
                 return hash;
             }
         }

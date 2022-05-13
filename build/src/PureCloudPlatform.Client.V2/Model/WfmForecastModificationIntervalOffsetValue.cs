@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmForecastModificationIntervalOffsetValue :  IEquatable<WfmForecastModificationIntervalOffsetValue>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmForecastModificationIntervalOffsetValue" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WfmForecastModificationIntervalOffsetValue() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmForecastModificationIntervalOffsetValue" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The number of 15 minute intervals past referenceStartDate to which to apply this modification
         /// </summary>
         /// <value>The number of 15 minute intervals past referenceStartDate to which to apply this modification</value>
         [DataMember(Name="intervalIndex", EmitDefaultValue=false)]
         public int? IntervalIndex { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The value to set for the given interval
         /// </summary>
         /// <value>The value to set for the given interval</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public double? Value { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmForecastModificationIntervalOffsetValue {\n");
-            
+
             sb.Append("  IntervalIndex: ").Append(IntervalIndex).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.IntervalIndex != null)
                     hash = hash * 59 + this.IntervalIndex.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 return hash;
             }
         }

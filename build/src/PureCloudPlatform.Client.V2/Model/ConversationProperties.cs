@@ -18,64 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationProperties :  IEquatable<ConversationProperties>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationProperties" /> class.
         /// </summary>
@@ -106,106 +48,106 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Indicates filtering for waiting
         /// </summary>
         /// <value>Indicates filtering for waiting</value>
         [DataMember(Name="isWaiting", EmitDefaultValue=false)]
         public bool? IsWaiting { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for active
         /// </summary>
         /// <value>Indicates filtering for active</value>
         [DataMember(Name="isActive", EmitDefaultValue=false)]
         public bool? IsActive { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for Acd
         /// </summary>
         /// <value>Indicates filtering for Acd</value>
         [DataMember(Name="isAcd", EmitDefaultValue=false)]
         public bool? IsAcd { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for Preferred Agent Routing
         /// </summary>
         /// <value>Indicates filtering for Preferred Agent Routing</value>
         [DataMember(Name="isPreferred", EmitDefaultValue=false)]
         public bool? IsPreferred { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for screenshare
         /// </summary>
         /// <value>Indicates filtering for screenshare</value>
         [DataMember(Name="isScreenshare", EmitDefaultValue=false)]
         public bool? IsScreenshare { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for Cobrowse
         /// </summary>
         /// <value>Indicates filtering for Cobrowse</value>
         [DataMember(Name="isCobrowse", EmitDefaultValue=false)]
         public bool? IsCobrowse { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for Voice mail
         /// </summary>
         /// <value>Indicates filtering for Voice mail</value>
         [DataMember(Name="isVoicemail", EmitDefaultValue=false)]
         public bool? IsVoicemail { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for flagged
         /// </summary>
         /// <value>Indicates filtering for flagged</value>
         [DataMember(Name="isFlagged", EmitDefaultValue=false)]
         public bool? IsFlagged { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for monitored
         /// </summary>
         /// <value>Indicates filtering for monitored</value>
         [DataMember(Name="isMonitored", EmitDefaultValue=false)]
         public bool? IsMonitored { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for WrapUpNotes
         /// </summary>
         /// <value>Indicates filtering for WrapUpNotes</value>
         [DataMember(Name="filterWrapUpNotes", EmitDefaultValue=false)]
         public bool? FilterWrapUpNotes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates comparison operation, TRUE indicates filters will use AND logic, FALSE indicates OR logic
         /// </summary>
         /// <value>Indicates comparison operation, TRUE indicates filters will use AND logic, FALSE indicates OR logic</value>
         [DataMember(Name="matchAll", EmitDefaultValue=false)]
         public bool? MatchAll { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -214,7 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationProperties {\n");
-            
+
             sb.Append("  IsWaiting: ").Append(IsWaiting).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  IsAcd: ").Append(IsAcd).Append("\n");
@@ -334,40 +276,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.IsWaiting != null)
                     hash = hash * 59 + this.IsWaiting.GetHashCode();
-                
+
                 if (this.IsActive != null)
                     hash = hash * 59 + this.IsActive.GetHashCode();
-                
+
                 if (this.IsAcd != null)
                     hash = hash * 59 + this.IsAcd.GetHashCode();
-                
+
                 if (this.IsPreferred != null)
                     hash = hash * 59 + this.IsPreferred.GetHashCode();
-                
+
                 if (this.IsScreenshare != null)
                     hash = hash * 59 + this.IsScreenshare.GetHashCode();
-                
+
                 if (this.IsCobrowse != null)
                     hash = hash * 59 + this.IsCobrowse.GetHashCode();
-                
+
                 if (this.IsVoicemail != null)
                     hash = hash * 59 + this.IsVoicemail.GetHashCode();
-                
+
                 if (this.IsFlagged != null)
                     hash = hash * 59 + this.IsFlagged.GetHashCode();
-                
+
                 if (this.IsMonitored != null)
                     hash = hash * 59 + this.IsMonitored.GetHashCode();
-                
+
                 if (this.FilterWrapUpNotes != null)
                     hash = hash * 59 + this.FilterWrapUpNotes.GetHashCode();
-                
+
                 if (this.MatchAll != null)
                     hash = hash * 59 + this.MatchAll.GetHashCode();
-                
+
                 return hash;
             }
         }

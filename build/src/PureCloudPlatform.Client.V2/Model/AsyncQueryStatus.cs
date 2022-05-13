@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AsyncQueryStatus :  IEquatable<AsyncQueryStatus>
     {
-        
-        
         /// <summary>
         /// The current state of the asynchronous query
         /// </summary>
@@ -71,40 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EXPIRED")]
             Expired
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current state of the asynchronous query
         /// </summary>
         /// <value>The current state of the asynchronous query</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AsyncQueryStatus" /> class.
         /// </summary>
@@ -123,45 +93,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The error associated with the current query, if the state is FAILED
         /// </summary>
         /// <value>The error associated with the current query, if the state is FAILED</value>
         [DataMember(Name="errorMessage", EmitDefaultValue=false)]
         public string ErrorMessage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time at which results for this query will expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time at which results for this query will expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="expirationDate", EmitDefaultValue=false)]
         public DateTime? ExpirationDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time at which the query was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time at which the query was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="submissionDate", EmitDefaultValue=false)]
         public DateTime? SubmissionDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time at which the query completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time at which the query completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="completionDate", EmitDefaultValue=false)]
         public DateTime? CompletionDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -170,7 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AsyncQueryStatus {\n");
-            
+
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  ExpirationDate: ").Append(ExpirationDate).Append("\n");
@@ -254,22 +224,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.ErrorMessage != null)
                     hash = hash * 59 + this.ErrorMessage.GetHashCode();
-                
+
                 if (this.ExpirationDate != null)
                     hash = hash * 59 + this.ExpirationDate.GetHashCode();
-                
+
                 if (this.SubmissionDate != null)
                     hash = hash * 59 + this.SubmissionDate.GetHashCode();
-                
+
                 if (this.CompletionDate != null)
                     hash = hash * 59 + this.CompletionDate.GetHashCode();
-                
+
                 return hash;
             }
         }

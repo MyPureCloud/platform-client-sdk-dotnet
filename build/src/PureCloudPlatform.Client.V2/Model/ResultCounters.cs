@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResultCounters :  IEquatable<ResultCounters>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResultCounters" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Success
         /// </summary>
         [DataMember(Name="success", EmitDefaultValue=false)]
         public int? Success { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Failure
         /// </summary>
         [DataMember(Name="failure", EmitDefaultValue=false)]
         public int? Failure { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResultCounters {\n");
-            
+
             sb.Append("  Success: ").Append(Success).Append("\n");
             sb.Append("  Failure: ").Append(Failure).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Success != null)
                     hash = hash * 59 + this.Success.GetHashCode();
-                
+
                 if (this.Failure != null)
                     hash = hash * 59 + this.Failure.GetHashCode();
-                
+
                 return hash;
             }
         }

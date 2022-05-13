@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserBestPointsItem :  IEquatable<UserBestPointsItem>
     {
-        
-        
         /// <summary>
         /// Best points aggregation interval granularity
         /// </summary>
@@ -53,40 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Daily")]
             Daily
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Best points aggregation interval granularity
         /// </summary>
         /// <value>Best points aggregation interval granularity</value>
         [DataMember(Name="granularityType", EmitDefaultValue=false)]
-        public GranularityTypeEnum? GranularityType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public GranularityTypeEnum? GranularityType { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="UserBestPointsItem" /> class.
         /// </summary>
@@ -95,45 +65,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gamification points
         /// </summary>
         /// <value>Gamification points</value>
         [DataMember(Name="points", EmitDefaultValue=false)]
         public int? Points { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Start workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Start workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateStartWorkday", EmitDefaultValue=false)]
         public String DateStartWorkday { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// End workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>End workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateEndWorkday", EmitDefaultValue=false)]
         public String DateEndWorkday { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The rank of this user
         /// </summary>
         /// <value>The rank of this user</value>
         [DataMember(Name="rank", EmitDefaultValue=false)]
         public int? Rank { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -142,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserBestPointsItem {\n");
-            
+
             sb.Append("  GranularityType: ").Append(GranularityType).Append("\n");
             sb.Append("  Points: ").Append(Points).Append("\n");
             sb.Append("  DateStartWorkday: ").Append(DateStartWorkday).Append("\n");
@@ -226,22 +196,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.GranularityType != null)
                     hash = hash * 59 + this.GranularityType.GetHashCode();
-                
+
                 if (this.Points != null)
                     hash = hash * 59 + this.Points.GetHashCode();
-                
+
                 if (this.DateStartWorkday != null)
                     hash = hash * 59 + this.DateStartWorkday.GetHashCode();
-                
+
                 if (this.DateEndWorkday != null)
                     hash = hash * 59 + this.DateEndWorkday.GetHashCode();
-                
+
                 if (this.Rank != null)
                     hash = hash * 59 + this.Rank.GetHashCode();
-                
+
                 return hash;
             }
         }

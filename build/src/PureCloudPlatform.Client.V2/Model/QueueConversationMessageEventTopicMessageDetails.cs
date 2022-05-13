@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueueConversationMessageEventTopicMessageDetails :  IEquatable<QueueConversationMessageEventTopicMessageDetails>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MessageStatus
         /// </summary>
@@ -85,40 +74,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "read")]
             Read
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MessageStatus
         /// </summary>
         [DataMember(Name="messageStatus", EmitDefaultValue=false)]
         public MessageStatusEnum? MessageStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationMessageEventTopicMessageDetails" /> class.
         /// </summary>
@@ -141,57 +101,57 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public QueueConversationMessageEventTopicUriReference Message { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessageTime
         /// </summary>
         [DataMember(Name="messageTime", EmitDefaultValue=false)]
         public DateTime? MessageTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessageSegmentCount
         /// </summary>
         [DataMember(Name="messageSegmentCount", EmitDefaultValue=false)]
         public int? MessageSegmentCount { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Media
         /// </summary>
         [DataMember(Name="media", EmitDefaultValue=false)]
         public List<QueueConversationMessageEventTopicMessageMedia> Media { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Stickers
         /// </summary>
         [DataMember(Name="stickers", EmitDefaultValue=false)]
         public List<QueueConversationMessageEventTopicMessageSticker> Stickers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public QueueConversationMessageEventTopicErrorDetails ErrorInfo { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -200,7 +160,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueueConversationMessageEventTopicMessageDetails {\n");
-            
+
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  MessageTime: ").Append(MessageTime).Append("\n");
             sb.Append("  MessageSegmentCount: ").Append(MessageSegmentCount).Append("\n");
@@ -296,28 +256,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 if (this.MessageTime != null)
                     hash = hash * 59 + this.MessageTime.GetHashCode();
-                
+
                 if (this.MessageSegmentCount != null)
                     hash = hash * 59 + this.MessageSegmentCount.GetHashCode();
-                
+
                 if (this.MessageStatus != null)
                     hash = hash * 59 + this.MessageStatus.GetHashCode();
-                
+
                 if (this.Media != null)
                     hash = hash * 59 + this.Media.GetHashCode();
-                
+
                 if (this.Stickers != null)
                     hash = hash * 59 + this.Stickers.GetHashCode();
-                
+
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
+
                 return hash;
             }
         }

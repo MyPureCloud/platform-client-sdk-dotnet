@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueueConversationSocialExpressionEventTopicVideo :  IEquatable<QueueConversationSocialExpressionEventTopicVideo>
     {
-        
-        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -83,40 +81,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "none")]
             None
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
@@ -228,79 +192,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "uncallable")]
             Uncallable
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
         /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationSocialExpressionEventTopicVideo" /> class.
         /// </summary>
@@ -320,9 +223,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock..</param>
         /// <param name="Msids">List of media stream ids.</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
-        /// <param name="AfterCallWork">A communication&#39;s after-call work data..</param>
+        /// <param name="AfterCallWork">A communication's after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
-        public QueueConversationSocialExpressionEventTopicVideo(StateEnum? State = null, QueueConversationSocialExpressionEventTopicAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, QueueConversationSocialExpressionEventTopicObject PeerCount = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<string> Msids = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
+        public QueueConversationSocialExpressionEventTopicVideo(StateEnum? State = null, QueueConversationSocialExpressionEventTopicAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, Object PeerCount = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<string> Msids = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
         {
             this.State = State;
             this.Self = Self;
@@ -345,155 +248,155 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Address and name data for a call endpoint.
         /// </summary>
         /// <value>Address and name data for a call endpoint.</value>
         [DataMember(Name="self", EmitDefaultValue=false)]
         public QueueConversationSocialExpressionEventTopicAddress Self { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A globally unique identifier for this communication.
         /// </summary>
         /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The room id context (xmpp jid) for the conference session.
         /// </summary>
         /// <value>The room id context (xmpp jid) for the conference session.</value>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public string Context { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether this participant has muted their outgoing audio.
         /// </summary>
         /// <value>Indicates whether this participant has muted their outgoing audio.</value>
         [DataMember(Name="audioMuted", EmitDefaultValue=false)]
         public bool? AudioMuted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether this participant has muted/paused their outgoing video.
         /// </summary>
         /// <value>Indicates whether this participant has muted/paused their outgoing video.</value>
         [DataMember(Name="videoMuted", EmitDefaultValue=false)]
         public bool? VideoMuted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether this participant is sharing their screen to the session.
         /// </summary>
         /// <value>Indicates whether this participant is sharing their screen to the session.</value>
         [DataMember(Name="sharingScreen", EmitDefaultValue=false)]
         public bool? SharingScreen { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of peer participants from the perspective of the participant in the conference.
         /// </summary>
         /// <value>The number of peer participants from the perspective of the participant in the conference.</value>
         [DataMember(Name="peerCount", EmitDefaultValue=false)]
-        public QueueConversationSocialExpressionEventTopicObject PeerCount { get; set; }
-        
-        
-        
+        public Object PeerCount { get; set; }
+
+
+
         /// <summary>
         /// The media provider controlling the video.
         /// </summary>
         /// <value>The media provider controlling the video.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The UUID of the script to use.
         /// </summary>
         /// <value>The UUID of the script to use.</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the peer communication corresponding to a matching leg for this communication.
         /// </summary>
         /// <value>The id of the peer communication corresponding to a matching leg for this communication.</value>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The timestamp when this communication was connected in the cloud clock.
         /// </summary>
         /// <value>The timestamp when this communication was connected in the cloud clock.</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this communication disconnected from the conversation in the provider clock.
         /// </summary>
         /// <value>The timestamp when this communication disconnected from the conversation in the provider clock.</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of media stream ids
         /// </summary>
         /// <value>List of media stream ids</value>
         [DataMember(Name="msids", EmitDefaultValue=false)]
         public List<string> Msids { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Call wrap up or disposition data.
         /// </summary>
         /// <value>Call wrap up or disposition data.</value>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public QueueConversationSocialExpressionEventTopicWrapup Wrapup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// A communication&#39;s after-call work data.
+        /// A communication's after-call work data.
         /// </summary>
-        /// <value>A communication&#39;s after-call work data.</value>
+        /// <value>A communication's after-call work data.</value>
         [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
         public QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested.
         /// </summary>
         /// <value>Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested.</value>
         [DataMember(Name="afterCallWorkRequired", EmitDefaultValue=false)]
         public bool? AfterCallWorkRequired { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -502,7 +405,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueueConversationSocialExpressionEventTopicVideo {\n");
-            
+
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Self: ").Append(Self).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -664,61 +567,60 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Self != null)
                     hash = hash * 59 + this.Self.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
-                
+
                 if (this.AudioMuted != null)
                     hash = hash * 59 + this.AudioMuted.GetHashCode();
-                
+
                 if (this.VideoMuted != null)
                     hash = hash * 59 + this.VideoMuted.GetHashCode();
-                
+
                 if (this.SharingScreen != null)
                     hash = hash * 59 + this.SharingScreen.GetHashCode();
-                
+
                 if (this.PeerCount != null)
                     hash = hash * 59 + this.PeerCount.GetHashCode();
-                
+
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                
+
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
-                
+
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
-                
+
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
+
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
-                
+
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
-                
+
                 if (this.Msids != null)
                     hash = hash * 59 + this.Msids.GetHashCode();
-                
+
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
-                
+
                 if (this.AfterCallWork != null)
                     hash = hash * 59 + this.AfterCallWork.GetHashCode();
-                
+
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
-                
+
                 return hash;
             }
         }

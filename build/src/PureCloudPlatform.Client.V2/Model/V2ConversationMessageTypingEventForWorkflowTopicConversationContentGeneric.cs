@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class V2ConversationMessageTypingEventForWorkflowTopicConversationContentGeneric :  IEquatable<V2ConversationMessageTypingEventForWorkflowTopicConversationContentGeneric>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="V2ConversationMessageTypingEventForWorkflowTopicConversationContentGeneric" /> class.
         /// </summary>
@@ -71,55 +38,55 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Image
         /// </summary>
         [DataMember(Name="image", EmitDefaultValue=false)]
         public string Image { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Video
         /// </summary>
         [DataMember(Name="video", EmitDefaultValue=false)]
         public string Video { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Actions
         /// </summary>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public V2ConversationMessageTypingEventForWorkflowTopicConversationContentActions Actions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Components
         /// </summary>
         [DataMember(Name="components", EmitDefaultValue=false)]
         public List<V2ConversationMessageTypingEventForWorkflowTopicConversationButtonComponent> Components { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class V2ConversationMessageTypingEventForWorkflowTopicConversationContentGeneric {\n");
-            
+
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
@@ -218,25 +185,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Image != null)
                     hash = hash * 59 + this.Image.GetHashCode();
-                
+
                 if (this.Video != null)
                     hash = hash * 59 + this.Video.GetHashCode();
-                
+
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
+
                 if (this.Components != null)
                     hash = hash * 59 + this.Components.GetHashCode();
-                
+
                 return hash;
             }
         }

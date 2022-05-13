@@ -18,89 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerContactlistConfigChangeContactList :  IEquatable<DialerContactlistConfigChangeContactList>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContactlistConfigChangeContactList" /> class.
         /// </summary>
@@ -141,149 +58,149 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// the contact column names
         /// </summary>
         /// <value>the contact column names</value>
         [DataMember(Name="columnNames", EmitDefaultValue=false)]
         public List<string> ColumnNames { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// the columns containing phone numbers
         /// </summary>
         /// <value>the columns containing phone numbers</value>
         [DataMember(Name="phoneColumns", EmitDefaultValue=false)]
         public List<DialerContactlistConfigChangeContactPhoneNumberColumn> PhoneColumns { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// the columns containing email addresses
         /// </summary>
         /// <value>the columns containing email addresses</value>
         [DataMember(Name="emailColumns", EmitDefaultValue=false)]
         public List<DialerContactlistConfigChangeEmailColumn> EmailColumns { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ImportStatus
         /// </summary>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
         public DialerContactlistConfigChangeImportStatus ImportStatus { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// the name of the column that holds the indicators for contacts that are to be dialed in preview mode only
         /// </summary>
         /// <value>the name of the column that holds the indicators for contacts that are to be dialed in preview mode only</value>
         [DataMember(Name="previewModeColumnName", EmitDefaultValue=false)]
         public string PreviewModeColumnName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// list of user-defined values indicating the contact is to be dialed in preview mode only
         /// </summary>
         /// <value>list of user-defined values indicating the contact is to be dialed in preview mode only</value>
         [DataMember(Name="previewModeAcceptedValues", EmitDefaultValue=false)]
         public List<string> PreviewModeAcceptedValues { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// the number of contacts in the contact list
         /// </summary>
         /// <value>the number of contacts in the contact list</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public int? Size { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AttemptLimits
         /// </summary>
         [DataMember(Name="attemptLimits", EmitDefaultValue=false)]
         public DialerContactlistConfigChangeUriReference AttemptLimits { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// whether or not automatic time zone mapping is enabled on the list
         /// </summary>
         /// <value>whether or not automatic time zone mapping is enabled on the list</value>
         [DataMember(Name="automaticTimeZoneMapping", EmitDefaultValue=false)]
         public bool? AutomaticTimeZoneMapping { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// zip code column from the contact list to be used optionally with automatic time zone mapping
         /// </summary>
         /// <value>zip code column from the contact list to be used optionally with automatic time zone mapping</value>
         [DataMember(Name="zipCodeColumnName", EmitDefaultValue=false)]
         public string ZipCodeColumnName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A UriReference for a resource
         /// </summary>
         /// <value>A UriReference for a resource</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public DialerContactlistConfigChangeUriReference Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The UI-visible name of the object
         /// </summary>
         /// <value>The UI-visible name of the object</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Creation time of the entity
         /// </summary>
         /// <value>Creation time of the entity</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last modified time of the entity
         /// </summary>
         /// <value>Last modified time of the entity</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -292,7 +209,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerContactlistConfigChangeContactList {\n");
-            
+
             sb.Append("  ColumnNames: ").Append(ColumnNames).Append("\n");
             sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
             sb.Append("  EmailColumns: ").Append(EmailColumns).Append("\n");
@@ -442,55 +359,54 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ColumnNames != null)
                     hash = hash * 59 + this.ColumnNames.GetHashCode();
-                
+
                 if (this.PhoneColumns != null)
                     hash = hash * 59 + this.PhoneColumns.GetHashCode();
-                
+
                 if (this.EmailColumns != null)
                     hash = hash * 59 + this.EmailColumns.GetHashCode();
-                
+
                 if (this.ImportStatus != null)
                     hash = hash * 59 + this.ImportStatus.GetHashCode();
-                
+
                 if (this.PreviewModeColumnName != null)
                     hash = hash * 59 + this.PreviewModeColumnName.GetHashCode();
-                
+
                 if (this.PreviewModeAcceptedValues != null)
                     hash = hash * 59 + this.PreviewModeAcceptedValues.GetHashCode();
-                
+
                 if (this.Size != null)
                     hash = hash * 59 + this.Size.GetHashCode();
-                
+
                 if (this.AttemptLimits != null)
                     hash = hash * 59 + this.AttemptLimits.GetHashCode();
-                
+
                 if (this.AutomaticTimeZoneMapping != null)
                     hash = hash * 59 + this.AutomaticTimeZoneMapping.GetHashCode();
-                
+
                 if (this.ZipCodeColumnName != null)
                     hash = hash * 59 + this.ZipCodeColumnName.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReschedulingManagementUnitResponse :  IEquatable<ReschedulingManagementUnitResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReschedulingManagementUnitResponse" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The management unit
         /// </summary>
         /// <value>The management unit</value>
         [DataMember(Name="managementUnit", EmitDefaultValue=false)]
         public ManagementUnitReference ManagementUnit { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the rescheduling run is applied for the given management unit
         /// </summary>
         /// <value>Whether the rescheduling run is applied for the given management unit</value>
         [DataMember(Name="applied", EmitDefaultValue=false)]
         public bool? Applied { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReschedulingManagementUnitResponse {\n");
-            
+
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
             sb.Append("  Applied: ").Append(Applied).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ManagementUnit != null)
                     hash = hash * 59 + this.ManagementUnit.GetHashCode();
-                
+
                 if (this.Applied != null)
                     hash = hash * 59 + this.Applied.GetHashCode();
-                
+
                 return hash;
             }
         }

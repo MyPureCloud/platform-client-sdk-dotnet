@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResponseQueryResults :  IEquatable<ResponseQueryResults>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseQueryResults" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ResponseQueryResults() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseQueryResults" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Contains the query results
         /// </summary>
         /// <value>Contains the query results</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public ResponseEntityList Results { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResponseQueryResults {\n");
-            
+
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
+
                 return hash;
             }
         }

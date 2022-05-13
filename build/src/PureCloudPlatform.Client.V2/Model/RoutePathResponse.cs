@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RoutePathResponse :  IEquatable<RoutePathResponse>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The media type of the given queue associated with the route path
         /// </summary>
@@ -68,32 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Message")]
             Message
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The media type of the given queue associated with the route path
         /// </summary>
         /// <value>The media type of the given queue associated with the route path</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutePathResponse" /> class.
         /// </summary>
@@ -110,36 +85,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the queue associated with the route path
         /// </summary>
         /// <value>The ID of the queue associated with the route path</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public QueueReference Queue { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The ID of the language associated with the route path
         /// </summary>
         /// <value>The ID of the language associated with the route path</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public LanguageReference Language { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The set of skills associated with the route path
         /// </summary>
         /// <value>The set of skills associated with the route path</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
         public List<RoutingSkillReference> Skills { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -148,7 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RoutePathResponse {\n");
-            
+
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
@@ -226,19 +201,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.Skills != null)
                     hash = hash * 59 + this.Skills.GetHashCode();
-                
+
                 return hash;
             }
         }

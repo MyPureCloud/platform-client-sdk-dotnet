@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmHistoricalAdherenceQueryForUsers :  IEquatable<WfmHistoricalAdherenceQueryForUsers>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmHistoricalAdherenceQueryForUsers" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WfmHistoricalAdherenceQueryForUsers() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmHistoricalAdherenceQueryForUsers" /> class.
         /// </summary>
@@ -70,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Beginning of the date range to query in ISO-8601 format
         /// </summary>
         /// <value>Beginning of the date range to query in ISO-8601 format</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time
         /// </summary>
         /// <value>End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time zone to use for returned results in olson format. If it is not set, the business unit time zone will be used to compute adherence
         /// </summary>
         /// <value>The time zone to use for returned results in olson format. If it is not set, the business unit time zone will be used to compute adherence</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The userIds to report on
         /// </summary>
         /// <value>The userIds to report on</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether user exceptions should be returned as part of the results
         /// </summary>
         /// <value>Whether user exceptions should be returned as part of the results</value>
         [DataMember(Name="includeExceptions", EmitDefaultValue=false)]
         public bool? IncludeExceptions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmHistoricalAdherenceQueryForUsers {\n");
-            
+
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
@@ -208,22 +180,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
+
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
-                
+
                 if (this.IncludeExceptions != null)
                     hash = hash * 59 + this.IncludeExceptions.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotModeOutputPrompts :  IEquatable<TextBotModeOutputPrompts>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotModeOutputPrompts" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotModeOutputPrompts() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotModeOutputPrompts" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of prompt segments.
         /// </summary>
         /// <value>The list of prompt segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<TextBotPromptSegment> Segments { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotModeOutputPrompts {\n");
-            
+
             sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
-                
+
                 return hash;
             }
         }

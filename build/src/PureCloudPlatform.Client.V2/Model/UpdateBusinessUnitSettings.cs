@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UpdateBusinessUnitSettings :  IEquatable<UpdateBusinessUnitSettings>
     {
-        
-        
         /// <summary>
         /// The start day of week for this business unit
         /// </summary>
@@ -77,46 +75,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Saturday")]
             Saturday
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The start day of week for this business unit
         /// </summary>
         /// <value>The start day of week for this business unit</value>
         [DataMember(Name="startDayOfWeek", EmitDefaultValue=false)]
-        public StartDayOfWeekEnum? StartDayOfWeek { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public StartDayOfWeekEnum? StartDayOfWeek { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateBusinessUnitSettings" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UpdateBusinessUnitSettings() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateBusinessUnitSettings" /> class.
         /// </summary>
@@ -131,45 +101,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The time zone for this business unit, using the Olsen tz database format
         /// </summary>
         /// <value>The time zone for this business unit, using the Olsen tz database format</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Short term forecasting settings
         /// </summary>
         /// <value>Short term forecasting settings</value>
         [DataMember(Name="shortTermForecasting", EmitDefaultValue=false)]
         public BuShortTermForecastingSettings ShortTermForecasting { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Scheduling settings
         /// </summary>
         /// <value>Scheduling settings</value>
         [DataMember(Name="scheduling", EmitDefaultValue=false)]
         public BuSchedulingSettings Scheduling { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version metadata for this business unit
         /// </summary>
         /// <value>Version metadata for this business unit</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -178,7 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UpdateBusinessUnitSettings {\n");
-            
+
             sb.Append("  StartDayOfWeek: ").Append(StartDayOfWeek).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  ShortTermForecasting: ").Append(ShortTermForecasting).Append("\n");
@@ -262,22 +232,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartDayOfWeek != null)
                     hash = hash * 59 + this.StartDayOfWeek.GetHashCode();
-                
+
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
+
                 if (this.ShortTermForecasting != null)
                     hash = hash * 59 + this.ShortTermForecasting.GetHashCode();
-                
+
                 if (this.Scheduling != null)
                     hash = hash * 59 + this.Scheduling.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

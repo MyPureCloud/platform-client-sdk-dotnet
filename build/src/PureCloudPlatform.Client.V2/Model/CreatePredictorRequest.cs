@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreatePredictorRequest :  IEquatable<CreatePredictorRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatePredictorRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreatePredictorRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatePredictorRequest" /> class.
         /// </summary>
@@ -70,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The queue IDs associated with the predictor.
         /// </summary>
         /// <value>The queue IDs associated with the predictor.</value>
         [DataMember(Name="queueIds", EmitDefaultValue=false)]
         public List<string> QueueIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The KPI that the predictor attempts to maximize/minimize.
         /// </summary>
         /// <value>The KPI that the predictor attempts to maximize/minimize.</value>
         [DataMember(Name="kpi", EmitDefaultValue=false)]
         public string Kpi { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of seconds allocated to predictive routing before attempting a different routing method. This is a value between 12 and 900 seconds.
         /// </summary>
         /// <value>Number of seconds allocated to predictive routing before attempting a different routing method. This is a value between 12 and 900 seconds.</value>
         [DataMember(Name="routingTimeoutSeconds", EmitDefaultValue=false)]
         public int? RoutingTimeoutSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The predictor schedule that determines when the predictor is used for routing interactions.
         /// </summary>
         /// <value>The predictor schedule that determines when the predictor is used for routing interactions.</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public PredictorSchedule Schedule { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The predictor balancing configuration to enable workload balancing
         /// </summary>
         /// <value>The predictor balancing configuration to enable workload balancing</value>
         [DataMember(Name="workloadBalancingConfig", EmitDefaultValue=false)]
         public PredictorWorkloadBalancing WorkloadBalancingConfig { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreatePredictorRequest {\n");
-            
+
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
             sb.Append("  Kpi: ").Append(Kpi).Append("\n");
             sb.Append("  RoutingTimeoutSeconds: ").Append(RoutingTimeoutSeconds).Append("\n");
@@ -208,22 +180,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QueueIds != null)
                     hash = hash * 59 + this.QueueIds.GetHashCode();
-                
+
                 if (this.Kpi != null)
                     hash = hash * 59 + this.Kpi.GetHashCode();
-                
+
                 if (this.RoutingTimeoutSeconds != null)
                     hash = hash * 59 + this.RoutingTimeoutSeconds.GetHashCode();
-                
+
                 if (this.Schedule != null)
                     hash = hash * 59 + this.Schedule.GetHashCode();
-                
+
                 if (this.WorkloadBalancingConfig != null)
                     hash = hash * 59 + this.WorkloadBalancingConfig.GetHashCode();
-                
+
                 return hash;
             }
         }

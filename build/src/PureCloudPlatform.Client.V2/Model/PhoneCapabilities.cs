@@ -18,31 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PhoneCapabilities :  IEquatable<PhoneCapabilities>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaCodecs
         /// </summary>
@@ -58,61 +33,35 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Audioopus for "audio/opus"
+            /// Enum Opus for "audio/opus"
             /// </summary>
             [EnumMember(Value = "audio/opus")]
-            Audioopus,
+            Opus,
             
             /// <summary>
-            /// Enum Audiopcmu for "audio/pcmu"
+            /// Enum Pcmu for "audio/pcmu"
             /// </summary>
             [EnumMember(Value = "audio/pcmu")]
-            Audiopcmu,
+            Pcmu,
             
             /// <summary>
-            /// Enum Audiopcma for "audio/pcma"
+            /// Enum Pcma for "audio/pcma"
             /// </summary>
             [EnumMember(Value = "audio/pcma")]
-            Audiopcma,
+            Pcma,
             
             /// <summary>
-            /// Enum Audiog729 for "audio/g729"
+            /// Enum G729 for "audio/g729"
             /// </summary>
             [EnumMember(Value = "audio/g729")]
-            Audiog729,
+            G729,
             
             /// <summary>
-            /// Enum Audiog722 for "audio/g722"
+            /// Enum G722 for "audio/g722"
             /// </summary>
             [EnumMember(Value = "audio/g722")]
-            Audiog722
+            G722
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneCapabilities" /> class.
         /// </summary>
@@ -139,79 +88,79 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Provisions
         /// </summary>
         [DataMember(Name="provisions", EmitDefaultValue=false)]
         public bool? Provisions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Registers
         /// </summary>
         [DataMember(Name="registers", EmitDefaultValue=false)]
         public bool? Registers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DualRegisters
         /// </summary>
         [DataMember(Name="dualRegisters", EmitDefaultValue=false)]
         public bool? DualRegisters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets HardwareIdType
         /// </summary>
         [DataMember(Name="hardwareIdType", EmitDefaultValue=false)]
         public string HardwareIdType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AllowReboot
         /// </summary>
         [DataMember(Name="allowReboot", EmitDefaultValue=false)]
         public bool? AllowReboot { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NoRebalance
         /// </summary>
         [DataMember(Name="noRebalance", EmitDefaultValue=false)]
         public bool? NoRebalance { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NoCloudProvisioning
         /// </summary>
         [DataMember(Name="noCloudProvisioning", EmitDefaultValue=false)]
         public bool? NoCloudProvisioning { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MediaCodecs
         /// </summary>
         [DataMember(Name="mediaCodecs", EmitDefaultValue=false)]
         public List<MediaCodecsEnum> MediaCodecs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Cdm
         /// </summary>
         [DataMember(Name="cdm", EmitDefaultValue=false)]
         public bool? Cdm { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -220,7 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneCapabilities {\n");
-            
+
             sb.Append("  Provisions: ").Append(Provisions).Append("\n");
             sb.Append("  Registers: ").Append(Registers).Append("\n");
             sb.Append("  DualRegisters: ").Append(DualRegisters).Append("\n");
@@ -328,34 +277,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Provisions != null)
                     hash = hash * 59 + this.Provisions.GetHashCode();
-                
+
                 if (this.Registers != null)
                     hash = hash * 59 + this.Registers.GetHashCode();
-                
+
                 if (this.DualRegisters != null)
                     hash = hash * 59 + this.DualRegisters.GetHashCode();
-                
+
                 if (this.HardwareIdType != null)
                     hash = hash * 59 + this.HardwareIdType.GetHashCode();
-                
+
                 if (this.AllowReboot != null)
                     hash = hash * 59 + this.AllowReboot.GetHashCode();
-                
+
                 if (this.NoRebalance != null)
                     hash = hash * 59 + this.NoRebalance.GetHashCode();
-                
+
                 if (this.NoCloudProvisioning != null)
                     hash = hash * 59 + this.NoCloudProvisioning.GetHashCode();
-                
+
                 if (this.MediaCodecs != null)
                     hash = hash * 59 + this.MediaCodecs.GetHashCode();
-                
+
                 if (this.Cdm != null)
                     hash = hash * 59 + this.Cdm.GetHashCode();
-                
+
                 return hash;
             }
         }

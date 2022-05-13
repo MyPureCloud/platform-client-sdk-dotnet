@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuForecastTimeSeriesResult :  IEquatable<BuForecastTimeSeriesResult>
     {
-        
-        
         /// <summary>
         /// The metric this result applies to
         /// </summary>
@@ -47,10 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AverageHandleTimeSeconds")]
             Averagehandletimeseconds
         }
-        
-        
-        
-        
         /// <summary>
         /// The forecasting method that was used for this metric
         /// </summary>
@@ -222,10 +216,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Other")]
             Other
         }
-        
-        
-        
-        
         /// <summary>
         /// The forecasting type in this forecast result
         /// </summary>
@@ -253,38 +243,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ShortTerm")]
             Shortterm
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// The metric this result applies to
         /// </summary>
         /// <value>The metric this result applies to</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
-        
-        
-        
         /// <summary>
         /// The forecasting method that was used for this metric
         /// </summary>
         /// <value>The forecasting method that was used for this metric</value>
         [DataMember(Name="forecastingMethod", EmitDefaultValue=false)]
         public ForecastingMethodEnum? ForecastingMethod { get; set; }
-        
-        
-        
         /// <summary>
         /// The forecasting type in this forecast result
         /// </summary>
         /// <value>The forecasting type in this forecast result</value>
         [DataMember(Name="forecastType", EmitDefaultValue=false)]
         public ForecastTypeEnum? ForecastType { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuForecastTimeSeriesResult" /> class.
         /// </summary>
@@ -299,13 +275,13 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -314,7 +290,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuForecastTimeSeriesResult {\n");
-            
+
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  ForecastingMethod: ").Append(ForecastingMethod).Append("\n");
             sb.Append("  ForecastType: ").Append(ForecastType).Append("\n");
@@ -386,16 +362,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 if (this.ForecastingMethod != null)
                     hash = hash * 59 + this.ForecastingMethod.GetHashCode();
-                
+
                 if (this.ForecastType != null)
                     hash = hash * 59 + this.ForecastType.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConnectedEdge :  IEquatable<ConnectedEdge>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConnectedEdge" /> class.
         /// </summary>
@@ -63,59 +30,59 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Edge interface name used for the connection
         /// </summary>
         /// <value>Edge interface name used for the connection</value>
         [DataMember(Name="interfaceName", EmitDefaultValue=false)]
         public string InterfaceName { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Edge interface IP address
         /// </summary>
         /// <value>Edge interface IP address</value>
         [DataMember(Name="interfaceIpAddress", EmitDefaultValue=false)]
         public string InterfaceIpAddress { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EdgeConnectionList
         /// </summary>
         [DataMember(Name="edgeConnectionList", EmitDefaultValue=false)]
         public List<EdgeConnectionInfo> EdgeConnectionList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConnectedEdge {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  InterfaceName: ").Append(InterfaceName).Append("\n");
@@ -214,25 +181,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.InterfaceName != null)
                     hash = hash * 59 + this.InterfaceName.GetHashCode();
-                
+
                 if (this.InterfaceIpAddress != null)
                     hash = hash * 59 + this.InterfaceIpAddress.GetHashCode();
-                
+
                 if (this.EdgeConnectionList != null)
                     hash = hash * 59 + this.EdgeConnectionList.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RoutePathRequest :  IEquatable<RoutePathRequest>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The media type of the given queue to associate with the route path
         /// </summary>
@@ -68,43 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Message")]
             Message
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The media type of the given queue to associate with the route path
         /// </summary>
         /// <value>The media type of the given queue to associate with the route path</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutePathRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected RoutePathRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutePathRequest" /> class.
         /// </summary>
@@ -123,45 +93,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the queue to associate with the route path
         /// </summary>
         /// <value>The ID of the queue to associate with the route path</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The ID of the language to associate with the route path
         /// </summary>
         /// <value>The ID of the language to associate with the route path</value>
         [DataMember(Name="languageId", EmitDefaultValue=false)]
         public string LanguageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The set of skill IDs to associate with the route path
         /// </summary>
         /// <value>The set of skill IDs to associate with the route path</value>
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
         public List<string> SkillIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The planning group from which to take route paths. This property is only needed if a route path already exists in another planning group.Note that taking a route path from another planning group will modify the other planning group
         /// </summary>
         /// <value>The planning group from which to take route paths. This property is only needed if a route path already exists in another planning group.Note that taking a route path from another planning group will modify the other planning group</value>
         [DataMember(Name="sourcePlanningGroup", EmitDefaultValue=false)]
         public SourcePlanningGroupRequest SourcePlanningGroup { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -170,7 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RoutePathRequest {\n");
-            
+
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
@@ -254,22 +224,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.LanguageId != null)
                     hash = hash * 59 + this.LanguageId.GetHashCode();
-                
+
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();
-                
+
                 if (this.SourcePlanningGroup != null)
                     hash = hash * 59 + this.SourcePlanningGroup.GetHashCode();
-                
+
                 return hash;
             }
         }

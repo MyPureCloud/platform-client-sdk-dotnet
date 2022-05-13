@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ShiftTradeSettings :  IEquatable<ShiftTradeSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// How to handle shift trades which involve unequal paid times
         /// </summary>
@@ -65,10 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AdminReview")]
             Adminreview
         }
-        
-        
-        
-        
         /// <summary>
         /// How to handle one-sided shift trades
         /// </summary>
@@ -102,10 +84,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AdminReview")]
             Adminreview
         }
-        
-        
-        
-        
         /// <summary>
         /// How to handle shift trades which result in violations of weekly minimum paid time constraint
         /// </summary>
@@ -139,10 +117,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AdminReview")]
             Adminreview
         }
-        
-        
-        
-        
         /// <summary>
         /// How to handle shift trades which result in violations of weekly maximum paid time constraint
         /// </summary>
@@ -176,80 +150,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AdminReview")]
             Adminreview
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// How to handle shift trades which involve unequal paid times
         /// </summary>
         /// <value>How to handle shift trades which involve unequal paid times</value>
         [DataMember(Name="unequalPaid", EmitDefaultValue=false)]
         public UnequalPaidEnum? UnequalPaid { get; set; }
-        
-        
-        
         /// <summary>
         /// How to handle one-sided shift trades
         /// </summary>
         /// <value>How to handle one-sided shift trades</value>
         [DataMember(Name="oneSided", EmitDefaultValue=false)]
         public OneSidedEnum? OneSided { get; set; }
-        
-        
-        
         /// <summary>
         /// How to handle shift trades which result in violations of weekly minimum paid time constraint
         /// </summary>
         /// <value>How to handle shift trades which result in violations of weekly minimum paid time constraint</value>
         [DataMember(Name="weeklyMinPaidViolations", EmitDefaultValue=false)]
         public WeeklyMinPaidViolationsEnum? WeeklyMinPaidViolations { get; set; }
-        
-        
-        
         /// <summary>
         /// How to handle shift trades which result in violations of weekly maximum paid time constraint
         /// </summary>
         /// <value>How to handle shift trades which result in violations of weekly maximum paid time constraint</value>
         [DataMember(Name="weeklyMaxPaidViolations", EmitDefaultValue=false)]
         public WeeklyMaxPaidViolationsEnum? WeeklyMaxPaidViolations { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradeSettings" /> class.
         /// </summary>
@@ -284,96 +208,96 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether shift trading is enabled for this management unit
         /// </summary>
         /// <value>Whether shift trading is enabled for this management unit</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether automatic shift trade review is enabled according to the rules defined in for this management unit
         /// </summary>
         /// <value>Whether automatic shift trade review is enabled according to the rules defined in for this management unit</value>
         [DataMember(Name="autoReview", EmitDefaultValue=false)]
         public bool? AutoReview { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether direct shift trades between agents are allowed
         /// </summary>
         /// <value>Whether direct shift trades between agents are allowed</value>
         [DataMember(Name="allowDirectTrades", EmitDefaultValue=false)]
         public bool? AllowDirectTrades { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The minimum number of hours in the future shift trades are allowed
         /// </summary>
         /// <value>The minimum number of hours in the future shift trades are allowed</value>
         [DataMember(Name="minHoursInFuture", EmitDefaultValue=false)]
         public int? MinHoursInFuture { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Whether to constrain shift trades to agents with matching queues
         /// </summary>
         /// <value>Whether to constrain shift trades to agents with matching queues</value>
         [DataMember(Name="requiresMatchingQueues", EmitDefaultValue=false)]
         public bool? RequiresMatchingQueues { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to constrain shift trades to agents with matching languages
         /// </summary>
         /// <value>Whether to constrain shift trades to agents with matching languages</value>
         [DataMember(Name="requiresMatchingLanguages", EmitDefaultValue=false)]
         public bool? RequiresMatchingLanguages { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to constrain shift trades to agents with matching skills
         /// </summary>
         /// <value>Whether to constrain shift trades to agents with matching skills</value>
         [DataMember(Name="requiresMatchingSkills", EmitDefaultValue=false)]
         public bool? RequiresMatchingSkills { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to constrain shift trades to agents with matching planning groups
         /// </summary>
         /// <value>Whether to constrain shift trades to agents with matching planning groups</value>
         [DataMember(Name="requiresMatchingPlanningGroups", EmitDefaultValue=false)]
         public bool? RequiresMatchingPlanningGroups { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Rules that specify what to do with activity categories that are part of a shift defined in a trade
         /// </summary>
         /// <value>Rules that specify what to do with activity categories that are part of a shift defined in a trade</value>
         [DataMember(Name="activityCategoryRules", EmitDefaultValue=false)]
         public List<ShiftTradeActivityRule> ActivityCategoryRules { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -382,7 +306,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ShiftTradeSettings {\n");
-            
+
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  AutoReview: ").Append(AutoReview).Append("\n");
             sb.Append("  AllowDirectTrades: ").Append(AllowDirectTrades).Append("\n");
@@ -514,46 +438,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.AutoReview != null)
                     hash = hash * 59 + this.AutoReview.GetHashCode();
-                
+
                 if (this.AllowDirectTrades != null)
                     hash = hash * 59 + this.AllowDirectTrades.GetHashCode();
-                
+
                 if (this.MinHoursInFuture != null)
                     hash = hash * 59 + this.MinHoursInFuture.GetHashCode();
-                
+
                 if (this.UnequalPaid != null)
                     hash = hash * 59 + this.UnequalPaid.GetHashCode();
-                
+
                 if (this.OneSided != null)
                     hash = hash * 59 + this.OneSided.GetHashCode();
-                
+
                 if (this.WeeklyMinPaidViolations != null)
                     hash = hash * 59 + this.WeeklyMinPaidViolations.GetHashCode();
-                
+
                 if (this.WeeklyMaxPaidViolations != null)
                     hash = hash * 59 + this.WeeklyMaxPaidViolations.GetHashCode();
-                
+
                 if (this.RequiresMatchingQueues != null)
                     hash = hash * 59 + this.RequiresMatchingQueues.GetHashCode();
-                
+
                 if (this.RequiresMatchingLanguages != null)
                     hash = hash * 59 + this.RequiresMatchingLanguages.GetHashCode();
-                
+
                 if (this.RequiresMatchingSkills != null)
                     hash = hash * 59 + this.RequiresMatchingSkills.GetHashCode();
-                
+
                 if (this.RequiresMatchingPlanningGroups != null)
                     hash = hash * 59 + this.RequiresMatchingPlanningGroups.GetHashCode();
-                
+
                 if (this.ActivityCategoryRules != null)
                     hash = hash * 59 + this.ActivityCategoryRules.GetHashCode();
-                
+
                 return hash;
             }
         }

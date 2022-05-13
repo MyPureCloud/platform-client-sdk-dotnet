@@ -18,13 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FlowObservationQuery :  IEquatable<FlowObservationQuery>
     {
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Metrics
         /// </summary>
@@ -45,12 +38,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "oFlow")]
             Oflow
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets DetailMetrics
         /// </summary>
@@ -71,23 +58,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "oFlow")]
             Oflow
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowObservationQuery" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected FlowObservationQuery() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowObservationQuery" /> class.
         /// </summary>
@@ -102,34 +78,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Filter to return a subset of observations. Expresses boolean logical predicates as well as dimensional filters
         /// </summary>
         /// <value>Filter to return a subset of observations. Expresses boolean logical predicates as well as dimensional filters</value>
         [DataMember(Name="filter", EmitDefaultValue=false)]
         public FlowObservationQueryFilter Filter { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Behaves like a SQL SELECT clause. Only named metrics will be retrieved.
         /// </summary>
         /// <value>Behaves like a SQL SELECT clause. Only named metrics will be retrieved.</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
         public List<MetricsEnum> Metrics { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Metrics for which to include additional detailed observations
         /// </summary>
         /// <value>Metrics for which to include additional detailed observations</value>
         [DataMember(Name="detailMetrics", EmitDefaultValue=false)]
         public List<DetailMetricsEnum> DetailMetrics { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -138,7 +114,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FlowObservationQuery {\n");
-            
+
             sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
             sb.Append("  DetailMetrics: ").Append(DetailMetrics).Append("\n");
@@ -210,16 +186,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Filter != null)
                     hash = hash * 59 + this.Filter.GetHashCode();
-                
+
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
-                
+
                 if (this.DetailMetrics != null)
                     hash = hash * 59 + this.DetailMetrics.GetHashCode();
-                
+
                 return hash;
             }
         }

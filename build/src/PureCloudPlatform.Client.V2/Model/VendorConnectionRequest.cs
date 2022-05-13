@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class VendorConnectionRequest :  IEquatable<VendorConnectionRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="VendorConnectionRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected VendorConnectionRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="VendorConnectionRequest" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Publisher of the integration or connector who registered the new connection. Typically, inin.
         /// </summary>
         /// <value>Publisher of the integration or connector who registered the new connection. Typically, inin.</value>
         [DataMember(Name="publisher", EmitDefaultValue=false)]
         public string Publisher { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Integration or connector type that registered the new connection. Example, wfm-rta-integration
         /// </summary>
         /// <value>Integration or connector type that registered the new connection. Example, wfm-rta-integration</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of the integration or connector instance that registered the new connection. Example, my-wfm
         /// </summary>
         /// <value>Name of the integration or connector instance that registered the new connection. Example, my-wfm</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VendorConnectionRequest {\n");
-            
+
             sb.Append("  Publisher: ").Append(Publisher).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Publisher != null)
                     hash = hash * 59 + this.Publisher.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 return hash;
             }
         }

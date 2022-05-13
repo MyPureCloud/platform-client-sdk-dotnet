@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ForecastPlanningGroupData :  IEquatable<ForecastPlanningGroupData>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ForecastPlanningGroupData" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ForecastPlanningGroupData() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ForecastPlanningGroupData" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the planning group to which this data applies. Note this is a snapshot of the planning group at the time of forecast creation and may not correspond to the current configuration
         /// </summary>
         /// <value>The ID of the planning group to which this data applies. Note this is a snapshot of the planning group at the time of forecast creation and may not correspond to the current configuration</value>
         [DataMember(Name="planningGroupId", EmitDefaultValue=false)]
         public string PlanningGroupId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Forecast offered counts per 15 minute interval for this week of the forecast
         /// </summary>
         /// <value>Forecast offered counts per 15 minute interval for this week of the forecast</value>
         [DataMember(Name="offeredPerInterval", EmitDefaultValue=false)]
         public List<double?> OfferedPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Forecast average handle time per 15 minute interval in seconds
         /// </summary>
         /// <value>Forecast average handle time per 15 minute interval in seconds</value>
         [DataMember(Name="averageHandleTimeSecondsPerInterval", EmitDefaultValue=false)]
         public List<double?> AverageHandleTimeSecondsPerInterval { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ForecastPlanningGroupData {\n");
-            
+
             sb.Append("  PlanningGroupId: ").Append(PlanningGroupId).Append("\n");
             sb.Append("  OfferedPerInterval: ").Append(OfferedPerInterval).Append("\n");
             sb.Append("  AverageHandleTimeSecondsPerInterval: ").Append(AverageHandleTimeSecondsPerInterval).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PlanningGroupId != null)
                     hash = hash * 59 + this.PlanningGroupId.GetHashCode();
-                
+
                 if (this.OfferedPerInterval != null)
                     hash = hash * 59 + this.OfferedPerInterval.GetHashCode();
-                
+
                 if (this.AverageHandleTimeSecondsPerInterval != null)
                     hash = hash * 59 + this.AverageHandleTimeSecondsPerInterval.GetHashCode();
-                
+
                 return hash;
             }
         }

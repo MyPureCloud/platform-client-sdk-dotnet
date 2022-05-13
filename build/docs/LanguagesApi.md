@@ -29,6 +29,8 @@ Delete Language (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
 
+
+
 Requires ANY permissions: 
 
 * routing:skill:manage
@@ -157,6 +159,8 @@ Get language (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
 
+
+
 Requires ANY permissions: 
 
 * routing:skill:manage
@@ -221,6 +225,8 @@ namespace Example
 Get the list of supported languages. (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages
+
+
 
 Requires ANY permissions: 
 
@@ -607,6 +613,8 @@ namespace Example
 Create Language (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages
+
+
 
 Requires ANY permissions: 
 

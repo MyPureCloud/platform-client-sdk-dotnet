@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EmailMediaPolicy :  IEquatable<EmailMediaPolicy>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailMediaPolicy" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Actions applied when specified conditions are met
         /// </summary>
         /// <value>Actions applied when specified conditions are met</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public PolicyActions Actions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Conditions for when actions should be applied
         /// </summary>
         /// <value>Conditions for when actions should be applied</value>
         [DataMember(Name="conditions", EmitDefaultValue=false)]
         public EmailMediaPolicyConditions Conditions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EmailMediaPolicy {\n");
-            
+
             sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
+
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
-                
+
                 return hash;
             }
         }

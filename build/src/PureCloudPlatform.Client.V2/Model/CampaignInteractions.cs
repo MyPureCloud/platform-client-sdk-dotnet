@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignInteractions :  IEquatable<CampaignInteractions>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignInteractions" /> class.
         /// </summary>
@@ -71,55 +38,55 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Campaign
         /// </summary>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
         public DomainEntityRef Campaign { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PendingInteractions
         /// </summary>
         [DataMember(Name="pendingInteractions", EmitDefaultValue=false)]
         public List<CampaignInteraction> PendingInteractions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ProceedingInteractions
         /// </summary>
         [DataMember(Name="proceedingInteractions", EmitDefaultValue=false)]
         public List<CampaignInteraction> ProceedingInteractions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PreviewingInteractions
         /// </summary>
         [DataMember(Name="previewingInteractions", EmitDefaultValue=false)]
         public List<CampaignInteraction> PreviewingInteractions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets InteractingInteractions
         /// </summary>
         [DataMember(Name="interactingInteractions", EmitDefaultValue=false)]
         public List<CampaignInteraction> InteractingInteractions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ScheduledInteractions
         /// </summary>
         [DataMember(Name="scheduledInteractions", EmitDefaultValue=false)]
         public List<CampaignInteraction> ScheduledInteractions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignInteractions {\n");
-            
+
             sb.Append("  Campaign: ").Append(Campaign).Append("\n");
             sb.Append("  PendingInteractions: ").Append(PendingInteractions).Append("\n");
             sb.Append("  ProceedingInteractions: ").Append(ProceedingInteractions).Append("\n");
@@ -218,25 +185,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Campaign != null)
                     hash = hash * 59 + this.Campaign.GetHashCode();
-                
+
                 if (this.PendingInteractions != null)
                     hash = hash * 59 + this.PendingInteractions.GetHashCode();
-                
+
                 if (this.ProceedingInteractions != null)
                     hash = hash * 59 + this.ProceedingInteractions.GetHashCode();
-                
+
                 if (this.PreviewingInteractions != null)
                     hash = hash * 59 + this.PreviewingInteractions.GetHashCode();
-                
+
                 if (this.InteractingInteractions != null)
                     hash = hash * 59 + this.InteractingInteractions.GetHashCode();
-                
+
                 if (this.ScheduledInteractions != null)
                     hash = hash * 59 + this.ScheduledInteractions.GetHashCode();
-                
+
                 return hash;
             }
         }

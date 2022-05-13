@@ -18,26 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate :  IEquatable<WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -76,10 +56,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CANCELED")]
             Canceled
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Substatus
         /// </summary>
@@ -130,89 +106,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Waitlisted")]
             Waitlisted
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets Substatus
         /// </summary>
         [DataMember(Name="substatus", EmitDefaultValue=false)]
         public SubstatusEnum? Substatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate" /> class.
         /// </summary>
@@ -257,139 +160,139 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public WfmTimeOffRequestUpdateTopicUserReference User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IsFullDayRequest
         /// </summary>
         [DataMember(Name="isFullDayRequest", EmitDefaultValue=false)]
         public bool? IsFullDayRequest { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MarkedAsRead
         /// </summary>
         [DataMember(Name="markedAsRead", EmitDefaultValue=false)]
         public bool? MarkedAsRead { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActivityCodeId
         /// </summary>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Paid
         /// </summary>
         [DataMember(Name="paid", EmitDefaultValue=false)]
         public bool? Paid { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Gets or Sets PartialDayStartDateTimes
         /// </summary>
         [DataMember(Name="partialDayStartDateTimes", EmitDefaultValue=false)]
         public List<string> PartialDayStartDateTimes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FullDayManagementUnitDates
         /// </summary>
         [DataMember(Name="fullDayManagementUnitDates", EmitDefaultValue=false)]
         public List<string> FullDayManagementUnitDates { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DailyDurationMinutes
         /// </summary>
         [DataMember(Name="dailyDurationMinutes", EmitDefaultValue=false)]
         public int? DailyDurationMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Notes
         /// </summary>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ReviewedDate
         /// </summary>
         [DataMember(Name="reviewedDate", EmitDefaultValue=false)]
         public string ReviewedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ReviewedBy
         /// </summary>
         [DataMember(Name="reviewedBy", EmitDefaultValue=false)]
         public string ReviewedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SubmittedDate
         /// </summary>
         [DataMember(Name="submittedDate", EmitDefaultValue=false)]
         public string SubmittedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SubmittedBy
         /// </summary>
         [DataMember(Name="submittedBy", EmitDefaultValue=false)]
         public string SubmittedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ModifiedDate
         /// </summary>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public string ModifiedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -398,7 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  IsFullDayRequest: ").Append(IsFullDayRequest).Append("\n");
@@ -560,61 +463,60 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.IsFullDayRequest != null)
                     hash = hash * 59 + this.IsFullDayRequest.GetHashCode();
-                
+
                 if (this.MarkedAsRead != null)
                     hash = hash * 59 + this.MarkedAsRead.GetHashCode();
-                
+
                 if (this.ActivityCodeId != null)
                     hash = hash * 59 + this.ActivityCodeId.GetHashCode();
-                
+
                 if (this.Paid != null)
                     hash = hash * 59 + this.Paid.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Substatus != null)
                     hash = hash * 59 + this.Substatus.GetHashCode();
-                
+
                 if (this.PartialDayStartDateTimes != null)
                     hash = hash * 59 + this.PartialDayStartDateTimes.GetHashCode();
-                
+
                 if (this.FullDayManagementUnitDates != null)
                     hash = hash * 59 + this.FullDayManagementUnitDates.GetHashCode();
-                
+
                 if (this.DailyDurationMinutes != null)
                     hash = hash * 59 + this.DailyDurationMinutes.GetHashCode();
-                
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 if (this.ReviewedDate != null)
                     hash = hash * 59 + this.ReviewedDate.GetHashCode();
-                
+
                 if (this.ReviewedBy != null)
                     hash = hash * 59 + this.ReviewedBy.GetHashCode();
-                
+
                 if (this.SubmittedDate != null)
                     hash = hash * 59 + this.SubmittedDate.GetHashCode();
-                
+
                 if (this.SubmittedBy != null)
                     hash = hash * 59 + this.SubmittedBy.GetHashCode();
-                
+
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
+
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
+
                 return hash;
             }
         }

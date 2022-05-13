@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AutomaticTimeZoneMappingSettings :  IEquatable<AutomaticTimeZoneMappingSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AutomaticTimeZoneMappingSettings" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The time intervals to use for automatic time zone mapping.
         /// </summary>
         /// <value>The time intervals to use for automatic time zone mapping.</value>
         [DataMember(Name="callableWindows", EmitDefaultValue=false)]
         public List<CallableWindow> CallableWindows { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The countries that are supported for automatic time zone mapping.
         /// </summary>
         /// <value>The countries that are supported for automatic time zone mapping.</value>
         [DataMember(Name="supportedCountries", EmitDefaultValue=false)]
         public List<string> SupportedCountries { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AutomaticTimeZoneMappingSettings {\n");
-            
+
             sb.Append("  CallableWindows: ").Append(CallableWindows).Append("\n");
             sb.Append("  SupportedCountries: ").Append(SupportedCountries).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CallableWindows != null)
                     hash = hash * 59 + this.CallableWindows.GetHashCode();
-                
+
                 if (this.SupportedCountries != null)
                     hash = hash * 59 + this.SupportedCountries.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MergeOperation :  IEquatable<MergeOperation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MergeOperation" /> class.
         /// </summary>
@@ -44,34 +26,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The source contact for the merge operation
         /// </summary>
         /// <value>The source contact for the merge operation</value>
         [DataMember(Name="sourceContact", EmitDefaultValue=false)]
         public AddressableEntityRef SourceContact { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The target contact for the merge operation
         /// </summary>
         /// <value>The target contact for the merge operation</value>
         [DataMember(Name="targetContact", EmitDefaultValue=false)]
         public AddressableEntityRef TargetContact { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The contact created as a result of the merge operation
         /// </summary>
         /// <value>The contact created as a result of the merge operation</value>
         [DataMember(Name="resultingContact", EmitDefaultValue=false)]
         public AddressableEntityRef ResultingContact { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MergeOperation {\n");
-            
+
             sb.Append("  SourceContact: ").Append(SourceContact).Append("\n");
             sb.Append("  TargetContact: ").Append(TargetContact).Append("\n");
             sb.Append("  ResultingContact: ").Append(ResultingContact).Append("\n");
@@ -152,16 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SourceContact != null)
                     hash = hash * 59 + this.SourceContact.GetHashCode();
-                
+
                 if (this.TargetContact != null)
                     hash = hash * 59 + this.TargetContact.GetHashCode();
-                
+
                 if (this.ResultingContact != null)
                     hash = hash * 59 + this.ResultingContact.GetHashCode();
-                
+
                 return hash;
             }
         }

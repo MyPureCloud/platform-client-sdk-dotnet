@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DomainPhysicalCapabilities :  IEquatable<DomainPhysicalCapabilities>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPhysicalCapabilities" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Vlan
         /// </summary>
         [DataMember(Name="vlan", EmitDefaultValue=false)]
         public bool? Vlan { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Team
         /// </summary>
         [DataMember(Name="team", EmitDefaultValue=false)]
         public bool? Team { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DomainPhysicalCapabilities {\n");
-            
+
             sb.Append("  Vlan: ").Append(Vlan).Append("\n");
             sb.Append("  Team: ").Append(Team).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Vlan != null)
                     hash = hash * 59 + this.Vlan.GetHashCode();
-                
+
                 if (this.Team != null)
                     hash = hash * 59 + this.Team.GetHashCode();
-                
+
                 return hash;
             }
         }

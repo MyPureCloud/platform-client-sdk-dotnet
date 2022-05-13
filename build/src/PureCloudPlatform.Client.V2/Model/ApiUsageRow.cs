@@ -18,74 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ApiUsageRow :  IEquatable<ApiUsageRow>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiUsageRow" /> class.
         /// </summary>
@@ -120,124 +52,124 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Client Id associated with this query result
         /// </summary>
         /// <value>Client Id associated with this query result</value>
         [DataMember(Name="clientId", EmitDefaultValue=false)]
         public string ClientId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Client Name associated with this query result
         /// </summary>
         /// <value>Client Name associated with this query result</value>
         [DataMember(Name="clientName", EmitDefaultValue=false)]
         public string ClientName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Organization Id associated with this query result
         /// </summary>
         /// <value>Organization Id associated with this query result</value>
         [DataMember(Name="organizationId", EmitDefaultValue=false)]
         public string OrganizationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User Id associated with this query result
         /// </summary>
         /// <value>User Id associated with this query result</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Template Uri associated with this query result
         /// </summary>
         /// <value>Template Uri associated with this query result</value>
         [DataMember(Name="templateUri", EmitDefaultValue=false)]
         public string TemplateUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// HTTP Method associated with this query result
         /// </summary>
         /// <value>HTTP Method associated with this query result</value>
         [DataMember(Name="httpMethod", EmitDefaultValue=false)]
         public string HttpMethod { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of requests resulting in a 2xx HTTP status code
         /// </summary>
         /// <value>Number of requests resulting in a 2xx HTTP status code</value>
         [DataMember(Name="status200", EmitDefaultValue=false)]
         public long? Status200 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of requests resulting in a 3xx HTTP status code
         /// </summary>
         /// <value>Number of requests resulting in a 3xx HTTP status code</value>
         [DataMember(Name="status300", EmitDefaultValue=false)]
         public long? Status300 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of requests resulting in a 4xx HTTP status code
         /// </summary>
         /// <value>Number of requests resulting in a 4xx HTTP status code</value>
         [DataMember(Name="status400", EmitDefaultValue=false)]
         public long? Status400 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of requests resulting in a 5xx HTTP status code
         /// </summary>
         /// <value>Number of requests resulting in a 5xx HTTP status code</value>
         [DataMember(Name="status500", EmitDefaultValue=false)]
         public long? Status500 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of requests resulting in a 429 HTTP status code, this is a subset of the count returned with status400
         /// </summary>
         /// <value>Number of requests resulting in a 429 HTTP status code, this is a subset of the count returned with status400</value>
         [DataMember(Name="status429", EmitDefaultValue=false)]
         public long? Status429 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total number of requests
         /// </summary>
         /// <value>Total number of requests</value>
         [DataMember(Name="requests", EmitDefaultValue=false)]
         public long? Requests { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date of requests, based on granularity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date of requests, based on granularity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public DateTime? Date { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -246,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ApiUsageRow {\n");
-            
+
             sb.Append("  ClientId: ").Append(ClientId).Append("\n");
             sb.Append("  ClientName: ").Append(ClientName).Append("\n");
             sb.Append("  OrganizationId: ").Append(OrganizationId).Append("\n");
@@ -378,46 +310,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ClientId != null)
                     hash = hash * 59 + this.ClientId.GetHashCode();
-                
+
                 if (this.ClientName != null)
                     hash = hash * 59 + this.ClientName.GetHashCode();
-                
+
                 if (this.OrganizationId != null)
                     hash = hash * 59 + this.OrganizationId.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.TemplateUri != null)
                     hash = hash * 59 + this.TemplateUri.GetHashCode();
-                
+
                 if (this.HttpMethod != null)
                     hash = hash * 59 + this.HttpMethod.GetHashCode();
-                
+
                 if (this.Status200 != null)
                     hash = hash * 59 + this.Status200.GetHashCode();
-                
+
                 if (this.Status300 != null)
                     hash = hash * 59 + this.Status300.GetHashCode();
-                
+
                 if (this.Status400 != null)
                     hash = hash * 59 + this.Status400.GetHashCode();
-                
+
                 if (this.Status500 != null)
                     hash = hash * 59 + this.Status500.GetHashCode();
-                
+
                 if (this.Status429 != null)
                     hash = hash * 59 + this.Status429.GetHashCode();
-                
+
                 if (this.Requests != null)
                     hash = hash * 59 + this.Requests.GetHashCode();
-                
+
                 if (this.Date != null)
                     hash = hash * 59 + this.Date.GetHashCode();
-                
+
                 return hash;
             }
         }

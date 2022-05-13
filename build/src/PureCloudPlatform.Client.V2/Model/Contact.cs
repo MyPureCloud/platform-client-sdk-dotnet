@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Contact :  IEquatable<Contact>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
@@ -58,10 +50,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SMS")]
             Sms
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -130,46 +118,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OTHER")]
             Other
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Contact" /> class.
         /// </summary>
@@ -190,55 +148,55 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Email address or phone number for this contact type
         /// </summary>
         /// <value>Email address or phone number for this contact type</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Formatted version of the address property
         /// </summary>
         /// <value>Formatted version of the address property</value>
         [DataMember(Name="display", EmitDefaultValue=false)]
         public string Display { get; private set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Use internal extension instead of address. Mutually exclusive with the address field.
         /// </summary>
         /// <value>Use internal extension instead of address. Mutually exclusive with the address field.</value>
         [DataMember(Name="extension", EmitDefaultValue=false)]
         public string Extension { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CountryCode
         /// </summary>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Integration tag value if this number is associated with an external integration.
         /// </summary>
         /// <value>Integration tag value if this number is associated with an external integration.</value>
         [DataMember(Name="integration", EmitDefaultValue=false)]
         public string Integration { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -247,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Contact {\n");
-            
+
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Display: ").Append(Display).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
@@ -343,28 +301,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
+
                 if (this.Display != null)
                     hash = hash * 59 + this.Display.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Extension != null)
                     hash = hash * 59 + this.Extension.GetHashCode();
-                
+
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
-                
+
                 if (this.Integration != null)
                     hash = hash * 59 + this.Integration.GetHashCode();
-                
+
                 return hash;
             }
         }

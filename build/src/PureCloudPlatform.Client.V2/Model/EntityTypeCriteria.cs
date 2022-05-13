@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EntityTypeCriteria :  IEquatable<EntityTypeCriteria>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The comparison operator.
         /// </summary>
@@ -116,10 +105,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "endsWith")]
             Endswith
         }
-        
-        
-        
-        
         /// <summary>
         /// The entity to match the pattern against.
         /// </summary>
@@ -141,91 +126,74 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "visit")]
             Visit
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The comparison operator.
         /// </summary>
         /// <value>The comparison operator.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public OperatorEnum? _Operator { get; set; }
-        
-        
-        
+        public OperatorEnum? Operator { get; set; }
         /// <summary>
         /// The entity to match the pattern against.
         /// </summary>
         /// <value>The entity to match the pattern against.</value>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public EntityTypeEnum? EntityType { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="EntityTypeCriteria" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected EntityTypeCriteria() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EntityTypeCriteria" /> class.
         /// </summary>
         /// <param name="Key">The criteria key. (required).</param>
         /// <param name="Values">The criteria values. (required).</param>
         /// <param name="ShouldIgnoreCase">Should criteria be case insensitive. (required).</param>
-        /// <param name="_Operator">The comparison operator..</param>
+        /// <param name="Operator">The comparison operator..</param>
         /// <param name="EntityType">The entity to match the pattern against..</param>
-        public EntityTypeCriteria(string Key = null, List<string> Values = null, bool? ShouldIgnoreCase = null, OperatorEnum? _Operator = null, EntityTypeEnum? EntityType = null)
+        public EntityTypeCriteria(string Key = null, List<string> Values = null, bool? ShouldIgnoreCase = null, OperatorEnum? Operator = null, EntityTypeEnum? EntityType = null)
         {
             this.Key = Key;
             this.Values = Values;
             this.ShouldIgnoreCase = ShouldIgnoreCase;
-            this._Operator = _Operator;
+            this.Operator = Operator;
             this.EntityType = EntityType;
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The criteria key.
         /// </summary>
         /// <value>The criteria key.</value>
         [DataMember(Name="key", EmitDefaultValue=false)]
         public string Key { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The criteria values.
         /// </summary>
         /// <value>The criteria values.</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Should criteria be case insensitive.
         /// </summary>
         /// <value>Should criteria be case insensitive.</value>
         [DataMember(Name="shouldIgnoreCase", EmitDefaultValue=false)]
         public bool? ShouldIgnoreCase { get; set; }
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -234,11 +202,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EntityTypeCriteria {\n");
-            
+
             sb.Append("  Key: ").Append(Key).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("  ShouldIgnoreCase: ").Append(ShouldIgnoreCase).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -296,9 +264,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ShouldIgnoreCase.Equals(other.ShouldIgnoreCase)
                 ) &&
                 (
-                    this._Operator == other._Operator ||
-                    this._Operator != null &&
-                    this._Operator.Equals(other._Operator)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
                 ) &&
                 (
                     this.EntityType == other.EntityType ||
@@ -318,22 +286,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Key != null)
                     hash = hash * 59 + this.Key.GetHashCode();
-                
+
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
+
                 if (this.ShouldIgnoreCase != null)
                     hash = hash * 59 + this.ShouldIgnoreCase.GetHashCode();
-                
-                if (this._Operator != null)
-                    hash = hash * 59 + this._Operator.GetHashCode();
-                
+
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
+
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();
-                
+
                 return hash;
             }
         }

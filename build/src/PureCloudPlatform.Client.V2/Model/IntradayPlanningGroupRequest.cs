@@ -18,13 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayPlanningGroupRequest :  IEquatable<IntradayPlanningGroupRequest>
     {
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Categories
         /// </summary>
@@ -57,31 +50,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PerformancePredictionData")]
             Performancepredictiondata
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayPlanningGroupRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected IntradayPlanningGroupRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayPlanningGroupRequest" /> class.
         /// </summary>
@@ -98,43 +72,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Requested date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Requested date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="businessUnitDate", EmitDefaultValue=false)]
         public String BusinessUnitDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The metric categories
         /// </summary>
         /// <value>The metric categories</value>
         [DataMember(Name="categories", EmitDefaultValue=false)]
         public List<CategoriesEnum> Categories { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The IDs of the planning groups for which to fetch data.  Omitting or passing an empty list will return all available planning groups
         /// </summary>
         /// <value>The IDs of the planning groups for which to fetch data.  Omitting or passing an empty list will return all available planning groups</value>
         [DataMember(Name="planningGroupIds", EmitDefaultValue=false)]
         public List<string> PlanningGroupIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The period/interval in minutes for which to aggregate the data. Required, defaults to 15
         /// </summary>
         /// <value>The period/interval in minutes for which to aggregate the data. Required, defaults to 15</value>
         [DataMember(Name="intervalLengthMinutes", EmitDefaultValue=false)]
         public int? IntervalLengthMinutes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -143,7 +117,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayPlanningGroupRequest {\n");
-            
+
             sb.Append("  BusinessUnitDate: ").Append(BusinessUnitDate).Append("\n");
             sb.Append("  Categories: ").Append(Categories).Append("\n");
             sb.Append("  PlanningGroupIds: ").Append(PlanningGroupIds).Append("\n");
@@ -221,19 +195,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.BusinessUnitDate != null)
                     hash = hash * 59 + this.BusinessUnitDate.GetHashCode();
-                
+
                 if (this.Categories != null)
                     hash = hash * 59 + this.Categories.GetHashCode();
-                
+
                 if (this.PlanningGroupIds != null)
                     hash = hash * 59 + this.PlanningGroupIds.GetHashCode();
-                
+
                 if (this.IntervalLengthMinutes != null)
                     hash = hash * 59 + this.IntervalLengthMinutes.GetHashCode();
-                
+
                 return hash;
             }
         }

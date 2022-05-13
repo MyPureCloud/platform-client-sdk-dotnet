@@ -11,7 +11,7 @@ title: FieldList
 | **InstructionText** | **string** |  | [optional] |
 | **Key** | **string** |  | [optional] |
 | **LabelKeys** | **List&lt;string&gt;** |  | [optional] |
-| **_Params** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
+| **Params** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **Repeatable** | **bool?** |  | [optional] |
 | **State** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |

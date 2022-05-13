@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningAssignmentUserQuery :  IEquatable<LearningAssignmentUserQuery>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignmentUserQuery" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LearningAssignmentUserQuery() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignmentUserQuery" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Learning module rule object
         /// </summary>
         /// <value>Learning module rule object</value>
         [DataMember(Name="rule", EmitDefaultValue=false)]
         public LearningModuleRule Rule { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user name to be searched for
         /// </summary>
         /// <value>The user name to be searched for</value>
         [DataMember(Name="searchTerm", EmitDefaultValue=false)]
         public string SearchTerm { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningAssignmentUserQuery {\n");
-            
+
             sb.Append("  Rule: ").Append(Rule).Append("\n");
             sb.Append("  SearchTerm: ").Append(SearchTerm).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Rule != null)
                     hash = hash * 59 + this.Rule.GetHashCode();
-                
+
                 if (this.SearchTerm != null)
                     hash = hash * 59 + this.SearchTerm.GetHashCode();
-                
+
                 return hash;
             }
         }

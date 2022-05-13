@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DomainOrgRoleDifference :  IEquatable<DomainOrgRoleDifference>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainOrgRoleDifference" /> class.
         /// </summary>
@@ -64,47 +36,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets RemovedPermissionPolicies
         /// </summary>
         [DataMember(Name="removedPermissionPolicies", EmitDefaultValue=false)]
         public List<DomainPermissionPolicy> RemovedPermissionPolicies { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AddedPermissionPolicies
         /// </summary>
         [DataMember(Name="addedPermissionPolicies", EmitDefaultValue=false)]
         public List<DomainPermissionPolicy> AddedPermissionPolicies { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SamePermissionPolicies
         /// </summary>
         [DataMember(Name="samePermissionPolicies", EmitDefaultValue=false)]
         public List<DomainPermissionPolicy> SamePermissionPolicies { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserOrgRole
         /// </summary>
         [DataMember(Name="userOrgRole", EmitDefaultValue=false)]
         public DomainOrganizationRole UserOrgRole { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RoleFromDefault
         /// </summary>
         [DataMember(Name="roleFromDefault", EmitDefaultValue=false)]
         public DomainOrganizationRole RoleFromDefault { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DomainOrgRoleDifference {\n");
-            
+
             sb.Append("  RemovedPermissionPolicies: ").Append(RemovedPermissionPolicies).Append("\n");
             sb.Append("  AddedPermissionPolicies: ").Append(AddedPermissionPolicies).Append("\n");
             sb.Append("  SamePermissionPolicies: ").Append(SamePermissionPolicies).Append("\n");
@@ -197,22 +169,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RemovedPermissionPolicies != null)
                     hash = hash * 59 + this.RemovedPermissionPolicies.GetHashCode();
-                
+
                 if (this.AddedPermissionPolicies != null)
                     hash = hash * 59 + this.AddedPermissionPolicies.GetHashCode();
-                
+
                 if (this.SamePermissionPolicies != null)
                     hash = hash * 59 + this.SamePermissionPolicies.GetHashCode();
-                
+
                 if (this.UserOrgRole != null)
                     hash = hash * 59 + this.UserOrgRole.GetHashCode();
-                
+
                 if (this.RoleFromDefault != null)
                     hash = hash * 59 + this.RoleFromDefault.GetHashCode();
-                
+
                 return hash;
             }
         }

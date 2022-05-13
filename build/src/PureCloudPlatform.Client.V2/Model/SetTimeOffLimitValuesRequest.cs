@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SetTimeOffLimitValuesRequest :  IEquatable<SetTimeOffLimitValuesRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SetTimeOffLimitValuesRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SetTimeOffLimitValuesRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SetTimeOffLimitValuesRequest" /> class.
         /// </summary>
@@ -49,24 +36,24 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Values
         /// </summary>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<TimeOffLimitRange> Values { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version metadata for the time off limit
         /// </summary>
         /// <value>Version metadata for the time off limit</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -75,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SetTimeOffLimitValuesRequest {\n");
-            
+
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
@@ -141,13 +128,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

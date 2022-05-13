@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuPlanningGroupHeadcountForecast :  IEquatable<BuPlanningGroupHeadcountForecast>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuPlanningGroupHeadcountForecast" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The planning group to which this portion of the headcount forecast applies
         /// </summary>
         /// <value>The planning group to which this portion of the headcount forecast applies</value>
         [DataMember(Name="planningGroup", EmitDefaultValue=false)]
         public PlanningGroupReference PlanningGroup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required headcount per interval, referenced against the reference start date
         /// </summary>
         /// <value>Required headcount per interval, referenced against the reference start date</value>
         [DataMember(Name="requiredPerInterval", EmitDefaultValue=false)]
         public List<double?> RequiredPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required headcount per interval without accounting for shrinkage, referenced against the reference start date
         /// </summary>
         /// <value>Required headcount per interval without accounting for shrinkage, referenced against the reference start date</value>
         [DataMember(Name="requiredWithoutShrinkagePerInterval", EmitDefaultValue=false)]
         public List<double?> RequiredWithoutShrinkagePerInterval { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuPlanningGroupHeadcountForecast {\n");
-            
+
             sb.Append("  PlanningGroup: ").Append(PlanningGroup).Append("\n");
             sb.Append("  RequiredPerInterval: ").Append(RequiredPerInterval).Append("\n");
             sb.Append("  RequiredWithoutShrinkagePerInterval: ").Append(RequiredWithoutShrinkagePerInterval).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PlanningGroup != null)
                     hash = hash * 59 + this.PlanningGroup.GetHashCode();
-                
+
                 if (this.RequiredPerInterval != null)
                     hash = hash * 59 + this.RequiredPerInterval.GetHashCode();
-                
+
                 if (this.RequiredWithoutShrinkagePerInterval != null)
                     hash = hash * 59 + this.RequiredWithoutShrinkagePerInterval.GetHashCode();
-                
+
                 return hash;
             }
         }

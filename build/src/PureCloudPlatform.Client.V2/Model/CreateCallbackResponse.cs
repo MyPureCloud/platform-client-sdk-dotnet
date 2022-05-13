@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateCallbackResponse :  IEquatable<CreateCallbackResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallbackResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateCallbackResponse() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallbackResponse" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The conversation associated with the callback
         /// </summary>
         /// <value>The conversation associated with the callback</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public DomainEntityRef Conversation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of communication identifiers for the callback participants
         /// </summary>
         /// <value>The list of communication identifiers for the callback participants</value>
         [DataMember(Name="callbackIdentifiers", EmitDefaultValue=false)]
         public List<CallbackIdentifier> CallbackIdentifiers { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateCallbackResponse {\n");
-            
+
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("  CallbackIdentifiers: ").Append(CallbackIdentifiers).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
+
                 if (this.CallbackIdentifiers != null)
                     hash = hash * 59 + this.CallbackIdentifiers.GetHashCode();
-                
+
                 return hash;
             }
         }

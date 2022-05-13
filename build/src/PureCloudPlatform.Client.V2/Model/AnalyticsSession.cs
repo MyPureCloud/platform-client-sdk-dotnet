@@ -18,62 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsSession :  IEquatable<AnalyticsSession>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The email or SMS delivery status
         /// </summary>
@@ -131,16 +75,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Sent")]
             Sent
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the communication
         /// </summary>
@@ -168,61 +102,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The session media type
         /// </summary>
@@ -292,48 +171,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "voice")]
             Voice
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets RequestedRoutings
         /// </summary>
@@ -390,46 +227,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Standard")]
             Standard
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Complete routing method
         /// </summary>
@@ -487,211 +284,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Standard")]
             Standard
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The email or SMS delivery status
         /// </summary>
         /// <value>The email or SMS delivery status</value>
         [DataMember(Name="deliveryStatus", EmitDefaultValue=false)]
         public DeliveryStatusEnum? DeliveryStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the communication
         /// </summary>
         /// <value>The direction of the communication</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The session media type
         /// </summary>
         /// <value>The session media type</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Complete routing method
         /// </summary>
         /// <value>Complete routing method</value>
         [DataMember(Name="usedRouting", EmitDefaultValue=false)]
         public UsedRoutingEnum? UsedRouting { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSession" /> class.
         /// </summary>
@@ -704,7 +320,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentAssistantId">Unique identifier of the active virtual agent assistant.</param>
         /// <param name="AgentBullseyeRing">Bullseye ring of the targeted agent.</param>
         /// <param name="AgentOwned">Flag indicating an agent-owned callback.</param>
-        /// <param name="Ani">Automatic Number Identification (caller&#39;s number).</param>
+        /// <param name="Ani">Automatic Number Identification (caller's number).</param>
         /// <param name="AssignerId">ID of the user that manually assigned a conversation.</param>
         /// <param name="Authenticated">Flag that indicates that the identity of the customer has been asserted as verified by the provider..</param>
         /// <param name="CallbackNumbers">Callback phone number(s).</param>
@@ -848,645 +464,645 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// ID(s) of Skill(s) that are active on the conversation
         /// </summary>
         /// <value>ID(s) of Skill(s) that are active on the conversation</value>
         [DataMember(Name="activeSkillIds", EmitDefaultValue=false)]
         public List<string> ActiveSkillIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Marker for an agent that skipped after call work
         /// </summary>
         /// <value>Marker for an agent that skipped after call work</value>
         [DataMember(Name="acwSkipped", EmitDefaultValue=false)]
         public bool? AcwSkipped { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The address that initiated an action
         /// </summary>
         /// <value>The address that initiated an action</value>
         [DataMember(Name="addressFrom", EmitDefaultValue=false)]
         public string AddressFrom { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The email address for the participant on the other side of the email conversation
         /// </summary>
         /// <value>The email address for the participant on the other side of the email conversation</value>
         [DataMember(Name="addressOther", EmitDefaultValue=false)]
         public string AddressOther { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The email address for the participant on this side of the email conversation
         /// </summary>
         /// <value>The email address for the participant on this side of the email conversation</value>
         [DataMember(Name="addressSelf", EmitDefaultValue=false)]
         public string AddressSelf { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The address receiving an action
         /// </summary>
         /// <value>The address receiving an action</value>
         [DataMember(Name="addressTo", EmitDefaultValue=false)]
         public string AddressTo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier of the active virtual agent assistant
         /// </summary>
         /// <value>Unique identifier of the active virtual agent assistant</value>
         [DataMember(Name="agentAssistantId", EmitDefaultValue=false)]
         public string AgentAssistantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Bullseye ring of the targeted agent
         /// </summary>
         /// <value>Bullseye ring of the targeted agent</value>
         [DataMember(Name="agentBullseyeRing", EmitDefaultValue=false)]
         public int? AgentBullseyeRing { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Flag indicating an agent-owned callback
         /// </summary>
         /// <value>Flag indicating an agent-owned callback</value>
         [DataMember(Name="agentOwned", EmitDefaultValue=false)]
         public bool? AgentOwned { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Automatic Number Identification (caller&#39;s number)
+        /// Automatic Number Identification (caller's number)
         /// </summary>
-        /// <value>Automatic Number Identification (caller&#39;s number)</value>
+        /// <value>Automatic Number Identification (caller's number)</value>
         [DataMember(Name="ani", EmitDefaultValue=false)]
         public string Ani { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ID of the user that manually assigned a conversation
         /// </summary>
         /// <value>ID of the user that manually assigned a conversation</value>
         [DataMember(Name="assignerId", EmitDefaultValue=false)]
         public string AssignerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Flag that indicates that the identity of the customer has been asserted as verified by the provider.
         /// </summary>
         /// <value>Flag that indicates that the identity of the customer has been asserted as verified by the provider.</value>
         [DataMember(Name="authenticated", EmitDefaultValue=false)]
         public bool? Authenticated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Callback phone number(s)
         /// </summary>
         /// <value>Callback phone number(s)</value>
         [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
         public List<string> CallbackNumbers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
         public DateTime? CallbackScheduledTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the user requesting a call back
         /// </summary>
         /// <value>The name of the user requesting a call back</value>
         [DataMember(Name="callbackUserName", EmitDefaultValue=false)]
         public string CallbackUserName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation)
         /// </summary>
         /// <value>The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation)</value>
         [DataMember(Name="coachedParticipantId", EmitDefaultValue=false)]
         public string CoachedParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Describes side of the cobrowse (sharer or viewer)
         /// </summary>
         /// <value>Describes side of the cobrowse (sharer or viewer)</value>
         [DataMember(Name="cobrowseRole", EmitDefaultValue=false)]
         public string CobrowseRole { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A unique identifier for a PureCloud cobrowse room
         /// </summary>
         /// <value>A unique identifier for a PureCloud cobrowse room</value>
         [DataMember(Name="cobrowseRoomId", EmitDefaultValue=false)]
         public string CobrowseRoomId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="deliveryStatusChangeDate", EmitDefaultValue=false)]
         public DateTime? DeliveryStatusChangeDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Destination address(es) of transfers or consults
         /// </summary>
         /// <value>Destination address(es) of transfers or consults</value>
         [DataMember(Name="destinationAddresses", EmitDefaultValue=false)]
         public List<string> DestinationAddresses { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// (Dialer) Analyzer (for example speech.person)
         /// </summary>
         /// <value>(Dialer) Analyzer (for example speech.person)</value>
         [DataMember(Name="dispositionAnalyzer", EmitDefaultValue=false)]
         public string DispositionAnalyzer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// (Dialer) Result of the analysis (for example disposition.classification.callable.machine)
         /// </summary>
         /// <value>(Dialer) Result of the analysis (for example disposition.classification.callable.machine)</value>
         [DataMember(Name="dispositionName", EmitDefaultValue=false)]
         public string DispositionName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Dialed number identification service (number dialed by the calling party)
         /// </summary>
         /// <value>Dialed number identification service (number dialed by the calling party)</value>
         [DataMember(Name="dnis", EmitDefaultValue=false)]
         public string Dnis { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier of the edge device
         /// </summary>
         /// <value>Unique identifier of the edge device</value>
         [DataMember(Name="edgeId", EmitDefaultValue=false)]
         public string EdgeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of eligible agents for each predictive routing attempt
         /// </summary>
         /// <value>Number of eligible agents for each predictive routing attempt</value>
         [DataMember(Name="eligibleAgentCounts", EmitDefaultValue=false)]
         public List<int?> EligibleAgentCounts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Extended email delivery status
         /// </summary>
         /// <value>Extended email delivery status</value>
         [DataMember(Name="extendedDeliveryStatus", EmitDefaultValue=false)]
         public string ExtendedDeliveryStatus { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Type of flow in that occurred when entering ACD.
         /// </summary>
         /// <value>Type of flow in that occurred when entering ACD.</value>
         [DataMember(Name="flowInType", EmitDefaultValue=false)]
         public string FlowInType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Type of flow out that occurred when emitting tFlowOut.
         /// </summary>
         /// <value>Type of flow out that occurred when emitting tFlowOut.</value>
         [DataMember(Name="flowOutType", EmitDefaultValue=false)]
         public string FlowOutType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Identifier of the journey action.
         /// </summary>
         /// <value>Identifier of the journey action.</value>
         [DataMember(Name="journeyActionId", EmitDefaultValue=false)]
         public string JourneyActionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Identifier of the journey action map that triggered the action.
         /// </summary>
         /// <value>Identifier of the journey action map that triggered the action.</value>
         [DataMember(Name="journeyActionMapId", EmitDefaultValue=false)]
         public string JourneyActionMapId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version of the journey action map that triggered the action.
         /// </summary>
         /// <value>Version of the journey action map that triggered the action.</value>
         [DataMember(Name="journeyActionMapVersion", EmitDefaultValue=false)]
         public int? JourneyActionMapVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Primary identifier of the journey customer in the source where the activities originate from.
         /// </summary>
         /// <value>Primary identifier of the journey customer in the source where the activities originate from.</value>
         [DataMember(Name="journeyCustomerId", EmitDefaultValue=false)]
         public string JourneyCustomerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Type of primary identifier of the journey customer (e.g. cookie).
         /// </summary>
         /// <value>Type of primary identifier of the journey customer (e.g. cookie).</value>
         [DataMember(Name="journeyCustomerIdType", EmitDefaultValue=false)]
         public string JourneyCustomerIdType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier of the journey session.
         /// </summary>
         /// <value>Unique identifier of the journey session.</value>
         [DataMember(Name="journeyCustomerSessionId", EmitDefaultValue=false)]
         public string JourneyCustomerSessionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Type or category of journey sessions (e.g. web, ticket, delivery, atm).
         /// </summary>
         /// <value>Type or category of journey sessions (e.g. web, ticket, delivery, atm).</value>
         [DataMember(Name="journeyCustomerSessionIdType", EmitDefaultValue=false)]
         public string JourneyCustomerSessionIdType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Media bridge ID for the conference session consistent across all participants
         /// </summary>
         /// <value>Media bridge ID for the conference session consistent across all participants</value>
         [DataMember(Name="mediaBridgeId", EmitDefaultValue=false)]
         public string MediaBridgeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Count of any media (images, files, etc) included in this session
         /// </summary>
         /// <value>Count of any media (images, files, etc) included in this session</value>
         [DataMember(Name="mediaCount", EmitDefaultValue=false)]
         public int? MediaCount { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Message type for messaging services. E.g.: sms, facebook, twitter, line
         /// </summary>
         /// <value>Message type for messaging services. E.g.: sms, facebook, twitter, line</value>
         [DataMember(Name="messageType", EmitDefaultValue=false)]
         public string MessageType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The participantId being monitored (if someone (e.g. an agent) is being monitored, this would correspond to one of the other participantIds present in the conversation)
         /// </summary>
         /// <value>The participantId being monitored (if someone (e.g. an agent) is being monitored, this would correspond to one of the other participantIds present in the conversation)</value>
         [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
         public string MonitoredParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// (Dialer) Unique identifier of the outbound campaign
         /// </summary>
         /// <value>(Dialer) Unique identifier of the outbound campaign</value>
         [DataMember(Name="outboundCampaignId", EmitDefaultValue=false)]
         public string OutboundCampaignId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// (Dialer) Unique identifier of the contact
         /// </summary>
         /// <value>(Dialer) Unique identifier of the contact</value>
         [DataMember(Name="outboundContactId", EmitDefaultValue=false)]
         public string OutboundContactId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// (Dialer) Unique identifier of the contact list that this contact belongs to
         /// </summary>
         /// <value>(Dialer) Unique identifier of the contact list that this contact belongs to</value>
         [DataMember(Name="outboundContactListId", EmitDefaultValue=false)]
         public string OutboundContactListId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// This identifies pairs of related sessions on a conversation. E.g. an external session’s peerId will be the session that the call originally connected to, e.g. if an IVR was dialed, the IVR session, which will also have the external session’s ID as its peer. After that point, any transfers of that session to other internal components (acd, agent, etc.) will all spawn new sessions whose peerIds point back to that original external session.
         /// </summary>
         /// <value>This identifies pairs of related sessions on a conversation. E.g. an external session’s peerId will be the session that the call originally connected to, e.g. if an IVR was dialed, the IVR session, which will also have the external session’s ID as its peer. After that point, any transfers of that session to other internal components (acd, agent, etc.) will all spawn new sessions whose peerIds point back to that original external session.</value>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The original voice protocol call ID, e.g. a SIP call ID
         /// </summary>
         /// <value>The original voice protocol call ID, e.g. a SIP call ID</value>
         [DataMember(Name="protocolCallId", EmitDefaultValue=false)]
         public string ProtocolCallId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The source provider for the communication.
         /// </summary>
         /// <value>The source provider for the communication.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Flag determining if an audio recording was started or not
         /// </summary>
         /// <value>Flag determining if an audio recording was started or not</value>
         [DataMember(Name="recording", EmitDefaultValue=false)]
         public bool? Recording { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name, phone number, or email address of the remote party.
         /// </summary>
         /// <value>Name, phone number, or email address of the remote party.</value>
         [DataMember(Name="remote", EmitDefaultValue=false)]
         public string Remote { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for the remote party
         /// </summary>
         /// <value>Unique identifier for the remote party</value>
         [DataMember(Name="remoteNameDisplayable", EmitDefaultValue=false)]
         public string RemoteNameDisplayable { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ID(s) of Skill(s) that have been removed by bullseye routing
         /// </summary>
         /// <value>ID(s) of Skill(s) that have been removed by bullseye routing</value>
         [DataMember(Name="removedSkillIds", EmitDefaultValue=false)]
         public List<string> RemovedSkillIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Routing type(s) for requested/attempted routing methods.
         /// </summary>
         /// <value>Routing type(s) for requested/attempted routing methods.</value>
         [DataMember(Name="requestedRoutings", EmitDefaultValue=false)]
         public List<RequestedRoutingsEnum> RequestedRoutings { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for the room
         /// </summary>
         /// <value>Unique identifier for the room</value>
         [DataMember(Name="roomId", EmitDefaultValue=false)]
         public string RoomId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Routing ring for bullseye or preferred agent routing
         /// </summary>
         /// <value>Routing ring for bullseye or preferred agent routing</value>
         [DataMember(Name="routingRing", EmitDefaultValue=false)]
         public int? RoutingRing { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Direct ScreenShare address
         /// </summary>
         /// <value>Direct ScreenShare address</value>
         [DataMember(Name="screenShareAddressSelf", EmitDefaultValue=false)]
         public string ScreenShareAddressSelf { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A unique identifier for a PureCloud ScreenShare room
         /// </summary>
         /// <value>A unique identifier for a PureCloud ScreenShare room</value>
         [DataMember(Name="screenShareRoomId", EmitDefaultValue=false)]
         public string ScreenShareRoomId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A unique identifier for a script
         /// </summary>
         /// <value>A unique identifier for a script</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Selected agent ID
         /// </summary>
         /// <value>Selected agent ID</value>
         [DataMember(Name="selectedAgentId", EmitDefaultValue=false)]
         public string SelectedAgentId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Selected agent GPR rank
         /// </summary>
         /// <value>Selected agent GPR rank</value>
         [DataMember(Name="selectedAgentRank", EmitDefaultValue=false)]
         public int? SelectedAgentRank { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred
         /// </summary>
         /// <value>Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred</value>
         [DataMember(Name="sessionDnis", EmitDefaultValue=false)]
         public string SessionDnis { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The unique identifier of this session
         /// </summary>
         /// <value>The unique identifier of this session</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Flag determining if screenShare is started or not (true/false)
         /// </summary>
         /// <value>Flag determining if screenShare is started or not (true/false)</value>
         [DataMember(Name="sharingScreen", EmitDefaultValue=false)]
         public bool? SharingScreen { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// (Dialer) Whether the agent can skip the dialer contact
         /// </summary>
         /// <value>(Dialer) Whether the agent can skip the dialer contact</value>
         [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
         public bool? SkipEnabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling)
         /// </summary>
         /// <value>The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling)</value>
         [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
         public int? TimeoutSeconds { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Direct Video address
         /// </summary>
         /// <value>Direct Video address</value>
         [DataMember(Name="videoAddressSelf", EmitDefaultValue=false)]
         public string VideoAddressSelf { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A unique identifier for a PureCloud video room
         /// </summary>
         /// <value>A unique identifier for a PureCloud video room</value>
         [DataMember(Name="videoRoomId", EmitDefaultValue=false)]
         public string VideoRoomId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of waiting interactions for each predictive routing attempt
         /// </summary>
         /// <value>Number of waiting interactions for each predictive routing attempt</value>
         [DataMember(Name="waitingInteractionCounts", EmitDefaultValue=false)]
         public List<int?> WaitingInteractionCounts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Proposed agents
         /// </summary>
         /// <value>Proposed agents</value>
         [DataMember(Name="proposedAgents", EmitDefaultValue=false)]
         public List<AnalyticsProposedAgent> ProposedAgents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// MediaEndpointStats associated with this session
         /// </summary>
         /// <value>MediaEndpointStats associated with this session</value>
         [DataMember(Name="mediaEndpointStats", EmitDefaultValue=false)]
         public List<AnalyticsMediaEndpointStat> MediaEndpointStats { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// IVR flow execution associated with this session
         /// </summary>
         /// <value>IVR flow execution associated with this session</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
         public AnalyticsFlow Flow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of metrics for this session
         /// </summary>
         /// <value>List of metrics for this session</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
         public List<AnalyticsSessionMetric> Metrics { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of segments for this session
         /// </summary>
         /// <value>List of segments for this session</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<AnalyticsConversationSegment> Segments { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1495,7 +1111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsSession {\n");
-            
+
             sb.Append("  ActiveSkillIds: ").Append(ActiveSkillIds).Append("\n");
             sb.Append("  AcwSkipped: ").Append(AcwSkipped).Append("\n");
             sb.Append("  AddressFrom: ").Append(AddressFrom).Append("\n");
@@ -1993,229 +1609,228 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ActiveSkillIds != null)
                     hash = hash * 59 + this.ActiveSkillIds.GetHashCode();
-                
+
                 if (this.AcwSkipped != null)
                     hash = hash * 59 + this.AcwSkipped.GetHashCode();
-                
+
                 if (this.AddressFrom != null)
                     hash = hash * 59 + this.AddressFrom.GetHashCode();
-                
+
                 if (this.AddressOther != null)
                     hash = hash * 59 + this.AddressOther.GetHashCode();
-                
+
                 if (this.AddressSelf != null)
                     hash = hash * 59 + this.AddressSelf.GetHashCode();
-                
+
                 if (this.AddressTo != null)
                     hash = hash * 59 + this.AddressTo.GetHashCode();
-                
+
                 if (this.AgentAssistantId != null)
                     hash = hash * 59 + this.AgentAssistantId.GetHashCode();
-                
+
                 if (this.AgentBullseyeRing != null)
                     hash = hash * 59 + this.AgentBullseyeRing.GetHashCode();
-                
+
                 if (this.AgentOwned != null)
                     hash = hash * 59 + this.AgentOwned.GetHashCode();
-                
+
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();
-                
+
                 if (this.AssignerId != null)
                     hash = hash * 59 + this.AssignerId.GetHashCode();
-                
+
                 if (this.Authenticated != null)
                     hash = hash * 59 + this.Authenticated.GetHashCode();
-                
+
                 if (this.CallbackNumbers != null)
                     hash = hash * 59 + this.CallbackNumbers.GetHashCode();
-                
+
                 if (this.CallbackScheduledTime != null)
                     hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();
-                
+
                 if (this.CallbackUserName != null)
                     hash = hash * 59 + this.CallbackUserName.GetHashCode();
-                
+
                 if (this.CoachedParticipantId != null)
                     hash = hash * 59 + this.CoachedParticipantId.GetHashCode();
-                
+
                 if (this.CobrowseRole != null)
                     hash = hash * 59 + this.CobrowseRole.GetHashCode();
-                
+
                 if (this.CobrowseRoomId != null)
                     hash = hash * 59 + this.CobrowseRoomId.GetHashCode();
-                
+
                 if (this.DeliveryStatus != null)
                     hash = hash * 59 + this.DeliveryStatus.GetHashCode();
-                
+
                 if (this.DeliveryStatusChangeDate != null)
                     hash = hash * 59 + this.DeliveryStatusChangeDate.GetHashCode();
-                
+
                 if (this.DestinationAddresses != null)
                     hash = hash * 59 + this.DestinationAddresses.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.DispositionAnalyzer != null)
                     hash = hash * 59 + this.DispositionAnalyzer.GetHashCode();
-                
+
                 if (this.DispositionName != null)
                     hash = hash * 59 + this.DispositionName.GetHashCode();
-                
+
                 if (this.Dnis != null)
                     hash = hash * 59 + this.Dnis.GetHashCode();
-                
+
                 if (this.EdgeId != null)
                     hash = hash * 59 + this.EdgeId.GetHashCode();
-                
+
                 if (this.EligibleAgentCounts != null)
                     hash = hash * 59 + this.EligibleAgentCounts.GetHashCode();
-                
+
                 if (this.ExtendedDeliveryStatus != null)
                     hash = hash * 59 + this.ExtendedDeliveryStatus.GetHashCode();
-                
+
                 if (this.FlowInType != null)
                     hash = hash * 59 + this.FlowInType.GetHashCode();
-                
+
                 if (this.FlowOutType != null)
                     hash = hash * 59 + this.FlowOutType.GetHashCode();
-                
+
                 if (this.JourneyActionId != null)
                     hash = hash * 59 + this.JourneyActionId.GetHashCode();
-                
+
                 if (this.JourneyActionMapId != null)
                     hash = hash * 59 + this.JourneyActionMapId.GetHashCode();
-                
+
                 if (this.JourneyActionMapVersion != null)
                     hash = hash * 59 + this.JourneyActionMapVersion.GetHashCode();
-                
+
                 if (this.JourneyCustomerId != null)
                     hash = hash * 59 + this.JourneyCustomerId.GetHashCode();
-                
+
                 if (this.JourneyCustomerIdType != null)
                     hash = hash * 59 + this.JourneyCustomerIdType.GetHashCode();
-                
+
                 if (this.JourneyCustomerSessionId != null)
                     hash = hash * 59 + this.JourneyCustomerSessionId.GetHashCode();
-                
+
                 if (this.JourneyCustomerSessionIdType != null)
                     hash = hash * 59 + this.JourneyCustomerSessionIdType.GetHashCode();
-                
+
                 if (this.MediaBridgeId != null)
                     hash = hash * 59 + this.MediaBridgeId.GetHashCode();
-                
+
                 if (this.MediaCount != null)
                     hash = hash * 59 + this.MediaCount.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.MessageType != null)
                     hash = hash * 59 + this.MessageType.GetHashCode();
-                
+
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
-                
+
                 if (this.OutboundCampaignId != null)
                     hash = hash * 59 + this.OutboundCampaignId.GetHashCode();
-                
+
                 if (this.OutboundContactId != null)
                     hash = hash * 59 + this.OutboundContactId.GetHashCode();
-                
+
                 if (this.OutboundContactListId != null)
                     hash = hash * 59 + this.OutboundContactListId.GetHashCode();
-                
+
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
-                
+
                 if (this.ProtocolCallId != null)
                     hash = hash * 59 + this.ProtocolCallId.GetHashCode();
-                
+
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                
+
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
-                
+
                 if (this.Remote != null)
                     hash = hash * 59 + this.Remote.GetHashCode();
-                
+
                 if (this.RemoteNameDisplayable != null)
                     hash = hash * 59 + this.RemoteNameDisplayable.GetHashCode();
-                
+
                 if (this.RemovedSkillIds != null)
                     hash = hash * 59 + this.RemovedSkillIds.GetHashCode();
-                
+
                 if (this.RequestedRoutings != null)
                     hash = hash * 59 + this.RequestedRoutings.GetHashCode();
-                
+
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
-                
+
                 if (this.RoutingRing != null)
                     hash = hash * 59 + this.RoutingRing.GetHashCode();
-                
+
                 if (this.ScreenShareAddressSelf != null)
                     hash = hash * 59 + this.ScreenShareAddressSelf.GetHashCode();
-                
+
                 if (this.ScreenShareRoomId != null)
                     hash = hash * 59 + this.ScreenShareRoomId.GetHashCode();
-                
+
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
-                
+
                 if (this.SelectedAgentId != null)
                     hash = hash * 59 + this.SelectedAgentId.GetHashCode();
-                
+
                 if (this.SelectedAgentRank != null)
                     hash = hash * 59 + this.SelectedAgentRank.GetHashCode();
-                
+
                 if (this.SessionDnis != null)
                     hash = hash * 59 + this.SessionDnis.GetHashCode();
-                
+
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
-                
+
                 if (this.SharingScreen != null)
                     hash = hash * 59 + this.SharingScreen.GetHashCode();
-                
+
                 if (this.SkipEnabled != null)
                     hash = hash * 59 + this.SkipEnabled.GetHashCode();
-                
+
                 if (this.TimeoutSeconds != null)
                     hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
-                
+
                 if (this.UsedRouting != null)
                     hash = hash * 59 + this.UsedRouting.GetHashCode();
-                
+
                 if (this.VideoAddressSelf != null)
                     hash = hash * 59 + this.VideoAddressSelf.GetHashCode();
-                
+
                 if (this.VideoRoomId != null)
                     hash = hash * 59 + this.VideoRoomId.GetHashCode();
-                
+
                 if (this.WaitingInteractionCounts != null)
                     hash = hash * 59 + this.WaitingInteractionCounts.GetHashCode();
-                
+
                 if (this.ProposedAgents != null)
                     hash = hash * 59 + this.ProposedAgents.GetHashCode();
-                
+
                 if (this.MediaEndpointStats != null)
                     hash = hash * 59 + this.MediaEndpointStats.GetHashCode();
-                
+
                 if (this.Flow != null)
                     hash = hash * 59 + this.Flow.GetHashCode();
-                
+
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
-                
+
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
-                
+
                 return hash;
             }
         }

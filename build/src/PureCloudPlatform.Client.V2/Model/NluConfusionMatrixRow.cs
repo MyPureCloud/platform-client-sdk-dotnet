@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NluConfusionMatrixRow :  IEquatable<NluConfusionMatrixRow>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NluConfusionMatrixRow" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected NluConfusionMatrixRow() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NluConfusionMatrixRow" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the intent for the row.
         /// </summary>
         /// <value>The name of the intent for the row.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The columns of confusion matrix for the intent
         /// </summary>
         /// <value>The columns of confusion matrix for the intent</value>
         [DataMember(Name="columns", EmitDefaultValue=false)]
         public List<NluConfusionMatrixColumn> Columns { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NluConfusionMatrixRow {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Columns: ").Append(Columns).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Columns != null)
                     hash = hash * 59 + this.Columns.GetHashCode();
-                
+
                 return hash;
             }
         }

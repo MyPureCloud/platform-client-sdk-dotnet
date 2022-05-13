@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ValidationServiceRequest :  IEquatable<ValidationServiceRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidationServiceRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ValidationServiceRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidationServiceRequest" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The last day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The last day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateImportEnded", EmitDefaultValue=false)]
         public DateTime? DateImportEnded { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// S3 key for the uploaded file
         /// </summary>
         /// <value>S3 key for the uploaded file</value>
         [DataMember(Name="uploadKey", EmitDefaultValue=false)]
         public string UploadKey { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ValidationServiceRequest {\n");
-            
+
             sb.Append("  DateImportEnded: ").Append(DateImportEnded).Append("\n");
             sb.Append("  UploadKey: ").Append(UploadKey).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DateImportEnded != null)
                     hash = hash * 59 + this.DateImportEnded.GetHashCode();
-                
+
                 if (this.UploadKey != null)
                     hash = hash * 59 + this.UploadKey.GetHashCode();
-                
+
                 return hash;
             }
         }

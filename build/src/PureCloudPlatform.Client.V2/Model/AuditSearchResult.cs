@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuditSearchResult :  IEquatable<AuditSearchResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditSearchResult" /> class.
         /// </summary>
@@ -71,59 +38,59 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Which page was returned.
         /// </summary>
         /// <value>Which page was returned.</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of results in a page.
         /// </summary>
         /// <value>The number of results in a page.</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of results.
         /// </summary>
         /// <value>The total number of results.</value>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public int? Total { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of pages of results.
         /// </summary>
         /// <value>The number of pages of results.</value>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public int? PageCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FacetInfo
         /// </summary>
         [DataMember(Name="facetInfo", EmitDefaultValue=false)]
         public List<FacetInfo> FacetInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AuditMessages
         /// </summary>
         [DataMember(Name="auditMessages", EmitDefaultValue=false)]
         public List<AuditMessage> AuditMessages { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -132,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuditSearchResult {\n");
-            
+
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
@@ -222,25 +189,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
+
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
+
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
-                
+
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
-                
+
                 if (this.FacetInfo != null)
                     hash = hash * 59 + this.FacetInfo.GetHashCode();
-                
+
                 if (this.AuditMessages != null)
                     hash = hash * 59 + this.AuditMessages.GetHashCode();
-                
+
                 return hash;
             }
         }

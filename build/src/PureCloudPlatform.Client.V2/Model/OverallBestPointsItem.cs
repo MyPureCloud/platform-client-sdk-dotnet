@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OverallBestPointsItem :  IEquatable<OverallBestPointsItem>
     {
-        
-        
         /// <summary>
         /// Best points aggregation interval granularity
         /// </summary>
@@ -53,45 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Daily")]
             Daily
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Best points aggregation interval granularity
         /// </summary>
         /// <value>Best points aggregation interval granularity</value>
         [DataMember(Name="granularityType", EmitDefaultValue=false)]
-        public GranularityTypeEnum? GranularityType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public GranularityTypeEnum? GranularityType { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="OverallBestPointsItem" /> class.
         /// </summary>
@@ -100,54 +65,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// List of associated users with the equal points.
         /// </summary>
         /// <value>List of associated users with the equal points.</value>
         [DataMember(Name="users", EmitDefaultValue=false)]
         public List<UserReference> Users { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The count of the user IDs in the list
         /// </summary>
         /// <value>The count of the user IDs in the list</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gamification points
         /// </summary>
         /// <value>Gamification points</value>
         [DataMember(Name="points", EmitDefaultValue=false)]
         public int? Points { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Start workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Start workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateStartWorkday", EmitDefaultValue=false)]
         public String DateStartWorkday { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// End workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>End workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateEndWorkday", EmitDefaultValue=false)]
         public String DateEndWorkday { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -156,7 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OverallBestPointsItem {\n");
-            
+
             sb.Append("  GranularityType: ").Append(GranularityType).Append("\n");
             sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
@@ -246,25 +211,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.GranularityType != null)
                     hash = hash * 59 + this.GranularityType.GetHashCode();
-                
+
                 if (this.Users != null)
                     hash = hash * 59 + this.Users.GetHashCode();
-                
+
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-                
+
                 if (this.Points != null)
                     hash = hash * 59 + this.Points.GetHashCode();
-                
+
                 if (this.DateStartWorkday != null)
                     hash = hash * 59 + this.DateStartWorkday.GetHashCode();
-                
+
                 if (this.DateEndWorkday != null)
                     hash = hash * 59 + this.DateEndWorkday.GetHashCode();
-                
+
                 return hash;
             }
         }

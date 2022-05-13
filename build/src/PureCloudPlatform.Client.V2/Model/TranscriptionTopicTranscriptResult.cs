@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TranscriptionTopicTranscriptResult :  IEquatable<TranscriptionTopicTranscriptResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Channel
         /// </summary>
@@ -64,58 +56,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "BOTH")]
             Both
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Channel
         /// </summary>
         [DataMember(Name="channel", EmitDefaultValue=false)]
         public ChannelEnum? Channel { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TranscriptionTopicTranscriptResult" /> class.
         /// </summary>
@@ -144,81 +89,81 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets UtteranceId
         /// </summary>
         [DataMember(Name="utteranceId", EmitDefaultValue=false)]
         public string UtteranceId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IsFinal
         /// </summary>
         [DataMember(Name="isFinal", EmitDefaultValue=false)]
         public bool? IsFinal { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Alternatives
         /// </summary>
         [DataMember(Name="alternatives", EmitDefaultValue=false)]
         public List<TranscriptionTopicTranscriptAlternative> Alternatives { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AgentAssistantId
         /// </summary>
         [DataMember(Name="agentAssistantId", EmitDefaultValue=false)]
         public string AgentAssistantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EngineId
         /// </summary>
         [DataMember(Name="engineId", EmitDefaultValue=false)]
         public string EngineId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Dialect
         /// </summary>
         [DataMember(Name="dialect", EmitDefaultValue=false)]
         public string Dialect { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SpeechTextAnalyticsProgramId
         /// </summary>
         [DataMember(Name="speechTextAnalyticsProgramId", EmitDefaultValue=false)]
         public string SpeechTextAnalyticsProgramId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AgentAssistEnabled
         /// </summary>
         [DataMember(Name="agentAssistEnabled", EmitDefaultValue=false)]
         public bool? AgentAssistEnabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets VoiceTranscriptionEnabled
         /// </summary>
         [DataMember(Name="voiceTranscriptionEnabled", EmitDefaultValue=false)]
         public bool? VoiceTranscriptionEnabled { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -227,7 +172,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TranscriptionTopicTranscriptResult {\n");
-            
+
             sb.Append("  UtteranceId: ").Append(UtteranceId).Append("\n");
             sb.Append("  IsFinal: ").Append(IsFinal).Append("\n");
             sb.Append("  Channel: ").Append(Channel).Append("\n");
@@ -341,37 +286,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UtteranceId != null)
                     hash = hash * 59 + this.UtteranceId.GetHashCode();
-                
+
                 if (this.IsFinal != null)
                     hash = hash * 59 + this.IsFinal.GetHashCode();
-                
+
                 if (this.Channel != null)
                     hash = hash * 59 + this.Channel.GetHashCode();
-                
+
                 if (this.Alternatives != null)
                     hash = hash * 59 + this.Alternatives.GetHashCode();
-                
+
                 if (this.AgentAssistantId != null)
                     hash = hash * 59 + this.AgentAssistantId.GetHashCode();
-                
+
                 if (this.EngineId != null)
                     hash = hash * 59 + this.EngineId.GetHashCode();
-                
+
                 if (this.Dialect != null)
                     hash = hash * 59 + this.Dialect.GetHashCode();
-                
+
                 if (this.SpeechTextAnalyticsProgramId != null)
                     hash = hash * 59 + this.SpeechTextAnalyticsProgramId.GetHashCode();
-                
+
                 if (this.AgentAssistEnabled != null)
                     hash = hash * 59 + this.AgentAssistEnabled.GetHashCode();
-                
+
                 if (this.VoiceTranscriptionEnabled != null)
                     hash = hash * 59 + this.VoiceTranscriptionEnabled.GetHashCode();
-                
+
                 return hash;
             }
         }

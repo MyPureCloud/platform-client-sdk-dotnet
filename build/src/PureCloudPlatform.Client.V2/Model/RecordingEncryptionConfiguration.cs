@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RecordingEncryptionConfiguration :  IEquatable<RecordingEncryptionConfiguration>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type should be LocalKeyManager or KmsSymmetric when create or update Key configurations; 'Native' for disabling configuration.
         /// </summary>
@@ -71,51 +57,25 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "None")]
             None
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type should be LocalKeyManager or KmsSymmetric when create or update Key configurations; 'Native' for disabling configuration.
         /// </summary>
         /// <value>Type should be LocalKeyManager or KmsSymmetric when create or update Key configurations; 'Native' for disabling configuration.</value>
         [DataMember(Name="keyConfigurationType", EmitDefaultValue=false)]
         public KeyConfigurationTypeEnum? KeyConfigurationType { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingEncryptionConfiguration" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected RecordingEncryptionConfiguration() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingEncryptionConfiguration" /> class.
         /// </summary>
         /// <param name="Url">When keyConfigurationType is LocalKeyManager, this should be the url for decryption and must specify the path to where GenesysCloud can requests decryption. When keyConfigurationType is KmsSymmetric, this should be the arn to the key alias for the master key (required).</param>
         /// <param name="ApiId">The api id for Hawk Authentication. Null if keyConfigurationType is KmsSymmetric.</param>
         /// <param name="ApiKey">The api shared symmetric key used for hawk authentication. Null if keyConfigurationType is KmsSymmetric.</param>
-        /// <param name="KeyConfigurationType">Type should be LocalKeyManager or KmsSymmetric when create or update Key configurations; &#39;Native&#39; for disabling configuration. (required).</param>
+        /// <param name="KeyConfigurationType">Type should be LocalKeyManager or KmsSymmetric when create or update Key configurations; 'Native' for disabling configuration. (required).</param>
         /// <param name="LastError">The error message related to the configuration.</param>
         public RecordingEncryptionConfiguration(string Url = null, string ApiId = null, string ApiKey = null, KeyConfigurationTypeEnum? KeyConfigurationType = null, ErrorBody LastError = null)
         {
@@ -127,63 +87,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// When keyConfigurationType is LocalKeyManager, this should be the url for decryption and must specify the path to where GenesysCloud can requests decryption. When keyConfigurationType is KmsSymmetric, this should be the arn to the key alias for the master key
         /// </summary>
         /// <value>When keyConfigurationType is LocalKeyManager, this should be the url for decryption and must specify the path to where GenesysCloud can requests decryption. When keyConfigurationType is KmsSymmetric, this should be the arn to the key alias for the master key</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The api id for Hawk Authentication. Null if keyConfigurationType is KmsSymmetric
         /// </summary>
         /// <value>The api id for Hawk Authentication. Null if keyConfigurationType is KmsSymmetric</value>
         [DataMember(Name="apiId", EmitDefaultValue=false)]
         public string ApiId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The api shared symmetric key used for hawk authentication. Null if keyConfigurationType is KmsSymmetric
         /// </summary>
         /// <value>The api shared symmetric key used for hawk authentication. Null if keyConfigurationType is KmsSymmetric</value>
         [DataMember(Name="apiKey", EmitDefaultValue=false)]
         public string ApiKey { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The error message related to the configuration
         /// </summary>
         /// <value>The error message related to the configuration</value>
         [DataMember(Name="lastError", EmitDefaultValue=false)]
         public ErrorBody LastError { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RecordingEncryptionConfiguration {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  ApiId: ").Append(ApiId).Append("\n");
@@ -288,28 +248,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.ApiId != null)
                     hash = hash * 59 + this.ApiId.GetHashCode();
-                
+
                 if (this.ApiKey != null)
                     hash = hash * 59 + this.ApiKey.GetHashCode();
-                
+
                 if (this.KeyConfigurationType != null)
                     hash = hash * 59 + this.KeyConfigurationType.GetHashCode();
-                
+
                 if (this.LastError != null)
                     hash = hash * 59 + this.LastError.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RequestMapping :  IEquatable<RequestMapping>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of the value supplied
         /// </summary>
@@ -62,10 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Boolean")]
             Boolean
         }
-        
-        
-        
-        
         /// <summary>
         /// Method of finding value to use with Attribute
         /// </summary>
@@ -93,36 +84,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "HardCoded")]
             Hardcoded
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of the value supplied
         /// </summary>
         /// <value>Type of the value supplied</value>
         [DataMember(Name="attributeType", EmitDefaultValue=false)]
         public AttributeTypeEnum? AttributeType { get; set; }
-        
-        
-        
         /// <summary>
         /// Method of finding value to use with Attribute
         /// </summary>
         /// <value>Method of finding value to use with Attribute</value>
         [DataMember(Name="mappingType", EmitDefaultValue=false)]
         public MappingTypeEnum? MappingType { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestMapping" /> class.
         /// </summary>
@@ -139,29 +112,29 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Name of the Integration Action Attribute to supply the value for
         /// </summary>
         /// <value>Name of the Integration Action Attribute to supply the value for</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Value to supply for the specified Attribute
         /// </summary>
         /// <value>Value to supply for the specified Attribute</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -170,7 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RequestMapping {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  AttributeType: ").Append(AttributeType).Append("\n");
             sb.Append("  MappingType: ").Append(MappingType).Append("\n");
@@ -248,19 +221,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.AttributeType != null)
                     hash = hash * 59 + this.AttributeType.GetHashCode();
-                
+
                 if (this.MappingType != null)
                     hash = hash * 59 + this.MappingType.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 return hash;
             }
         }

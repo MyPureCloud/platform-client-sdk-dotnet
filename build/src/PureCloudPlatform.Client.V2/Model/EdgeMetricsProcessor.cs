@@ -18,39 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeMetricsProcessor :  IEquatable<EdgeMetricsProcessor>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsProcessor" /> class.
         /// </summary>
         /// <param name="ActiveTimePct">Percent time processor was active..</param>
-        /// <param name="CpuId">Machine CPU identifier. &#39;total&#39; will always be included in the array and is the total of all CPU resources..</param>
+        /// <param name="CpuId">Machine CPU identifier. 'total' will always be included in the array and is the total of all CPU resources..</param>
         /// <param name="IdleTimePct">Percent time processor was idle..</param>
         /// <param name="PrivilegedTimePct">Percent time processor spent in privileged mode..</param>
         /// <param name="UserTimePct">Percent time processor spent in user mode..</param>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Percent time processor was active.
         /// </summary>
         /// <value>Percent time processor was active.</value>
         [DataMember(Name="activeTimePct", EmitDefaultValue=false)]
         public double? ActiveTimePct { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Machine CPU identifier. &#39;total&#39; will always be included in the array and is the total of all CPU resources.
+        /// Machine CPU identifier. 'total' will always be included in the array and is the total of all CPU resources.
         /// </summary>
-        /// <value>Machine CPU identifier. &#39;total&#39; will always be included in the array and is the total of all CPU resources.</value>
+        /// <value>Machine CPU identifier. 'total' will always be included in the array and is the total of all CPU resources.</value>
         [DataMember(Name="cpuId", EmitDefaultValue=false)]
         public string CpuId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percent time processor was idle.
         /// </summary>
         /// <value>Percent time processor was idle.</value>
         [DataMember(Name="idleTimePct", EmitDefaultValue=false)]
         public double? IdleTimePct { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percent time processor spent in privileged mode.
         /// </summary>
         /// <value>Percent time processor spent in privileged mode.</value>
         [DataMember(Name="privilegedTimePct", EmitDefaultValue=false)]
         public double? PrivilegedTimePct { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percent time processor spent in user mode.
         /// </summary>
         /// <value>Percent time processor spent in user mode.</value>
         [DataMember(Name="userTimePct", EmitDefaultValue=false)]
         public double? UserTimePct { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeMetricsProcessor {\n");
-            
+
             sb.Append("  ActiveTimePct: ").Append(ActiveTimePct).Append("\n");
             sb.Append("  CpuId: ").Append(CpuId).Append("\n");
             sb.Append("  IdleTimePct: ").Append(IdleTimePct).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ActiveTimePct != null)
                     hash = hash * 59 + this.ActiveTimePct.GetHashCode();
-                
+
                 if (this.CpuId != null)
                     hash = hash * 59 + this.CpuId.GetHashCode();
-                
+
                 if (this.IdleTimePct != null)
                     hash = hash * 59 + this.IdleTimePct.GetHashCode();
-                
+
                 if (this.PrivilegedTimePct != null)
                     hash = hash * 59 + this.PrivilegedTimePct.GetHashCode();
-                
+
                 if (this.UserTimePct != null)
                     hash = hash * 59 + this.UserTimePct.GetHashCode();
-                
+
                 return hash;
             }
         }

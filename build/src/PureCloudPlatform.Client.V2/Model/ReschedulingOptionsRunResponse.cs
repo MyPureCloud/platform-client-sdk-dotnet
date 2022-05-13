@@ -18,59 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReschedulingOptionsRunResponse :  IEquatable<ReschedulingOptionsRunResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReschedulingOptionsRunResponse" /> class.
         /// </summary>
@@ -99,97 +46,97 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The existing schedule to which this reschedule run applies
         /// </summary>
         /// <value>The existing schedule to which this reschedule run applies</value>
         [DataMember(Name="existingSchedule", EmitDefaultValue=false)]
         public BuScheduleReference ExistingSchedule { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The start date of the period to reschedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The start date of the period to reschedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The end date of the period to reschedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The end date of the period to reschedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Per-management unit rescheduling options
         /// </summary>
         /// <value>Per-management unit rescheduling options</value>
         [DataMember(Name="managementUnits", EmitDefaultValue=false)]
         public List<ReschedulingManagementUnitResponse> ManagementUnits { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of agents to be considered in the reschedule
         /// </summary>
         /// <value>The number of agents to be considered in the reschedule</value>
         [DataMember(Name="agentCount", EmitDefaultValue=false)]
         public int? AgentCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The IDs of the activity codes being considered for reschedule
         /// </summary>
         /// <value>The IDs of the activity codes being considered for reschedule</value>
         [DataMember(Name="activityCodeIds", EmitDefaultValue=false)]
         public List<string> ActivityCodeIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether weekly paid time is allowed to be changed
         /// </summary>
         /// <value>Whether weekly paid time is allowed to be changed</value>
         [DataMember(Name="doNotChangeWeeklyPaidTime", EmitDefaultValue=false)]
         public bool? DoNotChangeWeeklyPaidTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether daily paid time is allowed to be changed
         /// </summary>
         /// <value>Whether daily paid time is allowed to be changed</value>
         [DataMember(Name="doNotChangeDailyPaidTime", EmitDefaultValue=false)]
         public bool? DoNotChangeDailyPaidTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether shift start times are allowed to be changed
         /// </summary>
         /// <value>Whether shift start times are allowed to be changed</value>
         [DataMember(Name="doNotChangeShiftStartTimes", EmitDefaultValue=false)]
         public bool? DoNotChangeShiftStartTimes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether manually edited shifts are allowed to be changed
         /// </summary>
         /// <value>Whether manually edited shifts are allowed to be changed</value>
         [DataMember(Name="doNotChangeManuallyEditedShifts", EmitDefaultValue=false)]
         public bool? DoNotChangeManuallyEditedShifts { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -198,7 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReschedulingOptionsRunResponse {\n");
-            
+
             sb.Append("  ExistingSchedule: ").Append(ExistingSchedule).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
@@ -312,37 +259,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ExistingSchedule != null)
                     hash = hash * 59 + this.ExistingSchedule.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 if (this.ManagementUnits != null)
                     hash = hash * 59 + this.ManagementUnits.GetHashCode();
-                
+
                 if (this.AgentCount != null)
                     hash = hash * 59 + this.AgentCount.GetHashCode();
-                
+
                 if (this.ActivityCodeIds != null)
                     hash = hash * 59 + this.ActivityCodeIds.GetHashCode();
-                
+
                 if (this.DoNotChangeWeeklyPaidTime != null)
                     hash = hash * 59 + this.DoNotChangeWeeklyPaidTime.GetHashCode();
-                
+
                 if (this.DoNotChangeDailyPaidTime != null)
                     hash = hash * 59 + this.DoNotChangeDailyPaidTime.GetHashCode();
-                
+
                 if (this.DoNotChangeShiftStartTimes != null)
                     hash = hash * 59 + this.DoNotChangeShiftStartTimes.GetHashCode();
-                
+
                 if (this.DoNotChangeManuallyEditedShifts != null)
                     hash = hash * 59 + this.DoNotChangeManuallyEditedShifts.GetHashCode();
-                
+
                 return hash;
             }
         }

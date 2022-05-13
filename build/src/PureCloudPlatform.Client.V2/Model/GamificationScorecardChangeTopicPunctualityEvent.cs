@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GamificationScorecardChangeTopicPunctualityEvent :  IEquatable<GamificationScorecardChangeTopicPunctualityEvent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GamificationScorecardChangeTopicPunctualityEvent" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets DateStart
         /// </summary>
         [DataMember(Name="dateStart", EmitDefaultValue=false)]
         public string DateStart { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DateScheduleStart
         /// </summary>
         [DataMember(Name="dateScheduleStart", EmitDefaultValue=false)]
         public string DateScheduleStart { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActivityCode
         /// </summary>
         [DataMember(Name="activityCode", EmitDefaultValue=false)]
         public string ActivityCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Points
         /// </summary>
         [DataMember(Name="points", EmitDefaultValue=false)]
         public int? Points { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GamificationScorecardChangeTopicPunctualityEvent {\n");
-            
+
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
             sb.Append("  DateScheduleStart: ").Append(DateScheduleStart).Append("\n");
             sb.Append("  ActivityCode: ").Append(ActivityCode).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();
-                
+
                 if (this.DateScheduleStart != null)
                     hash = hash * 59 + this.DateScheduleStart.GetHashCode();
-                
+
                 if (this.ActivityCode != null)
                     hash = hash * 59 + this.ActivityCode.GetHashCode();
-                
+
                 if (this.Points != null)
                     hash = hash * 59 + this.Points.GetHashCode();
-                
+
                 return hash;
             }
         }

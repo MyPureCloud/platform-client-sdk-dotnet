@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BotIntent :  IEquatable<BotIntent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BotIntent" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BotIntent() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BotIntent" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of this intent.  This can be up to 100 characters long and must be comprised of displayable characters without leading or trailing whitespace
         /// </summary>
         /// <value>The name of this intent.  This can be up to 100 characters long and must be comprised of displayable characters without leading or trailing whitespace</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Optional returned data values associated with this intent, limit of 50.
         /// </summary>
         /// <value>Optional returned data values associated with this intent, limit of 50.</value>
         [DataMember(Name="slots", EmitDefaultValue=false)]
         public Dictionary<string, BotSlot> Slots { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BotIntent {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Slots: ").Append(Slots).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Slots != null)
                     hash = hash * 59 + this.Slots.GetHashCode();
-                
+
                 return hash;
             }
         }

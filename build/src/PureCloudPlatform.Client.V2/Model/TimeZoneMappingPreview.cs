@@ -18,54 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TimeZoneMappingPreview :  IEquatable<TimeZoneMappingPreview>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeZoneMappingPreview" /> class.
         /// </summary>
@@ -92,88 +44,88 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The associated ContactList
         /// </summary>
         /// <value>The associated ContactList</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public DomainEntityRef ContactList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of contacts per time zone that mapped to only that time zone
         /// </summary>
         /// <value>The number of contacts per time zone that mapped to only that time zone</value>
         [DataMember(Name="contactsPerTimeZone", EmitDefaultValue=false)]
         public Dictionary<string, long?> ContactsPerTimeZone { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of contacts per time zone that mapped to only that time zone and were mapped using the zip code column
         /// </summary>
         /// <value>The number of contacts per time zone that mapped to only that time zone and were mapped using the zip code column</value>
         [DataMember(Name="contactsMappedUsingZipCode", EmitDefaultValue=false)]
         public Dictionary<string, long?> ContactsMappedUsingZipCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of contacts that mapped to a single time zone
         /// </summary>
         /// <value>The total number of contacts that mapped to a single time zone</value>
         [DataMember(Name="contactsMappedToASingleZone", EmitDefaultValue=false)]
         public long? ContactsMappedToASingleZone { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of contacts that mapped to a single time zone and were mapped using the zip code column
         /// </summary>
         /// <value>The total number of contacts that mapped to a single time zone and were mapped using the zip code column</value>
         [DataMember(Name="contactsMappedToASingleZoneUsingZipCode", EmitDefaultValue=false)]
         public long? ContactsMappedToASingleZoneUsingZipCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of contacts that mapped to multiple time zones
         /// </summary>
         /// <value>The total number of contacts that mapped to multiple time zones</value>
         [DataMember(Name="contactsMappedToMultipleZones", EmitDefaultValue=false)]
         public long? ContactsMappedToMultipleZones { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of contacts that mapped to multiple time zones and were mapped using the zip code column
         /// </summary>
         /// <value>The total number of contacts that mapped to multiple time zones and were mapped using the zip code column</value>
         [DataMember(Name="contactsMappedToMultipleZonesUsingZipCode", EmitDefaultValue=false)]
         public long? ContactsMappedToMultipleZonesUsingZipCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of contacts that will be dialed during the default window
         /// </summary>
         /// <value>The total number of contacts that will be dialed during the default window</value>
         [DataMember(Name="contactsInDefaultWindow", EmitDefaultValue=false)]
         public long? ContactsInDefaultWindow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total number of contacts in the contact list
         /// </summary>
         /// <value>The total number of contacts in the contact list</value>
         [DataMember(Name="contactListSize", EmitDefaultValue=false)]
         public long? ContactListSize { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -182,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimeZoneMappingPreview {\n");
-            
+
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
             sb.Append("  ContactsPerTimeZone: ").Append(ContactsPerTimeZone).Append("\n");
             sb.Append("  ContactsMappedUsingZipCode: ").Append(ContactsMappedUsingZipCode).Append("\n");
@@ -290,34 +242,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContactList != null)
                     hash = hash * 59 + this.ContactList.GetHashCode();
-                
+
                 if (this.ContactsPerTimeZone != null)
                     hash = hash * 59 + this.ContactsPerTimeZone.GetHashCode();
-                
+
                 if (this.ContactsMappedUsingZipCode != null)
                     hash = hash * 59 + this.ContactsMappedUsingZipCode.GetHashCode();
-                
+
                 if (this.ContactsMappedToASingleZone != null)
                     hash = hash * 59 + this.ContactsMappedToASingleZone.GetHashCode();
-                
+
                 if (this.ContactsMappedToASingleZoneUsingZipCode != null)
                     hash = hash * 59 + this.ContactsMappedToASingleZoneUsingZipCode.GetHashCode();
-                
+
                 if (this.ContactsMappedToMultipleZones != null)
                     hash = hash * 59 + this.ContactsMappedToMultipleZones.GetHashCode();
-                
+
                 if (this.ContactsMappedToMultipleZonesUsingZipCode != null)
                     hash = hash * 59 + this.ContactsMappedToMultipleZonesUsingZipCode.GetHashCode();
-                
+
                 if (this.ContactsInDefaultWindow != null)
                     hash = hash * 59 + this.ContactsInDefaultWindow.GetHashCode();
-                
+
                 if (this.ContactListSize != null)
                     hash = hash * 59 + this.ContactListSize.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,90 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AssessmentQuestionGroupScore :  IEquatable<AssessmentQuestionGroupScore>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AssessmentQuestionGroupScore" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AssessmentQuestionGroupScore() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AssessmentQuestionGroupScore" /> class.
         /// </summary>
@@ -116,142 +38,142 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the question group
         /// </summary>
         /// <value>The ID of the question group</value>
         [DataMember(Name="questionGroupId", EmitDefaultValue=false)]
         public string QuestionGroupId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total score for the questions
         /// </summary>
         /// <value>The total score for the questions</value>
         [DataMember(Name="totalScore", EmitDefaultValue=false)]
         public float? TotalScore { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum total score for the questions
         /// </summary>
         /// <value>The maximum total score for the questions</value>
         [DataMember(Name="maxTotalScore", EmitDefaultValue=false)]
         public float? MaxTotalScore { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if this question group is marked NA
         /// </summary>
         /// <value>True if this question group is marked NA</value>
         [DataMember(Name="markedNA", EmitDefaultValue=false)]
         public bool? MarkedNA { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total score for the critical questions
         /// </summary>
         /// <value>The total score for the critical questions</value>
         [DataMember(Name="totalCriticalScore", EmitDefaultValue=false)]
         public float? TotalCriticalScore { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum total score for the critical questions
         /// </summary>
         /// <value>The maximum total score for the critical questions</value>
         [DataMember(Name="maxTotalCriticalScore", EmitDefaultValue=false)]
         public float? MaxTotalCriticalScore { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total score for the non-critical questions
         /// </summary>
         /// <value>The total score for the non-critical questions</value>
         [DataMember(Name="totalNonCriticalScore", EmitDefaultValue=false)]
         public float? TotalNonCriticalScore { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum total score for the non-critical questions
         /// </summary>
         /// <value>The maximum total score for the non-critical questions</value>
         [DataMember(Name="maxTotalNonCriticalScore", EmitDefaultValue=false)]
         public float? MaxTotalNonCriticalScore { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The unweighted total score for this question group
         /// </summary>
         /// <value>The unweighted total score for this question group</value>
         [DataMember(Name="totalScoreUnweighted", EmitDefaultValue=false)]
         public float? TotalScoreUnweighted { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum unweighted total score for this question group
         /// </summary>
         /// <value>The maximum unweighted total score for this question group</value>
         [DataMember(Name="maxTotalScoreUnweighted", EmitDefaultValue=false)]
         public float? MaxTotalScoreUnweighted { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The unweighted total score for the critical questions
         /// </summary>
         /// <value>The unweighted total score for the critical questions</value>
         [DataMember(Name="totalCriticalScoreUnweighted", EmitDefaultValue=false)]
         public float? TotalCriticalScoreUnweighted { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum unweighted total score for the critical questions
         /// </summary>
         /// <value>The maximum unweighted total score for the critical questions</value>
         [DataMember(Name="maxTotalCriticalScoreUnweighted", EmitDefaultValue=false)]
         public float? MaxTotalCriticalScoreUnweighted { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The total unweighted score for the non-critical questions
         /// </summary>
         /// <value>The total unweighted score for the non-critical questions</value>
         [DataMember(Name="totalNonCriticalScoreUnweighted", EmitDefaultValue=false)]
         public float? TotalNonCriticalScoreUnweighted { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum unweighted total score for the non-critical questions
         /// </summary>
         /// <value>The maximum unweighted total score for the non-critical questions</value>
         [DataMember(Name="maxTotalNonCriticalScoreUnweighted", EmitDefaultValue=false)]
         public float? MaxTotalNonCriticalScoreUnweighted { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The individual question scores
         /// </summary>
         /// <value>The individual question scores</value>
         [DataMember(Name="questionScores", EmitDefaultValue=false)]
         public List<AssessmentQuestionScore> QuestionScores { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -260,7 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AssessmentQuestionGroupScore {\n");
-            
+
             sb.Append("  QuestionGroupId: ").Append(QuestionGroupId).Append("\n");
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
             sb.Append("  MaxTotalScore: ").Append(MaxTotalScore).Append("\n");
@@ -404,52 +326,51 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QuestionGroupId != null)
                     hash = hash * 59 + this.QuestionGroupId.GetHashCode();
-                
+
                 if (this.TotalScore != null)
                     hash = hash * 59 + this.TotalScore.GetHashCode();
-                
+
                 if (this.MaxTotalScore != null)
                     hash = hash * 59 + this.MaxTotalScore.GetHashCode();
-                
+
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
-                
+
                 if (this.TotalCriticalScore != null)
                     hash = hash * 59 + this.TotalCriticalScore.GetHashCode();
-                
+
                 if (this.MaxTotalCriticalScore != null)
                     hash = hash * 59 + this.MaxTotalCriticalScore.GetHashCode();
-                
+
                 if (this.TotalNonCriticalScore != null)
                     hash = hash * 59 + this.TotalNonCriticalScore.GetHashCode();
-                
+
                 if (this.MaxTotalNonCriticalScore != null)
                     hash = hash * 59 + this.MaxTotalNonCriticalScore.GetHashCode();
-                
+
                 if (this.TotalScoreUnweighted != null)
                     hash = hash * 59 + this.TotalScoreUnweighted.GetHashCode();
-                
+
                 if (this.MaxTotalScoreUnweighted != null)
                     hash = hash * 59 + this.MaxTotalScoreUnweighted.GetHashCode();
-                
+
                 if (this.TotalCriticalScoreUnweighted != null)
                     hash = hash * 59 + this.TotalCriticalScoreUnweighted.GetHashCode();
-                
+
                 if (this.MaxTotalCriticalScoreUnweighted != null)
                     hash = hash * 59 + this.MaxTotalCriticalScoreUnweighted.GetHashCode();
-                
+
                 if (this.TotalNonCriticalScoreUnweighted != null)
                     hash = hash * 59 + this.TotalNonCriticalScoreUnweighted.GetHashCode();
-                
+
                 if (this.MaxTotalNonCriticalScoreUnweighted != null)
                     hash = hash * 59 + this.MaxTotalNonCriticalScoreUnweighted.GetHashCode();
-                
+
                 if (this.QuestionScores != null)
                     hash = hash * 59 + this.QuestionScores.GetHashCode();
-                
+
                 return hash;
             }
         }

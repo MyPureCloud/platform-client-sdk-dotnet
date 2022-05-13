@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerAction :  IEquatable<DialerAction>
     {
-        
-        
         /// <summary>
         /// The type of this DialerAction.
         /// </summary>
@@ -53,10 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "dataActionBehavior")]
             Dataactionbehavior
         }
-        
-        
-        
-        
         /// <summary>
         /// Additional type specification for this DialerAction.
         /// </summary>
@@ -132,10 +126,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DATA_ACTION")]
             DataAction
         }
-        
-        
-        
-        
         /// <summary>
         /// Specifies how a contact attribute should be updated. Required for MODIFY_CONTACT_ATTRIBUTE.
         /// </summary>
@@ -175,81 +165,37 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CURRENT_TIME")]
             CurrentTime
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of this DialerAction.
         /// </summary>
         /// <value>The type of this DialerAction.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
         /// <summary>
         /// Additional type specification for this DialerAction.
         /// </summary>
         /// <value>Additional type specification for this DialerAction.</value>
         [DataMember(Name="actionTypeName", EmitDefaultValue=false)]
         public ActionTypeNameEnum? ActionTypeName { get; set; }
-        
-        
-        
         /// <summary>
         /// Specifies how a contact attribute should be updated. Required for MODIFY_CONTACT_ATTRIBUTE.
         /// </summary>
         /// <value>Specifies how a contact attribute should be updated. Required for MODIFY_CONTACT_ATTRIBUTE.</value>
         [DataMember(Name="updateOption", EmitDefaultValue=false)]
         public UpdateOptionEnum? UpdateOption { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerAction" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DialerAction() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerAction" /> class.
         /// </summary>
         /// <param name="Type">The type of this DialerAction. (required).</param>
         /// <param name="ActionTypeName">Additional type specification for this DialerAction. (required).</param>
         /// <param name="UpdateOption">Specifies how a contact attribute should be updated. Required for MODIFY_CONTACT_ATTRIBUTE..</param>
-        /// <param name="Properties">A map of key-value pairs pertinent to the DialerAction. Different types of DialerActions require different properties. MODIFY_CONTACT_ATTRIBUTE with an updateOption of SET takes a contact column as the key and accepts any value. SCHEDULE_CALLBACK takes a key &#39;callbackOffset&#39; that specifies how far in the future the callback should be scheduled, in minutes. SET_CALLER_ID takes two keys: &#39;callerAddress&#39;, which should be the caller id phone number, and &#39;callerName&#39;. For either key, you can also specify a column on the contact to get the value from. To do this, specify &#39;contact.Column&#39;, where &#39;Column&#39; is the name of the contact column from which to get the value. SET_SKILLS takes a key &#39;skills&#39; with an array of skill ids wrapped into a string (Example: {&#39;skills&#39;: &#39;[&#39;skillIdHere&#39;]&#39;} )..</param>
+        /// <param name="Properties">A map of key-value pairs pertinent to the DialerAction. Different types of DialerActions require different properties. MODIFY_CONTACT_ATTRIBUTE with an updateOption of SET takes a contact column as the key and accepts any value. SCHEDULE_CALLBACK takes a key 'callbackOffset' that specifies how far in the future the callback should be scheduled, in minutes. SET_CALLER_ID takes two keys: 'callerAddress', which should be the caller id phone number, and 'callerName'. For either key, you can also specify a column on the contact to get the value from. To do this, specify 'contact.Column', where 'Column' is the name of the contact column from which to get the value. SET_SKILLS takes a key 'skills' with an array of skill ids wrapped into a string (Example: {'skills': '['skillIdHere']'} )..</param>
         /// <param name="DataAction">The Data Action to use for this action. Required for a dataActionBehavior..</param>
         /// <param name="ContactColumnToDataActionFieldMappings">A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionBehavior..</param>
         /// <param name="ContactIdField">The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionBehavior..</param>
@@ -269,67 +215,67 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
         /// <summary>
-        /// A map of key-value pairs pertinent to the DialerAction. Different types of DialerActions require different properties. MODIFY_CONTACT_ATTRIBUTE with an updateOption of SET takes a contact column as the key and accepts any value. SCHEDULE_CALLBACK takes a key &#39;callbackOffset&#39; that specifies how far in the future the callback should be scheduled, in minutes. SET_CALLER_ID takes two keys: &#39;callerAddress&#39;, which should be the caller id phone number, and &#39;callerName&#39;. For either key, you can also specify a column on the contact to get the value from. To do this, specify &#39;contact.Column&#39;, where &#39;Column&#39; is the name of the contact column from which to get the value. SET_SKILLS takes a key &#39;skills&#39; with an array of skill ids wrapped into a string (Example: {&#39;skills&#39;: &#39;[&#39;skillIdHere&#39;]&#39;} ).
+        /// A map of key-value pairs pertinent to the DialerAction. Different types of DialerActions require different properties. MODIFY_CONTACT_ATTRIBUTE with an updateOption of SET takes a contact column as the key and accepts any value. SCHEDULE_CALLBACK takes a key 'callbackOffset' that specifies how far in the future the callback should be scheduled, in minutes. SET_CALLER_ID takes two keys: 'callerAddress', which should be the caller id phone number, and 'callerName'. For either key, you can also specify a column on the contact to get the value from. To do this, specify 'contact.Column', where 'Column' is the name of the contact column from which to get the value. SET_SKILLS takes a key 'skills' with an array of skill ids wrapped into a string (Example: {'skills': '['skillIdHere']'} ).
         /// </summary>
-        /// <value>A map of key-value pairs pertinent to the DialerAction. Different types of DialerActions require different properties. MODIFY_CONTACT_ATTRIBUTE with an updateOption of SET takes a contact column as the key and accepts any value. SCHEDULE_CALLBACK takes a key &#39;callbackOffset&#39; that specifies how far in the future the callback should be scheduled, in minutes. SET_CALLER_ID takes two keys: &#39;callerAddress&#39;, which should be the caller id phone number, and &#39;callerName&#39;. For either key, you can also specify a column on the contact to get the value from. To do this, specify &#39;contact.Column&#39;, where &#39;Column&#39; is the name of the contact column from which to get the value. SET_SKILLS takes a key &#39;skills&#39; with an array of skill ids wrapped into a string (Example: {&#39;skills&#39;: &#39;[&#39;skillIdHere&#39;]&#39;} ).</value>
+        /// <value>A map of key-value pairs pertinent to the DialerAction. Different types of DialerActions require different properties. MODIFY_CONTACT_ATTRIBUTE with an updateOption of SET takes a contact column as the key and accepts any value. SCHEDULE_CALLBACK takes a key 'callbackOffset' that specifies how far in the future the callback should be scheduled, in minutes. SET_CALLER_ID takes two keys: 'callerAddress', which should be the caller id phone number, and 'callerName'. For either key, you can also specify a column on the contact to get the value from. To do this, specify 'contact.Column', where 'Column' is the name of the contact column from which to get the value. SET_SKILLS takes a key 'skills' with an array of skill ids wrapped into a string (Example: {'skills': '['skillIdHere']'} ).</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public Dictionary<string, string> Properties { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Data Action to use for this action. Required for a dataActionBehavior.
         /// </summary>
         /// <value>The Data Action to use for this action. Required for a dataActionBehavior.</value>
         [DataMember(Name="dataAction", EmitDefaultValue=false)]
         public DomainEntityRef DataAction { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionBehavior.
         /// </summary>
         /// <value>A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionBehavior.</value>
         [DataMember(Name="contactColumnToDataActionFieldMappings", EmitDefaultValue=false)]
         public List<ContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionBehavior.
         /// </summary>
         /// <value>The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionBehavior.</value>
         [DataMember(Name="contactIdField", EmitDefaultValue=false)]
         public string ContactIdField { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The input field from the data action that the callAnalysisResult will be passed to for this condition. Valid for a wrapup dataActionBehavior.
         /// </summary>
         /// <value>The input field from the data action that the callAnalysisResult will be passed to for this condition. Valid for a wrapup dataActionBehavior.</value>
         [DataMember(Name="callAnalysisResultField", EmitDefaultValue=false)]
         public string CallAnalysisResultField { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionBehavior.
         /// </summary>
         /// <value>The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionBehavior.</value>
         [DataMember(Name="agentWrapupField", EmitDefaultValue=false)]
         public string AgentWrapupField { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -338,7 +284,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerAction {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ActionTypeName: ").Append(ActionTypeName).Append("\n");
             sb.Append("  UpdateOption: ").Append(UpdateOption).Append("\n");
@@ -446,34 +392,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.ActionTypeName != null)
                     hash = hash * 59 + this.ActionTypeName.GetHashCode();
-                
+
                 if (this.UpdateOption != null)
                     hash = hash * 59 + this.UpdateOption.GetHashCode();
-                
+
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
-                
+
                 if (this.DataAction != null)
                     hash = hash * 59 + this.DataAction.GetHashCode();
-                
+
                 if (this.ContactColumnToDataActionFieldMappings != null)
                     hash = hash * 59 + this.ContactColumnToDataActionFieldMappings.GetHashCode();
-                
+
                 if (this.ContactIdField != null)
                     hash = hash * 59 + this.ContactIdField.GetHashCode();
-                
+
                 if (this.CallAnalysisResultField != null)
                     hash = hash * 59 + this.CallAnalysisResultField.GetHashCode();
-                
+
                 if (this.AgentWrapupField != null)
                     hash = hash * 59 + this.AgentWrapupField.GetHashCode();
-                
+
                 return hash;
             }
         }

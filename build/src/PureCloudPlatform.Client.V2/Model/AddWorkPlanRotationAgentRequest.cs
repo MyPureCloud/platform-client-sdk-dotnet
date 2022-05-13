@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AddWorkPlanRotationAgentRequest :  IEquatable<AddWorkPlanRotationAgentRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AddWorkPlanRotationAgentRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AddWorkPlanRotationAgentRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AddWorkPlanRotationAgentRequest" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of an agent in this work plan rotation
         /// </summary>
         /// <value>The ID of an agent in this work plan rotation</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date range to which this agent is effective in the work plan rotation
         /// </summary>
         /// <value>The date range to which this agent is effective in the work plan rotation</value>
         [DataMember(Name="dateRange", EmitDefaultValue=false)]
         public DateRangeWithOptionalEnd DateRange { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Start position of the work plan in the pattern for this agent in the work plan rotation. Position value starts from 0
         /// </summary>
         /// <value>Start position of the work plan in the pattern for this agent in the work plan rotation. Position value starts from 0</value>
         [DataMember(Name="position", EmitDefaultValue=false)]
         public int? Position { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AddWorkPlanRotationAgentRequest {\n");
-            
+
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  DateRange: ").Append(DateRange).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.DateRange != null)
                     hash = hash * 59 + this.DateRange.GetHashCode();
-                
+
                 if (this.Position != null)
                     hash = hash * 59 + this.Position.GetHashCode();
-                
+
                 return hash;
             }
         }

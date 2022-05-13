@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MessengerStyles :  IEquatable<MessengerStyles>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MessengerStyles" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The primary color of messenger in hexadecimal
         /// </summary>
         /// <value>The primary color of messenger in hexadecimal</value>
         [DataMember(Name="primaryColor", EmitDefaultValue=false)]
         public string PrimaryColor { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MessengerStyles {\n");
-            
+
             sb.Append("  PrimaryColor: ").Append(PrimaryColor).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PrimaryColor != null)
                     hash = hash * 59 + this.PrimaryColor.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RoutingSettings :  IEquatable<RoutingSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingSettings" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Reset agent score when agent presence changes from off-queue to on-queue
         /// </summary>
         /// <value>Reset agent score when agent presence changes from off-queue to on-queue</value>
         [DataMember(Name="resetAgentScoreOnPresenceChange", EmitDefaultValue=false)]
         public bool? ResetAgentScoreOnPresenceChange { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RoutingSettings {\n");
-            
+
             sb.Append("  ResetAgentScoreOnPresenceChange: ").Append(ResetAgentScoreOnPresenceChange).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ResetAgentScoreOnPresenceChange != null)
                     hash = hash * 59 + this.ResetAgentScoreOnPresenceChange.GetHashCode();
-                
+
                 return hash;
             }
         }

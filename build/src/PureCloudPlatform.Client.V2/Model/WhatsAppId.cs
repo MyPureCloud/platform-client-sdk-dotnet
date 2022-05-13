@@ -18,24 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WhatsAppId :  IEquatable<WhatsAppId>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WhatsAppId" /> class.
         /// </summary>
         /// <param name="PhoneNumber">The phone number associated with this WhatsApp account.</param>
-        /// <param name="DisplayName">The displayName of this person&#39;s account in WhatsApp.</param>
+        /// <param name="DisplayName">The displayName of this person's account in WhatsApp.</param>
         public WhatsAppId(PhoneNumber PhoneNumber = null, string DisplayName = null)
         {
             this.PhoneNumber = PhoneNumber;
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The phone number associated with this WhatsApp account
         /// </summary>
         /// <value>The phone number associated with this WhatsApp account</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public PhoneNumber PhoneNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The displayName of this person&#39;s account in WhatsApp
+        /// The displayName of this person's account in WhatsApp
         /// </summary>
-        /// <value>The displayName of this person&#39;s account in WhatsApp</value>
+        /// <value>The displayName of this person's account in WhatsApp</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WhatsAppId {\n");
-            
+
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
-                
+
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
-                
+
                 return hash;
             }
         }

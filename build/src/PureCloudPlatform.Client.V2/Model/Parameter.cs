@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Parameter :  IEquatable<Parameter>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ParameterType
         /// </summary>
@@ -61,10 +56,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "STRINGLIST")]
             Stringlist
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
@@ -115,34 +106,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "UNKNOWN")]
             Unknown
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ParameterType
         /// </summary>
         [DataMember(Name="parameterType", EmitDefaultValue=false)]
         public ParameterTypeEnum? ParameterType { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public DomainEnum? Domain { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Parameter" /> class.
         /// </summary>
@@ -159,27 +132,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Required
         /// </summary>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public bool? Required { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,7 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Parameter {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ParameterType: ").Append(ParameterType).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
@@ -266,19 +239,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ParameterType != null)
                     hash = hash * 59 + this.ParameterType.GetHashCode();
-                
+
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
+
                 if (this.Required != null)
                     hash = hash * 59 + this.Required.GetHashCode();
-                
+
                 return hash;
             }
         }

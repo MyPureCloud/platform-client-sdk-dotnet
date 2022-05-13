@@ -18,13 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DevelopmentActivityAggregateParam :  IEquatable<DevelopmentActivityAggregateParam>
     {
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Metrics
         /// </summary>
@@ -99,12 +92,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "nNotCompletedActivities")]
             Nnotcompletedactivities
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets GroupBy
         /// </summary>
@@ -125,34 +112,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "attendeeId")]
             Attendeeid
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DevelopmentActivityAggregateParam" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DevelopmentActivityAggregateParam() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DevelopmentActivityAggregateParam" /> class.
         /// </summary>
         /// <param name="Interval">Specifies the range of due dates to be used for filtering. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="Metrics">The list of metrics to be returned. If omitted, all metrics are returned..</param>
-        /// <param name="GroupBy">Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \&quot;attendeeId\&quot;).</param>
+        /// <param name="GroupBy">Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \"attendeeId\").</param>
         /// <param name="Filter">The filter applied to the data. This is ANDed with the interval parameter. (required).</param>
         public DevelopmentActivityAggregateParam(string Interval = null, List<MetricsEnum> Metrics = null, List<GroupByEnum> GroupBy = null, DevelopmentActivityAggregateQueryRequestFilter Filter = null)
         {
@@ -163,43 +134,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Specifies the range of due dates to be used for filtering. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
         /// <value>Specifies the range of due dates to be used for filtering. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of metrics to be returned. If omitted, all metrics are returned.
         /// </summary>
         /// <value>The list of metrics to be returned. If omitted, all metrics are returned.</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
         public List<MetricsEnum> Metrics { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \&quot;attendeeId\&quot;)
+        /// Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \"attendeeId\")
         /// </summary>
-        /// <value>Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \&quot;attendeeId\&quot;)</value>
+        /// <value>Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \"attendeeId\")</value>
         [DataMember(Name="groupBy", EmitDefaultValue=false)]
         public List<GroupByEnum> GroupBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The filter applied to the data. This is ANDed with the interval parameter.
         /// </summary>
         /// <value>The filter applied to the data. This is ANDed with the interval parameter.</value>
         [DataMember(Name="filter", EmitDefaultValue=false)]
         public DevelopmentActivityAggregateQueryRequestFilter Filter { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -208,7 +179,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DevelopmentActivityAggregateParam {\n");
-            
+
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
             sb.Append("  GroupBy: ").Append(GroupBy).Append("\n");
@@ -286,19 +257,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
+
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
-                
+
                 if (this.GroupBy != null)
                     hash = hash * 59 + this.GroupBy.GetHashCode();
-                
+
                 if (this.Filter != null)
                     hash = hash * 59 + this.Filter.GetHashCode();
-                
+
                 return hash;
             }
         }

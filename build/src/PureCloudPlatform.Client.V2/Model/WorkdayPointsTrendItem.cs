@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkdayPointsTrendItem :  IEquatable<WorkdayPointsTrendItem>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkdayPointsTrendItem" /> class.
         /// </summary>
@@ -39,25 +26,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// workday date for the points trend. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>workday date for the points trend. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateWorkday", EmitDefaultValue=false)]
         public String DateWorkday { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// workday points for the date
         /// </summary>
         /// <value>workday points for the date</value>
         [DataMember(Name="points", EmitDefaultValue=false)]
         public double? Points { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkdayPointsTrendItem {\n");
-            
+
             sb.Append("  DateWorkday: ").Append(DateWorkday).Append("\n");
             sb.Append("  Points: ").Append(Points).Append("\n");
             sb.Append("}\n");
@@ -132,13 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DateWorkday != null)
                     hash = hash * 59 + this.DateWorkday.GetHashCode();
-                
+
                 if (this.Points != null)
                     hash = hash * 59 + this.Points.GetHashCode();
-                
+
                 return hash;
             }
         }

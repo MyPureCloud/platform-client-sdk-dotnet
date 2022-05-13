@@ -18,24 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RequestScoredAgent :  IEquatable<RequestScoredAgent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestScoredAgent" /> class.
         /// </summary>
-        /// <param name="Id">Agent&#39;s user ID.</param>
-        /// <param name="Score">Agent&#39;s score for the current conversation, from 0 - 100, higher being better.</param>
+        /// <param name="Id">Agent's user ID.</param>
+        /// <param name="Score">Agent's score for the current conversation, from 0 - 100, higher being better.</param>
         public RequestScoredAgent(string Id = null, int? Score = null)
         {
             this.Id = Id;
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// Agent&#39;s user ID
+        /// Agent's user ID
         /// </summary>
-        /// <value>Agent&#39;s user ID</value>
+        /// <value>Agent's user ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Agent&#39;s score for the current conversation, from 0 - 100, higher being better
+        /// Agent's score for the current conversation, from 0 - 100, higher being better
         /// </summary>
-        /// <value>Agent&#39;s score for the current conversation, from 0 - 100, higher being better</value>
+        /// <value>Agent's score for the current conversation, from 0 - 100, higher being better</value>
         [DataMember(Name="score", EmitDefaultValue=false)]
         public int? Score { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RequestScoredAgent {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Score: ").Append(Score).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Score != null)
                     hash = hash * 59 + this.Score.GetHashCode();
-                
+
                 return hash;
             }
         }

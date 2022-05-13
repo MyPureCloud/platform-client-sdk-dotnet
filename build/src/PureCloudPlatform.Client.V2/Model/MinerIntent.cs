@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MinerIntent :  IEquatable<MinerIntent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MinerIntent" /> class.
         /// </summary>
@@ -67,61 +34,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Intent name.
         /// </summary>
         /// <value>Intent name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The miner to which the intent belongs.
         /// </summary>
         /// <value>The miner to which the intent belongs.</value>
         [DataMember(Name="miner", EmitDefaultValue=false)]
         public Miner Miner { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The utterances that are extracted for an Intent.
         /// </summary>
         /// <value>The utterances that are extracted for an Intent.</value>
         [DataMember(Name="utterances", EmitDefaultValue=false)]
         public List<Utterance> Utterances { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Percentage of conversations belonging to the intent.
         /// </summary>
         /// <value>Percentage of conversations belonging to the intent.</value>
         [DataMember(Name="analyticVolumePercent", EmitDefaultValue=false)]
         public double? AnalyticVolumePercent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -130,7 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MinerIntent {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Miner: ").Append(Miner).Append("\n");
@@ -220,25 +187,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Miner != null)
                     hash = hash * 59 + this.Miner.GetHashCode();
-                
+
                 if (this.Utterances != null)
                     hash = hash * 59 + this.Utterances.GetHashCode();
-                
+
                 if (this.AnalyticVolumePercent != null)
                     hash = hash * 59 + this.AnalyticVolumePercent.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

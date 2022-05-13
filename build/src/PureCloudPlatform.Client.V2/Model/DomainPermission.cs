@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DomainPermission :  IEquatable<DomainPermission>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPermission" /> class.
         /// </summary>
@@ -71,55 +38,55 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EntityType
         /// </summary>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public string EntityType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public string Action { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AllowsConditions
         /// </summary>
         [DataMember(Name="allowsConditions", EmitDefaultValue=false)]
         public bool? AllowsConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DivisionAware
         /// </summary>
         [DataMember(Name="divisionAware", EmitDefaultValue=false)]
         public bool? DivisionAware { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DomainPermission {\n");
-            
+
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
@@ -218,25 +185,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
+
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.Label != null)
                     hash = hash * 59 + this.Label.GetHashCode();
-                
+
                 if (this.AllowsConditions != null)
                     hash = hash * 59 + this.AllowsConditions.GetHashCode();
-                
+
                 if (this.DivisionAware != null)
                     hash = hash * 59 + this.DivisionAware.GetHashCode();
-                
+
                 return hash;
             }
         }

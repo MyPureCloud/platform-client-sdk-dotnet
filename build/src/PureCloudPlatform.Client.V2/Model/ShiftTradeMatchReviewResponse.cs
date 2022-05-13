@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ShiftTradeMatchReviewResponse :  IEquatable<ShiftTradeMatchReviewResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradeMatchReviewResponse" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Details for the initiatingUser side of the shift trade
         /// </summary>
         /// <value>Details for the initiatingUser side of the shift trade</value>
         [DataMember(Name="initiatingUser", EmitDefaultValue=false)]
         public ShiftTradeMatchReviewUserResponse InitiatingUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Details for the receivingUser side of the shift trade
         /// </summary>
         /// <value>Details for the receivingUser side of the shift trade</value>
         [DataMember(Name="receivingUser", EmitDefaultValue=false)]
         public ShiftTradeMatchReviewUserResponse ReceivingUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Constraint violations introduced after being matched that would normally disallow a trade, but which can still be overridden by the shift trade administrator
         /// </summary>
         /// <value>Constraint violations introduced after being matched that would normally disallow a trade, but which can still be overridden by the shift trade administrator</value>
         [DataMember(Name="violations", EmitDefaultValue=false)]
         public List<ShiftTradeMatchViolation> Violations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Constraint violations associated with this shift trade which require shift trade administrator review
         /// </summary>
         /// <value>Constraint violations associated with this shift trade which require shift trade administrator review</value>
         [DataMember(Name="adminReviewViolations", EmitDefaultValue=false)]
         public List<ShiftTradeMatchViolation> AdminReviewViolations { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ShiftTradeMatchReviewResponse {\n");
-            
+
             sb.Append("  InitiatingUser: ").Append(InitiatingUser).Append("\n");
             sb.Append("  ReceivingUser: ").Append(ReceivingUser).Append("\n");
             sb.Append("  Violations: ").Append(Violations).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.InitiatingUser != null)
                     hash = hash * 59 + this.InitiatingUser.GetHashCode();
-                
+
                 if (this.ReceivingUser != null)
                     hash = hash * 59 + this.ReceivingUser.GetHashCode();
-                
+
                 if (this.Violations != null)
                     hash = hash * 59 + this.Violations.GetHashCode();
-                
+
                 if (this.AdminReviewViolations != null)
                     hash = hash * 59 + this.AdminReviewViolations.GetHashCode();
-                
+
                 return hash;
             }
         }

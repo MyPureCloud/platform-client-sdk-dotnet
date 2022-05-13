@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimV2GroupReference :  IEquatable<ScimV2GroupReference>
     {
-        
-        
         /// <summary>
         /// The type of SCIM resource.
         /// </summary>
@@ -65,61 +63,43 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Schema")]
             Schema
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of SCIM resource.
         /// </summary>
         /// <value>The type of SCIM resource.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-    
+        public TypeEnum? Type { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2GroupReference" /> class.
         /// </summary>
-        /// <param name="Value">The ID of the group member. Can be \&quot;userId\&quot; or \&quot;groupId\&quot;..</param>
+        /// <param name="Value">The ID of the group member. Can be \"userId\" or \"groupId\"..</param>
         public ScimV2GroupReference(string Value = null)
         {
             this.Value = Value;
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
-        /// The ID of the group member. Can be \&quot;userId\&quot; or \&quot;groupId\&quot;.
+        /// The ID of the group member. Can be \"userId\" or \"groupId\".
         /// </summary>
-        /// <value>The ID of the group member. Can be \&quot;userId\&quot; or \&quot;groupId\&quot;.</value>
+        /// <value>The ID of the group member. Can be \"userId\" or \"groupId\".</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The reference URI of the SCIM resource.
         /// </summary>
         /// <value>The reference URI of the SCIM resource.</value>
         [DataMember(Name="$ref", EmitDefaultValue=false)]
-        public string _Ref { get; private set; }
-        
-        
+        public string Ref { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,10 +108,10 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimV2GroupReference {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
-            sb.Append("  _Ref: ").Append(_Ref).Append("\n");
+            sb.Append("  Ref: ").Append(Ref).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -183,9 +163,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Value.Equals(other.Value)
                 ) &&
                 (
-                    this._Ref == other._Ref ||
-                    this._Ref != null &&
-                    this._Ref.Equals(other._Ref)
+                    this.Ref == other.Ref ||
+                    this.Ref != null &&
+                    this.Ref.Equals(other.Ref)
                 );
         }
 
@@ -200,16 +180,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
-                if (this._Ref != null)
-                    hash = hash * 59 + this._Ref.GetHashCode();
-                
+
+                if (this.Ref != null)
+                    hash = hash * 59 + this.Ref.GetHashCode();
+
                 return hash;
             }
         }

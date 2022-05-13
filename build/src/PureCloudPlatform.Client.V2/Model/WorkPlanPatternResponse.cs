@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkPlanPatternResponse :  IEquatable<WorkPlanPatternResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanPatternResponse" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// List of work plans in order of rotation on a weekly basis
         /// </summary>
         /// <value>List of work plans in order of rotation on a weekly basis</value>
         [DataMember(Name="workPlans", EmitDefaultValue=false)]
         public List<WorkPlanReference> WorkPlans { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkPlanPatternResponse {\n");
-            
+
             sb.Append("  WorkPlans: ").Append(WorkPlans).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WorkPlans != null)
                     hash = hash * 59 + this.WorkPlans.GetHashCode();
-                
+
                 return hash;
             }
         }

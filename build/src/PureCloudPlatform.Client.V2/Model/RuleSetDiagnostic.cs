@@ -18,13 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RuleSetDiagnostic :  IEquatable<RuleSetDiagnostic>
     {
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Warnings
         /// </summary>
@@ -63,15 +56,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PHONE_CONDITIONS_WITH_MULTICOLUMN_PREVIEW")]
             PhoneConditionsWithMulticolumnPreview
         }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleSetDiagnostic" /> class.
         /// </summary>
@@ -80,25 +64,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A campaign rule set
         /// </summary>
         /// <value>A campaign rule set</value>
         [DataMember(Name="ruleSet", EmitDefaultValue=false)]
         public DomainEntityRef RuleSet { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Diagnostic warnings for the rule set
         /// </summary>
         /// <value>Diagnostic warnings for the rule set</value>
         [DataMember(Name="warnings", EmitDefaultValue=false)]
         public List<WarningsEnum> Warnings { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -107,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RuleSetDiagnostic {\n");
-            
+
             sb.Append("  RuleSet: ").Append(RuleSet).Append("\n");
             sb.Append("  Warnings: ").Append(Warnings).Append("\n");
             sb.Append("}\n");
@@ -173,13 +157,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RuleSet != null)
                     hash = hash * 59 + this.RuleSet.GetHashCode();
-                
+
                 if (this.Warnings != null)
                     hash = hash * 59 + this.Warnings.GetHashCode();
-                
+
                 return hash;
             }
         }

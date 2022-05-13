@@ -79,7 +79,7 @@ namespace Example
 
             var apiInstance = new SpeechTextAnalyticsApi();
             var programId = programId_example;  // string | The id of the program
-            var forceDelete = true;  // bool? | Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional)  (default to false)
+            var forceDelete = forceDelete_example;  // bool? | Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional)  (default to false)
 
             try
             { 
@@ -101,7 +101,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **programId** | **string**| The id of the program |  |
-| **forceDelete** | **bool?**| Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. | [optional] [default to false] |
+| **forceDelete** | **bool?**| Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. | [optional] [default to false]<br />**Values**: true, false |
 {: class="table table-striped"}
 
 ### Return type

@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimV2PatchRequest :  IEquatable<ScimV2PatchRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2PatchRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ScimV2PatchRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2PatchRequest" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of schemas used in the PATCH request.
         /// </summary>
         /// <value>The list of schemas used in the PATCH request.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
         public List<string> Schemas { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of operations to perform for the PATCH request.
         /// </summary>
         /// <value>The list of operations to perform for the PATCH request.</value>
         [DataMember(Name="Operations", EmitDefaultValue=false)]
         public List<ScimV2PatchOperation> Operations { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimV2PatchRequest {\n");
-            
+
             sb.Append("  Schemas: ").Append(Schemas).Append("\n");
             sb.Append("  Operations: ").Append(Operations).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Schemas != null)
                     hash = hash * 59 + this.Schemas.GetHashCode();
-                
+
                 if (this.Operations != null)
                     hash = hash * 59 + this.Operations.GetHashCode();
-                
+
                 return hash;
             }
         }

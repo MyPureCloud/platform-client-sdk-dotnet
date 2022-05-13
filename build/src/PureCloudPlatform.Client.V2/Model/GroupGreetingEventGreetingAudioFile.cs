@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GroupGreetingEventGreetingAudioFile :  IEquatable<GroupGreetingEventGreetingAudioFile>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupGreetingEventGreetingAudioFile" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets DurationMilliseconds
         /// </summary>
         [DataMember(Name="durationMilliseconds", EmitDefaultValue=false)]
         public int? DurationMilliseconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SizeBytes
         /// </summary>
         [DataMember(Name="sizeBytes", EmitDefaultValue=false)]
         public int? SizeBytes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GroupGreetingEventGreetingAudioFile {\n");
-            
+
             sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
             sb.Append("  SizeBytes: ").Append(SizeBytes).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DurationMilliseconds != null)
                     hash = hash * 59 + this.DurationMilliseconds.GetHashCode();
-                
+
                 if (this.SizeBytes != null)
                     hash = hash * 59 + this.SizeBytes.GetHashCode();
-                
+
                 return hash;
             }
         }

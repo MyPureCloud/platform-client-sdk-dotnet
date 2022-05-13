@@ -18,40 +18,32 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActionMapScheduleGroup :  IEquatable<ActionMapScheduleGroup>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionMapScheduleGroup" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ActionMapScheduleGroup() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionMapScheduleGroup" /> class.
         /// </summary>
-        /// <param name="Id">The ID of the action maps&#39;s associated schedule group. (required).</param>
+        /// <param name="Id">The ID of the action maps's associated schedule group. (required).</param>
         public ActionMapScheduleGroup(string Id = null)
         {
             this.Id = Id;
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The ID of the action maps&#39;s associated schedule group.
+        /// The ID of the action maps's associated schedule group.
         /// </summary>
-        /// <value>The ID of the action maps&#39;s associated schedule group.</value>
+        /// <value>The ID of the action maps's associated schedule group.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActionMapScheduleGroup {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Channel :  IEquatable<Channel>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Channel" /> class.
         /// </summary>
@@ -50,32 +32,32 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ConnectUri
         /// </summary>
         [DataMember(Name="connectUri", EmitDefaultValue=false)]
         public string ConnectUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="expires", EmitDefaultValue=false)]
         public DateTime? Expires { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Channel {\n");
-            
+
             sb.Append("  ConnectUri: ").Append(ConnectUri).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Expires: ").Append(Expires).Append("\n");
@@ -156,16 +138,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ConnectUri != null)
                     hash = hash * 59 + this.ConnectUri.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Expires != null)
                     hash = hash * 59 + this.Expires.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CoverSheet :  IEquatable<CoverSheet>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CoverSheet" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Text to be added to the coversheet
         /// </summary>
         /// <value>Text to be added to the coversheet</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Locale, e.g. = en-US
         /// </summary>
         /// <value>Locale, e.g. = en-US</value>
         [DataMember(Name="locale", EmitDefaultValue=false)]
         public string Locale { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CoverSheet {\n");
-            
+
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  Locale: ").Append(Locale).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 if (this.Locale != null)
                     hash = hash * 59 + this.Locale.GetHashCode();
-                
+
                 return hash;
             }
         }

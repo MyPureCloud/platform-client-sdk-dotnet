@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PostTextMessage :  IEquatable<PostTextMessage>
     {
-        
-        
         /// <summary>
         /// Message type
         /// </summary>
@@ -53,36 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Receipt")]
             Receipt
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Message type
         /// </summary>
         /// <value>Message type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PostTextMessage" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PostTextMessage() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PostTextMessage" /> class.
         /// </summary>
@@ -97,27 +77,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Message text. If type is structured, used as fallback for clients that do not support particular structured content
         /// </summary>
         /// <value>Message text. If type is structured, used as fallback for clients that do not support particular structured content</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of content elements in message
         /// </summary>
         /// <value>A list of content elements in message</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public List<MessageContent> Content { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -126,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PostTextMessage {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
@@ -198,16 +178,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
-                
+
                 return hash;
             }
         }

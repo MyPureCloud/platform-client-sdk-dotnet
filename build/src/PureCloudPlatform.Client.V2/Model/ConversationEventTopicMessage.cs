@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationEventTopicMessage :  IEquatable<ConversationEventTopicMessage>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -56,25 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "disconnected")]
             Disconnected
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
@@ -186,31 +162,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "uncallable")]
             Uncallable
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the type of message platform from which the message originated.
         /// </summary>
@@ -304,99 +255,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "instagram")]
             Instagram
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
         /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the type of message platform from which the message originated.
         /// </summary>
         /// <value>Indicates the type of message platform from which the message originated.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEventTopicMessage" /> class.
         /// </summary>
@@ -418,9 +294,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Indicates the type of message platform from which the message originated..</param>
         /// <param name="RecipientCountry">Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format..</param>
         /// <param name="RecipientType">The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type..</param>
-        /// <param name="JourneyContext">A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context)..</param>
+        /// <param name="JourneyContext">A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context)..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
-        /// <param name="AfterCallWork">A communication&#39;s after-call work data..</param>
+        /// <param name="AfterCallWork">A communication's after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
         public ConversationEventTopicMessage(string Id = null, StateEnum? State = null, bool? Held = null, ConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationEventTopicAddress ToAddress = null, ConversationEventTopicAddress FromAddress = null, List<ConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, ConversationEventTopicJourneyContext JourneyContext = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
@@ -451,193 +327,193 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A globally unique identifier for this communication.
         /// </summary>
         /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// True if this call is held and the person on this side hears silence.
         /// </summary>
         /// <value>True if this call is held and the person on this side hears silence.</value>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Detailed information about an error response.
         /// </summary>
         /// <value>Detailed information about an error response.</value>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ConversationEventTopicErrorDetails ErrorInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The source provider of the email.
         /// </summary>
         /// <value>The source provider of the email.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The UUID of the script to use.
         /// </summary>
         /// <value>The UUID of the script to use.</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the peer communication corresponding to a matching leg for this communication.
         /// </summary>
         /// <value>The id of the peer communication corresponding to a matching leg for this communication.</value>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The timestamp the email was placed on hold in the cloud clock if the email is currently on hold.
         /// </summary>
         /// <value>The timestamp the email was placed on hold in the cloud clock if the email is currently on hold.</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this communication was connected in the cloud clock.
         /// </summary>
         /// <value>The timestamp when this communication was connected in the cloud clock.</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this communication disconnected from the conversation in the provider clock.
         /// </summary>
         /// <value>The timestamp when this communication disconnected from the conversation in the provider clock.</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Address and name data for a call endpoint.
         /// </summary>
         /// <value>Address and name data for a call endpoint.</value>
         [DataMember(Name="toAddress", EmitDefaultValue=false)]
         public ConversationEventTopicAddress ToAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Address and name data for a call endpoint.
         /// </summary>
         /// <value>Address and name data for a call endpoint.</value>
         [DataMember(Name="fromAddress", EmitDefaultValue=false)]
         public ConversationEventTopicAddress FromAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The messages sent on this communication channel.
         /// </summary>
         /// <value>The messages sent on this communication channel.</value>
         [DataMember(Name="messages", EmitDefaultValue=false)]
         public List<ConversationEventTopicMessageDetails> Messages { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// the messages transcript file uri.
         /// </summary>
         /// <value>the messages transcript file uri.</value>
         [DataMember(Name="messagesTranscriptUri", EmitDefaultValue=false)]
         public string MessagesTranscriptUri { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format.
         /// </summary>
         /// <value>Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format.</value>
         [DataMember(Name="recipientCountry", EmitDefaultValue=false)]
         public string RecipientCountry { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type.
         /// </summary>
         /// <value>The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type.</value>
         [DataMember(Name="recipientType", EmitDefaultValue=false)]
         public string RecipientType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).
+        /// A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context).
         /// </summary>
-        /// <value>A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).</value>
+        /// <value>A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context).</value>
         [DataMember(Name="journeyContext", EmitDefaultValue=false)]
         public ConversationEventTopicJourneyContext JourneyContext { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Call wrap up or disposition data.
         /// </summary>
         /// <value>Call wrap up or disposition data.</value>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public ConversationEventTopicWrapup Wrapup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// A communication&#39;s after-call work data.
+        /// A communication's after-call work data.
         /// </summary>
-        /// <value>A communication&#39;s after-call work data.</value>
+        /// <value>A communication's after-call work data.</value>
         [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
         public ConversationEventTopicAfterCallWork AfterCallWork { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested.
         /// </summary>
         /// <value>Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested.</value>
         [DataMember(Name="afterCallWorkRequired", EmitDefaultValue=false)]
         public bool? AfterCallWorkRequired { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation.
         /// </summary>
         /// <value>UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation.</value>
         [DataMember(Name="agentAssistantId", EmitDefaultValue=false)]
         public string AgentAssistantId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -646,7 +522,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationEventTopicMessage {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
@@ -838,76 +714,75 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
-                
+
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
+
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                
+
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
-                
+
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
-                
+
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
+
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
-                
+
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
-                
+
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
-                
+
                 if (this.ToAddress != null)
                     hash = hash * 59 + this.ToAddress.GetHashCode();
-                
+
                 if (this.FromAddress != null)
                     hash = hash * 59 + this.FromAddress.GetHashCode();
-                
+
                 if (this.Messages != null)
                     hash = hash * 59 + this.Messages.GetHashCode();
-                
+
                 if (this.MessagesTranscriptUri != null)
                     hash = hash * 59 + this.MessagesTranscriptUri.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.RecipientCountry != null)
                     hash = hash * 59 + this.RecipientCountry.GetHashCode();
-                
+
                 if (this.RecipientType != null)
                     hash = hash * 59 + this.RecipientType.GetHashCode();
-                
+
                 if (this.JourneyContext != null)
                     hash = hash * 59 + this.JourneyContext.GetHashCode();
-                
+
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
-                
+
                 if (this.AfterCallWork != null)
                     hash = hash * 59 + this.AfterCallWork.GetHashCode();
-                
+
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
-                
+
                 if (this.AgentAssistantId != null)
                     hash = hash * 59 + this.AgentAssistantId.GetHashCode();
-                
+
                 return hash;
             }
         }

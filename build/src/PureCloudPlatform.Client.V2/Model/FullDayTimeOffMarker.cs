@@ -18,43 +18,10 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FullDayTimeOffMarker :  IEquatable<FullDayTimeOffMarker>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FullDayTimeOffMarker" /> class.
         /// </summary>
-        /// <param name="BusinessUnitDate">The date of the time off marker, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
+        /// <param name="BusinessUnitDate">The date of the time off marker, interpreted in the business unit's time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="LengthMinutes">The length of the time off marker in minutes.</param>
         /// <param name="Description">The description of the time off marker.</param>
         /// <param name="ActivityCodeId">The ID of the activity code associated with the time off marker.</param>
@@ -71,61 +38,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The date of the time off marker, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// The date of the time off marker, interpreted in the business unit's time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
-        /// <value>The date of the time off marker, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        /// <value>The date of the time off marker, interpreted in the business unit's time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="businessUnitDate", EmitDefaultValue=false)]
         public String BusinessUnitDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The length of the time off marker in minutes
         /// </summary>
         /// <value>The length of the time off marker in minutes</value>
         [DataMember(Name="lengthMinutes", EmitDefaultValue=false)]
         public int? LengthMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of the time off marker
         /// </summary>
         /// <value>The description of the time off marker</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the activity code associated with the time off marker
         /// </summary>
         /// <value>The ID of the activity code associated with the time off marker</value>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the time off marker is paid
         /// </summary>
         /// <value>Whether the time off marker is paid</value>
         [DataMember(Name="paid", EmitDefaultValue=false)]
         public bool? Paid { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the time off request
         /// </summary>
         /// <value>The ID of the time off request</value>
         [DataMember(Name="timeOffRequestId", EmitDefaultValue=false)]
         public string TimeOffRequestId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FullDayTimeOffMarker {\n");
-            
+
             sb.Append("  BusinessUnitDate: ").Append(BusinessUnitDate).Append("\n");
             sb.Append("  LengthMinutes: ").Append(LengthMinutes).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -224,25 +191,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.BusinessUnitDate != null)
                     hash = hash * 59 + this.BusinessUnitDate.GetHashCode();
-                
+
                 if (this.LengthMinutes != null)
                     hash = hash * 59 + this.LengthMinutes.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.ActivityCodeId != null)
                     hash = hash * 59 + this.ActivityCodeId.GetHashCode();
-                
+
                 if (this.Paid != null)
                     hash = hash * 59 + this.Paid.GetHashCode();
-                
+
                 if (this.TimeOffRequestId != null)
                     hash = hash * 59 + this.TimeOffRequestId.GetHashCode();
-                
+
                 return hash;
             }
         }

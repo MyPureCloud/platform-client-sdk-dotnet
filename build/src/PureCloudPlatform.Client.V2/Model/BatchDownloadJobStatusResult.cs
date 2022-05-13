@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BatchDownloadJobStatusResult :  IEquatable<BatchDownloadJobStatusResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchDownloadJobStatusResult" /> class.
         /// </summary>
@@ -74,70 +36,70 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// JobId returned when job was initially submitted
         /// </summary>
         /// <value>JobId returned when job was initially submitted</value>
         [DataMember(Name="jobId", EmitDefaultValue=false)]
         public string JobId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of results expected when job is completed
         /// </summary>
         /// <value>Number of results expected when job is completed</value>
         [DataMember(Name="expectedResultCount", EmitDefaultValue=false)]
         public int? ExpectedResultCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current number of results available
         /// </summary>
         /// <value>Current number of results available</value>
         [DataMember(Name="resultCount", EmitDefaultValue=false)]
         public int? ResultCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of error results produced so far
         /// </summary>
         /// <value>Number of error results produced so far</value>
         [DataMember(Name="errorCount", EmitDefaultValue=false)]
         public int? ErrorCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current set of results for the job
         /// </summary>
         /// <value>Current set of results for the job</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<BatchDownloadJobResult> Results { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,7 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BatchDownloadJobStatusResult {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  JobId: ").Append(JobId).Append("\n");
             sb.Append("  ExpectedResultCount: ").Append(ExpectedResultCount).Append("\n");
@@ -242,28 +204,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.JobId != null)
                     hash = hash * 59 + this.JobId.GetHashCode();
-                
+
                 if (this.ExpectedResultCount != null)
                     hash = hash * 59 + this.ExpectedResultCount.GetHashCode();
-                
+
                 if (this.ResultCount != null)
                     hash = hash * 59 + this.ResultCount.GetHashCode();
-                
+
                 if (this.ErrorCount != null)
                     hash = hash * 59 + this.ErrorCount.GetHashCode();
-                
+
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

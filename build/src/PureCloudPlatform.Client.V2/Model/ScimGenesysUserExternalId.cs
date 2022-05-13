@@ -18,29 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimGenesysUserExternalId :  IEquatable<ScimGenesysUserExternalId>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimGenesysUserExternalId" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ScimGenesysUserExternalId() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimGenesysUserExternalId" /> class.
         /// </summary>
-        /// <param name="Authority">Authority, or scope, of \&quot;externalId\&quot;. Allows multiple external identifiers to be defined. Represents the source of the external identifier. (required).</param>
+        /// <param name="Authority">Authority, or scope, of \"externalId\". Allows multiple external identifiers to be defined. Represents the source of the external identifier. (required).</param>
         /// <param name="Value">Identifier of the user in an external system. (required).</param>
         public ScimGenesysUserExternalId(string Authority = null, string Value = null)
         {
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// Authority, or scope, of \&quot;externalId\&quot;. Allows multiple external identifiers to be defined. Represents the source of the external identifier.
+        /// Authority, or scope, of \"externalId\". Allows multiple external identifiers to be defined. Represents the source of the external identifier.
         /// </summary>
-        /// <value>Authority, or scope, of \&quot;externalId\&quot;. Allows multiple external identifiers to be defined. Represents the source of the external identifier.</value>
+        /// <value>Authority, or scope, of \"externalId\". Allows multiple external identifiers to be defined. Represents the source of the external identifier.</value>
         [DataMember(Name="authority", EmitDefaultValue=false)]
         public string Authority { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Identifier of the user in an external system.
         /// </summary>
         /// <value>Identifier of the user in an external system.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimGenesysUserExternalId {\n");
-            
+
             sb.Append("  Authority: ").Append(Authority).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Authority != null)
                     hash = hash * 59 + this.Authority.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 return hash;
             }
         }

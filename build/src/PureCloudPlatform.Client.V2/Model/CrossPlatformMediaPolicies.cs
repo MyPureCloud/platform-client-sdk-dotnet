@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CrossPlatformMediaPolicies :  IEquatable<CrossPlatformMediaPolicies>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CrossPlatformMediaPolicies" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Conditions and actions for calls
         /// </summary>
         /// <value>Conditions and actions for calls</value>
         [DataMember(Name="callPolicy", EmitDefaultValue=false)]
         public CrossPlatformCallMediaPolicy CallPolicy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Conditions and actions for chats
         /// </summary>
         /// <value>Conditions and actions for chats</value>
         [DataMember(Name="chatPolicy", EmitDefaultValue=false)]
         public CrossPlatformChatMediaPolicy ChatPolicy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Conditions and actions for emails
         /// </summary>
         /// <value>Conditions and actions for emails</value>
         [DataMember(Name="emailPolicy", EmitDefaultValue=false)]
         public CrossPlatformEmailMediaPolicy EmailPolicy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Conditions and actions for messages
         /// </summary>
         /// <value>Conditions and actions for messages</value>
         [DataMember(Name="messagePolicy", EmitDefaultValue=false)]
         public CrossPlatformMessageMediaPolicy MessagePolicy { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CrossPlatformMediaPolicies {\n");
-            
+
             sb.Append("  CallPolicy: ").Append(CallPolicy).Append("\n");
             sb.Append("  ChatPolicy: ").Append(ChatPolicy).Append("\n");
             sb.Append("  EmailPolicy: ").Append(EmailPolicy).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CallPolicy != null)
                     hash = hash * 59 + this.CallPolicy.GetHashCode();
-                
+
                 if (this.ChatPolicy != null)
                     hash = hash * 59 + this.ChatPolicy.GetHashCode();
-                
+
                 if (this.EmailPolicy != null)
                     hash = hash * 59 + this.EmailPolicy.GetHashCode();
-                
+
                 if (this.MessagePolicy != null)
                     hash = hash * 59 + this.MessagePolicy.GetHashCode();
-                
+
                 return hash;
             }
         }

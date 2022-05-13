@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CoachingSlotsRequest :  IEquatable<CoachingSlotsRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingSlotsRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CoachingSlotsRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingSlotsRequest" /> class.
         /// </summary>
@@ -70,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Range of time to get slots for scheduling coaching appointments. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
         /// <value>Range of time to get slots for scheduling coaching appointments. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The duration of coaching appointment to schedule in 15 minutes granularity up to maximum of 60 minutes
         /// </summary>
         /// <value>The duration of coaching appointment to schedule in 15 minutes granularity up to maximum of 60 minutes</value>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of attendees to determine coaching appointment slots
         /// </summary>
         /// <value>List of attendees to determine coaching appointment slots</value>
         [DataMember(Name="attendeeIds", EmitDefaultValue=false)]
         public List<string> AttendeeIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of facilitators to determine coaching appointment slots
         /// </summary>
         /// <value>List of facilitators to determine coaching appointment slots</value>
         [DataMember(Name="facilitatorIds", EmitDefaultValue=false)]
         public List<string> FacilitatorIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of appointment ids to exclude from consideration when determining blocked slots
         /// </summary>
         /// <value>List of appointment ids to exclude from consideration when determining blocked slots</value>
         [DataMember(Name="interruptibleAppointmentIds", EmitDefaultValue=false)]
         public List<string> InterruptibleAppointmentIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CoachingSlotsRequest {\n");
-            
+
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
             sb.Append("  AttendeeIds: ").Append(AttendeeIds).Append("\n");
@@ -208,22 +180,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
+
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
-                
+
                 if (this.AttendeeIds != null)
                     hash = hash * 59 + this.AttendeeIds.GetHashCode();
-                
+
                 if (this.FacilitatorIds != null)
                     hash = hash * 59 + this.FacilitatorIds.GetHashCode();
-                
+
                 if (this.InterruptibleAppointmentIds != null)
                     hash = hash * 59 + this.InterruptibleAppointmentIds.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebChatConfig :  IEquatable<WebChatConfig>
     {
-        
-        
         /// <summary>
         /// css class to be applied to the web chat widget.
         /// </summary>
@@ -47,20 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "modern-caret-skin")]
             Moderncaretskin
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// css class to be applied to the web chat widget.
         /// </summary>
         /// <value>css class to be applied to the web chat widget.</value>
         [DataMember(Name="webChatSkin", EmitDefaultValue=false)]
         public WebChatSkinEnum? WebChatSkin { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatConfig" /> class.
         /// </summary>
@@ -71,9 +61,9 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -82,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebChatConfig {\n");
-            
+
             sb.Append("  WebChatSkin: ").Append(WebChatSkin).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -142,10 +132,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WebChatSkin != null)
                     hash = hash * 59 + this.WebChatSkin.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MessagingTemplate :  IEquatable<MessagingTemplate>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagingTemplate" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Defines a messaging template for a WhatsApp messaging channel
         /// </summary>
         /// <value>Defines a messaging template for a WhatsApp messaging channel</value>
         [DataMember(Name="whatsApp", EmitDefaultValue=false)]
         public WhatsAppDefinition WhatsApp { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MessagingTemplate {\n");
-            
+
             sb.Append("  WhatsApp: ").Append(WhatsApp).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WhatsApp != null)
                     hash = hash * 59 + this.WhatsApp.GetHashCode();
-                
+
                 return hash;
             }
         }

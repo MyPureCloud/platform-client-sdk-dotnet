@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmScheduleActivity :  IEquatable<WfmScheduleActivity>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmScheduleActivity" /> class.
         /// </summary>
@@ -44,34 +26,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// ID of user that the schedule is for
         /// </summary>
         /// <value>ID of user that the schedule is for</value>
         [DataMember(Name="userReference", EmitDefaultValue=false)]
         public UserReference UserReference { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// List of user&#39;s scheduled activities
+        /// List of user's scheduled activities
         /// </summary>
-        /// <value>List of user&#39;s scheduled activities</value>
+        /// <value>List of user's scheduled activities</value>
         [DataMember(Name="activities", EmitDefaultValue=false)]
         public List<ScheduleActivity> Activities { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// List of user&#39;s days off
+        /// List of user's days off
         /// </summary>
-        /// <value>List of user&#39;s days off</value>
+        /// <value>List of user's days off</value>
         [DataMember(Name="fullDayTimeOffMarkers", EmitDefaultValue=false)]
         public List<FullDayTimeOffMarker> FullDayTimeOffMarkers { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmScheduleActivity {\n");
-            
+
             sb.Append("  UserReference: ").Append(UserReference).Append("\n");
             sb.Append("  Activities: ").Append(Activities).Append("\n");
             sb.Append("  FullDayTimeOffMarkers: ").Append(FullDayTimeOffMarkers).Append("\n");
@@ -152,16 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserReference != null)
                     hash = hash * 59 + this.UserReference.GetHashCode();
-                
+
                 if (this.Activities != null)
                     hash = hash * 59 + this.Activities.GetHashCode();
-                
+
                 if (this.FullDayTimeOffMarkers != null)
                     hash = hash * 59 + this.FullDayTimeOffMarkers.GetHashCode();
-                
+
                 return hash;
             }
         }

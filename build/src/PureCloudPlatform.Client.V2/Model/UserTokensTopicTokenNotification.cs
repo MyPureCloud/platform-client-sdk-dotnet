@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserTokensTopicTokenNotification :  IEquatable<UserTokensTopicTokenNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserTokensTopicTokenNotification" /> class.
         /// </summary>
@@ -78,63 +40,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UserTokensTopicUriReference User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IpAddress
         /// </summary>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DateCreated
         /// </summary>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public string DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TokenExpirationDate
         /// </summary>
         [DataMember(Name="tokenExpirationDate", EmitDefaultValue=false)]
         public string TokenExpirationDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SessionId
         /// </summary>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ClientId
         /// </summary>
         [DataMember(Name="clientId", EmitDefaultValue=false)]
         public string ClientId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TokenHash
         /// </summary>
         [DataMember(Name="tokenHash", EmitDefaultValue=false)]
         public string TokenHash { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -143,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserTokensTopicTokenNotification {\n");
-            
+
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  IpAddress: ").Append(IpAddress).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -239,28 +201,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.IpAddress != null)
                     hash = hash * 59 + this.IpAddress.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.TokenExpirationDate != null)
                     hash = hash * 59 + this.TokenExpirationDate.GetHashCode();
-                
+
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
-                
+
                 if (this.ClientId != null)
                     hash = hash * 59 + this.ClientId.GetHashCode();
-                
+
                 if (this.TokenHash != null)
                     hash = hash * 59 + this.TokenHash.GetHashCode();
-                
+
                 return hash;
             }
         }

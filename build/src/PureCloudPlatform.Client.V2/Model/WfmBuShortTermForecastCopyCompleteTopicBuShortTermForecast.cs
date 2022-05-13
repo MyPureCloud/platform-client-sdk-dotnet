@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecast :  IEquatable<WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecast>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets CreationMethod
         /// </summary>
@@ -64,73 +56,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Advanced")]
             Advanced
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets CreationMethod
         /// </summary>
         [DataMember(Name="creationMethod", EmitDefaultValue=false)]
         public CreationMethodEnum? CreationMethod { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecast" /> class.
         /// </summary>
@@ -165,105 +95,105 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets WeekDate
         /// </summary>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
         public string WeekDate { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Legacy
         /// </summary>
         [DataMember(Name="legacy", EmitDefaultValue=false)]
         public bool? Legacy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ReferenceStartDate
         /// </summary>
         [DataMember(Name="referenceStartDate", EmitDefaultValue=false)]
         public DateTime? ReferenceStartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SourceDays
         /// </summary>
         [DataMember(Name="sourceDays", EmitDefaultValue=false)]
         public List<WfmBuShortTermForecastCopyCompleteTopicForecastSourceDayPointer> SourceDays { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Modifications
         /// </summary>
         [DataMember(Name="modifications", EmitDefaultValue=false)]
         public List<WfmBuShortTermForecastCopyCompleteTopicBuForecastModification> Modifications { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TimeZone
         /// </summary>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PlanningGroupsVersion
         /// </summary>
         [DataMember(Name="planningGroupsVersion", EmitDefaultValue=false)]
         public int? PlanningGroupsVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets WeekCount
         /// </summary>
         [DataMember(Name="weekCount", EmitDefaultValue=false)]
         public int? WeekCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmBuShortTermForecastCopyCompleteTopicWfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CanUseForScheduling
         /// </summary>
         [DataMember(Name="canUseForScheduling", EmitDefaultValue=false)]
         public bool? CanUseForScheduling { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -272,7 +202,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuShortTermForecastCopyCompleteTopicBuShortTermForecast {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("  CreationMethod: ").Append(CreationMethod).Append("\n");
@@ -404,46 +334,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.WeekDate != null)
                     hash = hash * 59 + this.WeekDate.GetHashCode();
-                
+
                 if (this.CreationMethod != null)
                     hash = hash * 59 + this.CreationMethod.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Legacy != null)
                     hash = hash * 59 + this.Legacy.GetHashCode();
-                
+
                 if (this.ReferenceStartDate != null)
                     hash = hash * 59 + this.ReferenceStartDate.GetHashCode();
-                
+
                 if (this.SourceDays != null)
                     hash = hash * 59 + this.SourceDays.GetHashCode();
-                
+
                 if (this.Modifications != null)
                     hash = hash * 59 + this.Modifications.GetHashCode();
-                
+
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
+
                 if (this.PlanningGroupsVersion != null)
                     hash = hash * 59 + this.PlanningGroupsVersion.GetHashCode();
-                
+
                 if (this.WeekCount != null)
                     hash = hash * 59 + this.WeekCount.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 if (this.CanUseForScheduling != null)
                     hash = hash * 59 + this.CanUseForScheduling.GetHashCode();
-                
+
                 return hash;
             }
         }

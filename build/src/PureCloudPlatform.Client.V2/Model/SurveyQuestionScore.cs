@@ -18,49 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SurveyQuestionScore :  IEquatable<SurveyQuestionScore>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyQuestionScore" /> class.
         /// </summary>
@@ -85,73 +42,73 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets QuestionId
         /// </summary>
         [DataMember(Name="questionId", EmitDefaultValue=false)]
         public string QuestionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AnswerId
         /// </summary>
         [DataMember(Name="answerId", EmitDefaultValue=false)]
         public string AnswerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unweighted score of the question
         /// </summary>
         /// <value>Unweighted score of the question</value>
         [DataMember(Name="score", EmitDefaultValue=false)]
         public int? Score { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MarkedNA
         /// </summary>
         [DataMember(Name="markedNA", EmitDefaultValue=false)]
         public bool? MarkedNA { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// AnswerId found with evaluation assistance conditions
         /// </summary>
         /// <value>AnswerId found with evaluation assistance conditions</value>
         [DataMember(Name="assistedAnswerId", EmitDefaultValue=false)]
         public string AssistedAnswerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NpsScore
         /// </summary>
         [DataMember(Name="npsScore", EmitDefaultValue=false)]
         public int? NpsScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NpsTextAnswer
         /// </summary>
         [DataMember(Name="npsTextAnswer", EmitDefaultValue=false)]
         public string NpsTextAnswer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FreeTextAnswer
         /// </summary>
         [DataMember(Name="freeTextAnswer", EmitDefaultValue=false)]
         public string FreeTextAnswer { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -160,7 +117,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SurveyQuestionScore {\n");
-            
+
             sb.Append("  QuestionId: ").Append(QuestionId).Append("\n");
             sb.Append("  AnswerId: ").Append(AnswerId).Append("\n");
             sb.Append("  Score: ").Append(Score).Append("\n");
@@ -262,31 +219,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QuestionId != null)
                     hash = hash * 59 + this.QuestionId.GetHashCode();
-                
+
                 if (this.AnswerId != null)
                     hash = hash * 59 + this.AnswerId.GetHashCode();
-                
+
                 if (this.Score != null)
                     hash = hash * 59 + this.Score.GetHashCode();
-                
+
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
-                
+
                 if (this.AssistedAnswerId != null)
                     hash = hash * 59 + this.AssistedAnswerId.GetHashCode();
-                
+
                 if (this.NpsScore != null)
                     hash = hash * 59 + this.NpsScore.GetHashCode();
-                
+
                 if (this.NpsTextAnswer != null)
                     hash = hash * 59 + this.NpsTextAnswer.GetHashCode();
-                
+
                 if (this.FreeTextAnswer != null)
                     hash = hash * 59 + this.FreeTextAnswer.GetHashCode();
-                
+
                 return hash;
             }
         }

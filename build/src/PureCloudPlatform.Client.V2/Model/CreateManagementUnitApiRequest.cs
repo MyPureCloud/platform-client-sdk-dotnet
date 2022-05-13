@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateManagementUnitApiRequest :  IEquatable<CreateManagementUnitApiRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The configured first day of the week for scheduling and forecasting purposes. Moving to Business Unit
         /// </summary>
@@ -83,45 +75,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Saturday")]
             Saturday
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The configured first day of the week for scheduling and forecasting purposes. Moving to Business Unit
         /// </summary>
         /// <value>The configured first day of the week for scheduling and forecasting purposes. Moving to Business Unit</value>
         [DataMember(Name="startDayOfWeek", EmitDefaultValue=false)]
         public StartDayOfWeekEnum? StartDayOfWeek { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateManagementUnitApiRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateManagementUnitApiRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateManagementUnitApiRequest" /> class.
         /// </summary>
@@ -142,54 +107,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the management unit
         /// </summary>
         /// <value>The name of the management unit</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The default time zone to use for this management unit.  Moving to Business Unit
         /// </summary>
         /// <value>The default time zone to use for this management unit.  Moving to Business Unit</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The configuration for the management unit.  If omitted, reasonable defaults will be assigned
         /// </summary>
         /// <value>The configuration for the management unit.  If omitted, reasonable defaults will be assigned</value>
         [DataMember(Name="settings", EmitDefaultValue=false)]
         public CreateManagementUnitSettingsRequest Settings { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the division to which this management unit belongs.  Defaults to home division ID
         /// </summary>
         /// <value>The id of the division to which this management unit belongs.  Defaults to home division ID</value>
         [DataMember(Name="divisionId", EmitDefaultValue=false)]
         public string DivisionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the business unit to which this management unit belongs
         /// </summary>
         /// <value>The id of the business unit to which this management unit belongs</value>
         [DataMember(Name="businessUnitId", EmitDefaultValue=false)]
         public string BusinessUnitId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -198,7 +163,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateManagementUnitApiRequest {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  StartDayOfWeek: ").Append(StartDayOfWeek).Append("\n");
@@ -288,25 +253,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
+
                 if (this.StartDayOfWeek != null)
                     hash = hash * 59 + this.StartDayOfWeek.GetHashCode();
-                
+
                 if (this.Settings != null)
                     hash = hash * 59 + this.Settings.GetHashCode();
-                
+
                 if (this.DivisionId != null)
                     hash = hash * 59 + this.DivisionId.GetHashCode();
-                
+
                 if (this.BusinessUnitId != null)
                     hash = hash * 59 + this.BusinessUnitId.GetHashCode();
-                
+
                 return hash;
             }
         }

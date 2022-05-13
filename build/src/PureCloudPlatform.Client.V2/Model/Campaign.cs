@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Campaign :  IEquatable<Campaign>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The strategy this Campaign will use for dialing.
         /// </summary>
@@ -92,19 +69,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "external")]
             External
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current status of the Campaign. A Campaign may be turned 'on' or 'off'. Required for updates.
         /// </summary>
@@ -162,160 +126,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "forced_stopping")]
             ForcedStopping
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The strategy this Campaign will use for dialing.
         /// </summary>
         /// <value>The strategy this Campaign will use for dialing.</value>
         [DataMember(Name="dialingMode", EmitDefaultValue=false)]
         public DialingModeEnum? DialingMode { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current status of the Campaign. A Campaign may be turned 'on' or 'off'. Required for updates.
         /// </summary>
         /// <value>The current status of the Campaign. A Campaign may be turned 'on' or 'off'. Required for updates.</value>
         [DataMember(Name="campaignStatus", EmitDefaultValue=false)]
         public CampaignStatusEnum? CampaignStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Campaign" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Campaign() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Campaign" /> class.
         /// </summary>
@@ -327,7 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Script">The Script to be displayed to agents that are handling outbound calls. Required for all dialing modes except agentless..</param>
         /// <param name="EdgeGroup">The EdgeGroup that will place the calls. Required for all dialing modes except preview..</param>
         /// <param name="Site">The identifier of the site to be used for dialing; can be set in place of an edge group..</param>
-        /// <param name="CampaignStatus">The current status of the Campaign. A Campaign may be turned &#39;on&#39; or &#39;off&#39;. Required for updates..</param>
+        /// <param name="CampaignStatus">The current status of the Campaign. A Campaign may be turned 'on' or 'off'. Required for updates..</param>
         /// <param name="PhoneColumns">The ContactPhoneNumberColumns on the ContactList that this Campaign should dial. (required).</param>
         /// <param name="AbandonRate">The targeted abandon rate percentage. Required for progressive, power, and predictive campaigns..</param>
         /// <param name="DncLists">DncLists for this Campaign to check before placing a call..</param>
@@ -342,7 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AlwaysRunning">Indicates (when true) that the campaign will remain on after contacts are depleted, allowing additional contacts to be appended/added to the contact list and processed by the still-running campaign. The campaign can still be turned off manually..</param>
         /// <param name="ContactSort">The order in which to sort contacts for dialing, based on a column..</param>
         /// <param name="ContactSorts">The order in which to sort contacts for dialing, based on up to four columns..</param>
-        /// <param name="NoAnswerTimeout">How long to wait before dispositioning a call as &#39;no-answer&#39;. Default 30 seconds. Only applicable to non-preview campaigns..</param>
+        /// <param name="NoAnswerTimeout">How long to wait before dispositioning a call as 'no-answer'. Default 30 seconds. Only applicable to non-preview campaigns..</param>
         /// <param name="CallAnalysisLanguage">The language the edge will use to analyze the call..</param>
         /// <param name="Priority">The priority of this campaign relative to other campaigns that are running on the same queue. 5 is the highest priority, 1 the lowest..</param>
         /// <param name="ContactListFilters">Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied..</param>
@@ -380,290 +208,290 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the Campaign.
         /// </summary>
         /// <value>The name of the Campaign.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ContactList for this Campaign to dial.
         /// </summary>
         /// <value>The ContactList for this Campaign to dial.</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public DomainEntityRef ContactList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Queue for this Campaign to route calls to. Required for all dialing modes except agentless.
         /// </summary>
         /// <value>The Queue for this Campaign to route calls to. Required for all dialing modes except agentless.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public DomainEntityRef Queue { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The Script to be displayed to agents that are handling outbound calls. Required for all dialing modes except agentless.
         /// </summary>
         /// <value>The Script to be displayed to agents that are handling outbound calls. Required for all dialing modes except agentless.</value>
         [DataMember(Name="script", EmitDefaultValue=false)]
         public DomainEntityRef Script { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The EdgeGroup that will place the calls. Required for all dialing modes except preview.
         /// </summary>
         /// <value>The EdgeGroup that will place the calls. Required for all dialing modes except preview.</value>
         [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
         public DomainEntityRef EdgeGroup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The identifier of the site to be used for dialing; can be set in place of an edge group.
         /// </summary>
         /// <value>The identifier of the site to be used for dialing; can be set in place of an edge group.</value>
         [DataMember(Name="site", EmitDefaultValue=false)]
         public DomainEntityRef Site { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The ContactPhoneNumberColumns on the ContactList that this Campaign should dial.
         /// </summary>
         /// <value>The ContactPhoneNumberColumns on the ContactList that this Campaign should dial.</value>
         [DataMember(Name="phoneColumns", EmitDefaultValue=false)]
         public List<PhoneColumn> PhoneColumns { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The targeted abandon rate percentage. Required for progressive, power, and predictive campaigns.
         /// </summary>
         /// <value>The targeted abandon rate percentage. Required for progressive, power, and predictive campaigns.</value>
         [DataMember(Name="abandonRate", EmitDefaultValue=false)]
         public double? AbandonRate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// DncLists for this Campaign to check before placing a call.
         /// </summary>
         /// <value>DncLists for this Campaign to check before placing a call.</value>
         [DataMember(Name="dncLists", EmitDefaultValue=false)]
         public List<DomainEntityRef> DncLists { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The callable time set for this campaign to check before placing a call.
         /// </summary>
         /// <value>The callable time set for this campaign to check before placing a call.</value>
         [DataMember(Name="callableTimeSet", EmitDefaultValue=false)]
         public DomainEntityRef CallableTimeSet { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The call analysis response set to handle call analysis results from the edge. Required for all dialing modes except preview.
         /// </summary>
         /// <value>The call analysis response set to handle call analysis results from the edge. Required for all dialing modes except preview.</value>
         [DataMember(Name="callAnalysisResponseSet", EmitDefaultValue=false)]
         public DomainEntityRef CallAnalysisResponseSet { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of current error conditions associated with the campaign.
         /// </summary>
         /// <value>A list of current error conditions associated with the campaign.</value>
         [DataMember(Name="errors", EmitDefaultValue=false)]
         public List<RestErrorDetail> Errors { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The caller id name to be displayed on the outbound call.
         /// </summary>
         /// <value>The caller id name to be displayed on the outbound call.</value>
         [DataMember(Name="callerName", EmitDefaultValue=false)]
         public string CallerName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The caller id phone number to be displayed on the outbound call.
         /// </summary>
         /// <value>The caller id phone number to be displayed on the outbound call.</value>
         [DataMember(Name="callerAddress", EmitDefaultValue=false)]
         public string CallerAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of outbound lines to be concurrently dialed. Only applicable to non-preview campaigns; only required for agentless.
         /// </summary>
         /// <value>The number of outbound lines to be concurrently dialed. Only applicable to non-preview campaigns; only required for agentless.</value>
         [DataMember(Name="outboundLineCount", EmitDefaultValue=false)]
         public int? OutboundLineCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Rule sets to be applied while this campaign is dialing.
         /// </summary>
         /// <value>Rule sets to be applied while this campaign is dialing.</value>
         [DataMember(Name="ruleSets", EmitDefaultValue=false)]
         public List<DomainEntityRef> RuleSets { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not agents can skip previews without placing a call. Only applicable for preview campaigns.
         /// </summary>
         /// <value>Whether or not agents can skip previews without placing a call. Only applicable for preview campaigns.</value>
         [DataMember(Name="skipPreviewDisabled", EmitDefaultValue=false)]
         public bool? SkipPreviewDisabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of seconds before a call will be automatically placed on a preview. A value of 0 indicates no automatic placement of calls. Only applicable to preview campaigns.
         /// </summary>
         /// <value>The number of seconds before a call will be automatically placed on a preview. A value of 0 indicates no automatic placement of calls. Only applicable to preview campaigns.</value>
         [DataMember(Name="previewTimeOutSeconds", EmitDefaultValue=false)]
         public long? PreviewTimeOutSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates (when true) that the campaign will remain on after contacts are depleted, allowing additional contacts to be appended/added to the contact list and processed by the still-running campaign. The campaign can still be turned off manually.
         /// </summary>
         /// <value>Indicates (when true) that the campaign will remain on after contacts are depleted, allowing additional contacts to be appended/added to the contact list and processed by the still-running campaign. The campaign can still be turned off manually.</value>
         [DataMember(Name="alwaysRunning", EmitDefaultValue=false)]
         public bool? AlwaysRunning { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The order in which to sort contacts for dialing, based on a column.
         /// </summary>
         /// <value>The order in which to sort contacts for dialing, based on a column.</value>
         [DataMember(Name="contactSort", EmitDefaultValue=false)]
         public ContactSort ContactSort { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The order in which to sort contacts for dialing, based on up to four columns.
         /// </summary>
         /// <value>The order in which to sort contacts for dialing, based on up to four columns.</value>
         [DataMember(Name="contactSorts", EmitDefaultValue=false)]
         public List<ContactSort> ContactSorts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// How long to wait before dispositioning a call as &#39;no-answer&#39;. Default 30 seconds. Only applicable to non-preview campaigns.
+        /// How long to wait before dispositioning a call as 'no-answer'. Default 30 seconds. Only applicable to non-preview campaigns.
         /// </summary>
-        /// <value>How long to wait before dispositioning a call as &#39;no-answer&#39;. Default 30 seconds. Only applicable to non-preview campaigns.</value>
+        /// <value>How long to wait before dispositioning a call as 'no-answer'. Default 30 seconds. Only applicable to non-preview campaigns.</value>
         [DataMember(Name="noAnswerTimeout", EmitDefaultValue=false)]
         public int? NoAnswerTimeout { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The language the edge will use to analyze the call.
         /// </summary>
         /// <value>The language the edge will use to analyze the call.</value>
         [DataMember(Name="callAnalysisLanguage", EmitDefaultValue=false)]
         public string CallAnalysisLanguage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The priority of this campaign relative to other campaigns that are running on the same queue. 5 is the highest priority, 1 the lowest.
         /// </summary>
         /// <value>The priority of this campaign relative to other campaigns that are running on the same queue. 5 is the highest priority, 1 the lowest.</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied.
         /// </summary>
         /// <value>Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied.</value>
         [DataMember(Name="contactListFilters", EmitDefaultValue=false)]
         public List<DomainEntityRef> ContactListFilters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The division this campaign belongs to.
         /// </summary>
         /// <value>The division this campaign belongs to.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public DomainEntityRef Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -672,7 +500,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Campaign {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -924,106 +752,105 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.ContactList != null)
                     hash = hash * 59 + this.ContactList.GetHashCode();
-                
+
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
+
                 if (this.DialingMode != null)
                     hash = hash * 59 + this.DialingMode.GetHashCode();
-                
+
                 if (this.Script != null)
                     hash = hash * 59 + this.Script.GetHashCode();
-                
+
                 if (this.EdgeGroup != null)
                     hash = hash * 59 + this.EdgeGroup.GetHashCode();
-                
+
                 if (this.Site != null)
                     hash = hash * 59 + this.Site.GetHashCode();
-                
+
                 if (this.CampaignStatus != null)
                     hash = hash * 59 + this.CampaignStatus.GetHashCode();
-                
+
                 if (this.PhoneColumns != null)
                     hash = hash * 59 + this.PhoneColumns.GetHashCode();
-                
+
                 if (this.AbandonRate != null)
                     hash = hash * 59 + this.AbandonRate.GetHashCode();
-                
+
                 if (this.DncLists != null)
                     hash = hash * 59 + this.DncLists.GetHashCode();
-                
+
                 if (this.CallableTimeSet != null)
                     hash = hash * 59 + this.CallableTimeSet.GetHashCode();
-                
+
                 if (this.CallAnalysisResponseSet != null)
                     hash = hash * 59 + this.CallAnalysisResponseSet.GetHashCode();
-                
+
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();
-                
+
                 if (this.CallerName != null)
                     hash = hash * 59 + this.CallerName.GetHashCode();
-                
+
                 if (this.CallerAddress != null)
                     hash = hash * 59 + this.CallerAddress.GetHashCode();
-                
+
                 if (this.OutboundLineCount != null)
                     hash = hash * 59 + this.OutboundLineCount.GetHashCode();
-                
+
                 if (this.RuleSets != null)
                     hash = hash * 59 + this.RuleSets.GetHashCode();
-                
+
                 if (this.SkipPreviewDisabled != null)
                     hash = hash * 59 + this.SkipPreviewDisabled.GetHashCode();
-                
+
                 if (this.PreviewTimeOutSeconds != null)
                     hash = hash * 59 + this.PreviewTimeOutSeconds.GetHashCode();
-                
+
                 if (this.AlwaysRunning != null)
                     hash = hash * 59 + this.AlwaysRunning.GetHashCode();
-                
+
                 if (this.ContactSort != null)
                     hash = hash * 59 + this.ContactSort.GetHashCode();
-                
+
                 if (this.ContactSorts != null)
                     hash = hash * 59 + this.ContactSorts.GetHashCode();
-                
+
                 if (this.NoAnswerTimeout != null)
                     hash = hash * 59 + this.NoAnswerTimeout.GetHashCode();
-                
+
                 if (this.CallAnalysisLanguage != null)
                     hash = hash * 59 + this.CallAnalysisLanguage.GetHashCode();
-                
+
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
-                
+
                 if (this.ContactListFilters != null)
                     hash = hash * 59 + this.ContactListFilters.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

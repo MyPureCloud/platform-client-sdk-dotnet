@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MessageInfo :  IEquatable<MessageInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageInfo" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Key that can be used to localize the message.
         /// </summary>
         /// <value>Key that can be used to localize the message.</value>
         [DataMember(Name="localizableMessageCode", EmitDefaultValue=false)]
         public string LocalizableMessageCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Description of the message.
         /// </summary>
         /// <value>Description of the message.</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Message with template fields for variable replacement.
         /// </summary>
         /// <value>Message with template fields for variable replacement.</value>
         [DataMember(Name="messageWithParams", EmitDefaultValue=false)]
         public string MessageWithParams { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Map with fields for variable replacement.
         /// </summary>
         /// <value>Map with fields for variable replacement.</value>
         [DataMember(Name="messageParams", EmitDefaultValue=false)]
         public Dictionary<string, string> MessageParams { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MessageInfo {\n");
-            
+
             sb.Append("  LocalizableMessageCode: ").Append(LocalizableMessageCode).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  MessageWithParams: ").Append(MessageWithParams).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LocalizableMessageCode != null)
                     hash = hash * 59 + this.LocalizableMessageCode.GetHashCode();
-                
+
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 if (this.MessageWithParams != null)
                     hash = hash * 59 + this.MessageWithParams.GetHashCode();
-                
+
                 if (this.MessageParams != null)
                     hash = hash * 59 + this.MessageParams.GetHashCode();
-                
+
                 return hash;
             }
         }

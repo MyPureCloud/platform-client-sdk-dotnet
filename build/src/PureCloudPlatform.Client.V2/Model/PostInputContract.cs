@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PostInputContract :  IEquatable<PostInputContract>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PostInputContract" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PostInputContract() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PostInputContract" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path.
         /// </summary>
         /// <value>JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path.</value>
         [DataMember(Name="inputSchema", EmitDefaultValue=false)]
         public JsonSchemaDocument InputSchema { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PostInputContract {\n");
-            
+
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.InputSchema != null)
                     hash = hash * 59 + this.InputSchema.GetHashCode();
-                
+
                 return hash;
             }
         }

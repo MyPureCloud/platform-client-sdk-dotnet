@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueueConversationEventTopicDisconnectReason :  IEquatable<QueueConversationEventTopicDisconnectReason>
     {
-        
-        
         /// <summary>
         /// Disconnect reason protocol type.
         /// </summary>
@@ -47,30 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "sip")]
             Sip
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Disconnect reason protocol type.
         /// </summary>
         /// <value>Disconnect reason protocol type.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationEventTopicDisconnectReason" /> class.
         /// </summary>
@@ -85,27 +65,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Protocol specific reason code. See the Q.850 and SIP specs.
         /// </summary>
         /// <value>Protocol specific reason code. See the Q.850 and SIP specs.</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public int? Code { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Human readable English description of the disconnect reason.
         /// </summary>
         /// <value>Human readable English description of the disconnect reason.</value>
         [DataMember(Name="phrase", EmitDefaultValue=false)]
         public string Phrase { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -114,7 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueueConversationEventTopicDisconnectReason {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Phrase: ").Append(Phrase).Append("\n");
@@ -186,16 +166,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
-                
+
                 if (this.Phrase != null)
                     hash = hash * 59 + this.Phrase.GetHashCode();
-                
+
                 return hash;
             }
         }

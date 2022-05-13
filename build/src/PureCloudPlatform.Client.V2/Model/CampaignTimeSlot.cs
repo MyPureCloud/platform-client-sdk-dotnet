@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignTimeSlot :  IEquatable<CampaignTimeSlot>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignTimeSlot" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CampaignTimeSlot() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignTimeSlot" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The start time of the interval as an ISO-8601 string, i.e. HH:mm:ss
         /// </summary>
         /// <value>The start time of the interval as an ISO-8601 string, i.e. HH:mm:ss</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The end time of the interval as an ISO-8601 string, i.e. HH:mm:ss
         /// </summary>
         /// <value>The end time of the interval as an ISO-8601 string, i.e. HH:mm:ss</value>
         [DataMember(Name="stopTime", EmitDefaultValue=false)]
         public string StopTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The day of the interval. Valid values: [1-7], representing Monday through Sunday
         /// </summary>
         /// <value>The day of the interval. Valid values: [1-7], representing Monday through Sunday</value>
         [DataMember(Name="day", EmitDefaultValue=false)]
         public int? Day { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignTimeSlot {\n");
-            
+
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  StopTime: ").Append(StopTime).Append("\n");
             sb.Append("  Day: ").Append(Day).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
+
                 if (this.StopTime != null)
                     hash = hash * 59 + this.StopTime.GetHashCode();
-                
+
                 if (this.Day != null)
                     hash = hash * 59 + this.Day.GetHashCode();
-                
+
                 return hash;
             }
         }

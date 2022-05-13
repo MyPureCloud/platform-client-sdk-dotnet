@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotWaitForInputAction :  IEquatable<TextBotWaitForInputAction>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotWaitForInputAction" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotWaitForInputAction() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotWaitForInputAction" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The mode constraints for the user input.
         /// </summary>
         /// <value>The mode constraints for the user input.</value>
         [DataMember(Name="modeConstraints", EmitDefaultValue=false)]
         public TextBotModeConstraints ModeConstraints { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotWaitForInputAction {\n");
-            
+
             sb.Append("  ModeConstraints: ").Append(ModeConstraints).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ModeConstraints != null)
                     hash = hash * 59 + this.ModeConstraints.GetHashCode();
-                
+
                 return hash;
             }
         }

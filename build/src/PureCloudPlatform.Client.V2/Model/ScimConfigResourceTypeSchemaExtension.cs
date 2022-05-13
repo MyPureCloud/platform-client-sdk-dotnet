@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimConfigResourceTypeSchemaExtension :  IEquatable<ScimConfigResourceTypeSchemaExtension>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimConfigResourceTypeSchemaExtension" /> class.
         /// </summary>
@@ -39,25 +26,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The URI of an extended schema, for example, \&quot;urn:edu:2.0:Staff\&quot;. Must be equal to the \&quot;id\&quot; attribute of a schema.
+        /// The URI of an extended schema, for example, \"urn:edu:2.0:Staff\". Must be equal to the \"id\" attribute of a schema.
         /// </summary>
-        /// <value>The URI of an extended schema, for example, \&quot;urn:edu:2.0:Staff\&quot;. Must be equal to the \&quot;id\&quot; attribute of a schema.</value>
+        /// <value>The URI of an extended schema, for example, \"urn:edu:2.0:Staff\". Must be equal to the \"id\" attribute of a schema.</value>
         [DataMember(Name="schema", EmitDefaultValue=false)]
         public string Schema { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether a schema extension is required.
         /// </summary>
         /// <value>Indicates whether a schema extension is required.</value>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public bool? Required { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimConfigResourceTypeSchemaExtension {\n");
-            
+
             sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("  Required: ").Append(Required).Append("\n");
             sb.Append("}\n");
@@ -132,13 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();
-                
+
                 if (this.Required != null)
                     hash = hash * 59 + this.Required.GetHashCode();
-                
+
                 return hash;
             }
         }

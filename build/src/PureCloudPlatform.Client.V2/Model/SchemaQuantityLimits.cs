@@ -18,79 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SchemaQuantityLimits :  IEquatable<SchemaQuantityLimits>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SchemaQuantityLimits" /> class.
         /// </summary>
@@ -101,132 +28,132 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The minimum number of schema field name characters allowed.
         /// </summary>
         /// <value>The minimum number of schema field name characters allowed.</value>
         [DataMember(Name="minFieldNameCharacters", EmitDefaultValue=false)]
         public int? MinFieldNameCharacters { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum number of schema field name characters allowed.
         /// </summary>
         /// <value>The maximum number of schema field name characters allowed.</value>
         [DataMember(Name="maxFieldNameCharacters", EmitDefaultValue=false)]
         public int? MaxFieldNameCharacters { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The minimum number of schema field description characters allowed.
         /// </summary>
         /// <value>The minimum number of schema field description characters allowed.</value>
         [DataMember(Name="minFieldDescriptionCharacters", EmitDefaultValue=false)]
         public int? MinFieldDescriptionCharacters { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum number of schema field description characters allowed.
         /// </summary>
         /// <value>The maximum number of schema field description characters allowed.</value>
         [DataMember(Name="maxFieldDescriptionCharacters", EmitDefaultValue=false)]
         public int? MaxFieldDescriptionCharacters { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The minimum number of schema name characters allowed.
         /// </summary>
         /// <value>The minimum number of schema name characters allowed.</value>
         [DataMember(Name="minSchemaNameCharacters", EmitDefaultValue=false)]
         public int? MinSchemaNameCharacters { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum number of schema name characters allowed.
         /// </summary>
         /// <value>The maximum number of schema name characters allowed.</value>
         [DataMember(Name="maxSchemaNameCharacters", EmitDefaultValue=false)]
         public int? MaxSchemaNameCharacters { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The minimum number of schema description characters allowed.
         /// </summary>
         /// <value>The minimum number of schema description characters allowed.</value>
         [DataMember(Name="minSchemaDescriptionCharacters", EmitDefaultValue=false)]
         public int? MinSchemaDescriptionCharacters { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum number of schema description characters allowed.
         /// </summary>
         /// <value>The maximum number of schema description characters allowed.</value>
         [DataMember(Name="maxSchemaDescriptionCharacters", EmitDefaultValue=false)]
         public int? MaxSchemaDescriptionCharacters { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum number of schema allowed per org.
         /// </summary>
         /// <value>The maximum number of schema allowed per org.</value>
         [DataMember(Name="maxNumberOfSchemasPerOrg", EmitDefaultValue=false)]
         public int? MaxNumberOfSchemasPerOrg { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum number of schema fields allowed per schema.
         /// </summary>
         /// <value>The maximum number of schema fields allowed per schema.</value>
         [DataMember(Name="maxNumberOfFieldsPerSchema", EmitDefaultValue=false)]
         public int? MaxNumberOfFieldsPerSchema { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum number of schema fields allowed per organization across all of their schemas.
         /// </summary>
         /// <value>The maximum number of schema fields allowed per organization across all of their schemas.</value>
         [DataMember(Name="maxNumberOfFieldsPerOrg", EmitDefaultValue=false)]
         public int? MaxNumberOfFieldsPerOrg { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -235,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SchemaQuantityLimits {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  MinFieldNameCharacters: ").Append(MinFieldNameCharacters).Append("\n");
@@ -373,49 +300,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.MinFieldNameCharacters != null)
                     hash = hash * 59 + this.MinFieldNameCharacters.GetHashCode();
-                
+
                 if (this.MaxFieldNameCharacters != null)
                     hash = hash * 59 + this.MaxFieldNameCharacters.GetHashCode();
-                
+
                 if (this.MinFieldDescriptionCharacters != null)
                     hash = hash * 59 + this.MinFieldDescriptionCharacters.GetHashCode();
-                
+
                 if (this.MaxFieldDescriptionCharacters != null)
                     hash = hash * 59 + this.MaxFieldDescriptionCharacters.GetHashCode();
-                
+
                 if (this.MinSchemaNameCharacters != null)
                     hash = hash * 59 + this.MinSchemaNameCharacters.GetHashCode();
-                
+
                 if (this.MaxSchemaNameCharacters != null)
                     hash = hash * 59 + this.MaxSchemaNameCharacters.GetHashCode();
-                
+
                 if (this.MinSchemaDescriptionCharacters != null)
                     hash = hash * 59 + this.MinSchemaDescriptionCharacters.GetHashCode();
-                
+
                 if (this.MaxSchemaDescriptionCharacters != null)
                     hash = hash * 59 + this.MaxSchemaDescriptionCharacters.GetHashCode();
-                
+
                 if (this.MaxNumberOfSchemasPerOrg != null)
                     hash = hash * 59 + this.MaxNumberOfSchemasPerOrg.GetHashCode();
-                
+
                 if (this.MaxNumberOfFieldsPerSchema != null)
                     hash = hash * 59 + this.MaxNumberOfFieldsPerSchema.GetHashCode();
-                
+
                 if (this.MaxNumberOfFieldsPerOrg != null)
                     hash = hash * 59 + this.MaxNumberOfFieldsPerOrg.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

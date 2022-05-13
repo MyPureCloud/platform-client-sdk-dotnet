@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WidgetClientConfig :  IEquatable<WidgetClientConfig>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WidgetClientConfig" /> class.
         /// </summary>
@@ -48,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="V2">V2.</param>
         /// <param name="V1Http">V1Http.</param>
         /// <param name="ThirdParty">ThirdParty.</param>
-        public WidgetClientConfig(WidgetClientConfigV1 V1 = null, WidgetClientConfigV2 V2 = null, WidgetClientConfigV1Http V1Http = null, WidgetClientConfigThirdParty ThirdParty = null)
+        public WidgetClientConfig(WidgetClientConfigV1 V1 = null, Object V2 = null, WidgetClientConfigV1Http V1Http = null, Object ThirdParty = null)
         {
             this.V1 = V1;
             this.V2 = V2;
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets V1
         /// </summary>
         [DataMember(Name="v1", EmitDefaultValue=false)]
         public WidgetClientConfigV1 V1 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets V2
         /// </summary>
         [DataMember(Name="v2", EmitDefaultValue=false)]
-        public WidgetClientConfigV2 V2 { get; set; }
-        
-        
-        
+        public Object V2 { get; set; }
+
+
+
         /// <summary>
         /// Gets or Sets V1Http
         /// </summary>
         [DataMember(Name="v1-http", EmitDefaultValue=false)]
         public WidgetClientConfigV1Http V1Http { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ThirdParty
         /// </summary>
         [DataMember(Name="third-party", EmitDefaultValue=false)]
-        public WidgetClientConfigThirdParty ThirdParty { get; set; }
-        
-        
+        public Object ThirdParty { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WidgetClientConfig {\n");
-            
+
             sb.Append("  V1: ").Append(V1).Append("\n");
             sb.Append("  V2: ").Append(V2).Append("\n");
             sb.Append("  V1Http: ").Append(V1Http).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.V1 != null)
                     hash = hash * 59 + this.V1.GetHashCode();
-                
+
                 if (this.V2 != null)
                     hash = hash * 59 + this.V2.GetHashCode();
-                
+
                 if (this.V1Http != null)
                     hash = hash * 59 + this.V1Http.GetHashCode();
-                
+
                 if (this.ThirdParty != null)
                     hash = hash * 59 + this.ThirdParty.GetHashCode();
-                
+
                 return hash;
             }
         }

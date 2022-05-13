@@ -18,75 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SubscriptionOverviewUsage :  IEquatable<SubscriptionOverviewUsage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriptionOverviewUsage" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SubscriptionOverviewUsage() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriptionOverviewUsage" /> class.
         /// </summary>
@@ -119,115 +56,115 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Product charge name
         /// </summary>
         /// <value>Product charge name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Product part number
         /// </summary>
         /// <value>Product part number</value>
         [DataMember(Name="partNumber", EmitDefaultValue=false)]
         public string PartNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// UI grouping key
         /// </summary>
         /// <value>UI grouping key</value>
         [DataMember(Name="grouping", EmitDefaultValue=false)]
         public string Grouping { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// UI unit of measure
         /// </summary>
         /// <value>UI unit of measure</value>
         [DataMember(Name="unitOfMeasureType", EmitDefaultValue=false)]
         public string UnitOfMeasureType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Usage count for specified period
         /// </summary>
         /// <value>Usage count for specified period</value>
         [DataMember(Name="usageQuantity", EmitDefaultValue=false)]
         public string UsageQuantity { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Price for usage / overage charge
         /// </summary>
         /// <value>Price for usage / overage charge</value>
         [DataMember(Name="overagePrice", EmitDefaultValue=false)]
         public string OveragePrice { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Items prepaid for specified period
         /// </summary>
         /// <value>Items prepaid for specified period</value>
         [DataMember(Name="prepayQuantity", EmitDefaultValue=false)]
         public string PrepayQuantity { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Price for prepay charge
         /// </summary>
         /// <value>Price for prepay charge</value>
         [DataMember(Name="prepayPrice", EmitDefaultValue=false)]
         public string PrepayPrice { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Notes about the usage/charge item
         /// </summary>
         /// <value>Notes about the usage/charge item</value>
         [DataMember(Name="usageNotes", EmitDefaultValue=false)]
         public string UsageNotes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether the item is cancellable
         /// </summary>
         /// <value>Indicates whether the item is cancellable</value>
         [DataMember(Name="isCancellable", EmitDefaultValue=false)]
         public bool? IsCancellable { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Quantity multiplier for this charge
         /// </summary>
         /// <value>Quantity multiplier for this charge</value>
         [DataMember(Name="bundleQuantity", EmitDefaultValue=false)]
         public string BundleQuantity { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A charge from a third party entity
         /// </summary>
         /// <value>A charge from a third party entity</value>
         [DataMember(Name="isThirdParty", EmitDefaultValue=false)]
         public bool? IsThirdParty { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -236,7 +173,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SubscriptionOverviewUsage {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  PartNumber: ").Append(PartNumber).Append("\n");
             sb.Append("  Grouping: ").Append(Grouping).Append("\n");
@@ -362,43 +299,42 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.PartNumber != null)
                     hash = hash * 59 + this.PartNumber.GetHashCode();
-                
+
                 if (this.Grouping != null)
                     hash = hash * 59 + this.Grouping.GetHashCode();
-                
+
                 if (this.UnitOfMeasureType != null)
                     hash = hash * 59 + this.UnitOfMeasureType.GetHashCode();
-                
+
                 if (this.UsageQuantity != null)
                     hash = hash * 59 + this.UsageQuantity.GetHashCode();
-                
+
                 if (this.OveragePrice != null)
                     hash = hash * 59 + this.OveragePrice.GetHashCode();
-                
+
                 if (this.PrepayQuantity != null)
                     hash = hash * 59 + this.PrepayQuantity.GetHashCode();
-                
+
                 if (this.PrepayPrice != null)
                     hash = hash * 59 + this.PrepayPrice.GetHashCode();
-                
+
                 if (this.UsageNotes != null)
                     hash = hash * 59 + this.UsageNotes.GetHashCode();
-                
+
                 if (this.IsCancellable != null)
                     hash = hash * 59 + this.IsCancellable.GetHashCode();
-                
+
                 if (this.BundleQuantity != null)
                     hash = hash * 59 + this.BundleQuantity.GetHashCode();
-                
+
                 if (this.IsThirdParty != null)
                     hash = hash * 59 + this.IsThirdParty.GetHashCode();
-                
+
                 return hash;
             }
         }

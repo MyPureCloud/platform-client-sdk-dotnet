@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient :  IEquatable<V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets IdType
         /// </summary>
@@ -58,48 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Opaque")]
             Opaque
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets IdType
         /// </summary>
         [DataMember(Name="idType", EmitDefaultValue=false)]
         public IdTypeEnum? IdType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient" /> class.
         /// </summary>
@@ -124,65 +79,65 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Nickname
         /// </summary>
         [DataMember(Name="nickname", EmitDefaultValue=false)]
         public string Nickname { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Image
         /// </summary>
         [DataMember(Name="image", EmitDefaultValue=false)]
         public string Image { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FirstName
         /// </summary>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LastName
         /// </summary>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AdditionalIds
         /// </summary>
         [DataMember(Name="additionalIds", EmitDefaultValue=false)]
         public List<V2ConversationMessageTypingEventForUserTopicConversationRecipientAdditionalIdentifier> AdditionalIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -191,7 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient {\n");
-            
+
             sb.Append("  Nickname: ").Append(Nickname).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdType: ").Append(IdType).Append("\n");
@@ -293,31 +248,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Nickname != null)
                     hash = hash * 59 + this.Nickname.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.IdType != null)
                     hash = hash * 59 + this.IdType.GetHashCode();
-                
+
                 if (this.Image != null)
                     hash = hash * 59 + this.Image.GetHashCode();
-                
+
                 if (this.FirstName != null)
                     hash = hash * 59 + this.FirstName.GetHashCode();
-                
+
                 if (this.LastName != null)
                     hash = hash * 59 + this.LastName.GetHashCode();
-                
+
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
+
                 if (this.AdditionalIds != null)
                     hash = hash * 59 + this.AdditionalIds.GetHashCode();
-                
+
                 return hash;
             }
         }

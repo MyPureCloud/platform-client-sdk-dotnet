@@ -18,59 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyWebEventsNotificationPage :  IEquatable<JourneyWebEventsNotificationPage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyWebEventsNotificationPage" /> class.
         /// </summary>
@@ -99,87 +46,87 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Fragment
         /// </summary>
         [DataMember(Name="fragment", EmitDefaultValue=false)]
         public string Fragment { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Hostname
         /// </summary>
         [DataMember(Name="hostname", EmitDefaultValue=false)]
         public string Hostname { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Keywords
         /// </summary>
         [DataMember(Name="keywords", EmitDefaultValue=false)]
         public string Keywords { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Lang
         /// </summary>
         [DataMember(Name="lang", EmitDefaultValue=false)]
         public string Lang { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Pathname
         /// </summary>
         [DataMember(Name="pathname", EmitDefaultValue=false)]
         public string Pathname { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets QueryString
         /// </summary>
         [DataMember(Name="queryString", EmitDefaultValue=false)]
         public string QueryString { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Breadcrumb
         /// </summary>
         [DataMember(Name="breadcrumb", EmitDefaultValue=false)]
         public List<string> Breadcrumb { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,7 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyWebEventsNotificationPage {\n");
-            
+
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
@@ -302,37 +249,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
+
                 if (this.Fragment != null)
                     hash = hash * 59 + this.Fragment.GetHashCode();
-                
+
                 if (this.Hostname != null)
                     hash = hash * 59 + this.Hostname.GetHashCode();
-                
+
                 if (this.Keywords != null)
                     hash = hash * 59 + this.Keywords.GetHashCode();
-                
+
                 if (this.Lang != null)
                     hash = hash * 59 + this.Lang.GetHashCode();
-                
+
                 if (this.Pathname != null)
                     hash = hash * 59 + this.Pathname.GetHashCode();
-                
+
                 if (this.QueryString != null)
                     hash = hash * 59 + this.QueryString.GetHashCode();
-                
+
                 if (this.Breadcrumb != null)
                     hash = hash * 59 + this.Breadcrumb.GetHashCode();
-                
+
                 return hash;
             }
         }

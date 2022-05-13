@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NluDetectionOutput :  IEquatable<NluDetectionOutput>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDetectionOutput" /> class.
         /// </summary>
@@ -39,25 +26,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The detected intents.
         /// </summary>
         /// <value>The detected intents.</value>
         [DataMember(Name="intents", EmitDefaultValue=false)]
         public List<DetectedIntent> Intents { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The detected dialog acts.
         /// </summary>
         /// <value>The detected dialog acts.</value>
         [DataMember(Name="dialogActs", EmitDefaultValue=false)]
         public List<DetectedDialogAct> DialogActs { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NluDetectionOutput {\n");
-            
+
             sb.Append("  Intents: ").Append(Intents).Append("\n");
             sb.Append("  DialogActs: ").Append(DialogActs).Append("\n");
             sb.Append("}\n");
@@ -132,13 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Intents != null)
                     hash = hash * 59 + this.Intents.GetHashCode();
-                
+
                 if (this.DialogActs != null)
                     hash = hash * 59 + this.DialogActs.GetHashCode();
-                
+
                 return hash;
             }
         }

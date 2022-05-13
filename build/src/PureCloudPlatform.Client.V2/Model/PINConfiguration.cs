@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PINConfiguration :  IEquatable<PINConfiguration>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PINConfiguration" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets MinimumLength
         /// </summary>
         [DataMember(Name="minimumLength", EmitDefaultValue=false)]
         public int? MinimumLength { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MaximumLength
         /// </summary>
         [DataMember(Name="maximumLength", EmitDefaultValue=false)]
         public int? MaximumLength { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PINConfiguration {\n");
-            
+
             sb.Append("  MinimumLength: ").Append(MinimumLength).Append("\n");
             sb.Append("  MaximumLength: ").Append(MaximumLength).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MinimumLength != null)
                     hash = hash * 59 + this.MinimumLength.GetHashCode();
-                
+
                 if (this.MaximumLength != null)
                     hash = hash * 59 + this.MaximumLength.GetHashCode();
-                
+
                 return hash;
             }
         }

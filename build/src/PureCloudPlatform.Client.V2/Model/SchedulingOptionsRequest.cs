@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SchedulingOptionsRequest :  IEquatable<SchedulingOptionsRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulingOptionsRequest" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Schedule generation options to apply if no forecast is supplied
         /// </summary>
         /// <value>Schedule generation options to apply if no forecast is supplied</value>
         [DataMember(Name="noForecastOptions", EmitDefaultValue=false)]
         public SchedulingNoForecastOptionsRequest NoForecastOptions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SchedulingOptionsRequest {\n");
-            
+
             sb.Append("  NoForecastOptions: ").Append(NoForecastOptions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.NoForecastOptions != null)
                     hash = hash * 59 + this.NoForecastOptions.GetHashCode();
-                
+
                 return hash;
             }
         }

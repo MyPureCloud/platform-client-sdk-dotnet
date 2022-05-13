@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateTimeOffPlanRequest :  IEquatable<CreateTimeOffPlanRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Auto approval rule for the time off plan.
         /// </summary>
@@ -62,42 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CheckLimits")]
             Checklimits
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Auto approval rule for the time off plan.
         /// </summary>
         /// <value>Auto approval rule for the time off plan.</value>
         [DataMember(Name="autoApprovalRule", EmitDefaultValue=false)]
         public AutoApprovalRuleEnum? AutoApprovalRule { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateTimeOffPlanRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateTimeOffPlanRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateTimeOffPlanRequest" /> class.
         /// </summary>
@@ -118,54 +83,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of this time off plan.
         /// </summary>
         /// <value>The name of this time off plan.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The set of activity code IDs to associate with this time off plan.
         /// </summary>
         /// <value>The set of activity code IDs to associate with this time off plan.</value>
         [DataMember(Name="activityCodeIds", EmitDefaultValue=false)]
         public List<string> ActivityCodeIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The set of time off limit IDs to associate with this time off plan.
         /// </summary>
         /// <value>The set of time off limit IDs to associate with this time off plan.</value>
         [DataMember(Name="timeOffLimitIds", EmitDefaultValue=false)]
         public List<string> TimeOffLimitIds { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The number of days before the time off request start date for when the request will be expired from the waitlist.
         /// </summary>
         /// <value>The number of days before the time off request start date for when the request will be expired from the waitlist.</value>
         [DataMember(Name="daysBeforeStartToExpireFromWaitlist", EmitDefaultValue=false)]
         public int? DaysBeforeStartToExpireFromWaitlist { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this time off plan should be used by agents.
         /// </summary>
         /// <value>Whether this time off plan should be used by agents.</value>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -174,7 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateTimeOffPlanRequest {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ActivityCodeIds: ").Append(ActivityCodeIds).Append("\n");
             sb.Append("  TimeOffLimitIds: ").Append(TimeOffLimitIds).Append("\n");
@@ -264,25 +229,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ActivityCodeIds != null)
                     hash = hash * 59 + this.ActivityCodeIds.GetHashCode();
-                
+
                 if (this.TimeOffLimitIds != null)
                     hash = hash * 59 + this.TimeOffLimitIds.GetHashCode();
-                
+
                 if (this.AutoApprovalRule != null)
                     hash = hash * 59 + this.AutoApprovalRule.GetHashCode();
-                
+
                 if (this.DaysBeforeStartToExpireFromWaitlist != null)
                     hash = hash * 59 + this.DaysBeforeStartToExpireFromWaitlist.GetHashCode();
-                
+
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
-                
+
                 return hash;
             }
         }

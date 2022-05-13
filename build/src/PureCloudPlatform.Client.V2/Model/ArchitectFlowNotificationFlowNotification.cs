@@ -18,49 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ArchitectFlowNotificationFlowNotification :  IEquatable<ArchitectFlowNotificationFlowNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectFlowNotificationFlowNotification" /> class.
         /// </summary>
@@ -85,77 +42,77 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The flow ID
         /// </summary>
         /// <value>The flow ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The flow name
         /// </summary>
         /// <value>The flow name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The flow description
         /// </summary>
         /// <value>The flow description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The flow deleted state
         /// </summary>
         /// <value>The flow deleted state</value>
         [DataMember(Name="deleted", EmitDefaultValue=false)]
         public bool? Deleted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CheckedInVersion
         /// </summary>
         [DataMember(Name="checkedInVersion", EmitDefaultValue=false)]
         public ArchitectFlowNotificationFlowVersion CheckedInVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A bare-bones flow version object
         /// </summary>
         /// <value>A bare-bones flow version object</value>
         [DataMember(Name="savedVersion", EmitDefaultValue=false)]
         public ArchitectFlowNotificationFlowVersion SavedVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A bare-bones flow version object
         /// </summary>
         /// <value>A bare-bones flow version object</value>
         [DataMember(Name="publishedVersion", EmitDefaultValue=false)]
         public ArchitectFlowNotificationFlowVersion PublishedVersion { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CurrentOperation
         /// </summary>
         [DataMember(Name="currentOperation", EmitDefaultValue=false)]
         public ArchitectFlowNotificationArchitectOperation CurrentOperation { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -164,7 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ArchitectFlowNotificationFlowNotification {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -266,31 +223,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Deleted != null)
                     hash = hash * 59 + this.Deleted.GetHashCode();
-                
+
                 if (this.CheckedInVersion != null)
                     hash = hash * 59 + this.CheckedInVersion.GetHashCode();
-                
+
                 if (this.SavedVersion != null)
                     hash = hash * 59 + this.SavedVersion.GetHashCode();
-                
+
                 if (this.PublishedVersion != null)
                     hash = hash * 59 + this.PublishedVersion.GetHashCode();
-                
+
                 if (this.CurrentOperation != null)
                     hash = hash * 59 + this.CurrentOperation.GetHashCode();
-                
+
                 return hash;
             }
         }

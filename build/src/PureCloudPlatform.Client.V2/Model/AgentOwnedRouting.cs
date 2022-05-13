@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AgentOwnedRouting :  IEquatable<AgentOwnedRouting>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentOwnedRouting" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Indicates if Agent Owned Callbacks are enabled for the queue
         /// </summary>
         /// <value>Indicates if Agent Owned Callbacks are enabled for the queue</value>
         [DataMember(Name="enableAgentOwnedCallbacks", EmitDefaultValue=false)]
         public bool? EnableAgentOwnedCallbacks { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The max amount of time a callback can be owned (in hours); Allowable range 1 - 168 hour(s) (inclusive)
         /// </summary>
         /// <value>The max amount of time a callback can be owned (in hours); Allowable range 1 - 168 hour(s) (inclusive)</value>
         [DataMember(Name="maxOwnedCallbackHours", EmitDefaultValue=false)]
         public int? MaxOwnedCallbackHours { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The max amount of time a callback can be scheduled out into the future (in hours); Allowable range 1 - 720 hour(s) (inclusive)
         /// </summary>
         /// <value>The max amount of time a callback can be scheduled out into the future (in hours); Allowable range 1 - 720 hour(s) (inclusive)</value>
         [DataMember(Name="maxOwnedCallbackDelayHours", EmitDefaultValue=false)]
         public int? MaxOwnedCallbackDelayHours { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AgentOwnedRouting {\n");
-            
+
             sb.Append("  EnableAgentOwnedCallbacks: ").Append(EnableAgentOwnedCallbacks).Append("\n");
             sb.Append("  MaxOwnedCallbackHours: ").Append(MaxOwnedCallbackHours).Append("\n");
             sb.Append("  MaxOwnedCallbackDelayHours: ").Append(MaxOwnedCallbackDelayHours).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EnableAgentOwnedCallbacks != null)
                     hash = hash * 59 + this.EnableAgentOwnedCallbacks.GetHashCode();
-                
+
                 if (this.MaxOwnedCallbackHours != null)
                     hash = hash * 59 + this.MaxOwnedCallbackHours.GetHashCode();
-                
+
                 if (this.MaxOwnedCallbackDelayHours != null)
                     hash = hash * 59 + this.MaxOwnedCallbackDelayHours.GetHashCode();
-                
+
                 return hash;
             }
         }

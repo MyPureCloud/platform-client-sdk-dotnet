@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TestExecutionOperationResult :  IEquatable<TestExecutionOperationResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TestExecutionOperationResult" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The step number to indicate the order in which the operation was performed
         /// </summary>
         /// <value>The step number to indicate the order in which the operation was performed</value>
         [DataMember(Name="step", EmitDefaultValue=false)]
         public int? Step { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of the operation performed
         /// </summary>
         /// <value>Name of the operation performed</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicated whether or not the operation was successful
         /// </summary>
         /// <value>Indicated whether or not the operation was successful</value>
         [DataMember(Name="success", EmitDefaultValue=false)]
         public bool? Success { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The result of the operation
         /// </summary>
         /// <value>The result of the operation</value>
         [DataMember(Name="result", EmitDefaultValue=false)]
         public Object Result { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Error that occurred during the operation
         /// </summary>
         /// <value>Error that occurred during the operation</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public ErrorBody Error { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TestExecutionOperationResult {\n");
-            
+
             sb.Append("  Step: ").Append(Step).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Success: ").Append(Success).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Step != null)
                     hash = hash * 59 + this.Step.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Success != null)
                     hash = hash * 59 + this.Success.GetHashCode();
-                
+
                 if (this.Result != null)
                     hash = hash * 59 + this.Result.GetHashCode();
-                
+
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationDeletionProtectionQuery :  IEquatable<ConversationDeletionProtectionQuery>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationDeletionProtectionQuery" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConversationDeletionProtectionQuery() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationDeletionProtectionQuery" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// This is a list of ConversationIds. The list cannot exceed 100 conversationids.
         /// </summary>
         /// <value>This is a list of ConversationIds. The list cannot exceed 100 conversationids.</value>
         [DataMember(Name="conversationIds", EmitDefaultValue=false)]
         public List<string> ConversationIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationDeletionProtectionQuery {\n");
-            
+
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ConversationIds != null)
                     hash = hash * 59 + this.ConversationIds.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotOutputPrompts :  IEquatable<TextBotOutputPrompts>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotOutputPrompts" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotOutputPrompts() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotOutputPrompts" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ISO code of the output language for this prompt item.
         /// </summary>
         /// <value>The ISO code of the output language for this prompt item.</value>
         [DataMember(Name="outputLanguage", EmitDefaultValue=false)]
         public string OutputLanguage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text output prompts, if any.
         /// </summary>
         /// <value>Text output prompts, if any.</value>
         [DataMember(Name="textPrompts", EmitDefaultValue=false)]
         public TextBotModeOutputPrompts TextPrompts { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotOutputPrompts {\n");
-            
+
             sb.Append("  OutputLanguage: ").Append(OutputLanguage).Append("\n");
             sb.Append("  TextPrompts: ").Append(TextPrompts).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OutputLanguage != null)
                     hash = hash * 59 + this.OutputLanguage.GetHashCode();
-                
+
                 if (this.TextPrompts != null)
                     hash = hash * 59 + this.TextPrompts.GetHashCode();
-                
+
                 return hash;
             }
         }

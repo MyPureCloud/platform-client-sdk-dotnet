@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MailFromResult :  IEquatable<MailFromResult>
     {
-        
-        
         /// <summary>
         /// The verification status.
         /// </summary>
@@ -59,36 +57,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "UNKNOWN")]
             Unknown
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The verification status.
         /// </summary>
         /// <value>The verification status.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MailFromResult" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected MailFromResult() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MailFromResult" /> class.
         /// </summary>
@@ -103,27 +83,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The list of DNS records that pertain that need to exist for verification.
         /// </summary>
         /// <value>The list of DNS records that pertain that need to exist for verification.</value>
         [DataMember(Name="records", EmitDefaultValue=false)]
         public List<Record> Records { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The custom MAIL FROM domain.
         /// </summary>
         /// <value>The custom MAIL FROM domain.</value>
         [DataMember(Name="mailFromDomain", EmitDefaultValue=false)]
         public string MailFromDomain { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -132,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MailFromResult {\n");
-            
+
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Records: ").Append(Records).Append("\n");
             sb.Append("  MailFromDomain: ").Append(MailFromDomain).Append("\n");
@@ -204,16 +184,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Records != null)
                     hash = hash * 59 + this.Records.GetHashCode();
-                
+
                 if (this.MailFromDomain != null)
                     hash = hash * 59 + this.MailFromDomain.GetHashCode();
-                
+
                 return hash;
             }
         }

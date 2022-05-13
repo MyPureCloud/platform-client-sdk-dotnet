@@ -18,53 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FacebookIntegration :  IEquatable<FacebookIntegration>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of asynchronous create operation
         /// </summary>
@@ -98,66 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of asynchronous create operation
         /// </summary>
         /// <value>Status of asynchronous create operation</value>
         [DataMember(Name="createStatus", EmitDefaultValue=false)]
-        public CreateStatusEnum? CreateStatus { get; set; }
-        
-        
-        
-        
-        
-        
-    
+        public CreateStatusEnum? CreateStatus { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="FacebookIntegration" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected FacebookIntegration() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FacebookIntegration" /> class.
         /// </summary>
@@ -188,161 +93,161 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A unique Integration Id.
         /// </summary>
         /// <value>A unique Integration Id.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the Facebook Integration
         /// </summary>
         /// <value>The name of the Facebook Integration</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Defines the SupportedContent profile configured for an integration
         /// </summary>
         /// <value>Defines the SupportedContent profile configured for an integration</value>
         [DataMember(Name="supportedContent", EmitDefaultValue=false)]
         public SupportedContentReference SupportedContent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessagingSetting
         /// </summary>
         [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
         public MessagingSettingReference MessagingSetting { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The App Id from Facebook messenger
         /// </summary>
         /// <value>The App Id from Facebook messenger</value>
         [DataMember(Name="appId", EmitDefaultValue=false)]
         public string AppId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The Page Id from Facebook messenger
         /// </summary>
         /// <value>The Page Id from Facebook messenger</value>
         [DataMember(Name="pageId", EmitDefaultValue=false)]
         public string PageId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the Facebook page
         /// </summary>
         /// <value>The name of the Facebook page</value>
         [DataMember(Name="pageName", EmitDefaultValue=false)]
         public string PageName { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The url of the profile image of the Facebook page
         /// </summary>
         /// <value>The url of the profile image of the Facebook page</value>
         [DataMember(Name="pageProfileImageUrl", EmitDefaultValue=false)]
         public string PageProfileImageUrl { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The status of the Facebook Integration
         /// </summary>
         /// <value>The status of the Facebook Integration</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The recipient reference associated to the Facebook Integration. This recipient is used to associate a flow to an integration
         /// </summary>
         /// <value>The recipient reference associated to the Facebook Integration. This recipient is used to associate a flow to an integration</value>
         [DataMember(Name="recipient", EmitDefaultValue=false)]
         public DomainEntityRef Recipient { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User reference that created this Integration
         /// </summary>
         /// <value>User reference that created this Integration</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public DomainEntityRef CreatedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User reference that last modified this Integration
         /// </summary>
         /// <value>User reference that last modified this Integration</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public DomainEntityRef ModifiedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version number required for updates.
         /// </summary>
         /// <value>Version number required for updates.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Error information returned, if createStatus is set to Error
         /// </summary>
         /// <value>Error information returned, if createStatus is set to Error</value>
         [DataMember(Name="createError", EmitDefaultValue=false)]
         public ErrorBody CreateError { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -351,7 +256,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FacebookIntegration {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SupportedContent: ").Append(SupportedContent).Append("\n");
@@ -513,61 +418,60 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.SupportedContent != null)
                     hash = hash * 59 + this.SupportedContent.GetHashCode();
-                
+
                 if (this.MessagingSetting != null)
                     hash = hash * 59 + this.MessagingSetting.GetHashCode();
-                
+
                 if (this.AppId != null)
                     hash = hash * 59 + this.AppId.GetHashCode();
-                
+
                 if (this.PageId != null)
                     hash = hash * 59 + this.PageId.GetHashCode();
-                
+
                 if (this.PageName != null)
                     hash = hash * 59 + this.PageName.GetHashCode();
-                
+
                 if (this.PageProfileImageUrl != null)
                     hash = hash * 59 + this.PageProfileImageUrl.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Recipient != null)
                     hash = hash * 59 + this.Recipient.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.CreateStatus != null)
                     hash = hash * 59 + this.CreateStatus.GetHashCode();
-                
+
                 if (this.CreateError != null)
                     hash = hash * 59 + this.CreateError.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuForecastModification :  IEquatable<BuForecastModification>
     {
-        
-        
         /// <summary>
         /// The type of the modification
         /// </summary>
@@ -83,16 +81,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SetValuesForIntervalSet")]
             Setvaluesforintervalset
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The metric to which this modification applies
         /// </summary>
@@ -120,10 +108,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AverageHandleTimeSeconds")]
             Averagehandletimeseconds
         }
-        
-        
-        
-        
         /// <summary>
         /// The legacy metric to which this modification applies if applicable
         /// </summary>
@@ -163,78 +147,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Offered")]
             Offered
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of the modification
         /// </summary>
         /// <value>The type of the modification</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The metric to which this modification applies
         /// </summary>
         /// <value>The metric to which this modification applies</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
-        
-        
-        
         /// <summary>
         /// The legacy metric to which this modification applies if applicable
         /// </summary>
         /// <value>The legacy metric to which this modification applies if applicable</value>
         [DataMember(Name="legacyMetric", EmitDefaultValue=false)]
-        public LegacyMetricEnum? LegacyMetric { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public LegacyMetricEnum? LegacyMetric { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BuForecastModification" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BuForecastModification() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuForecastModification" /> class.
         /// </summary>
@@ -242,8 +178,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartIntervalIndex">The number of 15 minute intervals past referenceStartDate representing the first interval to which to apply this modification. Must be null if values is populated.</param>
         /// <param name="EndIntervalIndex">The number of 15 minute intervals past referenceStartDate representing the last interval to which to apply this modification.  Must be null if values is populated.</param>
         /// <param name="Metric">The metric to which this modification applies (required).</param>
-        /// <param name="Value">The value of the modification.  Must be null if \&quot;values\&quot; is populated.</param>
-        /// <param name="Values">The list of values to update.  Only applicable for grid-type modifications. Must be null if \&quot;value\&quot; is populated.</param>
+        /// <param name="Value">The value of the modification.  Must be null if \"values\" is populated.</param>
+        /// <param name="Values">The list of values to update.  Only applicable for grid-type modifications. Must be null if \"value\" is populated.</param>
         /// <param name="DisplayGranularity">The client side display granularity of the modification, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H (required).</param>
         /// <param name="Granularity">The actual granularity of the modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
         /// <param name="Enabled">Whether the modification is enabled for the forecast (required).</param>
@@ -263,85 +199,85 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The number of 15 minute intervals past referenceStartDate representing the first interval to which to apply this modification. Must be null if values is populated
         /// </summary>
         /// <value>The number of 15 minute intervals past referenceStartDate representing the first interval to which to apply this modification. Must be null if values is populated</value>
         [DataMember(Name="startIntervalIndex", EmitDefaultValue=false)]
         public int? StartIntervalIndex { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of 15 minute intervals past referenceStartDate representing the last interval to which to apply this modification.  Must be null if values is populated
         /// </summary>
         /// <value>The number of 15 minute intervals past referenceStartDate representing the last interval to which to apply this modification.  Must be null if values is populated</value>
         [DataMember(Name="endIntervalIndex", EmitDefaultValue=false)]
         public int? EndIntervalIndex { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
-        /// The value of the modification.  Must be null if \&quot;values\&quot; is populated
+        /// The value of the modification.  Must be null if \"values\" is populated
         /// </summary>
-        /// <value>The value of the modification.  Must be null if \&quot;values\&quot; is populated</value>
+        /// <value>The value of the modification.  Must be null if \"values\" is populated</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public double? Value { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The list of values to update.  Only applicable for grid-type modifications. Must be null if \&quot;value\&quot; is populated
+        /// The list of values to update.  Only applicable for grid-type modifications. Must be null if \"value\" is populated
         /// </summary>
-        /// <value>The list of values to update.  Only applicable for grid-type modifications. Must be null if \&quot;value\&quot; is populated</value>
+        /// <value>The list of values to update.  Only applicable for grid-type modifications. Must be null if \"value\" is populated</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<WfmForecastModificationIntervalOffsetValue> Values { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The client side display granularity of the modification, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H
         /// </summary>
         /// <value>The client side display granularity of the modification, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
         [DataMember(Name="displayGranularity", EmitDefaultValue=false)]
         public string DisplayGranularity { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The actual granularity of the modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H
         /// </summary>
         /// <value>The actual granularity of the modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public string Granularity { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the modification is enabled for the forecast
         /// </summary>
         /// <value>Whether the modification is enabled for the forecast</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The IDs of the planning groups to which this forecast modification applies.  Leave empty to apply to all
         /// </summary>
         /// <value>The IDs of the planning groups to which this forecast modification applies.  Leave empty to apply to all</value>
         [DataMember(Name="planningGroupIds", EmitDefaultValue=false)]
         public List<string> PlanningGroupIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -350,7 +286,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuForecastModification {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  StartIntervalIndex: ").Append(StartIntervalIndex).Append("\n");
             sb.Append("  EndIntervalIndex: ").Append(EndIntervalIndex).Append("\n");
@@ -470,40 +406,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.StartIntervalIndex != null)
                     hash = hash * 59 + this.StartIntervalIndex.GetHashCode();
-                
+
                 if (this.EndIntervalIndex != null)
                     hash = hash * 59 + this.EndIntervalIndex.GetHashCode();
-                
+
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 if (this.LegacyMetric != null)
                     hash = hash * 59 + this.LegacyMetric.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
+
                 if (this.DisplayGranularity != null)
                     hash = hash * 59 + this.DisplayGranularity.GetHashCode();
-                
+
                 if (this.Granularity != null)
                     hash = hash * 59 + this.Granularity.GetHashCode();
-                
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.PlanningGroupIds != null)
                     hash = hash * 59 + this.PlanningGroupIds.GetHashCode();
-                
+
                 return hash;
             }
         }

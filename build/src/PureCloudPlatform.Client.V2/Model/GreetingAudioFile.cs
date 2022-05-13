@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GreetingAudioFile :  IEquatable<GreetingAudioFile>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GreetingAudioFile" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets DurationMilliseconds
         /// </summary>
         [DataMember(Name="durationMilliseconds", EmitDefaultValue=false)]
         public long? DurationMilliseconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SizeBytes
         /// </summary>
         [DataMember(Name="sizeBytes", EmitDefaultValue=false)]
         public long? SizeBytes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GreetingAudioFile {\n");
-            
+
             sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
             sb.Append("  SizeBytes: ").Append(SizeBytes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DurationMilliseconds != null)
                     hash = hash * 59 + this.DurationMilliseconds.GetHashCode();
-                
+
                 if (this.SizeBytes != null)
                     hash = hash * 59 + this.SizeBytes.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

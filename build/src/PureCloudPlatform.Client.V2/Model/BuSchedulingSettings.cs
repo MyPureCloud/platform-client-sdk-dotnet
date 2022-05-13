@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuSchedulingSettings :  IEquatable<BuSchedulingSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuSchedulingSettings" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Schedule generation message severity configuration
         /// </summary>
         /// <value>Schedule generation message severity configuration</value>
         [DataMember(Name="messageSeverities", EmitDefaultValue=false)]
         public List<SchedulerMessageTypeSeverity> MessageSeverities { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuSchedulingSettings {\n");
-            
+
             sb.Append("  MessageSeverities: ").Append(MessageSeverities).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MessageSeverities != null)
                     hash = hash * 59 + this.MessageSeverities.GetHashCode();
-                
+
                 return hash;
             }
         }

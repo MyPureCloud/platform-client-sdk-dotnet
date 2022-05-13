@@ -18,13 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyWebActionEventsNotificationActionMapPageUrlCondition :  IEquatable<JourneyWebActionEventsNotificationActionMapPageUrlCondition>
     {
-        
-        
-        
-        
-        
         /// <summary>
-        /// Gets or Sets _Operator
+        /// Gets or Sets Operator
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
@@ -127,44 +122,34 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "notContainsAl")]
             Notcontainsal
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
-        /// Gets or Sets _Operator
+        /// Gets or Sets Operator
         /// </summary>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public OperatorEnum? _Operator { get; set; }
-        
-        
-    
+        public OperatorEnum? Operator { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyWebActionEventsNotificationActionMapPageUrlCondition" /> class.
         /// </summary>
         /// <param name="Values">Values.</param>
-        /// <param name="_Operator">_Operator.</param>
-        public JourneyWebActionEventsNotificationActionMapPageUrlCondition(List<string> Values = null, OperatorEnum? _Operator = null)
+        /// <param name="Operator">Operator.</param>
+        public JourneyWebActionEventsNotificationActionMapPageUrlCondition(List<string> Values = null, OperatorEnum? Operator = null)
         {
             this.Values = Values;
-            this._Operator = _Operator;
+            this.Operator = Operator;
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Values
         /// </summary>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -173,9 +158,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyWebActionEventsNotificationActionMapPageUrlCondition {\n");
-            
+
             sb.Append("  Values: ").Append(Values).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -222,9 +207,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Values.SequenceEqual(other.Values)
                 ) &&
                 (
-                    this._Operator == other._Operator ||
-                    this._Operator != null &&
-                    this._Operator.Equals(other._Operator)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
                 );
         }
 
@@ -239,13 +224,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
-                if (this._Operator != null)
-                    hash = hash * 59 + this._Operator.GetHashCode();
-                
+
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
+
                 return hash;
             }
         }

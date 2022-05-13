@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuditTopicAuditLogMessage :  IEquatable<AuditTopicAuditLogMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ServiceName
         /// </summary>
@@ -193,16 +170,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "WorkforceManagement")]
             Workforcemanagement
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
@@ -475,10 +442,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Reassign")]
             Reassign
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets EntityType
         /// </summary>
@@ -1147,68 +1110,21 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "WrapupCode")]
             Wrapupcode
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ServiceName
         /// </summary>
         [DataMember(Name="serviceName", EmitDefaultValue=false)]
         public ServiceNameEnum? ServiceName { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets EntityType
         /// </summary>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public EntityTypeEnum? EntityType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditTopicAuditLogMessage" /> class.
         /// </summary>
@@ -1247,109 +1163,109 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserHomeOrgId
         /// </summary>
         [DataMember(Name="userHomeOrgId", EmitDefaultValue=false)]
         public string UserHomeOrgId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Username
         /// </summary>
         [DataMember(Name="username", EmitDefaultValue=false)]
         public AuditTopicDomainEntityRef Username { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserDisplay
         /// </summary>
         [DataMember(Name="userDisplay", EmitDefaultValue=false)]
         public string UserDisplay { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ClientId
         /// </summary>
         [DataMember(Name="clientId", EmitDefaultValue=false)]
         public AuditTopicAddressableEntityRef ClientId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RemoteIp
         /// </summary>
         [DataMember(Name="remoteIp", EmitDefaultValue=false)]
         public List<string> RemoteIp { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
         public DateTime? EventTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public AuditTopicMessageInfo Message { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public AuditTopicDomainEntityRef Entity { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PropertyChanges
         /// </summary>
         [DataMember(Name="propertyChanges", EmitDefaultValue=false)]
         public List<AuditTopicPropertyChange> PropertyChanges { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Context
         /// </summary>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public Dictionary<string, string> Context { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1358,7 +1274,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuditTopicAuditLogMessage {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  UserHomeOrgId: ").Append(UserHomeOrgId).Append("\n");
@@ -1502,52 +1418,51 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.UserHomeOrgId != null)
                     hash = hash * 59 + this.UserHomeOrgId.GetHashCode();
-                
+
                 if (this.Username != null)
                     hash = hash * 59 + this.Username.GetHashCode();
-                
+
                 if (this.UserDisplay != null)
                     hash = hash * 59 + this.UserDisplay.GetHashCode();
-                
+
                 if (this.ClientId != null)
                     hash = hash * 59 + this.ClientId.GetHashCode();
-                
+
                 if (this.RemoteIp != null)
                     hash = hash * 59 + this.RemoteIp.GetHashCode();
-                
+
                 if (this.ServiceName != null)
                     hash = hash * 59 + this.ServiceName.GetHashCode();
-                
+
                 if (this.EventTime != null)
                     hash = hash * 59 + this.EventTime.GetHashCode();
-                
+
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();
-                
+
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
-                
+
                 if (this.PropertyChanges != null)
                     hash = hash * 59 + this.PropertyChanges.GetHashCode();
-                
+
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
-                
+
                 return hash;
             }
         }

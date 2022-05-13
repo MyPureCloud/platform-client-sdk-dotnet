@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TimeOffRequestNotification :  IEquatable<TimeOffRequestNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of this time off request
         /// </summary>
@@ -68,36 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CANCELED")]
             Canceled
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of this time off request
         /// </summary>
         /// <value>The status of this time off request</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestNotification" /> class.
         /// </summary>
@@ -106,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsFullDayRequest">Whether this is a full day request (false means partial day).</param>
         /// <param name="Status">The status of this time off request.</param>
         /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false.</param>
-        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest == true.</param>
+        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.  Will be not empty if isFullDayRequest == true.</param>
         public TimeOffRequestNotification(string TimeOffRequestId = null, UserReference User = null, bool? IsFullDayRequest = null, StatusEnum? Status = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null)
         {
             this.TimeOffRequestId = TimeOffRequestId;
@@ -118,54 +83,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of this time off request
         /// </summary>
         /// <value>The ID of this time off request</value>
         [DataMember(Name="timeOffRequestId", EmitDefaultValue=false)]
         public string TimeOffRequestId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user associated with this time off request
         /// </summary>
         /// <value>The user associated with this time off request</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UserReference User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this is a full day request (false means partial day)
         /// </summary>
         /// <value>Whether this is a full day request (false means partial day)</value>
         [DataMember(Name="isFullDayRequest", EmitDefaultValue=false)]
         public bool? IsFullDayRequest { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false
         /// </summary>
         /// <value>A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false</value>
         [DataMember(Name="partialDayStartDateTimes", EmitDefaultValue=false)]
         public List<DateTime?> PartialDayStartDateTimes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest == true
+        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.  Will be not empty if isFullDayRequest == true
         /// </summary>
-        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest == true</value>
+        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.  Will be not empty if isFullDayRequest == true</value>
         [DataMember(Name="fullDayManagementUnitDates", EmitDefaultValue=false)]
         public List<string> FullDayManagementUnitDates { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -174,7 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimeOffRequestNotification {\n");
-            
+
             sb.Append("  TimeOffRequestId: ").Append(TimeOffRequestId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  IsFullDayRequest: ").Append(IsFullDayRequest).Append("\n");
@@ -264,25 +229,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeOffRequestId != null)
                     hash = hash * 59 + this.TimeOffRequestId.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.IsFullDayRequest != null)
                     hash = hash * 59 + this.IsFullDayRequest.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.PartialDayStartDateTimes != null)
                     hash = hash * 59 + this.PartialDayStartDateTimes.GetHashCode();
-                
+
                 if (this.FullDayManagementUnitDates != null)
                     hash = hash * 59 + this.FullDayManagementUnitDates.GetHashCode();
-                
+
                 return hash;
             }
         }

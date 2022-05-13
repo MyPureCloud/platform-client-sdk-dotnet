@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuIntradayResponse :  IEquatable<BuIntradayResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// If not null, the reason there was no data for the request
         /// </summary>
@@ -56,12 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NoSourceForecast")]
             Nosourceforecast
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Categories
         /// </summary>
@@ -94,43 +77,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PerformancePredictionData")]
             Performancepredictiondata
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// If not null, the reason there was no data for the request
         /// </summary>
         /// <value>If not null, the reason there was no data for the request</value>
         [DataMember(Name="noDataReason", EmitDefaultValue=false)]
         public NoDataReasonEnum? NoDataReason { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuIntradayResponse" /> class.
         /// </summary>
@@ -155,72 +107,72 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The start of the date range for which this data applies.  This is also the start reference point for the intervals represented in the various arrays. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The start of the date range for which this data applies.  This is also the start reference point for the intervals represented in the various arrays. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The end of the date range for which this data applies. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The end of the date range for which this data applies. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The aggregation period in minutes, which determines the interval duration of the returned data
         /// </summary>
         /// <value>The aggregation period in minutes, which determines the interval duration of the returned data</value>
         [DataMember(Name="intervalLengthMinutes", EmitDefaultValue=false)]
         public int? IntervalLengthMinutes { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The categories to which this data corresponds
         /// </summary>
         /// <value>The categories to which this data corresponds</value>
         [DataMember(Name="categories", EmitDefaultValue=false)]
         public List<CategoriesEnum> Categories { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Short term forecast reference
         /// </summary>
         /// <value>Short term forecast reference</value>
         [DataMember(Name="shortTermForecast", EmitDefaultValue=false)]
         public BuShortTermForecastReference ShortTermForecast { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Schedule reference
         /// </summary>
         /// <value>Schedule reference</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public BuScheduleReference Schedule { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Intraday data grouped by a single media type and set of planning group IDs
         /// </summary>
         /// <value>Intraday data grouped by a single media type and set of planning group IDs</value>
         [DataMember(Name="intradayDataGroupings", EmitDefaultValue=false)]
         public List<BuIntradayDataGroup> IntradayDataGroupings { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -229,7 +181,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuIntradayResponse {\n");
-            
+
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  IntervalLengthMinutes: ").Append(IntervalLengthMinutes).Append("\n");
@@ -331,31 +283,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 if (this.IntervalLengthMinutes != null)
                     hash = hash * 59 + this.IntervalLengthMinutes.GetHashCode();
-                
+
                 if (this.NoDataReason != null)
                     hash = hash * 59 + this.NoDataReason.GetHashCode();
-                
+
                 if (this.Categories != null)
                     hash = hash * 59 + this.Categories.GetHashCode();
-                
+
                 if (this.ShortTermForecast != null)
                     hash = hash * 59 + this.ShortTermForecast.GetHashCode();
-                
+
                 if (this.Schedule != null)
                     hash = hash * 59 + this.Schedule.GetHashCode();
-                
+
                 if (this.IntradayDataGroupings != null)
                     hash = hash * 59 + this.IntradayDataGroupings.GetHashCode();
-                
+
                 return hash;
             }
         }

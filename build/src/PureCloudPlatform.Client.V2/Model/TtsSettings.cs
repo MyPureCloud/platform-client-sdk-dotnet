@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TtsSettings :  IEquatable<TtsSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TtsSettings" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TtsSettings() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TtsSettings" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// ID of the global default TTS engine
         /// </summary>
         /// <value>ID of the global default TTS engine</value>
         [DataMember(Name="defaultEngine", EmitDefaultValue=false)]
         public string DefaultEngine { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of default overrides for specific languages
         /// </summary>
         /// <value>The list of default overrides for specific languages</value>
         [DataMember(Name="languageOverrides", EmitDefaultValue=false)]
         public List<LanguageOverride> LanguageOverrides { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TtsSettings {\n");
-            
+
             sb.Append("  DefaultEngine: ").Append(DefaultEngine).Append("\n");
             sb.Append("  LanguageOverrides: ").Append(LanguageOverrides).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DefaultEngine != null)
                     hash = hash * 59 + this.DefaultEngine.GetHashCode();
-                
+
                 if (this.LanguageOverrides != null)
                     hash = hash * 59 + this.LanguageOverrides.GetHashCode();
-                
+
                 return hash;
             }
         }

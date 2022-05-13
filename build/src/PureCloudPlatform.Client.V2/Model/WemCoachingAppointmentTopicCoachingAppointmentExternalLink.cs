@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WemCoachingAppointmentTopicCoachingAppointmentExternalLink :  IEquatable<WemCoachingAppointmentTopicCoachingAppointmentExternalLink>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
@@ -55,21 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "None")]
             None
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WemCoachingAppointmentTopicCoachingAppointmentExternalLink" /> class.
         /// </summary>
@@ -82,17 +67,17 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ExternalLink
         /// </summary>
         [DataMember(Name="externalLink", EmitDefaultValue=false)]
         public string ExternalLink { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -101,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WemCoachingAppointmentTopicCoachingAppointmentExternalLink {\n");
-            
+
             sb.Append("  ExternalLink: ").Append(ExternalLink).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("}\n");
@@ -167,13 +152,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ExternalLink != null)
                     hash = hash * 59 + this.ExternalLink.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 return hash;
             }
         }

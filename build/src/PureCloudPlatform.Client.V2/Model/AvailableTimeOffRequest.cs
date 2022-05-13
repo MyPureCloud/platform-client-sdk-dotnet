@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AvailableTimeOffRequest :  IEquatable<AvailableTimeOffRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTimeOffRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AvailableTimeOffRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTimeOffRequest" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID for activity code to query available time off minutes
         /// </summary>
         /// <value>The ID for activity code to query available time off minutes</value>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of date ranges of available time off minutes.
         /// </summary>
         /// <value>A list of date ranges of available time off minutes.</value>
         [DataMember(Name="dateRanges", EmitDefaultValue=false)]
         public List<LocalDateRange> DateRanges { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AvailableTimeOffRequest {\n");
-            
+
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  DateRanges: ").Append(DateRanges).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ActivityCodeId != null)
                     hash = hash * 59 + this.ActivityCodeId.GetHashCode();
-                
+
                 if (this.DateRanges != null)
                     hash = hash * 59 + this.DateRanges.GetHashCode();
-                
+
                 return hash;
             }
         }

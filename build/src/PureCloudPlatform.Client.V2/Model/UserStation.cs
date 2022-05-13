@@ -18,49 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserStation :  IEquatable<UserStation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStation" /> class.
         /// </summary>
@@ -69,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssociatedUser">AssociatedUser.</param>
         /// <param name="AssociatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DefaultUser">DefaultUser.</param>
-        /// <param name="ProviderInfo">Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; }.</param>
+        /// <param name="ProviderInfo">Provider-specific info for this station, e.g. { \"edgeGroupId\": \"ffe7b15c-a9cc-4f4c-88f5-781327819a49\" }.</param>
         public UserStation(string Name = null, string Type = null, User AssociatedUser = null, DateTime? AssociatedDate = null, User DefaultUser = null, Dictionary<string, string> ProviderInfo = null)
         {
             this.Name = Name;
@@ -81,75 +38,75 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A globally unique identifier for this station
         /// </summary>
         /// <value>A globally unique identifier for this station</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AssociatedUser
         /// </summary>
         [DataMember(Name="associatedUser", EmitDefaultValue=false)]
         public User AssociatedUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="associatedDate", EmitDefaultValue=false)]
         public DateTime? AssociatedDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DefaultUser
         /// </summary>
         [DataMember(Name="defaultUser", EmitDefaultValue=false)]
         public User DefaultUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; }
+        /// Provider-specific info for this station, e.g. { \"edgeGroupId\": \"ffe7b15c-a9cc-4f4c-88f5-781327819a49\" }
         /// </summary>
-        /// <value>Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; }</value>
+        /// <value>Provider-specific info for this station, e.g. { \"edgeGroupId\": \"ffe7b15c-a9cc-4f4c-88f5-781327819a49\" }</value>
         [DataMember(Name="providerInfo", EmitDefaultValue=false)]
         public Dictionary<string, string> ProviderInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of call appearances on the station.
         /// </summary>
         /// <value>The number of call appearances on the station.</value>
         [DataMember(Name="webRtcCallAppearances", EmitDefaultValue=false)]
         public int? WebRtcCallAppearances { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -158,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserStation {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -260,31 +217,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.AssociatedUser != null)
                     hash = hash * 59 + this.AssociatedUser.GetHashCode();
-                
+
                 if (this.AssociatedDate != null)
                     hash = hash * 59 + this.AssociatedDate.GetHashCode();
-                
+
                 if (this.DefaultUser != null)
                     hash = hash * 59 + this.DefaultUser.GetHashCode();
-                
+
                 if (this.ProviderInfo != null)
                     hash = hash * 59 + this.ProviderInfo.GetHashCode();
-                
+
                 if (this.WebRtcCallAppearances != null)
                     hash = hash * 59 + this.WebRtcCallAppearances.GetHashCode();
-                
+
                 return hash;
             }
         }

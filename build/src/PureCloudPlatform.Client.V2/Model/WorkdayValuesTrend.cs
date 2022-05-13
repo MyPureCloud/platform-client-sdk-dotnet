@@ -18,54 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkdayValuesTrend :  IEquatable<WorkdayValuesTrend>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkdayValuesTrend" /> class.
         /// </summary>
@@ -74,88 +26,88 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The start workday for the query range for the metric value trend. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>The start workday for the query range for the metric value trend. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateStartWorkday", EmitDefaultValue=false)]
         public String DateStartWorkday { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The end workday for the query range for the metric value trend. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>The end workday for the query range for the metric value trend. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateEndWorkday", EmitDefaultValue=false)]
         public String DateEndWorkday { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The reference workday used to determine the metric definition. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>The reference workday used to determine the metric definition. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateReferenceWorkday", EmitDefaultValue=false)]
         public String DateReferenceWorkday { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The targeted division for the query
         /// </summary>
         /// <value>The targeted division for the query</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public Division Division { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The targeted user for the query
         /// </summary>
         /// <value>The targeted user for the query</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UserReference User { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time zone used for aggregating metric values
         /// </summary>
         /// <value>The time zone used for aggregating metric values</value>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public string Timezone { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The metric value trends
         /// </summary>
         /// <value>The metric value trends</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<WorkdayValuesMetricItem> Results { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The targeted performance profile for the average points
         /// </summary>
         /// <value>The targeted performance profile for the average points</value>
         [DataMember(Name="performanceProfile", EmitDefaultValue=false)]
         public AddressableEntityRef PerformanceProfile { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The targeted metric for the average points
         /// </summary>
         /// <value>The targeted metric for the average points</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public AddressableEntityRef Metric { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -164,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkdayValuesTrend {\n");
-            
+
             sb.Append("  DateStartWorkday: ").Append(DateStartWorkday).Append("\n");
             sb.Append("  DateEndWorkday: ").Append(DateEndWorkday).Append("\n");
             sb.Append("  DateReferenceWorkday: ").Append(DateReferenceWorkday).Append("\n");
@@ -272,34 +224,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DateStartWorkday != null)
                     hash = hash * 59 + this.DateStartWorkday.GetHashCode();
-                
+
                 if (this.DateEndWorkday != null)
                     hash = hash * 59 + this.DateEndWorkday.GetHashCode();
-                
+
                 if (this.DateReferenceWorkday != null)
                     hash = hash * 59 + this.DateReferenceWorkday.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Timezone != null)
                     hash = hash * 59 + this.Timezone.GetHashCode();
-                
+
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
+
                 if (this.PerformanceProfile != null)
                     hash = hash * 59 + this.PerformanceProfile.GetHashCode();
-                
+
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 return hash;
             }
         }

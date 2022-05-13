@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FlowDiagnosticInfo :  IEquatable<FlowDiagnosticInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowDiagnosticInfo" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The step number of the survey invite flow where the error occurred.
         /// </summary>
         /// <value>The step number of the survey invite flow where the error occurred.</value>
         [DataMember(Name="lastActionId", EmitDefaultValue=false)]
         public int? LastActionId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FlowDiagnosticInfo {\n");
-            
+
             sb.Append("  LastActionId: ").Append(LastActionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LastActionId != null)
                     hash = hash * 59 + this.LastActionId.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Callback :  IEquatable<Callback>
     {
-        
-        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -89,16 +87,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "none")]
             None
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the call
         /// </summary>
@@ -126,13 +114,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
@@ -244,155 +225,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "uncallable")]
             Uncallable
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
         /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The direction of the call
         /// </summary>
         /// <value>The direction of the call</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Callback" /> class.
         /// </summary>
         /// <param name="State">The connection state of this communication..</param>
         /// <param name="Id">A globally unique identifier for this communication..</param>
-        /// <param name="Segments">The time line of the participant&#39;s callback, divided into activity segments..</param>
+        /// <param name="Segments">The time line of the participant's callback, divided into activity segments..</param>
         /// <param name="Direction">The direction of the call.</param>
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
@@ -449,229 +305,229 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// A globally unique identifier for this communication.
         /// </summary>
         /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The time line of the participant&#39;s callback, divided into activity segments.
+        /// The time line of the participant's callback, divided into activity segments.
         /// </summary>
-        /// <value>The time line of the participant&#39;s callback, divided into activity segments.</value>
+        /// <value>The time line of the participant's callback, divided into activity segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// True if this call is held and the person on this side hears silence.
         /// </summary>
         /// <value>True if this call is held and the person on this side hears silence.</value>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The timestamp the callback was placed on hold in the cloud clock if the callback is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp the callback was placed on hold in the cloud clock if the callback is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The preview data to be used when this callback is a Preview.
         /// </summary>
         /// <value>The preview data to be used when this callback is a Preview.</value>
         [DataMember(Name="dialerPreview", EmitDefaultValue=false)]
         public DialerPreview DialerPreview { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The voicemail data to be used when this callback is an ACD voicemail.
         /// </summary>
         /// <value>The voicemail data to be used when this callback is an ACD voicemail.</value>
         [DataMember(Name="voicemail", EmitDefaultValue=false)]
         public Voicemail Voicemail { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The phone number(s) to use to place the callback.
         /// </summary>
         /// <value>The phone number(s) to use to place the callback.</value>
         [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
         public List<string> CallbackNumbers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the user requesting a callback.
         /// </summary>
         /// <value>The name of the user requesting a callback.</value>
         [DataMember(Name="callbackUserName", EmitDefaultValue=false)]
         public string CallbackUserName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The UUID of the script to use.
         /// </summary>
         /// <value>The UUID of the script to use.</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if the call for the callback uses external dialing.
         /// </summary>
         /// <value>True if the call for the callback uses external dialing.</value>
         [DataMember(Name="externalCampaign", EmitDefaultValue=false)]
         public bool? ExternalCampaign { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if the ability to skip a callback should be enabled.
         /// </summary>
         /// <value>True if the ability to skip a callback should be enabled.</value>
         [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
         public bool? SkipEnabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled.
         /// </summary>
         /// <value>The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled.</value>
         [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
         public int? TimeoutSeconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startAlertingTime", EmitDefaultValue=false)]
         public DateTime? StartAlertingTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this communication is scheduled in the provider clock. If this value is missing it indicates the callback will be placed immediately. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp when this communication is scheduled in the provider clock. If this value is missing it indicates the callback will be placed immediately. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
         public DateTime? CallbackScheduledTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal.
         /// </summary>
         /// <value>The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal.</value>
         [DataMember(Name="automatedCallbackConfigId", EmitDefaultValue=false)]
         public string AutomatedCallbackConfigId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The source provider for the callback.
         /// </summary>
         /// <value>The source provider for the callback.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the peer communication corresponding to a matching leg for this communication.
         /// </summary>
         /// <value>The id of the peer communication corresponding to a matching leg for this communication.</value>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Call wrap up or disposition data.
         /// </summary>
         /// <value>Call wrap up or disposition data.</value>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public Wrapup Wrapup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// After-call work for the communication.
         /// </summary>
         /// <value>After-call work for the communication.</value>
         [DataMember(Name="afterCallWork", EmitDefaultValue=false)]
         public AfterCallWork AfterCallWork { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested.
         /// </summary>
         /// <value>Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested.</value>
         [DataMember(Name="afterCallWorkRequired", EmitDefaultValue=false)]
         public bool? AfterCallWorkRequired { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The phone number displayed to recipients of the phone call. The value should conform to the E164 format.
         /// </summary>
         /// <value>The phone number displayed to recipients of the phone call. The value should conform to the E164 format.</value>
         [DataMember(Name="callerId", EmitDefaultValue=false)]
         public string CallerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name displayed to recipients of the phone call.
         /// </summary>
         /// <value>The name displayed to recipients of the phone call.</value>
         [DataMember(Name="callerIdName", EmitDefaultValue=false)]
         public string CallerIdName { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -680,7 +536,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Callback {\n");
-            
+
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
@@ -896,88 +752,87 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
-                
+
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
+
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
-                
+
                 if (this.DialerPreview != null)
                     hash = hash * 59 + this.DialerPreview.GetHashCode();
-                
+
                 if (this.Voicemail != null)
                     hash = hash * 59 + this.Voicemail.GetHashCode();
-                
+
                 if (this.CallbackNumbers != null)
                     hash = hash * 59 + this.CallbackNumbers.GetHashCode();
-                
+
                 if (this.CallbackUserName != null)
                     hash = hash * 59 + this.CallbackUserName.GetHashCode();
-                
+
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
-                
+
                 if (this.ExternalCampaign != null)
                     hash = hash * 59 + this.ExternalCampaign.GetHashCode();
-                
+
                 if (this.SkipEnabled != null)
                     hash = hash * 59 + this.SkipEnabled.GetHashCode();
-                
+
                 if (this.TimeoutSeconds != null)
                     hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
-                
+
                 if (this.StartAlertingTime != null)
                     hash = hash * 59 + this.StartAlertingTime.GetHashCode();
-                
+
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
-                
+
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
-                
+
                 if (this.CallbackScheduledTime != null)
                     hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();
-                
+
                 if (this.AutomatedCallbackConfigId != null)
                     hash = hash * 59 + this.AutomatedCallbackConfigId.GetHashCode();
-                
+
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                
+
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
-                
+
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
-                
+
                 if (this.AfterCallWork != null)
                     hash = hash * 59 + this.AfterCallWork.GetHashCode();
-                
+
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
-                
+
                 if (this.CallerId != null)
                     hash = hash * 59 + this.CallerId.GetHashCode();
-                
+
                 if (this.CallerIdName != null)
                     hash = hash * 59 + this.CallerIdName.GetHashCode();
-                
+
                 return hash;
             }
         }

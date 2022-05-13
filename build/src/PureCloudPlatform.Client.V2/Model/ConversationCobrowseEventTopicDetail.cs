@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationCobrowseEventTopicDetail :  IEquatable<ConversationCobrowseEventTopicDetail>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationCobrowseEventTopicDetail" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FieldName
         /// </summary>
         [DataMember(Name="fieldName", EmitDefaultValue=false)]
         public string FieldName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EntityId
         /// </summary>
         [DataMember(Name="entityId", EmitDefaultValue=false)]
         public string EntityId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EntityName
         /// </summary>
         [DataMember(Name="entityName", EmitDefaultValue=false)]
         public string EntityName { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationCobrowseEventTopicDetail {\n");
-            
+
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
             sb.Append("  EntityId: ").Append(EntityId).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
-                
+
                 if (this.FieldName != null)
                     hash = hash * 59 + this.FieldName.GetHashCode();
-                
+
                 if (this.EntityId != null)
                     hash = hash * 59 + this.EntityId.GetHashCode();
-                
+
                 if (this.EntityName != null)
                     hash = hash * 59 + this.EntityName.GetHashCode();
-                
+
                 return hash;
             }
         }

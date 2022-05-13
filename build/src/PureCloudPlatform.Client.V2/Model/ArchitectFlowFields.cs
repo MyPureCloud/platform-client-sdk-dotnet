@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ArchitectFlowFields :  IEquatable<ArchitectFlowFields>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectFlowFields" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The architect flow.
         /// </summary>
         /// <value>The architect flow.</value>
         [DataMember(Name="architectFlow", EmitDefaultValue=false)]
         public AddressableEntityRef ArchitectFlow { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Collection of Architect Flow Request Mappings to use.
         /// </summary>
         /// <value>Collection of Architect Flow Request Mappings to use.</value>
         [DataMember(Name="flowRequestMappings", EmitDefaultValue=false)]
         public List<RequestMapping> FlowRequestMappings { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ArchitectFlowFields {\n");
-            
+
             sb.Append("  ArchitectFlow: ").Append(ArchitectFlow).Append("\n");
             sb.Append("  FlowRequestMappings: ").Append(FlowRequestMappings).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ArchitectFlow != null)
                     hash = hash * 59 + this.ArchitectFlow.GetHashCode();
-                
+
                 if (this.FlowRequestMappings != null)
                     hash = hash * 59 + this.FlowRequestMappings.GetHashCode();
-                
+
                 return hash;
             }
         }

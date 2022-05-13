@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeChangeTopicEdge :  IEquatable<EdgeChangeTopicEdge>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets OnlineStatus
         /// </summary>
@@ -49,21 +44,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OFFLINE")]
             Offline
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets OnlineStatus
         /// </summary>
         [DataMember(Name="onlineStatus", EmitDefaultValue=false)]
         public OnlineStatusEnum? OnlineStatus { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeChangeTopicEdge" /> class.
         /// </summary>
@@ -76,17 +61,17 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -95,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeChangeTopicEdge {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  OnlineStatus: ").Append(OnlineStatus).Append("\n");
             sb.Append("}\n");
@@ -161,13 +146,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.OnlineStatus != null)
                     hash = hash * 59 + this.OnlineStatus.GetHashCode();
-                
+
                 return hash;
             }
         }

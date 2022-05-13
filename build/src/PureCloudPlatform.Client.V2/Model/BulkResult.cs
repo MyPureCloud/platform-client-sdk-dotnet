@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BulkResult :  IEquatable<BulkResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BulkResult" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Error details if the operation failed.
         /// </summary>
         /// <value>Error details if the operation failed.</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public BulkError Error { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The result of the operation if it succeeded.
         /// </summary>
         /// <value>The result of the operation if it succeeded.</value>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public Object Entity { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BulkResult {\n");
-            
+
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();
-                
+
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
-                
+
                 return hash;
             }
         }

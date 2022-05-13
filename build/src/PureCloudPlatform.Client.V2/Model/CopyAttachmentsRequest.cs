@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CopyAttachmentsRequest :  IEquatable<CopyAttachmentsRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CopyAttachmentsRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CopyAttachmentsRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CopyAttachmentsRequest" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A reference to the email message within the current conversation that owns the attachments to be copied
         /// </summary>
         /// <value>A reference to the email message within the current conversation that owns the attachments to be copied</value>
         [DataMember(Name="sourceMessage", EmitDefaultValue=false)]
         public DomainEntityRef SourceMessage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of attachments that will be copied from the source message to the current draft
         /// </summary>
         /// <value>A list of attachments that will be copied from the source message to the current draft</value>
         [DataMember(Name="attachments", EmitDefaultValue=false)]
         public List<Attachment> Attachments { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CopyAttachmentsRequest {\n");
-            
+
             sb.Append("  SourceMessage: ").Append(SourceMessage).Append("\n");
             sb.Append("  Attachments: ").Append(Attachments).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SourceMessage != null)
                     hash = hash * 59 + this.SourceMessage.GetHashCode();
-                
+
                 if (this.Attachments != null)
                     hash = hash * 59 + this.Attachments.GetHashCode();
-                
+
                 return hash;
             }
         }

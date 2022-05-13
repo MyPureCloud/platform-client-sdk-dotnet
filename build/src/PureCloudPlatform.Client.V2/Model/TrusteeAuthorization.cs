@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrusteeAuthorization :  IEquatable<TrusteeAuthorization>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrusteeAuthorization" /> class.
         /// </summary>
@@ -34,16 +26,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Permissions that the trustee user has in the trustor organization
         /// </summary>
         /// <value>Permissions that the trustee user has in the trustor organization</value>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<string> Permissions { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrusteeAuthorization {\n");
-            
+
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -112,10 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Permissions != null)
                     hash = hash * 59 + this.Permissions.GetHashCode();
-                
+
                 return hash;
             }
         }

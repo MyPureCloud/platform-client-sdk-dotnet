@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportingTurnKnowledgeDocument :  IEquatable<ReportingTurnKnowledgeDocument>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingTurnKnowledgeDocument" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the knowledge document.
         /// </summary>
         /// <value>The ID of the knowledge document.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The the question that was used to match against the search query.
         /// </summary>
         /// <value>The the question that was used to match against the search query.</value>
         [DataMember(Name="question", EmitDefaultValue=false)]
         public string Question { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The corresponding answer to the question.
         /// </summary>
         /// <value>The corresponding answer to the question.</value>
         [DataMember(Name="answer", EmitDefaultValue=false)]
         public string Answer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The confidence score of how well the question matched the search query.
         /// </summary>
         /// <value>The confidence score of how well the question matched the search query.</value>
         [DataMember(Name="confidence", EmitDefaultValue=false)]
         public double? Confidence { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportingTurnKnowledgeDocument {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Question: ").Append(Question).Append("\n");
             sb.Append("  Answer: ").Append(Answer).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Question != null)
                     hash = hash * 59 + this.Question.GetHashCode();
-                
+
                 if (this.Answer != null)
                     hash = hash * 59 + this.Answer.GetHashCode();
-                
+
                 if (this.Confidence != null)
                     hash = hash * 59 + this.Confidence.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TimeOffLimitValueRange :  IEquatable<TimeOffLimitValueRange>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Granularity choice for time off limit
         /// </summary>
@@ -47,55 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Daily")]
             Daily
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Granularity choice for time off limit
         /// </summary>
         /// <value>Granularity choice for time off limit</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public GranularityEnum? Granularity { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffLimitValueRange" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TimeOffLimitValueRange() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffLimitValueRange" /> class.
         /// </summary>
@@ -120,72 +75,72 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the time off limit
         /// </summary>
         /// <value>The ID of the time off limit</value>
         [DataMember(Name="timeOffLimit", EmitDefaultValue=false)]
         public TimeOffLimitReference TimeOffLimit { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Start date of the requested date range, in ISO-8601 format. The end date is determined by the size of interval lists
         /// </summary>
         /// <value>Start date of the requested date range, in ISO-8601 format. The end date is determined by the size of interval lists</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public String StartDate { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// A list of time off limit values in minutes per granularity interval
         /// </summary>
         /// <value>A list of time off limit values in minutes per granularity interval</value>
         [DataMember(Name="limitMinutesPerInterval", EmitDefaultValue=false)]
         public List<int?> LimitMinutesPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of allocated time off minutes per granularity interval
         /// </summary>
         /// <value>A list of allocated time off minutes per granularity interval</value>
         [DataMember(Name="allocatedMinutesPerInterval", EmitDefaultValue=false)]
         public List<int?> AllocatedMinutesPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of waitlisted time off minutes per granularity interval
         /// </summary>
         /// <value>A list of waitlisted time off minutes per granularity interval</value>
         [DataMember(Name="waitlistedMinutesPerInterval", EmitDefaultValue=false)]
         public List<int?> WaitlistedMinutesPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The current number of waitlisted time off requests for every interval per granularity
         /// </summary>
         /// <value>The current number of waitlisted time off requests for every interval per granularity</value>
         [DataMember(Name="waitlistedRequestsPerInterval", EmitDefaultValue=false)]
         public List<int?> WaitlistedRequestsPerInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version metadata for the time off limit
         /// </summary>
         /// <value>Version metadata for the time off limit</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -194,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimeOffLimitValueRange {\n");
-            
+
             sb.Append("  TimeOffLimit: ").Append(TimeOffLimit).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  Granularity: ").Append(Granularity).Append("\n");
@@ -296,31 +251,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeOffLimit != null)
                     hash = hash * 59 + this.TimeOffLimit.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.Granularity != null)
                     hash = hash * 59 + this.Granularity.GetHashCode();
-                
+
                 if (this.LimitMinutesPerInterval != null)
                     hash = hash * 59 + this.LimitMinutesPerInterval.GetHashCode();
-                
+
                 if (this.AllocatedMinutesPerInterval != null)
                     hash = hash * 59 + this.AllocatedMinutesPerInterval.GetHashCode();
-                
+
                 if (this.WaitlistedMinutesPerInterval != null)
                     hash = hash * 59 + this.WaitlistedMinutesPerInterval.GetHashCode();
-                
+
                 if (this.WaitlistedRequestsPerInterval != null)
                     hash = hash * 59 + this.WaitlistedRequestsPerInterval.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

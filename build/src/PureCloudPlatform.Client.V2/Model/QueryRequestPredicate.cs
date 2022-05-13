@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueryRequestPredicate :  IEquatable<QueryRequestPredicate>
     {
-        
-        
         /// <summary>
         /// The dimension to be filtered
         /// </summary>
@@ -53,31 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "status")]
             Status
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The dimension to be filtered
         /// </summary>
         /// <value>The dimension to be filtered</value>
         [DataMember(Name="dimension", EmitDefaultValue=false)]
         public DimensionEnum? Dimension { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryRequestPredicate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected QueryRequestPredicate() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryRequestPredicate" /> class.
         /// </summary>
@@ -90,18 +75,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The value to filter by
         /// </summary>
         /// <value>The value to filter by</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueryRequestPredicate {\n");
-            
+
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -176,13 +161,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Dimension != null)
                     hash = hash * 59 + this.Dimension.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 return hash;
             }
         }

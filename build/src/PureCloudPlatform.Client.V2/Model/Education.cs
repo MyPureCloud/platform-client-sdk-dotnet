@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Education :  IEquatable<Education>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Education" /> class.
         /// </summary>
@@ -64,50 +36,50 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets School
         /// </summary>
         [DataMember(Name="school", EmitDefaultValue=false)]
         public string School { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FieldOfStudy
         /// </summary>
         [DataMember(Name="fieldOfStudy", EmitDefaultValue=false)]
         public string FieldOfStudy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Notes about education has a 2000 character limit
         /// </summary>
         /// <value>Notes about education has a 2000 character limit</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateStart", EmitDefaultValue=false)]
         public String DateStart { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateEnd", EmitDefaultValue=false)]
         public String DateEnd { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -116,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Education {\n");
-            
+
             sb.Append("  School: ").Append(School).Append("\n");
             sb.Append("  FieldOfStudy: ").Append(FieldOfStudy).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
@@ -200,22 +172,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.School != null)
                     hash = hash * 59 + this.School.GetHashCode();
-                
+
                 if (this.FieldOfStudy != null)
                     hash = hash * 59 + this.FieldOfStudy.GetHashCode();
-                
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();
-                
+
                 if (this.DateEnd != null)
                     hash = hash * 59 + this.DateEnd.GetHashCode();
-                
+
                 return hash;
             }
         }

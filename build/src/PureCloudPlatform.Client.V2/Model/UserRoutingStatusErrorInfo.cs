@@ -18,48 +18,15 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserRoutingStatusErrorInfo :  IEquatable<UserRoutingStatusErrorInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRoutingStatusErrorInfo" /> class.
         /// </summary>
         /// <param name="ErrorCode">A code unique to this error. Typically prefixed with the service that originated the error. For example CONFIG_USER_NOT_FOUND.</param>
         /// <param name="Status">The HTTP status code for this message. If left blank the status code from the HTTP response is used..</param>
-        /// <param name="CorrelationId">The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead..</param>
+        /// <param name="CorrelationId">The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header 'ININ-Correlation-Id' instead..</param>
         /// <param name="UserMessage">A customer friendly message. This should be a complete sentence, use proper grammar and only include information useful to a customer. This is not a dev message and should not include things like Org Id.</param>
-        /// <param name="UserParamsMessage">This is the same as userMessage except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39;.</param>
-        /// <param name="UserParams">Used in conjunction with userParamsMessage. These are the template parameters. For instance: UserParam.key = &#39;username&#39;, UserParam.value = &#39;chuck.pulfer&#39;.</param>
+        /// <param name="UserParamsMessage">This is the same as userMessage except it uses template fields for variable replacement. For instance: 'User {username} was not found'.</param>
+        /// <param name="UserParams">Used in conjunction with userParamsMessage. These are the template parameters. For instance: UserParam.key = 'username', UserParam.value = 'chuck.pulfer'.</param>
         public UserRoutingStatusErrorInfo(string ErrorCode = null, int? Status = null, string CorrelationId = null, string UserMessage = null, string UserParamsMessage = null, List<UserRoutingStatusUserParam> UserParams = null)
         {
             this.ErrorCode = ErrorCode;
@@ -71,61 +38,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A code unique to this error. Typically prefixed with the service that originated the error. For example CONFIG_USER_NOT_FOUND
         /// </summary>
         /// <value>A code unique to this error. Typically prefixed with the service that originated the error. For example CONFIG_USER_NOT_FOUND</value>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The HTTP status code for this message. If left blank the status code from the HTTP response is used.
         /// </summary>
         /// <value>The HTTP status code for this message. If left blank the status code from the HTTP response is used.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead.
+        /// The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header 'ININ-Correlation-Id' instead.
         /// </summary>
-        /// <value>The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead.</value>
+        /// <value>The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header 'ININ-Correlation-Id' instead.</value>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A customer friendly message. This should be a complete sentence, use proper grammar and only include information useful to a customer. This is not a dev message and should not include things like Org Id
         /// </summary>
         /// <value>A customer friendly message. This should be a complete sentence, use proper grammar and only include information useful to a customer. This is not a dev message and should not include things like Org Id</value>
         [DataMember(Name="userMessage", EmitDefaultValue=false)]
         public string UserMessage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// This is the same as userMessage except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39;
+        /// This is the same as userMessage except it uses template fields for variable replacement. For instance: 'User {username} was not found'
         /// </summary>
-        /// <value>This is the same as userMessage except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39;</value>
+        /// <value>This is the same as userMessage except it uses template fields for variable replacement. For instance: 'User {username} was not found'</value>
         [DataMember(Name="userParamsMessage", EmitDefaultValue=false)]
         public string UserParamsMessage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Used in conjunction with userParamsMessage. These are the template parameters. For instance: UserParam.key = &#39;username&#39;, UserParam.value = &#39;chuck.pulfer&#39;
+        /// Used in conjunction with userParamsMessage. These are the template parameters. For instance: UserParam.key = 'username', UserParam.value = 'chuck.pulfer'
         /// </summary>
-        /// <value>Used in conjunction with userParamsMessage. These are the template parameters. For instance: UserParam.key = &#39;username&#39;, UserParam.value = &#39;chuck.pulfer&#39;</value>
+        /// <value>Used in conjunction with userParamsMessage. These are the template parameters. For instance: UserParam.key = 'username', UserParam.value = 'chuck.pulfer'</value>
         [DataMember(Name="userParams", EmitDefaultValue=false)]
         public List<UserRoutingStatusUserParam> UserParams { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserRoutingStatusErrorInfo {\n");
-            
+
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  CorrelationId: ").Append(CorrelationId).Append("\n");
@@ -224,25 +191,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.CorrelationId != null)
                     hash = hash * 59 + this.CorrelationId.GetHashCode();
-                
+
                 if (this.UserMessage != null)
                     hash = hash * 59 + this.UserMessage.GetHashCode();
-                
+
                 if (this.UserParamsMessage != null)
                     hash = hash * 59 + this.UserParamsMessage.GetHashCode();
-                
+
                 if (this.UserParams != null)
                     hash = hash * 59 + this.UserParams.GetHashCode();
-                
+
                 return hash;
             }
         }

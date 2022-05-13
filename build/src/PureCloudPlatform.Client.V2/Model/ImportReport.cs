@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ImportReport :  IEquatable<ImportReport>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportReport" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Errors
         /// </summary>
         [DataMember(Name="errors", EmitDefaultValue=false)]
         public List<ImportError> Errors { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Validated
         /// </summary>
         [DataMember(Name="validated", EmitDefaultValue=false)]
         public ResultCounters Validated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Imported
         /// </summary>
         [DataMember(Name="imported", EmitDefaultValue=false)]
         public ResultCounters Imported { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TotalDocuments
         /// </summary>
         [DataMember(Name="totalDocuments", EmitDefaultValue=false)]
         public int? TotalDocuments { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ImportReport {\n");
-            
+
             sb.Append("  Errors: ").Append(Errors).Append("\n");
             sb.Append("  Validated: ").Append(Validated).Append("\n");
             sb.Append("  Imported: ").Append(Imported).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();
-                
+
                 if (this.Validated != null)
                     hash = hash * 59 + this.Validated.GetHashCode();
-                
+
                 if (this.Imported != null)
                     hash = hash * 59 + this.Imported.GetHashCode();
-                
+
                 if (this.TotalDocuments != null)
                     hash = hash * 59 + this.TotalDocuments.GetHashCode();
-                
+
                 return hash;
             }
         }

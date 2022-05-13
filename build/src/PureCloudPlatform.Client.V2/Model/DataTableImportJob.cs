@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DataTableImportJob :  IEquatable<DataTableImportJob>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the import job
         /// </summary>
@@ -68,19 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Succeeded")]
             Succeeded
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The indication of whether the processing should remove rows that don't appear in the import file
         /// </summary>
@@ -108,72 +84,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Append")]
             Append
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the import job
         /// </summary>
         /// <value>The status of the import job</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The indication of whether the processing should remove rows that don't appear in the import file
         /// </summary>
         /// <value>The indication of whether the processing should remove rows that don't appear in the import file</value>
         [DataMember(Name="importMode", EmitDefaultValue=false)]
         public ImportModeEnum? ImportMode { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DataTableImportJob" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DataTableImportJob() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DataTableImportJob" /> class.
         /// </summary>
@@ -183,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">The timestamp of when the import began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateCompleted">The timestamp of when the import stopped (either successfully or unsuccessfully). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="UploadURI">The URL of the location at which the caller can upload the file to be imported.</param>
-        /// <param name="ImportMode">The indication of whether the processing should remove rows that don&#39;t appear in the import file.</param>
+        /// <param name="ImportMode">The indication of whether the processing should remove rows that don't appear in the import file.</param>
         /// <param name="ErrorInformation">Any error information, or null of the processing is not in an error state.</param>
         /// <param name="CountRecordsUpdated">The current count of the number of records processed.</param>
         /// <param name="CountRecordsDeleted">The current count of the number of records deleted.</param>
@@ -204,109 +132,109 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The PureCloud user who started the import job
         /// </summary>
         /// <value>The PureCloud user who started the import job</value>
         [DataMember(Name="owner", EmitDefaultValue=false)]
         public AddressableEntityRef Owner { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The timestamp of when the import began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp of when the import began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp of when the import stopped (either successfully or unsuccessfully). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp of when the import stopped (either successfully or unsuccessfully). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
         public DateTime? DateCompleted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URL of the location at which the caller can upload the file to be imported
         /// </summary>
         /// <value>The URL of the location at which the caller can upload the file to be imported</value>
         [DataMember(Name="uploadURI", EmitDefaultValue=false)]
         public string UploadURI { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Any error information, or null of the processing is not in an error state
         /// </summary>
         /// <value>Any error information, or null of the processing is not in an error state</value>
         [DataMember(Name="errorInformation", EmitDefaultValue=false)]
         public ErrorBody ErrorInformation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The current count of the number of records processed
         /// </summary>
         /// <value>The current count of the number of records processed</value>
         [DataMember(Name="countRecordsUpdated", EmitDefaultValue=false)]
         public int? CountRecordsUpdated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The current count of the number of records deleted
         /// </summary>
         /// <value>The current count of the number of records deleted</value>
         [DataMember(Name="countRecordsDeleted", EmitDefaultValue=false)]
         public int? CountRecordsDeleted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The current count of the number of records that failed to import
         /// </summary>
         /// <value>The current count of the number of records that failed to import</value>
         [DataMember(Name="countRecordsFailed", EmitDefaultValue=false)]
         public int? CountRecordsFailed { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -315,7 +243,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DataTableImportJob {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Owner: ").Append(Owner).Append("\n");
@@ -447,46 +375,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Owner != null)
                     hash = hash * 59 + this.Owner.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateCompleted != null)
                     hash = hash * 59 + this.DateCompleted.GetHashCode();
-                
+
                 if (this.UploadURI != null)
                     hash = hash * 59 + this.UploadURI.GetHashCode();
-                
+
                 if (this.ImportMode != null)
                     hash = hash * 59 + this.ImportMode.GetHashCode();
-                
+
                 if (this.ErrorInformation != null)
                     hash = hash * 59 + this.ErrorInformation.GetHashCode();
-                
+
                 if (this.CountRecordsUpdated != null)
                     hash = hash * 59 + this.CountRecordsUpdated.GetHashCode();
-                
+
                 if (this.CountRecordsDeleted != null)
                     hash = hash * 59 + this.CountRecordsDeleted.GetHashCode();
-                
+
                 if (this.CountRecordsFailed != null)
                     hash = hash * 59 + this.CountRecordsFailed.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

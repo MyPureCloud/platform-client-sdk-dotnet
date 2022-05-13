@@ -9,7 +9,7 @@ title: BuAsyncScheduleRunResponse
 |------------ | ------------- | ------------- | -------------|
 | **Status** | **string** | The status of the operation | [optional] |
 | **OperationId** | **string** | The ID for the operation | [optional] |
-| **Result** | [**BuScheduleRun**](BuScheduleRun.html) | The result of the operation.  Null unless status == Complete | [optional] |
+| **Result** | [**BuScheduleRun**](BuScheduleRun.html) | The result of the operation.  Null unless status &#x3D;&#x3D; Complete | [optional] |
 {: class="table table-striped"}
 
 

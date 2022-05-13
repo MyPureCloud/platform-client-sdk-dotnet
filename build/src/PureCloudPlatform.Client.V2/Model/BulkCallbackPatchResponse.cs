@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BulkCallbackPatchResponse :  IEquatable<BulkCallbackPatchResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BulkCallbackPatchResponse" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A list of the results from the bulk operation.
         /// </summary>
         /// <value>A list of the results from the bulk operation.</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<BulkResult> Results { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of errors from the bulk operation.
         /// </summary>
         /// <value>The number of errors from the bulk operation.</value>
         [DataMember(Name="errorCount", EmitDefaultValue=false)]
         public int? ErrorCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// An index of where the errors are in the listing.
         /// </summary>
         /// <value>An index of where the errors are in the listing.</value>
         [DataMember(Name="errorIndexes", EmitDefaultValue=false)]
         public List<int?> ErrorIndexes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BulkCallbackPatchResponse {\n");
-            
+
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("  ErrorCount: ").Append(ErrorCount).Append("\n");
             sb.Append("  ErrorIndexes: ").Append(ErrorIndexes).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
+
                 if (this.ErrorCount != null)
                     hash = hash * 59 + this.ErrorCount.GetHashCode();
-                
+
                 if (this.ErrorIndexes != null)
                     hash = hash * 59 + this.ErrorIndexes.GetHashCode();
-                
+
                 return hash;
             }
         }

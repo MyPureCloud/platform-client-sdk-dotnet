@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Response :  IEquatable<Response>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The interaction type for this response.
         /// </summary>
@@ -74,16 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "twitter")]
             Twitter
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The response type represented by the response.
         /// </summary>
@@ -117,68 +84,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CampaignEmailTemplate")]
             Campaignemailtemplate
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The interaction type for this response.
         /// </summary>
         /// <value>The interaction type for this response.</value>
         [DataMember(Name="interactionType", EmitDefaultValue=false)]
         public InteractionTypeEnum? InteractionType { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The response type represented by the response.
         /// </summary>
         /// <value>The response type represented by the response.</value>
         [DataMember(Name="responseType", EmitDefaultValue=false)]
         public ResponseTypeEnum? ResponseType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Response" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Response() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Response" /> class.
         /// </summary>
@@ -207,118 +130,118 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version number required for updates.
         /// </summary>
         /// <value>Version number required for updates.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// One or more libraries response is associated with.
         /// </summary>
         /// <value>One or more libraries response is associated with.</value>
         [DataMember(Name="libraries", EmitDefaultValue=false)]
         public List<DomainEntityRef> Libraries { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// One or more texts associated with the response.
         /// </summary>
         /// <value>One or more texts associated with the response.</value>
         [DataMember(Name="texts", EmitDefaultValue=false)]
         public List<ResponseText> Texts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User that created the response
         /// </summary>
         /// <value>User that created the response</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public User CreatedBy { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Details about any text substitutions used in the texts for this response.
         /// </summary>
         /// <value>Details about any text substitutions used in the texts for this response.</value>
         [DataMember(Name="substitutions", EmitDefaultValue=false)]
         public List<ResponseSubstitution> Substitutions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Metadata about the text substitutions in json schema format.
         /// </summary>
         /// <value>Metadata about the text substitutions in json schema format.</value>
         [DataMember(Name="substitutionsSchema", EmitDefaultValue=false)]
         public JsonSchemaDocument SubstitutionsSchema { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// An optional messaging template definition for responseType.MessagingTemplate.
         /// </summary>
         /// <value>An optional messaging template definition for responseType.MessagingTemplate.</value>
         [DataMember(Name="messagingTemplate", EmitDefaultValue=false)]
         public MessagingTemplate MessagingTemplate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Assets used in the response
         /// </summary>
         /// <value>Assets used in the response</value>
         [DataMember(Name="assets", EmitDefaultValue=false)]
         public List<AddressableEntityRef> Assets { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -327,7 +250,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Response {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
@@ -465,49 +388,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.Libraries != null)
                     hash = hash * 59 + this.Libraries.GetHashCode();
-                
+
                 if (this.Texts != null)
                     hash = hash * 59 + this.Texts.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.InteractionType != null)
                     hash = hash * 59 + this.InteractionType.GetHashCode();
-                
+
                 if (this.Substitutions != null)
                     hash = hash * 59 + this.Substitutions.GetHashCode();
-                
+
                 if (this.SubstitutionsSchema != null)
                     hash = hash * 59 + this.SubstitutionsSchema.GetHashCode();
-                
+
                 if (this.ResponseType != null)
                     hash = hash * 59 + this.ResponseType.GetHashCode();
-                
+
                 if (this.MessagingTemplate != null)
                     hash = hash * 59 + this.MessagingTemplate.GetHashCode();
-                
+
                 if (this.Assets != null)
                     hash = hash * 59 + this.Assets.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

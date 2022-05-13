@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AdditionalMessage :  IEquatable<AdditionalMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AdditionalMessage" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AdditionalMessage() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AdditionalMessage" /> class.
         /// </summary>
@@ -63,43 +40,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The body of the text message.  Maximum character counts are: SMS - 765 characters, other channels - 2000 characters.
         /// </summary>
         /// <value>The body of the text message.  Maximum character counts are: SMS - 765 characters, other channels - 2000 characters.</value>
         [DataMember(Name="textBody", EmitDefaultValue=false)]
         public string TextBody { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The media ids associated with the text message. See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
         /// </summary>
         /// <value>The media ids associated with the text message. See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.</value>
         [DataMember(Name="mediaIds", EmitDefaultValue=false)]
         public List<string> MediaIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The sticker ids associated with the text message.
         /// </summary>
         /// <value>The sticker ids associated with the text message.</value>
         [DataMember(Name="stickerIds", EmitDefaultValue=false)]
         public List<string> StickerIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The messaging template use to send a predefined canned response with the message
         /// </summary>
         /// <value>The messaging template use to send a predefined canned response with the message</value>
         [DataMember(Name="messagingTemplate", EmitDefaultValue=false)]
         public MessagingTemplateRequest MessagingTemplate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AdditionalMessage {\n");
-            
+
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
             sb.Append("  MediaIds: ").Append(MediaIds).Append("\n");
             sb.Append("  StickerIds: ").Append(StickerIds).Append("\n");
@@ -186,19 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
-                
+
                 if (this.MediaIds != null)
                     hash = hash * 59 + this.MediaIds.GetHashCode();
-                
+
                 if (this.StickerIds != null)
                     hash = hash * 59 + this.StickerIds.GetHashCode();
-                
+
                 if (this.MessagingTemplate != null)
                     hash = hash * 59 + this.MessagingTemplate.GetHashCode();
-                
+
                 return hash;
             }
         }

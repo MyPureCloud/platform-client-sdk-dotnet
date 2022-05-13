@@ -18,26 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AdherenceExplanationNotification :  IEquatable<AdherenceExplanationNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the adherence explanation
         /// </summary>
@@ -71,10 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Denied")]
             Denied
         }
-        
-        
-        
-        
         /// <summary>
         /// The type of the adherence explanation
         /// </summary>
@@ -96,51 +72,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Late")]
             Late
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the adherence explanation
         /// </summary>
         /// <value>The status of the adherence explanation</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
         /// <summary>
         /// The type of the adherence explanation
         /// </summary>
         /// <value>The type of the adherence explanation</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AdherenceExplanationNotification" /> class.
         /// </summary>
@@ -165,83 +108,83 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The agent for whom the adherence explanation applies
         /// </summary>
         /// <value>The agent for whom the adherence explanation applies</value>
         [DataMember(Name="agent", EmitDefaultValue=false)]
         public UserReference Agent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The management unit to which the agent belonged at the time the adherence explanation was submitted
         /// </summary>
         /// <value>The management unit to which the agent belonged at the time the adherence explanation was submitted</value>
         [DataMember(Name="managementUnit", EmitDefaultValue=false)]
         public ManagementUnitReference ManagementUnit { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The business unit to which the agent belonged at the time the adherence explanation was submitted
         /// </summary>
         /// <value>The business unit to which the agent belonged at the time the adherence explanation was submitted</value>
         [DataMember(Name="businessUnit", EmitDefaultValue=false)]
         public BusinessUnitReference BusinessUnit { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The start date of the adherence explanation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The start date of the adherence explanation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The length of the adherence explanation in minutes
         /// </summary>
         /// <value>The length of the adherence explanation in minutes</value>
         [DataMember(Name="lengthMinutes", EmitDefaultValue=false)]
         public int? LengthMinutes { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Notes about the adherence explanation
         /// </summary>
         /// <value>Notes about the adherence explanation</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -250,7 +193,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AdherenceExplanationNotification {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Agent: ").Append(Agent).Append("\n");
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
@@ -364,37 +307,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();
-                
+
                 if (this.ManagementUnit != null)
                     hash = hash * 59 + this.ManagementUnit.GetHashCode();
-                
+
                 if (this.BusinessUnit != null)
                     hash = hash * 59 + this.BusinessUnit.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.LengthMinutes != null)
                     hash = hash * 59 + this.LengthMinutes.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

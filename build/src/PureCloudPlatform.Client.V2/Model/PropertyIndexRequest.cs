@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PropertyIndexRequest :  IEquatable<PropertyIndexRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PropertyIndexRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PropertyIndexRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PropertyIndexRequest" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Attach properties to a segment in the indicated session
         /// </summary>
         /// <value>Attach properties to a segment in the indicated session</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Attach properties to a segment covering a specific point in time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Attach properties to a segment covering a specific point in time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="targetDate", EmitDefaultValue=false)]
         public DateTime? TargetDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of properties to index
         /// </summary>
         /// <value>The list of properties to index</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public List<AnalyticsProperty> Properties { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PropertyIndexRequest {\n");
-            
+
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  TargetDate: ").Append(TargetDate).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
-                
+
                 if (this.TargetDate != null)
                     hash = hash * 59 + this.TargetDate.GetHashCode();
-                
+
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
-                
+
                 return hash;
             }
         }

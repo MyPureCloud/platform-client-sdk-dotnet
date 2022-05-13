@@ -402,6 +402,8 @@ Gets a list of Agent Activities
 
 Each item on the list shows one agent's evaluation activity comprised of the number of evaluations and the highest, average, and lowest standard and critical scores, as well as a sub list showing the number and average score of evaluations for each evaluator for that agent.  evaluatorUserId, startTime, and endTime are all filtering criteria. If specified, the only evaluations used to compile the agent activity response will be ones that match the filtering criteria. agentUserId, name, group, and agentTeamId are all agent selection criteria. criteria.  If one or more agent selection criteria are specified, then the returned activity will include users that match the criteria even if those users did not have any agent activity or evaluations that do not match any filtering criteria.  If no agent selection criteria are specified but an evaluatorUserId is, then the returned activity will be only for those agents that had evaluations where the evaluator is the evaluatorUserId.  If no agent selection criteria are specified and no evaluatorUserId is specified, then the returned activity will be for all users
 
+
+
 Requires ANY permissions: 
 
 * quality:evaluation:view
@@ -911,6 +913,8 @@ Queries Evaluations and returns a paged list
 
 Query params must include one of conversationId, evaluatorUserId, or agentUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
 
+
+
 Requires ANY permissions: 
 
 * quality:evaluation:view
@@ -1402,7 +1406,7 @@ namespace Example
             var formId = formId_example;  // string | Form ID
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
 
             try
             { 
@@ -1427,7 +1431,7 @@ namespace Example
 | **formId** | **string**| Form ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
 {: class="table table-striped"}
 
 ### Return type
@@ -3511,6 +3515,8 @@ Update an evaluation
 
 The quality:evaluation:edit permission allows modification of most fields, while the quality:evaluation:editScore permission allows an evaluator to change just the question scores, and the quality:evaluation:editAgentSignoff permission allows an agent to change the agent comments and sign off on the evaluation.
 
+
+
 Requires ANY permissions: 
 
 * quality:evaluation:edit
@@ -3777,7 +3783,7 @@ namespace Example
 
 <a name="putqualitysurveysscorable"></a>
 
-## [**ScorableSurvey**](ScorableSurvey.html) PutQualitySurveysScorable (ScorableSurvey body, string customerSurveyUrl)
+## [**ScorableSurvey**](ScorableSurvey.html) PutQualitySurveysScorable (string customerSurveyUrl, ScorableSurvey body)
 
 
 
@@ -3804,13 +3810,13 @@ namespace Example
         { 
 
             var apiInstance = new QualityApi();
-            var body = new ScorableSurvey(); // ScorableSurvey | survey
             var customerSurveyUrl = customerSurveyUrl_example;  // string | customerSurveyUrl
+            var body = new ScorableSurvey(); // ScorableSurvey | survey
 
             try
             { 
                 // Update a survey as an end-customer, for the purposes of scoring it.
-                ScorableSurvey result = apiInstance.PutQualitySurveysScorable(body, customerSurveyUrl);
+                ScorableSurvey result = apiInstance.PutQualitySurveysScorable(customerSurveyUrl, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3827,8 +3833,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ScorableSurvey**](ScorableSurvey.html)| survey |  |
 | **customerSurveyUrl** | **string**| customerSurveyUrl |  |
+| **body** | [**ScorableSurvey**](ScorableSurvey.html)| survey |  |
 {: class="table table-striped"}
 
 ### Return type

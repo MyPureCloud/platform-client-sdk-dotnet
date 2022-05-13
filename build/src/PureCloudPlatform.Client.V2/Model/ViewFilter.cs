@@ -18,10 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ViewFilter :  IEquatable<ViewFilter>
     {
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaTypes
         /// </summary>
@@ -90,27 +86,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "voice")]
             Voice
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Directions
         /// </summary>
@@ -137,12 +112,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets OriginatingDirections
         /// </summary>
@@ -169,102 +138,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MessageTypes
         /// </summary>
@@ -327,81 +200,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "instagram")]
             Instagram
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets FlowOutcomeValues
         /// </summary>
@@ -428,12 +226,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILURE")]
             Failure
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets FlowDestinationTypes
         /// </summary>
@@ -508,12 +300,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "RETURN_TO_AGENT")]
             ReturnToAgent
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets FlowDisconnectReasons
         /// </summary>
@@ -546,12 +332,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DISCONNECT")]
             Disconnect
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets FlowTypes
         /// </summary>
@@ -668,12 +448,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "workitem")]
             Workitem
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets FlowEntryTypes
         /// </summary>
@@ -718,54 +492,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets UsedRoutingTypes
         /// </summary>
@@ -822,12 +548,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Standard")]
             Standard
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets RequestedRoutingTypes
         /// </summary>
@@ -884,21 +604,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Standard")]
             Standard
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ParticipantPurposes
         /// </summary>
@@ -925,30 +630,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "external")]
             External
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets JourneyActionMapTypes
         /// </summary>
@@ -999,12 +680,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "openAction")]
             Openaction
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets DevelopmentRoleList
         /// </summary>
@@ -1037,12 +712,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Attendee")]
             Attendee
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets DevelopmentTypeList
         /// </summary>
@@ -1081,12 +750,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AssessedContent")]
             Assessedcontent
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets DevelopmentStatusList
         /// </summary>
@@ -1137,48 +800,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NotCompleted")]
             Notcompleted
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets BotMessageTypes
         /// </summary>
@@ -1283,12 +904,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Other")]
             Other
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets BotProviderList
         /// </summary>
@@ -1333,12 +948,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Nuance")]
             Nuance
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets BotProductList
         /// </summary>
@@ -1425,12 +1034,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "MicrosoftSttBotFlow")]
             Microsoftsttbotflow
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets BotRecognitionFailureReasonList
         /// </summary>
@@ -1481,21 +1084,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "MaxWrongMatch")]
             Maxwrongmatch
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets BotResultList
         /// </summary>
@@ -1570,12 +1158,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DisconnectRecognitionFailure")]
             Disconnectrecognitionfailure
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets BlockedReasons
         /// </summary>
@@ -1638,21 +1220,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NoAvailableAgents")]
             Noavailableagents
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets EmailDeliveryStatusList
         /// </summary>
@@ -1709,360 +1276,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Sent")]
             Sent
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewFilter" /> class.
         /// </summary>
@@ -2145,7 +1358,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LocationIds">The location Ids used to filter the view.</param>
         /// <param name="FlowOutTypes">A list of flow out types.</param>
         /// <param name="ProviderList">A list of providers.</param>
-        /// <param name="CallbackNumberList">A list of callback numbers or substrings of numbers (ex: [\&quot;317\&quot;, \&quot;13172222222\&quot;]).</param>
+        /// <param name="CallbackNumberList">A list of callback numbers or substrings of numbers (ex: [\"317\", \"13172222222\"]).</param>
         /// <param name="CallbackInterval">An interval of time to filter for scheduled callbacks. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         /// <param name="UsedRoutingTypes">A list of routing types used.</param>
         /// <param name="RequestedRoutingTypes">A list of routing types requested.</param>
@@ -2357,1294 +1570,1294 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The media types are used to filter the view
         /// </summary>
         /// <value>The media types are used to filter the view</value>
         [DataMember(Name="mediaTypes", EmitDefaultValue=false)]
         public List<MediaTypesEnum> MediaTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The queue ids are used to filter the view
         /// </summary>
         /// <value>The queue ids are used to filter the view</value>
         [DataMember(Name="queueIds", EmitDefaultValue=false)]
         public List<string> QueueIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The skill ids are used to filter the view
         /// </summary>
         /// <value>The skill ids are used to filter the view</value>
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
         public List<string> SkillIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The skill groups used to filter the view
         /// </summary>
         /// <value>The skill groups used to filter the view</value>
         [DataMember(Name="skillGroups", EmitDefaultValue=false)]
         public List<string> SkillGroups { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The language ids are used to filter the view
         /// </summary>
         /// <value>The language ids are used to filter the view</value>
         [DataMember(Name="languageIds", EmitDefaultValue=false)]
         public List<string> LanguageIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The language groups used to filter the view
         /// </summary>
         /// <value>The language groups used to filter the view</value>
         [DataMember(Name="languageGroups", EmitDefaultValue=false)]
         public List<string> LanguageGroups { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The directions are used to filter the view
         /// </summary>
         /// <value>The directions are used to filter the view</value>
         [DataMember(Name="directions", EmitDefaultValue=false)]
         public List<DirectionsEnum> Directions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of orginating directions used to filter the view
         /// </summary>
         /// <value>The list of orginating directions used to filter the view</value>
         [DataMember(Name="originatingDirections", EmitDefaultValue=false)]
         public List<OriginatingDirectionsEnum> OriginatingDirections { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The wrap up codes are used to filter the view
         /// </summary>
         /// <value>The wrap up codes are used to filter the view</value>
         [DataMember(Name="wrapUpCodes", EmitDefaultValue=false)]
         public List<string> WrapUpCodes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The dnis list is used to filter the view
         /// </summary>
         /// <value>The dnis list is used to filter the view</value>
         [DataMember(Name="dnisList", EmitDefaultValue=false)]
         public List<string> DnisList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of session dnis used to filter the view
         /// </summary>
         /// <value>The list of session dnis used to filter the view</value>
         [DataMember(Name="sessionDnisList", EmitDefaultValue=false)]
         public List<string> SessionDnisList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user ids are used to fetch associated queues for the view
         /// </summary>
         /// <value>The user ids are used to fetch associated queues for the view</value>
         [DataMember(Name="filterQueuesByUserIds", EmitDefaultValue=false)]
         public List<string> FilterQueuesByUserIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The queue ids are used to fetch associated users for the view
         /// </summary>
         /// <value>The queue ids are used to fetch associated users for the view</value>
         [DataMember(Name="filterUsersByQueueIds", EmitDefaultValue=false)]
         public List<string> FilterUsersByQueueIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user ids are used to filter the view
         /// </summary>
         /// <value>The user ids are used to filter the view</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The management unit ids are used to filter the view
         /// </summary>
         /// <value>The management unit ids are used to filter the view</value>
         [DataMember(Name="managementUnitIds", EmitDefaultValue=false)]
         public List<string> ManagementUnitIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The address To values are used to filter the view
         /// </summary>
         /// <value>The address To values are used to filter the view</value>
         [DataMember(Name="addressTos", EmitDefaultValue=false)]
         public List<string> AddressTos { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The address from values are used to filter the view
         /// </summary>
         /// <value>The address from values are used to filter the view</value>
         [DataMember(Name="addressFroms", EmitDefaultValue=false)]
         public List<string> AddressFroms { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The outbound campaign ids are used to filter the view
         /// </summary>
         /// <value>The outbound campaign ids are used to filter the view</value>
         [DataMember(Name="outboundCampaignIds", EmitDefaultValue=false)]
         public List<string> OutboundCampaignIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The outbound contact list ids are used to filter the view
         /// </summary>
         /// <value>The outbound contact list ids are used to filter the view</value>
         [DataMember(Name="outboundContactListIds", EmitDefaultValue=false)]
         public List<string> OutboundContactListIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The contact ids are used to filter the view
         /// </summary>
         /// <value>The contact ids are used to filter the view</value>
         [DataMember(Name="contactIds", EmitDefaultValue=false)]
         public List<string> ContactIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The external contact ids are used to filter the view
         /// </summary>
         /// <value>The external contact ids are used to filter the view</value>
         [DataMember(Name="externalContactIds", EmitDefaultValue=false)]
         public List<string> ExternalContactIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The external org ids are used to filter the view
         /// </summary>
         /// <value>The external org ids are used to filter the view</value>
         [DataMember(Name="externalOrgIds", EmitDefaultValue=false)]
         public List<string> ExternalOrgIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ani list ids are used to filter the view
         /// </summary>
         /// <value>The ani list ids are used to filter the view</value>
         [DataMember(Name="aniList", EmitDefaultValue=false)]
         public List<string> AniList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The durations in milliseconds used to filter the view
         /// </summary>
         /// <value>The durations in milliseconds used to filter the view</value>
         [DataMember(Name="durationsMilliseconds", EmitDefaultValue=false)]
         public List<NumericRange> DurationsMilliseconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The acd durations in milliseconds used to filter the view
         /// </summary>
         /// <value>The acd durations in milliseconds used to filter the view</value>
         [DataMember(Name="acdDurationsMilliseconds", EmitDefaultValue=false)]
         public List<NumericRange> AcdDurationsMilliseconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The talk durations in milliseconds used to filter the view
         /// </summary>
         /// <value>The talk durations in milliseconds used to filter the view</value>
         [DataMember(Name="talkDurationsMilliseconds", EmitDefaultValue=false)]
         public List<NumericRange> TalkDurationsMilliseconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The acw durations in milliseconds used to filter the view
         /// </summary>
         /// <value>The acw durations in milliseconds used to filter the view</value>
         [DataMember(Name="acwDurationsMilliseconds", EmitDefaultValue=false)]
         public List<NumericRange> AcwDurationsMilliseconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The handle durations in milliseconds used to filter the view
         /// </summary>
         /// <value>The handle durations in milliseconds used to filter the view</value>
         [DataMember(Name="handleDurationsMilliseconds", EmitDefaultValue=false)]
         public List<NumericRange> HandleDurationsMilliseconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The hold durations in milliseconds used to filter the view
         /// </summary>
         /// <value>The hold durations in milliseconds used to filter the view</value>
         [DataMember(Name="holdDurationsMilliseconds", EmitDefaultValue=false)]
         public List<NumericRange> HoldDurationsMilliseconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The abandon durations in milliseconds used to filter the view
         /// </summary>
         /// <value>The abandon durations in milliseconds used to filter the view</value>
         [DataMember(Name="abandonDurationsMilliseconds", EmitDefaultValue=false)]
         public List<NumericRange> AbandonDurationsMilliseconds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The evaluationScore is used to filter the view
         /// </summary>
         /// <value>The evaluationScore is used to filter the view</value>
         [DataMember(Name="evaluationScore", EmitDefaultValue=false)]
         public NumericRange EvaluationScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The evaluationCriticalScore is used to filter the view
         /// </summary>
         /// <value>The evaluationCriticalScore is used to filter the view</value>
         [DataMember(Name="evaluationCriticalScore", EmitDefaultValue=false)]
         public NumericRange EvaluationCriticalScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The evaluation form ids are used to filter the view
         /// </summary>
         /// <value>The evaluation form ids are used to filter the view</value>
         [DataMember(Name="evaluationFormIds", EmitDefaultValue=false)]
         public List<string> EvaluationFormIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The evaluated agent ids are used to filter the view
         /// </summary>
         /// <value>The evaluated agent ids are used to filter the view</value>
         [DataMember(Name="evaluatedAgentIds", EmitDefaultValue=false)]
         public List<string> EvaluatedAgentIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The evaluator ids are used to filter the view
         /// </summary>
         /// <value>The evaluator ids are used to filter the view</value>
         [DataMember(Name="evaluatorIds", EmitDefaultValue=false)]
         public List<string> EvaluatorIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for transfers
         /// </summary>
         /// <value>Indicates filtering for transfers</value>
         [DataMember(Name="transferred", EmitDefaultValue=false)]
         public bool? Transferred { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for abandons
         /// </summary>
         /// <value>Indicates filtering for abandons</value>
         [DataMember(Name="abandoned", EmitDefaultValue=false)]
         public bool? Abandoned { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for answered interactions
         /// </summary>
         /// <value>Indicates filtering for answered interactions</value>
         [DataMember(Name="answered", EmitDefaultValue=false)]
         public bool? Answered { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The message media types used to filter the view
         /// </summary>
         /// <value>The message media types used to filter the view</value>
         [DataMember(Name="messageTypes", EmitDefaultValue=false)]
         public List<MessageTypesEnum> MessageTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The divison Ids used to filter the view
         /// </summary>
         /// <value>The divison Ids used to filter the view</value>
         [DataMember(Name="divisionIds", EmitDefaultValue=false)]
         public List<string> DivisionIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The survey form ids used to filter the view
         /// </summary>
         /// <value>The survey form ids used to filter the view</value>
         [DataMember(Name="surveyFormIds", EmitDefaultValue=false)]
         public List<string> SurveyFormIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The survey total score used to filter the view
         /// </summary>
         /// <value>The survey total score used to filter the view</value>
         [DataMember(Name="surveyTotalScore", EmitDefaultValue=false)]
         public NumericRange SurveyTotalScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The survey NPS score used to filter the view
         /// </summary>
         /// <value>The survey NPS score used to filter the view</value>
         [DataMember(Name="surveyNpsScore", EmitDefaultValue=false)]
         public NumericRange SurveyNpsScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The desired range for mos values
         /// </summary>
         /// <value>The desired range for mos values</value>
         [DataMember(Name="mos", EmitDefaultValue=false)]
         public NumericRange Mos { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The survey question group score used to filter the view
         /// </summary>
         /// <value>The survey question group score used to filter the view</value>
         [DataMember(Name="surveyQuestionGroupScore", EmitDefaultValue=false)]
         public NumericRange SurveyQuestionGroupScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The survey promoter score used to filter the view
         /// </summary>
         /// <value>The survey promoter score used to filter the view</value>
         [DataMember(Name="surveyPromoterScore", EmitDefaultValue=false)]
         public NumericRange SurveyPromoterScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of survey form context ids used to filter the view
         /// </summary>
         /// <value>The list of survey form context ids used to filter the view</value>
         [DataMember(Name="surveyFormContextIds", EmitDefaultValue=false)]
         public List<string> SurveyFormContextIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of conversation ids used to filter the view
         /// </summary>
         /// <value>The list of conversation ids used to filter the view</value>
         [DataMember(Name="conversationIds", EmitDefaultValue=false)]
         public List<string> ConversationIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of SIP call ids used to filter the view
         /// </summary>
         /// <value>The list of SIP call ids used to filter the view</value>
         [DataMember(Name="sipCallIds", EmitDefaultValue=false)]
         public List<string> SipCallIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for ended
         /// </summary>
         /// <value>Indicates filtering for ended</value>
         [DataMember(Name="isEnded", EmitDefaultValue=false)]
         public bool? IsEnded { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for survey
         /// </summary>
         /// <value>Indicates filtering for survey</value>
         [DataMember(Name="isSurveyed", EmitDefaultValue=false)]
         public bool? IsSurveyed { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of survey score ranges used to filter the view
         /// </summary>
         /// <value>The list of survey score ranges used to filter the view</value>
         [DataMember(Name="surveyScores", EmitDefaultValue=false)]
         public List<NumericRange> SurveyScores { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of promoter score ranges used to filter the view
         /// </summary>
         /// <value>The list of promoter score ranges used to filter the view</value>
         [DataMember(Name="promoterScores", EmitDefaultValue=false)]
         public List<NumericRange> PromoterScores { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for campaign
         /// </summary>
         /// <value>Indicates filtering for campaign</value>
         [DataMember(Name="isCampaign", EmitDefaultValue=false)]
         public bool? IsCampaign { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of survey statuses used to filter the view
         /// </summary>
         /// <value>The list of survey statuses used to filter the view</value>
         [DataMember(Name="surveyStatuses", EmitDefaultValue=false)]
         public List<string> SurveyStatuses { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A grouping of conversation level filters
         /// </summary>
         /// <value>A grouping of conversation level filters</value>
         [DataMember(Name="conversationProperties", EmitDefaultValue=false)]
         public ConversationProperties ConversationProperties { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for blind transferred
         /// </summary>
         /// <value>Indicates filtering for blind transferred</value>
         [DataMember(Name="isBlindTransferred", EmitDefaultValue=false)]
         public bool? IsBlindTransferred { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for consulted
         /// </summary>
         /// <value>Indicates filtering for consulted</value>
         [DataMember(Name="isConsulted", EmitDefaultValue=false)]
         public bool? IsConsulted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for consult transferred
         /// </summary>
         /// <value>Indicates filtering for consult transferred</value>
         [DataMember(Name="isConsultTransferred", EmitDefaultValue=false)]
         public bool? IsConsultTransferred { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of remote participants used to filter the view
         /// </summary>
         /// <value>The list of remote participants used to filter the view</value>
         [DataMember(Name="remoteParticipants", EmitDefaultValue=false)]
         public List<string> RemoteParticipants { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of flow Ids
         /// </summary>
         /// <value>The list of flow Ids</value>
         [DataMember(Name="flowIds", EmitDefaultValue=false)]
         public List<string> FlowIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of outcome ids of the flow
         /// </summary>
         /// <value>A list of outcome ids of the flow</value>
         [DataMember(Name="flowOutcomeIds", EmitDefaultValue=false)]
         public List<string> FlowOutcomeIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of outcome values of the flow
         /// </summary>
         /// <value>A list of outcome values of the flow</value>
         [DataMember(Name="flowOutcomeValues", EmitDefaultValue=false)]
         public List<FlowOutcomeValuesEnum> FlowOutcomeValues { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of destination types of the flow
         /// </summary>
         /// <value>The list of destination types of the flow</value>
         [DataMember(Name="flowDestinationTypes", EmitDefaultValue=false)]
         public List<FlowDestinationTypesEnum> FlowDestinationTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of reasons for the flow to disconnect
         /// </summary>
         /// <value>The list of reasons for the flow to disconnect</value>
         [DataMember(Name="flowDisconnectReasons", EmitDefaultValue=false)]
         public List<FlowDisconnectReasonsEnum> FlowDisconnectReasons { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of types of the flow
         /// </summary>
         /// <value>A list of types of the flow</value>
         [DataMember(Name="flowTypes", EmitDefaultValue=false)]
         public List<FlowTypesEnum> FlowTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of types of the flow entry
         /// </summary>
         /// <value>A list of types of the flow entry</value>
         [DataMember(Name="flowEntryTypes", EmitDefaultValue=false)]
         public List<FlowEntryTypesEnum> FlowEntryTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of reasons of flow entry
         /// </summary>
         /// <value>A list of reasons of flow entry</value>
         [DataMember(Name="flowEntryReasons", EmitDefaultValue=false)]
         public List<string> FlowEntryReasons { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of versions of a flow
         /// </summary>
         /// <value>A list of versions of a flow</value>
         [DataMember(Name="flowVersions", EmitDefaultValue=false)]
         public List<string> FlowVersions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of directory group ids
         /// </summary>
         /// <value>A list of directory group ids</value>
         [DataMember(Name="groupIds", EmitDefaultValue=false)]
         public List<string> GroupIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for journey customer id
         /// </summary>
         /// <value>Indicates filtering for journey customer id</value>
         [DataMember(Name="hasJourneyCustomerId", EmitDefaultValue=false)]
         public bool? HasJourneyCustomerId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for Journey action map id
         /// </summary>
         /// <value>Indicates filtering for Journey action map id</value>
         [DataMember(Name="hasJourneyActionMapId", EmitDefaultValue=false)]
         public bool? HasJourneyActionMapId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for Journey visit id
         /// </summary>
         /// <value>Indicates filtering for Journey visit id</value>
         [DataMember(Name="hasJourneyVisitId", EmitDefaultValue=false)]
         public bool? HasJourneyVisitId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for presence of MMS media
         /// </summary>
         /// <value>Indicates filtering for presence of MMS media</value>
         [DataMember(Name="hasMedia", EmitDefaultValue=false)]
         public bool? HasMedia { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The role Ids used to filter the view
         /// </summary>
         /// <value>The role Ids used to filter the view</value>
         [DataMember(Name="roleIds", EmitDefaultValue=false)]
         public List<string> RoleIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The report to user IDs used to filter the view
         /// </summary>
         /// <value>The report to user IDs used to filter the view</value>
         [DataMember(Name="reportsTos", EmitDefaultValue=false)]
         public List<string> ReportsTos { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The location Ids used to filter the view
         /// </summary>
         /// <value>The location Ids used to filter the view</value>
         [DataMember(Name="locationIds", EmitDefaultValue=false)]
         public List<string> LocationIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of flow out types
         /// </summary>
         /// <value>A list of flow out types</value>
         [DataMember(Name="flowOutTypes", EmitDefaultValue=false)]
         public List<string> FlowOutTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of providers
         /// </summary>
         /// <value>A list of providers</value>
         [DataMember(Name="providerList", EmitDefaultValue=false)]
         public List<string> ProviderList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// A list of callback numbers or substrings of numbers (ex: [\&quot;317\&quot;, \&quot;13172222222\&quot;])
+        /// A list of callback numbers or substrings of numbers (ex: [\"317\", \"13172222222\"])
         /// </summary>
-        /// <value>A list of callback numbers or substrings of numbers (ex: [\&quot;317\&quot;, \&quot;13172222222\&quot;])</value>
+        /// <value>A list of callback numbers or substrings of numbers (ex: [\"317\", \"13172222222\"])</value>
         [DataMember(Name="callbackNumberList", EmitDefaultValue=false)]
         public List<string> CallbackNumberList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// An interval of time to filter for scheduled callbacks. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
         /// <value>An interval of time to filter for scheduled callbacks. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="callbackInterval", EmitDefaultValue=false)]
         public string CallbackInterval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of routing types used
         /// </summary>
         /// <value>A list of routing types used</value>
         [DataMember(Name="usedRoutingTypes", EmitDefaultValue=false)]
         public List<UsedRoutingTypesEnum> UsedRoutingTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of routing types requested
         /// </summary>
         /// <value>A list of routing types requested</value>
         [DataMember(Name="requestedRoutingTypes", EmitDefaultValue=false)]
         public List<RequestedRoutingTypesEnum> RequestedRoutingTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for agent assist id
         /// </summary>
         /// <value>Indicates filtering for agent assist id</value>
         [DataMember(Name="hasAgentAssistId", EmitDefaultValue=false)]
         public bool? HasAgentAssistId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of transcript contents requested
         /// </summary>
         /// <value>A list of transcript contents requested</value>
         [DataMember(Name="transcripts", EmitDefaultValue=false)]
         public List<Transcripts> Transcripts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of transcript languages requested
         /// </summary>
         /// <value>A list of transcript languages requested</value>
         [DataMember(Name="transcriptLanguages", EmitDefaultValue=false)]
         public List<string> TranscriptLanguages { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of participant purpose requested
         /// </summary>
         /// <value>A list of participant purpose requested</value>
         [DataMember(Name="participantPurposes", EmitDefaultValue=false)]
         public List<ParticipantPurposesEnum> ParticipantPurposes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for first queue data
         /// </summary>
         /// <value>Indicates filtering for first queue data</value>
         [DataMember(Name="showFirstQueue", EmitDefaultValue=false)]
         public bool? ShowFirstQueue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The team ids used to filter the view data
         /// </summary>
         /// <value>The team ids used to filter the view data</value>
         [DataMember(Name="teamIds", EmitDefaultValue=false)]
         public List<string> TeamIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The team ids are used to fetch associated users for the view
         /// </summary>
         /// <value>The team ids are used to fetch associated users for the view</value>
         [DataMember(Name="filterUsersByTeamIds", EmitDefaultValue=false)]
         public List<string> FilterUsersByTeamIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The journey action map ids are used to fetch action maps for the associated view
         /// </summary>
         /// <value>The journey action map ids are used to fetch action maps for the associated view</value>
         [DataMember(Name="journeyActionMapIds", EmitDefaultValue=false)]
         public List<string> JourneyActionMapIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The journey outcome ids are used to fetch outcomes for the associated view
         /// </summary>
         /// <value>The journey outcome ids are used to fetch outcomes for the associated view</value>
         [DataMember(Name="journeyOutcomeIds", EmitDefaultValue=false)]
         public List<string> JourneyOutcomeIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The journey segment ids are used to fetch segments for the associated view
         /// </summary>
         /// <value>The journey segment ids are used to fetch segments for the associated view</value>
         [DataMember(Name="journeySegmentIds", EmitDefaultValue=false)]
         public List<string> JourneySegmentIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The journey action map types are used to filter action map data for the associated view
         /// </summary>
         /// <value>The journey action map types are used to filter action map data for the associated view</value>
         [DataMember(Name="journeyActionMapTypes", EmitDefaultValue=false)]
         public List<JourneyActionMapTypesEnum> JourneyActionMapTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of development roles used to filter agent development view
         /// </summary>
         /// <value>The list of development roles used to filter agent development view</value>
         [DataMember(Name="developmentRoleList", EmitDefaultValue=false)]
         public List<DevelopmentRoleListEnum> DevelopmentRoleList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of development types used to filter agent development view
         /// </summary>
         /// <value>The list of development types used to filter agent development view</value>
         [DataMember(Name="developmentTypeList", EmitDefaultValue=false)]
         public List<DevelopmentTypeListEnum> DevelopmentTypeList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of development status used to filter agent development view
         /// </summary>
         /// <value>The list of development status used to filter agent development view</value>
         [DataMember(Name="developmentStatusList", EmitDefaultValue=false)]
         public List<DevelopmentStatusListEnum> DevelopmentStatusList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of development moduleIds used to filter agent development view
         /// </summary>
         /// <value>The list of development moduleIds used to filter agent development view</value>
         [DataMember(Name="developmentModuleIds", EmitDefaultValue=false)]
         public List<string> DevelopmentModuleIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for development activities
         /// </summary>
         /// <value>Indicates filtering for development activities</value>
         [DataMember(Name="developmentActivityOverdue", EmitDefaultValue=false)]
         public bool? DevelopmentActivityOverdue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The customer sentiment score used to filter the view
         /// </summary>
         /// <value>The customer sentiment score used to filter the view</value>
         [DataMember(Name="customerSentimentScore", EmitDefaultValue=false)]
         public NumericRange CustomerSentimentScore { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The customer sentiment trend used to filter the view
         /// </summary>
         /// <value>The customer sentiment trend used to filter the view</value>
         [DataMember(Name="customerSentimentTrend", EmitDefaultValue=false)]
         public NumericRange CustomerSentimentTrend { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of transfer targets used to filter flow data
         /// </summary>
         /// <value>The list of transfer targets used to filter flow data</value>
         [DataMember(Name="flowTransferTargets", EmitDefaultValue=false)]
         public List<string> FlowTransferTargets { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filter for development name
         /// </summary>
         /// <value>Filter for development name</value>
         [DataMember(Name="developmentName", EmitDefaultValue=false)]
         public string DevelopmentName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Represents the topics detected in the transcript
         /// </summary>
         /// <value>Represents the topics detected in the transcript</value>
         [DataMember(Name="topicIds", EmitDefaultValue=false)]
         public List<string> TopicIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of external Tags used to filter conversation data
         /// </summary>
         /// <value>The list of external Tags used to filter conversation data</value>
         [DataMember(Name="externalTags", EmitDefaultValue=false)]
         public List<string> ExternalTags { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for not responding users
         /// </summary>
         /// <value>Indicates filtering for not responding users</value>
         [DataMember(Name="isNotResponding", EmitDefaultValue=false)]
         public bool? IsNotResponding { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for the authenticated chat
         /// </summary>
         /// <value>Indicates filtering for the authenticated chat</value>
         [DataMember(Name="isAuthenticated", EmitDefaultValue=false)]
         public bool? IsAuthenticated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of bot IDs used to filter bot views
         /// </summary>
         /// <value>The list of bot IDs used to filter bot views</value>
         [DataMember(Name="botIds", EmitDefaultValue=false)]
         public List<string> BotIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of bot versions used to filter bot views
         /// </summary>
         /// <value>The list of bot versions used to filter bot views</value>
         [DataMember(Name="botVersions", EmitDefaultValue=false)]
         public List<string> BotVersions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of bot message types used to filter bot views
         /// </summary>
         /// <value>The list of bot message types used to filter bot views</value>
         [DataMember(Name="botMessageTypes", EmitDefaultValue=false)]
         public List<BotMessageTypesEnum> BotMessageTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of bot providers used to filter bot views
         /// </summary>
         /// <value>The list of bot providers used to filter bot views</value>
         [DataMember(Name="botProviderList", EmitDefaultValue=false)]
         public List<BotProviderListEnum> BotProviderList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of bot products used to filter bot views
         /// </summary>
         /// <value>The list of bot products used to filter bot views</value>
         [DataMember(Name="botProductList", EmitDefaultValue=false)]
         public List<BotProductListEnum> BotProductList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of bot recognition failure reasons used to filter bot views
         /// </summary>
         /// <value>The list of bot recognition failure reasons used to filter bot views</value>
         [DataMember(Name="botRecognitionFailureReasonList", EmitDefaultValue=false)]
         public List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of bot intents used to filter bot views
         /// </summary>
         /// <value>The list of bot intents used to filter bot views</value>
         [DataMember(Name="botIntentList", EmitDefaultValue=false)]
         public List<string> BotIntentList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of bot final intents used to filter bot views
         /// </summary>
         /// <value>The list of bot final intents used to filter bot views</value>
         [DataMember(Name="botFinalIntentList", EmitDefaultValue=false)]
         public List<string> BotFinalIntentList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of bot slots used to filter bot views
         /// </summary>
         /// <value>The list of bot slots used to filter bot views</value>
         [DataMember(Name="botSlotList", EmitDefaultValue=false)]
         public List<string> BotSlotList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of bot results used to filter bot views
         /// </summary>
         /// <value>The list of bot results used to filter bot views</value>
         [DataMember(Name="botResultList", EmitDefaultValue=false)]
         public List<BotResultListEnum> BotResultList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of blocked reason used to filter action map constraints views
         /// </summary>
         /// <value>The list of blocked reason used to filter action map constraints views</value>
         [DataMember(Name="blockedReasons", EmitDefaultValue=false)]
         public List<BlockedReasonsEnum> BlockedReasons { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for recorded
         /// </summary>
         /// <value>Indicates filtering for recorded</value>
         [DataMember(Name="isRecorded", EmitDefaultValue=false)]
         public bool? IsRecorded { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for evaluation
         /// </summary>
         /// <value>Indicates filtering for evaluation</value>
         [DataMember(Name="hasEvaluation", EmitDefaultValue=false)]
         public bool? HasEvaluation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for scored evaluation
         /// </summary>
         /// <value>Indicates filtering for scored evaluation</value>
         [DataMember(Name="hasScoredEvaluation", EmitDefaultValue=false)]
         public bool? HasScoredEvaluation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of email delivery statuses used to filter views
         /// </summary>
         /// <value>The list of email delivery statuses used to filter views</value>
         [DataMember(Name="emailDeliveryStatusList", EmitDefaultValue=false)]
         public List<EmailDeliveryStatusListEnum> EmailDeliveryStatusList { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates filtering for agent owned callback interactions
         /// </summary>
         /// <value>Indicates filtering for agent owned callback interactions</value>
         [DataMember(Name="isAgentOwnedCallback", EmitDefaultValue=false)]
         public bool? IsAgentOwnedCallback { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of callback owners used to filter interactions
         /// </summary>
         /// <value>The list of callback owners used to filter interactions</value>
         [DataMember(Name="agentCallbackOwnerIds", EmitDefaultValue=false)]
         public List<string> AgentCallbackOwnerIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of transcript topics requested in filter
         /// </summary>
         /// <value>The list of transcript topics requested in filter</value>
         [DataMember(Name="transcriptTopics", EmitDefaultValue=false)]
         public List<TranscriptTopics> TranscriptTopics { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of frequency cap reasons to filter offer constraints
         /// </summary>
         /// <value>The list of frequency cap reasons to filter offer constraints</value>
         [DataMember(Name="journeyFrequencyCapReasons", EmitDefaultValue=false)]
         public List<string> JourneyFrequencyCapReasons { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of blocking action maps to filter offer constraints
         /// </summary>
         /// <value>The list of blocking action maps to filter offer constraints</value>
         [DataMember(Name="journeyBlockingActionMapIds", EmitDefaultValue=false)]
         public List<string> JourneyBlockingActionMapIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of action targets to filter offer constraints
         /// </summary>
         /// <value>The list of action targets to filter offer constraints</value>
         [DataMember(Name="journeyActionTargetIds", EmitDefaultValue=false)]
         public List<string> JourneyActionTargetIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of blocking schedule groups to filter offer constraints
         /// </summary>
         /// <value>The list of blocking schedule groups to filter offer constraints</value>
         [DataMember(Name="journeyBlockingScheduleGroupIds", EmitDefaultValue=false)]
         public List<string> JourneyBlockingScheduleGroupIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of emergency schedule groups to filter offer constraints
         /// </summary>
         /// <value>The list of emergency schedule groups to filter offer constraints</value>
         [DataMember(Name="journeyBlockingEmergencyScheduleGroupIds", EmitDefaultValue=false)]
         public List<string> JourneyBlockingEmergencyScheduleGroupIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of url equal conditions to filter offer constraints
         /// </summary>
         /// <value>The list of url equal conditions to filter offer constraints</value>
         [DataMember(Name="journeyUrlEqualConditions", EmitDefaultValue=false)]
         public List<string> JourneyUrlEqualConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of url not equal conditions to filter offer constraints
         /// </summary>
         /// <value>The list of url not equal conditions to filter offer constraints</value>
         [DataMember(Name="journeyUrlNotEqualConditions", EmitDefaultValue=false)]
         public List<string> JourneyUrlNotEqualConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of url starts with conditions to filter offer constraints
         /// </summary>
         /// <value>The list of url starts with conditions to filter offer constraints</value>
         [DataMember(Name="journeyUrlStartsWithConditions", EmitDefaultValue=false)]
         public List<string> JourneyUrlStartsWithConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of url ends with conditions to filter offer constraints
         /// </summary>
         /// <value>The list of url ends with conditions to filter offer constraints</value>
         [DataMember(Name="journeyUrlEndsWithConditions", EmitDefaultValue=false)]
         public List<string> JourneyUrlEndsWithConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of url contains any conditions to filter offer constraints
         /// </summary>
         /// <value>The list of url contains any conditions to filter offer constraints</value>
         [DataMember(Name="journeyUrlContainsAnyConditions", EmitDefaultValue=false)]
         public List<string> JourneyUrlContainsAnyConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of url not contains any conditions to filter offer constraints
         /// </summary>
         /// <value>The list of url not contains any conditions to filter offer constraints</value>
         [DataMember(Name="journeyUrlNotContainsAnyConditions", EmitDefaultValue=false)]
         public List<string> JourneyUrlNotContainsAnyConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of url contains all conditions to filter offer constraints
         /// </summary>
         /// <value>The list of url contains all conditions to filter offer constraints</value>
         [DataMember(Name="journeyUrlContainsAllConditions", EmitDefaultValue=false)]
         public List<string> JourneyUrlContainsAllConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of url not contains all conditions to filter offer constraints
         /// </summary>
         /// <value>The list of url not contains all conditions to filter offer constraints</value>
         [DataMember(Name="journeyUrlNotContainsAllConditions", EmitDefaultValue=false)]
         public List<string> JourneyUrlNotContainsAllConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of flow milestones to filter exports
         /// </summary>
         /// <value>The list of flow milestones to filter exports</value>
         [DataMember(Name="flowMilestoneIds", EmitDefaultValue=false)]
         public List<string> FlowMilestoneIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filter to indicate if Agent passed assessment or not
         /// </summary>
         /// <value>Filter to indicate if Agent passed assessment or not</value>
         [DataMember(Name="isAssessmentPassed", EmitDefaultValue=false)]
         public bool? IsAssessmentPassed { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list to filter based on Brands (Bot/User/Agent) or End User who initiated the first message in the conversation
         /// </summary>
         /// <value>The list to filter based on Brands (Bot/User/Agent) or End User who initiated the first message in the conversation</value>
         [DataMember(Name="conversationInitiators", EmitDefaultValue=false)]
         public List<string> ConversationInitiators { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if the customer has participated in an initiated conversation
         /// </summary>
         /// <value>Indicates if the customer has participated in an initiated conversation</value>
         [DataMember(Name="hasCustomerParticipated", EmitDefaultValue=false)]
         public bool? HasCustomerParticipated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filter to indicate if interaction was ACD or non-ACD
         /// </summary>
         /// <value>Filter to indicate if interaction was ACD or non-ACD</value>
         [DataMember(Name="isAcdInteraction", EmitDefaultValue=false)]
         public bool? IsAcdInteraction { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -3653,7 +2866,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ViewFilter {\n");
-            
+
             sb.Append("  MediaTypes: ").Append(MediaTypes).Append("\n");
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
@@ -4565,436 +3778,435 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MediaTypes != null)
                     hash = hash * 59 + this.MediaTypes.GetHashCode();
-                
+
                 if (this.QueueIds != null)
                     hash = hash * 59 + this.QueueIds.GetHashCode();
-                
+
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();
-                
+
                 if (this.SkillGroups != null)
                     hash = hash * 59 + this.SkillGroups.GetHashCode();
-                
+
                 if (this.LanguageIds != null)
                     hash = hash * 59 + this.LanguageIds.GetHashCode();
-                
+
                 if (this.LanguageGroups != null)
                     hash = hash * 59 + this.LanguageGroups.GetHashCode();
-                
+
                 if (this.Directions != null)
                     hash = hash * 59 + this.Directions.GetHashCode();
-                
+
                 if (this.OriginatingDirections != null)
                     hash = hash * 59 + this.OriginatingDirections.GetHashCode();
-                
+
                 if (this.WrapUpCodes != null)
                     hash = hash * 59 + this.WrapUpCodes.GetHashCode();
-                
+
                 if (this.DnisList != null)
                     hash = hash * 59 + this.DnisList.GetHashCode();
-                
+
                 if (this.SessionDnisList != null)
                     hash = hash * 59 + this.SessionDnisList.GetHashCode();
-                
+
                 if (this.FilterQueuesByUserIds != null)
                     hash = hash * 59 + this.FilterQueuesByUserIds.GetHashCode();
-                
+
                 if (this.FilterUsersByQueueIds != null)
                     hash = hash * 59 + this.FilterUsersByQueueIds.GetHashCode();
-                
+
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
-                
+
                 if (this.ManagementUnitIds != null)
                     hash = hash * 59 + this.ManagementUnitIds.GetHashCode();
-                
+
                 if (this.AddressTos != null)
                     hash = hash * 59 + this.AddressTos.GetHashCode();
-                
+
                 if (this.AddressFroms != null)
                     hash = hash * 59 + this.AddressFroms.GetHashCode();
-                
+
                 if (this.OutboundCampaignIds != null)
                     hash = hash * 59 + this.OutboundCampaignIds.GetHashCode();
-                
+
                 if (this.OutboundContactListIds != null)
                     hash = hash * 59 + this.OutboundContactListIds.GetHashCode();
-                
+
                 if (this.ContactIds != null)
                     hash = hash * 59 + this.ContactIds.GetHashCode();
-                
+
                 if (this.ExternalContactIds != null)
                     hash = hash * 59 + this.ExternalContactIds.GetHashCode();
-                
+
                 if (this.ExternalOrgIds != null)
                     hash = hash * 59 + this.ExternalOrgIds.GetHashCode();
-                
+
                 if (this.AniList != null)
                     hash = hash * 59 + this.AniList.GetHashCode();
-                
+
                 if (this.DurationsMilliseconds != null)
                     hash = hash * 59 + this.DurationsMilliseconds.GetHashCode();
-                
+
                 if (this.AcdDurationsMilliseconds != null)
                     hash = hash * 59 + this.AcdDurationsMilliseconds.GetHashCode();
-                
+
                 if (this.TalkDurationsMilliseconds != null)
                     hash = hash * 59 + this.TalkDurationsMilliseconds.GetHashCode();
-                
+
                 if (this.AcwDurationsMilliseconds != null)
                     hash = hash * 59 + this.AcwDurationsMilliseconds.GetHashCode();
-                
+
                 if (this.HandleDurationsMilliseconds != null)
                     hash = hash * 59 + this.HandleDurationsMilliseconds.GetHashCode();
-                
+
                 if (this.HoldDurationsMilliseconds != null)
                     hash = hash * 59 + this.HoldDurationsMilliseconds.GetHashCode();
-                
+
                 if (this.AbandonDurationsMilliseconds != null)
                     hash = hash * 59 + this.AbandonDurationsMilliseconds.GetHashCode();
-                
+
                 if (this.EvaluationScore != null)
                     hash = hash * 59 + this.EvaluationScore.GetHashCode();
-                
+
                 if (this.EvaluationCriticalScore != null)
                     hash = hash * 59 + this.EvaluationCriticalScore.GetHashCode();
-                
+
                 if (this.EvaluationFormIds != null)
                     hash = hash * 59 + this.EvaluationFormIds.GetHashCode();
-                
+
                 if (this.EvaluatedAgentIds != null)
                     hash = hash * 59 + this.EvaluatedAgentIds.GetHashCode();
-                
+
                 if (this.EvaluatorIds != null)
                     hash = hash * 59 + this.EvaluatorIds.GetHashCode();
-                
+
                 if (this.Transferred != null)
                     hash = hash * 59 + this.Transferred.GetHashCode();
-                
+
                 if (this.Abandoned != null)
                     hash = hash * 59 + this.Abandoned.GetHashCode();
-                
+
                 if (this.Answered != null)
                     hash = hash * 59 + this.Answered.GetHashCode();
-                
+
                 if (this.MessageTypes != null)
                     hash = hash * 59 + this.MessageTypes.GetHashCode();
-                
+
                 if (this.DivisionIds != null)
                     hash = hash * 59 + this.DivisionIds.GetHashCode();
-                
+
                 if (this.SurveyFormIds != null)
                     hash = hash * 59 + this.SurveyFormIds.GetHashCode();
-                
+
                 if (this.SurveyTotalScore != null)
                     hash = hash * 59 + this.SurveyTotalScore.GetHashCode();
-                
+
                 if (this.SurveyNpsScore != null)
                     hash = hash * 59 + this.SurveyNpsScore.GetHashCode();
-                
+
                 if (this.Mos != null)
                     hash = hash * 59 + this.Mos.GetHashCode();
-                
+
                 if (this.SurveyQuestionGroupScore != null)
                     hash = hash * 59 + this.SurveyQuestionGroupScore.GetHashCode();
-                
+
                 if (this.SurveyPromoterScore != null)
                     hash = hash * 59 + this.SurveyPromoterScore.GetHashCode();
-                
+
                 if (this.SurveyFormContextIds != null)
                     hash = hash * 59 + this.SurveyFormContextIds.GetHashCode();
-                
+
                 if (this.ConversationIds != null)
                     hash = hash * 59 + this.ConversationIds.GetHashCode();
-                
+
                 if (this.SipCallIds != null)
                     hash = hash * 59 + this.SipCallIds.GetHashCode();
-                
+
                 if (this.IsEnded != null)
                     hash = hash * 59 + this.IsEnded.GetHashCode();
-                
+
                 if (this.IsSurveyed != null)
                     hash = hash * 59 + this.IsSurveyed.GetHashCode();
-                
+
                 if (this.SurveyScores != null)
                     hash = hash * 59 + this.SurveyScores.GetHashCode();
-                
+
                 if (this.PromoterScores != null)
                     hash = hash * 59 + this.PromoterScores.GetHashCode();
-                
+
                 if (this.IsCampaign != null)
                     hash = hash * 59 + this.IsCampaign.GetHashCode();
-                
+
                 if (this.SurveyStatuses != null)
                     hash = hash * 59 + this.SurveyStatuses.GetHashCode();
-                
+
                 if (this.ConversationProperties != null)
                     hash = hash * 59 + this.ConversationProperties.GetHashCode();
-                
+
                 if (this.IsBlindTransferred != null)
                     hash = hash * 59 + this.IsBlindTransferred.GetHashCode();
-                
+
                 if (this.IsConsulted != null)
                     hash = hash * 59 + this.IsConsulted.GetHashCode();
-                
+
                 if (this.IsConsultTransferred != null)
                     hash = hash * 59 + this.IsConsultTransferred.GetHashCode();
-                
+
                 if (this.RemoteParticipants != null)
                     hash = hash * 59 + this.RemoteParticipants.GetHashCode();
-                
+
                 if (this.FlowIds != null)
                     hash = hash * 59 + this.FlowIds.GetHashCode();
-                
+
                 if (this.FlowOutcomeIds != null)
                     hash = hash * 59 + this.FlowOutcomeIds.GetHashCode();
-                
+
                 if (this.FlowOutcomeValues != null)
                     hash = hash * 59 + this.FlowOutcomeValues.GetHashCode();
-                
+
                 if (this.FlowDestinationTypes != null)
                     hash = hash * 59 + this.FlowDestinationTypes.GetHashCode();
-                
+
                 if (this.FlowDisconnectReasons != null)
                     hash = hash * 59 + this.FlowDisconnectReasons.GetHashCode();
-                
+
                 if (this.FlowTypes != null)
                     hash = hash * 59 + this.FlowTypes.GetHashCode();
-                
+
                 if (this.FlowEntryTypes != null)
                     hash = hash * 59 + this.FlowEntryTypes.GetHashCode();
-                
+
                 if (this.FlowEntryReasons != null)
                     hash = hash * 59 + this.FlowEntryReasons.GetHashCode();
-                
+
                 if (this.FlowVersions != null)
                     hash = hash * 59 + this.FlowVersions.GetHashCode();
-                
+
                 if (this.GroupIds != null)
                     hash = hash * 59 + this.GroupIds.GetHashCode();
-                
+
                 if (this.HasJourneyCustomerId != null)
                     hash = hash * 59 + this.HasJourneyCustomerId.GetHashCode();
-                
+
                 if (this.HasJourneyActionMapId != null)
                     hash = hash * 59 + this.HasJourneyActionMapId.GetHashCode();
-                
+
                 if (this.HasJourneyVisitId != null)
                     hash = hash * 59 + this.HasJourneyVisitId.GetHashCode();
-                
+
                 if (this.HasMedia != null)
                     hash = hash * 59 + this.HasMedia.GetHashCode();
-                
+
                 if (this.RoleIds != null)
                     hash = hash * 59 + this.RoleIds.GetHashCode();
-                
+
                 if (this.ReportsTos != null)
                     hash = hash * 59 + this.ReportsTos.GetHashCode();
-                
+
                 if (this.LocationIds != null)
                     hash = hash * 59 + this.LocationIds.GetHashCode();
-                
+
                 if (this.FlowOutTypes != null)
                     hash = hash * 59 + this.FlowOutTypes.GetHashCode();
-                
+
                 if (this.ProviderList != null)
                     hash = hash * 59 + this.ProviderList.GetHashCode();
-                
+
                 if (this.CallbackNumberList != null)
                     hash = hash * 59 + this.CallbackNumberList.GetHashCode();
-                
+
                 if (this.CallbackInterval != null)
                     hash = hash * 59 + this.CallbackInterval.GetHashCode();
-                
+
                 if (this.UsedRoutingTypes != null)
                     hash = hash * 59 + this.UsedRoutingTypes.GetHashCode();
-                
+
                 if (this.RequestedRoutingTypes != null)
                     hash = hash * 59 + this.RequestedRoutingTypes.GetHashCode();
-                
+
                 if (this.HasAgentAssistId != null)
                     hash = hash * 59 + this.HasAgentAssistId.GetHashCode();
-                
+
                 if (this.Transcripts != null)
                     hash = hash * 59 + this.Transcripts.GetHashCode();
-                
+
                 if (this.TranscriptLanguages != null)
                     hash = hash * 59 + this.TranscriptLanguages.GetHashCode();
-                
+
                 if (this.ParticipantPurposes != null)
                     hash = hash * 59 + this.ParticipantPurposes.GetHashCode();
-                
+
                 if (this.ShowFirstQueue != null)
                     hash = hash * 59 + this.ShowFirstQueue.GetHashCode();
-                
+
                 if (this.TeamIds != null)
                     hash = hash * 59 + this.TeamIds.GetHashCode();
-                
+
                 if (this.FilterUsersByTeamIds != null)
                     hash = hash * 59 + this.FilterUsersByTeamIds.GetHashCode();
-                
+
                 if (this.JourneyActionMapIds != null)
                     hash = hash * 59 + this.JourneyActionMapIds.GetHashCode();
-                
+
                 if (this.JourneyOutcomeIds != null)
                     hash = hash * 59 + this.JourneyOutcomeIds.GetHashCode();
-                
+
                 if (this.JourneySegmentIds != null)
                     hash = hash * 59 + this.JourneySegmentIds.GetHashCode();
-                
+
                 if (this.JourneyActionMapTypes != null)
                     hash = hash * 59 + this.JourneyActionMapTypes.GetHashCode();
-                
+
                 if (this.DevelopmentRoleList != null)
                     hash = hash * 59 + this.DevelopmentRoleList.GetHashCode();
-                
+
                 if (this.DevelopmentTypeList != null)
                     hash = hash * 59 + this.DevelopmentTypeList.GetHashCode();
-                
+
                 if (this.DevelopmentStatusList != null)
                     hash = hash * 59 + this.DevelopmentStatusList.GetHashCode();
-                
+
                 if (this.DevelopmentModuleIds != null)
                     hash = hash * 59 + this.DevelopmentModuleIds.GetHashCode();
-                
+
                 if (this.DevelopmentActivityOverdue != null)
                     hash = hash * 59 + this.DevelopmentActivityOverdue.GetHashCode();
-                
+
                 if (this.CustomerSentimentScore != null)
                     hash = hash * 59 + this.CustomerSentimentScore.GetHashCode();
-                
+
                 if (this.CustomerSentimentTrend != null)
                     hash = hash * 59 + this.CustomerSentimentTrend.GetHashCode();
-                
+
                 if (this.FlowTransferTargets != null)
                     hash = hash * 59 + this.FlowTransferTargets.GetHashCode();
-                
+
                 if (this.DevelopmentName != null)
                     hash = hash * 59 + this.DevelopmentName.GetHashCode();
-                
+
                 if (this.TopicIds != null)
                     hash = hash * 59 + this.TopicIds.GetHashCode();
-                
+
                 if (this.ExternalTags != null)
                     hash = hash * 59 + this.ExternalTags.GetHashCode();
-                
+
                 if (this.IsNotResponding != null)
                     hash = hash * 59 + this.IsNotResponding.GetHashCode();
-                
+
                 if (this.IsAuthenticated != null)
                     hash = hash * 59 + this.IsAuthenticated.GetHashCode();
-                
+
                 if (this.BotIds != null)
                     hash = hash * 59 + this.BotIds.GetHashCode();
-                
+
                 if (this.BotVersions != null)
                     hash = hash * 59 + this.BotVersions.GetHashCode();
-                
+
                 if (this.BotMessageTypes != null)
                     hash = hash * 59 + this.BotMessageTypes.GetHashCode();
-                
+
                 if (this.BotProviderList != null)
                     hash = hash * 59 + this.BotProviderList.GetHashCode();
-                
+
                 if (this.BotProductList != null)
                     hash = hash * 59 + this.BotProductList.GetHashCode();
-                
+
                 if (this.BotRecognitionFailureReasonList != null)
                     hash = hash * 59 + this.BotRecognitionFailureReasonList.GetHashCode();
-                
+
                 if (this.BotIntentList != null)
                     hash = hash * 59 + this.BotIntentList.GetHashCode();
-                
+
                 if (this.BotFinalIntentList != null)
                     hash = hash * 59 + this.BotFinalIntentList.GetHashCode();
-                
+
                 if (this.BotSlotList != null)
                     hash = hash * 59 + this.BotSlotList.GetHashCode();
-                
+
                 if (this.BotResultList != null)
                     hash = hash * 59 + this.BotResultList.GetHashCode();
-                
+
                 if (this.BlockedReasons != null)
                     hash = hash * 59 + this.BlockedReasons.GetHashCode();
-                
+
                 if (this.IsRecorded != null)
                     hash = hash * 59 + this.IsRecorded.GetHashCode();
-                
+
                 if (this.HasEvaluation != null)
                     hash = hash * 59 + this.HasEvaluation.GetHashCode();
-                
+
                 if (this.HasScoredEvaluation != null)
                     hash = hash * 59 + this.HasScoredEvaluation.GetHashCode();
-                
+
                 if (this.EmailDeliveryStatusList != null)
                     hash = hash * 59 + this.EmailDeliveryStatusList.GetHashCode();
-                
+
                 if (this.IsAgentOwnedCallback != null)
                     hash = hash * 59 + this.IsAgentOwnedCallback.GetHashCode();
-                
+
                 if (this.AgentCallbackOwnerIds != null)
                     hash = hash * 59 + this.AgentCallbackOwnerIds.GetHashCode();
-                
+
                 if (this.TranscriptTopics != null)
                     hash = hash * 59 + this.TranscriptTopics.GetHashCode();
-                
+
                 if (this.JourneyFrequencyCapReasons != null)
                     hash = hash * 59 + this.JourneyFrequencyCapReasons.GetHashCode();
-                
+
                 if (this.JourneyBlockingActionMapIds != null)
                     hash = hash * 59 + this.JourneyBlockingActionMapIds.GetHashCode();
-                
+
                 if (this.JourneyActionTargetIds != null)
                     hash = hash * 59 + this.JourneyActionTargetIds.GetHashCode();
-                
+
                 if (this.JourneyBlockingScheduleGroupIds != null)
                     hash = hash * 59 + this.JourneyBlockingScheduleGroupIds.GetHashCode();
-                
+
                 if (this.JourneyBlockingEmergencyScheduleGroupIds != null)
                     hash = hash * 59 + this.JourneyBlockingEmergencyScheduleGroupIds.GetHashCode();
-                
+
                 if (this.JourneyUrlEqualConditions != null)
                     hash = hash * 59 + this.JourneyUrlEqualConditions.GetHashCode();
-                
+
                 if (this.JourneyUrlNotEqualConditions != null)
                     hash = hash * 59 + this.JourneyUrlNotEqualConditions.GetHashCode();
-                
+
                 if (this.JourneyUrlStartsWithConditions != null)
                     hash = hash * 59 + this.JourneyUrlStartsWithConditions.GetHashCode();
-                
+
                 if (this.JourneyUrlEndsWithConditions != null)
                     hash = hash * 59 + this.JourneyUrlEndsWithConditions.GetHashCode();
-                
+
                 if (this.JourneyUrlContainsAnyConditions != null)
                     hash = hash * 59 + this.JourneyUrlContainsAnyConditions.GetHashCode();
-                
+
                 if (this.JourneyUrlNotContainsAnyConditions != null)
                     hash = hash * 59 + this.JourneyUrlNotContainsAnyConditions.GetHashCode();
-                
+
                 if (this.JourneyUrlContainsAllConditions != null)
                     hash = hash * 59 + this.JourneyUrlContainsAllConditions.GetHashCode();
-                
+
                 if (this.JourneyUrlNotContainsAllConditions != null)
                     hash = hash * 59 + this.JourneyUrlNotContainsAllConditions.GetHashCode();
-                
+
                 if (this.FlowMilestoneIds != null)
                     hash = hash * 59 + this.FlowMilestoneIds.GetHashCode();
-                
+
                 if (this.IsAssessmentPassed != null)
                     hash = hash * 59 + this.IsAssessmentPassed.GetHashCode();
-                
+
                 if (this.ConversationInitiators != null)
                     hash = hash * 59 + this.ConversationInitiators.GetHashCode();
-                
+
                 if (this.HasCustomerParticipated != null)
                     hash = hash * 59 + this.HasCustomerParticipated.GetHashCode();
-                
+
                 if (this.IsAcdInteraction != null)
                     hash = hash * 59 + this.IsAcdInteraction.GetHashCode();
-                
+
                 return hash;
             }
         }

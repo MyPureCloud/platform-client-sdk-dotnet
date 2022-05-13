@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PropertyChange :  IEquatable<PropertyChange>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PropertyChange" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The property that was changed
         /// </summary>
         /// <value>The property that was changed</value>
         [DataMember(Name="property", EmitDefaultValue=false)]
         public string Property { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Previous values for the property.
         /// </summary>
         /// <value>Previous values for the property.</value>
         [DataMember(Name="oldValues", EmitDefaultValue=false)]
         public List<string> OldValues { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// New values for the property.
         /// </summary>
         /// <value>New values for the property.</value>
         [DataMember(Name="newValues", EmitDefaultValue=false)]
         public List<string> NewValues { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PropertyChange {\n");
-            
+
             sb.Append("  Property: ").Append(Property).Append("\n");
             sb.Append("  OldValues: ").Append(OldValues).Append("\n");
             sb.Append("  NewValues: ").Append(NewValues).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Property != null)
                     hash = hash * 59 + this.Property.GetHashCode();
-                
+
                 if (this.OldValues != null)
                     hash = hash * 59 + this.OldValues.GetHashCode();
-                
+
                 if (this.NewValues != null)
                     hash = hash * 59 + this.NewValues.GetHashCode();
-                
+
                 return hash;
             }
         }

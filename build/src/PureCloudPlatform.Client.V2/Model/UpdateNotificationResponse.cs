@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UpdateNotificationResponse :  IEquatable<UpdateNotificationResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateNotificationResponse" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The mutableGroupId of the notification
         /// </summary>
         /// <value>The mutableGroupId of the notification</value>
         [DataMember(Name="mutableGroupId", EmitDefaultValue=false)]
         public string MutableGroupId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the notification for mapping the potentially new mutableGroupId
         /// </summary>
         /// <value>The id of the notification for mapping the potentially new mutableGroupId</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UpdateNotificationResponse {\n");
-            
+
             sb.Append("  MutableGroupId: ").Append(MutableGroupId).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MutableGroupId != null)
                     hash = hash * 59 + this.MutableGroupId.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 return hash;
             }
         }

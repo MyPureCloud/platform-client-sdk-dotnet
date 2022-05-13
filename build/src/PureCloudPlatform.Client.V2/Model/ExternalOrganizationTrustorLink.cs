@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ExternalOrganizationTrustorLink :  IEquatable<ExternalOrganizationTrustorLink>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalOrganizationTrustorLink" /> class.
         /// </summary>
@@ -55,43 +32,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The id of a PureCloud External Organization entity in the External Contacts system that will be used to represent the trustor org
         /// </summary>
         /// <value>The id of a PureCloud External Organization entity in the External Contacts system that will be used to represent the trustor org</value>
         [DataMember(Name="externalOrganizationId", EmitDefaultValue=false)]
         public string ExternalOrganizationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of a PureCloud organization that has granted trust to this PureCloud organization
         /// </summary>
         /// <value>The id of a PureCloud organization that has granted trust to this PureCloud organization</value>
         [DataMember(Name="trustorOrgId", EmitDefaultValue=false)]
         public string TrustorOrgId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for the External Organization that is linked to the trustor org
         /// </summary>
         /// <value>The URI for the External Organization that is linked to the trustor org</value>
         [DataMember(Name="externalOrganizationUri", EmitDefaultValue=false)]
         public string ExternalOrganizationUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ExternalOrganizationTrustorLink {\n");
-            
+
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  TrustorOrgId: ").Append(TrustorOrgId).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -178,19 +155,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ExternalOrganizationId != null)
                     hash = hash * 59 + this.ExternalOrganizationId.GetHashCode();
-                
+
                 if (this.TrustorOrgId != null)
                     hash = hash * 59 + this.TrustorOrgId.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.ExternalOrganizationUri != null)
                     hash = hash * 59 + this.ExternalOrganizationUri.GetHashCode();
-                
+
                 return hash;
             }
         }

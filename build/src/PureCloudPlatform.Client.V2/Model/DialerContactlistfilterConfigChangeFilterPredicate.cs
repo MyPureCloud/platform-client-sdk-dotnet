@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerContactlistfilterConfigChangeFilterPredicate :  IEquatable<DialerContactlistfilterConfigChangeFilterPredicate>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Whether a contact column is numeric or alphabetic
         /// </summary>
@@ -50,10 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "alphabetic")]
             Alphabetic
         }
-        
-        
-        
-        
         /// <summary>
         /// The comparison operator
         /// </summary>
@@ -141,106 +132,78 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "IN")]
             In
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Whether a contact column is numeric or alphabetic
         /// </summary>
         /// <value>Whether a contact column is numeric or alphabetic</value>
         [DataMember(Name="columnType", EmitDefaultValue=false)]
         public ColumnTypeEnum? ColumnType { get; set; }
-        
-        
-        
         /// <summary>
         /// The comparison operator
         /// </summary>
         /// <value>The comparison operator</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public OperatorEnum? _Operator { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public OperatorEnum? Operator { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContactlistfilterConfigChangeFilterPredicate" /> class.
         /// </summary>
         /// <param name="Column">The contact list column.</param>
         /// <param name="ColumnType">Whether a contact column is numeric or alphabetic.</param>
-        /// <param name="_Operator">The comparison operator.</param>
+        /// <param name="Operator">The comparison operator.</param>
         /// <param name="Value">The value the predicate applies to.</param>
         /// <param name="Range">Range.</param>
         /// <param name="Inverted">Whether or not to invert to result of evaluating the predicate.</param>
-        public DialerContactlistfilterConfigChangeFilterPredicate(string Column = null, ColumnTypeEnum? ColumnType = null, OperatorEnum? _Operator = null, string Value = null, DialerContactlistfilterConfigChangeRange Range = null, bool? Inverted = null)
+        public DialerContactlistfilterConfigChangeFilterPredicate(string Column = null, ColumnTypeEnum? ColumnType = null, OperatorEnum? Operator = null, string Value = null, DialerContactlistfilterConfigChangeRange Range = null, bool? Inverted = null)
         {
             this.Column = Column;
             this.ColumnType = ColumnType;
-            this._Operator = _Operator;
+            this.Operator = Operator;
             this.Value = Value;
             this.Range = Range;
             this.Inverted = Inverted;
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The contact list column
         /// </summary>
         /// <value>The contact list column</value>
         [DataMember(Name="column", EmitDefaultValue=false)]
         public string Column { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// The value the predicate applies to
         /// </summary>
         /// <value>The value the predicate applies to</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Range
         /// </summary>
         [DataMember(Name="range", EmitDefaultValue=false)]
         public DialerContactlistfilterConfigChangeRange Range { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not to invert to result of evaluating the predicate
         /// </summary>
         /// <value>Whether or not to invert to result of evaluating the predicate</value>
         [DataMember(Name="inverted", EmitDefaultValue=false)]
         public bool? Inverted { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -249,10 +212,10 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerContactlistfilterConfigChangeFilterPredicate {\n");
-            
+
             sb.Append("  Column: ").Append(Column).Append("\n");
             sb.Append("  ColumnType: ").Append(ColumnType).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Range: ").Append(Range).Append("\n");
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
@@ -307,9 +270,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ColumnType.Equals(other.ColumnType)
                 ) &&
                 (
-                    this._Operator == other._Operator ||
-                    this._Operator != null &&
-                    this._Operator.Equals(other._Operator)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
                 ) &&
                 (
                     this.Value == other.Value ||
@@ -339,25 +302,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Column != null)
                     hash = hash * 59 + this.Column.GetHashCode();
-                
+
                 if (this.ColumnType != null)
                     hash = hash * 59 + this.ColumnType.GetHashCode();
-                
-                if (this._Operator != null)
-                    hash = hash * 59 + this._Operator.GetHashCode();
-                
+
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.Range != null)
                     hash = hash * 59 + this.Range.GetHashCode();
-                
+
                 if (this.Inverted != null)
                     hash = hash * 59 + this.Inverted.GetHashCode();
-                
+
                 return hash;
             }
         }

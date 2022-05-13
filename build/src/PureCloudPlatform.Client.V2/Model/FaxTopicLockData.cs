@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FaxTopicLockData :  IEquatable<FaxTopicLockData>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxTopicLockData" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets LockedBy
         /// </summary>
         [DataMember(Name="lockedBy", EmitDefaultValue=false)]
         public FaxTopicUserData LockedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DateCreated
         /// </summary>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DateExpires
         /// </summary>
         [DataMember(Name="dateExpires", EmitDefaultValue=false)]
         public DateTime? DateExpires { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FaxTopicLockData {\n");
-            
+
             sb.Append("  LockedBy: ").Append(LockedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateExpires: ").Append(DateExpires).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LockedBy != null)
                     hash = hash * 59 + this.LockedBy.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateExpires != null)
                     hash = hash * 59 + this.DateExpires.GetHashCode();
-                
+
                 return hash;
             }
         }

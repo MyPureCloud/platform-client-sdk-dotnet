@@ -18,30 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DateRangeWithOptionalEnd :  IEquatable<DateRangeWithOptionalEnd>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DateRangeWithOptionalEnd" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DateRangeWithOptionalEnd() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DateRangeWithOptionalEnd" /> class.
         /// </summary>
-        /// <param name="StartBusinessUnitDate">The start date for work plan rotation or an agent, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
-        /// <param name="EndBusinessUnitDate">The end date for work plan rotation or an agent, interpreted in the business unit&#39;s time zone. Null denotes open ended date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
+        /// <param name="StartBusinessUnitDate">The start date for work plan rotation or an agent, interpreted in the business unit's time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
+        /// <param name="EndBusinessUnitDate">The end date for work plan rotation or an agent, interpreted in the business unit's time zone. Null denotes open ended date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         public DateRangeWithOptionalEnd(String StartBusinessUnitDate = null, String EndBusinessUnitDate = null)
         {
             this.StartBusinessUnitDate = StartBusinessUnitDate;
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The start date for work plan rotation or an agent, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// The start date for work plan rotation or an agent, interpreted in the business unit's time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
-        /// <value>The start date for work plan rotation or an agent, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        /// <value>The start date for work plan rotation or an agent, interpreted in the business unit's time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="startBusinessUnitDate", EmitDefaultValue=false)]
         public String StartBusinessUnitDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The end date for work plan rotation or an agent, interpreted in the business unit&#39;s time zone. Null denotes open ended date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// The end date for work plan rotation or an agent, interpreted in the business unit's time zone. Null denotes open ended date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
-        /// <value>The end date for work plan rotation or an agent, interpreted in the business unit&#39;s time zone. Null denotes open ended date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        /// <value>The end date for work plan rotation or an agent, interpreted in the business unit's time zone. Null denotes open ended date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="endBusinessUnitDate", EmitDefaultValue=false)]
         public String EndBusinessUnitDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DateRangeWithOptionalEnd {\n");
-            
+
             sb.Append("  StartBusinessUnitDate: ").Append(StartBusinessUnitDate).Append("\n");
             sb.Append("  EndBusinessUnitDate: ").Append(EndBusinessUnitDate).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartBusinessUnitDate != null)
                     hash = hash * 59 + this.StartBusinessUnitDate.GetHashCode();
-                
+
                 if (this.EndBusinessUnitDate != null)
                     hash = hash * 59 + this.EndBusinessUnitDate.GetHashCode();
-                
+
                 return hash;
             }
         }

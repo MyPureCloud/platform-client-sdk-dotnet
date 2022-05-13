@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ShrinkageOverrides :  IEquatable<ShrinkageOverrides>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ShrinkageOverrides" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Set true to clear the shrinkage interval overrides
         /// </summary>
         /// <value>Set true to clear the shrinkage interval overrides</value>
         [DataMember(Name="clear", EmitDefaultValue=false)]
         public bool? Clear { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of interval shrinkage overrides
         /// </summary>
         /// <value>List of interval shrinkage overrides</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<ShrinkageOverride> Values { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ShrinkageOverrides {\n");
-            
+
             sb.Append("  Clear: ").Append(Clear).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Clear != null)
                     hash = hash * 59 + this.Clear.GetHashCode();
-                
+
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
+
                 return hash;
             }
         }

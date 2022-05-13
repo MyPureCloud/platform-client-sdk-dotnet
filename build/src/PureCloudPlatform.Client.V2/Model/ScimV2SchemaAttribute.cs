@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimV2SchemaAttribute :  IEquatable<ScimV2SchemaAttribute>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The data type of the attribute.
         /// </summary>
@@ -80,28 +75,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "complex")]
             Complex
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The circumstances under which an attribute can be defined or redefined. The default is \"readWrite\".
         /// </summary>
@@ -141,10 +114,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "writeOnly")]
             Writeonly
         }
-        
-        
-        
-        
         /// <summary>
         /// The circumstances under which an attribute and its values are returned in response to a GET, PUT, POST, or PATCH request.
         /// </summary>
@@ -184,10 +153,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "request")]
             Request
         }
-        
-        
-        
-        
         /// <summary>
         /// The method by which the service provider enforces the uniqueness of an attribute value. A server can reject a value by returning the HTTP response code 400 (Bad Request). A client can enforce uniqueness to a greater degree than the server provider enforces. For example, a client could make a value unique even though the server has \"uniqueness\" set to \"none\".
         /// </summary>
@@ -221,12 +186,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "global")]
             Global
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ReferenceTypes
         /// </summary>
@@ -265,63 +224,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "uri")]
             Uri
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The data type of the attribute.
         /// </summary>
         /// <value>The data type of the attribute.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        public TypeEnum? Type { get; private set; }
         /// <summary>
         /// The circumstances under which an attribute can be defined or redefined. The default is \"readWrite\".
         /// </summary>
         /// <value>The circumstances under which an attribute can be defined or redefined. The default is \"readWrite\".</value>
         [DataMember(Name="mutability", EmitDefaultValue=false)]
-        public MutabilityEnum? Mutability { get; set; }
-        
-        
-        
+        public MutabilityEnum? Mutability { get; private set; }
         /// <summary>
         /// The circumstances under which an attribute and its values are returned in response to a GET, PUT, POST, or PATCH request.
         /// </summary>
         /// <value>The circumstances under which an attribute and its values are returned in response to a GET, PUT, POST, or PATCH request.</value>
         [DataMember(Name="returned", EmitDefaultValue=false)]
-        public ReturnedEnum? Returned { get; set; }
-        
-        
-        
+        public ReturnedEnum? Returned { get; private set; }
         /// <summary>
         /// The method by which the service provider enforces the uniqueness of an attribute value. A server can reject a value by returning the HTTP response code 400 (Bad Request). A client can enforce uniqueness to a greater degree than the server provider enforces. For example, a client could make a value unique even though the server has \"uniqueness\" set to \"none\".
         /// </summary>
         /// <value>The method by which the service provider enforces the uniqueness of an attribute value. A server can reject a value by returning the HTTP response code 400 (Bad Request). A client can enforce uniqueness to a greater degree than the server provider enforces. For example, a client could make a value unique even though the server has \"uniqueness\" set to \"none\".</value>
         [DataMember(Name="uniqueness", EmitDefaultValue=false)]
-        public UniquenessEnum? Uniqueness { get; set; }
-        
-        
-        
-        
-    
+        public UniquenessEnum? Uniqueness { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2SchemaAttribute" /> class.
         /// </summary>
@@ -330,87 +256,87 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the attribute.
         /// </summary>
         /// <value>The name of the attribute.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
-        /// The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;.
+        /// The list of subattributes for an attribute of the type \"complex\". Uses the same schema as \"attributes\".
         /// </summary>
-        /// <value>The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;.</value>
+        /// <value>The list of subattributes for an attribute of the type \"complex\". Uses the same schema as \"attributes\".</value>
         [DataMember(Name="subAttributes", EmitDefaultValue=false)]
         public List<ScimV2SchemaAttribute> SubAttributes { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether an attribute contains multiple values.
         /// </summary>
         /// <value>Indicates whether an attribute contains multiple values.</value>
         [DataMember(Name="multiValued", EmitDefaultValue=false)]
         public bool? MultiValued { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of the attribute.
         /// </summary>
         /// <value>The description of the attribute.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether an attribute is required.
         /// </summary>
         /// <value>Indicates whether an attribute is required.</value>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public bool? Required { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of standard values that service providers may use. Service providers may ignore unsupported values.
         /// </summary>
         /// <value>The list of standard values that service providers may use. Service providers may ignore unsupported values.</value>
         [DataMember(Name="canonicalValues", EmitDefaultValue=false)]
         public List<string> CanonicalValues { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Indicates whether a string attribute is case-sensitive. If set to \&quot;true\&quot;, the server preserves case sensitivity. If set to \&quot;false\&quot;, the server may change the case. The server also uses case sensitivity when evaluating filters. See section 3.4.2.2 \&quot;Filtering\&quot; in RFC 7644 for details.
+        /// Indicates whether a string attribute is case-sensitive. If set to \"true\", the server preserves case sensitivity. If set to \"false\", the server may change the case. The server also uses case sensitivity when evaluating filters. See section 3.4.2.2 \"Filtering\" in RFC 7644 for details.
         /// </summary>
-        /// <value>Indicates whether a string attribute is case-sensitive. If set to \&quot;true\&quot;, the server preserves case sensitivity. If set to \&quot;false\&quot;, the server may change the case. The server also uses case sensitivity when evaluating filters. See section 3.4.2.2 \&quot;Filtering\&quot; in RFC 7644 for details.</value>
+        /// <value>Indicates whether a string attribute is case-sensitive. If set to \"true\", the server preserves case sensitivity. If set to \"false\", the server may change the case. The server also uses case sensitivity when evaluating filters. See section 3.4.2.2 \"Filtering\" in RFC 7644 for details.</value>
         [DataMember(Name="caseExact", EmitDefaultValue=false)]
         public bool? CaseExact { get; private set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
         /// <summary>
-        /// The list of SCIM resource types that may be referenced. Only applies when \&quot;type\&quot; is set to \&quot;reference\&quot;.
+        /// The list of SCIM resource types that may be referenced. Only applies when \"type\" is set to \"reference\".
         /// </summary>
-        /// <value>The list of SCIM resource types that may be referenced. Only applies when \&quot;type\&quot; is set to \&quot;reference\&quot;.</value>
+        /// <value>The list of SCIM resource types that may be referenced. Only applies when \"type\" is set to \"reference\".</value>
         [DataMember(Name="referenceTypes", EmitDefaultValue=false)]
         public List<ReferenceTypesEnum> ReferenceTypes { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -419,7 +345,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimV2SchemaAttribute {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  SubAttributes: ").Append(SubAttributes).Append("\n");
@@ -545,43 +471,42 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.SubAttributes != null)
                     hash = hash * 59 + this.SubAttributes.GetHashCode();
-                
+
                 if (this.MultiValued != null)
                     hash = hash * 59 + this.MultiValued.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Required != null)
                     hash = hash * 59 + this.Required.GetHashCode();
-                
+
                 if (this.CanonicalValues != null)
                     hash = hash * 59 + this.CanonicalValues.GetHashCode();
-                
+
                 if (this.CaseExact != null)
                     hash = hash * 59 + this.CaseExact.GetHashCode();
-                
+
                 if (this.Mutability != null)
                     hash = hash * 59 + this.Mutability.GetHashCode();
-                
+
                 if (this.Returned != null)
                     hash = hash * 59 + this.Returned.GetHashCode();
-                
+
                 if (this.Uniqueness != null)
                     hash = hash * 59 + this.Uniqueness.GetHashCode();
-                
+
                 if (this.ReferenceTypes != null)
                     hash = hash * 59 + this.ReferenceTypes.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerCampaignRuleConfigChangeCampaignRuleAction :  IEquatable<DialerCampaignRuleConfigChangeCampaignRuleAction>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of this action
         /// </summary>
@@ -77,29 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "recycleCampaign")]
             Recyclecampaign
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of this action
         /// </summary>
         /// <value>The type of this action</value>
         [DataMember(Name="actionType", EmitDefaultValue=false)]
         public ActionTypeEnum? ActionType { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCampaignRuleConfigChangeCampaignRuleAction" /> class.
         /// </summary>
@@ -116,35 +91,35 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the action
         /// </summary>
         /// <value>The globally unique identifier for the action</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The parameters to match this action
         /// </summary>
         /// <value>The parameters to match this action</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public Dictionary<string, string> Parameters { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets CampaignRuleActionEntities
         /// </summary>
         [DataMember(Name="campaignRuleActionEntities", EmitDefaultValue=false)]
         public DialerCampaignRuleConfigChangeCampaignRuleActionEntities CampaignRuleActionEntities { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -153,7 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerCampaignRuleConfigChangeCampaignRuleAction {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("  ActionType: ").Append(ActionType).Append("\n");
@@ -231,19 +206,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Parameters != null)
                     hash = hash * 59 + this.Parameters.GetHashCode();
-                
+
                 if (this.ActionType != null)
                     hash = hash * 59 + this.ActionType.GetHashCode();
-                
+
                 if (this.CampaignRuleActionEntities != null)
                     hash = hash * 59 + this.CampaignRuleActionEntities.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntegrationEvent :  IEquatable<IntegrationEvent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the severity of the event.
         /// </summary>
@@ -71,58 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CRITICAL")]
             Critical
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the severity of the event.
         /// </summary>
         /// <value>Indicates the severity of the event.</value>
         [DataMember(Name="level", EmitDefaultValue=false)]
-        public LevelEnum? Level { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public LevelEnum? Level { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationEvent" /> class.
         /// </summary>
@@ -133,99 +73,99 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Unique ID for this event
         /// </summary>
         /// <value>Unique ID for this event</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Correlation ID for the event
         /// </summary>
         /// <value>Correlation ID for the event</value>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Time the event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Time the event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// A classification for the event. Suitable for programmatic searching, sorting, or filtering
         /// </summary>
         /// <value>A classification for the event. Suitable for programmatic searching, sorting, or filtering</value>
         [DataMember(Name="eventCode", EmitDefaultValue=false)]
         public string EventCode { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Message indicating what happened
         /// </summary>
         /// <value>Message indicating what happened</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public MessageInfo Message { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Collection of entities affected by or pertaining to the event (e.g. a list of Integrations or Bridge connectors)
         /// </summary>
         /// <value>Collection of entities affected by or pertaining to the event (e.g. a list of Integrations or Bridge connectors)</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<EventEntity> Entities { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Map of context attributes specific to this event.
         /// </summary>
         /// <value>Map of context attributes specific to this event.</value>
         [DataMember(Name="contextAttributes", EmitDefaultValue=false)]
         public Dictionary<string, string> ContextAttributes { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Message with additional details about the event. (e.g. an exception cause.)
         /// </summary>
         /// <value>Message with additional details about the event. (e.g. an exception cause.)</value>
         [DataMember(Name="detailMessage", EmitDefaultValue=false)]
         public MessageInfo DetailMessage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User that took an action that resulted in the event.
         /// </summary>
         /// <value>User that took an action that resulted in the event.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -234,7 +174,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntegrationEvent {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  CorrelationId: ").Append(CorrelationId).Append("\n");
@@ -354,40 +294,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.CorrelationId != null)
                     hash = hash * 59 + this.CorrelationId.GetHashCode();
-                
+
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
+
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
-                
+
                 if (this.EventCode != null)
                     hash = hash * 59 + this.EventCode.GetHashCode();
-                
+
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
+
                 if (this.ContextAttributes != null)
                     hash = hash * 59 + this.ContextAttributes.GetHashCode();
-                
+
                 if (this.DetailMessage != null)
                     hash = hash * 59 + this.DetailMessage.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 return hash;
             }
         }

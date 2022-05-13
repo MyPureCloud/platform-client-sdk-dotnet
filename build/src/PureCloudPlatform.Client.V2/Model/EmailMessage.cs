@@ -18,85 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EmailMessage :  IEquatable<EmailMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailMessage" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected EmailMessage() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailMessage" /> class.
         /// </summary>
@@ -129,132 +56,132 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The recipients of the email message.
         /// </summary>
         /// <value>The recipients of the email message.</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public List<EmailAddress> To { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The recipients that were copied on the email message.
         /// </summary>
         /// <value>The recipients that were copied on the email message.</value>
         [DataMember(Name="cc", EmitDefaultValue=false)]
         public List<EmailAddress> Cc { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The recipients that were blind copied on the email message.
         /// </summary>
         /// <value>The recipients that were blind copied on the email message.</value>
         [DataMember(Name="bcc", EmitDefaultValue=false)]
         public List<EmailAddress> Bcc { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The sender of the email message.
         /// </summary>
         /// <value>The sender of the email message.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public EmailAddress From { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The receiver of the reply email message.
         /// </summary>
         /// <value>The receiver of the reply email message.</value>
         [DataMember(Name="replyTo", EmitDefaultValue=false)]
         public EmailAddress ReplyTo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The subject of the email message.
         /// </summary>
         /// <value>The subject of the email message.</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The attachments of the email message.
         /// </summary>
         /// <value>The attachments of the email message.</value>
         [DataMember(Name="attachments", EmitDefaultValue=false)]
         public List<Attachment> Attachments { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The text body of the email message.
         /// </summary>
         /// <value>The text body of the email message.</value>
         [DataMember(Name="textBody", EmitDefaultValue=false)]
         public string TextBody { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The html body of the email message.
         /// </summary>
         /// <value>The html body of the email message.</value>
         [DataMember(Name="htmlBody", EmitDefaultValue=false)]
         public string HtmlBody { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether the history of previous emails of the conversation is included within the email bodies of this message.
         /// </summary>
         /// <value>Indicates whether the history of previous emails of the conversation is included within the email bodies of this message.</value>
         [DataMember(Name="historyIncluded", EmitDefaultValue=false)]
         public bool? HistoryIncluded { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -263,7 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EmailMessage {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  To: ").Append(To).Append("\n");
@@ -401,49 +328,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
-                
+
                 if (this.Cc != null)
                     hash = hash * 59 + this.Cc.GetHashCode();
-                
+
                 if (this.Bcc != null)
                     hash = hash * 59 + this.Bcc.GetHashCode();
-                
+
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
-                
+
                 if (this.ReplyTo != null)
                     hash = hash * 59 + this.ReplyTo.GetHashCode();
-                
+
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
-                
+
                 if (this.Attachments != null)
                     hash = hash * 59 + this.Attachments.GetHashCode();
-                
+
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
-                
+
                 if (this.HtmlBody != null)
                     hash = hash * 59 + this.HtmlBody.GetHashCode();
-                
+
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
-                
+
                 if (this.HistoryIncluded != null)
                     hash = hash * 59 + this.HistoryIncluded.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

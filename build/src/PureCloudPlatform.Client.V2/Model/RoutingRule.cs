@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RoutingRule :  IEquatable<RoutingRule>
     {
-        
-        
         /// <summary>
         /// matching operator.  MEETS_THRESHOLD matches any agent with a score at or above the rule's threshold.  ANY matches all specified agents, regardless of score.
         /// </summary>
@@ -47,65 +45,47 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ANY")]
             Any
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// matching operator.  MEETS_THRESHOLD matches any agent with a score at or above the rule's threshold.  ANY matches all specified agents, regardless of score.
         /// </summary>
         /// <value>matching operator.  MEETS_THRESHOLD matches any agent with a score at or above the rule's threshold.  ANY matches all specified agents, regardless of score.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public OperatorEnum? _Operator { get; set; }
-        
-        
-        
-        
-        
-        
-    
+        public OperatorEnum? Operator { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingRule" /> class.
         /// </summary>
-        /// <param name="_Operator">matching operator.  MEETS_THRESHOLD matches any agent with a score at or above the rule&#39;s threshold.  ANY matches all specified agents, regardless of score..</param>
+        /// <param name="Operator">matching operator.  MEETS_THRESHOLD matches any agent with a score at or above the rule's threshold.  ANY matches all specified agents, regardless of score..</param>
         /// <param name="Threshold">threshold required for routing attempt (generally an agent score).  may be null for operator ANY..</param>
         /// <param name="WaitSeconds">seconds to wait in this rule before moving to the next.</param>
-        public RoutingRule(OperatorEnum? _Operator = null, int? Threshold = null, double? WaitSeconds = null)
+        public RoutingRule(OperatorEnum? Operator = null, int? Threshold = null, double? WaitSeconds = null)
         {
-            this._Operator = _Operator;
+            this.Operator = Operator;
             this.Threshold = Threshold;
             this.WaitSeconds = WaitSeconds;
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// threshold required for routing attempt (generally an agent score).  may be null for operator ANY.
         /// </summary>
         /// <value>threshold required for routing attempt (generally an agent score).  may be null for operator ANY.</value>
         [DataMember(Name="threshold", EmitDefaultValue=false)]
         public int? Threshold { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// seconds to wait in this rule before moving to the next
         /// </summary>
         /// <value>seconds to wait in this rule before moving to the next</value>
         [DataMember(Name="waitSeconds", EmitDefaultValue=false)]
         public double? WaitSeconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -114,8 +94,8 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RoutingRule {\n");
-            
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Threshold: ").Append(Threshold).Append("\n");
             sb.Append("  WaitSeconds: ").Append(WaitSeconds).Append("\n");
             sb.Append("}\n");
@@ -159,9 +139,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this._Operator == other._Operator ||
-                    this._Operator != null &&
-                    this._Operator.Equals(other._Operator)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
                 ) &&
                 (
                     this.Threshold == other.Threshold ||
@@ -186,16 +166,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this._Operator != null)
-                    hash = hash * 59 + this._Operator.GetHashCode();
-                
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
+
                 if (this.Threshold != null)
                     hash = hash * 59 + this.Threshold.GetHashCode();
-                
+
                 if (this.WaitSeconds != null)
                     hash = hash * 59 + this.WaitSeconds.GetHashCode();
-                
+
                 return hash;
             }
         }

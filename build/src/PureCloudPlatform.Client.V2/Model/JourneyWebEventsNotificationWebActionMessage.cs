@@ -18,74 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyWebEventsNotificationWebActionMessage :  IEquatable<JourneyWebEventsNotificationWebActionMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyWebEventsNotificationWebActionMessage" /> class.
         /// </summary>
@@ -120,111 +52,111 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public JourneyWebEventsNotificationEventAction Action { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActionTarget
         /// </summary>
         [DataMember(Name="actionTarget", EmitDefaultValue=false)]
         public JourneyWebEventsNotificationActionTarget ActionTarget { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActionMap
         /// </summary>
         [DataMember(Name="actionMap", EmitDefaultValue=false)]
         public JourneyWebEventsNotificationActionMap ActionMap { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorMessage
         /// </summary>
         [DataMember(Name="errorMessage", EmitDefaultValue=false)]
         public string ErrorMessage { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserAgentString
         /// </summary>
         [DataMember(Name="userAgentString", EmitDefaultValue=false)]
         public string UserAgentString { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IpAddress
         /// </summary>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IpOrganization
         /// </summary>
         [DataMember(Name="ipOrganization", EmitDefaultValue=false)]
         public string IpOrganization { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Browser
         /// </summary>
         [DataMember(Name="browser", EmitDefaultValue=false)]
         public JourneyWebEventsNotificationBrowser Browser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Device
         /// </summary>
         [DataMember(Name="device", EmitDefaultValue=false)]
         public JourneyWebEventsNotificationDevice Device { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Geolocation
         /// </summary>
         [DataMember(Name="geolocation", EmitDefaultValue=false)]
         public JourneyWebEventsNotificationGeoLocation Geolocation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MktCampaign
         /// </summary>
         [DataMember(Name="mktCampaign", EmitDefaultValue=false)]
         public JourneyWebEventsNotificationMktCampaign MktCampaign { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets VisitReferrer
         /// </summary>
         [DataMember(Name="visitReferrer", EmitDefaultValue=false)]
         public JourneyWebEventsNotificationReferrer VisitReferrer { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -233,7 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyWebEventsNotificationWebActionMessage {\n");
-            
+
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ActionTarget: ").Append(ActionTarget).Append("\n");
             sb.Append("  ActionMap: ").Append(ActionMap).Append("\n");
@@ -365,46 +297,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.ActionTarget != null)
                     hash = hash * 59 + this.ActionTarget.GetHashCode();
-                
+
                 if (this.ActionMap != null)
                     hash = hash * 59 + this.ActionMap.GetHashCode();
-                
+
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
-                
+
                 if (this.ErrorMessage != null)
                     hash = hash * 59 + this.ErrorMessage.GetHashCode();
-                
+
                 if (this.UserAgentString != null)
                     hash = hash * 59 + this.UserAgentString.GetHashCode();
-                
+
                 if (this.IpAddress != null)
                     hash = hash * 59 + this.IpAddress.GetHashCode();
-                
+
                 if (this.IpOrganization != null)
                     hash = hash * 59 + this.IpOrganization.GetHashCode();
-                
+
                 if (this.Browser != null)
                     hash = hash * 59 + this.Browser.GetHashCode();
-                
+
                 if (this.Device != null)
                     hash = hash * 59 + this.Device.GetHashCode();
-                
+
                 if (this.Geolocation != null)
                     hash = hash * 59 + this.Geolocation.GetHashCode();
-                
+
                 if (this.MktCampaign != null)
                     hash = hash * 59 + this.MktCampaign.GetHashCode();
-                
+
                 if (this.VisitReferrer != null)
                     hash = hash * 59 + this.VisitReferrer.GetHashCode();
-                
+
                 return hash;
             }
         }

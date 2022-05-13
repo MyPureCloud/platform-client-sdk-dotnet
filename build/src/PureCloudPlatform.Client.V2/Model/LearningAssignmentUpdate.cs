@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LearningAssignmentUpdate :  IEquatable<LearningAssignmentUpdate>
     {
-        
-        
         /// <summary>
         /// The Learning Assignment state
         /// </summary>
@@ -65,25 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NotCompleted")]
             Notcompleted
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The Learning Assignment state
         /// </summary>
         /// <value>The Learning Assignment state</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignmentUpdate" /> class.
         /// </summary>
@@ -96,18 +81,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// An updated Assessment
         /// </summary>
         /// <value>An updated Assessment</value>
         [DataMember(Name="assessment", EmitDefaultValue=false)]
         public LearningAssessment Assessment { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -116,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LearningAssignmentUpdate {\n");
-            
+
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Assessment: ").Append(Assessment).Append("\n");
             sb.Append("}\n");
@@ -182,13 +167,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Assessment != null)
                     hash = hash * 59 + this.Assessment.GetHashCode();
-                
+
                 return hash;
             }
         }

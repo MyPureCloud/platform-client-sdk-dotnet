@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallableWindow :  IEquatable<CallableWindow>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableWindow" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The time interval to place outbound calls, for contacts that can be mapped to a time zone.
         /// </summary>
         /// <value>The time interval to place outbound calls, for contacts that can be mapped to a time zone.</value>
         [DataMember(Name="mapped", EmitDefaultValue=false)]
         public AtzmTimeSlot Mapped { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time interval and time zone to place outbound calls, for contacts that cannot be mapped to a time zone.
         /// </summary>
         /// <value>The time interval and time zone to place outbound calls, for contacts that cannot be mapped to a time zone.</value>
         [DataMember(Name="unmapped", EmitDefaultValue=false)]
         public AtzmTimeSlotWithTimeZone Unmapped { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallableWindow {\n");
-            
+
             sb.Append("  Mapped: ").Append(Mapped).Append("\n");
             sb.Append("  Unmapped: ").Append(Unmapped).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Mapped != null)
                     hash = hash * 59 + this.Mapped.GetHashCode();
-                
+
                 if (this.Unmapped != null)
                     hash = hash * 59 + this.Unmapped.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebMessagingRecipient :  IEquatable<WebMessagingRecipient>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WebMessagingRecipient" /> class.
         /// </summary>
@@ -49,43 +26,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// First name of the recipient.
         /// </summary>
         /// <value>First name of the recipient.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last name of the recipient.
         /// </summary>
         /// <value>Last name of the recipient.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Nickname or display name of the recipient.
         /// </summary>
         /// <value>Nickname or display name of the recipient.</value>
         [DataMember(Name="nickname", EmitDefaultValue=false)]
         public string Nickname { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of recipient additional identifiers
         /// </summary>
         /// <value>List of recipient additional identifiers</value>
         [DataMember(Name="additionalIds", EmitDefaultValue=false)]
         public List<RecipientAdditionalIdentifier> AdditionalIds { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -94,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebMessagingRecipient {\n");
-            
+
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  Nickname: ").Append(Nickname).Append("\n");
@@ -172,19 +149,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FirstName != null)
                     hash = hash * 59 + this.FirstName.GetHashCode();
-                
+
                 if (this.LastName != null)
                     hash = hash * 59 + this.LastName.GetHashCode();
-                
+
                 if (this.Nickname != null)
                     hash = hash * 59 + this.Nickname.GetHashCode();
-                
+
                 if (this.AdditionalIds != null)
                     hash = hash * 59 + this.AdditionalIds.GetHashCode();
-                
+
                 return hash;
             }
         }

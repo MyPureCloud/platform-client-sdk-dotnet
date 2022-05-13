@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DevelopmentActivityAggregateQueryRequestClause :  IEquatable<DevelopmentActivityAggregateQueryRequestClause>
     {
-        
-        
         /// <summary>
         /// The logic used to combine the predicates
         /// </summary>
@@ -47,31 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Or")]
             Or
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The logic used to combine the predicates
         /// </summary>
         /// <value>The logic used to combine the predicates</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DevelopmentActivityAggregateQueryRequestClause" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DevelopmentActivityAggregateQueryRequestClause() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DevelopmentActivityAggregateQueryRequestClause" /> class.
         /// </summary>
@@ -84,18 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The list of predicates used to filter the data
         /// </summary>
         /// <value>The list of predicates used to filter the data</value>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<DevelopmentActivityAggregateQueryRequestPredicate> Predicates { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DevelopmentActivityAggregateQueryRequestClause {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
             sb.Append("}\n");
@@ -170,13 +155,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
-                
+
                 return hash;
             }
         }

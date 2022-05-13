@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AssistanceCondition :  IEquatable<AssistanceCondition>
     {
-        
-        
         /// <summary>
         /// The operator for the assistance condition. The operator defines whether the listed topicIds should EXIST or NOTEXIST for the condition to be evaluated as true.
         /// </summary>
@@ -47,49 +45,36 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NOTEXISTS")]
             Notexists
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The operator for the assistance condition. The operator defines whether the listed topicIds should EXIST or NOTEXIST for the condition to be evaluated as true.
         /// </summary>
         /// <value>The operator for the assistance condition. The operator defines whether the listed topicIds should EXIST or NOTEXIST for the condition to be evaluated as true.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public OperatorEnum? _Operator { get; set; }
-        
-        
-        
-        
-    
+        public OperatorEnum? Operator { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AssistanceCondition" /> class.
         /// </summary>
-        /// <param name="_Operator">The operator for the assistance condition. The operator defines whether the listed topicIds should EXIST or NOTEXIST for the condition to be evaluated as true..</param>
+        /// <param name="Operator">The operator for the assistance condition. The operator defines whether the listed topicIds should EXIST or NOTEXIST for the condition to be evaluated as true..</param>
         /// <param name="TopicIds">List of topicIds within the assistance condition which would be combined together using logical OR operator. Eg ( topicId_1 || topicId_2 ) ..</param>
-        public AssistanceCondition(OperatorEnum? _Operator = null, List<string> TopicIds = null)
+        public AssistanceCondition(OperatorEnum? Operator = null, List<string> TopicIds = null)
         {
-            this._Operator = _Operator;
+            this.Operator = Operator;
             this.TopicIds = TopicIds;
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// List of topicIds within the assistance condition which would be combined together using logical OR operator. Eg ( topicId_1 || topicId_2 ) .
         /// </summary>
         /// <value>List of topicIds within the assistance condition which would be combined together using logical OR operator. Eg ( topicId_1 || topicId_2 ) .</value>
         [DataMember(Name="topicIds", EmitDefaultValue=false)]
         public List<string> TopicIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,8 +83,8 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AssistanceCondition {\n");
-            
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  TopicIds: ").Append(TopicIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -142,9 +127,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this._Operator == other._Operator ||
-                    this._Operator != null &&
-                    this._Operator.Equals(other._Operator)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
                 ) &&
                 (
                     this.TopicIds == other.TopicIds ||
@@ -164,13 +149,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this._Operator != null)
-                    hash = hash * 59 + this._Operator.GetHashCode();
-                
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
+
                 if (this.TopicIds != null)
                     hash = hash * 59 + this.TopicIds.GetHashCode();
-                
+
                 return hash;
             }
         }

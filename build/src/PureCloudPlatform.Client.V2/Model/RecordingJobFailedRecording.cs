@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RecordingJobFailedRecording :  IEquatable<RecordingJobFailedRecording>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingJobFailedRecording" /> class.
         /// </summary>
@@ -39,25 +26,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Conversation
         /// </summary>
         /// <value>Conversation</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public AddressableEntityRef Conversation { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Recording
         /// </summary>
         /// <value>Recording</value>
         [DataMember(Name="recording", EmitDefaultValue=false)]
         public AddressableEntityRef Recording { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RecordingJobFailedRecording {\n");
-            
+
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
             sb.Append("}\n");
@@ -132,13 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
+
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BulkUpdateShiftTradeStateResultItem :  IEquatable<BulkUpdateShiftTradeStateResultItem>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The state of the shift trade after the update request is processed
         /// </summary>
@@ -74,16 +69,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Canceled")]
             Canceled
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reason the update failed, if applicable
         /// </summary>
@@ -153,40 +138,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "TransitionNotAllowed")]
             Transitionnotallowed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The state of the shift trade after the update request is processed
         /// </summary>
         /// <value>The state of the shift trade after the update request is processed</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reason the update failed, if applicable
         /// </summary>
         /// <value>The reason the update failed, if applicable</value>
         [DataMember(Name="failureReason", EmitDefaultValue=false)]
         public FailureReasonEnum? FailureReason { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BulkUpdateShiftTradeStateResultItem" /> class.
         /// </summary>
@@ -205,47 +168,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The user who reviewed the request, if applicable
         /// </summary>
         /// <value>The user who reviewed the request, if applicable</value>
         [DataMember(Name="reviewedBy", EmitDefaultValue=false)]
         public UserReference ReviewedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date the request was reviewed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the request was reviewed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="reviewedDate", EmitDefaultValue=false)]
         public DateTime? ReviewedDate { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Version metadata for the shift trade
         /// </summary>
         /// <value>Version metadata for the shift trade</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -254,7 +217,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BulkUpdateShiftTradeStateResultItem {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  ReviewedBy: ").Append(ReviewedBy).Append("\n");
@@ -344,25 +307,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.ReviewedBy != null)
                     hash = hash * 59 + this.ReviewedBy.GetHashCode();
-                
+
                 if (this.ReviewedDate != null)
                     hash = hash * 59 + this.ReviewedDate.GetHashCode();
-                
+
                 if (this.FailureReason != null)
                     hash = hash * 59 + this.FailureReason.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationMessagingToRecipient :  IEquatable<ConversationMessagingToRecipient>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The recipient ID type. This is used to indicate the format used for the ID.
         /// </summary>
@@ -59,55 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Opaque")]
             Opaque
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The recipient ID type. This is used to indicate the format used for the ID.
         /// </summary>
         /// <value>The recipient ID type. This is used to indicate the format used for the ID.</value>
         [DataMember(Name="idType", EmitDefaultValue=false)]
-        public IdTypeEnum? IdType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public IdTypeEnum? IdType { get; private set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMessagingToRecipient" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConversationMessagingToRecipient() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMessagingToRecipient" /> class.
         /// </summary>
@@ -118,72 +73,72 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Nickname or display name of the recipient.
         /// </summary>
         /// <value>Nickname or display name of the recipient.</value>
         [DataMember(Name="nickname", EmitDefaultValue=false)]
         public string Nickname { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The recipient ID specific to the provider.
         /// </summary>
         /// <value>The recipient ID specific to the provider.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// URL of an image that represents the recipient.
         /// </summary>
         /// <value>URL of an image that represents the recipient.</value>
         [DataMember(Name="image", EmitDefaultValue=false)]
         public string Image { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// First name of the recipient.
         /// </summary>
         /// <value>First name of the recipient.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last name of the recipient.
         /// </summary>
         /// <value>Last name of the recipient.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// E-mail address of the recipient.
         /// </summary>
         /// <value>E-mail address of the recipient.</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of recipient additional identifiers
         /// </summary>
         /// <value>List of recipient additional identifiers</value>
         [DataMember(Name="additionalIds", EmitDefaultValue=false)]
         public List<ConversationRecipientAdditionalIdentifier> AdditionalIds { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,7 +147,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationMessagingToRecipient {\n");
-            
+
             sb.Append("  Nickname: ").Append(Nickname).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdType: ").Append(IdType).Append("\n");
@@ -294,31 +249,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Nickname != null)
                     hash = hash * 59 + this.Nickname.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.IdType != null)
                     hash = hash * 59 + this.IdType.GetHashCode();
-                
+
                 if (this.Image != null)
                     hash = hash * 59 + this.Image.GetHashCode();
-                
+
                 if (this.FirstName != null)
                     hash = hash * 59 + this.FirstName.GetHashCode();
-                
+
                 if (this.LastName != null)
                     hash = hash * 59 + this.LastName.GetHashCode();
-                
+
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
+
                 if (this.AdditionalIds != null)
                     hash = hash * 59 + this.AdditionalIds.GetHashCode();
-                
+
                 return hash;
             }
         }

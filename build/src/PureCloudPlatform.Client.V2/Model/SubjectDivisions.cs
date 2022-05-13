@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SubjectDivisions :  IEquatable<SubjectDivisions>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SubjectDivisions" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SubjectDivisions() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SubjectDivisions" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A collection of subject IDs to associate with the given divisions
         /// </summary>
         /// <value>A collection of subject IDs to associate with the given divisions</value>
         [DataMember(Name="subjectIds", EmitDefaultValue=false)]
         public List<string> SubjectIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A collection of division IDs to associate with the given subjects
         /// </summary>
         /// <value>A collection of division IDs to associate with the given subjects</value>
         [DataMember(Name="divisionIds", EmitDefaultValue=false)]
         public List<string> DivisionIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SubjectDivisions {\n");
-            
+
             sb.Append("  SubjectIds: ").Append(SubjectIds).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SubjectIds != null)
                     hash = hash * 59 + this.SubjectIds.GetHashCode();
-                
+
                 if (this.DivisionIds != null)
                     hash = hash * 59 + this.DivisionIds.GetHashCode();
-                
+
                 return hash;
             }
         }

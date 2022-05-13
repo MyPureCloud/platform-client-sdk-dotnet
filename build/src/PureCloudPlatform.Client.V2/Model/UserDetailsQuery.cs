@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserDetailsQuery :  IEquatable<UserDetailsQuery>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
@@ -59,49 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "desc")]
             Desc
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
         /// <value>Sort the result set in ascending/descending order. Default is ascending</value>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public OrderEnum? Order { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UserDetailsQuery" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UserDetailsQuery() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserDetailsQuery" /> class.
         /// </summary>
@@ -126,72 +81,72 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Specifies the date and time range of data being queried. Conversations MUST have started within this time range to potentially be included within the result set. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
         /// <value>Specifies the date and time range of data being queried. Conversations MUST have started within this time range to potentially be included within the result set. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filters that target the users to retrieve data for
         /// </summary>
         /// <value>Filters that target the users to retrieve data for</value>
         [DataMember(Name="userFilters", EmitDefaultValue=false)]
         public List<UserDetailQueryFilter> UserFilters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filters that target system and organization presence-level data
         /// </summary>
         /// <value>Filters that target system and organization presence-level data</value>
         [DataMember(Name="presenceFilters", EmitDefaultValue=false)]
         public List<PresenceDetailQueryFilter> PresenceFilters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filters that target agent routing status-level data
         /// </summary>
         /// <value>Filters that target agent routing status-level data</value>
         [DataMember(Name="routingStatusFilters", EmitDefaultValue=false)]
         public List<RoutingStatusDetailQueryFilter> RoutingStatusFilters { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Include faceted search and aggregate roll-ups of presence data in your search results. This does not function as a filter, but rather, summary data about the presence results matching your filters
         /// </summary>
         /// <value>Include faceted search and aggregate roll-ups of presence data in your search results. This does not function as a filter, but rather, summary data about the presence results matching your filters</value>
         [DataMember(Name="presenceAggregations", EmitDefaultValue=false)]
         public List<AnalyticsQueryAggregation> PresenceAggregations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Include faceted search and aggregate roll-ups of agent routing status data in your search results. This does not function as a filter, but rather, summary data about the agent routing status results matching your filters
         /// </summary>
         /// <value>Include faceted search and aggregate roll-ups of agent routing status data in your search results. This does not function as a filter, but rather, summary data about the agent routing status results matching your filters</value>
         [DataMember(Name="routingStatusAggregations", EmitDefaultValue=false)]
         public List<AnalyticsQueryAggregation> RoutingStatusAggregations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Page size and number to control iterating through large result sets. Default page size is 25
         /// </summary>
         /// <value>Page size and number to control iterating through large result sets. Default page size is 25</value>
         [DataMember(Name="paging", EmitDefaultValue=false)]
         public PagingSpec Paging { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -200,7 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserDetailsQuery {\n");
-            
+
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  UserFilters: ").Append(UserFilters).Append("\n");
             sb.Append("  PresenceFilters: ").Append(PresenceFilters).Append("\n");
@@ -302,31 +257,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
+
                 if (this.UserFilters != null)
                     hash = hash * 59 + this.UserFilters.GetHashCode();
-                
+
                 if (this.PresenceFilters != null)
                     hash = hash * 59 + this.PresenceFilters.GetHashCode();
-                
+
                 if (this.RoutingStatusFilters != null)
                     hash = hash * 59 + this.RoutingStatusFilters.GetHashCode();
-                
+
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
-                
+
                 if (this.PresenceAggregations != null)
                     hash = hash * 59 + this.PresenceAggregations.GetHashCode();
-                
+
                 if (this.RoutingStatusAggregations != null)
                     hash = hash * 59 + this.RoutingStatusAggregations.GetHashCode();
-                
+
                 if (this.Paging != null)
                     hash = hash * 59 + this.Paging.GetHashCode();
-                
+
                 return hash;
             }
         }

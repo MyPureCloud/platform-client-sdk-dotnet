@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TwitterId :  IEquatable<TwitterId>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TwitterId" /> class.
         /// </summary>
@@ -60,52 +32,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// twitter user.id_str
         /// </summary>
         /// <value>twitter user.id_str</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// twitter user.name
         /// </summary>
         /// <value>twitter user.name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// twitter user.screen_name
         /// </summary>
         /// <value>twitter user.screen_name</value>
         [DataMember(Name="screenName", EmitDefaultValue=false)]
         public string ScreenName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// whether this data has been verified using the twitter API
         /// </summary>
         /// <value>whether this data has been verified using the twitter API</value>
         [DataMember(Name="verified", EmitDefaultValue=false)]
         public bool? Verified { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// url of user&#39;s twitter profile
+        /// url of user's twitter profile
         /// </summary>
-        /// <value>url of user&#39;s twitter profile</value>
+        /// <value>url of user's twitter profile</value>
         [DataMember(Name="profileUrl", EmitDefaultValue=false)]
         public string ProfileUrl { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -114,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TwitterId {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ScreenName: ").Append(ScreenName).Append("\n");
@@ -198,22 +170,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ScreenName != null)
                     hash = hash * 59 + this.ScreenName.GetHashCode();
-                
+
                 if (this.Verified != null)
                     hash = hash * 59 + this.Verified.GetHashCode();
-                
+
                 if (this.ProfileUrl != null)
                     hash = hash * 59 + this.ProfileUrl.GetHashCode();
-                
+
                 return hash;
             }
         }

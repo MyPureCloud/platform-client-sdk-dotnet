@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SearchShiftTradeResponse :  IEquatable<SearchShiftTradeResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchShiftTradeResponse" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A trade which matches search criteria
         /// </summary>
         /// <value>A trade which matches search criteria</value>
         [DataMember(Name="trade", EmitDefaultValue=false)]
         public ShiftTradeResponse Trade { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// IDs of shifts which match the search criteria
         /// </summary>
         /// <value>IDs of shifts which match the search criteria</value>
         [DataMember(Name="matchingReceivingShiftIds", EmitDefaultValue=false)]
         public List<string> MatchingReceivingShiftIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A preview of what the shift trade would look like if matched
         /// </summary>
         /// <value>A preview of what the shift trade would look like if matched</value>
         [DataMember(Name="preview", EmitDefaultValue=false)]
         public ShiftTradePreviewResponse Preview { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SearchShiftTradeResponse {\n");
-            
+
             sb.Append("  Trade: ").Append(Trade).Append("\n");
             sb.Append("  MatchingReceivingShiftIds: ").Append(MatchingReceivingShiftIds).Append("\n");
             sb.Append("  Preview: ").Append(Preview).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Trade != null)
                     hash = hash * 59 + this.Trade.GetHashCode();
-                
+
                 if (this.MatchingReceivingShiftIds != null)
                     hash = hash * 59 + this.MatchingReceivingShiftIds.GetHashCode();
-                
+
                 if (this.Preview != null)
                     hash = hash * 59 + this.Preview.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuShortTermForecastCopyCompleteTopicForecastSourceDayPointer :  IEquatable<WfmBuShortTermForecastCopyCompleteTopicForecastSourceDayPointer>
     {
-        
-        
         /// <summary>
         /// Gets or Sets DayOfWeek
         /// </summary>
@@ -82,39 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EighthDay")]
             Eighthday
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets DayOfWeek
         /// </summary>
         [DataMember(Name="dayOfWeek", EmitDefaultValue=false)]
         public DayOfWeekEnum? DayOfWeek { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuShortTermForecastCopyCompleteTopicForecastSourceDayPointer" /> class.
         /// </summary>
@@ -133,41 +103,41 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets Weight
         /// </summary>
         [DataMember(Name="weight", EmitDefaultValue=false)]
         public int? Weight { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Date
         /// </summary>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public string Date { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FileName
         /// </summary>
         [DataMember(Name="fileName", EmitDefaultValue=false)]
         public string FileName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DataKey
         /// </summary>
         [DataMember(Name="dataKey", EmitDefaultValue=false)]
         public string DataKey { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -176,7 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuShortTermForecastCopyCompleteTopicForecastSourceDayPointer {\n");
-            
+
             sb.Append("  DayOfWeek: ").Append(DayOfWeek).Append("\n");
             sb.Append("  Weight: ").Append(Weight).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
@@ -260,22 +230,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DayOfWeek != null)
                     hash = hash * 59 + this.DayOfWeek.GetHashCode();
-                
+
                 if (this.Weight != null)
                     hash = hash * 59 + this.Weight.GetHashCode();
-                
+
                 if (this.Date != null)
                     hash = hash * 59 + this.Date.GetHashCode();
-                
+
                 if (this.FileName != null)
                     hash = hash * 59 + this.FileName.GetHashCode();
-                
+
                 if (this.DataKey != null)
                     hash = hash * 59 + this.DataKey.GetHashCode();
-                
+
                 return hash;
             }
         }

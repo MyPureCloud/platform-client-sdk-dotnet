@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GoogleDialogflowCustomSettings :  IEquatable<GoogleDialogflowCustomSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleDialogflowCustomSettings" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// If set this environment will be used to initiate the dialogflow bot, otherwise the default configuration will be used.  See https://cloud.google.com/dialogflow/docs/agents-versions
         /// </summary>
         /// <value>If set this environment will be used to initiate the dialogflow bot, otherwise the default configuration will be used.  See https://cloud.google.com/dialogflow/docs/agents-versions</value>
         [DataMember(Name="environment", EmitDefaultValue=false)]
         public string Environment { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If set this eventName will be used to initiate the dialogflow bot rather than language processing on the input text.  See https://cloud.google.com/dialogflow/es/docs/events-overview
         /// </summary>
         /// <value>If set this eventName will be used to initiate the dialogflow bot rather than language processing on the input text.  See https://cloud.google.com/dialogflow/es/docs/events-overview</value>
         [DataMember(Name="eventName", EmitDefaultValue=false)]
         public string EventName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Parameters passed to the fulfillment webhook of the bot (if any).
         /// </summary>
         /// <value>Parameters passed to the fulfillment webhook of the bot (if any).</value>
         [DataMember(Name="webhookQueryParameters", EmitDefaultValue=false)]
         public Dictionary<string, string> WebhookQueryParameters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Parameters passed to the event input of the bot.
         /// </summary>
         /// <value>Parameters passed to the event input of the bot.</value>
         [DataMember(Name="eventInputParameters", EmitDefaultValue=false)]
         public Dictionary<string, string> EventInputParameters { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GoogleDialogflowCustomSettings {\n");
-            
+
             sb.Append("  Environment: ").Append(Environment).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  WebhookQueryParameters: ").Append(WebhookQueryParameters).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Environment != null)
                     hash = hash * 59 + this.Environment.GetHashCode();
-                
+
                 if (this.EventName != null)
                     hash = hash * 59 + this.EventName.GetHashCode();
-                
+
                 if (this.WebhookQueryParameters != null)
                     hash = hash * 59 + this.WebhookQueryParameters.GetHashCode();
-                
+
                 if (this.EventInputParameters != null)
                     hash = hash * 59 + this.EventInputParameters.GetHashCode();
-                
+
                 return hash;
             }
         }

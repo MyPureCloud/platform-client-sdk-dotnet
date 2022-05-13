@@ -18,59 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GDPRSubject :  IEquatable<GDPRSubject>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GDPRSubject" /> class.
         /// </summary>
@@ -99,87 +46,87 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ExternalContactId
         /// </summary>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DialerContactId
         /// </summary>
         [DataMember(Name="dialerContactId", EmitDefaultValue=false)]
         public DialerContactId DialerContactId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets JourneyCustomer
         /// </summary>
         [DataMember(Name="journeyCustomer", EmitDefaultValue=false)]
         public GDPRJourneyCustomer JourneyCustomer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SocialHandle
         /// </summary>
         [DataMember(Name="socialHandle", EmitDefaultValue=false)]
         public SocialHandle SocialHandle { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ExternalId
         /// </summary>
         [DataMember(Name="externalId", EmitDefaultValue=false)]
         public string ExternalId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Addresses
         /// </summary>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<string> Addresses { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PhoneNumbers
         /// </summary>
         [DataMember(Name="phoneNumbers", EmitDefaultValue=false)]
         public List<string> PhoneNumbers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EmailAddresses
         /// </summary>
         [DataMember(Name="emailAddresses", EmitDefaultValue=false)]
         public List<string> EmailAddresses { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,7 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GDPRSubject {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
@@ -302,37 +249,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
-                
+
                 if (this.DialerContactId != null)
                     hash = hash * 59 + this.DialerContactId.GetHashCode();
-                
+
                 if (this.JourneyCustomer != null)
                     hash = hash * 59 + this.JourneyCustomer.GetHashCode();
-                
+
                 if (this.SocialHandle != null)
                     hash = hash * 59 + this.SocialHandle.GetHashCode();
-                
+
                 if (this.ExternalId != null)
                     hash = hash * 59 + this.ExternalId.GetHashCode();
-                
+
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
-                
+
                 if (this.PhoneNumbers != null)
                     hash = hash * 59 + this.PhoneNumbers.GetHashCode();
-                
+
                 if (this.EmailAddresses != null)
                     hash = hash * 59 + this.EmailAddresses.GetHashCode();
-                
+
                 return hash;
             }
         }

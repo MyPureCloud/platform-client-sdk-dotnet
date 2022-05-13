@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class InboundDomainPatchRequest :  IEquatable<InboundDomainPatchRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundDomainPatchRequest" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false.
         /// </summary>
         /// <value>The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false.</value>
         [DataMember(Name="mailFromSettings", EmitDefaultValue=false)]
         public MailFromResult MailFromSettings { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The custom SMTP server integration to use when sending outbound emails from this domain.
         /// </summary>
         /// <value>The custom SMTP server integration to use when sending outbound emails from this domain.</value>
         [DataMember(Name="customSMTPServer", EmitDefaultValue=false)]
         public DomainEntityRef CustomSMTPServer { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InboundDomainPatchRequest {\n");
-            
+
             sb.Append("  MailFromSettings: ").Append(MailFromSettings).Append("\n");
             sb.Append("  CustomSMTPServer: ").Append(CustomSMTPServer).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MailFromSettings != null)
                     hash = hash * 59 + this.MailFromSettings.GetHashCode();
-                
+
                 if (this.CustomSMTPServer != null)
                     hash = hash * 59 + this.CustomSMTPServer.GetHashCode();
-                
+
                 return hash;
             }
         }

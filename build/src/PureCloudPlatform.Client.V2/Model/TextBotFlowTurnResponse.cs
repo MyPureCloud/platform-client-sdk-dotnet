@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotFlowTurnResponse :  IEquatable<TextBotFlowTurnResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the suggested next action. If appropriate, the matching output event object includes additional information.
         /// </summary>
@@ -68,47 +57,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Exit")]
             Exit
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Indicates the suggested next action. If appropriate, the matching output event object includes additional information.
         /// </summary>
         /// <value>Indicates the suggested next action. If appropriate, the matching output event object includes additional information.</value>
         [DataMember(Name="nextActionType", EmitDefaultValue=false)]
         public NextActionTypeEnum? NextActionType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotFlowTurnResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotFlowTurnResponse() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotFlowTurnResponse" /> class.
         /// </summary>
@@ -131,63 +91,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the bot flow turn. If additional turns are needed, supply this ID as the previous turn in your next turn request.
         /// </summary>
         /// <value>The ID of the bot flow turn. If additional turns are needed, supply this ID as the previous turn in your next turn request.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The reference to a previous turn, if applicable.
         /// </summary>
         /// <value>The reference to a previous turn, if applicable.</value>
         [DataMember(Name="previousTurn", EmitDefaultValue=false)]
         public TextBotTurnReference PreviousTurn { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The output prompts for this turn.
         /// </summary>
         /// <value>The output prompts for this turn.</value>
         [DataMember(Name="prompts", EmitDefaultValue=false)]
         public TextBotOutputPrompts Prompts { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The next action directive for this turn if it is a Disconnect type.
         /// </summary>
         /// <value>The next action directive for this turn if it is a Disconnect type.</value>
         [DataMember(Name="nextActionDisconnect", EmitDefaultValue=false)]
         public TextBotDisconnectAction NextActionDisconnect { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The next action directive for this turn if it is a WaitForInput type.
         /// </summary>
         /// <value>The next action directive for this turn if it is a WaitForInput type.</value>
         [DataMember(Name="nextActionWaitForInput", EmitDefaultValue=false)]
         public TextBotWaitForInputAction NextActionWaitForInput { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The next action directive for this turn if it is an Exit type.
         /// </summary>
         /// <value>The next action directive for this turn if it is an Exit type.</value>
         [DataMember(Name="nextActionExit", EmitDefaultValue=false)]
         public TextBotExitAction NextActionExit { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -196,7 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotFlowTurnResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  PreviousTurn: ").Append(PreviousTurn).Append("\n");
             sb.Append("  Prompts: ").Append(Prompts).Append("\n");
@@ -292,28 +252,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.PreviousTurn != null)
                     hash = hash * 59 + this.PreviousTurn.GetHashCode();
-                
+
                 if (this.Prompts != null)
                     hash = hash * 59 + this.Prompts.GetHashCode();
-                
+
                 if (this.NextActionType != null)
                     hash = hash * 59 + this.NextActionType.GetHashCode();
-                
+
                 if (this.NextActionDisconnect != null)
                     hash = hash * 59 + this.NextActionDisconnect.GetHashCode();
-                
+
                 if (this.NextActionWaitForInput != null)
                     hash = hash * 59 + this.NextActionWaitForInput.GetHashCode();
-                
+
                 if (this.NextActionExit != null)
                     hash = hash * 59 + this.NextActionExit.GetHashCode();
-                
+
                 return hash;
             }
         }

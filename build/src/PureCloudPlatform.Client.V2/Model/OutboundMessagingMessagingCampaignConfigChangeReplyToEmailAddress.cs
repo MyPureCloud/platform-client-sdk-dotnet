@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress :  IEquatable<OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A UriReference for a resource
         /// </summary>
         /// <value>A UriReference for a resource</value>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public OutboundMessagingMessagingCampaignConfigChangeUriReference Domain { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A UriReference for a resource
         /// </summary>
         /// <value>A UriReference for a resource</value>
         [DataMember(Name="route", EmitDefaultValue=false)]
         public OutboundMessagingMessagingCampaignConfigChangeUriReference Route { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress {\n");
-            
+
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  Route: ").Append(Route).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
+
                 if (this.Route != null)
                     hash = hash * 59 + this.Route.GetHashCode();
-                
+
                 return hash;
             }
         }

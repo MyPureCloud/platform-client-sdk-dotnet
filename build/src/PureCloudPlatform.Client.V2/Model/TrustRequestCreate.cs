@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrustRequestCreate :  IEquatable<TrustRequestCreate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustRequestCreate" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of trustee users that are requesting access. If no users are specified, at least one group is required.
         /// </summary>
         /// <value>The list of trustee users that are requesting access. If no users are specified, at least one group is required.</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of trustee groups that are requesting access. If no groups are specified, at least one user is required.
         /// </summary>
         /// <value>The list of trustee groups that are requesting access. If no groups are specified, at least one user is required.</value>
         [DataMember(Name="groupIds", EmitDefaultValue=false)]
         public List<string> GroupIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrustRequestCreate {\n");
-            
+
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
             sb.Append("  GroupIds: ").Append(GroupIds).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
-                
+
                 if (this.GroupIds != null)
                     hash = hash * 59 + this.GroupIds.GetHashCode();
-                
+
                 return hash;
             }
         }

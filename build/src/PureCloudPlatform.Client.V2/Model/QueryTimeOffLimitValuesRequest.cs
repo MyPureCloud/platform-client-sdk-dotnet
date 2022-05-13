@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueryTimeOffLimitValuesRequest :  IEquatable<QueryTimeOffLimitValuesRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryTimeOffLimitValuesRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected QueryTimeOffLimitValuesRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryTimeOffLimitValuesRequest" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The time off limit object id to retrieve values for. Required if activityCodeId is not specified
         /// </summary>
         /// <value>The time off limit object id to retrieve values for. Required if activityCodeId is not specified</value>
         [DataMember(Name="timeOffLimitId", EmitDefaultValue=false)]
         public string TimeOffLimitId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The activity code id to filter the affected limit objects by. Required if timeOffLimitId is not specified
         /// </summary>
         /// <value>The activity code id to filter the affected limit objects by. Required if timeOffLimitId is not specified</value>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of the date ranges to return time off limit, allocated and waitlisted minutes.
         /// </summary>
         /// <value>The list of the date ranges to return time off limit, allocated and waitlisted minutes.</value>
         [DataMember(Name="dateRanges", EmitDefaultValue=false)]
         public List<LocalDateRange> DateRanges { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueryTimeOffLimitValuesRequest {\n");
-            
+
             sb.Append("  TimeOffLimitId: ").Append(TimeOffLimitId).Append("\n");
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  DateRanges: ").Append(DateRanges).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeOffLimitId != null)
                     hash = hash * 59 + this.TimeOffLimitId.GetHashCode();
-                
+
                 if (this.ActivityCodeId != null)
                     hash = hash * 59 + this.ActivityCodeId.GetHashCode();
-                
+
                 if (this.DateRanges != null)
                     hash = hash * 59 + this.DateRanges.GetHashCode();
-                
+
                 return hash;
             }
         }

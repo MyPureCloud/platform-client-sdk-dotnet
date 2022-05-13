@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuAgentScheduleHistoryDeletedChange :  IEquatable<BuAgentScheduleHistoryDeletedChange>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAgentScheduleHistoryDeletedChange" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The IDs of deleted shifts
         /// </summary>
         /// <value>The IDs of deleted shifts</value>
         [DataMember(Name="shiftIds", EmitDefaultValue=false)]
         public List<string> ShiftIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The dates of any deleted full day time off markers
         /// </summary>
         /// <value>The dates of any deleted full day time off markers</value>
         [DataMember(Name="fullDayTimeOffMarkerDates", EmitDefaultValue=false)]
         public List<String> FullDayTimeOffMarkerDates { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the entire agent schedule was deleted
         /// </summary>
         /// <value>Whether the entire agent schedule was deleted</value>
         [DataMember(Name="agentSchedule", EmitDefaultValue=false)]
         public bool? AgentSchedule { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuAgentScheduleHistoryDeletedChange {\n");
-            
+
             sb.Append("  ShiftIds: ").Append(ShiftIds).Append("\n");
             sb.Append("  FullDayTimeOffMarkerDates: ").Append(FullDayTimeOffMarkerDates).Append("\n");
             sb.Append("  AgentSchedule: ").Append(AgentSchedule).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ShiftIds != null)
                     hash = hash * 59 + this.ShiftIds.GetHashCode();
-                
+
                 if (this.FullDayTimeOffMarkerDates != null)
                     hash = hash * 59 + this.FullDayTimeOffMarkerDates.GetHashCode();
-                
+
                 if (this.AgentSchedule != null)
                     hash = hash * 59 + this.AgentSchedule.GetHashCode();
-                
+
                 return hash;
             }
         }

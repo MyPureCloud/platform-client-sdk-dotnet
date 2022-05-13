@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BatchDownloadRequest :  IEquatable<BatchDownloadRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchDownloadRequest" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Conversation id requested
         /// </summary>
         /// <value>Conversation id requested</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Recording id requested, optional.  Leave null for all recordings on the conversation
         /// </summary>
         /// <value>Recording id requested, optional.  Leave null for all recordings on the conversation</value>
         [DataMember(Name="recordingId", EmitDefaultValue=false)]
         public string RecordingId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BatchDownloadRequest {\n");
-            
+
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.RecordingId != null)
                     hash = hash * 59 + this.RecordingId.GetHashCode();
-                
+
                 return hash;
             }
         }

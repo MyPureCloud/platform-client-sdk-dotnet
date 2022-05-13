@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ProgramJobRequest :  IEquatable<ProgramJobRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ProgramJobRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ProgramJobRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ProgramJobRequest" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ids of the programs used for this job
         /// </summary>
         /// <value>The ids of the programs used for this job</value>
         [DataMember(Name="programIds", EmitDefaultValue=false)]
         public List<string> ProgramIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ProgramJobRequest {\n");
-            
+
             sb.Append("  ProgramIds: ").Append(ProgramIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ProgramIds != null)
                     hash = hash * 59 + this.ProgramIds.GetHashCode();
-                
+
                 return hash;
             }
         }

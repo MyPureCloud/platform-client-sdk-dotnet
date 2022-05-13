@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RequestConfig :  IEquatable<RequestConfig>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestConfig" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// URL that may include placeholders for requests to 3rd party service
         /// </summary>
         /// <value>URL that may include placeholders for requests to 3rd party service</value>
         [DataMember(Name="requestUrlTemplate", EmitDefaultValue=false)]
         public string RequestUrlTemplate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Velocity template to define request body sent to 3rd party service.
         /// </summary>
         /// <value>Velocity template to define request body sent to 3rd party service.</value>
         [DataMember(Name="requestTemplate", EmitDefaultValue=false)]
         public string RequestTemplate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URI to retrieve requestTemplate
         /// </summary>
         /// <value>URI to retrieve requestTemplate</value>
         [DataMember(Name="requestTemplateUri", EmitDefaultValue=false)]
         public string RequestTemplateUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// HTTP method to use for request
         /// </summary>
         /// <value>HTTP method to use for request</value>
         [DataMember(Name="requestType", EmitDefaultValue=false)]
         public string RequestType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Headers to include in request in (Header Name, Value) pairs.
         /// </summary>
         /// <value>Headers to include in request in (Header Name, Value) pairs.</value>
         [DataMember(Name="headers", EmitDefaultValue=false)]
         public Dictionary<string, string> Headers { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RequestConfig {\n");
-            
+
             sb.Append("  RequestUrlTemplate: ").Append(RequestUrlTemplate).Append("\n");
             sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
             sb.Append("  RequestTemplateUri: ").Append(RequestTemplateUri).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RequestUrlTemplate != null)
                     hash = hash * 59 + this.RequestUrlTemplate.GetHashCode();
-                
+
                 if (this.RequestTemplate != null)
                     hash = hash * 59 + this.RequestTemplate.GetHashCode();
-                
+
                 if (this.RequestTemplateUri != null)
                     hash = hash * 59 + this.RequestTemplateUri.GetHashCode();
-                
+
                 if (this.RequestType != null)
                     hash = hash * 59 + this.RequestType.GetHashCode();
-                
+
                 if (this.Headers != null)
                     hash = hash * 59 + this.Headers.GetHashCode();
-                
+
                 return hash;
             }
         }

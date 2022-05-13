@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Assignment :  IEquatable<Assignment>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Assignment" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of users successfully assigned to the custom performance profile
         /// </summary>
         /// <value>The list of users successfully assigned to the custom performance profile</value>
         [DataMember(Name="assignedMembers", EmitDefaultValue=false)]
         public List<UserReference> AssignedMembers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of users successfully removed from the custom performance profile
         /// </summary>
         /// <value>The list of users successfully removed from the custom performance profile</value>
         [DataMember(Name="removedMembers", EmitDefaultValue=false)]
         public List<UserReference> RemovedMembers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of users failed assignment or removal for the custom performance profile
         /// </summary>
         /// <value>The list of users failed assignment or removal for the custom performance profile</value>
         [DataMember(Name="assignmentErrors", EmitDefaultValue=false)]
         public List<AssignmentError> AssignmentErrors { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Assignment {\n");
-            
+
             sb.Append("  AssignedMembers: ").Append(AssignedMembers).Append("\n");
             sb.Append("  RemovedMembers: ").Append(RemovedMembers).Append("\n");
             sb.Append("  AssignmentErrors: ").Append(AssignmentErrors).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AssignedMembers != null)
                     hash = hash * 59 + this.AssignedMembers.GetHashCode();
-                
+
                 if (this.RemovedMembers != null)
                     hash = hash * 59 + this.RemovedMembers.GetHashCode();
-                
+
                 if (this.AssignmentErrors != null)
                     hash = hash * 59 + this.AssignmentErrors.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportingTurn :  IEquatable<ReportingTurn>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Result of the bot flow 'ask' action.
         /// </summary>
@@ -152,50 +129,23 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NoInputDisambiguation")]
             Noinputdisambiguation
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Result of the bot flow 'ask' action.
         /// </summary>
         /// <value>Result of the bot flow 'ask' action.</value>
         [DataMember(Name="askActionResult", EmitDefaultValue=false)]
         public AskActionResultEnum? AskActionResult { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingTurn" /> class.
         /// </summary>
         /// <param name="UserInput">The chosen user input associated with this reporting turn..</param>
         /// <param name="BotPrompts">The bot prompts associated with this reporting turn..</param>
         /// <param name="SessionId">The bot session ID that this reporting turn is grouped under..</param>
-        /// <param name="AskAction">The bot flow &#39;ask&#39; action associated with this reporting turn (e.g. AskForIntent)..</param>
+        /// <param name="AskAction">The bot flow 'ask' action associated with this reporting turn (e.g. AskForIntent)..</param>
         /// <param name="Intent">The intent and associated slots detected during this reporting turn..</param>
         /// <param name="Knowledge">The knowledge data captured during this reporting turn..</param>
         /// <param name="DateCreated">Timestamp indicating when the original turn was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="AskActionResult">Result of the bot flow &#39;ask&#39; action..</param>
+        /// <param name="AskActionResult">Result of the bot flow 'ask' action..</param>
         public ReportingTurn(string UserInput = null, List<string> BotPrompts = null, string SessionId = null, ReportingTurnAction AskAction = null, ReportingTurnIntent Intent = null, ReportingTurnKnowledge Knowledge = null, DateTime? DateCreated = null, AskActionResultEnum? AskActionResult = null)
         {
             this.UserInput = UserInput;
@@ -209,81 +159,81 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The chosen user input associated with this reporting turn.
         /// </summary>
         /// <value>The chosen user input associated with this reporting turn.</value>
         [DataMember(Name="userInput", EmitDefaultValue=false)]
         public string UserInput { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The bot prompts associated with this reporting turn.
         /// </summary>
         /// <value>The bot prompts associated with this reporting turn.</value>
         [DataMember(Name="botPrompts", EmitDefaultValue=false)]
         public List<string> BotPrompts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The bot session ID that this reporting turn is grouped under.
         /// </summary>
         /// <value>The bot session ID that this reporting turn is grouped under.</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The bot flow &#39;ask&#39; action associated with this reporting turn (e.g. AskForIntent).
+        /// The bot flow 'ask' action associated with this reporting turn (e.g. AskForIntent).
         /// </summary>
-        /// <value>The bot flow &#39;ask&#39; action associated with this reporting turn (e.g. AskForIntent).</value>
+        /// <value>The bot flow 'ask' action associated with this reporting turn (e.g. AskForIntent).</value>
         [DataMember(Name="askAction", EmitDefaultValue=false)]
         public ReportingTurnAction AskAction { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The intent and associated slots detected during this reporting turn.
         /// </summary>
         /// <value>The intent and associated slots detected during this reporting turn.</value>
         [DataMember(Name="intent", EmitDefaultValue=false)]
         public ReportingTurnIntent Intent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The knowledge data captured during this reporting turn.
         /// </summary>
         /// <value>The knowledge data captured during this reporting turn.</value>
         [DataMember(Name="knowledge", EmitDefaultValue=false)]
         public ReportingTurnKnowledge Knowledge { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp indicating when the original turn was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the original turn was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The conversation details, across potentially multiple Bot Flow sessions.
         /// </summary>
         /// <value>The conversation details, across potentially multiple Bot Flow sessions.</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public AddressableEntityRef Conversation { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -292,7 +242,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportingTurn {\n");
-            
+
             sb.Append("  UserInput: ").Append(UserInput).Append("\n");
             sb.Append("  BotPrompts: ").Append(BotPrompts).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
@@ -400,34 +350,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserInput != null)
                     hash = hash * 59 + this.UserInput.GetHashCode();
-                
+
                 if (this.BotPrompts != null)
                     hash = hash * 59 + this.BotPrompts.GetHashCode();
-                
+
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
-                
+
                 if (this.AskAction != null)
                     hash = hash * 59 + this.AskAction.GetHashCode();
-                
+
                 if (this.Intent != null)
                     hash = hash * 59 + this.Intent.GetHashCode();
-                
+
                 if (this.Knowledge != null)
                     hash = hash * 59 + this.Knowledge.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.AskActionResult != null)
                     hash = hash * 59 + this.AskActionResult.GetHashCode();
-                
+
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
+
                 return hash;
             }
         }

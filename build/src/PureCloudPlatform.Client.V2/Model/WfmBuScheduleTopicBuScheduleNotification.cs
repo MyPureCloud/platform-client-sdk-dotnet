@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuScheduleTopicBuScheduleNotification :  IEquatable<WfmBuScheduleTopicBuScheduleNotification>
     {
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -58,13 +56,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets EventType
         /// </summary>
@@ -103,34 +94,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Delete")]
             Delete
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets EventType
         /// </summary>
         [DataMember(Name="eventType", EmitDefaultValue=false)]
         public EventTypeEnum? EventType { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuScheduleTopicBuScheduleNotification" /> class.
         /// </summary>
@@ -147,27 +120,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets OperationId
         /// </summary>
         [DataMember(Name="operationId", EmitDefaultValue=false)]
         public string OperationId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Result
         /// </summary>
         [DataMember(Name="result", EmitDefaultValue=false)]
         public WfmBuScheduleTopicBuScheduleMetadata Result { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -176,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuScheduleTopicBuScheduleNotification {\n");
-            
+
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  OperationId: ").Append(OperationId).Append("\n");
             sb.Append("  EventType: ").Append(EventType).Append("\n");
@@ -254,19 +227,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.OperationId != null)
                     hash = hash * 59 + this.OperationId.GetHashCode();
-                
+
                 if (this.EventType != null)
                     hash = hash * 59 + this.EventType.GetHashCode();
-                
+
                 if (this.Result != null)
                     hash = hash * 59 + this.Result.GetHashCode();
-                
+
                 return hash;
             }
         }

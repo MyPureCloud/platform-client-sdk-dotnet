@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AssessmentFormQuestion :  IEquatable<AssessmentFormQuestion>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -61,72 +56,17 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "readOnlyTextBlockQuestion")]
             Readonlytextblockquestion
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AssessmentFormQuestion" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AssessmentFormQuestion() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AssessmentFormQuestion" /> class.
         /// </summary>
@@ -157,94 +97,94 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The question text
         /// </summary>
         /// <value>The question text</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets HelpText
         /// </summary>
         [DataMember(Name="helpText", EmitDefaultValue=false)]
         public string HelpText { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NaEnabled
         /// </summary>
         [DataMember(Name="naEnabled", EmitDefaultValue=false)]
         public bool? NaEnabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CommentsRequired
         /// </summary>
         [DataMember(Name="commentsRequired", EmitDefaultValue=false)]
         public bool? CommentsRequired { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets VisibilityCondition
         /// </summary>
         [DataMember(Name="visibilityCondition", EmitDefaultValue=false)]
         public VisibilityCondition VisibilityCondition { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Options from which to choose an answer for this question. Only used by Multiple Choice type questions.
         /// </summary>
         /// <value>Options from which to choose an answer for this question. Only used by Multiple Choice type questions.</value>
         [DataMember(Name="answerOptions", EmitDefaultValue=false)]
         public List<AnswerOption> AnswerOptions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// How many characters are allowed in the text response to this question. Used by Free Text question types.
         /// </summary>
         /// <value>How many characters are allowed in the text response to this question. Used by Free Text question types.</value>
         [DataMember(Name="maxResponseCharacters", EmitDefaultValue=false)]
         public int? MaxResponseCharacters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Does an incorrect answer to this question mark the form as having a failed kill question. Only used by Multiple Choice type questions.
         /// </summary>
         /// <value>Does an incorrect answer to this question mark the form as having a failed kill question. Only used by Multiple Choice type questions.</value>
         [DataMember(Name="isKill", EmitDefaultValue=false)]
         public bool? IsKill { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Does this question contribute to the critical score. Only used by Multiple Choice type questions.
         /// </summary>
         /// <value>Does this question contribute to the critical score. Only used by Multiple Choice type questions.</value>
         [DataMember(Name="isCritical", EmitDefaultValue=false)]
         public bool? IsCritical { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -253,7 +193,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AssessmentFormQuestion {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
@@ -373,40 +313,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.HelpText != null)
                     hash = hash * 59 + this.HelpText.GetHashCode();
-                
+
                 if (this.NaEnabled != null)
                     hash = hash * 59 + this.NaEnabled.GetHashCode();
-                
+
                 if (this.CommentsRequired != null)
                     hash = hash * 59 + this.CommentsRequired.GetHashCode();
-                
+
                 if (this.VisibilityCondition != null)
                     hash = hash * 59 + this.VisibilityCondition.GetHashCode();
-                
+
                 if (this.AnswerOptions != null)
                     hash = hash * 59 + this.AnswerOptions.GetHashCode();
-                
+
                 if (this.MaxResponseCharacters != null)
                     hash = hash * 59 + this.MaxResponseCharacters.GetHashCode();
-                
+
                 if (this.IsKill != null)
                     hash = hash * 59 + this.IsKill.GetHashCode();
-                
+
                 if (this.IsCritical != null)
                     hash = hash * 59 + this.IsCritical.GetHashCode();
-                
+
                 return hash;
             }
         }

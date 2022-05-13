@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuScheduleTopicBuManagementUnitScheduleSummary :  IEquatable<WfmBuScheduleTopicBuManagementUnitScheduleSummary>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuScheduleTopicBuManagementUnitScheduleSummary" /> class.
         /// </summary>
@@ -64,47 +36,47 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ManagementUnit
         /// </summary>
         [DataMember(Name="managementUnit", EmitDefaultValue=false)]
         public WfmBuScheduleTopicManagementUnit ManagementUnit { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EndDate
         /// </summary>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Agents
         /// </summary>
         [DataMember(Name="agents", EmitDefaultValue=false)]
         public List<WfmBuScheduleTopicUserReference> Agents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AgentCount
         /// </summary>
         [DataMember(Name="agentCount", EmitDefaultValue=false)]
         public int? AgentCount { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuScheduleTopicBuManagementUnitScheduleSummary {\n");
-            
+
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
@@ -197,22 +169,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ManagementUnit != null)
                     hash = hash * 59 + this.ManagementUnit.GetHashCode();
-                
+
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 if (this.Agents != null)
                     hash = hash * 59 + this.Agents.GetHashCode();
-                
+
                 if (this.AgentCount != null)
                     hash = hash * 59 + this.AgentCount.GetHashCode();
-                
+
                 return hash;
             }
         }

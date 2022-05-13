@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QualityAuditQueryExecutionStatusResponse :  IEquatable<QualityAuditQueryExecutionStatusResponse>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of the audit query execution request.
         /// </summary>
@@ -68,42 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Cancelled")]
             Cancelled
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of the audit query execution request.
         /// </summary>
         /// <value>Status of the audit query execution request.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QualityAuditQueryExecutionStatusResponse" /> class.
         /// </summary>
@@ -124,54 +89,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Id of the audit query execution request.
         /// </summary>
         /// <value>Id of the audit query execution request.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Start date and time of the audit query execution. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Start date and time of the audit query execution. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateStart", EmitDefaultValue=false)]
         public DateTime? DateStart { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Interval for the audit query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
         /// <value>Interval for the audit query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filters for the audit query.
         /// </summary>
         /// <value>Filters for the audit query.</value>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<QualityAuditQueryFilter> Filters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Sort parameter for the audit query.
         /// </summary>
         /// <value>Sort parameter for the audit query.</value>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public List<AuditQuerySort> Sort { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -180,7 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QualityAuditQueryExecutionStatusResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
@@ -270,25 +235,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();
-                
+
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
+
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
-                
+
                 if (this.Sort != null)
                     hash = hash * 59 + this.Sort.GetHashCode();
-                
+
                 return hash;
             }
         }

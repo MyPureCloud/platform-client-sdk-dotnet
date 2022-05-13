@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OpenActionFields :  IEquatable<OpenActionFields>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenActionFields" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected OpenActionFields() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenActionFields" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The specific type of the open action.
         /// </summary>
         /// <value>The specific type of the open action.</value>
         [DataMember(Name="openAction", EmitDefaultValue=false)]
         public DomainEntityRef OpenAction { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Custom fields defined in the schema referenced by the open action type selected.
         /// </summary>
         /// <value>Custom fields defined in the schema referenced by the open action type selected.</value>
         [DataMember(Name="configurationFields", EmitDefaultValue=false)]
         public Dictionary<string, Object> ConfigurationFields { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OpenActionFields {\n");
-            
+
             sb.Append("  OpenAction: ").Append(OpenAction).Append("\n");
             sb.Append("  ConfigurationFields: ").Append(ConfigurationFields).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OpenAction != null)
                     hash = hash * 59 + this.OpenAction.GetHashCode();
-                
+
                 if (this.ConfigurationFields != null)
                     hash = hash * 59 + this.ConfigurationFields.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsUserDetail :  IEquatable<AnalyticsUserDetail>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsUserDetail" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The identifier for the user
         /// </summary>
         /// <value>The identifier for the user</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The presence records for the user
         /// </summary>
         /// <value>The presence records for the user</value>
         [DataMember(Name="primaryPresence", EmitDefaultValue=false)]
         public List<AnalyticsUserPresenceRecord> PrimaryPresence { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ACD routing status records for the user
         /// </summary>
         /// <value>The ACD routing status records for the user</value>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public List<AnalyticsRoutingStatusRecord> RoutingStatus { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsUserDetail {\n");
-            
+
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  PrimaryPresence: ").Append(PrimaryPresence).Append("\n");
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.PrimaryPresence != null)
                     hash = hash * 59 + this.PrimaryPresence.GetHashCode();
-                
+
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
-                
+
                 return hash;
             }
         }

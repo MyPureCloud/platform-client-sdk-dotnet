@@ -89,7 +89,7 @@ void (empty response body)
 
 <a name="deletegroupmembers"></a>
 
-## [**Empty**](Empty.html) DeleteGroupMembers (string groupId, string ids)
+## **Object** DeleteGroupMembers (string groupId, string ids)
 
 
 
@@ -128,7 +128,7 @@ namespace Example
             try
             { 
                 // Remove members
-                Empty result = apiInstance.DeleteGroupMembers(groupId, ids);
+                Object result = apiInstance.DeleteGroupMembers(groupId, ids);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -151,7 +151,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="getfieldconfig"></a>
 
@@ -427,6 +427,8 @@ Get group profile
 
 This api is deprecated. Use /api/v2/groups instead
 
+
+
 Requires NO permissions: 
 
 
@@ -476,7 +478,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| groupId |  |
-| **fields** | **string**| Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList | [optional]  |
+| **fields** | **string**| Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -631,6 +633,8 @@ Get group profile listing
 
 This api is deprecated. Use /api/v2/groups instead.
 
+
+
 Requires NO permissions: 
 
 
@@ -693,7 +697,7 @@ namespace Example
 
 <a name="postgroupmembers"></a>
 
-## [**Empty**](Empty.html) PostGroupMembers (string groupId, GroupMembersUpdate body)
+## **Object** PostGroupMembers (string groupId, GroupMembersUpdate body)
 
 
 
@@ -732,7 +736,7 @@ namespace Example
             try
             { 
                 // Add members
-                Empty result = apiInstance.PostGroupMembers(groupId, body);
+                Object result = apiInstance.PostGroupMembers(groupId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -755,7 +759,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="postgroups"></a>
 

@@ -16,7 +16,7 @@ title: MessagingSettingReference
 | **CreatedBy** | [**DomainEntityRef**](DomainEntityRef.html) | User reference that created this Setting | [optional] |
 | **UpdatedBy** | [**DomainEntityRef**](DomainEntityRef.html) | User reference that modified this Setting | [optional] |
 | **Content** | [**ContentSetting**](ContentSetting.html) | Settings relating to message contents | [optional] |
-| **_Event** | [**EventSetting**](EventSetting.html) | Settings relating to events which may occur | [optional] |
+| **Event** | [**EventSetting**](EventSetting.html) | Settings relating to events which may occur | [optional] |
 {: class="table table-striped"}
 
 

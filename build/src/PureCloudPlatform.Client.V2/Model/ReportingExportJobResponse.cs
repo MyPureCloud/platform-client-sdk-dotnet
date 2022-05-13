@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportingExportJobResponse :  IEquatable<ReportingExportJobResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current status of the export request
         /// </summary>
@@ -86,13 +75,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILED")]
             Failed
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The requested format of the exported data
         /// </summary>
@@ -120,16 +102,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PDF")]
             Pdf
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of view export job to be created
         /// </summary>
@@ -619,10 +591,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PREDICTIVE_ROUTING_MODEL_VIEW")]
             PredictiveRoutingModelView
         }
-        
-        
-        
-        
         /// <summary>
         /// The error message in case the export request failed
         /// </summary>
@@ -722,46 +690,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NOT_AUTHORIZED_TO_VIEW_EXPORT")]
             NotAuthorizedToViewExport
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request
         /// </summary>
@@ -789,21 +717,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "COMMA")]
             Comma
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Inner
         /// </summary>
@@ -836,121 +749,42 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Failed")]
             Failed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The current status of the export request
         /// </summary>
         /// <value>The current status of the export request</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// The requested format of the exported data
         /// </summary>
         /// <value>The requested format of the exported data</value>
         [DataMember(Name="exportFormat", EmitDefaultValue=false)]
         public ExportFormatEnum? ExportFormat { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of view export job to be created
         /// </summary>
         /// <value>The type of view export job to be created</value>
         [DataMember(Name="viewType", EmitDefaultValue=false)]
         public ViewTypeEnum? ViewType { get; set; }
-        
-        
-        
         /// <summary>
         /// The error message in case the export request failed
         /// </summary>
         /// <value>The error message in case the export request failed</value>
         [DataMember(Name="exportErrorMessagesType", EmitDefaultValue=false)]
         public ExportErrorMessagesTypeEnum? ExportErrorMessagesType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request
         /// </summary>
         /// <value>The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request</value>
         [DataMember(Name="csvDelimiter", EmitDefaultValue=false)]
         public CsvDelimiterEnum? CsvDelimiter { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ReportingExportJobResponse() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobResponse" /> class.
         /// </summary>
@@ -960,7 +794,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeZone">The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London (required).</param>
         /// <param name="ExportFormat">The requested format of the exported data (required).</param>
         /// <param name="Interval">The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
-        /// <param name="DownloadUrl">The url to download the request if it&#39;s status is completed.</param>
+        /// <param name="DownloadUrl">The url to download the request if it's status is completed.</param>
         /// <param name="ViewType">The type of view export job to be created (required).</param>
         /// <param name="ExportErrorMessagesType">The error message in case the export request failed.</param>
         /// <param name="Period">The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H (required).</param>
@@ -975,7 +809,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExcludeEmptyRows">Excludes empty rows from the exports.</param>
         /// <param name="HasSplitByMedia">Indicates if media type will be split in aggregate detail exports.</param>
         /// <param name="HasSummaryRow">Indicates if summary row needs to be present in exports.</param>
-        /// <param name="CsvDelimiter">The user supplied csv delimiter string value either of type &#39;comma&#39; or &#39;semicolon&#39; permitted for the export request.</param>
+        /// <param name="CsvDelimiter">The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request.</param>
         /// <param name="SelectedColumns">The list of ordered selected columns from the export view by the user.</param>
         /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
         /// <param name="RecipientEmails">The list of email recipients for the exports.</param>
@@ -1015,240 +849,240 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The unique run id of the export schedule execute
         /// </summary>
         /// <value>The unique run id of the export schedule execute</value>
         [DataMember(Name="runId", EmitDefaultValue=false)]
         public string RunId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
         /// </summary>
         /// <value>The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
         /// <value>The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The url to download the request if it&#39;s status is completed
+        /// The url to download the request if it's status is completed
         /// </summary>
-        /// <value>The url to download the request if it&#39;s status is completed</value>
+        /// <value>The url to download the request if it's status is completed</value>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H
         /// </summary>
         /// <value>The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
         [DataMember(Name="period", EmitDefaultValue=false)]
         public string Period { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Filters to apply to create the view
         /// </summary>
         /// <value>Filters to apply to create the view</value>
         [DataMember(Name="filter", EmitDefaultValue=false)]
         public ViewFilter Filter { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if the request has been marked as read
         /// </summary>
         /// <value>Indicates if the request has been marked as read</value>
         [DataMember(Name="read", EmitDefaultValue=false)]
         public bool? Read { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The created date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The created date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createdDateTime", EmitDefaultValue=false)]
         public DateTime? CreatedDateTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The last modified date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The last modified date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modifiedDateTime", EmitDefaultValue=false)]
         public DateTime? ModifiedDateTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The locale use for localization of the exported data, i.e. en-us, es-mx  
         /// </summary>
         /// <value>The locale use for localization of the exported data, i.e. en-us, es-mx  </value>
         [DataMember(Name="locale", EmitDefaultValue=false)]
         public string Locale { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The percentage of the job that has completed processing
         /// </summary>
         /// <value>The percentage of the job that has completed processing</value>
         [DataMember(Name="percentageComplete", EmitDefaultValue=false)]
         public double? PercentageComplete { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if durations are formatted in hh:mm:ss format instead of ms
         /// </summary>
         /// <value>Indicates if durations are formatted in hh:mm:ss format instead of ms</value>
         [DataMember(Name="hasFormatDurations", EmitDefaultValue=false)]
         public bool? HasFormatDurations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if filters will be split in aggregate detail exports
         /// </summary>
         /// <value>Indicates if filters will be split in aggregate detail exports</value>
         [DataMember(Name="hasSplitFilters", EmitDefaultValue=false)]
         public bool? HasSplitFilters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Excludes empty rows from the exports
         /// </summary>
         /// <value>Excludes empty rows from the exports</value>
         [DataMember(Name="excludeEmptyRows", EmitDefaultValue=false)]
         public bool? ExcludeEmptyRows { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if media type will be split in aggregate detail exports
         /// </summary>
         /// <value>Indicates if media type will be split in aggregate detail exports</value>
         [DataMember(Name="hasSplitByMedia", EmitDefaultValue=false)]
         public bool? HasSplitByMedia { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if summary row needs to be present in exports
         /// </summary>
         /// <value>Indicates if summary row needs to be present in exports</value>
         [DataMember(Name="hasSummaryRow", EmitDefaultValue=false)]
         public bool? HasSummaryRow { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The list of ordered selected columns from the export view by the user
         /// </summary>
         /// <value>The list of ordered selected columns from the export view by the user</value>
         [DataMember(Name="selectedColumns", EmitDefaultValue=false)]
         public List<SelectedColumns> SelectedColumns { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates if custom participant attributes will be exported
         /// </summary>
         /// <value>Indicates if custom participant attributes will be exported</value>
         [DataMember(Name="hasCustomParticipantAttributes", EmitDefaultValue=false)]
         public bool? HasCustomParticipantAttributes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of email recipients for the exports
         /// </summary>
         /// <value>The list of email recipients for the exports</value>
         [DataMember(Name="recipientEmails", EmitDefaultValue=false)]
         public List<string> RecipientEmails { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The status of individual email addresses as a map
         /// </summary>
         /// <value>The status of individual email addresses as a map</value>
         [DataMember(Name="emailStatuses", EmitDefaultValue=false)]
         public Dictionary<string, string> EmailStatuses { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The optional error message in case the export fail to email
         /// </summary>
         /// <value>The optional error message in case the export fail to email</value>
         [DataMember(Name="emailErrorDescription", EmitDefaultValue=false)]
         public string EmailErrorDescription { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1257,7 +1091,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportingExportJobResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  RunId: ").Append(RunId).Append("\n");
@@ -1491,97 +1325,96 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.RunId != null)
                     hash = hash * 59 + this.RunId.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
+
                 if (this.ExportFormat != null)
                     hash = hash * 59 + this.ExportFormat.GetHashCode();
-                
+
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
+
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
-                
+
                 if (this.ViewType != null)
                     hash = hash * 59 + this.ViewType.GetHashCode();
-                
+
                 if (this.ExportErrorMessagesType != null)
                     hash = hash * 59 + this.ExportErrorMessagesType.GetHashCode();
-                
+
                 if (this.Period != null)
                     hash = hash * 59 + this.Period.GetHashCode();
-                
+
                 if (this.Filter != null)
                     hash = hash * 59 + this.Filter.GetHashCode();
-                
+
                 if (this.Read != null)
                     hash = hash * 59 + this.Read.GetHashCode();
-                
+
                 if (this.CreatedDateTime != null)
                     hash = hash * 59 + this.CreatedDateTime.GetHashCode();
-                
+
                 if (this.ModifiedDateTime != null)
                     hash = hash * 59 + this.ModifiedDateTime.GetHashCode();
-                
+
                 if (this.Locale != null)
                     hash = hash * 59 + this.Locale.GetHashCode();
-                
+
                 if (this.PercentageComplete != null)
                     hash = hash * 59 + this.PercentageComplete.GetHashCode();
-                
+
                 if (this.HasFormatDurations != null)
                     hash = hash * 59 + this.HasFormatDurations.GetHashCode();
-                
+
                 if (this.HasSplitFilters != null)
                     hash = hash * 59 + this.HasSplitFilters.GetHashCode();
-                
+
                 if (this.ExcludeEmptyRows != null)
                     hash = hash * 59 + this.ExcludeEmptyRows.GetHashCode();
-                
+
                 if (this.HasSplitByMedia != null)
                     hash = hash * 59 + this.HasSplitByMedia.GetHashCode();
-                
+
                 if (this.HasSummaryRow != null)
                     hash = hash * 59 + this.HasSummaryRow.GetHashCode();
-                
+
                 if (this.CsvDelimiter != null)
                     hash = hash * 59 + this.CsvDelimiter.GetHashCode();
-                
+
                 if (this.SelectedColumns != null)
                     hash = hash * 59 + this.SelectedColumns.GetHashCode();
-                
+
                 if (this.HasCustomParticipantAttributes != null)
                     hash = hash * 59 + this.HasCustomParticipantAttributes.GetHashCode();
-                
+
                 if (this.RecipientEmails != null)
                     hash = hash * 59 + this.RecipientEmails.GetHashCode();
-                
+
                 if (this.EmailStatuses != null)
                     hash = hash * 59 + this.EmailStatuses.GetHashCode();
-                
+
                 if (this.EmailErrorDescription != null)
                     hash = hash * 59 + this.EmailErrorDescription.GetHashCode();
-                
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

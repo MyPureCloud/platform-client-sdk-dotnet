@@ -18,95 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuditMessage :  IEquatable<AuditMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditMessage" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AuditMessage() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditMessage" /> class.
         /// </summary>
@@ -147,149 +64,149 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// AuditMessage ID.
         /// </summary>
         /// <value>AuditMessage ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public AuditUser User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Correlation ID.
         /// </summary>
         /// <value>Correlation ID.</value>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Transaction ID.
         /// </summary>
         /// <value>Transaction ID.</value>
         [DataMember(Name="transactionId", EmitDefaultValue=false)]
         public string TransactionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not this audit can be considered the initiator of the transaction it is a part of.
         /// </summary>
         /// <value>Whether or not this audit can be considered the initiator of the transaction it is a part of.</value>
         [DataMember(Name="transactionInitiator", EmitDefaultValue=false)]
         public bool? TransactionInitiator { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The application through which the action of this AuditMessage was initiated.
         /// </summary>
         /// <value>The application through which the action of this AuditMessage was initiated.</value>
         [DataMember(Name="application", EmitDefaultValue=false)]
         public string Application { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the service which sent this AuditMessage.
         /// </summary>
         /// <value>The name of the service which sent this AuditMessage.</value>
         [DataMember(Name="serviceName", EmitDefaultValue=false)]
         public string ServiceName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The level of this audit. USER or SYSTEM.
         /// </summary>
         /// <value>The level of this audit. USER or SYSTEM.</value>
         [DataMember(Name="level", EmitDefaultValue=false)]
         public string Level { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time at which the action of this AuditMessage was initiated.
         /// </summary>
         /// <value>The time at which the action of this AuditMessage was initiated.</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public string Timestamp { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time at which this AuditMessage was received.
         /// </summary>
         /// <value>The time at which this AuditMessage was received.</value>
         [DataMember(Name="receivedTimestamp", EmitDefaultValue=false)]
         public string ReceivedTimestamp { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The status of the action of this AuditMessage
         /// </summary>
         /// <value>The status of the action of this AuditMessage</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The context of a system-level action
         /// </summary>
         /// <value>The context of a system-level action</value>
         [DataMember(Name="actionContext", EmitDefaultValue=false)]
         public string ActionContext { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A string representing the action that took place
         /// </summary>
         /// <value>A string representing the action that took place</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public string Action { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Details about any changes that occurred in this audit
         /// </summary>
         /// <value>Details about any changes that occurred in this audit</value>
         [DataMember(Name="changes", EmitDefaultValue=false)]
         public List<Change> Changes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public AuditEntity Entity { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The service-specific context associated with this AuditMessage.
         /// </summary>
         /// <value>The service-specific context associated with this AuditMessage.</value>
         [DataMember(Name="serviceContext", EmitDefaultValue=false)]
         public ServiceContext ServiceContext { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -298,7 +215,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuditMessage {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  CorrelationId: ").Append(CorrelationId).Append("\n");
@@ -448,55 +365,54 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.CorrelationId != null)
                     hash = hash * 59 + this.CorrelationId.GetHashCode();
-                
+
                 if (this.TransactionId != null)
                     hash = hash * 59 + this.TransactionId.GetHashCode();
-                
+
                 if (this.TransactionInitiator != null)
                     hash = hash * 59 + this.TransactionInitiator.GetHashCode();
-                
+
                 if (this.Application != null)
                     hash = hash * 59 + this.Application.GetHashCode();
-                
+
                 if (this.ServiceName != null)
                     hash = hash * 59 + this.ServiceName.GetHashCode();
-                
+
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
-                
+
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
+
                 if (this.ReceivedTimestamp != null)
                     hash = hash * 59 + this.ReceivedTimestamp.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.ActionContext != null)
                     hash = hash * 59 + this.ActionContext.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.Changes != null)
                     hash = hash * 59 + this.Changes.GetHashCode();
-                
+
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
-                
+
                 if (this.ServiceContext != null)
                     hash = hash * 59 + this.ServiceContext.GetHashCode();
-                
+
                 return hash;
             }
         }

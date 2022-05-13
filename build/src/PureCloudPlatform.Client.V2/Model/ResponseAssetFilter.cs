@@ -18,23 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResponseAssetFilter :  IEquatable<ResponseAssetFilter>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// How to apply this search criteria against other criteria
         /// </summary>
@@ -92,30 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DATE_RANGE")]
             DateRange
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// How to apply this search criteria against other criteria
         /// </summary>
         /// <value>How to apply this search criteria against other criteria</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseAssetFilter" /> class.
         /// </summary>
@@ -136,54 +101,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The end value of the range. This field is used for range search types. Accepts numbers and date in ISO8601 format
         /// </summary>
         /// <value>The end value of the range. This field is used for range search types. Accepts numbers and date in ISO8601 format</value>
         [DataMember(Name="endValue", EmitDefaultValue=false)]
         public string EndValue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of values for the search to match against
         /// </summary>
         /// <value>A list of values for the search to match against</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The start value of the range. This field is used for range search types. Accepts numbers and date in ISO8601 format
         /// </summary>
         /// <value>The start value of the range. This field is used for range search types. Accepts numbers and date in ISO8601 format</value>
         [DataMember(Name="startValue", EmitDefaultValue=false)]
         public string StartValue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Field name to search against. Allowed Values: divisionId, name, contentLength, contentType, dateCreated
         /// </summary>
         /// <value>Field name to search against. Allowed Values: divisionId, name, contentLength, contentType, dateCreated</value>
         [DataMember(Name="fields", EmitDefaultValue=false)]
         public List<string> Fields { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A value for the search to match against
         /// </summary>
         /// <value>A value for the search to match against</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,7 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResponseAssetFilter {\n");
-            
+
             sb.Append("  EndValue: ").Append(EndValue).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("  StartValue: ").Append(StartValue).Append("\n");
@@ -282,25 +247,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EndValue != null)
                     hash = hash * 59 + this.EndValue.GetHashCode();
-                
+
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
+
                 if (this.StartValue != null)
                     hash = hash * 59 + this.StartValue.GetHashCode();
-                
+
                 if (this.Fields != null)
                     hash = hash * 59 + this.Fields.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 return hash;
             }
         }

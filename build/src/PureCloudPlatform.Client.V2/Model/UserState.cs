@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserState :  IEquatable<UserState>
     {
-        
-        
         /// <summary>
         /// User's current state.
         /// </summary>
@@ -53,13 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Reason for a change in the user's state.
         /// </summary>
@@ -111,42 +102,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unknown")]
             Unknown
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// User's current state.
         /// </summary>
         /// <value>User's current state.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Reason for a change in the user's state.
         /// </summary>
         /// <value>Reason for a change in the user's state.</value>
         [DataMember(Name="stateChangeReason", EmitDefaultValue=false)]
         public StateChangeReasonEnum? StateChangeReason { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserState" /> class.
         /// </summary>
-        /// <param name="State">User&#39;s current state..</param>
+        /// <param name="State">User's current state..</param>
         /// <param name="Version">Version of this user..</param>
-        /// <param name="StateChangeReason">Reason for a change in the user&#39;s state..</param>
+        /// <param name="StateChangeReason">Reason for a change in the user's state..</param>
         public UserState(StateEnum? State = null, int? Version = null, StateChangeReasonEnum? StateChangeReason = null)
         {
             this.State = State;
@@ -155,29 +128,29 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Version of this user.
         /// </summary>
         /// <value>Version of this user.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Date that the state was last changed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date that the state was last changed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="stateChangeDate", EmitDefaultValue=false)]
         public DateTime? StateChangeDate { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -186,7 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserState {\n");
-            
+
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  StateChangeReason: ").Append(StateChangeReason).Append("\n");
@@ -264,19 +237,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.StateChangeReason != null)
                     hash = hash * 59 + this.StateChangeReason.GetHashCode();
-                
+
                 if (this.StateChangeDate != null)
                     hash = hash * 59 + this.StateChangeDate.GetHashCode();
-                
+
                 return hash;
             }
         }

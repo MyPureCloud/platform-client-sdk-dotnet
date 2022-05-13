@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ObservationMetricData :  IEquatable<ObservationMetricData>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ObservationMetricData" /> class.
         /// </summary>
@@ -64,49 +36,49 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public string Metric { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Qualifier
         /// </summary>
         [DataMember(Name="qualifier", EmitDefaultValue=false)]
         public string Qualifier { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Stats
         /// </summary>
         [DataMember(Name="stats", EmitDefaultValue=false)]
         public StatisticalSummary Stats { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Flag for a truncated list of observations. If truncated, the first half of the list of observations will contain the oldest observations and the second half the newest observations.
         /// </summary>
         /// <value>Flag for a truncated list of observations. If truncated, the first half of the list of observations will contain the oldest observations and the second half the newest observations.</value>
         [DataMember(Name="truncated", EmitDefaultValue=false)]
         public bool? Truncated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of observations sorted by timestamp in ascending order. This list may be truncated.
         /// </summary>
         /// <value>List of observations sorted by timestamp in ascending order. This list may be truncated.</value>
         [DataMember(Name="observations", EmitDefaultValue=false)]
         public List<ObservationValue> Observations { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -115,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ObservationMetricData {\n");
-            
+
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  Qualifier: ").Append(Qualifier).Append("\n");
             sb.Append("  Stats: ").Append(Stats).Append("\n");
@@ -199,22 +171,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
+
                 if (this.Qualifier != null)
                     hash = hash * 59 + this.Qualifier.GetHashCode();
-                
+
                 if (this.Stats != null)
                     hash = hash * 59 + this.Stats.GetHashCode();
-                
+
                 if (this.Truncated != null)
                     hash = hash * 59 + this.Truncated.GetHashCode();
-                
+
                 if (this.Observations != null)
                     hash = hash * 59 + this.Observations.GetHashCode();
-                
+
                 return hash;
             }
         }

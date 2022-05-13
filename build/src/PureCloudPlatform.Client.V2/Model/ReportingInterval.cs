@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportingInterval :  IEquatable<ReportingInterval>
     {
-        
-        
         /// <summary>
         /// The granularity of the reporting interval period
         /// </summary>
@@ -53,31 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Month")]
             Month
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The granularity of the reporting interval period
         /// </summary>
         /// <value>The granularity of the reporting interval period</value>
         [DataMember(Name="intervalType", EmitDefaultValue=false)]
         public IntervalTypeEnum? IntervalType { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingInterval" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ReportingInterval() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingInterval" /> class.
         /// </summary>
@@ -90,18 +75,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The value of the reporting interval period for a given interval type
         /// </summary>
         /// <value>The value of the reporting interval period for a given interval type</value>
         [DataMember(Name="intervalValue", EmitDefaultValue=false)]
         public int? IntervalValue { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportingInterval {\n");
-            
+
             sb.Append("  IntervalType: ").Append(IntervalType).Append("\n");
             sb.Append("  IntervalValue: ").Append(IntervalValue).Append("\n");
             sb.Append("}\n");
@@ -176,13 +161,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.IntervalType != null)
                     hash = hash * 59 + this.IntervalType.GetHashCode();
-                
+
                 if (this.IntervalValue != null)
                     hash = hash * 59 + this.IntervalValue.GetHashCode();
-                
+
                 return hash;
             }
         }

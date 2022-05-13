@@ -18,45 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LocalEncryptionConfiguration :  IEquatable<LocalEncryptionConfiguration>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LocalEncryptionConfiguration" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LocalEncryptionConfiguration() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LocalEncryptionConfiguration" /> class.
         /// </summary>
@@ -73,60 +40,60 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The url for decryption. This must specify the path to where Purecloud can requests decryption
         /// </summary>
         /// <value>The url for decryption. This must specify the path to where Purecloud can requests decryption</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The api id for Hawk Authentication.
         /// </summary>
         /// <value>The api id for Hawk Authentication.</value>
         [DataMember(Name="apiId", EmitDefaultValue=false)]
         public string ApiId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The api shared symmetric key used for hawk authentication
         /// </summary>
         /// <value>The api shared symmetric key used for hawk authentication</value>
         [DataMember(Name="apiKey", EmitDefaultValue=false)]
         public string ApiKey { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -135,7 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LocalEncryptionConfiguration {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
@@ -225,25 +192,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.ApiId != null)
                     hash = hash * 59 + this.ApiId.GetHashCode();
-                
+
                 if (this.ApiKey != null)
                     hash = hash * 59 + this.ApiKey.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

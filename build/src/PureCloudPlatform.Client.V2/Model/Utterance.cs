@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Utterance :  IEquatable<Utterance>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Utterance" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Utterance text
         /// </summary>
         /// <value>Utterance text</value>
         [DataMember(Name="utteranceText", EmitDefaultValue=false)]
         public string UtteranceText { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Utterance {\n");
-            
+
             sb.Append("  UtteranceText: ").Append(UtteranceText).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UtteranceText != null)
                     hash = hash * 59 + this.UtteranceText.GetHashCode();
-                
+
                 return hash;
             }
         }

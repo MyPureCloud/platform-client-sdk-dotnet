@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ShiftTradeActivityRule :  IEquatable<ShiftTradeActivityRule>
     {
-        
-        
         /// <summary>
         /// The activity category to which to apply this rule
         /// </summary>
@@ -89,10 +87,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unscheduled")]
             Unscheduled
         }
-        
-        
-        
-        
         /// <summary>
         /// The action this rule invokes
         /// </summary>
@@ -126,40 +120,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "KeepWithSchedule")]
             Keepwithschedule
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The activity category to which to apply this rule
         /// </summary>
         /// <value>The activity category to which to apply this rule</value>
         [DataMember(Name="activityCategory", EmitDefaultValue=false)]
         public ActivityCategoryEnum? ActivityCategory { get; set; }
-        
-        
-        
         /// <summary>
         /// The action this rule invokes
         /// </summary>
         /// <value>The action this rule invokes</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradeActivityRule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ShiftTradeActivityRule() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradeActivityRule" /> class.
         /// </summary>
@@ -174,20 +152,20 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         /// <summary>
         /// The activity code ID with which to replace activities belonging to the original category if applicable (required if action == Replace, must be a default activity code ID)
         /// </summary>
         /// <value>The activity code ID with which to replace activities belonging to the original category if applicable (required if action == Replace, must be a default activity code ID)</value>
         [DataMember(Name="activityCodeIdReplacement", EmitDefaultValue=false)]
         public string ActivityCodeIdReplacement { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -196,7 +174,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ShiftTradeActivityRule {\n");
-            
+
             sb.Append("  ActivityCategory: ").Append(ActivityCategory).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ActivityCodeIdReplacement: ").Append(ActivityCodeIdReplacement).Append("\n");
@@ -268,16 +246,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ActivityCategory != null)
                     hash = hash * 59 + this.ActivityCategory.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.ActivityCodeIdReplacement != null)
                     hash = hash * 59 + this.ActivityCodeIdReplacement.GetHashCode();
-                
+
                 return hash;
             }
         }

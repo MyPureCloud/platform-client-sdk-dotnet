@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KnowledgeSearchRequest :  IEquatable<KnowledgeSearchRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Document type to be used while searching
         /// </summary>
@@ -56,42 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Article")]
             Article
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Document type to be used while searching
         /// </summary>
         /// <value>Document type to be used while searching</value>
         [DataMember(Name="documentType", EmitDefaultValue=false)]
         public DocumentTypeEnum? DocumentType { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeSearchRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected KnowledgeSearchRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeSearchRequest" /> class.
         /// </summary>
@@ -112,54 +77,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Input query to search content in the knowledge base
         /// </summary>
         /// <value>Input query to search content in the knowledge base</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public string Query { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Page size of the returned results
         /// </summary>
         /// <value>Page size of the returned results</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Page number of the returned results
         /// </summary>
         /// <value>Page number of the returned results</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// query search for specific languageCode
         /// </summary>
         /// <value>query search for specific languageCode</value>
         [DataMember(Name="languageCode", EmitDefaultValue=false)]
         public string LanguageCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If true the search query will be executed on draft documents, else it will be on active documents
         /// </summary>
         /// <value>If true the search query will be executed on draft documents, else it will be on active documents</value>
         [DataMember(Name="searchOnDraftDocuments", EmitDefaultValue=false)]
         public bool? SearchOnDraftDocuments { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -168,7 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class KnowledgeSearchRequest {\n");
-            
+
             sb.Append("  Query: ").Append(Query).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
@@ -258,25 +223,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Query != null)
                     hash = hash * 59 + this.Query.GetHashCode();
-                
+
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
+
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
+
                 if (this.DocumentType != null)
                     hash = hash * 59 + this.DocumentType.GetHashCode();
-                
+
                 if (this.LanguageCode != null)
                     hash = hash * 59 + this.LanguageCode.GetHashCode();
-                
+
                 if (this.SearchOnDraftDocuments != null)
                     hash = hash * 59 + this.SearchOnDraftDocuments.GetHashCode();
-                
+
                 return hash;
             }
         }

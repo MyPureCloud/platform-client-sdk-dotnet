@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SchedulerMessageTypeSeverity :  IEquatable<SchedulerMessageTypeSeverity>
     {
-        
-        
         /// <summary>
         /// The type of the message
         /// </summary>
@@ -305,10 +303,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "UnableToScheduleWorkDay")]
             Unabletoscheduleworkday
         }
-        
-        
-        
-        
         /// <summary>
         /// The severity of the message
         /// </summary>
@@ -348,29 +342,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of the message
         /// </summary>
         /// <value>The type of the message</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
         /// <summary>
         /// The severity of the message
         /// </summary>
         /// <value>The severity of the message</value>
         [DataMember(Name="severity", EmitDefaultValue=false)]
         public SeverityEnum? Severity { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulerMessageTypeSeverity" /> class.
         /// </summary>
@@ -383,11 +366,11 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -396,7 +379,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SchedulerMessageTypeSeverity {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Severity: ").Append(Severity).Append("\n");
             sb.Append("}\n");
@@ -462,13 +445,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Severity != null)
                     hash = hash * 59 + this.Severity.GetHashCode();
-                
+
                 return hash;
             }
         }

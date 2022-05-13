@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ValidateWorkPlanResponse :  IEquatable<ValidateWorkPlanResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateWorkPlanResponse" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The work plan reference associated with this response
         /// </summary>
         /// <value>The work plan reference associated with this response</value>
         [DataMember(Name="workPlan", EmitDefaultValue=false)]
         public WorkPlanReference WorkPlan { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the work plan is valid or not
         /// </summary>
         /// <value>Whether the work plan is valid or not</value>
         [DataMember(Name="valid", EmitDefaultValue=false)]
         public bool? Valid { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Validation messages for this work plan
         /// </summary>
         /// <value>Validation messages for this work plan</value>
         [DataMember(Name="messages", EmitDefaultValue=false)]
         public ValidateWorkPlanMessages Messages { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ValidateWorkPlanResponse {\n");
-            
+
             sb.Append("  WorkPlan: ").Append(WorkPlan).Append("\n");
             sb.Append("  Valid: ").Append(Valid).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WorkPlan != null)
                     hash = hash * 59 + this.WorkPlan.GetHashCode();
-                
+
                 if (this.Valid != null)
                     hash = hash * 59 + this.Valid.GetHashCode();
-                
+
                 if (this.Messages != null)
                     hash = hash * 59 + this.Messages.GetHashCode();
-                
+
                 return hash;
             }
         }

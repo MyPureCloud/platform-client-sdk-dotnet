@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GKNDocumentationResult :  IEquatable<GKNDocumentationResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GKNDocumentationResult" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected GKNDocumentationResult() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GKNDocumentationResult" /> class.
         /// </summary>
@@ -63,43 +40,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The text or html content for the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The text or html content for the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public string Content { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URL link for the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>URL link for the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="link", EmitDefaultValue=false)]
         public string Link { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The title of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The title of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The search type. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The search type. Will be returned in responses for certain entities.</value>
         [DataMember(Name="_type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GKNDocumentationResult {\n");
-            
+
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  Link: ").Append(Link).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
@@ -186,19 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
-                
+
                 if (this.Link != null)
                     hash = hash * 59 + this.Link.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 return hash;
             }
         }

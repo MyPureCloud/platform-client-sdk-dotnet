@@ -18,32 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DocumentAudit :  IEquatable<DocumentAudit>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
@@ -70,13 +44,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SYSTEM")]
             System
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -109,10 +76,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "WARNING")]
             Warning
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ActionContext
         /// </summary>
@@ -373,10 +336,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "VERSION_CREATE")]
             VersionCreate
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
@@ -637,76 +596,26 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "VERSION_CREATE")]
             VersionCreate
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
         [DataMember(Name="level", EmitDefaultValue=false)]
         public LevelEnum? Level { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets ActionContext
         /// </summary>
         [DataMember(Name="actionContext", EmitDefaultValue=false)]
         public ActionContextEnum? ActionContext { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentAudit" /> class.
         /// </summary>
@@ -743,114 +652,114 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public DomainEntityRef User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public DomainEntityRef Workspace { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TransactionId
         /// </summary>
         [DataMember(Name="transactionId", EmitDefaultValue=false)]
         public string TransactionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TransactionInitiator
         /// </summary>
         [DataMember(Name="transactionInitiator", EmitDefaultValue=false)]
         public bool? TransactionInitiator { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Application
         /// </summary>
         [DataMember(Name="application", EmitDefaultValue=false)]
         public string Application { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ServiceName
         /// </summary>
         [DataMember(Name="serviceName", EmitDefaultValue=false)]
         public string ServiceName { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public AuditEntityReference Entity { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Changes
         /// </summary>
         [DataMember(Name="changes", EmitDefaultValue=false)]
         public List<AuditChange> Changes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -859,7 +768,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DocumentAudit {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -1009,55 +918,54 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
-                
+
                 if (this.TransactionId != null)
                     hash = hash * 59 + this.TransactionId.GetHashCode();
-                
+
                 if (this.TransactionInitiator != null)
                     hash = hash * 59 + this.TransactionInitiator.GetHashCode();
-                
+
                 if (this.Application != null)
                     hash = hash * 59 + this.Application.GetHashCode();
-                
+
                 if (this.ServiceName != null)
                     hash = hash * 59 + this.ServiceName.GetHashCode();
-                
+
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
-                
+
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.ActionContext != null)
                     hash = hash * 59 + this.ActionContext.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
-                
+
                 if (this.Changes != null)
                     hash = hash * 59 + this.Changes.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CoachingSlot :  IEquatable<CoachingSlot>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Rating based on the staffing difference for scheduled slot
         /// </summary>
@@ -62,31 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Good")]
             Good
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Rating based on the staffing difference for scheduled slot
         /// </summary>
         /// <value>Rating based on the staffing difference for scheduled slot</value>
         [DataMember(Name="differenceRating", EmitDefaultValue=false)]
-        public DifferenceRatingEnum? DifferenceRating { get; set; }
-        
-        
-        
-        
-    
+        public DifferenceRatingEnum? DifferenceRating { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CoachingSlot" /> class.
         /// </summary>
@@ -95,45 +65,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Start date and time of scheduled coaching appointment slot. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Start date and time of scheduled coaching appointment slot. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateStart", EmitDefaultValue=false)]
         public DateTime? DateStart { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Length of coaching appointment slot in minutes
         /// </summary>
         /// <value>Length of coaching appointment slot in minutes</value>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Difference between scheduled and forecast headcount for this slot after scheduling the coaching appointment
         /// </summary>
         /// <value>Difference between scheduled and forecast headcount for this slot after scheduling the coaching appointment</value>
         [DataMember(Name="staffingDifference", EmitDefaultValue=false)]
         public double? StaffingDifference { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Workforce Management schedule information associated with the slot
         /// </summary>
         /// <value>Workforce Management schedule information associated with the slot</value>
         [DataMember(Name="wfmSchedule", EmitDefaultValue=false)]
         public WfmScheduleReference WfmSchedule { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -142,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CoachingSlot {\n");
-            
+
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
             sb.Append("  StaffingDifference: ").Append(StaffingDifference).Append("\n");
@@ -226,22 +196,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();
-                
+
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
-                
+
                 if (this.StaffingDifference != null)
                     hash = hash * 59 + this.StaffingDifference.GetHashCode();
-                
+
                 if (this.DifferenceRating != null)
                     hash = hash * 59 + this.DifferenceRating.GetHashCode();
-                
+
                 if (this.WfmSchedule != null)
                     hash = hash * 59 + this.WfmSchedule.GetHashCode();
-                
+
                 return hash;
             }
         }

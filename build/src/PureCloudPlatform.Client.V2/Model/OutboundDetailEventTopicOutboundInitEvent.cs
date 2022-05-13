@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OutboundDetailEventTopicOutboundInitEvent :  IEquatable<OutboundDetailEventTopicOutboundInitEvent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
@@ -100,13 +86,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "MESSAGE")]
             Message
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
@@ -139,25 +118,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OUTBOUND")]
             Outbound
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MessageType
         /// </summary>
@@ -226,75 +186,21 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "INSTAGRAM")]
             Instagram
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets MessageType
         /// </summary>
         [DataMember(Name="messageType", EmitDefaultValue=false)]
         public MessageTypeEnum? MessageType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundDetailEventTopicOutboundInitEvent" /> class.
         /// </summary>
@@ -337,125 +243,125 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
         public int? EventTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ParticipantId
         /// </summary>
         [DataMember(Name="participantId", EmitDefaultValue=false)]
         public string ParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SessionId
         /// </summary>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Provider
         /// </summary>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Ani
         /// </summary>
         [DataMember(Name="ani", EmitDefaultValue=false)]
         public string Ani { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Dnis
         /// </summary>
         [DataMember(Name="dnis", EmitDefaultValue=false)]
         public string Dnis { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AddressTo
         /// </summary>
         [DataMember(Name="addressTo", EmitDefaultValue=false)]
         public string AddressTo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AddressFrom
         /// </summary>
         [DataMember(Name="addressFrom", EmitDefaultValue=false)]
         public string AddressFrom { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Subject
         /// </summary>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets OutboundCampaignId
         /// </summary>
         [DataMember(Name="outboundCampaignId", EmitDefaultValue=false)]
         public string OutboundCampaignId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DivisionId
         /// </summary>
         [DataMember(Name="divisionId", EmitDefaultValue=false)]
         public string DivisionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OutboundContactListId
         /// </summary>
         [DataMember(Name="outboundContactListId", EmitDefaultValue=false)]
         public string OutboundContactListId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OutboundContactId
         /// </summary>
         [DataMember(Name="outboundContactId", EmitDefaultValue=false)]
         public string OutboundContactId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -464,7 +370,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OutboundDetailEventTopicOutboundInitEvent {\n");
-            
+
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
@@ -620,58 +526,57 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EventTime != null)
                     hash = hash * 59 + this.EventTime.GetHashCode();
-                
+
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
+
                 if (this.ParticipantId != null)
                     hash = hash * 59 + this.ParticipantId.GetHashCode();
-                
+
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                
+
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
+
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();
-                
+
                 if (this.Dnis != null)
                     hash = hash * 59 + this.Dnis.GetHashCode();
-                
+
                 if (this.AddressTo != null)
                     hash = hash * 59 + this.AddressTo.GetHashCode();
-                
+
                 if (this.AddressFrom != null)
                     hash = hash * 59 + this.AddressFrom.GetHashCode();
-                
+
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
-                
+
                 if (this.MessageType != null)
                     hash = hash * 59 + this.MessageType.GetHashCode();
-                
+
                 if (this.OutboundCampaignId != null)
                     hash = hash * 59 + this.OutboundCampaignId.GetHashCode();
-                
+
                 if (this.DivisionId != null)
                     hash = hash * 59 + this.DivisionId.GetHashCode();
-                
+
                 if (this.OutboundContactListId != null)
                     hash = hash * 59 + this.OutboundContactListId.GetHashCode();
-                
+
                 if (this.OutboundContactId != null)
                     hash = hash * 59 + this.OutboundContactId.GetHashCode();
-                
+
                 return hash;
             }
         }

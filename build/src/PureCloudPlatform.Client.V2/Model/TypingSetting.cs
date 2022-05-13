@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TypingSetting :  IEquatable<TypingSetting>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TypingSetting" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Should typing indication Events be sent
         /// </summary>
         /// <value>Should typing indication Events be sent</value>
         [DataMember(Name="on", EmitDefaultValue=false)]
         public SettingDirection On { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TypingSetting {\n");
-            
+
             sb.Append("  On: ").Append(On).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.On != null)
                     hash = hash * 59 + this.On.GetHashCode();
-                
+
                 return hash;
             }
         }

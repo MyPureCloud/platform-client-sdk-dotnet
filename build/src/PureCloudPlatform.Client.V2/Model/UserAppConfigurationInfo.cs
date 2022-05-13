@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserAppConfigurationInfo :  IEquatable<UserAppConfigurationInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAppConfigurationInfo" /> class.
         /// </summary>
@@ -39,25 +26,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The current, active configuration for the integration.
         /// </summary>
         /// <value>The current, active configuration for the integration.</value>
         [DataMember(Name="current", EmitDefaultValue=false)]
         public IntegrationConfiguration Current { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The effective configuration for the app, containing the integration specific configuration along with overrides specified in the integration type.
         /// </summary>
         /// <value>The effective configuration for the app, containing the integration specific configuration along with overrides specified in the integration type.</value>
         [DataMember(Name="effective", EmitDefaultValue=false)]
         public EffectiveConfiguration Effective { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserAppConfigurationInfo {\n");
-            
+
             sb.Append("  Current: ").Append(Current).Append("\n");
             sb.Append("  Effective: ").Append(Effective).Append("\n");
             sb.Append("}\n");
@@ -132,13 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Current != null)
                     hash = hash * 59 + this.Current.GetHashCode();
-                
+
                 if (this.Effective != null)
                     hash = hash * 59 + this.Effective.GetHashCode();
-                
+
                 return hash;
             }
         }

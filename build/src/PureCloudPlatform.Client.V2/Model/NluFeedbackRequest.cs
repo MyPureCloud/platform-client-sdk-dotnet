@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NluFeedbackRequest :  IEquatable<NluFeedbackRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NluFeedbackRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected NluFeedbackRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NluFeedbackRequest" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The feedback text.
         /// </summary>
         /// <value>The feedback text.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Detected intent of the utterance
         /// </summary>
         /// <value>Detected intent of the utterance</value>
         [DataMember(Name="intents", EmitDefaultValue=false)]
         public List<IntentFeedback> Intents { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The domain version ID of the feedback.
         /// </summary>
         /// <value>The domain version ID of the feedback.</value>
         [DataMember(Name="versionId", EmitDefaultValue=false)]
         public string VersionId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NluFeedbackRequest {\n");
-            
+
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Intents: ").Append(Intents).Append("\n");
             sb.Append("  VersionId: ").Append(VersionId).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Intents != null)
                     hash = hash * 59 + this.Intents.GetHashCode();
-                
+
                 if (this.VersionId != null)
                     hash = hash * 59 + this.VersionId.GetHashCode();
-                
+
                 return hash;
             }
         }

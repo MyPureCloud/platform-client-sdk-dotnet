@@ -18,13 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TimeOffRequestQueryBody :  IEquatable<TimeOffRequestQueryBody>
     {
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Statuses
         /// </summary>
@@ -45,20 +38,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PENDING")]
             Pending
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestQueryBody" /> class.
         /// </summary>
@@ -73,34 +52,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The set of user ids to filter time off requests
         /// </summary>
         /// <value>The set of user ids to filter time off requests</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The set of statuses to filter time off requests
         /// </summary>
         /// <value>The set of statuses to filter time off requests</value>
         [DataMember(Name="statuses", EmitDefaultValue=false)]
         public List<StatusesEnum> Statuses { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The inclusive range of dates to filter time off requests
         /// </summary>
         /// <value>The inclusive range of dates to filter time off requests</value>
         [DataMember(Name="dateRange", EmitDefaultValue=false)]
         public DateRange DateRange { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -109,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimeOffRequestQueryBody {\n");
-            
+
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
             sb.Append("  Statuses: ").Append(Statuses).Append("\n");
             sb.Append("  DateRange: ").Append(DateRange).Append("\n");
@@ -181,16 +160,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
-                
+
                 if (this.Statuses != null)
                     hash = hash * 59 + this.Statuses.GetHashCode();
-                
+
                 if (this.DateRange != null)
                     hash = hash * 59 + this.DateRange.GetHashCode();
-                
+
                 return hash;
             }
         }

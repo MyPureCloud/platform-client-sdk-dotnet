@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerRulesetConfigChangeRule :  IEquatable<DialerRulesetConfigChangeRule>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The category of the rule
         /// </summary>
@@ -48,44 +34,23 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum DialerPrecall for "DIALER_PRECALL"
+            /// Enum Precall for "DIALER_PRECALL"
             /// </summary>
             [EnumMember(Value = "DIALER_PRECALL")]
-            DialerPrecall,
+            Precall,
             
             /// <summary>
-            /// Enum DialerWrapup for "DIALER_WRAPUP"
+            /// Enum Wrapup for "DIALER_WRAPUP"
             /// </summary>
             [EnumMember(Value = "DIALER_WRAPUP")]
-            DialerWrapup
+            Wrapup
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The category of the rule
         /// </summary>
         /// <value>The category of the rule</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRulesetConfigChangeRule" /> class.
         /// </summary>
@@ -106,54 +71,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of rule conditions; all must evaluate to true to trigger the rule actions
         /// </summary>
         /// <value>The list of rule conditions; all must evaluate to true to trigger the rule actions</value>
         [DataMember(Name="conditions", EmitDefaultValue=false)]
         public List<DialerRulesetConfigChangeCondition> Conditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The identifier of the rule
         /// </summary>
         /// <value>The identifier of the rule</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the rule
         /// </summary>
         /// <value>The name of the rule</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ranked order of the rule; rules are processed from lowest number to highest
         /// </summary>
         /// <value>The ranked order of the rule; rules are processed from lowest number to highest</value>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public int? Order { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The list of rule actions to be taken if the conditions are true
         /// </summary>
         /// <value>The list of rule actions to be taken if the conditions are true</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public List<DialerRulesetConfigChangeAction> Actions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -162,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerRulesetConfigChangeRule {\n");
-            
+
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -252,25 +217,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
-                
+
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
-                
+
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
+
                 return hash;
             }
         }

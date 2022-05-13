@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ClientApp :  IEquatable<ClientApp>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Configured state of the integration.
         /// </summary>
@@ -65,54 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DELETED")]
             Deleted
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Configured state of the integration.
         /// </summary>
         /// <value>Configured state of the integration.</value>
         [DataMember(Name="intendedState", EmitDefaultValue=false)]
         public IntendedStateEnum? IntendedState { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientApp" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ClientApp() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientApp" /> class.
         /// </summary>
@@ -123,81 +73,81 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the integration, used to distinguish this integration from others of the same type.
         /// </summary>
         /// <value>The name of the integration, used to distinguish this integration from others of the same type.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Type of the integration
         /// </summary>
         /// <value>Type of the integration</value>
         [DataMember(Name="integrationType", EmitDefaultValue=false)]
         public IntegrationType IntegrationType { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Notes about the integration.
         /// </summary>
         /// <value>Notes about the integration.</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Configuration information for the integration.
         /// </summary>
         /// <value>Configuration information for the integration.</value>
         [DataMember(Name="config", EmitDefaultValue=false)]
         public ClientAppConfigurationInfo Config { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last reported status of the integration.
         /// </summary>
         /// <value>Last reported status of the integration.</value>
         [DataMember(Name="reportedState", EmitDefaultValue=false)]
         public IntegrationStatusInfo ReportedState { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Read-only attributes for the integration.
         /// </summary>
         /// <value>Read-only attributes for the integration.</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -206,7 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ClientApp {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  IntegrationType: ").Append(IntegrationType).Append("\n");
@@ -314,34 +264,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.IntegrationType != null)
                     hash = hash * 59 + this.IntegrationType.GetHashCode();
-                
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 if (this.IntendedState != null)
                     hash = hash * 59 + this.IntendedState.GetHashCode();
-                
+
                 if (this.Config != null)
                     hash = hash * 59 + this.Config.GetHashCode();
-                
+
                 if (this.ReportedState != null)
                     hash = hash * 59 + this.ReportedState.GetHashCode();
-                
+
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

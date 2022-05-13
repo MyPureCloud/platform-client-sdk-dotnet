@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AgentTimeOffRequestPatch :  IEquatable<AgentTimeOffRequestPatch>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of this time off request. Can only be canceled if the requested date has not already passed
         /// </summary>
@@ -44,27 +39,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CANCELED")]
             Canceled
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of this time off request. Can only be canceled if the requested date has not already passed
         /// </summary>
         /// <value>The status of this time off request. Can only be canceled if the requested date has not already passed</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentTimeOffRequestPatch" /> class.
         /// </summary>
@@ -79,27 +59,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether this request has been read by the agent
         /// </summary>
         /// <value>Whether this request has been read by the agent</value>
         [DataMember(Name="markedAsRead", EmitDefaultValue=false)]
         public bool? MarkedAsRead { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Notes about the time off request. Can only be edited while the request is still pending
         /// </summary>
         /// <value>Notes about the time off request. Can only be edited while the request is still pending</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AgentTimeOffRequestPatch {\n");
-            
+
             sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
@@ -180,16 +160,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MarkedAsRead != null)
                     hash = hash * 59 + this.MarkedAsRead.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 return hash;
             }
         }

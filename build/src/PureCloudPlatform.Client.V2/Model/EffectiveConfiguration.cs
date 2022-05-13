@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EffectiveConfiguration :  IEquatable<EffectiveConfiguration>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="EffectiveConfiguration" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected EffectiveConfiguration() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EffectiveConfiguration" /> class.
         /// </summary>
@@ -70,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Key-value configuration settings described by the schema in the propertiesSchemaUri field.
         /// </summary>
         /// <value>Key-value configuration settings described by the schema in the propertiesSchemaUri field.</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public Dictionary<string, Object> Properties { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Advanced configuration described by the schema in the advancedSchemaUri field.
         /// </summary>
         /// <value>Advanced configuration described by the schema in the advancedSchemaUri field.</value>
         [DataMember(Name="advanced", EmitDefaultValue=false)]
         public Dictionary<string, Object> Advanced { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the integration, used to distinguish this integration from others of the same type.
         /// </summary>
         /// <value>The name of the integration, used to distinguish this integration from others of the same type.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Notes about the integration.
         /// </summary>
         /// <value>Notes about the integration.</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Credentials required by the integration. The required keys are indicated in the credentials property of the Integration Type
         /// </summary>
         /// <value>Credentials required by the integration. The required keys are indicated in the credentials property of the Integration Type</value>
         [DataMember(Name="credentials", EmitDefaultValue=false)]
         public Dictionary<string, CredentialInfo> Credentials { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EffectiveConfiguration {\n");
-            
+
             sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("  Advanced: ").Append(Advanced).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -208,22 +180,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
-                
+
                 if (this.Advanced != null)
                     hash = hash * 59 + this.Advanced.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 if (this.Credentials != null)
                     hash = hash * 59 + this.Credentials.GetHashCode();
-                
+
                 return hash;
             }
         }

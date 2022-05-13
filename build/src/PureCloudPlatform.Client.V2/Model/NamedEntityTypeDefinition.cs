@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NamedEntityTypeDefinition :  IEquatable<NamedEntityTypeDefinition>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NamedEntityTypeDefinition" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected NamedEntityTypeDefinition() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NamedEntityTypeDefinition" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the entity type.
         /// </summary>
         /// <value>The name of the entity type.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Description of the of the named entity type.
         /// </summary>
         /// <value>Description of the of the named entity type.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The mechanism enabling detection of the named entity type.
         /// </summary>
         /// <value>The mechanism enabling detection of the named entity type.</value>
         [DataMember(Name="mechanism", EmitDefaultValue=false)]
         public NamedEntityTypeMechanism Mechanism { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NamedEntityTypeDefinition {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Mechanism: ").Append(Mechanism).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Mechanism != null)
                     hash = hash * 59 + this.Mechanism.GetHashCode();
-                
+
                 return hash;
             }
         }

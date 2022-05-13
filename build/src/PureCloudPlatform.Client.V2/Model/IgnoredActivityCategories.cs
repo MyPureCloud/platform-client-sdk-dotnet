@@ -18,10 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IgnoredActivityCategories :  IEquatable<IgnoredActivityCategories>
     {
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Values
         /// </summary>
@@ -90,13 +86,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unscheduled")]
             Unscheduled
         }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="IgnoredActivityCategories" /> class.
         /// </summary>
@@ -107,16 +96,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Activity categories list
         /// </summary>
         /// <value>Activity categories list</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<ValuesEnum> Values { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -125,7 +114,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IgnoredActivityCategories {\n");
-            
+
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -185,10 +174,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
+
                 return hash;
             }
         }

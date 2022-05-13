@@ -74,7 +74,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deleteexternalcontactscontact"></a>
 
-## [**Empty**](Empty.html) DeleteExternalcontactsContact (string contactId)
+## **Object** DeleteExternalcontactsContact (string contactId)
 
 
 
@@ -113,7 +113,7 @@ namespace Example
             try
             { 
                 // Delete an external contact
-                Empty result = apiInstance.DeleteExternalcontactsContact(contactId);
+                Object result = apiInstance.DeleteExternalcontactsContact(contactId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -135,11 +135,11 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteexternalcontactscontactnote"></a>
 
-## [**Empty**](Empty.html) DeleteExternalcontactsContactNote (string contactId, string noteId)
+## **Object** DeleteExternalcontactsContactNote (string contactId, string noteId)
 
 
 
@@ -179,7 +179,7 @@ namespace Example
             try
             { 
                 // Delete a note for an external contact
-                Empty result = apiInstance.DeleteExternalcontactsContactNote(contactId, noteId);
+                Object result = apiInstance.DeleteExternalcontactsContactNote(contactId, noteId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -202,7 +202,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteexternalcontactscontactsschema"></a>
 
@@ -270,7 +270,7 @@ void (empty response body)
 
 <a name="deleteexternalcontactsorganization"></a>
 
-## [**Empty**](Empty.html) DeleteExternalcontactsOrganization (string externalOrganizationId)
+## **Object** DeleteExternalcontactsOrganization (string externalOrganizationId)
 
 
 
@@ -310,7 +310,7 @@ namespace Example
             try
             { 
                 // Delete an external organization
-                Empty result = apiInstance.DeleteExternalcontactsOrganization(externalOrganizationId);
+                Object result = apiInstance.DeleteExternalcontactsOrganization(externalOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -332,11 +332,11 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteexternalcontactsorganizationnote"></a>
 
-## [**Empty**](Empty.html) DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId)
+## **Object** DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId)
 
 
 
@@ -376,7 +376,7 @@ namespace Example
             try
             { 
                 // Delete a note for an external organization
-                Empty result = apiInstance.DeleteExternalcontactsOrganizationNote(externalOrganizationId, noteId);
+                Object result = apiInstance.DeleteExternalcontactsOrganizationNote(externalOrganizationId, noteId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -399,7 +399,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="deleteexternalcontactsorganizationtrustor"></a>
 
@@ -467,7 +467,7 @@ void (empty response body)
 
 <a name="deleteexternalcontactsrelationship"></a>
 
-## [**Empty**](Empty.html) DeleteExternalcontactsRelationship (string relationshipId)
+## **Object** DeleteExternalcontactsRelationship (string relationshipId)
 
 
 
@@ -506,7 +506,7 @@ namespace Example
             try
             { 
                 // Delete a relationship
-                Empty result = apiInstance.DeleteExternalcontactsRelationship(relationshipId);
+                Object result = apiInstance.DeleteExternalcontactsRelationship(relationshipId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -528,7 +528,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="getexternalcontactscontact"></a>
 
@@ -729,8 +729,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact Id |  |
-| **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
-| **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
+| **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **sortOrder** | **string**| Sort order | [optional]  |
 | **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
 {: class="table table-striped"}
@@ -801,8 +801,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
-| **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
+| **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional]  |
 | **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources |
@@ -1203,8 +1203,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization ID |  |
-| **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
-| **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
+| **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional]  |
 | **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources |
@@ -1347,8 +1347,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization Id |  |
-| **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
-| **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
+| **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **sortOrder** | **string**| Sort order | [optional]  |
 | **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
 {: class="table table-striped"}
@@ -1421,8 +1421,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization ID |  |
-| **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
-| **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
+| **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **expand** | **string**| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
 | **sortOrder** | **string**| Sort order | [optional]  |
 {: class="table table-striped"}
@@ -1496,8 +1496,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
-| **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
+| **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| Search query | [optional]  |
 | **trustorId** | [**List<string>**](string.html)| Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional]  |
@@ -3882,13 +3882,15 @@ namespace Example
 
 <a name="putexternalcontactsconversation"></a>
 
-## void PutExternalcontactsConversation (ConversationAssociation body, string conversationId)
+## void PutExternalcontactsConversation (string conversationId, ConversationAssociation body)
 
 
 
 Associate/disassociate an external contact with a conversation
 
 To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
+
+
 
 Requires ANY permissions: 
 
@@ -3916,13 +3918,13 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ExternalContactsApi();
-            var body = new ConversationAssociation(); // ConversationAssociation | ConversationAssociation
             var conversationId = conversationId_example;  // string | Conversation ID
+            var body = new ConversationAssociation(); // ConversationAssociation | ConversationAssociation
 
             try
             { 
                 // Associate/disassociate an external contact with a conversation
-                apiInstance.PutExternalcontactsConversation(body, conversationId);
+                apiInstance.PutExternalcontactsConversation(conversationId, body);
             }
             catch (Exception e)
             {
@@ -3938,8 +3940,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationAssociation**](ConversationAssociation.html)| ConversationAssociation |  |
 | **conversationId** | **string**| Conversation ID |  |
+| **body** | [**ConversationAssociation**](ConversationAssociation.html)| ConversationAssociation |  |
 {: class="table table-striped"}
 
 ### Return type

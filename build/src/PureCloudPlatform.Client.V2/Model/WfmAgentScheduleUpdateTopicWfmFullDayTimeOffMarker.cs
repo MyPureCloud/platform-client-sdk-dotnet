@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmAgentScheduleUpdateTopicWfmFullDayTimeOffMarker :  IEquatable<WfmAgentScheduleUpdateTopicWfmFullDayTimeOffMarker>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmAgentScheduleUpdateTopicWfmFullDayTimeOffMarker" /> class.
         /// </summary>
@@ -78,63 +40,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets TimeOffRequestId
         /// </summary>
         [DataMember(Name="timeOffRequestId", EmitDefaultValue=false)]
         public string TimeOffRequestId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ManagementUnitDate
         /// </summary>
         [DataMember(Name="managementUnitDate", EmitDefaultValue=false)]
         public string ManagementUnitDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActivityCodeId
         /// </summary>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IsPaid
         /// </summary>
         [DataMember(Name="isPaid", EmitDefaultValue=false)]
         public bool? IsPaid { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LengthInMinutes
         /// </summary>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Paid
         /// </summary>
         [DataMember(Name="paid", EmitDefaultValue=false)]
         public bool? Paid { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -143,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmAgentScheduleUpdateTopicWfmFullDayTimeOffMarker {\n");
-            
+
             sb.Append("  TimeOffRequestId: ").Append(TimeOffRequestId).Append("\n");
             sb.Append("  ManagementUnitDate: ").Append(ManagementUnitDate).Append("\n");
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
@@ -239,28 +201,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeOffRequestId != null)
                     hash = hash * 59 + this.TimeOffRequestId.GetHashCode();
-                
+
                 if (this.ManagementUnitDate != null)
                     hash = hash * 59 + this.ManagementUnitDate.GetHashCode();
-                
+
                 if (this.ActivityCodeId != null)
                     hash = hash * 59 + this.ActivityCodeId.GetHashCode();
-                
+
                 if (this.IsPaid != null)
                     hash = hash * 59 + this.IsPaid.GetHashCode();
-                
+
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Paid != null)
                     hash = hash * 59 + this.Paid.GetHashCode();
-                
+
                 return hash;
             }
         }

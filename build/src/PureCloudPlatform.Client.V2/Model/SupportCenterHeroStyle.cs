@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterHeroStyle :  IEquatable<SupportCenterHeroStyle>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterHeroStyle" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Background color for hero section, in hexadecimal format, eg #ffffff
         /// </summary>
         /// <value>Background color for hero section, in hexadecimal format, eg #ffffff</value>
         [DataMember(Name="backgroundColor", EmitDefaultValue=false)]
         public string BackgroundColor { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text color for hero section, in hexadecimal format, eg #ffffff
         /// </summary>
         /// <value>Text color for hero section, in hexadecimal format, eg #ffffff</value>
         [DataMember(Name="textColor", EmitDefaultValue=false)]
         public string TextColor { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SupportCenterHeroStyle {\n");
-            
+
             sb.Append("  BackgroundColor: ").Append(BackgroundColor).Append("\n");
             sb.Append("  TextColor: ").Append(TextColor).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.BackgroundColor != null)
                     hash = hash * 59 + this.BackgroundColor.GetHashCode();
-                
+
                 if (this.TextColor != null)
                     hash = hash * 59 + this.TextColor.GetHashCode();
-                
+
                 return hash;
             }
         }

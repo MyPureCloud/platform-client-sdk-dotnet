@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference :  IEquatable<WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference" /> class.
         /// </summary>
@@ -43,23 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SecondaryPresences
         /// </summary>
         [DataMember(Name="secondaryPresences", EmitDefaultValue=false)]
         public List<WfmUserScheduleAdherenceUpdatedMuTopicSecondaryPresenceReference> SecondaryPresences { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  SecondaryPresences: ").Append(SecondaryPresences).Append("\n");
             sb.Append("}\n");
@@ -134,13 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.SecondaryPresences != null)
                     hash = hash * 59 + this.SecondaryPresences.GetHashCode();
-                
+
                 return hash;
             }
         }

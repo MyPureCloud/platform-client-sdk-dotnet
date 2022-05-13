@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsParticipantWithoutAttributes :  IEquatable<AnalyticsParticipantWithoutAttributes>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Reason for which participant flagged conversation
         /// </summary>
@@ -47,16 +39,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "general")]
             General
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The participant's purpose
         /// </summary>
@@ -180,52 +162,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "workflow")]
             Workflow
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Reason for which participant flagged conversation
         /// </summary>
         /// <value>Reason for which participant flagged conversation</value>
         [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
         public FlaggedReasonEnum? FlaggedReason { get; set; }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The participant's purpose
         /// </summary>
         /// <value>The participant's purpose</value>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public PurposeEnum? Purpose { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsParticipantWithoutAttributes" /> class.
         /// </summary>
@@ -234,7 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlaggedReason">Reason for which participant flagged conversation.</param>
         /// <param name="ParticipantId">Unique identifier for the participant.</param>
         /// <param name="ParticipantName">A human readable name identifying the participant.</param>
-        /// <param name="Purpose">The participant&#39;s purpose.</param>
+        /// <param name="Purpose">The participant's purpose.</param>
         /// <param name="TeamId">The team ID the user is a member of.</param>
         /// <param name="UserId">Unique identifier for the user.</param>
         /// <param name="Sessions">List of sessions associated to this participant.</param>
@@ -252,74 +200,74 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// External contact identifier
         /// </summary>
         /// <value>External contact identifier</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// External organization identifier
         /// </summary>
         /// <value>External organization identifier</value>
         [DataMember(Name="externalOrganizationId", EmitDefaultValue=false)]
         public string ExternalOrganizationId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Unique identifier for the participant
         /// </summary>
         /// <value>Unique identifier for the participant</value>
         [DataMember(Name="participantId", EmitDefaultValue=false)]
         public string ParticipantId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A human readable name identifying the participant
         /// </summary>
         /// <value>A human readable name identifying the participant</value>
         [DataMember(Name="participantName", EmitDefaultValue=false)]
         public string ParticipantName { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The team ID the user is a member of
         /// </summary>
         /// <value>The team ID the user is a member of</value>
         [DataMember(Name="teamId", EmitDefaultValue=false)]
         public string TeamId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique identifier for the user
         /// </summary>
         /// <value>Unique identifier for the user</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of sessions associated to this participant
         /// </summary>
         /// <value>List of sessions associated to this participant</value>
         [DataMember(Name="sessions", EmitDefaultValue=false)]
         public List<AnalyticsSession> Sessions { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -328,7 +276,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsParticipantWithoutAttributes {\n");
-            
+
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
@@ -436,34 +384,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
-                
+
                 if (this.ExternalOrganizationId != null)
                     hash = hash * 59 + this.ExternalOrganizationId.GetHashCode();
-                
+
                 if (this.FlaggedReason != null)
                     hash = hash * 59 + this.FlaggedReason.GetHashCode();
-                
+
                 if (this.ParticipantId != null)
                     hash = hash * 59 + this.ParticipantId.GetHashCode();
-                
+
                 if (this.ParticipantName != null)
                     hash = hash * 59 + this.ParticipantName.GetHashCode();
-                
+
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
-                
+
                 if (this.TeamId != null)
                     hash = hash * 59 + this.TeamId.GetHashCode();
-                
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
+
                 if (this.Sessions != null)
                     hash = hash * 59 + this.Sessions.GetHashCode();
-                
+
                 return hash;
             }
         }

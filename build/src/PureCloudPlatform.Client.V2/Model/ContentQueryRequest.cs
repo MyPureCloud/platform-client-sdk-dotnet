@@ -18,49 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContentQueryRequest :  IEquatable<ContentQueryRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentQueryRequest" /> class.
         /// </summary>
@@ -85,71 +42,71 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets QueryPhrase
         /// </summary>
         [DataMember(Name="queryPhrase", EmitDefaultValue=false)]
         public string QueryPhrase { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets FacetNameRequests
         /// </summary>
         [DataMember(Name="facetNameRequests", EmitDefaultValue=false)]
         public List<string> FacetNameRequests { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Sort
         /// </summary>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public List<ContentSortItem> Sort { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<ContentFacetFilterItem> Filters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AttributeFilters
         /// </summary>
         [DataMember(Name="attributeFilters", EmitDefaultValue=false)]
         public List<ContentAttributeFilterItem> AttributeFilters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IncludeShares
         /// </summary>
         [DataMember(Name="includeShares", EmitDefaultValue=false)]
         public bool? IncludeShares { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -158,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContentQueryRequest {\n");
-            
+
             sb.Append("  QueryPhrase: ").Append(QueryPhrase).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
@@ -260,31 +217,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QueryPhrase != null)
                     hash = hash * 59 + this.QueryPhrase.GetHashCode();
-                
+
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
+
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
+
                 if (this.FacetNameRequests != null)
                     hash = hash * 59 + this.FacetNameRequests.GetHashCode();
-                
+
                 if (this.Sort != null)
                     hash = hash * 59 + this.Sort.GetHashCode();
-                
+
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
-                
+
                 if (this.AttributeFilters != null)
                     hash = hash * 59 + this.AttributeFilters.GetHashCode();
-                
+
                 if (this.IncludeShares != null)
                     hash = hash * 59 + this.IncludeShares.GetHashCode();
-                
+
                 return hash;
             }
         }

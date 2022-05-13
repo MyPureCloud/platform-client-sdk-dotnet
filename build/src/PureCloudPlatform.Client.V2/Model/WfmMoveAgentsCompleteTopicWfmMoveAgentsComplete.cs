@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmMoveAgentsCompleteTopicWfmMoveAgentsComplete :  IEquatable<WfmMoveAgentsCompleteTopicWfmMoveAgentsComplete>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmMoveAgentsCompleteTopicWfmMoveAgentsComplete" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets RequestingUser
         /// </summary>
         [DataMember(Name="requestingUser", EmitDefaultValue=false)]
         public WfmMoveAgentsCompleteTopicUserReference RequestingUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DestinationManagementUnit
         /// </summary>
         [DataMember(Name="destinationManagementUnit", EmitDefaultValue=false)]
         public WfmMoveAgentsCompleteTopicManagementUnit DestinationManagementUnit { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Results
         /// </summary>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<WfmMoveAgentsCompleteTopicWfmMoveAgentData> Results { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmMoveAgentsCompleteTopicWfmMoveAgentsComplete {\n");
-            
+
             sb.Append("  RequestingUser: ").Append(RequestingUser).Append("\n");
             sb.Append("  DestinationManagementUnit: ").Append(DestinationManagementUnit).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RequestingUser != null)
                     hash = hash * 59 + this.RequestingUser.GetHashCode();
-                
+
                 if (this.DestinationManagementUnit != null)
                     hash = hash * 59 + this.DestinationManagementUnit.GetHashCode();
-                
+
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
+
                 return hash;
             }
         }

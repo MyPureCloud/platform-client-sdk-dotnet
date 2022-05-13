@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueueConversationEventTopicAfterCallWork :  IEquatable<QueueConversationEventTopicAfterCallWork>
     {
-        
-        
         /// <summary>
         /// The communication's after-call work state.
         /// </summary>
@@ -65,34 +63,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "notApplicable")]
             Notapplicable
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The communication's after-call work state.
         /// </summary>
         /// <value>The communication's after-call work state.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationEventTopicAfterCallWork" /> class.
         /// </summary>
-        /// <param name="State">The communication&#39;s after-call work state..</param>
+        /// <param name="State">The communication's after-call work state..</param>
         /// <param name="StartTime">The timestamp when this communication started after-call work in the cloud clock..</param>
         /// <param name="EndTime">The timestamp when this communication ended after-call work in the cloud clock..</param>
         public QueueConversationEventTopicAfterCallWork(StateEnum? State = null, DateTime? StartTime = null, DateTime? EndTime = null)
@@ -103,27 +83,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The timestamp when this communication started after-call work in the cloud clock.
         /// </summary>
         /// <value>The timestamp when this communication started after-call work in the cloud clock.</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The timestamp when this communication ended after-call work in the cloud clock.
         /// </summary>
         /// <value>The timestamp when this communication ended after-call work in the cloud clock.</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -132,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueueConversationEventTopicAfterCallWork {\n");
-            
+
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
@@ -204,16 +184,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
+
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
+
                 return hash;
             }
         }

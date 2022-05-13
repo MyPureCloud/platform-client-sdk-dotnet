@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ModelingStatusResponse :  IEquatable<ModelingStatusResponse>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the modeling job.
         /// </summary>
@@ -68,32 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PartialFailure")]
             Partialfailure
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The status of the modeling job.
         /// </summary>
         /// <value>The status of the modeling job.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-    
+        public StatusEnum? Status { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ModelingStatusResponse" /> class.
         /// </summary>
@@ -102,36 +77,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID generated for the modeling job.  Use to GET result when job is completed.
         /// </summary>
         /// <value>The ID generated for the modeling job.  Use to GET result when job is completed.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// If the request could not be properly processed, error details will be given here.
         /// </summary>
         /// <value>If the request could not be properly processed, error details will be given here.</value>
         [DataMember(Name="errorDetails", EmitDefaultValue=false)]
         public List<ModelingProcessingError> ErrorDetails { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The uri of the modeling result. It has a value if the status is either &#39;Success&#39;, &#39;PartialFailure&#39;, or &#39;Failed&#39;.
+        /// The uri of the modeling result. It has a value if the status is either 'Success', 'PartialFailure', or 'Failed'.
         /// </summary>
-        /// <value>The uri of the modeling result. It has a value if the status is either &#39;Success&#39;, &#39;PartialFailure&#39;, or &#39;Failed&#39;.</value>
+        /// <value>The uri of the modeling result. It has a value if the status is either 'Success', 'PartialFailure', or 'Failed'.</value>
         [DataMember(Name="modelingResultUri", EmitDefaultValue=false)]
         public string ModelingResultUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -140,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ModelingStatusResponse {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  ErrorDetails: ").Append(ErrorDetails).Append("\n");
@@ -218,19 +193,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.ErrorDetails != null)
                     hash = hash * 59 + this.ErrorDetails.GetHashCode();
-                
+
                 if (this.ModelingResultUri != null)
                     hash = hash * 59 + this.ModelingResultUri.GetHashCode();
-                
+
                 return hash;
             }
         }

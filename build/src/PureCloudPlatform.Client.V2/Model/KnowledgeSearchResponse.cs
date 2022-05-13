@@ -18,39 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KnowledgeSearchResponse :  IEquatable<KnowledgeSearchResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeSearchResponse" /> class.
         /// </summary>
@@ -59,61 +26,61 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Search Id
         /// </summary>
         /// <value>Search Id</value>
         [DataMember(Name="searchId", EmitDefaultValue=false)]
         public string SearchId { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total number of records returned
         /// </summary>
         /// <value>Total number of records returned</value>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public int? Total { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of pages returned in the result calculated according to the pageSize and the total
         /// </summary>
         /// <value>Number of pages returned in the result calculated according to the pageSize and the total</value>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public int? PageCount { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Number of records according to the page size
         /// </summary>
         /// <value>Number of records according to the page size</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Current page number for the returned records
         /// </summary>
         /// <value>Current page number for the returned records</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Results associated to the search response
         /// </summary>
         /// <value>Results associated to the search response</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<KnowledgeSearchDocument> Results { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class KnowledgeSearchResponse {\n");
-            
+
             sb.Append("  SearchId: ").Append(SearchId).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
@@ -212,25 +179,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SearchId != null)
                     hash = hash * 59 + this.SearchId.GetHashCode();
-                
+
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
-                
+
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
-                
+
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
+
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
+
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ForecastAverageSpeedOfAnswerResponse :  IEquatable<ForecastAverageSpeedOfAnswerResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ForecastAverageSpeedOfAnswerResponse" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// the average speed of answer goal in seconds
         /// </summary>
         /// <value>the average speed of answer goal in seconds</value>
         [DataMember(Name="seconds", EmitDefaultValue=false)]
         public int? Seconds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ForecastAverageSpeedOfAnswerResponse {\n");
-            
+
             sb.Append("  Seconds: ").Append(Seconds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Seconds != null)
                     hash = hash * 59 + this.Seconds.GetHashCode();
-                
+
                 return hash;
             }
         }

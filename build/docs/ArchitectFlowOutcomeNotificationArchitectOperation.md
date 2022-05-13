@@ -15,7 +15,7 @@ title: ArchitectFlowOutcomeNotificationArchitectOperation
 | **ActionStatus** | **string** | The action status | [optional] |
 | **ErrorMessage** | **string** | The error message, if the action failed | [optional] |
 | **ErrorCode** | **string** | The error code, if the action failed | [optional] |
-| **ErrorMessageParams** | [**ArchitectFlowOutcomeNotificationErrorMessageParams**](ArchitectFlowOutcomeNotificationErrorMessageParams.html) |  | [optional] |
+| **ErrorMessageParams** | **Object** | The error message params, if the action failed | [optional] |
 | **ErrorDetails** | [**List&lt;ArchitectFlowOutcomeNotificationErrorDetail&gt;**](ArchitectFlowOutcomeNotificationErrorDetail.html) | The error details, if the action failed | [optional] |
 {: class="table table-striped"}
 

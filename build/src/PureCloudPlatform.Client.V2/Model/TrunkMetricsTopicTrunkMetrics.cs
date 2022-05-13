@@ -18,63 +18,55 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkMetricsTopicTrunkMetrics :  IEquatable<TrunkMetricsTopicTrunkMetrics>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetricsTopicTrunkMetrics" /> class.
         /// </summary>
         /// <param name="Calls">Calls.</param>
+        /// <param name="EventTime">EventTime.</param>
         /// <param name="Qos">Qos.</param>
         /// <param name="Trunk">Trunk.</param>
-        public TrunkMetricsTopicTrunkMetrics(TrunkMetricsTopicTrunkMetricsCalls Calls = null, TrunkMetricsTopicTrunkMetricsQoS Qos = null, TrunkMetricsTopicUriReference Trunk = null)
+        public TrunkMetricsTopicTrunkMetrics(TrunkMetricsTopicTrunkMetricsCalls Calls = null, DateTime? EventTime = null, TrunkMetricsTopicTrunkMetricsQoS Qos = null, TrunkMetricsTopicUriReference Trunk = null)
         {
             this.Calls = Calls;
+            this.EventTime = EventTime;
             this.Qos = Qos;
             this.Trunk = Trunk;
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Calls
         /// </summary>
         [DataMember(Name="calls", EmitDefaultValue=false)]
         public TrunkMetricsTopicTrunkMetricsCalls Calls { get; set; }
-        
-        
-        
+
+
+
+        /// <summary>
+        /// Gets or Sets EventTime
+        /// </summary>
+        [DataMember(Name="eventTime", EmitDefaultValue=false)]
+        public DateTime? EventTime { get; set; }
+
+
+
         /// <summary>
         /// Gets or Sets Qos
         /// </summary>
         [DataMember(Name="qos", EmitDefaultValue=false)]
         public TrunkMetricsTopicTrunkMetricsQoS Qos { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Trunk
         /// </summary>
         [DataMember(Name="trunk", EmitDefaultValue=false)]
         public TrunkMetricsTopicUriReference Trunk { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,8 +75,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkMetricsTopicTrunkMetrics {\n");
-            
+
             sb.Append("  Calls: ").Append(Calls).Append("\n");
+            sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  Qos: ").Append(Qos).Append("\n");
             sb.Append("  Trunk: ").Append(Trunk).Append("\n");
             sb.Append("}\n");
@@ -133,6 +126,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Calls.Equals(other.Calls)
                 ) &&
                 (
+                    this.EventTime == other.EventTime ||
+                    this.EventTime != null &&
+                    this.EventTime.Equals(other.EventTime)
+                ) &&
+                (
                     this.Qos == other.Qos ||
                     this.Qos != null &&
                     this.Qos.Equals(other.Qos)
@@ -155,16 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Calls != null)
                     hash = hash * 59 + this.Calls.GetHashCode();
-                
+
+                if (this.EventTime != null)
+                    hash = hash * 59 + this.EventTime.GetHashCode();
+
                 if (this.Qos != null)
                     hash = hash * 59 + this.Qos.GetHashCode();
-                
+
                 if (this.Trunk != null)
                     hash = hash * 59 + this.Trunk.GetHashCode();
-                
+
                 return hash;
             }
         }

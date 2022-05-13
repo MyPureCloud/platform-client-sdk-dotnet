@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuAgentScheduleHistoryResponse :  IEquatable<BuAgentScheduleHistoryResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAgentScheduleHistoryResponse" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of previously published schedules
         /// </summary>
         /// <value>The list of previously published schedules</value>
         [DataMember(Name="priorPublishedSchedules", EmitDefaultValue=false)]
         public List<BuScheduleReference> PriorPublishedSchedules { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The originally published agent schedules
         /// </summary>
         /// <value>The originally published agent schedules</value>
         [DataMember(Name="basePublishedSchedule", EmitDefaultValue=false)]
         public BuAgentScheduleHistoryChange BasePublishedSchedule { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The changes dropped from the schedule history. This will happen if the schedule history is too large
         /// </summary>
         /// <value>The changes dropped from the schedule history. This will happen if the schedule history is too large</value>
         [DataMember(Name="droppedChanges", EmitDefaultValue=false)]
         public List<BuAgentScheduleHistoryDroppedChange> DroppedChanges { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of changes for the schedule history
         /// </summary>
         /// <value>The list of changes for the schedule history</value>
         [DataMember(Name="changes", EmitDefaultValue=false)]
         public List<BuAgentScheduleHistoryChange> Changes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuAgentScheduleHistoryResponse {\n");
-            
+
             sb.Append("  PriorPublishedSchedules: ").Append(PriorPublishedSchedules).Append("\n");
             sb.Append("  BasePublishedSchedule: ").Append(BasePublishedSchedule).Append("\n");
             sb.Append("  DroppedChanges: ").Append(DroppedChanges).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PriorPublishedSchedules != null)
                     hash = hash * 59 + this.PriorPublishedSchedules.GetHashCode();
-                
+
                 if (this.BasePublishedSchedule != null)
                     hash = hash * 59 + this.BasePublishedSchedule.GetHashCode();
-                
+
                 if (this.DroppedChanges != null)
                     hash = hash * 59 + this.DroppedChanges.GetHashCode();
-                
+
                 if (this.Changes != null)
                     hash = hash * 59 + this.Changes.GetHashCode();
-                
+
                 return hash;
             }
         }

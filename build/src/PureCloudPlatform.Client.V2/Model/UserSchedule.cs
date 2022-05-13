@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserSchedule :  IEquatable<UserSchedule>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UserSchedule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UserSchedule() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserSchedule" /> class.
         /// </summary>
@@ -68,52 +40,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The shifts that belong to this schedule
         /// </summary>
         /// <value>The shifts that belong to this schedule</value>
         [DataMember(Name="shifts", EmitDefaultValue=false)]
         public List<UserScheduleShift> Shifts { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Markers to indicate a full day time off request, relative to the management unit time zone
         /// </summary>
         /// <value>Markers to indicate a full day time off request, relative to the management unit time zone</value>
         [DataMember(Name="fullDayTimeOffMarkers", EmitDefaultValue=false)]
         public List<UserScheduleFullDayTimeOffMarker> FullDayTimeOffMarkers { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If marked true for updating an existing user schedule, it will be deleted
         /// </summary>
         /// <value>If marked true for updating an existing user schedule, it will be deleted</value>
         [DataMember(Name="delete", EmitDefaultValue=false)]
         public bool? Delete { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version metadata for this schedule
         /// </summary>
         /// <value>Version metadata for this schedule</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ID of the work plan associated with the user during schedule creation
         /// </summary>
         /// <value>ID of the work plan associated with the user during schedule creation</value>
         [DataMember(Name="workPlanId", EmitDefaultValue=false)]
         public string WorkPlanId { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,7 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserSchedule {\n");
-            
+
             sb.Append("  Shifts: ").Append(Shifts).Append("\n");
             sb.Append("  FullDayTimeOffMarkers: ").Append(FullDayTimeOffMarkers).Append("\n");
             sb.Append("  Delete: ").Append(Delete).Append("\n");
@@ -206,22 +178,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Shifts != null)
                     hash = hash * 59 + this.Shifts.GetHashCode();
-                
+
                 if (this.FullDayTimeOffMarkers != null)
                     hash = hash * 59 + this.FullDayTimeOffMarkers.GetHashCode();
-                
+
                 if (this.Delete != null)
                     hash = hash * 59 + this.Delete.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 if (this.WorkPlanId != null)
                     hash = hash * 59 + this.WorkPlanId.GetHashCode();
-                
+
                 return hash;
             }
         }

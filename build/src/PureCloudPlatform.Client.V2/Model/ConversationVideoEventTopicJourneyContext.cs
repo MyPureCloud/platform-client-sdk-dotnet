@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationVideoEventTopicJourneyContext :  IEquatable<ConversationVideoEventTopicJourneyContext>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationVideoEventTopicJourneyContext" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Customer
         /// </summary>
         [DataMember(Name="customer", EmitDefaultValue=false)]
         public ConversationVideoEventTopicJourneyCustomer Customer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CustomerSession
         /// </summary>
         [DataMember(Name="customerSession", EmitDefaultValue=false)]
         public ConversationVideoEventTopicJourneyCustomerSession CustomerSession { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets TriggeringAction
         /// </summary>
         [DataMember(Name="triggeringAction", EmitDefaultValue=false)]
         public ConversationVideoEventTopicJourneyAction TriggeringAction { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationVideoEventTopicJourneyContext {\n");
-            
+
             sb.Append("  Customer: ").Append(Customer).Append("\n");
             sb.Append("  CustomerSession: ").Append(CustomerSession).Append("\n");
             sb.Append("  TriggeringAction: ").Append(TriggeringAction).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Customer != null)
                     hash = hash * 59 + this.Customer.GetHashCode();
-                
+
                 if (this.CustomerSession != null)
                     hash = hash * 59 + this.CustomerSession.GetHashCode();
-                
+
                 if (this.TriggeringAction != null)
                     hash = hash * 59 + this.TriggeringAction.GetHashCode();
-                
+
                 return hash;
             }
         }

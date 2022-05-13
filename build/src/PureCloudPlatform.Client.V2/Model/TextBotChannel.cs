@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotChannel :  IEquatable<TextBotChannel>
     {
-        
-        
         /// <summary>
         /// The name of the channel.
         /// </summary>
@@ -53,12 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Messaging")]
             Messaging
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets InputModes
         /// </summary>
@@ -79,12 +71,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Text")]
             Text
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets OutputModes
         /// </summary>
@@ -105,35 +91,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Text")]
             Text
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The name of the channel.
         /// </summary>
         /// <value>The name of the channel.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public NameEnum? Name { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotChannel" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotChannel() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotChannel" /> class.
         /// </summary>
@@ -150,36 +119,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The input modes for the channel.
         /// </summary>
         /// <value>The input modes for the channel.</value>
         [DataMember(Name="inputModes", EmitDefaultValue=false)]
         public List<InputModesEnum> InputModes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The output modes for the channel.
         /// </summary>
         /// <value>The output modes for the channel.</value>
         [DataMember(Name="outputModes", EmitDefaultValue=false)]
         public List<OutputModesEnum> OutputModes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Information about the end user agent calling the bot flow.
         /// </summary>
         /// <value>Information about the end user agent calling the bot flow.</value>
         [DataMember(Name="userAgent", EmitDefaultValue=false)]
         public TextBotUserAgent UserAgent { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,7 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotChannel {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  InputModes: ").Append(InputModes).Append("\n");
             sb.Append("  OutputModes: ").Append(OutputModes).Append("\n");
@@ -266,19 +235,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.InputModes != null)
                     hash = hash * 59 + this.InputModes.GetHashCode();
-                
+
                 if (this.OutputModes != null)
                     hash = hash * 59 + this.OutputModes.GetHashCode();
-                
+
                 if (this.UserAgent != null)
                     hash = hash * 59 + this.UserAgent.GetHashCode();
-                
+
                 return hash;
             }
         }

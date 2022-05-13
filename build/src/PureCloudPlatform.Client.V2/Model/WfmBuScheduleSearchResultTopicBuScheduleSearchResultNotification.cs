@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuScheduleSearchResultTopicBuScheduleSearchResultNotification :  IEquatable<WfmBuScheduleSearchResultTopicBuScheduleSearchResultNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuScheduleSearchResultTopicBuScheduleSearchResultNotification" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets OperationId
         /// </summary>
         [DataMember(Name="operationId", EmitDefaultValue=false)]
         public string OperationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets BusinessUnitId
         /// </summary>
         [DataMember(Name="businessUnitId", EmitDefaultValue=false)]
         public string BusinessUnitId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DownloadUrl
         /// </summary>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuScheduleSearchResultTopicBuScheduleSearchResultNotification {\n");
-            
+
             sb.Append("  OperationId: ").Append(OperationId).Append("\n");
             sb.Append("  BusinessUnitId: ").Append(BusinessUnitId).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OperationId != null)
                     hash = hash * 59 + this.OperationId.GetHashCode();
-                
+
                 if (this.BusinessUnitId != null)
                     hash = hash * 59 + this.BusinessUnitId.GetHashCode();
-                
+
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
-                
+
                 return hash;
             }
         }

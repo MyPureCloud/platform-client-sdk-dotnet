@@ -283,6 +283,8 @@ Get the available limit change requests
 
 Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
 
+
+
 Requires ANY permissions: 
 
 * limits:organization:view
@@ -536,7 +538,7 @@ namespace Example
 
 <a name="getorganizationslimitsnamespaces"></a>
 
-## [**PagedNamespaceListing**](PagedNamespaceListing.html) GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null)
+## **Object** GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null)
 
 
 
@@ -576,7 +578,7 @@ namespace Example
             try
             { 
                 // Get the available limit namespaces
-                PagedNamespaceListing result = apiInstance.GetOrganizationsLimitsNamespaces(pageSize, pageNumber);
+                Object result = apiInstance.GetOrganizationsLimitsNamespaces(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -599,7 +601,7 @@ namespace Example
 
 ### Return type
 
-[**PagedNamespaceListing**](PagedNamespaceListing.html)
+**Object**
 
 <a name="getorganizationsme"></a>
 

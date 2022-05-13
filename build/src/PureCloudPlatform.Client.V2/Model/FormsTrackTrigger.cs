@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FormsTrackTrigger :  IEquatable<FormsTrackTrigger>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="FormsTrackTrigger" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected FormsTrackTrigger() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FormsTrackTrigger" /> class.
         /// </summary>
@@ -63,43 +40,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Form element that triggers the form submitted or abandoned event.
         /// </summary>
         /// <value>Form element that triggers the form submitted or abandoned event.</value>
         [DataMember(Name="selector", EmitDefaultValue=false)]
         public string Selector { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Prefix for the form submitted or abandoned event name.
         /// </summary>
         /// <value>Prefix for the form submitted or abandoned event name.</value>
         [DataMember(Name="formName", EmitDefaultValue=false)]
         public string FormName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to capture the form data in the form abandoned event.
         /// </summary>
         /// <value>Whether to capture the form data in the form abandoned event.</value>
         [DataMember(Name="captureDataOnFormAbandon", EmitDefaultValue=false)]
         public bool? CaptureDataOnFormAbandon { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether to capture the form data in the form submitted event.
         /// </summary>
         /// <value>Whether to capture the form data in the form submitted event.</value>
         [DataMember(Name="captureDataOnFormSubmit", EmitDefaultValue=false)]
         public bool? CaptureDataOnFormSubmit { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FormsTrackTrigger {\n");
-            
+
             sb.Append("  Selector: ").Append(Selector).Append("\n");
             sb.Append("  FormName: ").Append(FormName).Append("\n");
             sb.Append("  CaptureDataOnFormAbandon: ").Append(CaptureDataOnFormAbandon).Append("\n");
@@ -186,19 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Selector != null)
                     hash = hash * 59 + this.Selector.GetHashCode();
-                
+
                 if (this.FormName != null)
                     hash = hash * 59 + this.FormName.GetHashCode();
-                
+
                 if (this.CaptureDataOnFormAbandon != null)
                     hash = hash * 59 + this.CaptureDataOnFormAbandon.GetHashCode();
-                
+
                 if (this.CaptureDataOnFormSubmit != null)
                     hash = hash * 59 + this.CaptureDataOnFormSubmit.GetHashCode();
-                
+
                 return hash;
             }
         }

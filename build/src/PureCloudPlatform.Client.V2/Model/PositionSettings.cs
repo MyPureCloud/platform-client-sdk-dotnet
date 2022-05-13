@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PositionSettings :  IEquatable<PositionSettings>
     {
-        
-        
         /// <summary>
         /// The alignment for position
         /// </summary>
@@ -53,30 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Right")]
             Right
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The alignment for position
         /// </summary>
         /// <value>The alignment for position</value>
         [DataMember(Name="alignment", EmitDefaultValue=false)]
         public AlignmentEnum? Alignment { get; set; }
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PositionSettings" /> class.
         /// </summary>
@@ -91,27 +71,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The sidespace value for position
         /// </summary>
         /// <value>The sidespace value for position</value>
         [DataMember(Name="sideSpace", EmitDefaultValue=false)]
         public int? SideSpace { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The bottomspace value for position
         /// </summary>
         /// <value>The bottomspace value for position</value>
         [DataMember(Name="bottomSpace", EmitDefaultValue=false)]
         public int? BottomSpace { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -120,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PositionSettings {\n");
-            
+
             sb.Append("  Alignment: ").Append(Alignment).Append("\n");
             sb.Append("  SideSpace: ").Append(SideSpace).Append("\n");
             sb.Append("  BottomSpace: ").Append(BottomSpace).Append("\n");
@@ -192,16 +172,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Alignment != null)
                     hash = hash * 59 + this.Alignment.GetHashCode();
-                
+
                 if (this.SideSpace != null)
                     hash = hash * 59 + this.SideSpace.GetHashCode();
-                
+
                 if (this.BottomSpace != null)
                     hash = hash * 59 + this.BottomSpace.GetHashCode();
-                
+
                 return hash;
             }
         }

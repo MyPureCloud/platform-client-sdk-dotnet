@@ -18,59 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CrossPlatformPolicyActions :  IEquatable<CrossPlatformPolicyActions>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CrossPlatformPolicyActions" /> class.
         /// </summary>
@@ -99,91 +46,91 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// true to retain the recording associated with the conversation. Default = true
         /// </summary>
         /// <value>true to retain the recording associated with the conversation. Default = true</value>
         [DataMember(Name="retainRecording", EmitDefaultValue=false)]
         public bool? RetainRecording { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// true to delete the recording associated with the conversation. If retainRecording = true, this will be ignored. Default = false
         /// </summary>
         /// <value>true to delete the recording associated with the conversation. If retainRecording = true, this will be ignored. Default = false</value>
         [DataMember(Name="deleteRecording", EmitDefaultValue=false)]
         public bool? DeleteRecording { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default = false
         /// </summary>
         /// <value>true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default = false</value>
         [DataMember(Name="alwaysDelete", EmitDefaultValue=false)]
         public bool? AlwaysDelete { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AssignEvaluations
         /// </summary>
         [DataMember(Name="assignEvaluations", EmitDefaultValue=false)]
         public List<EvaluationAssignment> AssignEvaluations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AssignMeteredEvaluations
         /// </summary>
         [DataMember(Name="assignMeteredEvaluations", EmitDefaultValue=false)]
         public List<MeteredEvaluationAssignment> AssignMeteredEvaluations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AssignMeteredAssignmentByAgent
         /// </summary>
         [DataMember(Name="assignMeteredAssignmentByAgent", EmitDefaultValue=false)]
         public List<MeteredAssignmentByAgent> AssignMeteredAssignmentByAgent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AssignCalibrations
         /// </summary>
         [DataMember(Name="assignCalibrations", EmitDefaultValue=false)]
         public List<CalibrationAssignment> AssignCalibrations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RetentionDuration
         /// </summary>
         [DataMember(Name="retentionDuration", EmitDefaultValue=false)]
         public RetentionDuration RetentionDuration { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MediaTranscriptions
         /// </summary>
         [DataMember(Name="mediaTranscriptions", EmitDefaultValue=false)]
         public List<MediaTranscription> MediaTranscriptions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Policy action for exporting recordings using an integration to 3rd party s3.
         /// </summary>
         /// <value>Policy action for exporting recordings using an integration to 3rd party s3.</value>
         [DataMember(Name="integrationExport", EmitDefaultValue=false)]
         public IntegrationExport IntegrationExport { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,7 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CrossPlatformPolicyActions {\n");
-            
+
             sb.Append("  RetainRecording: ").Append(RetainRecording).Append("\n");
             sb.Append("  DeleteRecording: ").Append(DeleteRecording).Append("\n");
             sb.Append("  AlwaysDelete: ").Append(AlwaysDelete).Append("\n");
@@ -306,37 +253,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RetainRecording != null)
                     hash = hash * 59 + this.RetainRecording.GetHashCode();
-                
+
                 if (this.DeleteRecording != null)
                     hash = hash * 59 + this.DeleteRecording.GetHashCode();
-                
+
                 if (this.AlwaysDelete != null)
                     hash = hash * 59 + this.AlwaysDelete.GetHashCode();
-                
+
                 if (this.AssignEvaluations != null)
                     hash = hash * 59 + this.AssignEvaluations.GetHashCode();
-                
+
                 if (this.AssignMeteredEvaluations != null)
                     hash = hash * 59 + this.AssignMeteredEvaluations.GetHashCode();
-                
+
                 if (this.AssignMeteredAssignmentByAgent != null)
                     hash = hash * 59 + this.AssignMeteredAssignmentByAgent.GetHashCode();
-                
+
                 if (this.AssignCalibrations != null)
                     hash = hash * 59 + this.AssignCalibrations.GetHashCode();
-                
+
                 if (this.RetentionDuration != null)
                     hash = hash * 59 + this.RetentionDuration.GetHashCode();
-                
+
                 if (this.MediaTranscriptions != null)
                     hash = hash * 59 + this.MediaTranscriptions.GetHashCode();
-                
+
                 if (this.IntegrationExport != null)
                     hash = hash * 59 + this.IntegrationExport.GetHashCode();
-                
+
                 return hash;
             }
         }

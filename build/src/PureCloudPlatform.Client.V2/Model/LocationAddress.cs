@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LocationAddress :  IEquatable<LocationAddress>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationAddress" /> class.
         /// </summary>
@@ -78,63 +40,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets City
         /// </summary>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CountryName
         /// </summary>
         [DataMember(Name="countryName", EmitDefaultValue=false)]
         public string CountryName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public string State { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Street1
         /// </summary>
         [DataMember(Name="street1", EmitDefaultValue=false)]
         public string Street1 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Street2
         /// </summary>
         [DataMember(Name="street2", EmitDefaultValue=false)]
         public string Street2 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Zipcode
         /// </summary>
         [DataMember(Name="zipcode", EmitDefaultValue=false)]
         public string Zipcode { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -143,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LocationAddress {\n");
-            
+
             sb.Append("  City: ").Append(City).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
             sb.Append("  CountryName: ").Append(CountryName).Append("\n");
@@ -239,28 +201,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.City != null)
                     hash = hash * 59 + this.City.GetHashCode();
-                
+
                 if (this.Country != null)
                     hash = hash * 59 + this.Country.GetHashCode();
-                
+
                 if (this.CountryName != null)
                     hash = hash * 59 + this.CountryName.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.Street1 != null)
                     hash = hash * 59 + this.Street1.GetHashCode();
-                
+
                 if (this.Street2 != null)
                     hash = hash * 59 + this.Street2.GetHashCode();
-                
+
                 if (this.Zipcode != null)
                     hash = hash * 59 + this.Zipcode.GetHashCode();
-                
+
                 return hash;
             }
         }

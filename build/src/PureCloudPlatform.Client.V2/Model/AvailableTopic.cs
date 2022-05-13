@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AvailableTopic :  IEquatable<AvailableTopic>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Visibility of this topic (Public or Preview)
         /// </summary>
@@ -68,21 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Preview")]
             Preview
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Transports
         /// </summary>
@@ -115,52 +77,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EventBridge")]
             Eventbridge
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Visibility of this topic (Public or Preview)
         /// </summary>
         /// <value>Visibility of this topic (Public or Preview)</value>
         [DataMember(Name="visibility", EmitDefaultValue=false)]
         public VisibilityEnum? Visibility { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTopic" /> class.
         /// </summary>
@@ -197,122 +119,122 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Full detailed permissions required to subscribe to the topic
         /// </summary>
         /// <value>Full detailed permissions required to subscribe to the topic</value>
         [DataMember(Name="permissionDetails", EmitDefaultValue=false)]
         public List<PermissionDetails> PermissionDetails { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Permissions required to subscribe to the topic
         /// </summary>
         /// <value>Permissions required to subscribe to the topic</value>
         [DataMember(Name="requiresPermissions", EmitDefaultValue=false)]
         public List<string> RequiresPermissions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if the subscribing user must belong to the same division as the topic object ID
         /// </summary>
         /// <value>True if the subscribing user must belong to the same division as the topic object ID</value>
         [DataMember(Name="requiresDivisionPermissions", EmitDefaultValue=false)]
         public bool? RequiresDivisionPermissions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If multiple permissions are required for this topic, such as both requiresCurrentUser and requiresDivisionPermissions, then true here indicates that meeting any one condition will satisfy the requirements; false indicates all conditions must be met.
         /// </summary>
         /// <value>If multiple permissions are required for this topic, such as both requiresCurrentUser and requiresDivisionPermissions, then true here indicates that meeting any one condition will satisfy the requirements; false indicates all conditions must be met.</value>
         [DataMember(Name="requiresAnyValidator", EmitDefaultValue=false)]
         public bool? RequiresAnyValidator { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not the permissions on this topic are enforced
         /// </summary>
         /// <value>Whether or not the permissions on this topic are enforced</value>
         [DataMember(Name="enforced", EmitDefaultValue=false)]
         public bool? Enforced { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Schema
         /// </summary>
         [DataMember(Name="schema", EmitDefaultValue=false)]
         public Dictionary<string, Object> Schema { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if the topic user ID is required to match the subscribing user ID
         /// </summary>
         /// <value>True if the topic user ID is required to match the subscribing user ID</value>
         [DataMember(Name="requiresCurrentUser", EmitDefaultValue=false)]
         public bool? RequiresCurrentUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// True if permissions are only required when the topic user ID does not match the subscribing user ID
         /// </summary>
         /// <value>True if permissions are only required when the topic user ID does not match the subscribing user ID</value>
         [DataMember(Name="requiresCurrentUserOrPermission", EmitDefaultValue=false)]
         public bool? RequiresCurrentUserOrPermission { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Transports that support events for the topic
         /// </summary>
         /// <value>Transports that support events for the topic</value>
         [DataMember(Name="transports", EmitDefaultValue=false)]
         public List<TransportsEnum> Transports { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PublicApiTemplateUriPaths
         /// </summary>
         [DataMember(Name="publicApiTemplateUriPaths", EmitDefaultValue=false)]
         public List<string> PublicApiTemplateUriPaths { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Parameters in the topic name that can be substituted, in the order they appear in the topic name
         /// </summary>
         /// <value>Parameters in the topic name that can be substituted, in the order they appear in the topic name</value>
         [DataMember(Name="topicParameters", EmitDefaultValue=false)]
         public List<string> TopicParameters { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -321,7 +243,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AvailableTopic {\n");
-            
+
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  PermissionDetails: ").Append(PermissionDetails).Append("\n");
@@ -459,49 +381,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.PermissionDetails != null)
                     hash = hash * 59 + this.PermissionDetails.GetHashCode();
-                
+
                 if (this.RequiresPermissions != null)
                     hash = hash * 59 + this.RequiresPermissions.GetHashCode();
-                
+
                 if (this.RequiresDivisionPermissions != null)
                     hash = hash * 59 + this.RequiresDivisionPermissions.GetHashCode();
-                
+
                 if (this.RequiresAnyValidator != null)
                     hash = hash * 59 + this.RequiresAnyValidator.GetHashCode();
-                
+
                 if (this.Enforced != null)
                     hash = hash * 59 + this.Enforced.GetHashCode();
-                
+
                 if (this.Visibility != null)
                     hash = hash * 59 + this.Visibility.GetHashCode();
-                
+
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();
-                
+
                 if (this.RequiresCurrentUser != null)
                     hash = hash * 59 + this.RequiresCurrentUser.GetHashCode();
-                
+
                 if (this.RequiresCurrentUserOrPermission != null)
                     hash = hash * 59 + this.RequiresCurrentUserOrPermission.GetHashCode();
-                
+
                 if (this.Transports != null)
                     hash = hash * 59 + this.Transports.GetHashCode();
-                
+
                 if (this.PublicApiTemplateUriPaths != null)
                     hash = hash * 59 + this.PublicApiTemplateUriPaths.GetHashCode();
-                
+
                 if (this.TopicParameters != null)
                     hash = hash * 59 + this.TopicParameters.GetHashCode();
-                
+
                 return hash;
             }
         }

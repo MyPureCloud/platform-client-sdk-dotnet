@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationThreadingWindowSetting :  IEquatable<ConversationThreadingWindowSetting>
     {
-        
-        
         /// <summary>
         /// The type of messenger
         /// </summary>
@@ -83,31 +81,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "open")]
             Open
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of messenger
         /// </summary>
         /// <value>The type of messenger</value>
         [DataMember(Name="messengerType", EmitDefaultValue=false)]
         public MessengerTypeEnum? MessengerType { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationThreadingWindowSetting" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConversationThreadingWindowSetting() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationThreadingWindowSetting" /> class.
         /// </summary>
@@ -120,18 +105,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The conversation threading window timeout (Minutes) of specified messenger type
         /// </summary>
         /// <value>The conversation threading window timeout (Minutes) of specified messenger type</value>
         [DataMember(Name="timeoutInMinutes", EmitDefaultValue=false)]
         public long? TimeoutInMinutes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -140,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationThreadingWindowSetting {\n");
-            
+
             sb.Append("  MessengerType: ").Append(MessengerType).Append("\n");
             sb.Append("  TimeoutInMinutes: ").Append(TimeoutInMinutes).Append("\n");
             sb.Append("}\n");
@@ -206,13 +191,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MessengerType != null)
                     hash = hash * 59 + this.MessengerType.GetHashCode();
-                
+
                 if (this.TimeoutInMinutes != null)
                     hash = hash * 59 + this.TimeoutInMinutes.GetHashCode();
-                
+
                 return hash;
             }
         }

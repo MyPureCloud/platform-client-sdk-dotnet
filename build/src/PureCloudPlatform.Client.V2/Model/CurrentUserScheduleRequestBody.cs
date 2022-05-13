@@ -18,36 +18,18 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CurrentUserScheduleRequestBody :  IEquatable<CurrentUserScheduleRequestBody>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CurrentUserScheduleRequestBody" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CurrentUserScheduleRequestBody() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="CurrentUserScheduleRequestBody" /> class.
         /// </summary>
         /// <param name="StartDate">Beginning of the range of schedules to fetch, in ISO-8601 format (required).</param>
         /// <param name="EndDate">End of the range of schedules to fetch, in ISO-8601 format (required).</param>
-        /// <param name="LoadFullWeeks">Whether to load the full week&#39;s schedule (for the current user) of any week overlapping the start/end date query parameters, defaults to false.</param>
+        /// <param name="LoadFullWeeks">Whether to load the full week's schedule (for the current user) of any week overlapping the start/end date query parameters, defaults to false.</param>
         public CurrentUserScheduleRequestBody(DateTime? StartDate = null, DateTime? EndDate = null, bool? LoadFullWeeks = null)
         {
             this.StartDate = StartDate;
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Beginning of the range of schedules to fetch, in ISO-8601 format
         /// </summary>
         /// <value>Beginning of the range of schedules to fetch, in ISO-8601 format</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// End of the range of schedules to fetch, in ISO-8601 format
         /// </summary>
         /// <value>End of the range of schedules to fetch, in ISO-8601 format</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Whether to load the full week&#39;s schedule (for the current user) of any week overlapping the start/end date query parameters, defaults to false
+        /// Whether to load the full week's schedule (for the current user) of any week overlapping the start/end date query parameters, defaults to false
         /// </summary>
-        /// <value>Whether to load the full week&#39;s schedule (for the current user) of any week overlapping the start/end date query parameters, defaults to false</value>
+        /// <value>Whether to load the full week's schedule (for the current user) of any week overlapping the start/end date query parameters, defaults to false</value>
         [DataMember(Name="loadFullWeeks", EmitDefaultValue=false)]
         public bool? LoadFullWeeks { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CurrentUserScheduleRequestBody {\n");
-            
+
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  LoadFullWeeks: ").Append(LoadFullWeeks).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
+
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
+
                 if (this.LoadFullWeeks != null)
                     hash = hash * 59 + this.LoadFullWeeks.GetHashCode();
-                
+
                 return hash;
             }
         }

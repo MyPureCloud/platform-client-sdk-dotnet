@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WeekScheduleGenerationResult :  IEquatable<WeekScheduleGenerationResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WeekScheduleGenerationResult" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Whether the schedule generation failed
         /// </summary>
         /// <value>Whether the schedule generation failed</value>
         [DataMember(Name="failed", EmitDefaultValue=false)]
         public bool? Failed { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// ID of the schedule run
         /// </summary>
         /// <value>ID of the schedule run</value>
         [DataMember(Name="runId", EmitDefaultValue=false)]
         public string RunId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Warning messages from the schedule run. This will be available only when requesting information for a single week schedule
         /// </summary>
         /// <value>Warning messages from the schedule run. This will be available only when requesting information for a single week schedule</value>
         [DataMember(Name="agentWarnings", EmitDefaultValue=false)]
         public List<ScheduleGenerationWarning> AgentWarnings { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Count of warning messages from the schedule run. This will be available only when requesting multiple week schedules
         /// </summary>
         /// <value>Count of warning messages from the schedule run. This will be available only when requesting multiple week schedules</value>
         [DataMember(Name="agentWarningCount", EmitDefaultValue=false)]
         public int? AgentWarningCount { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WeekScheduleGenerationResult {\n");
-            
+
             sb.Append("  Failed: ").Append(Failed).Append("\n");
             sb.Append("  RunId: ").Append(RunId).Append("\n");
             sb.Append("  AgentWarnings: ").Append(AgentWarnings).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Failed != null)
                     hash = hash * 59 + this.Failed.GetHashCode();
-                
+
                 if (this.RunId != null)
                     hash = hash * 59 + this.RunId.GetHashCode();
-                
+
                 if (this.AgentWarnings != null)
                     hash = hash * 59 + this.AgentWarnings.GetHashCode();
-                
+
                 if (this.AgentWarningCount != null)
                     hash = hash * 59 + this.AgentWarningCount.GetHashCode();
-                
+
                 return hash;
             }
         }

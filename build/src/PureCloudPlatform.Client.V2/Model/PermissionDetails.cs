@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PermissionDetails :  IEquatable<PermissionDetails>
     {
-        
-        
         /// <summary>
         /// The type of permission requirement
         /// </summary>
@@ -65,35 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "requiresUserBeConversationParticipant")]
             Requiresuserbeconversationparticipant
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of permission requirement
         /// </summary>
         /// <value>The type of permission requirement</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionDetails" /> class.
         /// </summary>
@@ -110,36 +85,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// List of required permissions
         /// </summary>
         /// <value>List of required permissions</value>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<string> Permissions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the current user can subscribe, when division permissions are otherwise required
         /// </summary>
         /// <value>Whether the current user can subscribe, when division permissions are otherwise required</value>
         [DataMember(Name="allowsCurrentUser", EmitDefaultValue=false)]
         public bool? AllowsCurrentUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether or not this permission requirement is enforced
         /// </summary>
         /// <value>Whether or not this permission requirement is enforced</value>
         [DataMember(Name="enforced", EmitDefaultValue=false)]
         public bool? Enforced { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -148,7 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PermissionDetails {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
             sb.Append("  AllowsCurrentUser: ").Append(AllowsCurrentUser).Append("\n");
@@ -226,19 +201,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Permissions != null)
                     hash = hash * 59 + this.Permissions.GetHashCode();
-                
+
                 if (this.AllowsCurrentUser != null)
                     hash = hash * 59 + this.AllowsCurrentUser.GetHashCode();
-                
+
                 if (this.Enforced != null)
                     hash = hash * 59 + this.Enforced.GetHashCode();
-                
+
                 return hash;
             }
         }

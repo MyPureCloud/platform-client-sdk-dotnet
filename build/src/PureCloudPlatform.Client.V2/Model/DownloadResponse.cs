@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DownloadResponse :  IEquatable<DownloadResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DownloadResponse" /> class.
         /// </summary>
@@ -50,31 +32,31 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ContentLocationUri
         /// </summary>
         [DataMember(Name="contentLocationUri", EmitDefaultValue=false)]
         public string ContentLocationUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ImageUri
         /// </summary>
         [DataMember(Name="imageUri", EmitDefaultValue=false)]
         public string ImageUri { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Thumbnails
         /// </summary>
         [DataMember(Name="thumbnails", EmitDefaultValue=false)]
         public List<DocumentThumbnail> Thumbnails { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DownloadResponse {\n");
-            
+
             sb.Append("  ContentLocationUri: ").Append(ContentLocationUri).Append("\n");
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
             sb.Append("  Thumbnails: ").Append(Thumbnails).Append("\n");
@@ -155,16 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContentLocationUri != null)
                     hash = hash * 59 + this.ContentLocationUri.GetHashCode();
-                
+
                 if (this.ImageUri != null)
                     hash = hash * 59 + this.ImageUri.GetHashCode();
-                
+
                 if (this.Thumbnails != null)
                     hash = hash * 59 + this.Thumbnails.GetHashCode();
-                
+
                 return hash;
             }
         }

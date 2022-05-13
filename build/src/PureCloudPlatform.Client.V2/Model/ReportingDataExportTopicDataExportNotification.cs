@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportingDataExportTopicDataExportNotification :  IEquatable<ReportingDataExportTopicDataExportNotification>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -85,10 +74,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILED")]
             Failed
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ExportFormat
         /// </summary>
@@ -115,13 +100,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PDF")]
             Pdf
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ViewType
         /// </summary>
@@ -532,10 +510,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AGENT_INTERACTIONS_ME_VIEW")]
             AgentInteractionsMeView
         }
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ExportErrorMessagesType
         /// </summary>
@@ -622,24 +596,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NOT_AUTHORIZED_TO_VIEW_EXPORT")]
             NotAuthorizedToViewExport
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Inner
         /// </summary>
@@ -672,71 +628,26 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Failed")]
             Failed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets ExportFormat
         /// </summary>
         [DataMember(Name="exportFormat", EmitDefaultValue=false)]
         public ExportFormatEnum? ExportFormat { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets ViewType
         /// </summary>
         [DataMember(Name="viewType", EmitDefaultValue=false)]
         public ViewTypeEnum? ViewType { get; set; }
-        
-        
-        
         /// <summary>
         /// Gets or Sets ExportErrorMessagesType
         /// </summary>
         [DataMember(Name="exportErrorMessagesType", EmitDefaultValue=false)]
         public ExportErrorMessagesTypeEnum? ExportErrorMessagesType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingDataExportTopicDataExportNotification" /> class.
         /// </summary>
@@ -775,103 +686,103 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RunId
         /// </summary>
         [DataMember(Name="runId", EmitDefaultValue=false)]
         public string RunId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Gets or Sets DownloadUrl
         /// </summary>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         /// <summary>
         /// Gets or Sets Read
         /// </summary>
         [DataMember(Name="read", EmitDefaultValue=false)]
         public bool? Read { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets CreatedDateTime
         /// </summary>
         [DataMember(Name="createdDateTime", EmitDefaultValue=false)]
         public DateTime? CreatedDateTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ModifiedDateTime
         /// </summary>
         [DataMember(Name="modifiedDateTime", EmitDefaultValue=false)]
         public DateTime? ModifiedDateTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PercentageComplete
         /// </summary>
         [DataMember(Name="percentageComplete", EmitDefaultValue=false)]
         public double? PercentageComplete { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EmailStatuses
         /// </summary>
         [DataMember(Name="emailStatuses", EmitDefaultValue=false)]
         public Dictionary<string, string> EmailStatuses { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EmailErrorDescription
         /// </summary>
         [DataMember(Name="emailErrorDescription", EmitDefaultValue=false)]
         public string EmailErrorDescription { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ScheduleExpression
         /// </summary>
         [DataMember(Name="scheduleExpression", EmitDefaultValue=false)]
         public string ScheduleExpression { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -880,7 +791,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportingDataExportTopicDataExportNotification {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RunId: ").Append(RunId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -1024,52 +935,51 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.RunId != null)
                     hash = hash * 59 + this.RunId.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.ExportFormat != null)
                     hash = hash * 59 + this.ExportFormat.GetHashCode();
-                
+
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
-                
+
                 if (this.ViewType != null)
                     hash = hash * 59 + this.ViewType.GetHashCode();
-                
+
                 if (this.ExportErrorMessagesType != null)
                     hash = hash * 59 + this.ExportErrorMessagesType.GetHashCode();
-                
+
                 if (this.Read != null)
                     hash = hash * 59 + this.Read.GetHashCode();
-                
+
                 if (this.CreatedDateTime != null)
                     hash = hash * 59 + this.CreatedDateTime.GetHashCode();
-                
+
                 if (this.ModifiedDateTime != null)
                     hash = hash * 59 + this.ModifiedDateTime.GetHashCode();
-                
+
                 if (this.PercentageComplete != null)
                     hash = hash * 59 + this.PercentageComplete.GetHashCode();
-                
+
                 if (this.EmailStatuses != null)
                     hash = hash * 59 + this.EmailStatuses.GetHashCode();
-                
+
                 if (this.EmailErrorDescription != null)
                     hash = hash * 59 + this.EmailErrorDescription.GetHashCode();
-                
+
                 if (this.ScheduleExpression != null)
                     hash = hash * 59 + this.ScheduleExpression.GetHashCode();
-                
+
                 return hash;
             }
         }

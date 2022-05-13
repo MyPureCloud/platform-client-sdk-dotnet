@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerRulesetConfigChangeDataActionConditionPredicate :  IEquatable<DialerRulesetConfigChangeDataActionConditionPredicate>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The operation with which to evaluate this condition
         /// </summary>
@@ -98,44 +93,19 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AFTER")]
             After
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The operation with which to evaluate this condition
         /// </summary>
         /// <value>The operation with which to evaluate this condition</value>
         [DataMember(Name="outputOperator", EmitDefaultValue=false)]
         public OutputOperatorEnum? OutputOperator { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRulesetConfigChangeDataActionConditionPredicate" /> class.
         /// </summary>
-        /// <param name="OutputField">The name of an output field from the data action&#39;s output to use for this condition.</param>
+        /// <param name="OutputField">The name of an output field from the data action's output to use for this condition.</param>
         /// <param name="OutputOperator">The operation with which to evaluate this condition.</param>
         /// <param name="ComparisonValue">The value to compare against for this condition.</param>
-        /// <param name="OutputFieldMissingResolution">The result of this predicate if the requested output field is missing from the data action&#39;s result.</param>
+        /// <param name="OutputFieldMissingResolution">The result of this predicate if the requested output field is missing from the data action's result.</param>
         /// <param name="Inverted">If true, inverts the result of evaluating this Predicate. Default is false..</param>
         public DialerRulesetConfigChangeDataActionConditionPredicate(string OutputField = null, OutputOperatorEnum? OutputOperator = null, string ComparisonValue = null, bool? OutputFieldMissingResolution = null, bool? Inverted = null)
         {
@@ -147,45 +117,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The name of an output field from the data action&#39;s output to use for this condition
+        /// The name of an output field from the data action's output to use for this condition
         /// </summary>
-        /// <value>The name of an output field from the data action&#39;s output to use for this condition</value>
+        /// <value>The name of an output field from the data action's output to use for this condition</value>
         [DataMember(Name="outputField", EmitDefaultValue=false)]
         public string OutputField { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The value to compare against for this condition
         /// </summary>
         /// <value>The value to compare against for this condition</value>
         [DataMember(Name="comparisonValue", EmitDefaultValue=false)]
         public string ComparisonValue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The result of this predicate if the requested output field is missing from the data action&#39;s result
+        /// The result of this predicate if the requested output field is missing from the data action's result
         /// </summary>
-        /// <value>The result of this predicate if the requested output field is missing from the data action&#39;s result</value>
+        /// <value>The result of this predicate if the requested output field is missing from the data action's result</value>
         [DataMember(Name="outputFieldMissingResolution", EmitDefaultValue=false)]
         public bool? OutputFieldMissingResolution { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// If true, inverts the result of evaluating this Predicate. Default is false.
         /// </summary>
         /// <value>If true, inverts the result of evaluating this Predicate. Default is false.</value>
         [DataMember(Name="inverted", EmitDefaultValue=false)]
         public bool? Inverted { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -194,7 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerRulesetConfigChangeDataActionConditionPredicate {\n");
-            
+
             sb.Append("  OutputField: ").Append(OutputField).Append("\n");
             sb.Append("  OutputOperator: ").Append(OutputOperator).Append("\n");
             sb.Append("  ComparisonValue: ").Append(ComparisonValue).Append("\n");
@@ -278,22 +248,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OutputField != null)
                     hash = hash * 59 + this.OutputField.GetHashCode();
-                
+
                 if (this.OutputOperator != null)
                     hash = hash * 59 + this.OutputOperator.GetHashCode();
-                
+
                 if (this.ComparisonValue != null)
                     hash = hash * 59 + this.ComparisonValue.GetHashCode();
-                
+
                 if (this.OutputFieldMissingResolution != null)
                     hash = hash * 59 + this.OutputFieldMissingResolution.GetHashCode();
-                
+
                 if (this.Inverted != null)
                     hash = hash * 59 + this.Inverted.GetHashCode();
-                
+
                 return hash;
             }
         }

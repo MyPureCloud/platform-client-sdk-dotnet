@@ -18,9 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueueConversationVideoEventTopicObject :  IEquatable<QueueConversationVideoEventTopicObject>
     {
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationVideoEventTopicObject" /> class.
         /// </summary>
@@ -29,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -38,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueueConversationVideoEventTopicObject {\n");
-            
+
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,7 +89,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 return hash;
             }
         }

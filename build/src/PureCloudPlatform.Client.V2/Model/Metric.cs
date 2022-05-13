@@ -18,70 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Metric :  IEquatable<Metric>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Metric" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Metric() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Metric" /> class.
         /// </summary>
@@ -100,106 +42,106 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of this metric
         /// </summary>
         /// <value>The name of this metric</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of associated metric definition
         /// </summary>
         /// <value>The id of associated metric definition</value>
         [DataMember(Name="metricDefinitionId", EmitDefaultValue=false)]
         public string MetricDefinitionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of associated external metric definition
         /// </summary>
         /// <value>The id of associated external metric definition</value>
         [DataMember(Name="externalMetricDefinitionId", EmitDefaultValue=false)]
         public string ExternalMetricDefinitionId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Associated objective for this metric
         /// </summary>
         /// <value>Associated objective for this metric</value>
         [DataMember(Name="objective", EmitDefaultValue=false)]
         public Objective Objective { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Performance profile id of this metric
         /// </summary>
         /// <value>Performance profile id of this metric</value>
         [DataMember(Name="performanceProfileId", EmitDefaultValue=false)]
         public string PerformanceProfileId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The linked metric entity reference
         /// </summary>
         /// <value>The linked metric entity reference</value>
         [DataMember(Name="linkedMetric", EmitDefaultValue=false)]
         public AddressableEntityRef LinkedMetric { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The created date of this metric. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The created date of this metric. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The unlinked workday for this metric if this metric was ever unlinked. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>The unlinked workday for this metric if this metric was ever unlinked. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="dateUnlinked", EmitDefaultValue=false)]
         public String DateUnlinked { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The source performance profile when this metric is linked
         /// </summary>
         /// <value>The source performance profile when this metric is linked</value>
         [DataMember(Name="sourcePerformanceProfile", EmitDefaultValue=false)]
         public PerformanceProfile SourcePerformanceProfile { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -208,7 +150,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Metric {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  MetricDefinitionId: ").Append(MetricDefinitionId).Append("\n");
@@ -328,40 +270,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.MetricDefinitionId != null)
                     hash = hash * 59 + this.MetricDefinitionId.GetHashCode();
-                
+
                 if (this.ExternalMetricDefinitionId != null)
                     hash = hash * 59 + this.ExternalMetricDefinitionId.GetHashCode();
-                
+
                 if (this.Objective != null)
                     hash = hash * 59 + this.Objective.GetHashCode();
-                
+
                 if (this.PerformanceProfileId != null)
                     hash = hash * 59 + this.PerformanceProfileId.GetHashCode();
-                
+
                 if (this.LinkedMetric != null)
                     hash = hash * 59 + this.LinkedMetric.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateUnlinked != null)
                     hash = hash * 59 + this.DateUnlinked.GetHashCode();
-                
+
                 if (this.SourcePerformanceProfile != null)
                     hash = hash * 59 + this.SourcePerformanceProfile.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

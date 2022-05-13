@@ -18,36 +18,13 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimV2EnterpriseUser :  IEquatable<ScimV2EnterpriseUser>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2EnterpriseUser" /> class.
         /// </summary>
         /// <param name="Division">The division that the user belongs to..</param>
         /// <param name="Department">The department that the user belongs to..</param>
-        /// <param name="Manager">The user&#39;s manager..</param>
-        /// <param name="EmployeeNumber">The user&#39;s employee number..</param>
+        /// <param name="Manager">The user's manager..</param>
+        /// <param name="EmployeeNumber">The user's employee number..</param>
         public ScimV2EnterpriseUser(string Division = null, string Department = null, Manager Manager = null, string EmployeeNumber = null)
         {
             this.Division = Division;
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The division that the user belongs to.
         /// </summary>
         /// <value>The division that the user belongs to.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public string Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The department that the user belongs to.
         /// </summary>
         /// <value>The department that the user belongs to.</value>
         [DataMember(Name="department", EmitDefaultValue=false)]
         public string Department { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The user&#39;s manager.
+        /// The user's manager.
         /// </summary>
-        /// <value>The user&#39;s manager.</value>
+        /// <value>The user's manager.</value>
         [DataMember(Name="manager", EmitDefaultValue=false)]
         public Manager Manager { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The user&#39;s employee number.
+        /// The user's employee number.
         /// </summary>
-        /// <value>The user&#39;s employee number.</value>
+        /// <value>The user's employee number.</value>
         [DataMember(Name="employeeNumber", EmitDefaultValue=false)]
         public string EmployeeNumber { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimV2EnterpriseUser {\n");
-            
+
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Department: ").Append(Department).Append("\n");
             sb.Append("  Manager: ").Append(Manager).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.Department != null)
                     hash = hash * 59 + this.Department.GetHashCode();
-                
+
                 if (this.Manager != null)
                     hash = hash * 59 + this.Manager.GetHashCode();
-                
+
                 if (this.EmployeeNumber != null)
                     hash = hash * 59 + this.EmployeeNumber.GetHashCode();
-                
+
                 return hash;
             }
         }

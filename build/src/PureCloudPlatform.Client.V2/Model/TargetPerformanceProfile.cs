@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TargetPerformanceProfile :  IEquatable<TargetPerformanceProfile>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TargetPerformanceProfile" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TargetPerformanceProfile() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TargetPerformanceProfile" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The target destination performanceProfileId for the linked metric.
         /// </summary>
         /// <value>The target destination performanceProfileId for the linked metric.</value>
         [DataMember(Name="targetPerformanceProfileId", EmitDefaultValue=false)]
         public string TargetPerformanceProfileId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TargetPerformanceProfile {\n");
-            
+
             sb.Append("  TargetPerformanceProfileId: ").Append(TargetPerformanceProfileId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TargetPerformanceProfileId != null)
                     hash = hash * 59 + this.TargetPerformanceProfileId.GetHashCode();
-                
+
                 return hash;
             }
         }

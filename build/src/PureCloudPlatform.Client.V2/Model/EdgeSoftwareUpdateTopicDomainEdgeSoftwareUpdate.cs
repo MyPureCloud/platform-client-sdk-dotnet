@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate :  IEquatable<EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -91,36 +86,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DELETE")]
             Delete
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate" /> class.
         /// </summary>
@@ -139,41 +109,41 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets DownloadStartTime
         /// </summary>
         [DataMember(Name="downloadStartTime", EmitDefaultValue=false)]
         public DateTime? DownloadStartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ExecuteStartTime
         /// </summary>
         [DataMember(Name="executeStartTime", EmitDefaultValue=false)]
         public DateTime? ExecuteStartTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ExecuteStopTime
         /// </summary>
         [DataMember(Name="executeStopTime", EmitDefaultValue=false)]
         public DateTime? ExecuteStopTime { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -182,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  DownloadStartTime: ").Append(DownloadStartTime).Append("\n");
@@ -266,22 +236,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.DownloadStartTime != null)
                     hash = hash * 59 + this.DownloadStartTime.GetHashCode();
-                
+
                 if (this.ExecuteStartTime != null)
                     hash = hash * 59 + this.ExecuteStartTime.GetHashCode();
-                
+
                 if (this.ExecuteStopTime != null)
                     hash = hash * 59 + this.ExecuteStopTime.GetHashCode();
-                
+
                 return hash;
             }
         }

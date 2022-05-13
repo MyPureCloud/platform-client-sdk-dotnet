@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AssignmentValidation :  IEquatable<AssignmentValidation>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AssignmentValidation" /> class.
         /// </summary>
@@ -57,43 +34,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of users that are not assigned to any custom performance profile
         /// </summary>
         /// <value>The list of users that are not assigned to any custom performance profile</value>
         [DataMember(Name="membersNotAssigned", EmitDefaultValue=false)]
         public List<UserReference> MembersNotAssigned { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of users that are already assigned to the requesting custom performance profile
         /// </summary>
         /// <value>The list of users that are already assigned to the requesting custom performance profile</value>
         [DataMember(Name="membersAlreadyAssigned", EmitDefaultValue=false)]
         public List<UserReference> MembersAlreadyAssigned { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of users that are already assigned to other custom performance profiles
         /// </summary>
         /// <value>The list of users that are already assigned to other custom performance profiles</value>
         [DataMember(Name="membersAlreadyAssignedToOther", EmitDefaultValue=false)]
         public List<OtherProfileAssignment> MembersAlreadyAssignedToOther { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of user id that are invalid for the gamfication service to handle
         /// </summary>
         /// <value>The list of user id that are invalid for the gamfication service to handle</value>
         [DataMember(Name="invalidMemberAssignments", EmitDefaultValue=false)]
         public List<InvalidAssignment> InvalidMemberAssignments { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AssignmentValidation {\n");
-            
+
             sb.Append("  MembersNotAssigned: ").Append(MembersNotAssigned).Append("\n");
             sb.Append("  MembersAlreadyAssigned: ").Append(MembersAlreadyAssigned).Append("\n");
             sb.Append("  MembersAlreadyAssignedToOther: ").Append(MembersAlreadyAssignedToOther).Append("\n");
@@ -180,19 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MembersNotAssigned != null)
                     hash = hash * 59 + this.MembersNotAssigned.GetHashCode();
-                
+
                 if (this.MembersAlreadyAssigned != null)
                     hash = hash * 59 + this.MembersAlreadyAssigned.GetHashCode();
-                
+
                 if (this.MembersAlreadyAssignedToOther != null)
                     hash = hash * 59 + this.MembersAlreadyAssignedToOther.GetHashCode();
-                
+
                 if (this.InvalidMemberAssignments != null)
                     hash = hash * 59 + this.InvalidMemberAssignments.GetHashCode();
-                
+
                 return hash;
             }
         }

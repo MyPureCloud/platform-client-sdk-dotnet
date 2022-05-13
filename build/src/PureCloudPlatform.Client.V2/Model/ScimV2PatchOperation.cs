@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimV2PatchOperation :  IEquatable<ScimV2PatchOperation>
     {
-        
-        
         /// <summary>
         /// The PATCH operation to perform.
         /// </summary>
@@ -53,43 +51,25 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "remove")]
             Remove
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The PATCH operation to perform.
         /// </summary>
         /// <value>The PATCH operation to perform.</value>
         [DataMember(Name="op", EmitDefaultValue=false)]
         public OpEnum? Op { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2PatchOperation" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ScimV2PatchOperation() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2PatchOperation" /> class.
         /// </summary>
         /// <param name="Op">The PATCH operation to perform. (required).</param>
-        /// <param name="Path">The attribute path that describes the target of the operation. Required for a \&quot;remove\&quot; operation..</param>
+        /// <param name="Path">The attribute path that describes the target of the operation. Required for a \"remove\" operation..</param>
         /// <param name="Value">The value to set in the path..</param>
-        public ScimV2PatchOperation(OpEnum? Op = null, string Path = null, JsonNode Value = null)
+        public ScimV2PatchOperation(OpEnum? Op = null, string Path = null, Object Value = null)
         {
             this.Op = Op;
             this.Path = Path;
@@ -97,27 +77,27 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
-        /// The attribute path that describes the target of the operation. Required for a \&quot;remove\&quot; operation.
+        /// The attribute path that describes the target of the operation. Required for a \"remove\" operation.
         /// </summary>
-        /// <value>The attribute path that describes the target of the operation. Required for a \&quot;remove\&quot; operation.</value>
+        /// <value>The attribute path that describes the target of the operation. Required for a \"remove\" operation.</value>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public string Path { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The value to set in the path.
         /// </summary>
         /// <value>The value to set in the path.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
-        public JsonNode Value { get; set; }
-        
-        
+        public Object Value { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -126,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimV2PatchOperation {\n");
-            
+
             sb.Append("  Op: ").Append(Op).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
@@ -198,16 +178,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Op != null)
                     hash = hash * 59 + this.Op.GetHashCode();
-                
+
                 if (this.Path != null)
                     hash = hash * 59 + this.Path.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextStyleProperties :  IEquatable<TextStyleProperties>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Text alignment.
         /// </summary>
@@ -62,32 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Center")]
             Center
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Text alignment.
         /// </summary>
         /// <value>Text alignment.</value>
         [DataMember(Name="textAlign", EmitDefaultValue=false)]
         public TextAlignEnum? TextAlign { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextStyleProperties" /> class.
         /// </summary>
         /// <param name="Color">Color of the text. (eg. #FFFFFF).</param>
         /// <param name="Font">Font of the text. (eg. Helvetica).</param>
-        /// <param name="FontSize">Font size of the text. (eg. &#39;12&#39;).</param>
+        /// <param name="FontSize">Font size of the text. (eg. '12').</param>
         /// <param name="TextAlign">Text alignment..</param>
         public TextStyleProperties(string Color = null, string Font = null, string FontSize = null, TextAlignEnum? TextAlign = null)
         {
@@ -98,36 +73,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Color of the text. (eg. #FFFFFF)
         /// </summary>
         /// <value>Color of the text. (eg. #FFFFFF)</value>
         [DataMember(Name="color", EmitDefaultValue=false)]
         public string Color { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Font of the text. (eg. Helvetica)
         /// </summary>
         /// <value>Font of the text. (eg. Helvetica)</value>
         [DataMember(Name="font", EmitDefaultValue=false)]
         public string Font { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Font size of the text. (eg. &#39;12&#39;)
+        /// Font size of the text. (eg. '12')
         /// </summary>
-        /// <value>Font size of the text. (eg. &#39;12&#39;)</value>
+        /// <value>Font size of the text. (eg. '12')</value>
         [DataMember(Name="fontSize", EmitDefaultValue=false)]
         public string FontSize { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -136,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextStyleProperties {\n");
-            
+
             sb.Append("  Color: ").Append(Color).Append("\n");
             sb.Append("  Font: ").Append(Font).Append("\n");
             sb.Append("  FontSize: ").Append(FontSize).Append("\n");
@@ -214,19 +189,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Color != null)
                     hash = hash * 59 + this.Color.GetHashCode();
-                
+
                 if (this.Font != null)
                     hash = hash * 59 + this.Font.GetHashCode();
-                
+
                 if (this.FontSize != null)
                     hash = hash * 59 + this.FontSize.GetHashCode();
-                
+
                 if (this.TextAlign != null)
                     hash = hash * 59 + this.TextAlign.GetHashCode();
-                
+
                 return hash;
             }
         }

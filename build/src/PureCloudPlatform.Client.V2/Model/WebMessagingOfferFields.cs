@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebMessagingOfferFields :  IEquatable<WebMessagingOfferFields>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WebMessagingOfferFields" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Text value to be used when inviting a visitor to engage with a web messaging offer.
         /// </summary>
         /// <value>Text value to be used when inviting a visitor to engage with a web messaging offer.</value>
         [DataMember(Name="offerText", EmitDefaultValue=false)]
         public string OfferText { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Flow to be invoked, overrides default flow when specified.
         /// </summary>
         /// <value>Flow to be invoked, overrides default flow when specified.</value>
         [DataMember(Name="architectFlow", EmitDefaultValue=false)]
         public AddressableEntityRef ArchitectFlow { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebMessagingOfferFields {\n");
-            
+
             sb.Append("  OfferText: ").Append(OfferText).Append("\n");
             sb.Append("  ArchitectFlow: ").Append(ArchitectFlow).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OfferText != null)
                     hash = hash * 59 + this.OfferText.GetHashCode();
-                
+
                 if (this.ArchitectFlow != null)
                     hash = hash * 59 + this.ArchitectFlow.GetHashCode();
-                
+
                 return hash;
             }
         }

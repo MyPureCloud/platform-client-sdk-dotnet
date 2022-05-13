@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmBuScheduleRunTopicBuScheduleRun :  IEquatable<WfmBuScheduleRunTopicBuScheduleRun>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -79,55 +68,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Complete")]
             Complete
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuScheduleRunTopicBuScheduleRun" /> class.
         /// </summary>
@@ -156,81 +101,81 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PercentComplete
         /// </summary>
         [DataMember(Name="percentComplete", EmitDefaultValue=false)]
         public double? PercentComplete { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IntradayRescheduling
         /// </summary>
         [DataMember(Name="intradayRescheduling", EmitDefaultValue=false)]
         public bool? IntradayRescheduling { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets WeekCount
         /// </summary>
         [DataMember(Name="weekCount", EmitDefaultValue=false)]
         public int? WeekCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Schedule
         /// </summary>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public WfmBuScheduleRunTopicBuScheduleReference Schedule { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SchedulingCanceledBy
         /// </summary>
         [DataMember(Name="schedulingCanceledBy", EmitDefaultValue=false)]
         public WfmBuScheduleRunTopicUserReference SchedulingCanceledBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SchedulingCompletedTime
         /// </summary>
         [DataMember(Name="schedulingCompletedTime", EmitDefaultValue=false)]
         public string SchedulingCompletedTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessageCount
         /// </summary>
         [DataMember(Name="messageCount", EmitDefaultValue=false)]
         public int? MessageCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessageSeverityCounts
         /// </summary>
         [DataMember(Name="messageSeverityCounts", EmitDefaultValue=false)]
         public List<WfmBuScheduleRunTopicSchedulerMessageSeverityCount> MessageSeverityCounts { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -239,7 +184,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmBuScheduleRunTopicBuScheduleRun {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  PercentComplete: ").Append(PercentComplete).Append("\n");
             sb.Append("  IntradayRescheduling: ").Append(IntradayRescheduling).Append("\n");
@@ -353,37 +298,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.PercentComplete != null)
                     hash = hash * 59 + this.PercentComplete.GetHashCode();
-                
+
                 if (this.IntradayRescheduling != null)
                     hash = hash * 59 + this.IntradayRescheduling.GetHashCode();
-                
+
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
+
                 if (this.WeekCount != null)
                     hash = hash * 59 + this.WeekCount.GetHashCode();
-                
+
                 if (this.Schedule != null)
                     hash = hash * 59 + this.Schedule.GetHashCode();
-                
+
                 if (this.SchedulingCanceledBy != null)
                     hash = hash * 59 + this.SchedulingCanceledBy.GetHashCode();
-                
+
                 if (this.SchedulingCompletedTime != null)
                     hash = hash * 59 + this.SchedulingCompletedTime.GetHashCode();
-                
+
                 if (this.MessageCount != null)
                     hash = hash * 59 + this.MessageCount.GetHashCode();
-                
+
                 if (this.MessageSeverityCounts != null)
                     hash = hash * 59 + this.MessageSeverityCounts.GetHashCode();
-                
+
                 return hash;
             }
         }

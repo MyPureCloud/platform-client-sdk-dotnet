@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuForecastGenerationPlanningGroupResult :  IEquatable<BuForecastGenerationPlanningGroupResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuForecastGenerationPlanningGroupResult" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the planning group
         /// </summary>
         /// <value>The ID of the planning group</value>
         [DataMember(Name="planningGroupId", EmitDefaultValue=false)]
         public string PlanningGroupId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The generation results for the associated planning group
         /// </summary>
         /// <value>The generation results for the associated planning group</value>
         [DataMember(Name="metricResults", EmitDefaultValue=false)]
         public List<BuForecastTimeSeriesResult> MetricResults { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuForecastGenerationPlanningGroupResult {\n");
-            
+
             sb.Append("  PlanningGroupId: ").Append(PlanningGroupId).Append("\n");
             sb.Append("  MetricResults: ").Append(MetricResults).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PlanningGroupId != null)
                     hash = hash * 59 + this.PlanningGroupId.GetHashCode();
-                
+
                 if (this.MetricResults != null)
                     hash = hash * 59 + this.MetricResults.GetHashCode();
-                
+
                 return hash;
             }
         }

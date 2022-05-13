@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BotVersionSummary :  IEquatable<BotVersionSummary>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BotVersionSummary" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BotVersionSummary() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BotVersionSummary" /> class.
         /// </summary>
@@ -68,52 +40,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the bot.
         /// </summary>
         /// <value>The name of the bot.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The id of the bot.
         /// </summary>
         /// <value>The id of the bot.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// An optional description of the bot.
         /// </summary>
         /// <value>An optional description of the bot.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A system-generated string that contains metadata about this bot.
         /// </summary>
         /// <value>A system-generated string that contains metadata about this bot.</value>
         [DataMember(Name="botCompositeTag", EmitDefaultValue=false)]
         public string BotCompositeTag { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the version.
         /// </summary>
         /// <value>The name of the version.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,7 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BotVersionSummary {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -206,22 +178,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.BotCompositeTag != null)
                     hash = hash * 59 + this.BotCompositeTag.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 return hash;
             }
         }

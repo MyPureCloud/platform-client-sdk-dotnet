@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerOutboundSettingsConfigChangeOutboundSettings :  IEquatable<DialerOutboundSettingsConfigChangeOutboundSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The denominator to be used in determining the compliance abandon rate
         /// </summary>
@@ -56,56 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CALLS_THAT_REACHED_QUEUE")]
             CallsThatReachedQueue
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The denominator to be used in determining the compliance abandon rate
         /// </summary>
         /// <value>The denominator to be used in determining the compliance abandon rate</value>
         [DataMember(Name="complianceAbandonRateDenominator", EmitDefaultValue=false)]
         public ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerOutboundSettingsConfigChangeOutboundSettings" /> class.
         /// </summary>
@@ -134,89 +79,89 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The maximum number of calls that can be placed per agent on any campaign
         /// </summary>
         /// <value>The maximum number of calls that can be placed per agent on any campaign</value>
         [DataMember(Name="maxCallsPerAgent", EmitDefaultValue=false)]
         public int? MaxCallsPerAgent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum percentage of lines that should be used for Outbound, expressed as a decimal in the range [0.0, 1.0]
         /// </summary>
         /// <value>The maximum percentage of lines that should be used for Outbound, expressed as a decimal in the range [0.0, 1.0]</value>
         [DataMember(Name="maxLineUtilization", EmitDefaultValue=false)]
         public double? MaxLineUtilization { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of seconds used to determine if a call is abandoned
         /// </summary>
         /// <value>The number of seconds used to determine if a call is abandoned</value>
         [DataMember(Name="abandonSeconds", EmitDefaultValue=false)]
         public double? AbandonSeconds { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Gets or Sets AutomaticTimeZoneMapping
         /// </summary>
         [DataMember(Name="automaticTimeZoneMapping", EmitDefaultValue=false)]
         public DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings AutomaticTimeZoneMapping { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The UI-visible name of the object
         /// </summary>
         /// <value>The UI-visible name of the object</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Creation time of the entity
         /// </summary>
         /// <value>Creation time of the entity</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last modified time of the entity
         /// </summary>
         /// <value>Last modified time of the entity</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -225,7 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerOutboundSettingsConfigChangeOutboundSettings {\n");
-            
+
             sb.Append("  MaxCallsPerAgent: ").Append(MaxCallsPerAgent).Append("\n");
             sb.Append("  MaxLineUtilization: ").Append(MaxLineUtilization).Append("\n");
             sb.Append("  AbandonSeconds: ").Append(AbandonSeconds).Append("\n");
@@ -339,37 +284,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MaxCallsPerAgent != null)
                     hash = hash * 59 + this.MaxCallsPerAgent.GetHashCode();
-                
+
                 if (this.MaxLineUtilization != null)
                     hash = hash * 59 + this.MaxLineUtilization.GetHashCode();
-                
+
                 if (this.AbandonSeconds != null)
                     hash = hash * 59 + this.AbandonSeconds.GetHashCode();
-                
+
                 if (this.ComplianceAbandonRateDenominator != null)
                     hash = hash * 59 + this.ComplianceAbandonRateDenominator.GetHashCode();
-                
+
                 if (this.AutomaticTimeZoneMapping != null)
                     hash = hash * 59 + this.AutomaticTimeZoneMapping.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,88 +18,65 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Filter :  IEquatable<Filter>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Filter" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Filter() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Filter" /> class.
         /// </summary>
         /// <param name="Name">The name of the field by which to filter. (required).</param>
         /// <param name="Type">The type of the filter, DATE or STRING. (required).</param>
-        /// <param name="_Operator">The operation that the filter performs. (required).</param>
+        /// <param name="Operator">The operation that the filter performs. (required).</param>
         /// <param name="Values">The values to make the filter comparison against. (required).</param>
-        public Filter(string Name = null, string Type = null, string _Operator = null, List<string> Values = null)
+        public Filter(string Name = null, string Type = null, string Operator = null, List<string> Values = null)
         {
             this.Name = Name;
             this.Type = Type;
-            this._Operator = _Operator;
+            this.Operator = Operator;
             this.Values = Values;
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the field by which to filter.
         /// </summary>
         /// <value>The name of the field by which to filter.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The type of the filter, DATE or STRING.
         /// </summary>
         /// <value>The type of the filter, DATE or STRING.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The operation that the filter performs.
         /// </summary>
         /// <value>The operation that the filter performs.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public string _Operator { get; set; }
-        
-        
-        
+        public string Operator { get; set; }
+
+
+
         /// <summary>
         /// The values to make the filter comparison against.
         /// </summary>
         /// <value>The values to make the filter comparison against.</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,10 +85,10 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Filter {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -164,9 +141,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
-                    this._Operator == other._Operator ||
-                    this._Operator != null &&
-                    this._Operator.Equals(other._Operator)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
                 ) &&
                 (
                     this.Values == other.Values ||
@@ -186,19 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
-                if (this._Operator != null)
-                    hash = hash * 59 + this._Operator.GetHashCode();
-                
+
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
+
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
+
                 return hash;
             }
         }

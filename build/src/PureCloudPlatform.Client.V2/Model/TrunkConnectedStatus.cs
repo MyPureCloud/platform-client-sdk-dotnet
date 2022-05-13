@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkConnectedStatus :  IEquatable<TrunkConnectedStatus>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkConnectedStatus" /> class.
         /// </summary>
@@ -43,24 +30,24 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Connected
         /// </summary>
         [DataMember(Name="connected", EmitDefaultValue=false)]
         public bool? Connected { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="connectedStateTime", EmitDefaultValue=false)]
         public DateTime? ConnectedStateTime { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -69,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkConnectedStatus {\n");
-            
+
             sb.Append("  Connected: ").Append(Connected).Append("\n");
             sb.Append("  ConnectedStateTime: ").Append(ConnectedStateTime).Append("\n");
             sb.Append("}\n");
@@ -135,13 +122,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Connected != null)
                     hash = hash * 59 + this.Connected.GetHashCode();
-                
+
                 if (this.ConnectedStateTime != null)
                     hash = hash * 59 + this.ConnectedStateTime.GetHashCode();
-                
+
                 return hash;
             }
         }

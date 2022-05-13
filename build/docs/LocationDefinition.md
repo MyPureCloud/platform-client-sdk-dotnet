@@ -16,9 +16,9 @@ title: LocationDefinition
 | **Notes** | **string** | Notes for the location entity | [optional] |
 | **Version** | **int?** | Current version of the location entity, value to be supplied should be retrieved by a GET or on create/update response | [optional] |
 | **Path** | **List&lt;string&gt;** | A list of ancestor IDs in order | [optional] |
-| **ProfileImage** | [**List&lt;LocationImage&gt;**](LocationImage.html) | Profile image of the location entity, retrieved with ?expand=images query parameter | [optional] |
-| **FloorplanImage** | [**List&lt;LocationImage&gt;**](LocationImage.html) | Floorplan images of the location entity, retrieved with ?expand=images query parameter | [optional] |
-| **AddressVerificationDetails** | [**LocationAddressVerificationDetails**](LocationAddressVerificationDetails.html) | Address verification information, retrieve dwith the ?expand=addressVerificationDetails query parameter | [optional] |
+| **ProfileImage** | [**List&lt;LocationImage&gt;**](LocationImage.html) | Profile image of the location entity, retrieved with ?expand&#x3D;images query parameter | [optional] |
+| **FloorplanImage** | [**List&lt;LocationImage&gt;**](LocationImage.html) | Floorplan images of the location entity, retrieved with ?expand&#x3D;images query parameter | [optional] |
+| **AddressVerificationDetails** | [**LocationAddressVerificationDetails**](LocationAddressVerificationDetails.html) | Address verification information, retrieve dwith the ?expand&#x3D;addressVerificationDetails query parameter | [optional] |
 | **AddressVerified** | **bool?** | Boolean field which states if the address has been verified as an actual address | [optional] |
 | **AddressStored** | **bool?** | Boolean field which states if the address has been stored for E911 | [optional] |
 | **Images** | **string** |  | [optional] |

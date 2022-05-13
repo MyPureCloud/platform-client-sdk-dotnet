@@ -8,14 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
-    
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IArchitectApi : IApiAccessor
     {
         #region Synchronous Operations
-        
+
         /// <summary>
         /// Deletes a emergency group by ID
         /// </summary>
@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteArchitectEmergencygroupWithHttpInfo (string emergencyGroupId);
-        
+
         /// <summary>
         /// Delete an IVR Config.
         /// </summary>
@@ -59,7 +59,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ivrId">IVR id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteArchitectIvrWithHttpInfo (string ivrId);
-        
+
         /// <summary>
         /// Delete specified user prompt
         /// </summary>
@@ -83,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="allResources">Whether or not to delete all the prompt resources (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteArchitectPromptWithHttpInfo (string promptId, bool? allResources = null);
-        
+
         /// <summary>
         /// Delete specified user prompt resource
         /// </summary>
@@ -107,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteArchitectPromptResourceWithHttpInfo (string promptId, string languageCode);
-        
+
         /// <summary>
         /// Delete specified user prompt resource audio
         /// </summary>
@@ -131,7 +131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteArchitectPromptResourceAudioWithHttpInfo (string promptId, string languageCode);
-        
+
         /// <summary>
         /// Batch-delete a list of prompts
         /// </summary>
@@ -153,7 +153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">List of Prompt IDs</param>
         /// <returns>ApiResponse of Operation</returns>
         ApiResponse<Operation> DeleteArchitectPromptsWithHttpInfo (List<string> id);
-        
+
         /// <summary>
         /// Delete a schedule by id
         /// </summary>
@@ -175,7 +175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteArchitectScheduleWithHttpInfo (string scheduleId);
-        
+
         /// <summary>
         /// Deletes a schedule group by ID
         /// </summary>
@@ -197,7 +197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteArchitectSchedulegroupWithHttpInfo (string scheduleGroupId);
-        
+
         /// <summary>
         /// Delete a system prompt resource override.
         /// </summary>
@@ -221,7 +221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode);
-        
+
         /// <summary>
         /// Delete flow
         /// </summary>
@@ -243,7 +243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteFlowWithHttpInfo (string flowId);
-        
+
         /// <summary>
         /// Batch-delete a list of flows
         /// </summary>
@@ -265,7 +265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">List of Flow IDs</param>
         /// <returns>ApiResponse of Operation</returns>
         ApiResponse<Operation> DeleteFlowsWithHttpInfo (List<string> id);
-        
+
         /// <summary>
         /// deletes a specific datatable by id
         /// </summary>
@@ -289,7 +289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteFlowsDatatableWithHttpInfo (string datatableId, bool? force = null);
-        
+
         /// <summary>
         /// Delete a row entry
         /// </summary>
@@ -313,17 +313,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">the key for the row</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteFlowsDatatableRowWithHttpInfo (string datatableId, string rowId);
-        
-        /// <summary>
-        /// Delete a flow milestone.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="milestoneId">flow milestone ID</param>
-        /// <returns>Empty</returns>
-        Empty DeleteFlowsMilestone (string milestoneId);
 
         /// <summary>
         /// Delete a flow milestone.
@@ -333,9 +322,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
-        /// <returns>ApiResponse of Empty</returns>
-        ApiResponse<Empty> DeleteFlowsMilestoneWithHttpInfo (string milestoneId);
-        
+        /// <returns>Object</returns>
+        Object DeleteFlowsMilestone (string milestoneId);
+
+        /// <summary>
+        /// Delete a flow milestone.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DeleteFlowsMilestoneWithHttpInfo (string milestoneId);
+
         /// <summary>
         /// Get Dependency Tracking objects that have a given display name
         /// </summary>
@@ -371,7 +371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>ApiResponse of DependencyObjectEntityListing</returns>
         ApiResponse<DependencyObjectEntityListing> GetArchitectDependencytrackingWithHttpInfo (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null);
-        
+
         /// <summary>
         /// Get Dependency Tracking build status for an organization
         /// </summary>
@@ -391,7 +391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DependencyStatus</returns>
         ApiResponse<DependencyStatus> GetArchitectDependencytrackingBuildWithHttpInfo ();
-        
+
         /// <summary>
         /// Get resources that are consumed by a given Dependency Tracking object
         /// </summary>
@@ -423,7 +423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of ConsumedResourcesEntityListing</returns>
         ApiResponse<ConsumedResourcesEntityListing> GetArchitectDependencytrackingConsumedresourcesWithHttpInfo (string id, string version, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Get resources that consume a given Dependency Tracking object
         /// </summary>
@@ -457,7 +457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>ApiResponse of ConsumingResourcesEntityListing</returns>
         ApiResponse<ConsumingResourcesEntityListing> GetArchitectDependencytrackingConsumingresourcesWithHttpInfo (string id, string objectType, List<string> resourceType = null, string version = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null);
-        
+
         /// <summary>
         /// Get Dependency Tracking objects that consume deleted resources
         /// </summary>
@@ -491,7 +491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DependencyObjectEntityListing</returns>
         ApiResponse<DependencyObjectEntityListing> GetArchitectDependencytrackingDeletedresourceconsumersWithHttpInfo (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Get a Dependency Tracking object
         /// </summary>
@@ -527,7 +527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumedResourceRequest">Indicate that this is going to look up a consumed resource object (optional)</param>
         /// <returns>ApiResponse of DependencyObject</returns>
         ApiResponse<DependencyObject> GetArchitectDependencytrackingObjectWithHttpInfo (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null, bool? consumedResourceRequest = null);
-        
+
         /// <summary>
         /// Get a Dependency Tracking type.
         /// </summary>
@@ -549,7 +549,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="typeId">Type ID</param>
         /// <returns>ApiResponse of DependencyType</returns>
         ApiResponse<DependencyType> GetArchitectDependencytrackingTypeWithHttpInfo (string typeId);
-        
+
         /// <summary>
         /// Get Dependency Tracking types.
         /// </summary>
@@ -573,7 +573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DependencyTypeEntityListing</returns>
         ApiResponse<DependencyTypeEntityListing> GetArchitectDependencytrackingTypesWithHttpInfo (int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Get Dependency Tracking objects that depend on updated resources
         /// </summary>
@@ -605,7 +605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DependencyObjectEntityListing</returns>
         ApiResponse<DependencyObjectEntityListing> GetArchitectDependencytrackingUpdatedresourceconsumersWithHttpInfo (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Gets a emergency group by ID
         /// </summary>
@@ -627,7 +627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>ApiResponse of EmergencyGroup</returns>
         ApiResponse<EmergencyGroup> GetArchitectEmergencygroupWithHttpInfo (string emergencyGroupId);
-        
+
         /// <summary>
         /// Get a list of emergency groups.
         /// </summary>
@@ -637,8 +637,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>EmergencyGroupListing</returns>
         EmergencyGroupListing GetArchitectEmergencygroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
@@ -652,12 +652,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>ApiResponse of EmergencyGroupListing</returns>
         ApiResponse<EmergencyGroupListing> GetArchitectEmergencygroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
-        
+
         /// <summary>
         /// Get an IVR config.
         /// </summary>
@@ -679,7 +679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ivrId">IVR id</param>
         /// <returns>ApiResponse of IVR</returns>
         ApiResponse<IVR> GetArchitectIvrWithHttpInfo (string ivrId);
-        
+
         /// <summary>
         /// Get IVR configs.
         /// </summary>
@@ -689,8 +689,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>IVREntityListing</returns>
         IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
@@ -704,12 +704,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>ApiResponse of IVREntityListing</returns>
         ApiResponse<IVREntityListing> GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
-        
+
         /// <summary>
         /// Get specified user prompt
         /// </summary>
@@ -731,7 +731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <returns>ApiResponse of Prompt</returns>
         ApiResponse<Prompt> GetArchitectPromptWithHttpInfo (string promptId);
-        
+
         /// <summary>
         /// Get generated prompt history
         /// </summary>
@@ -743,7 +743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
@@ -760,12 +760,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
         ApiResponse<HistoryListing> GetArchitectPromptHistoryHistoryIdWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
-        
+
         /// <summary>
         /// Get specified user prompt resource
         /// </summary>
@@ -789,7 +789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of PromptAsset</returns>
         ApiResponse<PromptAsset> GetArchitectPromptResourceWithHttpInfo (string promptId, string languageCode);
-        
+
         /// <summary>
         /// Get a pageable list of user prompt resources
         /// </summary>
@@ -815,7 +815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of PromptAssetEntityListing</returns>
         ApiResponse<PromptAssetEntityListing> GetArchitectPromptResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Get a pageable list of user prompts
         /// </summary>
@@ -828,8 +828,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>PromptEntityListing</returns>
         PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
 
@@ -845,11 +845,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>ApiResponse of PromptEntityListing</returns>
         ApiResponse<PromptEntityListing> GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
-        
+
         /// <summary>
         /// Get a schedule by ID
         /// </summary>
@@ -871,7 +871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of Schedule</returns>
         ApiResponse<Schedule> GetArchitectScheduleWithHttpInfo (string scheduleId);
-        
+
         /// <summary>
         /// Gets a schedule group by ID
         /// </summary>
@@ -893,7 +893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
         ApiResponse<ScheduleGroup> GetArchitectSchedulegroupWithHttpInfo (string scheduleGroupId);
-        
+
         /// <summary>
         /// Get a list of schedule groups.
         /// </summary>
@@ -903,8 +903,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
@@ -920,14 +920,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ApiResponse of ScheduleGroupEntityListing</returns>
         ApiResponse<ScheduleGroupEntityListing> GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get a list of schedules.
         /// </summary>
@@ -937,8 +937,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ScheduleEntityListing</returns>
@@ -953,13 +953,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ApiResponse of ScheduleEntityListing</returns>
         ApiResponse<ScheduleEntityListing> GetArchitectSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get a system prompt
         /// </summary>
@@ -981,7 +981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">promptId</param>
         /// <returns>ApiResponse of SystemPrompt</returns>
         ApiResponse<SystemPrompt> GetArchitectSystempromptWithHttpInfo (string promptId);
-        
+
         /// <summary>
         /// Get generated prompt history
         /// </summary>
@@ -993,7 +993,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
@@ -1010,12 +1010,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
         ApiResponse<HistoryListing> GetArchitectSystempromptHistoryHistoryIdWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
-        
+
         /// <summary>
         /// Get a system prompt resource.
         /// </summary>
@@ -1039,7 +1039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
         ApiResponse<SystemPromptAsset> GetArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode);
-        
+
         /// <summary>
         /// Get system prompt resources.
         /// </summary>
@@ -1050,8 +1050,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>SystemPromptAssetEntityListing</returns>
         SystemPromptAssetEntityListing GetArchitectSystempromptResources (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
@@ -1065,11 +1065,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>ApiResponse of SystemPromptAssetEntityListing</returns>
         ApiResponse<SystemPromptAssetEntityListing> GetArchitectSystempromptResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
-        
+
         /// <summary>
         /// Get System Prompts
         /// </summary>
@@ -1079,8 +1079,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
@@ -1096,14 +1096,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>ApiResponse of SystemPromptEntityListing</returns>
         ApiResponse<SystemPromptEntityListing> GetArchitectSystempromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null);
-        
+
         /// <summary>
         /// Get flow
         /// </summary>
@@ -1127,7 +1127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>ApiResponse of Flow</returns>
         ApiResponse<Flow> GetFlowWithHttpInfo (string flowId, bool? deleted = null);
-        
+
         /// <summary>
         /// Get generated flow history
         /// </summary>
@@ -1139,7 +1139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
@@ -1156,12 +1156,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
         ApiResponse<HistoryListing> GetFlowHistoryHistoryIdWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
-        
+
         /// <summary>
         /// Get the latest configuration for flow
         /// </summary>
@@ -1185,7 +1185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> GetFlowLatestconfigurationWithHttpInfo (string flowId, bool? deleted = null);
-        
+
         /// <summary>
         /// Get flow version
         /// </summary>
@@ -1211,7 +1211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>ApiResponse of FlowVersion</returns>
         ApiResponse<FlowVersion> GetFlowVersionWithHttpInfo (string flowId, string versionId, string deleted = null);
-        
+
         /// <summary>
         /// Create flow version configuration
         /// </summary>
@@ -1237,7 +1237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> GetFlowVersionConfigurationWithHttpInfo (string flowId, string versionId, string deleted = null);
-        
+
         /// <summary>
         /// Get flow version list
         /// </summary>
@@ -1265,7 +1265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Include Deleted flows (optional)</param>
         /// <returns>ApiResponse of FlowVersionEntityListing</returns>
         ApiResponse<FlowVersionEntityListing> GetFlowVersionsWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null);
-        
+
         /// <summary>
         /// Get a pageable list of flows, filtered by query parameters
         /// </summary>
@@ -1276,8 +1276,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -1305,8 +1305,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -1323,7 +1323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowEntityListing</returns>
         ApiResponse<FlowEntityListing> GetFlowsWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string lockedByClientId = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Returns a specific datatable by id
         /// </summary>
@@ -1347,7 +1347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>ApiResponse of DataTable</returns>
         ApiResponse<DataTable> GetFlowsDatatableWithHttpInfo (string datatableId, string expand = null);
-        
+
         /// <summary>
         /// Returns the state information about an export job
         /// </summary>
@@ -1371,7 +1371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="exportJobId">id of export job</param>
         /// <returns>ApiResponse of DataTableExportJob</returns>
         ApiResponse<DataTableExportJob> GetFlowsDatatableExportJobWithHttpInfo (string datatableId, string exportJobId);
-        
+
         /// <summary>
         /// Returns the state information about an import job
         /// </summary>
@@ -1395,7 +1395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="importJobId">id of import job</param>
         /// <returns>ApiResponse of DataTableImportJob</returns>
         ApiResponse<DataTableImportJob> GetFlowsDatatableImportJobWithHttpInfo (string datatableId, string importJobId);
-        
+
         /// <summary>
         /// Get all recent import jobs
         /// </summary>
@@ -1421,7 +1421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DataTableImportEntityListing</returns>
         ApiResponse<DataTableImportEntityListing> GetFlowsDatatableImportJobsWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Returns a specific row for the datatable
         /// </summary>
@@ -1447,7 +1447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
         ApiResponse<Dictionary<string, Object>> GetFlowsDatatableRowWithHttpInfo (string datatableId, string rowId, bool? showbrief = null);
-        
+
         /// <summary>
         /// Returns the rows for the datatable with the given id
         /// </summary>
@@ -1475,7 +1475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
         /// <returns>ApiResponse of DataTableRowEntityListing</returns>
         ApiResponse<DataTableRowEntityListing> GetFlowsDatatableRowsWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null);
-        
+
         /// <summary>
         /// Retrieve a list of datatables for the org
         /// </summary>
@@ -1487,7 +1487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>DataTablesDomainEntityListing</returns>
@@ -1504,12 +1504,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
         ApiResponse<DataTablesDomainEntityListing> GetFlowsDatatablesWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
-        
+
         /// <summary>
         /// Returns a specific datatable by id
         /// </summary>
@@ -1533,7 +1533,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>ApiResponse of DataTable</returns>
         ApiResponse<DataTable> GetFlowsDatatablesDivisionviewWithHttpInfo (string datatableId, string expand = null);
-        
+
         /// <summary>
         /// Retrieve a list of datatables for the org
         /// </summary>
@@ -1545,7 +1545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>DataTablesDomainEntityListing</returns>
@@ -1562,12 +1562,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
         ApiResponse<DataTablesDomainEntityListing> GetFlowsDatatablesDivisionviewsWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
-        
+
         /// <summary>
         /// Get a pageable list of basic flow information objects filterable by query parameters.
         /// </summary>
@@ -1578,8 +1578,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="publishVersionId">Publish version ID (optional)</param>
@@ -1600,8 +1600,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="publishVersionId">Publish version ID (optional)</param>
@@ -1611,9 +1611,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
         /// <returns>ApiResponse of FlowDivisionViewEntityListing</returns>
         ApiResponse<FlowDivisionViewEntityListing> GetFlowsDivisionviewsWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null);
-        
+
         /// <summary>
-        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
+        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started.
         /// </summary>
         /// <remarks>
         /// 
@@ -1624,7 +1624,7 @@ namespace PureCloudPlatform.Client.V2.Api
         FlowRuntimeExecution GetFlowsExecution (string flowExecutionId);
 
         /// <summary>
-        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
+        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started.
         /// </summary>
         /// <remarks>
         /// 
@@ -1633,7 +1633,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowExecutionId">flow execution ID</param>
         /// <returns>ApiResponse of FlowRuntimeExecution</returns>
         ApiResponse<FlowRuntimeExecution> GetFlowsExecutionWithHttpInfo (string flowExecutionId);
-        
+
         /// <summary>
         /// Fetch Architect Job Status
         /// </summary>
@@ -1657,7 +1657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of ArchitectJobStateResponse</returns>
         ApiResponse<ArchitectJobStateResponse> GetFlowsJobWithHttpInfo (string jobId, List<string> expand = null);
-        
+
         /// <summary>
         /// Get a flow milestone
         /// </summary>
@@ -1679,7 +1679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>ApiResponse of FlowMilestone</returns>
         ApiResponse<FlowMilestone> GetFlowsMilestoneWithHttpInfo (string milestoneId);
-        
+
         /// <summary>
         /// Get a pageable list of flow milestones, filtered by query parameters
         /// </summary>
@@ -1689,8 +1689,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -1708,8 +1708,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -1717,7 +1717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowMilestoneListing</returns>
         ApiResponse<FlowMilestoneListing> GetFlowsMilestonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get a pageable list of basic flow milestone information objects filterable by query parameters.
         /// </summary>
@@ -1727,8 +1727,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
@@ -1744,14 +1744,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowMilestoneDivisionViewEntityListing</returns>
         ApiResponse<FlowMilestoneDivisionViewEntityListing> GetFlowsMilestonesDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get a flow outcome
         /// </summary>
@@ -1773,7 +1773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <returns>ApiResponse of FlowOutcome</returns>
         ApiResponse<FlowOutcome> GetFlowsOutcomeWithHttpInfo (string flowOutcomeId);
-        
+
         /// <summary>
         /// Get a pageable list of flow outcomes, filtered by query parameters
         /// </summary>
@@ -1783,8 +1783,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -1802,8 +1802,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -1811,7 +1811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowOutcomeListing</returns>
         ApiResponse<FlowOutcomeListing> GetFlowsOutcomesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get a pageable list of basic flow outcome information objects filterable by query parameters.
         /// </summary>
@@ -1821,8 +1821,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
@@ -1838,14 +1838,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowOutcomeDivisionViewEntityListing</returns>
         ApiResponse<FlowOutcomeDivisionViewEntityListing> GetFlowsOutcomesDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Rebuild Dependency Tracking data for an organization
         /// </summary>
@@ -1865,7 +1865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostArchitectDependencytrackingBuildWithHttpInfo ();
-        
+
         /// <summary>
         /// Creates a new emergency group
         /// </summary>
@@ -1887,7 +1887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of EmergencyGroup</returns>
         ApiResponse<EmergencyGroup> PostArchitectEmergencygroupsWithHttpInfo (EmergencyGroup body);
-        
+
         /// <summary>
         /// Create IVR config.
         /// </summary>
@@ -1909,7 +1909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of IVR</returns>
         ApiResponse<IVR> PostArchitectIvrsWithHttpInfo (IVR body);
-        
+
         /// <summary>
         /// Generate prompt history
         /// </summary>
@@ -1931,7 +1931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <returns>ApiResponse of Operation</returns>
         ApiResponse<Operation> PostArchitectPromptHistoryWithHttpInfo (string promptId);
-        
+
         /// <summary>
         /// Create a new user prompt resource
         /// </summary>
@@ -1955,7 +1955,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of PromptAsset</returns>
         ApiResponse<PromptAsset> PostArchitectPromptResourcesWithHttpInfo (string promptId, PromptAssetCreate body);
-        
+
         /// <summary>
         /// Create a new user prompt
         /// </summary>
@@ -1977,7 +1977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of Prompt</returns>
         ApiResponse<Prompt> PostArchitectPromptsWithHttpInfo (Prompt body);
-        
+
         /// <summary>
         /// Creates a new schedule group
         /// </summary>
@@ -1999,7 +1999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
         ApiResponse<ScheduleGroup> PostArchitectSchedulegroupsWithHttpInfo (ScheduleGroup body);
-        
+
         /// <summary>
         /// Create a new schedule.
         /// </summary>
@@ -2021,7 +2021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of Schedule</returns>
         ApiResponse<Schedule> PostArchitectSchedulesWithHttpInfo (Schedule body);
-        
+
         /// <summary>
         /// Generate system prompt history
         /// </summary>
@@ -2043,7 +2043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">promptId</param>
         /// <returns>ApiResponse of Operation</returns>
         ApiResponse<Operation> PostArchitectSystempromptHistoryWithHttpInfo (string promptId);
-        
+
         /// <summary>
         /// Create system prompt resource override.
         /// </summary>
@@ -2067,7 +2067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
         ApiResponse<SystemPromptAsset> PostArchitectSystempromptResourcesWithHttpInfo (string promptId, SystemPromptAsset body);
-        
+
         /// <summary>
         /// Generate flow history
         /// </summary>
@@ -2089,7 +2089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <returns>ApiResponse of Operation</returns>
         ApiResponse<Operation> PostFlowHistoryWithHttpInfo (string flowId);
-        
+
         /// <summary>
         /// Create flow version
         /// </summary>
@@ -2113,7 +2113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of FlowVersion</returns>
         ApiResponse<FlowVersion> PostFlowVersionsWithHttpInfo (string flowId, Object body);
-        
+
         /// <summary>
         /// Create flow
         /// </summary>
@@ -2137,7 +2137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">Language (optional)</param>
         /// <returns>ApiResponse of Flow</returns>
         ApiResponse<Flow> PostFlowsWithHttpInfo (Flow body, string language = null);
-        
+
         /// <summary>
         /// Check-in flow
         /// </summary>
@@ -2159,7 +2159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Operation</returns>
         ApiResponse<Operation> PostFlowsActionsCheckinWithHttpInfo (string flow);
-        
+
         /// <summary>
         /// Check-out flow
         /// </summary>
@@ -2181,7 +2181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
         ApiResponse<Flow> PostFlowsActionsCheckoutWithHttpInfo (string flow);
-        
+
         /// <summary>
         /// Deactivate flow
         /// </summary>
@@ -2203,7 +2203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
         ApiResponse<Flow> PostFlowsActionsDeactivateWithHttpInfo (string flow);
-        
+
         /// <summary>
         /// Publish flow
         /// </summary>
@@ -2227,7 +2227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="version">version (optional)</param>
         /// <returns>ApiResponse of Operation</returns>
         ApiResponse<Operation> PostFlowsActionsPublishWithHttpInfo (string flow, string version = null);
-        
+
         /// <summary>
         /// Revert flow
         /// </summary>
@@ -2249,7 +2249,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
         ApiResponse<Flow> PostFlowsActionsRevertWithHttpInfo (string flow);
-        
+
         /// <summary>
         /// Unlock flow
         /// </summary>
@@ -2271,7 +2271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
         ApiResponse<Flow> PostFlowsActionsUnlockWithHttpInfo (string flow);
-        
+
         /// <summary>
         /// Begin an export process for exporting all rows from a datatable
         /// </summary>
@@ -2293,7 +2293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <returns>ApiResponse of DataTableExportJob</returns>
         ApiResponse<DataTableExportJob> PostFlowsDatatableExportJobsWithHttpInfo (string datatableId);
-        
+
         /// <summary>
         /// Begin an import process for importing rows into a datatable
         /// </summary>
@@ -2317,12 +2317,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">import job information</param>
         /// <returns>ApiResponse of DataTableImportJob</returns>
         ApiResponse<DataTableImportJob> PostFlowsDatatableImportJobsWithHttpInfo (string datatableId, DataTableImportJob body);
-        
+
         /// <summary>
         /// Create a new row entry for the datatable.
         /// </summary>
         /// <remarks>
-        /// Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
+        /// Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized' stream of key -> value pairs {      \"Field1\": \"XYZZY\",      \"Field2\": false,      \"KEY\": \"27272\"  }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -2334,19 +2334,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new row entry for the datatable.
         /// </summary>
         /// <remarks>
-        /// Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
+        /// Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized' stream of key -> value pairs {      \"Field1\": \"XYZZY\",      \"Field2\": false,      \"KEY\": \"27272\"  }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <param name="dataTableRow"></param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
         ApiResponse<Dictionary<string, Object>> PostFlowsDatatableRowsWithHttpInfo (string datatableId, Object dataTableRow);
-        
+
         /// <summary>
         /// Create a new datatable with the specified json-schema definition
         /// </summary>
         /// <remarks>
-        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
+        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema's title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -2357,15 +2357,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new datatable with the specified json-schema definition
         /// </summary>
         /// <remarks>
-        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
+        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema's title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
         /// <returns>ApiResponse of DataTable</returns>
         ApiResponse<DataTable> PostFlowsDatatablesWithHttpInfo (DataTable body);
-        
+
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
+        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
         /// </summary>
         /// <remarks>
         /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
@@ -2376,7 +2376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         FlowExecutionLaunchResponse PostFlowsExecutions (FlowExecutionLaunchRequest flowLaunchRequest);
 
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
+        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
         /// </summary>
         /// <remarks>
         /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
@@ -2385,7 +2385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowLaunchRequest"></param>
         /// <returns>ApiResponse of FlowExecutionLaunchResponse</returns>
         ApiResponse<FlowExecutionLaunchResponse> PostFlowsExecutionsWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest);
-        
+
         /// <summary>
         /// Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
         /// </summary>
@@ -2405,7 +2405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RegisterArchitectJobResponse</returns>
         ApiResponse<RegisterArchitectJobResponse> PostFlowsJobsWithHttpInfo ();
-        
+
         /// <summary>
         /// Create a flow milestone
         /// </summary>
@@ -2427,7 +2427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of FlowMilestone</returns>
         ApiResponse<FlowMilestone> PostFlowsMilestonesWithHttpInfo (FlowMilestone body = null);
-        
+
         /// <summary>
         /// Create a flow outcome
         /// </summary>
@@ -2449,7 +2449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of FlowOutcome</returns>
         ApiResponse<FlowOutcome> PostFlowsOutcomesWithHttpInfo (FlowOutcome body = null);
-        
+
         /// <summary>
         /// Updates a emergency group by ID
         /// </summary>
@@ -2473,7 +2473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of EmergencyGroup</returns>
         ApiResponse<EmergencyGroup> PutArchitectEmergencygroupWithHttpInfo (string emergencyGroupId, EmergencyGroup body);
-        
+
         /// <summary>
         /// Update an IVR Config.
         /// </summary>
@@ -2497,7 +2497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of IVR</returns>
         ApiResponse<IVR> PutArchitectIvrWithHttpInfo (string ivrId, IVR body);
-        
+
         /// <summary>
         /// Update specified user prompt
         /// </summary>
@@ -2521,7 +2521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of Prompt</returns>
         ApiResponse<Prompt> PutArchitectPromptWithHttpInfo (string promptId, Prompt body);
-        
+
         /// <summary>
         /// Update specified user prompt resource
         /// </summary>
@@ -2547,7 +2547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of PromptAsset</returns>
         ApiResponse<PromptAsset> PutArchitectPromptResourceWithHttpInfo (string promptId, string languageCode, PromptAsset body);
-        
+
         /// <summary>
         /// Update schedule by ID
         /// </summary>
@@ -2571,7 +2571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of Schedule</returns>
         ApiResponse<Schedule> PutArchitectScheduleWithHttpInfo (string scheduleId, Schedule body);
-        
+
         /// <summary>
         /// Updates a schedule group by ID
         /// </summary>
@@ -2595,7 +2595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
         ApiResponse<ScheduleGroup> PutArchitectSchedulegroupWithHttpInfo (string scheduleGroupId, ScheduleGroup body);
-        
+
         /// <summary>
         /// Updates a system prompt resource override.
         /// </summary>
@@ -2621,7 +2621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
         ApiResponse<SystemPromptAsset> PutArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body);
-        
+
         /// <summary>
         /// Update flow
         /// </summary>
@@ -2645,7 +2645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of Flow</returns>
         ApiResponse<Flow> PutFlowWithHttpInfo (string flowId, Flow body);
-        
+
         /// <summary>
         /// Updates a specific datatable by id
         /// </summary>
@@ -2671,12 +2671,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>ApiResponse of DataTable</returns>
         ApiResponse<DataTable> PutFlowsDatatableWithHttpInfo (string datatableId, DataTable body, string expand = null);
-        
+
         /// <summary>
         /// Update a row entry
         /// </summary>
         /// <remarks>
-        /// Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
+        /// Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized' stream of key -> value pairs {     \"Field1\": \"XYZZY\",     \"Field2\": false,     \"KEY\": \"27272\" }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -2689,7 +2689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a row entry
         /// </summary>
         /// <remarks>
-        /// Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
+        /// Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized' stream of key -> value pairs {     \"Field1\": \"XYZZY\",     \"Field2\": false,     \"KEY\": \"27272\" }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -2697,7 +2697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable row (optional)</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
         ApiResponse<Dictionary<string, Object>> PutFlowsDatatableRowWithHttpInfo (string datatableId, string rowId, Object body = null);
-        
+
         /// <summary>
         /// Updates a flow milestone
         /// </summary>
@@ -2721,7 +2721,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of FlowMilestone</returns>
         ApiResponse<FlowMilestone> PutFlowsMilestoneWithHttpInfo (string milestoneId, FlowMilestone body = null);
-        
+
         /// <summary>
         /// Updates a flow outcome
         /// </summary>
@@ -2745,11 +2745,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Operation</returns>
         ApiResponse<Operation> PutFlowsOutcomeWithHttpInfo (string flowOutcomeId, FlowOutcome body = null);
-        
+
         #endregion Synchronous Operations
-        
+
         #region Asynchronous Operations
-        
+
         /// <summary>
         /// Deletes a emergency group by ID
         /// </summary>
@@ -2771,7 +2771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId);
-        
+
         /// <summary>
         /// Delete an IVR Config.
         /// </summary>
@@ -2793,7 +2793,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectIvrAsyncWithHttpInfo (string ivrId);
-        
+
         /// <summary>
         /// Delete specified user prompt
         /// </summary>
@@ -2817,7 +2817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="allResources">Whether or not to delete all the prompt resources (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptAsyncWithHttpInfo (string promptId, bool? allResources = null);
-        
+
         /// <summary>
         /// Delete specified user prompt resource
         /// </summary>
@@ -2841,7 +2841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode);
-        
+
         /// <summary>
         /// Delete specified user prompt resource audio
         /// </summary>
@@ -2865,7 +2865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptResourceAudioAsyncWithHttpInfo (string promptId, string languageCode);
-        
+
         /// <summary>
         /// Batch-delete a list of prompts
         /// </summary>
@@ -2887,7 +2887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">List of Prompt IDs</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Operation>> DeleteArchitectPromptsAsyncWithHttpInfo (List<string> id);
-        
+
         /// <summary>
         /// Delete a schedule by id
         /// </summary>
@@ -2909,7 +2909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectScheduleAsyncWithHttpInfo (string scheduleId);
-        
+
         /// <summary>
         /// Deletes a schedule group by ID
         /// </summary>
@@ -2931,7 +2931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectSchedulegroupAsyncWithHttpInfo (string scheduleGroupId);
-        
+
         /// <summary>
         /// Delete a system prompt resource override.
         /// </summary>
@@ -2955,7 +2955,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode);
-        
+
         /// <summary>
         /// Delete flow
         /// </summary>
@@ -2977,7 +2977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowAsyncWithHttpInfo (string flowId);
-        
+
         /// <summary>
         /// Batch-delete a list of flows
         /// </summary>
@@ -2999,7 +2999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">List of Flow IDs</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Operation>> DeleteFlowsAsyncWithHttpInfo (List<string> id);
-        
+
         /// <summary>
         /// deletes a specific datatable by id
         /// </summary>
@@ -3023,7 +3023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableAsyncWithHttpInfo (string datatableId, bool? force = null);
-        
+
         /// <summary>
         /// Delete a row entry
         /// </summary>
@@ -3047,17 +3047,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">the key for the row</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId);
-        
-        /// <summary>
-        /// Delete a flow milestone.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="milestoneId">flow milestone ID</param>
-        /// <returns>Task of Empty</returns>
-        System.Threading.Tasks.Task<Empty> DeleteFlowsMilestoneAsync (string milestoneId);
 
         /// <summary>
         /// Delete a flow milestone.
@@ -3067,9 +3056,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
-        /// <returns>Task of ApiResponse (Empty)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteFlowsMilestoneAsyncWithHttpInfo (string milestoneId);
-        
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DeleteFlowsMilestoneAsync (string milestoneId);
+
+        /// <summary>
+        /// Delete a flow milestone.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="milestoneId">flow milestone ID</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsMilestoneAsyncWithHttpInfo (string milestoneId);
+
         /// <summary>
         /// Get Dependency Tracking objects that have a given display name
         /// </summary>
@@ -3105,7 +3105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>Task of ApiResponse (DependencyObjectEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingAsyncWithHttpInfo (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null);
-        
+
         /// <summary>
         /// Get Dependency Tracking build status for an organization
         /// </summary>
@@ -3125,7 +3125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DependencyStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<DependencyStatus>> GetArchitectDependencytrackingBuildAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Get resources that are consumed by a given Dependency Tracking object
         /// </summary>
@@ -3157,7 +3157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ConsumedResourcesEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConsumedResourcesEntityListing>> GetArchitectDependencytrackingConsumedresourcesAsyncWithHttpInfo (string id, string version, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Get resources that consume a given Dependency Tracking object
         /// </summary>
@@ -3191,7 +3191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>Task of ApiResponse (ConsumingResourcesEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConsumingResourcesEntityListing>> GetArchitectDependencytrackingConsumingresourcesAsyncWithHttpInfo (string id, string objectType, List<string> resourceType = null, string version = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null);
-        
+
         /// <summary>
         /// Get Dependency Tracking objects that consume deleted resources
         /// </summary>
@@ -3225,7 +3225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DependencyObjectEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingDeletedresourceconsumersAsyncWithHttpInfo (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Get a Dependency Tracking object
         /// </summary>
@@ -3261,7 +3261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumedResourceRequest">Indicate that this is going to look up a consumed resource object (optional)</param>
         /// <returns>Task of ApiResponse (DependencyObject)</returns>
         System.Threading.Tasks.Task<ApiResponse<DependencyObject>> GetArchitectDependencytrackingObjectAsyncWithHttpInfo (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null, bool? consumedResourceRequest = null);
-        
+
         /// <summary>
         /// Get a Dependency Tracking type.
         /// </summary>
@@ -3283,7 +3283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="typeId">Type ID</param>
         /// <returns>Task of ApiResponse (DependencyType)</returns>
         System.Threading.Tasks.Task<ApiResponse<DependencyType>> GetArchitectDependencytrackingTypeAsyncWithHttpInfo (string typeId);
-        
+
         /// <summary>
         /// Get Dependency Tracking types.
         /// </summary>
@@ -3307,7 +3307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DependencyTypeEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DependencyTypeEntityListing>> GetArchitectDependencytrackingTypesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Get Dependency Tracking objects that depend on updated resources
         /// </summary>
@@ -3339,7 +3339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DependencyObjectEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingUpdatedresourceconsumersAsyncWithHttpInfo (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Gets a emergency group by ID
         /// </summary>
@@ -3361,7 +3361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> GetArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId);
-        
+
         /// <summary>
         /// Get a list of emergency groups.
         /// </summary>
@@ -3371,8 +3371,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>Task of EmergencyGroupListing</returns>
         System.Threading.Tasks.Task<EmergencyGroupListing> GetArchitectEmergencygroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
@@ -3386,12 +3386,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (EmergencyGroupListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmergencyGroupListing>> GetArchitectEmergencygroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
-        
+
         /// <summary>
         /// Get an IVR config.
         /// </summary>
@@ -3413,7 +3413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of ApiResponse (IVR)</returns>
         System.Threading.Tasks.Task<ApiResponse<IVR>> GetArchitectIvrAsyncWithHttpInfo (string ivrId);
-        
+
         /// <summary>
         /// Get IVR configs.
         /// </summary>
@@ -3423,8 +3423,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>Task of IVREntityListing</returns>
         System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
@@ -3438,12 +3438,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (IVREntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
-        
+
         /// <summary>
         /// Get specified user prompt
         /// </summary>
@@ -3465,7 +3465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
         System.Threading.Tasks.Task<ApiResponse<Prompt>> GetArchitectPromptAsyncWithHttpInfo (string promptId);
-        
+
         /// <summary>
         /// Get generated prompt history
         /// </summary>
@@ -3477,7 +3477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
@@ -3494,12 +3494,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetArchitectPromptHistoryHistoryIdAsyncWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
-        
+
         /// <summary>
         /// Get specified user prompt resource
         /// </summary>
@@ -3523,7 +3523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
         System.Threading.Tasks.Task<ApiResponse<PromptAsset>> GetArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode);
-        
+
         /// <summary>
         /// Get a pageable list of user prompt resources
         /// </summary>
@@ -3549,7 +3549,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (PromptAssetEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<PromptAssetEntityListing>> GetArchitectPromptResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Get a pageable list of user prompts
         /// </summary>
@@ -3562,8 +3562,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of PromptEntityListing</returns>
         System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
 
@@ -3579,11 +3579,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of ApiResponse (PromptEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
-        
+
         /// <summary>
         /// Get a schedule by ID
         /// </summary>
@@ -3605,7 +3605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
         System.Threading.Tasks.Task<ApiResponse<Schedule>> GetArchitectScheduleAsyncWithHttpInfo (string scheduleId);
-        
+
         /// <summary>
         /// Gets a schedule group by ID
         /// </summary>
@@ -3627,7 +3627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> GetArchitectSchedulegroupAsyncWithHttpInfo (string scheduleGroupId);
-        
+
         /// <summary>
         /// Get a list of schedule groups.
         /// </summary>
@@ -3637,8 +3637,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
@@ -3654,14 +3654,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleGroupEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get a list of schedules.
         /// </summary>
@@ -3671,8 +3671,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ScheduleEntityListing</returns>
@@ -3687,13 +3687,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScheduleEntityListing>> GetArchitectSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get a system prompt
         /// </summary>
@@ -3715,7 +3715,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">promptId</param>
         /// <returns>Task of ApiResponse (SystemPrompt)</returns>
         System.Threading.Tasks.Task<ApiResponse<SystemPrompt>> GetArchitectSystempromptAsyncWithHttpInfo (string promptId);
-        
+
         /// <summary>
         /// Get generated prompt history
         /// </summary>
@@ -3727,7 +3727,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
@@ -3744,12 +3744,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetArchitectSystempromptHistoryHistoryIdAsyncWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
-        
+
         /// <summary>
         /// Get a system prompt resource.
         /// </summary>
@@ -3773,7 +3773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
         System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> GetArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode);
-        
+
         /// <summary>
         /// Get system prompt resources.
         /// </summary>
@@ -3784,8 +3784,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of SystemPromptAssetEntityListing</returns>
         System.Threading.Tasks.Task<SystemPromptAssetEntityListing> GetArchitectSystempromptResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
@@ -3799,11 +3799,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of ApiResponse (SystemPromptAssetEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<SystemPromptAssetEntityListing>> GetArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
-        
+
         /// <summary>
         /// Get System Prompts
         /// </summary>
@@ -3813,8 +3813,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
@@ -3830,14 +3830,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>Task of ApiResponse (SystemPromptEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<SystemPromptEntityListing>> GetArchitectSystempromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null);
-        
+
         /// <summary>
         /// Get flow
         /// </summary>
@@ -3861,7 +3861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         System.Threading.Tasks.Task<ApiResponse<Flow>> GetFlowAsyncWithHttpInfo (string flowId, bool? deleted = null);
-        
+
         /// <summary>
         /// Get generated flow history
         /// </summary>
@@ -3873,7 +3873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
@@ -3890,12 +3890,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetFlowHistoryHistoryIdAsyncWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
-        
+
         /// <summary>
         /// Get the latest configuration for flow
         /// </summary>
@@ -3919,7 +3919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetFlowLatestconfigurationAsyncWithHttpInfo (string flowId, bool? deleted = null);
-        
+
         /// <summary>
         /// Get flow version
         /// </summary>
@@ -3945,7 +3945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowVersion>> GetFlowVersionAsyncWithHttpInfo (string flowId, string versionId, string deleted = null);
-        
+
         /// <summary>
         /// Create flow version configuration
         /// </summary>
@@ -3971,7 +3971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetFlowVersionConfigurationAsyncWithHttpInfo (string flowId, string versionId, string deleted = null);
-        
+
         /// <summary>
         /// Get flow version list
         /// </summary>
@@ -3999,7 +3999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Include Deleted flows (optional)</param>
         /// <returns>Task of ApiResponse (FlowVersionEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowVersionEntityListing>> GetFlowVersionsAsyncWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null);
-        
+
         /// <summary>
         /// Get a pageable list of flows, filtered by query parameters
         /// </summary>
@@ -4010,8 +4010,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -4039,8 +4039,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -4057,7 +4057,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string lockedByClientId = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Returns a specific datatable by id
         /// </summary>
@@ -4081,7 +4081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTable>> GetFlowsDatatableAsyncWithHttpInfo (string datatableId, string expand = null);
-        
+
         /// <summary>
         /// Returns the state information about an export job
         /// </summary>
@@ -4105,7 +4105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="exportJobId">id of export job</param>
         /// <returns>Task of ApiResponse (DataTableExportJob)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTableExportJob>> GetFlowsDatatableExportJobAsyncWithHttpInfo (string datatableId, string exportJobId);
-        
+
         /// <summary>
         /// Returns the state information about an import job
         /// </summary>
@@ -4129,7 +4129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="importJobId">id of import job</param>
         /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> GetFlowsDatatableImportJobAsyncWithHttpInfo (string datatableId, string importJobId);
-        
+
         /// <summary>
         /// Get all recent import jobs
         /// </summary>
@@ -4155,7 +4155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DataTableImportEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTableImportEntityListing>> GetFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null);
-        
+
         /// <summary>
         /// Returns a specific row for the datatable
         /// </summary>
@@ -4181,7 +4181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId, bool? showbrief = null);
-        
+
         /// <summary>
         /// Returns the rows for the datatable with the given id
         /// </summary>
@@ -4209,7 +4209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
         /// <returns>Task of ApiResponse (DataTableRowEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTableRowEntityListing>> GetFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null);
-        
+
         /// <summary>
         /// Retrieve a list of datatables for the org
         /// </summary>
@@ -4221,7 +4221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>Task of DataTablesDomainEntityListing</returns>
@@ -4238,12 +4238,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
-        
+
         /// <summary>
         /// Returns a specific datatable by id
         /// </summary>
@@ -4267,7 +4267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTable>> GetFlowsDatatablesDivisionviewAsyncWithHttpInfo (string datatableId, string expand = null);
-        
+
         /// <summary>
         /// Retrieve a list of datatables for the org
         /// </summary>
@@ -4279,7 +4279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>Task of DataTablesDomainEntityListing</returns>
@@ -4296,12 +4296,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesDivisionviewsAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
-        
+
         /// <summary>
         /// Get a pageable list of basic flow information objects filterable by query parameters.
         /// </summary>
@@ -4312,8 +4312,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="publishVersionId">Publish version ID (optional)</param>
@@ -4334,8 +4334,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="publishVersionId">Publish version ID (optional)</param>
@@ -4345,9 +4345,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
         /// <returns>Task of ApiResponse (FlowDivisionViewEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowDivisionViewEntityListing>> GetFlowsDivisionviewsAsyncWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null);
-        
+
         /// <summary>
-        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
+        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started.
         /// </summary>
         /// <remarks>
         /// 
@@ -4358,7 +4358,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<FlowRuntimeExecution> GetFlowsExecutionAsync (string flowExecutionId);
 
         /// <summary>
-        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
+        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started.
         /// </summary>
         /// <remarks>
         /// 
@@ -4367,7 +4367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowExecutionId">flow execution ID</param>
         /// <returns>Task of ApiResponse (FlowRuntimeExecution)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowRuntimeExecution>> GetFlowsExecutionAsyncWithHttpInfo (string flowExecutionId);
-        
+
         /// <summary>
         /// Fetch Architect Job Status
         /// </summary>
@@ -4391,7 +4391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (ArchitectJobStateResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ArchitectJobStateResponse>> GetFlowsJobAsyncWithHttpInfo (string jobId, List<string> expand = null);
-        
+
         /// <summary>
         /// Get a flow milestone
         /// </summary>
@@ -4413,7 +4413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>Task of ApiResponse (FlowMilestone)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> GetFlowsMilestoneAsyncWithHttpInfo (string milestoneId);
-        
+
         /// <summary>
         /// Get a pageable list of flow milestones, filtered by query parameters
         /// </summary>
@@ -4423,8 +4423,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -4442,8 +4442,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -4451,7 +4451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowMilestoneListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowMilestoneListing>> GetFlowsMilestonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get a pageable list of basic flow milestone information objects filterable by query parameters.
         /// </summary>
@@ -4461,8 +4461,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
@@ -4478,14 +4478,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowMilestoneDivisionViewEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowMilestoneDivisionViewEntityListing>> GetFlowsMilestonesDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get a flow outcome
         /// </summary>
@@ -4507,7 +4507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <returns>Task of ApiResponse (FlowOutcome)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowOutcome>> GetFlowsOutcomeAsyncWithHttpInfo (string flowOutcomeId);
-        
+
         /// <summary>
         /// Get a pageable list of flow outcomes, filtered by query parameters
         /// </summary>
@@ -4517,8 +4517,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -4536,8 +4536,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -4545,7 +4545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowOutcomeListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowOutcomeListing>> GetFlowsOutcomesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Get a pageable list of basic flow outcome information objects filterable by query parameters.
         /// </summary>
@@ -4555,8 +4555,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
@@ -4572,14 +4572,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowOutcomeDivisionViewEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowOutcomeDivisionViewEntityListing>> GetFlowsOutcomesDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
-        
+
         /// <summary>
         /// Rebuild Dependency Tracking data for an organization
         /// </summary>
@@ -4599,7 +4599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostArchitectDependencytrackingBuildAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Creates a new emergency group
         /// </summary>
@@ -4621,7 +4621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PostArchitectEmergencygroupsAsyncWithHttpInfo (EmergencyGroup body);
-        
+
         /// <summary>
         /// Create IVR config.
         /// </summary>
@@ -4643,7 +4643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IVR)</returns>
         System.Threading.Tasks.Task<ApiResponse<IVR>> PostArchitectIvrsAsyncWithHttpInfo (IVR body);
-        
+
         /// <summary>
         /// Generate prompt history
         /// </summary>
@@ -4665,7 +4665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Operation>> PostArchitectPromptHistoryAsyncWithHttpInfo (string promptId);
-        
+
         /// <summary>
         /// Create a new user prompt resource
         /// </summary>
@@ -4689,7 +4689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
         System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PostArchitectPromptResourcesAsyncWithHttpInfo (string promptId, PromptAssetCreate body);
-        
+
         /// <summary>
         /// Create a new user prompt
         /// </summary>
@@ -4711,7 +4711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
         System.Threading.Tasks.Task<ApiResponse<Prompt>> PostArchitectPromptsAsyncWithHttpInfo (Prompt body);
-        
+
         /// <summary>
         /// Creates a new schedule group
         /// </summary>
@@ -4733,7 +4733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PostArchitectSchedulegroupsAsyncWithHttpInfo (ScheduleGroup body);
-        
+
         /// <summary>
         /// Create a new schedule.
         /// </summary>
@@ -4755,7 +4755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
         System.Threading.Tasks.Task<ApiResponse<Schedule>> PostArchitectSchedulesAsyncWithHttpInfo (Schedule body);
-        
+
         /// <summary>
         /// Generate system prompt history
         /// </summary>
@@ -4777,7 +4777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">promptId</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Operation>> PostArchitectSystempromptHistoryAsyncWithHttpInfo (string promptId);
-        
+
         /// <summary>
         /// Create system prompt resource override.
         /// </summary>
@@ -4801,7 +4801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
         System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PostArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, SystemPromptAsset body);
-        
+
         /// <summary>
         /// Generate flow history
         /// </summary>
@@ -4823,7 +4823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowHistoryAsyncWithHttpInfo (string flowId);
-        
+
         /// <summary>
         /// Create flow version
         /// </summary>
@@ -4847,7 +4847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowVersion>> PostFlowVersionsAsyncWithHttpInfo (string flowId, Object body);
-        
+
         /// <summary>
         /// Create flow
         /// </summary>
@@ -4871,7 +4871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">Language (optional)</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body, string language = null);
-        
+
         /// <summary>
         /// Check-in flow
         /// </summary>
@@ -4893,7 +4893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowsActionsCheckinAsyncWithHttpInfo (string flow);
-        
+
         /// <summary>
         /// Check-out flow
         /// </summary>
@@ -4915,7 +4915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsCheckoutAsyncWithHttpInfo (string flow);
-        
+
         /// <summary>
         /// Deactivate flow
         /// </summary>
@@ -4937,7 +4937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsDeactivateAsyncWithHttpInfo (string flow);
-        
+
         /// <summary>
         /// Publish flow
         /// </summary>
@@ -4961,7 +4961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="version">version (optional)</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowsActionsPublishAsyncWithHttpInfo (string flow, string version = null);
-        
+
         /// <summary>
         /// Revert flow
         /// </summary>
@@ -4983,7 +4983,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsRevertAsyncWithHttpInfo (string flow);
-        
+
         /// <summary>
         /// Unlock flow
         /// </summary>
@@ -5005,7 +5005,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsUnlockAsyncWithHttpInfo (string flow);
-        
+
         /// <summary>
         /// Begin an export process for exporting all rows from a datatable
         /// </summary>
@@ -5027,7 +5027,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <returns>Task of ApiResponse (DataTableExportJob)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTableExportJob>> PostFlowsDatatableExportJobsAsyncWithHttpInfo (string datatableId);
-        
+
         /// <summary>
         /// Begin an import process for importing rows into a datatable
         /// </summary>
@@ -5051,12 +5051,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">import job information</param>
         /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> PostFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, DataTableImportJob body);
-        
+
         /// <summary>
         /// Create a new row entry for the datatable.
         /// </summary>
         /// <remarks>
-        /// Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
+        /// Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized' stream of key -> value pairs {      \"Field1\": \"XYZZY\",      \"Field2\": false,      \"KEY\": \"27272\"  }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -5068,19 +5068,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new row entry for the datatable.
         /// </summary>
         /// <remarks>
-        /// Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
+        /// Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized' stream of key -> value pairs {      \"Field1\": \"XYZZY\",      \"Field2\": false,      \"KEY\": \"27272\"  }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <param name="dataTableRow"></param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PostFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, Object dataTableRow);
-        
+
         /// <summary>
         /// Create a new datatable with the specified json-schema definition
         /// </summary>
         /// <remarks>
-        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
+        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema's title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -5091,15 +5091,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new datatable with the specified json-schema definition
         /// </summary>
         /// <remarks>
-        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
+        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema's title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTable>> PostFlowsDatatablesAsyncWithHttpInfo (DataTable body);
-        
+
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
+        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
         /// </summary>
         /// <remarks>
         /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
@@ -5110,7 +5110,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<FlowExecutionLaunchResponse> PostFlowsExecutionsAsync (FlowExecutionLaunchRequest flowLaunchRequest);
 
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
+        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
         /// </summary>
         /// <remarks>
         /// The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
@@ -5119,7 +5119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowLaunchRequest"></param>
         /// <returns>Task of ApiResponse (FlowExecutionLaunchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowExecutionLaunchResponse>> PostFlowsExecutionsAsyncWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest);
-        
+
         /// <summary>
         /// Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
         /// </summary>
@@ -5139,7 +5139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RegisterArchitectJobResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RegisterArchitectJobResponse>> PostFlowsJobsAsyncWithHttpInfo ();
-        
+
         /// <summary>
         /// Create a flow milestone
         /// </summary>
@@ -5161,7 +5161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (FlowMilestone)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> PostFlowsMilestonesAsyncWithHttpInfo (FlowMilestone body = null);
-        
+
         /// <summary>
         /// Create a flow outcome
         /// </summary>
@@ -5183,7 +5183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (FlowOutcome)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowOutcome>> PostFlowsOutcomesAsyncWithHttpInfo (FlowOutcome body = null);
-        
+
         /// <summary>
         /// Updates a emergency group by ID
         /// </summary>
@@ -5207,7 +5207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PutArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId, EmergencyGroup body);
-        
+
         /// <summary>
         /// Update an IVR Config.
         /// </summary>
@@ -5231,7 +5231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IVR)</returns>
         System.Threading.Tasks.Task<ApiResponse<IVR>> PutArchitectIvrAsyncWithHttpInfo (string ivrId, IVR body);
-        
+
         /// <summary>
         /// Update specified user prompt
         /// </summary>
@@ -5255,7 +5255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
         System.Threading.Tasks.Task<ApiResponse<Prompt>> PutArchitectPromptAsyncWithHttpInfo (string promptId, Prompt body);
-        
+
         /// <summary>
         /// Update specified user prompt resource
         /// </summary>
@@ -5281,7 +5281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
         System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PutArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode, PromptAsset body);
-        
+
         /// <summary>
         /// Update schedule by ID
         /// </summary>
@@ -5305,7 +5305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
         System.Threading.Tasks.Task<ApiResponse<Schedule>> PutArchitectScheduleAsyncWithHttpInfo (string scheduleId, Schedule body);
-        
+
         /// <summary>
         /// Updates a schedule group by ID
         /// </summary>
@@ -5329,7 +5329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PutArchitectSchedulegroupAsyncWithHttpInfo (string scheduleGroupId, ScheduleGroup body);
-        
+
         /// <summary>
         /// Updates a system prompt resource override.
         /// </summary>
@@ -5355,7 +5355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
         System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PutArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body);
-        
+
         /// <summary>
         /// Update flow
         /// </summary>
@@ -5379,7 +5379,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowAsyncWithHttpInfo (string flowId, Flow body);
-        
+
         /// <summary>
         /// Updates a specific datatable by id
         /// </summary>
@@ -5405,12 +5405,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTable>> PutFlowsDatatableAsyncWithHttpInfo (string datatableId, DataTable body, string expand = null);
-        
+
         /// <summary>
         /// Update a row entry
         /// </summary>
         /// <remarks>
-        /// Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
+        /// Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized' stream of key -> value pairs {     \"Field1\": \"XYZZY\",     \"Field2\": false,     \"KEY\": \"27272\" }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -5423,7 +5423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a row entry
         /// </summary>
         /// <remarks>
-        /// Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
+        /// Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized' stream of key -> value pairs {     \"Field1\": \"XYZZY\",     \"Field2\": false,     \"KEY\": \"27272\" }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -5431,7 +5431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable row (optional)</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PutFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId, Object body = null);
-        
+
         /// <summary>
         /// Updates a flow milestone
         /// </summary>
@@ -5455,7 +5455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (FlowMilestone)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> PutFlowsMilestoneAsyncWithHttpInfo (string milestoneId, FlowMilestone body = null);
-        
+
         /// <summary>
         /// Updates a flow outcome
         /// </summary>
@@ -5479,9 +5479,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Operation>> PutFlowsOutcomeAsyncWithHttpInfo (string flowOutcomeId, FlowOutcome body = null);
-        
+
         #endregion Asynchronous Operations
-        
+
     }
 
     /// <summary>
@@ -5571,7 +5571,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
-        
+
         /// <summary>
         /// Deletes a emergency group by ID 
         /// </summary>
@@ -5605,17 +5605,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5636,7 +5635,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5665,7 +5664,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Deletes a emergency group by ID 
         /// </summary>
@@ -5701,16 +5700,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5732,7 +5730,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5761,8 +5759,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete an IVR Config. 
         /// </summary>
@@ -5796,17 +5794,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5827,7 +5824,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5856,7 +5853,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete an IVR Config. 
         /// </summary>
@@ -5892,16 +5889,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -5923,7 +5919,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -5952,8 +5948,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete specified user prompt 
         /// </summary>
@@ -5989,17 +5985,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6021,7 +6016,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6050,7 +6045,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete specified user prompt 
         /// </summary>
@@ -6088,16 +6083,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6120,7 +6114,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6149,8 +6143,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete specified user prompt resource 
         /// </summary>
@@ -6189,17 +6183,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6221,7 +6214,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6250,7 +6243,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete specified user prompt resource 
         /// </summary>
@@ -6292,16 +6285,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6324,7 +6316,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6353,8 +6345,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete specified user prompt resource audio 
         /// </summary>
@@ -6393,17 +6385,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6425,7 +6416,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6454,7 +6445,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete specified user prompt resource audio 
         /// </summary>
@@ -6496,16 +6487,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6528,7 +6518,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6557,8 +6547,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Batch-delete a list of prompts Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
         /// </summary>
@@ -6593,17 +6583,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6624,7 +6613,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6653,7 +6642,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Batch-delete a list of prompts Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
         /// </summary>
@@ -6690,16 +6679,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6721,7 +6709,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6750,8 +6738,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete a schedule by id 
         /// </summary>
@@ -6785,17 +6773,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6816,7 +6803,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6845,7 +6832,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete a schedule by id 
         /// </summary>
@@ -6881,16 +6868,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -6912,7 +6898,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -6941,8 +6927,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Deletes a schedule group by ID 
         /// </summary>
@@ -6976,17 +6962,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7007,7 +6992,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7036,7 +7021,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Deletes a schedule group by ID 
         /// </summary>
@@ -7072,16 +7057,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7103,7 +7087,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7132,8 +7116,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete a system prompt resource override. 
         /// </summary>
@@ -7172,17 +7156,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7204,7 +7187,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7233,7 +7216,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete a system prompt resource override. 
         /// </summary>
@@ -7275,16 +7258,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7307,7 +7289,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7336,8 +7318,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete flow 
         /// </summary>
@@ -7371,17 +7353,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7402,7 +7383,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7431,7 +7412,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete flow 
         /// </summary>
@@ -7467,16 +7448,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7498,7 +7478,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7527,8 +7507,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
@@ -7563,17 +7543,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7594,7 +7573,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7623,7 +7602,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
@@ -7660,16 +7639,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7691,7 +7669,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7720,8 +7698,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// deletes a specific datatable by id Deletes an entire datatable (including the schema and data) with a given datatableId
         /// </summary>
@@ -7757,17 +7735,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7789,7 +7766,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7818,7 +7795,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// deletes a specific datatable by id Deletes an entire datatable (including the schema and data) with a given datatableId
         /// </summary>
@@ -7856,16 +7833,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -7888,7 +7864,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -7917,8 +7893,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete a row entry Deletes a row with a given rowId (the value of the key field).
         /// </summary>
@@ -7957,17 +7933,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7989,7 +7964,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8018,7 +7993,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete a row entry Deletes a row with a given rowId (the value of the key field).
         /// </summary>
@@ -8060,16 +8035,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8092,7 +8066,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8121,17 +8095,17 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Delete a flow milestone. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
-        /// <returns>Empty</returns>
-        public Empty DeleteFlowsMilestone (string milestoneId)
+        /// <returns>Object</returns>
+        public Object DeleteFlowsMilestone (string milestoneId)
         {
-             ApiResponse<Empty> localVarResponse = DeleteFlowsMilestoneWithHttpInfo(milestoneId);
+             ApiResponse<Object> localVarResponse = DeleteFlowsMilestoneWithHttpInfo(milestoneId);
              return localVarResponse.Data;
         }
 
@@ -8140,8 +8114,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
-        /// <returns>ApiResponse of Empty</returns>
-        public ApiResponse< Empty > DeleteFlowsMilestoneWithHttpInfo (string milestoneId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DeleteFlowsMilestoneWithHttpInfo (string milestoneId)
         { 
             // verify the required parameter 'milestoneId' is set
             if (milestoneId == null)
@@ -8157,17 +8131,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8188,7 +8161,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8210,23 +8183,23 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsMilestone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Empty>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Delete a flow milestone. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
-        /// <returns>Task of Empty</returns>
-        public async System.Threading.Tasks.Task<Empty> DeleteFlowsMilestoneAsync (string milestoneId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DeleteFlowsMilestoneAsync (string milestoneId)
         {
-             ApiResponse<Empty> localVarResponse = await DeleteFlowsMilestoneAsyncWithHttpInfo(milestoneId);
+             ApiResponse<Object> localVarResponse = await DeleteFlowsMilestoneAsyncWithHttpInfo(milestoneId);
              return localVarResponse.Data;
 
         }
@@ -8236,8 +8209,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
-        /// <returns>Task of ApiResponse (Empty)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteFlowsMilestoneAsyncWithHttpInfo (string milestoneId)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsMilestoneAsyncWithHttpInfo (string milestoneId)
         { 
             // verify the required parameter 'milestoneId' is set
             if (milestoneId == null)
@@ -8254,16 +8227,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8285,7 +8257,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8307,15 +8279,15 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsMilestone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Empty>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Dependency Tracking objects that have a given display name 
         /// </summary>
@@ -8364,17 +8336,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8402,7 +8373,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8431,7 +8402,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Dependency Tracking objects that have a given display name 
         /// </summary>
@@ -8482,16 +8453,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8520,7 +8490,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8549,8 +8519,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Dependency Tracking build status for an organization 
         /// </summary>
@@ -8580,17 +8550,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8610,7 +8579,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8639,7 +8608,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Dependency Tracking build status for an organization 
         /// </summary>
@@ -8670,16 +8639,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8700,7 +8668,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8729,8 +8697,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get resources that are consumed by a given Dependency Tracking object 
         /// </summary>
@@ -8781,17 +8749,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -8817,7 +8784,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8846,7 +8813,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get resources that are consumed by a given Dependency Tracking object 
         /// </summary>
@@ -8901,16 +8868,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -8937,7 +8903,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -8966,8 +8932,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get resources that consume a given Dependency Tracking object 
         /// </summary>
@@ -9017,17 +8983,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9054,7 +9019,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9083,7 +9048,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get resources that consume a given Dependency Tracking object 
         /// </summary>
@@ -9136,16 +9101,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9173,7 +9137,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9202,8 +9166,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Dependency Tracking objects that consume deleted resources 
         /// </summary>
@@ -9247,17 +9211,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9284,7 +9247,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9313,7 +9276,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Dependency Tracking objects that consume deleted resources 
         /// </summary>
@@ -9358,16 +9321,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9395,7 +9357,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9424,8 +9386,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a Dependency Tracking object 
         /// </summary>
@@ -9474,17 +9436,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9512,7 +9473,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9541,7 +9502,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a Dependency Tracking object 
         /// </summary>
@@ -9592,16 +9553,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9630,7 +9590,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9659,8 +9619,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a Dependency Tracking type. 
         /// </summary>
@@ -9695,17 +9655,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9726,7 +9685,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9755,7 +9714,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a Dependency Tracking type. 
         /// </summary>
@@ -9792,16 +9751,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -9823,7 +9781,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9852,8 +9810,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Dependency Tracking types. 
         /// </summary>
@@ -9887,17 +9845,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -9919,7 +9876,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -9948,7 +9905,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Dependency Tracking types. 
         /// </summary>
@@ -9983,16 +9940,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10015,7 +9971,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10044,8 +10000,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get Dependency Tracking objects that depend on updated resources 
         /// </summary>
@@ -10087,17 +10043,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10123,7 +10078,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10152,7 +10107,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get Dependency Tracking objects that depend on updated resources 
         /// </summary>
@@ -10195,16 +10150,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10231,7 +10185,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10260,8 +10214,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets a emergency group by ID 
         /// </summary>
@@ -10296,17 +10250,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10327,7 +10280,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10356,7 +10309,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets a emergency group by ID 
         /// </summary>
@@ -10393,16 +10346,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10424,7 +10376,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10453,16 +10405,16 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a list of emergency groups. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>EmergencyGroupListing</returns>
         public EmergencyGroupListing GetArchitectEmergencygroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
@@ -10477,8 +10429,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>ApiResponse of EmergencyGroupListing</returns>
         public ApiResponse< EmergencyGroupListing > GetArchitectEmergencygroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
@@ -10494,17 +10446,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10529,7 +10480,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10558,15 +10509,15 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a list of emergency groups. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>Task of EmergencyGroupListing</returns>
         public async System.Threading.Tasks.Task<EmergencyGroupListing> GetArchitectEmergencygroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
@@ -10582,8 +10533,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (EmergencyGroupListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroupListing>> GetArchitectEmergencygroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
@@ -10599,16 +10550,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10634,7 +10584,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10663,8 +10613,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get an IVR config. 
         /// </summary>
@@ -10699,17 +10649,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10730,7 +10679,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10759,7 +10708,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get an IVR config. 
         /// </summary>
@@ -10796,16 +10745,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -10827,7 +10775,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10856,16 +10804,16 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get IVR configs. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>IVREntityListing</returns>
         public IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
@@ -10880,8 +10828,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>ApiResponse of IVREntityListing</returns>
         public ApiResponse< IVREntityListing > GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
@@ -10897,17 +10845,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -10932,7 +10879,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -10961,15 +10908,15 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get IVR configs. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>Task of IVREntityListing</returns>
         public async System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
@@ -10985,8 +10932,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (IVREntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
@@ -11002,16 +10949,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11037,7 +10983,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11066,8 +11012,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get specified user prompt 
         /// </summary>
@@ -11102,17 +11048,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11133,7 +11078,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11162,7 +11107,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get specified user prompt 
         /// </summary>
@@ -11199,16 +11144,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11230,7 +11174,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11259,8 +11203,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get generated prompt history 
         /// </summary>
@@ -11269,7 +11213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
@@ -11287,7 +11231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
@@ -11310,17 +11254,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11347,7 +11290,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11376,7 +11319,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get generated prompt history 
         /// </summary>
@@ -11385,7 +11328,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
@@ -11404,7 +11347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
@@ -11429,16 +11372,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11466,7 +11408,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11495,8 +11437,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get specified user prompt resource 
         /// </summary>
@@ -11536,17 +11478,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11568,7 +11509,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11597,7 +11538,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get specified user prompt resource 
         /// </summary>
@@ -11640,16 +11581,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11672,7 +11612,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11701,8 +11641,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a pageable list of user prompt resources The returned list is pageable, and query parameters can be used for filtering.
         /// </summary>
@@ -11741,17 +11681,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11774,7 +11713,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11803,7 +11742,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a pageable list of user prompt resources The returned list is pageable, and query parameters can be used for filtering.
         /// </summary>
@@ -11844,16 +11783,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -11877,7 +11815,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -11906,8 +11844,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a pageable list of user prompts The returned list is pageable, and query parameters can be used for filtering.  Multiple names can be specified, in which case all matching prompts will be returned, and no other filters will be evaluated.
         /// </summary>
@@ -11917,8 +11855,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>PromptEntityListing</returns>
         public PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         {
@@ -11935,8 +11873,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>ApiResponse of PromptEntityListing</returns>
         public ApiResponse< PromptEntityListing > GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         { 
@@ -11951,17 +11889,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -11988,7 +11925,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12017,7 +11954,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a pageable list of user prompts The returned list is pageable, and query parameters can be used for filtering.  Multiple names can be specified, in which case all matching prompts will be returned, and no other filters will be evaluated.
         /// </summary>
@@ -12027,8 +11964,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of PromptEntityListing</returns>
         public async System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         {
@@ -12046,8 +11983,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of ApiResponse (PromptEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         { 
@@ -12062,16 +11999,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12099,7 +12035,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12128,8 +12064,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a schedule by ID 
         /// </summary>
@@ -12164,17 +12100,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12195,7 +12130,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12224,7 +12159,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a schedule by ID 
         /// </summary>
@@ -12261,16 +12196,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12292,7 +12226,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12321,8 +12255,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Gets a schedule group by ID 
         /// </summary>
@@ -12357,17 +12291,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12388,7 +12321,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12417,7 +12350,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Gets a schedule group by ID 
         /// </summary>
@@ -12454,16 +12387,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12485,7 +12417,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12514,16 +12446,16 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a list of schedule groups. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
@@ -12540,8 +12472,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
@@ -12559,17 +12491,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12596,7 +12527,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12625,15 +12556,15 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a list of schedule groups. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
@@ -12651,8 +12582,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
@@ -12670,16 +12601,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12707,7 +12637,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12736,16 +12666,16 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a list of schedules. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ScheduleEntityListing</returns>
@@ -12761,8 +12691,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ApiResponse of ScheduleEntityListing</returns>
@@ -12779,17 +12709,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -12815,7 +12744,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12844,15 +12773,15 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a list of schedules. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ScheduleEntityListing</returns>
@@ -12869,8 +12798,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleEntityListing)</returns>
@@ -12887,16 +12816,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -12923,7 +12851,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -12952,8 +12880,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a system prompt 
         /// </summary>
@@ -12988,17 +12916,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13019,7 +12946,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13048,7 +12975,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a system prompt 
         /// </summary>
@@ -13085,16 +13012,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13116,7 +13042,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13145,8 +13071,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get generated prompt history 
         /// </summary>
@@ -13155,7 +13081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
@@ -13173,7 +13099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
@@ -13196,17 +13122,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13233,7 +13158,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13262,7 +13187,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get generated prompt history 
         /// </summary>
@@ -13271,7 +13196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
@@ -13290,7 +13215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
@@ -13315,16 +13240,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13352,7 +13276,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13381,8 +13305,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a system prompt resource. 
         /// </summary>
@@ -13422,17 +13346,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13454,7 +13377,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13483,7 +13406,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a system prompt resource. 
         /// </summary>
@@ -13526,16 +13449,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13558,7 +13480,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13587,8 +13509,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get system prompt resources. 
         /// </summary>
@@ -13596,8 +13518,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>SystemPromptAssetEntityListing</returns>
         public SystemPromptAssetEntityListing GetArchitectSystempromptResources (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
@@ -13612,8 +13534,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>ApiResponse of SystemPromptAssetEntityListing</returns>
         public ApiResponse< SystemPromptAssetEntityListing > GetArchitectSystempromptResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         { 
@@ -13631,17 +13553,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13666,7 +13587,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13695,7 +13616,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get system prompt resources. 
         /// </summary>
@@ -13703,8 +13624,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of SystemPromptAssetEntityListing</returns>
         public async System.Threading.Tasks.Task<SystemPromptAssetEntityListing> GetArchitectSystempromptResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
@@ -13720,8 +13641,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of ApiResponse (SystemPromptAssetEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAssetEntityListing>> GetArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         { 
@@ -13740,16 +13661,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13775,7 +13695,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13804,16 +13724,16 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get System Prompts 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
@@ -13830,8 +13750,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
@@ -13849,17 +13769,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -13886,7 +13805,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -13915,15 +13834,15 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get System Prompts 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
@@ -13941,8 +13860,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
@@ -13960,16 +13879,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -13997,7 +13915,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14026,8 +13944,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get flow 
         /// </summary>
@@ -14064,17 +13982,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14096,7 +14013,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14125,7 +14042,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get flow 
         /// </summary>
@@ -14164,16 +14081,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -14196,7 +14112,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14225,8 +14141,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get generated flow history 
         /// </summary>
@@ -14235,7 +14151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
@@ -14253,7 +14169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
@@ -14276,17 +14192,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14313,7 +14228,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14342,7 +14257,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get generated flow history 
         /// </summary>
@@ -14351,7 +14266,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
@@ -14370,7 +14285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "desc")</param>
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
@@ -14395,16 +14310,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -14432,7 +14346,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14461,8 +14375,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get the latest configuration for flow 
         /// </summary>
@@ -14499,17 +14413,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14531,7 +14444,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14560,7 +14473,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get the latest configuration for flow 
         /// </summary>
@@ -14599,16 +14512,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -14631,7 +14543,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14660,8 +14572,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get flow version 
         /// </summary>
@@ -14703,17 +14615,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14736,7 +14647,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14765,7 +14676,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get flow version 
         /// </summary>
@@ -14810,16 +14721,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -14843,7 +14753,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14872,8 +14782,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create flow version configuration 
         /// </summary>
@@ -14915,17 +14825,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -14948,7 +14857,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -14977,7 +14886,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create flow version configuration 
         /// </summary>
@@ -15022,16 +14931,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15055,7 +14963,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15084,8 +14992,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get flow version list 
         /// </summary>
@@ -15126,17 +15034,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15160,7 +15067,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15189,7 +15096,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get flow version list 
         /// </summary>
@@ -15232,16 +15139,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15266,7 +15172,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15295,8 +15201,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a pageable list of flows, filtered by query parameters If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
@@ -15304,8 +15210,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -15334,8 +15240,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -15364,17 +15270,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15413,7 +15318,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15442,7 +15347,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a pageable list of flows, filtered by query parameters If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
@@ -15450,8 +15355,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -15481,8 +15386,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -15511,16 +15416,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15560,7 +15464,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15589,8 +15493,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Returns a specific datatable by id Given a datatableId returns the datatable object and schema associated with it.
         /// </summary>
@@ -15627,17 +15531,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15659,7 +15562,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15688,7 +15591,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Returns a specific datatable by id Given a datatableId returns the datatable object and schema associated with it.
         /// </summary>
@@ -15727,16 +15630,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15759,7 +15661,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15788,8 +15690,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Returns the state information about an export job Returns the state information about an export job.
         /// </summary>
@@ -15829,17 +15731,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15861,7 +15762,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15890,7 +15791,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Returns the state information about an export job Returns the state information about an export job.
         /// </summary>
@@ -15933,16 +15834,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -15965,7 +15865,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -15994,8 +15894,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Returns the state information about an import job Returns the state information about an import job.
         /// </summary>
@@ -16035,17 +15935,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -16067,7 +15966,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16096,7 +15995,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Returns the state information about an import job Returns the state information about an import job.
         /// </summary>
@@ -16139,16 +16038,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -16171,7 +16069,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16200,8 +16098,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get all recent import jobs Get all recent import jobs
         /// </summary>
@@ -16240,17 +16138,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -16273,7 +16170,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16302,7 +16199,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get all recent import jobs Get all recent import jobs
         /// </summary>
@@ -16343,16 +16240,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -16376,7 +16272,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16405,8 +16301,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Returns a specific row for the datatable Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
         /// </summary>
@@ -16448,17 +16344,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -16481,7 +16376,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16510,7 +16405,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Returns a specific row for the datatable Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
         /// </summary>
@@ -16555,16 +16450,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -16588,7 +16482,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16617,8 +16511,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Returns the rows for the datatable with the given id Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
         /// </summary>
@@ -16659,17 +16553,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -16693,7 +16586,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16722,7 +16615,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Returns the rows for the datatable with the given id Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
         /// </summary>
@@ -16765,16 +16658,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -16799,7 +16691,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16828,8 +16720,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
         /// </summary>
@@ -16838,7 +16730,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>DataTablesDomainEntityListing</returns>
@@ -16856,7 +16748,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
@@ -16873,17 +16765,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -16910,7 +16801,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -16939,7 +16830,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
         /// </summary>
@@ -16948,7 +16839,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>Task of DataTablesDomainEntityListing</returns>
@@ -16967,7 +16858,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
@@ -16984,16 +16875,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -17021,7 +16911,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17050,8 +16940,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Returns a specific datatable by id Given a datatableId returns the datatable object and schema associated with it.
         /// </summary>
@@ -17088,17 +16978,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -17120,7 +17009,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17149,7 +17038,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Returns a specific datatable by id Given a datatableId returns the datatable object and schema associated with it.
         /// </summary>
@@ -17188,16 +17077,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -17220,7 +17108,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17249,8 +17137,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
         /// </summary>
@@ -17259,7 +17147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>DataTablesDomainEntityListing</returns>
@@ -17277,7 +17165,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
@@ -17294,17 +17182,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -17331,7 +17218,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17360,7 +17247,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
         /// </summary>
@@ -17369,7 +17256,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>Task of DataTablesDomainEntityListing</returns>
@@ -17388,7 +17275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Name to filter by (optional)</param>
         /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
@@ -17405,16 +17292,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -17442,7 +17328,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17471,8 +17357,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type. If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
@@ -17480,8 +17366,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="publishVersionId">Publish version ID (optional)</param>
@@ -17503,8 +17389,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="publishVersionId">Publish version ID (optional)</param>
@@ -17526,17 +17412,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -17568,7 +17453,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17597,7 +17482,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type. If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
@@ -17605,8 +17490,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="publishVersionId">Publish version ID (optional)</param>
@@ -17629,8 +17514,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Type (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="publishVersionId">Publish version ID (optional)</param>
@@ -17652,16 +17537,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -17694,7 +17578,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17723,10 +17607,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. 
+        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowExecutionId">flow execution ID</param>
@@ -17738,7 +17622,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. 
+        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowExecutionId">flow execution ID</param>
@@ -17759,17 +17643,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -17790,7 +17673,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17819,9 +17702,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. 
+        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowExecutionId">flow execution ID</param>
@@ -17834,7 +17717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. 
+        /// Get a flow execution's details. Flow execution details are available for several days after the flow is started. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowExecutionId">flow execution ID</param>
@@ -17856,16 +17739,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -17887,7 +17769,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -17916,8 +17798,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Fetch Architect Job Status 
         /// </summary>
@@ -17954,17 +17836,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -17986,7 +17867,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18015,7 +17896,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Fetch Architect Job Status 
         /// </summary>
@@ -18054,16 +17935,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -18086,7 +17966,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18115,8 +17995,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a flow milestone Returns a specified flow milestone
         /// </summary>
@@ -18151,17 +18031,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -18182,7 +18061,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18211,7 +18090,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a flow milestone Returns a specified flow milestone
         /// </summary>
@@ -18248,16 +18127,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -18279,7 +18157,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18308,16 +18186,16 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a pageable list of flow milestones, filtered by query parameters Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -18336,8 +18214,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -18357,17 +18235,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -18396,7 +18273,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18425,15 +18302,15 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a pageable list of flow milestones, filtered by query parameters Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -18453,8 +18330,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -18474,16 +18351,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -18513,7 +18389,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18542,16 +18418,16 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a pageable list of basic flow milestone information objects filterable by query parameters. This returns flow milestones consisting of name and division. If one or more IDs are specified, the search will fetch flow milestones that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
@@ -18568,8 +18444,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
@@ -18587,17 +18463,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -18624,7 +18499,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18653,15 +18528,15 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a pageable list of basic flow milestone information objects filterable by query parameters. This returns flow milestones consisting of name and division. If one or more IDs are specified, the search will fetch flow milestones that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
@@ -18679,8 +18554,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
@@ -18698,16 +18573,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -18735,7 +18609,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18764,8 +18638,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a flow outcome Returns a specified flow outcome
         /// </summary>
@@ -18800,17 +18674,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -18831,7 +18704,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18860,7 +18733,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a flow outcome Returns a specified flow outcome
         /// </summary>
@@ -18897,16 +18770,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -18928,7 +18800,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -18957,16 +18829,16 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a pageable list of flow outcomes, filtered by query parameters Multiple IDs can be specified, in which case all matching flow outcomes will be returned, and no other parameters will be evaluated.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -18985,8 +18857,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -19006,17 +18878,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -19045,7 +18916,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19074,15 +18945,15 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a pageable list of flow outcomes, filtered by query parameters Multiple IDs can be specified, in which case all matching flow outcomes will be returned, and no other parameters will be evaluated.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -19102,8 +18973,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
@@ -19123,16 +18994,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -19162,7 +19032,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19191,16 +19061,16 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Get a pageable list of basic flow outcome information objects filterable by query parameters. This returns flow outcomes consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
@@ -19217,8 +19087,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
@@ -19236,17 +19106,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -19273,7 +19142,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19302,15 +19171,15 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Get a pageable list of basic flow outcome information objects filterable by query parameters. This returns flow outcomes consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
@@ -19328,8 +19197,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to id)</param>
-        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="sortBy">Sort by (optional, default to "id")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <param name="id">ID (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
@@ -19347,16 +19216,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -19384,7 +19252,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19413,8 +19281,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Rebuild Dependency Tracking data for an organization Asynchronous.  Notification topic: v2.architect.dependencytracking.build
         /// </summary>
@@ -19443,17 +19311,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -19473,7 +19340,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19502,7 +19369,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Rebuild Dependency Tracking data for an organization Asynchronous.  Notification topic: v2.architect.dependencytracking.build
         /// </summary>
@@ -19532,16 +19399,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -19562,7 +19428,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19591,8 +19457,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates a new emergency group 
         /// </summary>
@@ -19627,7 +19493,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -19635,9 +19500,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -19660,9 +19526,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19691,7 +19557,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates a new emergency group 
         /// </summary>
@@ -19728,7 +19594,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -19736,8 +19601,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -19761,9 +19627,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19792,8 +19658,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create IVR config. 
         /// </summary>
@@ -19828,7 +19694,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -19836,9 +19701,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -19861,9 +19727,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19892,7 +19758,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create IVR config. 
         /// </summary>
@@ -19929,7 +19795,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -19937,8 +19802,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -19962,9 +19828,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -19993,8 +19859,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Generate prompt history Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
         /// </summary>
@@ -20029,17 +19895,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -20060,7 +19925,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20089,7 +19954,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Generate prompt history Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
         /// </summary>
@@ -20126,16 +19991,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -20157,7 +20021,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20186,8 +20050,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a new user prompt resource 
         /// </summary>
@@ -20227,7 +20091,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -20235,9 +20098,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -20261,9 +20125,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20292,7 +20156,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a new user prompt resource 
         /// </summary>
@@ -20335,7 +20199,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -20343,8 +20206,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -20369,9 +20233,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20400,8 +20264,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a new user prompt 
         /// </summary>
@@ -20436,7 +20300,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -20444,9 +20307,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -20469,9 +20333,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20500,7 +20364,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a new user prompt 
         /// </summary>
@@ -20537,7 +20401,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -20545,8 +20408,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -20570,9 +20434,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20601,8 +20465,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Creates a new schedule group 
         /// </summary>
@@ -20637,7 +20501,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -20645,9 +20508,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -20670,9 +20534,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20701,7 +20565,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Creates a new schedule group 
         /// </summary>
@@ -20738,7 +20602,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -20746,8 +20609,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -20771,9 +20635,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20802,8 +20666,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a new schedule. 
         /// </summary>
@@ -20838,7 +20702,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -20846,9 +20709,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -20871,9 +20735,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -20902,7 +20766,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a new schedule. 
         /// </summary>
@@ -20939,7 +20803,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -20947,8 +20810,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -20972,9 +20836,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21003,8 +20867,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Generate system prompt history Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
         /// </summary>
@@ -21039,17 +20903,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -21070,7 +20933,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21099,7 +20962,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Generate system prompt history Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
         /// </summary>
@@ -21136,16 +20999,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -21167,7 +21029,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21196,8 +21058,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create system prompt resource override. 
         /// </summary>
@@ -21237,7 +21099,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -21245,9 +21106,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -21271,9 +21133,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21302,7 +21164,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create system prompt resource override. 
         /// </summary>
@@ -21345,7 +21207,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -21353,8 +21214,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -21379,9 +21241,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21410,8 +21272,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Generate flow history Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
@@ -21446,17 +21308,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -21477,7 +21338,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21506,7 +21367,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Generate flow history Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
@@ -21543,16 +21404,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -21574,7 +21434,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21603,8 +21463,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create flow version 
         /// </summary>
@@ -21644,7 +21504,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -21652,9 +21511,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -21678,9 +21538,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21709,7 +21569,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create flow version 
         /// </summary>
@@ -21752,7 +21612,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -21760,8 +21619,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -21786,9 +21646,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21817,8 +21677,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create flow 
         /// </summary>
@@ -21855,7 +21715,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -21863,9 +21722,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -21889,9 +21749,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -21920,7 +21780,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create flow 
         /// </summary>
@@ -21959,7 +21819,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -21967,8 +21826,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -21993,9 +21853,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22024,8 +21884,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Check-in flow Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
@@ -22060,17 +21920,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -22091,7 +21950,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22120,7 +21979,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Check-in flow Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
@@ -22157,16 +22016,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -22188,7 +22046,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22217,8 +22075,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Check-out flow 
         /// </summary>
@@ -22253,17 +22111,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -22284,7 +22141,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22313,7 +22170,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Check-out flow 
         /// </summary>
@@ -22350,16 +22207,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -22381,7 +22237,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22410,8 +22266,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Deactivate flow 
         /// </summary>
@@ -22446,17 +22302,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -22477,7 +22332,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22506,7 +22361,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Deactivate flow 
         /// </summary>
@@ -22543,16 +22398,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -22574,7 +22428,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22603,8 +22457,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Publish flow Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
@@ -22641,17 +22495,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -22673,7 +22526,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22702,7 +22555,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Publish flow Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
@@ -22741,16 +22594,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -22773,7 +22625,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22802,8 +22654,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Revert flow 
         /// </summary>
@@ -22838,17 +22690,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -22869,7 +22720,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22898,7 +22749,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Revert flow 
         /// </summary>
@@ -22935,16 +22786,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -22966,7 +22816,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -22995,8 +22845,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Unlock flow Allows for unlocking a flow in the case where there is no flow configuration available, and thus a check-in will not unlock the flow. The user must have Architect Admin permissions to perform this action.
         /// </summary>
@@ -23031,17 +22881,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -23062,7 +22911,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23091,7 +22940,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Unlock flow Allows for unlocking a flow in the case where there is no flow configuration available, and thus a check-in will not unlock the flow. The user must have Architect Admin permissions to perform this action.
         /// </summary>
@@ -23128,16 +22977,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -23159,7 +23007,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23188,8 +23036,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Begin an export process for exporting all rows from a datatable Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
         /// </summary>
@@ -23224,17 +23072,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -23255,7 +23102,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23284,7 +23131,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Begin an export process for exporting all rows from a datatable Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
         /// </summary>
@@ -23321,16 +23168,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -23352,7 +23198,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23381,8 +23227,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Begin an import process for importing rows into a datatable Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
         /// </summary>
@@ -23422,7 +23268,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23430,9 +23275,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -23456,9 +23302,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23487,7 +23333,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Begin an import process for importing rows into a datatable Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
         /// </summary>
@@ -23530,7 +23376,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23538,8 +23383,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -23564,9 +23410,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23595,10 +23441,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Create a new row entry for the datatable. Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
+        /// Create a new row entry for the datatable. Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized' stream of key -> value pairs {      \"Field1\": \"XYZZY\",      \"Field2\": false,      \"KEY\": \"27272\"  }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -23611,7 +23457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new row entry for the datatable. Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
+        /// Create a new row entry for the datatable. Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized' stream of key -> value pairs {      \"Field1\": \"XYZZY\",      \"Field2\": false,      \"KEY\": \"27272\"  }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -23636,7 +23482,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23644,9 +23489,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -23670,9 +23516,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(dataTableRow); // http body (model) parameter
             else
                 localVarPostBody = dataTableRow; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23701,9 +23547,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Create a new row entry for the datatable. Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
+        /// Create a new row entry for the datatable. Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized' stream of key -> value pairs {      \"Field1\": \"XYZZY\",      \"Field2\": false,      \"KEY\": \"27272\"  }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -23717,7 +23563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new row entry for the datatable. Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
+        /// Create a new row entry for the datatable. Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized' stream of key -> value pairs {      \"Field1\": \"XYZZY\",      \"Field2\": false,      \"KEY\": \"27272\"  }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -23744,7 +23590,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23752,8 +23597,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -23778,9 +23624,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(dataTableRow); // http body (model) parameter
             else
                 localVarPostBody = dataTableRow; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23809,10 +23655,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
+        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema's title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -23824,7 +23670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
+        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema's title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -23845,7 +23691,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23853,9 +23698,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -23878,9 +23724,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -23909,9 +23755,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
+        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema's title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -23924,7 +23770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
+        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema's title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -23946,7 +23792,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -23954,8 +23799,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -23979,9 +23825,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24010,10 +23856,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type. The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowLaunchRequest"></param>
@@ -24025,7 +23871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type. The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowLaunchRequest"></param>
@@ -24046,7 +23892,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24054,9 +23899,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -24079,9 +23925,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(flowLaunchRequest); // http body (model) parameter
             else
                 localVarPostBody = flowLaunchRequest; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24110,9 +23956,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type. The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowLaunchRequest"></param>
@@ -24125,7 +23971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+        /// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type. The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowLaunchRequest"></param>
@@ -24147,7 +23993,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24155,8 +24000,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -24180,9 +24026,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(flowLaunchRequest); // http body (model) parameter
             else
                 localVarPostBody = flowLaunchRequest; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24211,8 +24057,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job. 
         /// </summary>
@@ -24242,17 +24088,16 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -24272,7 +24117,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24301,7 +24146,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job. 
         /// </summary>
@@ -24332,16 +24177,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
-                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -24362,7 +24206,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
 
-            
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24391,8 +24235,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a flow milestone 
         /// </summary>
@@ -24424,7 +24268,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24432,9 +24275,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -24457,9 +24301,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24488,7 +24332,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a flow milestone 
         /// </summary>
@@ -24521,7 +24365,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24529,8 +24372,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -24554,9 +24398,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24585,8 +24429,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Create a flow outcome Asynchronous.  Notification topic: v2.flows.outcomes.{flowOutcomeId}
         /// </summary>
@@ -24618,7 +24462,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24626,9 +24469,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -24651,9 +24495,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24682,7 +24526,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Create a flow outcome Asynchronous.  Notification topic: v2.flows.outcomes.{flowOutcomeId}
         /// </summary>
@@ -24715,7 +24559,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24723,8 +24566,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -24748,9 +24592,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24779,8 +24623,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates a emergency group by ID 
         /// </summary>
@@ -24820,7 +24664,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24828,9 +24671,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -24854,9 +24698,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24885,7 +24729,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates a emergency group by ID 
         /// </summary>
@@ -24928,7 +24772,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -24936,8 +24779,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -24962,9 +24806,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -24993,8 +24837,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update an IVR Config. 
         /// </summary>
@@ -25034,7 +24878,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25042,9 +24885,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -25068,9 +24912,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25099,7 +24943,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update an IVR Config. 
         /// </summary>
@@ -25142,7 +24986,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25150,8 +24993,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -25176,9 +25020,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25207,8 +25051,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update specified user prompt 
         /// </summary>
@@ -25248,7 +25092,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25256,9 +25099,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -25282,9 +25126,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25313,7 +25157,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update specified user prompt 
         /// </summary>
@@ -25356,7 +25200,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25364,8 +25207,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -25390,9 +25234,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25421,8 +25265,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update specified user prompt resource 
         /// </summary>
@@ -25467,7 +25311,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25475,9 +25318,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -25502,9 +25346,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25533,7 +25377,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update specified user prompt resource 
         /// </summary>
@@ -25582,7 +25426,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25590,8 +25433,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -25617,9 +25461,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25648,8 +25492,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update schedule by ID 
         /// </summary>
@@ -25689,7 +25533,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25697,9 +25540,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -25723,9 +25567,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25754,7 +25598,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update schedule by ID 
         /// </summary>
@@ -25797,7 +25641,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25805,8 +25648,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -25831,9 +25675,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25862,8 +25706,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates a schedule group by ID 
         /// </summary>
@@ -25903,7 +25747,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -25911,9 +25754,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -25937,9 +25781,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -25968,7 +25812,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates a schedule group by ID 
         /// </summary>
@@ -26011,7 +25855,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26019,8 +25862,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -26045,9 +25889,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26076,8 +25920,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates a system prompt resource override. 
         /// </summary>
@@ -26122,7 +25966,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26130,9 +25973,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -26157,9 +26001,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26188,7 +26032,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates a system prompt resource override. 
         /// </summary>
@@ -26237,7 +26081,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26245,8 +26088,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -26272,9 +26116,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26303,8 +26147,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Update flow 
         /// </summary>
@@ -26344,7 +26188,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26352,9 +26195,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -26378,9 +26222,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26409,7 +26253,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Update flow 
         /// </summary>
@@ -26452,7 +26296,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26460,8 +26303,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -26486,9 +26330,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26517,8 +26361,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates a specific datatable by id Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
         /// </summary>
@@ -26560,7 +26404,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26568,9 +26411,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -26595,9 +26439,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26626,7 +26470,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates a specific datatable by id Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
         /// </summary>
@@ -26671,7 +26515,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26679,8 +26522,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -26706,9 +26550,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26737,10 +26581,10 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
-        /// Update a row entry Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
+        /// Update a row entry Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized' stream of key -> value pairs {     \"Field1\": \"XYZZY\",     \"Field2\": false,     \"KEY\": \"27272\" }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -26754,7 +26598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a row entry Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
+        /// Update a row entry Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized' stream of key -> value pairs {     \"Field1\": \"XYZZY\",     \"Field2\": false,     \"KEY\": \"27272\" }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -26780,7 +26624,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26788,9 +26631,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -26815,9 +26659,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26846,9 +26690,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
-        /// Update a row entry Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
+        /// Update a row entry Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized' stream of key -> value pairs {     \"Field1\": \"XYZZY\",     \"Field2\": false,     \"KEY\": \"27272\" }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -26863,7 +26707,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a row entry Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
+        /// Update a row entry Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized' stream of key -> value pairs {     \"Field1\": \"XYZZY\",     \"Field2\": false,     \"KEY\": \"27272\" }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -26891,7 +26735,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -26899,8 +26742,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -26926,9 +26770,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -26957,8 +26801,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates a flow milestone 
         /// </summary>
@@ -26995,7 +26839,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -27003,9 +26846,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -27029,9 +26873,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -27060,7 +26904,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates a flow milestone 
         /// </summary>
@@ -27099,7 +26943,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -27107,8 +26950,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -27133,9 +26977,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -27164,8 +27008,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
         /// <summary>
         /// Updates a flow outcome Updates a flow outcome.  Asynchronous.  Notification topic: v2.flowoutcomes.{flowoutcomeId}
         /// </summary>
@@ -27202,7 +27046,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -27210,9 +27053,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
                 
+
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -27236,9 +27080,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -27267,7 +27111,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
+
         /// <summary>
         /// Updates a flow outcome Updates a flow outcome.  Asynchronous.  Notification topic: v2.flowoutcomes.{flowoutcomeId}
         /// </summary>
@@ -27306,7 +27150,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                
                 "application/json"
                 
             };
@@ -27314,8 +27157,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                
+
                 "application/json"
+
                 
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
@@ -27340,9 +27184,9 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
-            
 
-            
+
+
             // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
@@ -27371,8 +27215,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarResponse.StatusDescription);
         }
 
-        
-        
+
+
     }
-    
+
 }

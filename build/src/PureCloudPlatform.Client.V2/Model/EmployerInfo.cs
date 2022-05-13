@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EmployerInfo :  IEquatable<EmployerInfo>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EmployerInfo" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets OfficialName
         /// </summary>
         [DataMember(Name="officialName", EmitDefaultValue=false)]
         public string OfficialName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EmployeeId
         /// </summary>
         [DataMember(Name="employeeId", EmitDefaultValue=false)]
         public string EmployeeId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EmployeeType
         /// </summary>
         [DataMember(Name="employeeType", EmitDefaultValue=false)]
         public string EmployeeType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets DateHire
         /// </summary>
         [DataMember(Name="dateHire", EmitDefaultValue=false)]
         public string DateHire { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EmployerInfo {\n");
-            
+
             sb.Append("  OfficialName: ").Append(OfficialName).Append("\n");
             sb.Append("  EmployeeId: ").Append(EmployeeId).Append("\n");
             sb.Append("  EmployeeType: ").Append(EmployeeType).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OfficialName != null)
                     hash = hash * 59 + this.OfficialName.GetHashCode();
-                
+
                 if (this.EmployeeId != null)
                     hash = hash * 59 + this.EmployeeId.GetHashCode();
-                
+
                 if (this.EmployeeType != null)
                     hash = hash * 59 + this.EmployeeType.GetHashCode();
-                
+
                 if (this.DateHire != null)
                     hash = hash * 59 + this.DateHire.GetHashCode();
-                
+
                 return hash;
             }
         }

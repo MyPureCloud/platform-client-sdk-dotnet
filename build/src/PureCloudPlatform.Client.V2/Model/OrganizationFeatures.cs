@@ -18,74 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OrganizationFeatures :  IEquatable<OrganizationFeatures>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationFeatures" /> class.
         /// </summary>
@@ -120,111 +52,111 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets RealtimeCIC
         /// </summary>
         [DataMember(Name="realtimeCIC", EmitDefaultValue=false)]
         public bool? RealtimeCIC { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Purecloud
         /// </summary>
         [DataMember(Name="purecloud", EmitDefaultValue=false)]
         public bool? Purecloud { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Hipaa
         /// </summary>
         [DataMember(Name="hipaa", EmitDefaultValue=false)]
         public bool? Hipaa { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UcEnabled
         /// </summary>
         [DataMember(Name="ucEnabled", EmitDefaultValue=false)]
         public bool? UcEnabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Pci
         /// </summary>
         [DataMember(Name="pci", EmitDefaultValue=false)]
         public bool? Pci { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PurecloudVoice
         /// </summary>
         [DataMember(Name="purecloudVoice", EmitDefaultValue=false)]
         public bool? PurecloudVoice { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets XmppFederation
         /// </summary>
         [DataMember(Name="xmppFederation", EmitDefaultValue=false)]
         public bool? XmppFederation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Chat
         /// </summary>
         [DataMember(Name="chat", EmitDefaultValue=false)]
         public bool? Chat { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets InformalPhotos
         /// </summary>
         [DataMember(Name="informalPhotos", EmitDefaultValue=false)]
         public bool? InformalPhotos { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Directory
         /// </summary>
         [DataMember(Name="directory", EmitDefaultValue=false)]
         public bool? Directory { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ContactCenter
         /// </summary>
         [DataMember(Name="contactCenter", EmitDefaultValue=false)]
         public bool? ContactCenter { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets UnifiedCommunications
         /// </summary>
         [DataMember(Name="unifiedCommunications", EmitDefaultValue=false)]
         public bool? UnifiedCommunications { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Custserv
         /// </summary>
         [DataMember(Name="custserv", EmitDefaultValue=false)]
         public bool? Custserv { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -233,7 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OrganizationFeatures {\n");
-            
+
             sb.Append("  RealtimeCIC: ").Append(RealtimeCIC).Append("\n");
             sb.Append("  Purecloud: ").Append(Purecloud).Append("\n");
             sb.Append("  Hipaa: ").Append(Hipaa).Append("\n");
@@ -365,46 +297,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RealtimeCIC != null)
                     hash = hash * 59 + this.RealtimeCIC.GetHashCode();
-                
+
                 if (this.Purecloud != null)
                     hash = hash * 59 + this.Purecloud.GetHashCode();
-                
+
                 if (this.Hipaa != null)
                     hash = hash * 59 + this.Hipaa.GetHashCode();
-                
+
                 if (this.UcEnabled != null)
                     hash = hash * 59 + this.UcEnabled.GetHashCode();
-                
+
                 if (this.Pci != null)
                     hash = hash * 59 + this.Pci.GetHashCode();
-                
+
                 if (this.PurecloudVoice != null)
                     hash = hash * 59 + this.PurecloudVoice.GetHashCode();
-                
+
                 if (this.XmppFederation != null)
                     hash = hash * 59 + this.XmppFederation.GetHashCode();
-                
+
                 if (this.Chat != null)
                     hash = hash * 59 + this.Chat.GetHashCode();
-                
+
                 if (this.InformalPhotos != null)
                     hash = hash * 59 + this.InformalPhotos.GetHashCode();
-                
+
                 if (this.Directory != null)
                     hash = hash * 59 + this.Directory.GetHashCode();
-                
+
                 if (this.ContactCenter != null)
                     hash = hash * 59 + this.ContactCenter.GetHashCode();
-                
+
                 if (this.UnifiedCommunications != null)
                     hash = hash * 59 + this.UnifiedCommunications.GetHashCode();
-                
+
                 if (this.Custserv != null)
                     hash = hash * 59 + this.Custserv.GetHashCode();
-                
+
                 return hash;
             }
         }

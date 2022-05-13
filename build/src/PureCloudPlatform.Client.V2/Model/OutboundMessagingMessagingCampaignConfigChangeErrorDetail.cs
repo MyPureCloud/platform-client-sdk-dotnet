@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OutboundMessagingMessagingCampaignConfigChangeErrorDetail :  IEquatable<OutboundMessagingMessagingCampaignConfigChangeErrorDetail>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignConfigChangeErrorDetail" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the error code.
         /// </summary>
         /// <value>The name of the error code.</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public string Error { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The additional information regarding the error message.
         /// </summary>
         /// <value>The additional information regarding the error message.</value>
         [DataMember(Name="details", EmitDefaultValue=false)]
         public string Details { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OutboundMessagingMessagingCampaignConfigChangeErrorDetail {\n");
-            
+
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();
-                
+
                 if (this.Details != null)
                     hash = hash * 59 + this.Details.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LocationAddressVerificationDetails :  IEquatable<LocationAddressVerificationDetails>
     {
-        
-        
         /// <summary>
         /// Status of address verification process
         /// </summary>
@@ -65,35 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Failed")]
             Failed
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of address verification process
         /// </summary>
         /// <value>Status of address verification process</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationAddressVerificationDetails" /> class.
         /// </summary>
@@ -110,36 +85,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Finished time of address verification process. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Finished time of address verification process. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateFinished", EmitDefaultValue=false)]
         public DateTime? DateFinished { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Time started of address verification process. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Time started of address verification process. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateStarted", EmitDefaultValue=false)]
         public DateTime? DateStarted { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Third party service used for address verification
         /// </summary>
         /// <value>Third party service used for address verification</value>
         [DataMember(Name="service", EmitDefaultValue=false)]
         public string Service { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -148,7 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LocationAddressVerificationDetails {\n");
-            
+
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  DateFinished: ").Append(DateFinished).Append("\n");
             sb.Append("  DateStarted: ").Append(DateStarted).Append("\n");
@@ -226,19 +201,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.DateFinished != null)
                     hash = hash * 59 + this.DateFinished.GetHashCode();
-                
+
                 if (this.DateStarted != null)
                     hash = hash * 59 + this.DateStarted.GetHashCode();
-                
+
                 if (this.Service != null)
                     hash = hash * 59 + this.Service.GetHashCode();
-                
+
                 return hash;
             }
         }

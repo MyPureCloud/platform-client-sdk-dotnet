@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KnowledgeDocumentRequest :  IEquatable<KnowledgeDocumentRequest>
     {
-        
-        
         /// <summary>
         /// Document type according to assigned template
         /// </summary>
@@ -47,46 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Article")]
             Article
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Document type according to assigned template
         /// </summary>
         /// <value>Document type according to assigned template</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeDocumentRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected KnowledgeDocumentRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeDocumentRequest" /> class.
         /// </summary>
@@ -105,45 +75,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// External Url to the document
         /// </summary>
         /// <value>External Url to the document</value>
         [DataMember(Name="externalUrl", EmitDefaultValue=false)]
         public string ExternalUrl { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Faq document details
         /// </summary>
         /// <value>Faq document details</value>
         [DataMember(Name="faq", EmitDefaultValue=false)]
         public DocumentFaq Faq { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Document categories
         /// </summary>
         /// <value>Document categories</value>
         [DataMember(Name="categories", EmitDefaultValue=false)]
         public List<DocumentCategoryInput> Categories { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Article details
         /// </summary>
         /// <value>Article details</value>
         [DataMember(Name="article", EmitDefaultValue=false)]
         public DocumentArticle Article { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class KnowledgeDocumentRequest {\n");
-            
+
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ExternalUrl: ").Append(ExternalUrl).Append("\n");
             sb.Append("  Faq: ").Append(Faq).Append("\n");
@@ -236,22 +206,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.ExternalUrl != null)
                     hash = hash * 59 + this.ExternalUrl.GetHashCode();
-                
+
                 if (this.Faq != null)
                     hash = hash * 59 + this.Faq.GetHashCode();
-                
+
                 if (this.Categories != null)
                     hash = hash * 59 + this.Categories.GetHashCode();
-                
+
                 if (this.Article != null)
                     hash = hash * 59 + this.Article.GetHashCode();
-                
+
                 return hash;
             }
         }

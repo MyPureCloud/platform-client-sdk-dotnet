@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebMessagingAttachment :  IEquatable<WebMessagingAttachment>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of attachment this instance represents.
         /// </summary>
@@ -62,52 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "File")]
             File
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of attachment this instance represents.
         /// </summary>
         /// <value>The type of attachment this instance represents.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
-        public MediaTypeEnum? MediaType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+        public MediaTypeEnum? MediaType { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WebMessagingAttachment" /> class.
         /// </summary>
@@ -116,72 +71,72 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// URL of the attachment.
         /// </summary>
         /// <value>URL of the attachment.</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Attachment mime type (https://www.iana.org/assignments/media-types/media-types.xhtml).
         /// </summary>
         /// <value>Attachment mime type (https://www.iana.org/assignments/media-types/media-types.xhtml).</value>
         [DataMember(Name="mime", EmitDefaultValue=false)]
         public string Mime { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text associated with attachment such as an image caption.
         /// </summary>
         /// <value>Text associated with attachment such as an image caption.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Secure hash of the attachment content.
         /// </summary>
         /// <value>Secure hash of the attachment content.</value>
         [DataMember(Name="sha256", EmitDefaultValue=false)]
         public string Sha256 { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Suggested file name for attachment.
         /// </summary>
         /// <value>Suggested file name for attachment.</value>
         [DataMember(Name="filename", EmitDefaultValue=false)]
         public string Filename { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The file size associated with the file
         /// </summary>
         /// <value>The file size associated with the file</value>
         [DataMember(Name="fileSize", EmitDefaultValue=false)]
         public int? FileSize { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -190,7 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebMessagingAttachment {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
@@ -292,31 +247,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
+
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.Mime != null)
                     hash = hash * 59 + this.Mime.GetHashCode();
-                
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Sha256 != null)
                     hash = hash * 59 + this.Sha256.GetHashCode();
-                
+
                 if (this.Filename != null)
                     hash = hash * 59 + this.Filename.GetHashCode();
-                
+
                 if (this.FileSize != null)
                     hash = hash * 59 + this.FileSize.GetHashCode();
-                
+
                 return hash;
             }
         }

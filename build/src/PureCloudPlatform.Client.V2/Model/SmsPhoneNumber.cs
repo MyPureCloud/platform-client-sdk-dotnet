@@ -18,17 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SmsPhoneNumber :  IEquatable<SmsPhoneNumber>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of the phone number provisioned.
         /// </summary>
@@ -68,13 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "shortcode")]
             Shortcode
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Status of the provisioned phone number.
         /// </summary>
@@ -126,12 +108,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "INITIATED")]
             Initiated
         }
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Capabilities
         /// </summary>
@@ -164,37 +140,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "voice")]
             Voice
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Renewal time period of this phone number, if the phoneNumberType is shortcode.
         /// </summary>
@@ -216,13 +161,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Quarterly")]
             Quarterly
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// BillingType of this phone number, if the phoneNumberType is shortcode.
         /// </summary>
@@ -250,113 +188,36 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Vanity")]
             Vanity
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Type of the phone number provisioned.
         /// </summary>
         /// <value>Type of the phone number provisioned.</value>
         [DataMember(Name="phoneNumberType", EmitDefaultValue=false)]
-        public PhoneNumberTypeEnum? PhoneNumberType { get; set; }
-        
-        
-        
-        
-        
+        public PhoneNumberTypeEnum? PhoneNumberType { get; private set; }
         /// <summary>
         /// Status of the provisioned phone number.
         /// </summary>
         /// <value>Status of the provisioned phone number.</value>
         [DataMember(Name="phoneNumberStatus", EmitDefaultValue=false)]
         public PhoneNumberStatusEnum? PhoneNumberStatus { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Renewal time period of this phone number, if the phoneNumberType is shortcode.
         /// </summary>
         /// <value>Renewal time period of this phone number, if the phoneNumberType is shortcode.</value>
         [DataMember(Name="autoRenewable", EmitDefaultValue=false)]
         public AutoRenewableEnum? AutoRenewable { get; set; }
-        
-        
-        
-        
-        
         /// <summary>
         /// BillingType of this phone number, if the phoneNumberType is shortcode.
         /// </summary>
         /// <value>BillingType of this phone number, if the phoneNumberType is shortcode.</value>
         [DataMember(Name="shortCodeBillingType", EmitDefaultValue=false)]
         public ShortCodeBillingTypeEnum? ShortCodeBillingType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsPhoneNumber" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SmsPhoneNumber() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsPhoneNumber" /> class.
         /// </summary>
@@ -407,203 +268,203 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A phone number provisioned for SMS communications in E.164 format. E.g. +13175555555 or +34234234234
         /// </summary>
         /// <value>A phone number provisioned for SMS communications in E.164 format. E.g. +13175555555 or +34234234234</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Is set to false, if the phone number is provisioned through a SMS provider, outside of PureCloud
         /// </summary>
         /// <value>Is set to false, if the phone number is provisioned through a SMS provider, outside of PureCloud</value>
         [DataMember(Name="provisionedThroughPureCloud", EmitDefaultValue=false)]
         public bool? ProvisionedThroughPureCloud { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The capabilities of the phone number available for provisioning.
         /// </summary>
         /// <value>The capabilities of the phone number available for provisioning.</value>
         [DataMember(Name="capabilities", EmitDefaultValue=false)]
         public List<CapabilitiesEnum> Capabilities { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ISO 3166-1 alpha-2 country code of the country this phone number is associated with.
         /// </summary>
         /// <value>The ISO 3166-1 alpha-2 country code of the country this phone number is associated with.</value>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date this phone number was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date this phone number was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date this phone number was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date this phone number was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User that provisioned this phone number
         /// </summary>
         /// <value>User that provisioned this phone number</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public User CreatedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// User that last modified this phone number
         /// </summary>
         /// <value>User that last modified this phone number</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public User ModifiedBy { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Version number required for updates.
         /// </summary>
         /// <value>Version number required for updates.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date this phone number was purchased, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date this phone number was purchased, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="purchaseDate", EmitDefaultValue=false)]
         public DateTime? PurchaseDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Contract end date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Contract end date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="cancellationDate", EmitDefaultValue=false)]
         public DateTime? CancellationDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Contract renewal date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Contract renewal date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="renewalDate", EmitDefaultValue=false)]
         public DateTime? RenewalDate { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The id of an address attached to this phone number.
         /// </summary>
         /// <value>The id of an address attached to this phone number.</value>
         [DataMember(Name="addressId", EmitDefaultValue=false)]
         public SmsAddress AddressId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Status of latest asynchronous provisioning action
         /// </summary>
         /// <value>Status of latest asynchronous provisioning action</value>
         [DataMember(Name="provisioningStatus", EmitDefaultValue=false)]
         public SmsProvisioningStatus ProvisioningStatus { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Localized country name for the country code this phone number belongs too
         /// </summary>
         /// <value>Localized country name for the country code this phone number belongs too</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Set to true if this phone number has the capability to support SMS
         /// </summary>
         /// <value>Set to true if this phone number has the capability to support SMS</value>
         [DataMember(Name="supportsSms", EmitDefaultValue=false)]
         public bool? SupportsSms { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Set to true if this phone number has the capability to support MMS
         /// </summary>
         /// <value>Set to true if this phone number has the capability to support MMS</value>
         [DataMember(Name="supportsMms", EmitDefaultValue=false)]
         public bool? SupportsMms { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Set to true if this phone number has the capability to support voice
         /// </summary>
         /// <value>Set to true if this phone number has the capability to support voice</value>
         [DataMember(Name="supportsVoice", EmitDefaultValue=false)]
         public bool? SupportsVoice { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -612,7 +473,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SmsPhoneNumber {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
@@ -816,82 +677,81 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
-                
+
                 if (this.PhoneNumberType != null)
                     hash = hash * 59 + this.PhoneNumberType.GetHashCode();
-                
+
                 if (this.ProvisionedThroughPureCloud != null)
                     hash = hash * 59 + this.ProvisionedThroughPureCloud.GetHashCode();
-                
+
                 if (this.PhoneNumberStatus != null)
                     hash = hash * 59 + this.PhoneNumberStatus.GetHashCode();
-                
+
                 if (this.Capabilities != null)
                     hash = hash * 59 + this.Capabilities.GetHashCode();
-                
+
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
-                
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
+
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
+
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
+
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 if (this.PurchaseDate != null)
                     hash = hash * 59 + this.PurchaseDate.GetHashCode();
-                
+
                 if (this.CancellationDate != null)
                     hash = hash * 59 + this.CancellationDate.GetHashCode();
-                
+
                 if (this.RenewalDate != null)
                     hash = hash * 59 + this.RenewalDate.GetHashCode();
-                
+
                 if (this.AutoRenewable != null)
                     hash = hash * 59 + this.AutoRenewable.GetHashCode();
-                
+
                 if (this.AddressId != null)
                     hash = hash * 59 + this.AddressId.GetHashCode();
-                
+
                 if (this.ShortCodeBillingType != null)
                     hash = hash * 59 + this.ShortCodeBillingType.GetHashCode();
-                
+
                 if (this.ProvisioningStatus != null)
                     hash = hash * 59 + this.ProvisioningStatus.GetHashCode();
-                
+
                 if (this.Country != null)
                     hash = hash * 59 + this.Country.GetHashCode();
-                
+
                 if (this.SupportsSms != null)
                     hash = hash * 59 + this.SupportsSms.GetHashCode();
-                
+
                 if (this.SupportsMms != null)
                     hash = hash * 59 + this.SupportsMms.GetHashCode();
-                
+
                 if (this.SupportsVoice != null)
                     hash = hash * 59 + this.SupportsVoice.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

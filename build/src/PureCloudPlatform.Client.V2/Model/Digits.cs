@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Digits :  IEquatable<Digits>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="Digits" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A string representing the digits pressed on phone.
         /// </summary>
         /// <value>A string representing the digits pressed on phone.</value>
         [DataMember(Name="digits", EmitDefaultValue=false)]
         public string _Digits { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Digits {\n");
-            
+
             sb.Append("  _Digits: ").Append(_Digits).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this._Digits != null)
                     hash = hash * 59 + this._Digits.GetHashCode();
-                
+
                 return hash;
             }
         }

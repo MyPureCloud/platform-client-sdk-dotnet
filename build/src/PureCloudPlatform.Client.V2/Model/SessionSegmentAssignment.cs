@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SessionSegmentAssignment :  IEquatable<SessionSegmentAssignment>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SessionSegmentAssignment" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The segment that was assigned.
         /// </summary>
         /// <value>The segment that was assigned.</value>
         [DataMember(Name="segment", EmitDefaultValue=false)]
         public AssignedSegment Segment { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Timestamp indicating when the segment was assigned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the segment was assigned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="assignedDate", EmitDefaultValue=false)]
         public DateTime? AssignedDate { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SessionSegmentAssignment {\n");
-            
+
             sb.Append("  Segment: ").Append(Segment).Append("\n");
             sb.Append("  AssignedDate: ").Append(AssignedDate).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Segment != null)
                     hash = hash * 59 + this.Segment.GetHashCode();
-                
+
                 if (this.AssignedDate != null)
                     hash = hash * 59 + this.AssignedDate.GetHashCode();
-                
+
                 return hash;
             }
         }

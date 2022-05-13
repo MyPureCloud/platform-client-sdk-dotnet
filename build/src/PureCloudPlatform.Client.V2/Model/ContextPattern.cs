@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContextPattern :  IEquatable<ContextPattern>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ContextPattern" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ContextPattern() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContextPattern" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A list of one or more criteria to satisfy.
         /// </summary>
         /// <value>A list of one or more criteria to satisfy.</value>
         [DataMember(Name="criteria", EmitDefaultValue=false)]
         public List<EntityTypeCriteria> Criteria { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContextPattern {\n");
-            
+
             sb.Append("  Criteria: ").Append(Criteria).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Criteria != null)
                     hash = hash * 59 + this.Criteria.GetHashCode();
-                
+
                 return hash;
             }
         }

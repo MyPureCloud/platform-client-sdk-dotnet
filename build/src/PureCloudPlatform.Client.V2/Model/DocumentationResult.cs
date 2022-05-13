@@ -18,115 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DocumentationResult :  IEquatable<DocumentationResult>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentationResult" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DocumentationResult() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentationResult" /> class.
         /// </summary>
@@ -175,187 +72,187 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The category of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The category of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="categories", EmitDefaultValue=false)]
         public List<int?> Categories { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The description of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The description of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The text or html content for the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The text or html content for the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public string Content { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The excerpt of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The excerpt of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="excerpt", EmitDefaultValue=false)]
         public string Excerpt { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URL link for the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>URL link for the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="link", EmitDefaultValue=false)]
         public string Link { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The modified date for the documentation entity. Will be returned in responses for certain entities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The modified date for the documentation entity. Will be returned in responses for certain entities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modified", EmitDefaultValue=false)]
         public DateTime? Modified { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The name of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The service of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The service of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="service", EmitDefaultValue=false)]
         public List<int?> Service { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The slug of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The slug of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="slug", EmitDefaultValue=false)]
         public string Slug { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The title of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The title of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The search type. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The search type. Will be returned in responses for certain entities.</value>
         [DataMember(Name="get_type", EmitDefaultValue=false)]
         public string GetType { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The facet feature of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The facet feature of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="facet_feature", EmitDefaultValue=false)]
         public List<int?> FacetFeature { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The facet role of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The facet role of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="facet_role", EmitDefaultValue=false)]
         public List<int?> FacetRole { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The facet service of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The facet service of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="facet_service", EmitDefaultValue=false)]
         public List<int?> FacetService { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The faq categories of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The faq categories of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="faq_categories", EmitDefaultValue=false)]
         public List<int?> FaqCategories { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The releasenote category of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The releasenote category of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="releasenote_category", EmitDefaultValue=false)]
         public List<int?> ReleasenoteCategory { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The releasenote tag of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The releasenote tag of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="releasenote_tag", EmitDefaultValue=false)]
         public List<int?> ReleasenoteTag { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The service area of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The service area of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="service-area", EmitDefaultValue=false)]
         public List<int?> ServiceArea { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The video categories of the documentation entity. Will be returned in responses for certain entities.
         /// </summary>
         /// <value>The video categories of the documentation entity. Will be returned in responses for certain entities.</value>
         [DataMember(Name="video_categories", EmitDefaultValue=false)]
         public List<int?> VideoCategories { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -364,7 +261,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DocumentationResult {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Categories: ").Append(Categories).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -538,67 +435,66 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Categories != null)
                     hash = hash * 59 + this.Categories.GetHashCode();
-                
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
-                
+
                 if (this.Excerpt != null)
                     hash = hash * 59 + this.Excerpt.GetHashCode();
-                
+
                 if (this.Link != null)
                     hash = hash * 59 + this.Link.GetHashCode();
-                
+
                 if (this.Modified != null)
                     hash = hash * 59 + this.Modified.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Service != null)
                     hash = hash * 59 + this.Service.GetHashCode();
-                
+
                 if (this.Slug != null)
                     hash = hash * 59 + this.Slug.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.GetType != null)
                     hash = hash * 59 + this.GetType.GetHashCode();
-                
+
                 if (this.FacetFeature != null)
                     hash = hash * 59 + this.FacetFeature.GetHashCode();
-                
+
                 if (this.FacetRole != null)
                     hash = hash * 59 + this.FacetRole.GetHashCode();
-                
+
                 if (this.FacetService != null)
                     hash = hash * 59 + this.FacetService.GetHashCode();
-                
+
                 if (this.FaqCategories != null)
                     hash = hash * 59 + this.FaqCategories.GetHashCode();
-                
+
                 if (this.ReleasenoteCategory != null)
                     hash = hash * 59 + this.ReleasenoteCategory.GetHashCode();
-                
+
                 if (this.ReleasenoteTag != null)
                     hash = hash * 59 + this.ReleasenoteTag.GetHashCode();
-                
+
                 if (this.ServiceArea != null)
                     hash = hash * 59 + this.ServiceArea.GetHashCode();
-                
+
                 if (this.VideoCategories != null)
                     hash = hash * 59 + this.VideoCategories.GetHashCode();
-                
+
                 return hash;
             }
         }

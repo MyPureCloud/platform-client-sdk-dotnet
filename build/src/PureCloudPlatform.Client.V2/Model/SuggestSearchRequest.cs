@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SuggestSearchRequest :  IEquatable<SuggestSearchRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SuggestSearchRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SuggestSearchRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SuggestSearchRequest" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Provides more details about a specified resource
         /// </summary>
         /// <value>Provides more details about a specified resource</value>
         [DataMember(Name="expand", EmitDefaultValue=false)]
         public List<string> Expand { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Resource domain type to search
         /// </summary>
         /// <value>Resource domain type to search</value>
         [DataMember(Name="types", EmitDefaultValue=false)]
         public List<string> Types { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Suggest query
         /// </summary>
         /// <value>Suggest query</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public List<SuggestSearchCriteria> Query { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SuggestSearchRequest {\n");
-            
+
             sb.Append("  Expand: ").Append(Expand).Append("\n");
             sb.Append("  Types: ").Append(Types).Append("\n");
             sb.Append("  Query: ").Append(Query).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Expand != null)
                     hash = hash * 59 + this.Expand.GetHashCode();
-                
+
                 if (this.Types != null)
                     hash = hash * 59 + this.Types.GetHashCode();
-                
+
                 if (this.Query != null)
                     hash = hash * 59 + this.Query.GetHashCode();
-                
+
                 return hash;
             }
         }

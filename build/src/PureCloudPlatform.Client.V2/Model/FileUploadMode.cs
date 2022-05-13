@@ -18,10 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FileUploadMode :  IEquatable<FileUploadMode>
     {
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets FileTypes
         /// </summary>
@@ -37,35 +33,23 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Imagejpeg for "image/jpeg"
+            /// Enum Jpeg for "image/jpeg"
             /// </summary>
             [EnumMember(Value = "image/jpeg")]
-            Imagejpeg,
+            Jpeg,
             
             /// <summary>
-            /// Enum Imagegif for "image/gif"
+            /// Enum Gif for "image/gif"
             /// </summary>
             [EnumMember(Value = "image/gif")]
-            Imagegif,
+            Gif,
             
             /// <summary>
-            /// Enum Imagepng for "image/png"
+            /// Enum Png for "image/png"
             /// </summary>
             [EnumMember(Value = "image/png")]
-            Imagepng
+            Png
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="FileUploadMode" /> class.
         /// </summary>
@@ -78,25 +62,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A list of supported content types for uploading files
         /// </summary>
         /// <value>A list of supported content types for uploading files</value>
         [DataMember(Name="fileTypes", EmitDefaultValue=false)]
         public List<FileTypesEnum> FileTypes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The maximum file size for file uploads in kilobytes. Default is 10240 (10 MB)
         /// </summary>
         /// <value>The maximum file size for file uploads in kilobytes. Default is 10240 (10 MB)</value>
         [DataMember(Name="maxFileSizeKB", EmitDefaultValue=false)]
         public long? MaxFileSizeKB { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -105,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FileUploadMode {\n");
-            
+
             sb.Append("  FileTypes: ").Append(FileTypes).Append("\n");
             sb.Append("  MaxFileSizeKB: ").Append(MaxFileSizeKB).Append("\n");
             sb.Append("}\n");
@@ -171,13 +155,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FileTypes != null)
                     hash = hash * 59 + this.FileTypes.GetHashCode();
-                
+
                 if (this.MaxFileSizeKB != null)
                     hash = hash * 59 + this.MaxFileSizeKB.GetHashCode();
-                
+
                 return hash;
             }
         }

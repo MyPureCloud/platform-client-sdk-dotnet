@@ -633,6 +633,8 @@ Delete an Open messaging integration
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
 
+
+
 Requires ALL permissions: 
 
 * messaging:integration:delete
@@ -2322,6 +2324,8 @@ Get a web chat conversation message
 
 The current user must be involved with the conversation to get its messages.
 
+
+
 Requires NO permissions: 
 
 
@@ -2387,6 +2391,8 @@ namespace Example
 Get the messages of a chat conversation.
 
 The current user must be involved with the conversation to get its messages.
+
+
 
 Requires NO permissions: 
 
@@ -3489,6 +3495,8 @@ Get media
 
 See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
 
+
+
 Requires ANY permissions: 
 
 * conversation:message:view
@@ -4293,6 +4301,8 @@ Get a list of Open messaging integrations
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
 
+
+
 Requires ALL permissions: 
 
 * messaging:integration:view
@@ -4363,6 +4373,8 @@ namespace Example
 Get an Open messaging integration
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+
 
 Requires ALL permissions: 
 
@@ -4843,6 +4855,8 @@ Get the organization's default supported content profile that will be used as th
 
 When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
 
+
+
 Requires ALL permissions: 
 
 * messaging:supportedContent:view
@@ -4968,6 +4982,8 @@ Get conversation threading window timeline for each messaging type
 
 Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
 
+
+
 Requires ALL permissions: 
 
 * conversation:threadingTimeline:view
@@ -5027,6 +5043,8 @@ This endpoint does require any parameters.
 Update a participant.
 
 Update conversation participant.
+
+
 
 Requires NO permissions: 
 
@@ -5355,7 +5373,7 @@ void (empty response body)
 
 <a name="patchconversationscallparticipantcommunication"></a>
 
-## [**Empty**](Empty.html) PatchConversationsCallParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+## **Object** PatchConversationsCallParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 
 
@@ -5396,7 +5414,7 @@ namespace Example
             try
             { 
                 // Update conversation participant's communication by disconnecting it.
-                Empty result = apiInstance.PatchConversationsCallParticipantCommunication(conversationId, participantId, communicationId, body);
+                Object result = apiInstance.PatchConversationsCallParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5421,7 +5439,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="patchconversationscallparticipantconsult"></a>
 
@@ -5694,7 +5712,7 @@ void (empty response body)
 
 <a name="patchconversationscallbackparticipantcommunication"></a>
 
-## [**Empty**](Empty.html) PatchConversationsCallbackParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+## **Object** PatchConversationsCallbackParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 
 
@@ -5735,7 +5753,7 @@ namespace Example
             try
             { 
                 // Update conversation participant's communication by disconnecting it.
-                Empty result = apiInstance.PatchConversationsCallbackParticipantCommunication(conversationId, participantId, communicationId, body);
+                Object result = apiInstance.PatchConversationsCallbackParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5760,7 +5778,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="patchconversationscallbacks"></a>
 
@@ -6030,7 +6048,7 @@ void (empty response body)
 
 <a name="patchconversationschatparticipantcommunication"></a>
 
-## [**Empty**](Empty.html) PatchConversationsChatParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+## **Object** PatchConversationsChatParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 
 
@@ -6071,7 +6089,7 @@ namespace Example
             try
             { 
                 // Update conversation participant's communication by disconnecting it.
-                Empty result = apiInstance.PatchConversationsChatParticipantCommunication(conversationId, participantId, communicationId, body);
+                Object result = apiInstance.PatchConversationsChatParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6096,7 +6114,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="patchconversationscobrowsesession"></a>
 
@@ -6301,7 +6319,7 @@ void (empty response body)
 
 <a name="patchconversationscobrowsesessionparticipantcommunication"></a>
 
-## [**Empty**](Empty.html) PatchConversationsCobrowsesessionParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+## **Object** PatchConversationsCobrowsesessionParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 
 
@@ -6342,7 +6360,7 @@ namespace Example
             try
             { 
                 // Update conversation participant's communication by disconnecting it.
-                Empty result = apiInstance.PatchConversationsCobrowsesessionParticipantCommunication(conversationId, participantId, communicationId, body);
+                Object result = apiInstance.PatchConversationsCobrowsesessionParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6367,7 +6385,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="patchconversationsemail"></a>
 
@@ -6572,7 +6590,7 @@ void (empty response body)
 
 <a name="patchconversationsemailparticipantcommunication"></a>
 
-## [**Empty**](Empty.html) PatchConversationsEmailParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+## **Object** PatchConversationsEmailParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 
 
@@ -6613,7 +6631,7 @@ namespace Example
             try
             { 
                 // Update conversation participant's communication by disconnecting it.
-                Empty result = apiInstance.PatchConversationsEmailParticipantCommunication(conversationId, participantId, communicationId, body);
+                Object result = apiInstance.PatchConversationsEmailParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6638,7 +6656,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="patchconversationsmessage"></a>
 
@@ -6843,7 +6861,7 @@ void (empty response body)
 
 <a name="patchconversationsmessageparticipantcommunication"></a>
 
-## [**Empty**](Empty.html) PatchConversationsMessageParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+## **Object** PatchConversationsMessageParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 
 
@@ -6884,7 +6902,7 @@ namespace Example
             try
             { 
                 // Update conversation participant's communication by disconnecting it.
-                Empty result = apiInstance.PatchConversationsMessageParticipantCommunication(conversationId, participantId, communicationId, body);
+                Object result = apiInstance.PatchConversationsMessageParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6909,7 +6927,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="patchconversationsmessagingintegrationsfacebookintegrationid"></a>
 
@@ -6987,6 +7005,8 @@ namespace Example
 Update an Open messaging integration
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+
 
 Requires ALL permissions: 
 
@@ -7121,6 +7141,8 @@ namespace Example
 Update or activate a WhatsApp messaging integration
 
 The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+
+
 
 Requires ALL permissions: 
 
@@ -9254,6 +9276,8 @@ Create an email conversation
 
 If the direction of the request is INBOUND, this will create an external conversation with a third party provider. If the direction of the the request is OUTBOUND, this will create a conversation to send outbound emails on behalf of a queue.
 
+
+
 Requires ANY permissions: 
 
 * conversation:email:create
@@ -9383,6 +9407,8 @@ Send message
 
 Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
 
+
+
 Requires ANY permissions: 
 
 * conversation:message:create
@@ -9453,6 +9479,8 @@ Create media
 
 See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
 
+
+
 Requires ANY permissions: 
 
 * conversation:message:create
@@ -9521,6 +9549,8 @@ Get messages in batch
 
 The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\"a3069a33b-bbb1-4703-9d68-061d9e9db96e\", \"55bc6be3-078c-4a49-a4e6-1e05776ed7e8\"]
 
+
+
 Requires ANY permissions: 
 
 * conversation:message:view
@@ -9549,7 +9579,7 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var conversationId = conversationId_example;  // string | 
-            var body = ;  // List<string> | messageIds (optional) 
+            var body = new List<string>(); // List<string> | messageIds (optional) 
 
             try
             { 
@@ -9572,7 +9602,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**|  |  |
-| **body** | **List<string>**| messageIds | [optional]  |
+| **body** | [**List<string>**](string.html)| messageIds | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -9656,6 +9686,8 @@ Create an outbound messaging conversation.
 
 If there is an existing conversation between the remote address and the address associated with the queue specified in createOutboundRequest then the result of this request depends on the state of that conversation and the useExistingConversation field of createOutboundRequest. If the existing conversation is in alerting or connected state, then the request will fail. If the existing conversation is disconnected but still within the conversation window then the request will fail unless useExistingConversation is set to true.
 
+
+
 Requires ALL permissions: 
 
 * conversation:message:create
@@ -9721,6 +9753,8 @@ Send an agentless outbound message
 
 Send an agentless (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
 
+
+
 Requires ALL permissions: 
 
 * conversation:message:create
@@ -9785,6 +9819,8 @@ namespace Example
 Send an inbound Open Message
 
 Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+
+
 
 Requires ALL permissions: 
 
@@ -9981,6 +10017,8 @@ Create an Open messaging integration
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
 
+
+
 Requires ALL permissions: 
 
 * messaging:integration:add
@@ -10110,6 +10148,8 @@ namespace Example
 Create a WhatsApp Integration
 
 You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
+
+
 
 Requires ALL permissions: 
 
@@ -10365,7 +10405,7 @@ namespace Example
 
 <a name="putconversationscallparticipantcommunicationuuidata"></a>
 
-## [**Empty**](Empty.html) PutConversationsCallParticipantCommunicationUuidata (string conversationId, string participantId, string communicationId, SetUuiDataRequest body)
+## **Object** PutConversationsCallParticipantCommunicationUuidata (string conversationId, string participantId, string communicationId, SetUuiDataRequest body)
 
 
 
@@ -10406,7 +10446,7 @@ namespace Example
             try
             { 
                 // Set uuiData to be sent on future commands.
-                Empty result = apiInstance.PutConversationsCallParticipantCommunicationUuidata(conversationId, participantId, communicationId, body);
+                Object result = apiInstance.PutConversationsCallParticipantCommunicationUuidata(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -10431,7 +10471,7 @@ namespace Example
 
 ### Return type
 
-[**Empty**](Empty.html)
+**Object**
 
 <a name="putconversationsemailmessagesdraft"></a>
 
@@ -10576,6 +10616,8 @@ Set the organization's default supported content profile that may be assigned to
 
 When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
 
+
+
 Requires ALL permissions: 
 
 * messaging:supportedContent:edit
@@ -10640,6 +10682,8 @@ namespace Example
 Update conversation threading window timeline for each messaging type
 
 PUT Conversation messaging threading timeline is intended to set the conversation threading settings for ALL messengerTypes. If you omit a messengerType in the request body then the setting for that messengerType will use the platform default value. The PUT replaces the existing setting(s) that were previously set for each messengerType.
+
+
 
 Requires ALL permissions: 
 

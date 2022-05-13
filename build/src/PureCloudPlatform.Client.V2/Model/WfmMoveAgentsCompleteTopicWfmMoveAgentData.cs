@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmMoveAgentsCompleteTopicWfmMoveAgentData :  IEquatable<WfmMoveAgentsCompleteTopicWfmMoveAgentData>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Result
         /// </summary>
@@ -85,21 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SourceManagementUnitNotAuthorized")]
             Sourcemanagementunitnotauthorized
         }
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Result
         /// </summary>
         [DataMember(Name="result", EmitDefaultValue=false)]
         public ResultEnum? Result { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmMoveAgentsCompleteTopicWfmMoveAgentData" /> class.
         /// </summary>
@@ -112,17 +97,17 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public WfmMoveAgentsCompleteTopicUserReference User { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -131,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmMoveAgentsCompleteTopicWfmMoveAgentData {\n");
-            
+
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Result: ").Append(Result).Append("\n");
             sb.Append("}\n");
@@ -197,13 +182,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.Result != null)
                     hash = hash * 59 + this.Result.GetHashCode();
-                
+
                 return hash;
             }
         }

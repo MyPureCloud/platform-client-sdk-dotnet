@@ -18,35 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntentDefinition :  IEquatable<IntentDefinition>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="IntentDefinition" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected IntentDefinition() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntentDefinition" /> class.
         /// </summary>
@@ -61,43 +38,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the intent.
         /// </summary>
         /// <value>The name of the intent.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The bindings for the named entity types used in this intent.This field is mutually exclusive with entityNameReferences and entities
         /// </summary>
         /// <value>The bindings for the named entity types used in this intent.This field is mutually exclusive with entityNameReferences and entities</value>
         [DataMember(Name="entityTypeBindings", EmitDefaultValue=false)]
         public List<NamedEntityTypeBinding> EntityTypeBindings { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The references for the named entity used in this intent.This field is mutually exclusive with entityTypeBindings
         /// </summary>
         /// <value>The references for the named entity used in this intent.This field is mutually exclusive with entityTypeBindings</value>
         [DataMember(Name="entityNameReferences", EmitDefaultValue=false)]
         public List<string> EntityNameReferences { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The utterances that act as training phrases for the intent.
         /// </summary>
         /// <value>The utterances that act as training phrases for the intent.</value>
         [DataMember(Name="utterances", EmitDefaultValue=false)]
         public List<NluUtterance> Utterances { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -106,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntentDefinition {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  EntityTypeBindings: ").Append(EntityTypeBindings).Append("\n");
             sb.Append("  EntityNameReferences: ").Append(EntityNameReferences).Append("\n");
@@ -184,19 +161,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.EntityTypeBindings != null)
                     hash = hash * 59 + this.EntityTypeBindings.GetHashCode();
-                
+
                 if (this.EntityNameReferences != null)
                     hash = hash * 59 + this.EntityNameReferences.GetHashCode();
-                
+
                 if (this.Utterances != null)
                     hash = hash * 59 + this.Utterances.GetHashCode();
-                
+
                 return hash;
             }
         }

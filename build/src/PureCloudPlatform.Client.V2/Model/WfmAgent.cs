@@ -18,64 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmAgent :  IEquatable<WfmAgent>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmAgent" /> class.
         /// </summary>
@@ -102,106 +44,106 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user associated with this data
         /// </summary>
         /// <value>The user associated with this data</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UserReference User { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The work plan associated with this agent, if applicable
         /// </summary>
         /// <value>The work plan associated with this agent, if applicable</value>
         [DataMember(Name="workPlan", EmitDefaultValue=false)]
         public WorkPlanReference WorkPlan { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The work plan rotation associated with this agent, if applicable
         /// </summary>
         /// <value>The work plan rotation associated with this agent, if applicable</value>
         [DataMember(Name="workPlanRotation", EmitDefaultValue=false)]
         public WorkPlanRotationReference WorkPlanRotation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the agent accepts direct shift trade requests
         /// </summary>
         /// <value>Whether the agent accepts direct shift trade requests</value>
         [DataMember(Name="acceptDirectShiftTrades", EmitDefaultValue=false)]
         public bool? AcceptDirectShiftTrades { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of queues to which this agent is capable of handling
         /// </summary>
         /// <value>List of queues to which this agent is capable of handling</value>
         [DataMember(Name="queues", EmitDefaultValue=false)]
         public List<QueueReference> Queues { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of languages this agent is capable of handling
         /// </summary>
         /// <value>The list of languages this agent is capable of handling</value>
         [DataMember(Name="languages", EmitDefaultValue=false)]
         public List<LanguageReference> Languages { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of skills this agent is capable of handling
         /// </summary>
         /// <value>The list of skills this agent is capable of handling</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
         public List<RoutingSkillReference> Skills { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether the agent has the permission to be included in schedule generation
         /// </summary>
         /// <value>Whether the agent has the permission to be included in schedule generation</value>
         [DataMember(Name="schedulable", EmitDefaultValue=false)]
         public bool? Schedulable { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Metadata for this agent
         /// </summary>
         /// <value>Metadata for this agent</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -210,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmAgent {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  WorkPlan: ").Append(WorkPlan).Append("\n");
@@ -330,40 +272,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 if (this.WorkPlan != null)
                     hash = hash * 59 + this.WorkPlan.GetHashCode();
-                
+
                 if (this.WorkPlanRotation != null)
                     hash = hash * 59 + this.WorkPlanRotation.GetHashCode();
-                
+
                 if (this.AcceptDirectShiftTrades != null)
                     hash = hash * 59 + this.AcceptDirectShiftTrades.GetHashCode();
-                
+
                 if (this.Queues != null)
                     hash = hash * 59 + this.Queues.GetHashCode();
-                
+
                 if (this.Languages != null)
                     hash = hash * 59 + this.Languages.GetHashCode();
-                
+
                 if (this.Skills != null)
                     hash = hash * 59 + this.Skills.GetHashCode();
-                
+
                 if (this.Schedulable != null)
                     hash = hash * 59 + this.Schedulable.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

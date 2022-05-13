@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyCampaign :  IEquatable<JourneyCampaign>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyCampaign" /> class.
         /// </summary>
@@ -78,70 +40,70 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Differentiate ads or links that point to the same URL (e.g. textlink).
         /// </summary>
         /// <value>Differentiate ads or links that point to the same URL (e.g. textlink).</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public string Content { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Identify a medium such as email or cost-per-click (e.g. CPC).
         /// </summary>
         /// <value>Identify a medium such as email or cost-per-click (e.g. CPC).</value>
         [DataMember(Name="medium", EmitDefaultValue=false)]
         public string Medium { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Identify a specific product promotion or strategic campaign (e.g. 320banner).
         /// </summary>
         /// <value>Identify a specific product promotion or strategic campaign (e.g. 320banner).</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Identify a search engine, newsletter name, or other source (e.g. Google).
         /// </summary>
         /// <value>Identify a search engine, newsletter name, or other source (e.g. Google).</value>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public string Source { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Note the keywords for this ad (e.g. running+shoes).
         /// </summary>
         /// <value>Note the keywords for this ad (e.g. running+shoes).</value>
         [DataMember(Name="term", EmitDefaultValue=false)]
         public string Term { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The click ID (unique number that is generated when a potential customer clicks on an affiliate link).
         /// </summary>
         /// <value>The click ID (unique number that is generated when a potential customer clicks on an affiliate link).</value>
         [DataMember(Name="clickId", EmitDefaultValue=false)]
         public string ClickId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ad network to which the click ID belongs.
         /// </summary>
         /// <value>The ad network to which the click ID belongs.</value>
         [DataMember(Name="network", EmitDefaultValue=false)]
         public string Network { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -150,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyCampaign {\n");
-            
+
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  Medium: ").Append(Medium).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -246,28 +208,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
-                
+
                 if (this.Medium != null)
                     hash = hash * 59 + this.Medium.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
-                
+
                 if (this.Term != null)
                     hash = hash * 59 + this.Term.GetHashCode();
-                
+
                 if (this.ClickId != null)
                     hash = hash * 59 + this.ClickId.GetHashCode();
-                
+
                 if (this.Network != null)
                     hash = hash * 59 + this.Network.GetHashCode();
-                
+
                 return hash;
             }
         }

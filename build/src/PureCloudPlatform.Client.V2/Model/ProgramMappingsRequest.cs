@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ProgramMappingsRequest :  IEquatable<ProgramMappingsRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ProgramMappingsRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ProgramMappingsRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ProgramMappingsRequest" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The program queues
         /// </summary>
         /// <value>The program queues</value>
         [DataMember(Name="queueIds", EmitDefaultValue=false)]
         public List<string> QueueIds { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The program flows
         /// </summary>
         /// <value>The program flows</value>
         [DataMember(Name="flowIds", EmitDefaultValue=false)]
         public List<string> FlowIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ProgramMappingsRequest {\n");
-            
+
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
             sb.Append("  FlowIds: ").Append(FlowIds).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QueueIds != null)
                     hash = hash * 59 + this.QueueIds.GetHashCode();
-                
+
                 if (this.FlowIds != null)
                     hash = hash * 59 + this.FlowIds.GetHashCode();
-                
+
                 return hash;
             }
         }

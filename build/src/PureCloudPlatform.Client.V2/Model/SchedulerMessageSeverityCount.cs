@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SchedulerMessageSeverityCount :  IEquatable<SchedulerMessageSeverityCount>
     {
-        
-        
         /// <summary>
         /// The schedule message severity
         /// </summary>
@@ -59,25 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Error")]
             Error
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The schedule message severity
         /// </summary>
         /// <value>The schedule message severity</value>
         [DataMember(Name="severity", EmitDefaultValue=false)]
         public SeverityEnum? Severity { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulerMessageSeverityCount" /> class.
         /// </summary>
@@ -90,18 +75,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The number of schedule messages with the given severity
         /// </summary>
         /// <value>The number of schedule messages with the given severity</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,7 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SchedulerMessageSeverityCount {\n");
-            
+
             sb.Append("  Severity: ").Append(Severity).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("}\n");
@@ -176,13 +161,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Severity != null)
                     hash = hash * 59 + this.Severity.GetHashCode();
-                
+
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-                
+
                 return hash;
             }
         }

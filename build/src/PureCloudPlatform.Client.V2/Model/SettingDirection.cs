@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SettingDirection :  IEquatable<SettingDirection>
     {
-        
-        
         /// <summary>
         /// Status for the Inbound Direction
         /// </summary>
@@ -47,10 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Disabled")]
             Disabled
         }
-        
-        
-        
-        
         /// <summary>
         /// Status for the Outbound Direction
         /// </summary>
@@ -78,29 +72,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Disabled")]
             Disabled
         }
-        
-        
-        
-        
-        
         /// <summary>
         /// Status for the Inbound Direction
         /// </summary>
         /// <value>Status for the Inbound Direction</value>
         [DataMember(Name="inbound", EmitDefaultValue=false)]
         public InboundEnum? Inbound { get; set; }
-        
-        
-        
         /// <summary>
         /// Status for the Outbound Direction
         /// </summary>
         /// <value>Status for the Outbound Direction</value>
         [DataMember(Name="outbound", EmitDefaultValue=false)]
         public OutboundEnum? Outbound { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SettingDirection" /> class.
         /// </summary>
@@ -113,11 +96,11 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -126,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SettingDirection {\n");
-            
+
             sb.Append("  Inbound: ").Append(Inbound).Append("\n");
             sb.Append("  Outbound: ").Append(Outbound).Append("\n");
             sb.Append("}\n");
@@ -192,13 +175,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Inbound != null)
                     hash = hash * 59 + this.Inbound.GetHashCode();
-                
+
                 if (this.Outbound != null)
                     hash = hash * 59 + this.Outbound.GetHashCode();
-                
+
                 return hash;
             }
         }

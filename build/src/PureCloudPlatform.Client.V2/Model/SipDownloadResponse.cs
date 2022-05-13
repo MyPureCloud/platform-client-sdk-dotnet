@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SipDownloadResponse :  IEquatable<SipDownloadResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SipDownloadResponse" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// unique id of the downloaded file
         /// </summary>
         /// <value>unique id of the downloaded file</value>
         [DataMember(Name="downloadId", EmitDefaultValue=false)]
         public string DownloadId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Document id of pcap file
         /// </summary>
         /// <value>Document id of pcap file</value>
         [DataMember(Name="documentId", EmitDefaultValue=false)]
         public string DocumentId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SipDownloadResponse {\n");
-            
+
             sb.Append("  DownloadId: ").Append(DownloadId).Append("\n");
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DownloadId != null)
                     hash = hash * 59 + this.DownloadId.GetHashCode();
-                
+
                 if (this.DocumentId != null)
                     hash = hash * 59 + this.DocumentId.GetHashCode();
-                
+
                 return hash;
             }
         }

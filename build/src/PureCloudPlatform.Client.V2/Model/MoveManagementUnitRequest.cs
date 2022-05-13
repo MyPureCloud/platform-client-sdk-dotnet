@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MoveManagementUnitRequest :  IEquatable<MoveManagementUnitRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MoveManagementUnitRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected MoveManagementUnitRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MoveManagementUnitRequest" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the business unit to which to move the management unit
         /// </summary>
         /// <value>The ID of the business unit to which to move the management unit</value>
         [DataMember(Name="businessUnitId", EmitDefaultValue=false)]
         public string BusinessUnitId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MoveManagementUnitRequest {\n");
-            
+
             sb.Append("  BusinessUnitId: ").Append(BusinessUnitId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.BusinessUnitId != null)
                     hash = hash * 59 + this.BusinessUnitId.GetHashCode();
-                
+
                 return hash;
             }
         }

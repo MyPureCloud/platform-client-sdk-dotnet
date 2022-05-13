@@ -18,40 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuGenerateScheduleRequest :  IEquatable<BuGenerateScheduleRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BuGenerateScheduleRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected BuGenerateScheduleRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="BuGenerateScheduleRequest" /> class.
         /// </summary>
         /// <param name="Description">The description for the schedule (required).</param>
-        /// <param name="ShortTermForecast">The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule&#39;s start week + week count.</param>
+        /// <param name="ShortTermForecast">The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule's start week + week count.</param>
         /// <param name="WeekCount">The number of weeks in the schedule. One extra day is added at the end (required).</param>
         /// <param name="Options">Additional scheduling options.</param>
         public BuGenerateScheduleRequest(string Description = null, BuShortTermForecastReference ShortTermForecast = null, int? WeekCount = null, SchedulingOptionsRequest Options = null)
@@ -63,43 +40,43 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The description for the schedule
         /// </summary>
         /// <value>The description for the schedule</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule&#39;s start week + week count
+        /// The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule's start week + week count
         /// </summary>
-        /// <value>The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule&#39;s start week + week count</value>
+        /// <value>The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule's start week + week count</value>
         [DataMember(Name="shortTermForecast", EmitDefaultValue=false)]
         public BuShortTermForecastReference ShortTermForecast { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The number of weeks in the schedule. One extra day is added at the end
         /// </summary>
         /// <value>The number of weeks in the schedule. One extra day is added at the end</value>
         [DataMember(Name="weekCount", EmitDefaultValue=false)]
         public int? WeekCount { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Additional scheduling options
         /// </summary>
         /// <value>Additional scheduling options</value>
         [DataMember(Name="options", EmitDefaultValue=false)]
         public SchedulingOptionsRequest Options { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BuGenerateScheduleRequest {\n");
-            
+
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  ShortTermForecast: ").Append(ShortTermForecast).Append("\n");
             sb.Append("  WeekCount: ").Append(WeekCount).Append("\n");
@@ -186,19 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
+
                 if (this.ShortTermForecast != null)
                     hash = hash * 59 + this.ShortTermForecast.GetHashCode();
-                
+
                 if (this.WeekCount != null)
                     hash = hash * 59 + this.WeekCount.GetHashCode();
-                
+
                 if (this.Options != null)
                     hash = hash * 59 + this.Options.GetHashCode();
-                
+
                 return hash;
             }
         }

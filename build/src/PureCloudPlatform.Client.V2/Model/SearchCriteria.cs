@@ -18,23 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SearchCriteria :  IEquatable<SearchCriteria>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// How to apply this search criteria against other criteria
         /// </summary>
@@ -68,16 +51,6 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NOT")]
             Not
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -182,42 +155,17 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "MATCH_ALL")]
             MatchAll
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// How to apply this search criteria against other criteria
         /// </summary>
         /// <value>How to apply this search criteria against other criteria</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public OperatorEnum? _Operator { get; set; }
-        
-        
-        
-        
-        
-        
-        
+        public OperatorEnum? Operator { get; set; }
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchCriteria" /> class.
         /// </summary>
@@ -226,92 +174,92 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartValue">The start value of the range. This field is used for range search types..</param>
         /// <param name="Fields">Field names to search against.</param>
         /// <param name="Value">A value for the search to match against.</param>
-        /// <param name="_Operator">How to apply this search criteria against other criteria.</param>
+        /// <param name="Operator">How to apply this search criteria against other criteria.</param>
         /// <param name="Group">Groups multiple conditions.</param>
-        /// <param name="DateFormat">Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX..</param>
+        /// <param name="DateFormat">Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd'T'HH:mm:ss.SSSX..</param>
         /// <param name="Type">Type.</param>
-        public SearchCriteria(string EndValue = null, List<string> Values = null, string StartValue = null, List<string> Fields = null, string Value = null, OperatorEnum? _Operator = null, List<SearchCriteria> Group = null, string DateFormat = null, TypeEnum? Type = null)
+        public SearchCriteria(string EndValue = null, List<string> Values = null, string StartValue = null, List<string> Fields = null, string Value = null, OperatorEnum? Operator = null, List<SearchCriteria> Group = null, string DateFormat = null, TypeEnum? Type = null)
         {
             this.EndValue = EndValue;
             this.Values = Values;
             this.StartValue = StartValue;
             this.Fields = Fields;
             this.Value = Value;
-            this._Operator = _Operator;
+            this.Operator = Operator;
             this.Group = Group;
             this.DateFormat = DateFormat;
             this.Type = Type;
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The end value of the range. This field is used for range search types.
         /// </summary>
         /// <value>The end value of the range. This field is used for range search types.</value>
         [DataMember(Name="endValue", EmitDefaultValue=false)]
         public string EndValue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of values for the search to match against
         /// </summary>
         /// <value>A list of values for the search to match against</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The start value of the range. This field is used for range search types.
         /// </summary>
         /// <value>The start value of the range. This field is used for range search types.</value>
         [DataMember(Name="startValue", EmitDefaultValue=false)]
         public string StartValue { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Field names to search against
         /// </summary>
         /// <value>Field names to search against</value>
         [DataMember(Name="fields", EmitDefaultValue=false)]
         public List<string> Fields { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A value for the search to match against
         /// </summary>
         /// <value>A value for the search to match against</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Groups multiple conditions
         /// </summary>
         /// <value>Groups multiple conditions</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public List<SearchCriteria> Group { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX.
+        /// Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd'T'HH:mm:ss.SSSX.
         /// </summary>
-        /// <value>Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX.</value>
+        /// <value>Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd'T'HH:mm:ss.SSSX.</value>
         [DataMember(Name="dateFormat", EmitDefaultValue=false)]
         public string DateFormat { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -320,13 +268,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SearchCriteria {\n");
-            
+
             sb.Append("  EndValue: ").Append(EndValue).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("  StartValue: ").Append(StartValue).Append("\n");
             sb.Append("  Fields: ").Append(Fields).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  DateFormat: ").Append(DateFormat).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -396,9 +344,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Value.Equals(other.Value)
                 ) &&
                 (
-                    this._Operator == other._Operator ||
-                    this._Operator != null &&
-                    this._Operator.Equals(other._Operator)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
                 ) &&
                 (
                     this.Group == other.Group ||
@@ -428,34 +376,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EndValue != null)
                     hash = hash * 59 + this.EndValue.GetHashCode();
-                
+
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
+
                 if (this.StartValue != null)
                     hash = hash * 59 + this.StartValue.GetHashCode();
-                
+
                 if (this.Fields != null)
                     hash = hash * 59 + this.Fields.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
-                if (this._Operator != null)
-                    hash = hash * 59 + this._Operator.GetHashCode();
-                
+
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
+
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
-                
+
                 if (this.DateFormat != null)
                     hash = hash * 59 + this.DateFormat.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,44 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationContentNotificationTemplate :  IEquatable<ConversationContentNotificationTemplate>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationContentNotificationTemplate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConversationContentNotificationTemplate() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationContentNotificationTemplate" /> class.
         /// </summary>
-        /// <param name="Id">The messaging provider template ID. For WhatsApp, &#39;namespace@name&#39;..</param>
+        /// <param name="Id">The messaging provider template ID. For WhatsApp, 'namespace@name'..</param>
         /// <param name="Language">Template language..</param>
         /// <param name="Header">The template header..</param>
         /// <param name="Body">The template body. (required).</param>
@@ -70,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The messaging provider template ID. For WhatsApp, &#39;namespace@name&#39;.
+        /// The messaging provider template ID. For WhatsApp, 'namespace@name'.
         /// </summary>
-        /// <value>The messaging provider template ID. For WhatsApp, &#39;namespace@name&#39;.</value>
+        /// <value>The messaging provider template ID. For WhatsApp, 'namespace@name'.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Template language.
         /// </summary>
         /// <value>Template language.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The template header.
         /// </summary>
         /// <value>The template header.</value>
         [DataMember(Name="header", EmitDefaultValue=false)]
         public ConversationNotificationTemplateHeader Header { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The template body.
         /// </summary>
         /// <value>The template body.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public ConversationNotificationTemplateBody Body { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The template footer.
         /// </summary>
         /// <value>The template footer.</value>
         [DataMember(Name="footer", EmitDefaultValue=false)]
         public ConversationNotificationTemplateFooter Footer { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationContentNotificationTemplate {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Header: ").Append(Header).Append("\n");
@@ -208,22 +180,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.Header != null)
                     hash = hash * 59 + this.Header.GetHashCode();
-                
+
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
-                
+
                 if (this.Footer != null)
                     hash = hash * 59 + this.Footer.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QualityAuditQueryFilter :  IEquatable<QualityAuditQueryFilter>
     {
-        
-        
         /// <summary>
         /// Name of the property to filter.
         /// </summary>
@@ -89,31 +87,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ServiceName")]
             Servicename
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Name of the property to filter.
         /// </summary>
         /// <value>Name of the property to filter.</value>
         [DataMember(Name="property", EmitDefaultValue=false)]
         public PropertyEnum? Property { get; set; }
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="QualityAuditQueryFilter" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected QualityAuditQueryFilter() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QualityAuditQueryFilter" /> class.
         /// </summary>
@@ -126,18 +111,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Value of the property to filter.
         /// </summary>
         /// <value>Value of the property to filter.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,7 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QualityAuditQueryFilter {\n");
-            
+
             sb.Append("  Property: ").Append(Property).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -212,13 +197,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Property != null)
                     hash = hash * 59 + this.Property.GetHashCode();
-                
+
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
+
                 return hash;
             }
         }

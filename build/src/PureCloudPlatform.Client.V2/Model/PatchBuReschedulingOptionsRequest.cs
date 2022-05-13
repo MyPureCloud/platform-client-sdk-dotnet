@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchBuReschedulingOptionsRequest :  IEquatable<PatchBuReschedulingOptionsRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchBuReschedulingOptionsRequest" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Per-management unit rescheduling options to update
         /// </summary>
         /// <value>Per-management unit rescheduling options to update</value>
         [DataMember(Name="managementUnits", EmitDefaultValue=false)]
         public List<PatchBuReschedulingOptionsManagementUnitRequest> ManagementUnits { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PatchBuReschedulingOptionsRequest {\n");
-            
+
             sb.Append("  ManagementUnits: ").Append(ManagementUnits).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ManagementUnits != null)
                     hash = hash * 59 + this.ManagementUnits.GetHashCode();
-                
+
                 return hash;
             }
         }

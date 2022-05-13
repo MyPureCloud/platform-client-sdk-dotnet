@@ -18,44 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GenericSAML :  IEquatable<GenericSAML>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets NameIdentifierFormat
         /// </summary>
@@ -71,95 +33,58 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Urnoasisnamestcsaml11nameidformatunspecified for "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
+            /// Enum _11nameidformatunspecified for "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
             /// </summary>
             [EnumMember(Value = "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified")]
-            Urnoasisnamestcsaml11nameidformatunspecified,
+            _11nameidformatunspecified,
             
             /// <summary>
-            /// Enum Urnoasisnamestcsaml11nameidformatemailaddress for "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
+            /// Enum _11nameidformatemailaddress for "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
             /// </summary>
             [EnumMember(Value = "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress")]
-            Urnoasisnamestcsaml11nameidformatemailaddress,
+            _11nameidformatemailaddress,
             
             /// <summary>
-            /// Enum Urnoasisnamestcsaml11nameidformatx509subjectname for "urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName"
+            /// Enum _11nameidformatx509subjectname for "urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName"
             /// </summary>
             [EnumMember(Value = "urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName")]
-            Urnoasisnamestcsaml11nameidformatx509subjectname,
+            _11nameidformatx509subjectname,
             
             /// <summary>
-            /// Enum Urnoasisnamestcsaml11nameidformatwindowsdomainqualifiedname for "urn:oasis:names:tc:SAML:1.1:nameid-format:WindowsDomainQualifiedName"
+            /// Enum _11nameidformatwindowsdomainqualifiedname for "urn:oasis:names:tc:SAML:1.1:nameid-format:WindowsDomainQualifiedName"
             /// </summary>
             [EnumMember(Value = "urn:oasis:names:tc:SAML:1.1:nameid-format:WindowsDomainQualifiedName")]
-            Urnoasisnamestcsaml11nameidformatwindowsdomainqualifiedname,
+            _11nameidformatwindowsdomainqualifiedname,
             
             /// <summary>
-            /// Enum Urnoasisnamestcsaml20nameidformatkerberos for "urn:oasis:names:tc:SAML:2.0:nameid-format:kerberos"
+            /// Enum _20nameidformatkerberos for "urn:oasis:names:tc:SAML:2.0:nameid-format:kerberos"
             /// </summary>
             [EnumMember(Value = "urn:oasis:names:tc:SAML:2.0:nameid-format:kerberos")]
-            Urnoasisnamestcsaml20nameidformatkerberos,
+            _20nameidformatkerberos,
             
             /// <summary>
-            /// Enum Urnoasisnamestcsaml20nameidformatentity for "urn:oasis:names:tc:SAML:2.0:nameid-format:entity"
+            /// Enum _20nameidformatentity for "urn:oasis:names:tc:SAML:2.0:nameid-format:entity"
             /// </summary>
             [EnumMember(Value = "urn:oasis:names:tc:SAML:2.0:nameid-format:entity")]
-            Urnoasisnamestcsaml20nameidformatentity,
+            _20nameidformatentity,
             
             /// <summary>
-            /// Enum Urnoasisnamestcsaml20nameidformatpersistent for "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent"
+            /// Enum _20nameidformatpersistent for "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent"
             /// </summary>
             [EnumMember(Value = "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent")]
-            Urnoasisnamestcsaml20nameidformatpersistent,
+            _20nameidformatpersistent,
             
             /// <summary>
-            /// Enum Urnoasisnamestcsaml20nameidformattransient for "urn:oasis:names:tc:SAML:2.0:nameid-format:transient"
+            /// Enum _20nameidformattransient for "urn:oasis:names:tc:SAML:2.0:nameid-format:transient"
             /// </summary>
             [EnumMember(Value = "urn:oasis:names:tc:SAML:2.0:nameid-format:transient")]
-            Urnoasisnamestcsaml20nameidformattransient
+            _20nameidformattransient
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets NameIdentifierFormat
         /// </summary>
         [DataMember(Name="nameIdentifierFormat", EmitDefaultValue=false)]
         public NameIdentifierFormatEnum? NameIdentifierFormat { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="GenericSAML" /> class.
         /// </summary>
@@ -192,115 +117,115 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Disabled
         /// </summary>
         [DataMember(Name="disabled", EmitDefaultValue=false)]
         public bool? Disabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IssuerURI
         /// </summary>
         [DataMember(Name="issuerURI", EmitDefaultValue=false)]
         public string IssuerURI { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SsoTargetURI
         /// </summary>
         [DataMember(Name="ssoTargetURI", EmitDefaultValue=false)]
         public string SsoTargetURI { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SloURI
         /// </summary>
         [DataMember(Name="sloURI", EmitDefaultValue=false)]
         public string SloURI { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SloBinding
         /// </summary>
         [DataMember(Name="sloBinding", EmitDefaultValue=false)]
         public string SloBinding { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RelyingPartyIdentifier
         /// </summary>
         [DataMember(Name="relyingPartyIdentifier", EmitDefaultValue=false)]
         public string RelyingPartyIdentifier { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Certificate
         /// </summary>
         [DataMember(Name="certificate", EmitDefaultValue=false)]
         public string Certificate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Certificates
         /// </summary>
         [DataMember(Name="certificates", EmitDefaultValue=false)]
         public List<string> Certificates { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets LogoImageData
         /// </summary>
         [DataMember(Name="logoImageData", EmitDefaultValue=false)]
         public string LogoImageData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EndpointCompression
         /// </summary>
         [DataMember(Name="endpointCompression", EmitDefaultValue=false)]
         public bool? EndpointCompression { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -309,7 +234,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GenericSAML {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
@@ -447,49 +372,48 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Disabled != null)
                     hash = hash * 59 + this.Disabled.GetHashCode();
-                
+
                 if (this.IssuerURI != null)
                     hash = hash * 59 + this.IssuerURI.GetHashCode();
-                
+
                 if (this.SsoTargetURI != null)
                     hash = hash * 59 + this.SsoTargetURI.GetHashCode();
-                
+
                 if (this.SloURI != null)
                     hash = hash * 59 + this.SloURI.GetHashCode();
-                
+
                 if (this.SloBinding != null)
                     hash = hash * 59 + this.SloBinding.GetHashCode();
-                
+
                 if (this.RelyingPartyIdentifier != null)
                     hash = hash * 59 + this.RelyingPartyIdentifier.GetHashCode();
-                
+
                 if (this.Certificate != null)
                     hash = hash * 59 + this.Certificate.GetHashCode();
-                
+
                 if (this.Certificates != null)
                     hash = hash * 59 + this.Certificates.GetHashCode();
-                
+
                 if (this.LogoImageData != null)
                     hash = hash * 59 + this.LogoImageData.GetHashCode();
-                
+
                 if (this.EndpointCompression != null)
                     hash = hash * 59 + this.EndpointCompression.GetHashCode();
-                
+
                 if (this.NameIdentifierFormat != null)
                     hash = hash * 59 + this.NameIdentifierFormat.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

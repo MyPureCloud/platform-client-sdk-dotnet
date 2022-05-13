@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NluDetectionContext :  IEquatable<NluDetectionContext>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDetectionContext" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Restrict detection to this intent.
         /// </summary>
         /// <value>Restrict detection to this intent.</value>
         [DataMember(Name="intent", EmitDefaultValue=false)]
         public ContextIntent Intent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Use this entity to restrict detection.
         /// </summary>
         /// <value>Use this entity to restrict detection.</value>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public ContextEntity Entity { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NluDetectionContext {\n");
-            
+
             sb.Append("  Intent: ").Append(Intent).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Intent != null)
                     hash = hash * 59 + this.Intent.GetHashCode();
-                
+
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
-                
+
                 return hash;
             }
         }

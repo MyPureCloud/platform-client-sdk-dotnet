@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyAction :  IEquatable<JourneyAction>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyAction" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected JourneyAction() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyAction" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of an action from the Journey System (an action is spawned from an actionMap)
         /// </summary>
         /// <value>The ID of an action from the Journey System (an action is spawned from an actionMap)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Details about the action map from the Journey System which triggered this action
         /// </summary>
         /// <value>Details about the action map from the Journey System which triggered this action</value>
         [DataMember(Name="actionMap", EmitDefaultValue=false)]
         public JourneyActionMap ActionMap { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyAction {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ActionMap: ").Append(ActionMap).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.ActionMap != null)
                     hash = hash * 59 + this.ActionMap.GetHashCode();
-                
+
                 return hash;
             }
         }

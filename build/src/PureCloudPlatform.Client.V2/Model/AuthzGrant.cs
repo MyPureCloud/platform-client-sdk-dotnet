@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuthzGrant :  IEquatable<AuthzGrant>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthzGrant" /> class.
         /// </summary>
@@ -57,40 +34,40 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets SubjectId
         /// </summary>
         [DataMember(Name="subjectId", EmitDefaultValue=false)]
         public string SubjectId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Division
         /// </summary>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public AuthzDivision Division { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Role
         /// </summary>
         [DataMember(Name="role", EmitDefaultValue=false)]
         public AuthzGrantRole Role { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="grantMadeAt", EmitDefaultValue=false)]
         public DateTime? GrantMadeAt { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -99,7 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuthzGrant {\n");
-            
+
             sb.Append("  SubjectId: ").Append(SubjectId).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Role: ").Append(Role).Append("\n");
@@ -177,19 +154,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SubjectId != null)
                     hash = hash * 59 + this.SubjectId.GetHashCode();
-                
+
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
-                
+
                 if (this.Role != null)
                     hash = hash * 59 + this.Role.GetHashCode();
-                
+
                 if (this.GrantMadeAt != null)
                     hash = hash * 59 + this.GrantMadeAt.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PublishForm :  IEquatable<PublishForm>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PublishForm" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PublishForm() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="PublishForm" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Is this form published
         /// </summary>
         /// <value>Is this form published</value>
         [DataMember(Name="published", EmitDefaultValue=false)]
         public bool? Published { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique Id for this version of this form
         /// </summary>
         /// <value>Unique Id for this version of this form</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PublishForm {\n");
-            
+
             sb.Append("  Published: ").Append(Published).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Published != null)
                     hash = hash * 59 + this.Published.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 return hash;
             }
         }

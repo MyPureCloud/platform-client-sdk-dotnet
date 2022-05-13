@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotExitAction :  IEquatable<TextBotExitAction>
     {
-        
-        
         /// <summary>
         /// The reason for the exit.
         /// </summary>
@@ -65,51 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "RecognitionFailure")]
             Recognitionfailure
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The reason for the exit.
         /// </summary>
         /// <value>The reason for the exit.</value>
         [DataMember(Name="reason", EmitDefaultValue=false)]
         public ReasonEnum? Reason { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotExitAction" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotExitAction() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotExitAction" /> class.
         /// </summary>
@@ -130,54 +95,54 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Extended information related to the reason, if available.
         /// </summary>
         /// <value>Extended information related to the reason, if available.</value>
         [DataMember(Name="reasonExtendedInfo", EmitDefaultValue=false)]
         public string ReasonExtendedInfo { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The active intent at the time of the exit.
         /// </summary>
         /// <value>The active intent at the time of the exit.</value>
         [DataMember(Name="activeIntent", EmitDefaultValue=false)]
         public string ActiveIntent { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Describes where in the Bot Flow the user was when the exit occurred.
         /// </summary>
         /// <value>Describes where in the Bot Flow the user was when the exit occurred.</value>
         [DataMember(Name="flowLocation", EmitDefaultValue=false)]
         public TextBotFlowLocation FlowLocation { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The output data for the bot flow.
         /// </summary>
         /// <value>The output data for the bot flow.</value>
         [DataMember(Name="outputData", EmitDefaultValue=false)]
         public TextBotInputOutputData OutputData { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of Flow Outcomes for the bot flow and their details.
         /// </summary>
         /// <value>The list of Flow Outcomes for the bot flow and their details.</value>
         [DataMember(Name="flowOutcomes", EmitDefaultValue=false)]
         public List<TextBotFlowOutcome> FlowOutcomes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -186,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotExitAction {\n");
-            
+
             sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("  ReasonExtendedInfo: ").Append(ReasonExtendedInfo).Append("\n");
             sb.Append("  ActiveIntent: ").Append(ActiveIntent).Append("\n");
@@ -276,25 +241,24 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Reason != null)
                     hash = hash * 59 + this.Reason.GetHashCode();
-                
+
                 if (this.ReasonExtendedInfo != null)
                     hash = hash * 59 + this.ReasonExtendedInfo.GetHashCode();
-                
+
                 if (this.ActiveIntent != null)
                     hash = hash * 59 + this.ActiveIntent.GetHashCode();
-                
+
                 if (this.FlowLocation != null)
                     hash = hash * 59 + this.FlowLocation.GetHashCode();
-                
+
                 if (this.OutputData != null)
                     hash = hash * 59 + this.OutputData.GetHashCode();
-                
+
                 if (this.FlowOutcomes != null)
                     hash = hash * 59 + this.FlowOutcomes.GetHashCode();
-                
+
                 return hash;
             }
         }

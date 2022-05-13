@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ChatSettings :  IEquatable<ChatSettings>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatSettings" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Retention time for messages in days
         /// </summary>
         /// <value>Retention time for messages in days</value>
         [DataMember(Name="messageRetentionPeriodDays", EmitDefaultValue=false)]
         public int? MessageRetentionPeriodDays { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ChatSettings {\n");
-            
+
             sb.Append("  MessageRetentionPeriodDays: ").Append(MessageRetentionPeriodDays).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MessageRetentionPeriodDays != null)
                     hash = hash * 59 + this.MessageRetentionPeriodDays.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ForecastSourceDayPointer :  IEquatable<ForecastSourceDayPointer>
     {
-        
-        
         /// <summary>
         /// The forecast day of week for this source data
         /// </summary>
@@ -83,40 +81,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EighthDay")]
             Eighthday
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The forecast day of week for this source data
         /// </summary>
         /// <value>The forecast day of week for this source data</value>
         [DataMember(Name="dayOfWeek", EmitDefaultValue=false)]
         public DayOfWeekEnum? DayOfWeek { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ForecastSourceDayPointer" /> class.
         /// </summary>
@@ -135,45 +105,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The relative weight to apply to this source data item for weighted averages
         /// </summary>
         /// <value>The relative weight to apply to this source data item for weighted averages</value>
         [DataMember(Name="weight", EmitDefaultValue=false)]
         public int? Weight { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The date this source data represents, in yyyy-MM-dd format
         /// </summary>
         /// <value>The date this source data represents, in yyyy-MM-dd format</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public string Date { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the source file this data came from if it originated from a data import
         /// </summary>
         /// <value>The name of the source file this data came from if it originated from a data import</value>
         [DataMember(Name="fileName", EmitDefaultValue=false)]
         public string FileName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The key to look up the forecast source data for this source day
         /// </summary>
         /// <value>The key to look up the forecast source data for this source day</value>
         [DataMember(Name="dataKey", EmitDefaultValue=false)]
         public string DataKey { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -182,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ForecastSourceDayPointer {\n");
-            
+
             sb.Append("  DayOfWeek: ").Append(DayOfWeek).Append("\n");
             sb.Append("  Weight: ").Append(Weight).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
@@ -266,22 +236,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DayOfWeek != null)
                     hash = hash * 59 + this.DayOfWeek.GetHashCode();
-                
+
                 if (this.Weight != null)
                     hash = hash * 59 + this.Weight.GetHashCode();
-                
+
                 if (this.Date != null)
                     hash = hash * 59 + this.Date.GetHashCode();
-                
+
                 if (this.FileName != null)
                     hash = hash * 59 + this.FileName.GetHashCode();
-                
+
                 if (this.DataKey != null)
                     hash = hash * 59 + this.DataKey.GetHashCode();
-                
+
                 return hash;
             }
         }

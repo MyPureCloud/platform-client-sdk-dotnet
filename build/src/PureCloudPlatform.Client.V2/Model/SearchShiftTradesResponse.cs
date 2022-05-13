@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SearchShiftTradesResponse :  IEquatable<SearchShiftTradesResponse>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchShiftTradesResponse" /> class.
         /// </summary>
@@ -36,16 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The shift trades that match the search criteria
         /// </summary>
         /// <value>The shift trades that match the search criteria</value>
         [DataMember(Name="trades", EmitDefaultValue=false)]
         public List<SearchShiftTradeResponse> Trades { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SearchShiftTradesResponse {\n");
-            
+
             sb.Append("  Trades: ").Append(Trades).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,10 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Trades != null)
                     hash = hash * 59 + this.Trades.GetHashCode();
-                
+
                 return hash;
             }
         }

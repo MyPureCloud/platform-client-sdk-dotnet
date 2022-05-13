@@ -18,59 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationMessageEventTopicErrorBody :  IEquatable<ConversationMessageEventTopicErrorBody>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationMessageEventTopicErrorBody" /> class.
         /// </summary>
@@ -99,87 +46,87 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EntityId
         /// </summary>
         [DataMember(Name="entityId", EmitDefaultValue=false)]
         public string EntityId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EntityName
         /// </summary>
         [DataMember(Name="entityName", EmitDefaultValue=false)]
         public string EntityName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessageWithParams
         /// </summary>
         [DataMember(Name="messageWithParams", EmitDefaultValue=false)]
         public string MessageWithParams { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets MessageParams
         /// </summary>
         [DataMember(Name="messageParams", EmitDefaultValue=false)]
         public Dictionary<string, string> MessageParams { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ContextId
         /// </summary>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Details
         /// </summary>
         [DataMember(Name="details", EmitDefaultValue=false)]
         public List<ConversationMessageEventTopicDetail> Details { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Errors
         /// </summary>
         [DataMember(Name="errors", EmitDefaultValue=false)]
         public List<ConversationMessageEventTopicErrorBody> Errors { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,7 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationMessageEventTopicErrorBody {\n");
-            
+
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -302,37 +249,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
+
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
-                
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
+
                 if (this.EntityId != null)
                     hash = hash * 59 + this.EntityId.GetHashCode();
-                
+
                 if (this.EntityName != null)
                     hash = hash * 59 + this.EntityName.GetHashCode();
-                
+
                 if (this.MessageWithParams != null)
                     hash = hash * 59 + this.MessageWithParams.GetHashCode();
-                
+
                 if (this.MessageParams != null)
                     hash = hash * 59 + this.MessageParams.GetHashCode();
-                
+
                 if (this.ContextId != null)
                     hash = hash * 59 + this.ContextId.GetHashCode();
-                
+
                 if (this.Details != null)
                     hash = hash * 59 + this.Details.GetHashCode();
-                
+
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,9 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SystemMessageObject :  IEquatable<SystemMessageObject>
     {
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemMessageObject" /> class.
         /// </summary>
@@ -29,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -38,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SystemMessageObject {\n");
-            
+
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,7 +89,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 return hash;
             }
         }

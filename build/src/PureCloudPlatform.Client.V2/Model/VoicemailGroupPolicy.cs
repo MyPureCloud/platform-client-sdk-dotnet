@@ -18,32 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class VoicemailGroupPolicy :  IEquatable<VoicemailGroupPolicy>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin.
         /// </summary>
@@ -77,41 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SEQUENTIAL")]
             Sequential
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin.
         /// </summary>
         /// <value>Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin.</value>
         [DataMember(Name="groupAlertType", EmitDefaultValue=false)]
         public GroupAlertTypeEnum? GroupAlertType { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailGroupPolicy" /> class.
         /// </summary>
@@ -138,89 +83,89 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The group associated with the policy
         /// </summary>
         /// <value>The group associated with the policy</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public Group Group { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether voicemail is enabled for the group
         /// </summary>
         /// <value>Whether voicemail is enabled for the group</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether email notifications are sent to group members when a new voicemail is received
         /// </summary>
         /// <value>Whether email notifications are sent to group members when a new voicemail is received</value>
         [DataMember(Name="sendEmailNotifications", EmitDefaultValue=false)]
         public bool? SendEmailNotifications { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Removes any PII from group emails. This is overridden by the analogous organization configuration value. This is always true if HIPAA is enabled or unknown for an organization.
         /// </summary>
         /// <value>Removes any PII from group emails. This is overridden by the analogous organization configuration value. This is always true if HIPAA is enabled or unknown for an organization.</value>
         [DataMember(Name="disableEmailPii", EmitDefaultValue=false)]
         public bool? DisableEmailPii { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// How many seconds to ring before rotating to the next member in the group
         /// </summary>
         /// <value>How many seconds to ring before rotating to the next member in the group</value>
         [DataMember(Name="rotateCallsSecs", EmitDefaultValue=false)]
         public int? RotateCallsSecs { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// How many rotations to go through
         /// </summary>
         /// <value>How many rotations to go through</value>
         [DataMember(Name="stopRingingAfterRotations", EmitDefaultValue=false)]
         public int? StopRingingAfterRotations { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A fallback group to contact when all of the members in this group did not answer the call.
         /// </summary>
         /// <value>A fallback group to contact when all of the members in this group did not answer the call.</value>
         [DataMember(Name="overflowGroupId", EmitDefaultValue=false)]
         public string OverflowGroupId { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The prompt to use when connecting a user to a Group Ring call
         /// </summary>
         /// <value>The prompt to use when connecting a user to a Group Ring call</value>
         [DataMember(Name="interactiveResponsePromptId", EmitDefaultValue=false)]
         public string InteractiveResponsePromptId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -229,7 +174,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VoicemailGroupPolicy {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
@@ -343,37 +288,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
-                
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
+
                 if (this.SendEmailNotifications != null)
                     hash = hash * 59 + this.SendEmailNotifications.GetHashCode();
-                
+
                 if (this.DisableEmailPii != null)
                     hash = hash * 59 + this.DisableEmailPii.GetHashCode();
-                
+
                 if (this.RotateCallsSecs != null)
                     hash = hash * 59 + this.RotateCallsSecs.GetHashCode();
-                
+
                 if (this.StopRingingAfterRotations != null)
                     hash = hash * 59 + this.StopRingingAfterRotations.GetHashCode();
-                
+
                 if (this.OverflowGroupId != null)
                     hash = hash * 59 + this.OverflowGroupId.GetHashCode();
-                
+
                 if (this.GroupAlertType != null)
                     hash = hash * 59 + this.GroupAlertType.GetHashCode();
-                
+
                 if (this.InteractiveResponsePromptId != null)
                     hash = hash * 59 + this.InteractiveResponsePromptId.GetHashCode();
-                
+
                 return hash;
             }
         }

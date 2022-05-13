@@ -18,30 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActionMapScheduleGroups :  IEquatable<ActionMapScheduleGroups>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionMapScheduleGroups" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ActionMapScheduleGroups() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionMapScheduleGroups" /> class.
         /// </summary>
-        /// <param name="ActionMapScheduleGroup">The actions map&#39;s associated schedule group. (required).</param>
-        /// <param name="EmergencyActionMapScheduleGroup">The action map&#39;s associated emergency schedule group..</param>
+        /// <param name="ActionMapScheduleGroup">The actions map's associated schedule group. (required).</param>
+        /// <param name="EmergencyActionMapScheduleGroup">The action map's associated emergency schedule group..</param>
         public ActionMapScheduleGroups(ActionMapScheduleGroup ActionMapScheduleGroup = null, ActionMapScheduleGroup EmergencyActionMapScheduleGroup = null)
         {
             this.ActionMapScheduleGroup = ActionMapScheduleGroup;
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
-        /// The actions map&#39;s associated schedule group.
+        /// The actions map's associated schedule group.
         /// </summary>
-        /// <value>The actions map&#39;s associated schedule group.</value>
+        /// <value>The actions map's associated schedule group.</value>
         [DataMember(Name="actionMapScheduleGroup", EmitDefaultValue=false)]
         public ActionMapScheduleGroup ActionMapScheduleGroup { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The action map&#39;s associated emergency schedule group.
+        /// The action map's associated emergency schedule group.
         /// </summary>
-        /// <value>The action map&#39;s associated emergency schedule group.</value>
+        /// <value>The action map's associated emergency schedule group.</value>
         [DataMember(Name="emergencyActionMapScheduleGroup", EmitDefaultValue=false)]
         public ActionMapScheduleGroup EmergencyActionMapScheduleGroup { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActionMapScheduleGroups {\n");
-            
+
             sb.Append("  ActionMapScheduleGroup: ").Append(ActionMapScheduleGroup).Append("\n");
             sb.Append("  EmergencyActionMapScheduleGroup: ").Append(EmergencyActionMapScheduleGroup).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ActionMapScheduleGroup != null)
                     hash = hash * 59 + this.ActionMapScheduleGroup.GetHashCode();
-                
+
                 if (this.EmergencyActionMapScheduleGroup != null)
                     hash = hash * 59 + this.EmergencyActionMapScheduleGroup.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class VoicemailRetentionPolicy :  IEquatable<VoicemailRetentionPolicy>
     {
-        
-        
         /// <summary>
         /// The retention policy type
         /// </summary>
@@ -53,25 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "IMMEDIATE_DELETE")]
             ImmediateDelete
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The retention policy type
         /// </summary>
         /// <value>The retention policy type</value>
         [DataMember(Name="voicemailRetentionPolicyType", EmitDefaultValue=false)]
         public VoicemailRetentionPolicyTypeEnum? VoicemailRetentionPolicyType { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailRetentionPolicy" /> class.
         /// </summary>
@@ -84,18 +69,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// If retentionPolicyType == RETAIN_WITH_TTL, then this value represents the number of days for the TTL
         /// </summary>
         /// <value>If retentionPolicyType == RETAIN_WITH_TTL, then this value represents the number of days for the TTL</value>
         [DataMember(Name="numberOfDays", EmitDefaultValue=false)]
         public int? NumberOfDays { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VoicemailRetentionPolicy {\n");
-            
+
             sb.Append("  VoicemailRetentionPolicyType: ").Append(VoicemailRetentionPolicyType).Append("\n");
             sb.Append("  NumberOfDays: ").Append(NumberOfDays).Append("\n");
             sb.Append("}\n");
@@ -170,13 +155,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.VoicemailRetentionPolicyType != null)
                     hash = hash * 59 + this.VoicemailRetentionPolicyType.GetHashCode();
-                
+
                 if (this.NumberOfDays != null)
                     hash = hash * 59 + this.NumberOfDays.GetHashCode();
-                
+
                 return hash;
             }
         }

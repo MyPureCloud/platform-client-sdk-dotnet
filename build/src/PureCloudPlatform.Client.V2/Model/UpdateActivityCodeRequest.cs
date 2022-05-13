@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UpdateActivityCodeRequest :  IEquatable<UpdateActivityCodeRequest>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The activity code's category. Attempting to change the category of a default activity code will return an error
         /// </summary>
@@ -92,63 +87,28 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unscheduled")]
             Unscheduled
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The activity code's category. Attempting to change the category of a default activity code will return an error
         /// </summary>
         /// <value>The activity code's category. Attempting to change the category of a default activity code will return an error</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateActivityCodeRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UpdateActivityCodeRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateActivityCodeRequest" /> class.
         /// </summary>
         /// <param name="Name">The name of the activity code.</param>
-        /// <param name="Category">The activity code&#39;s category. Attempting to change the category of a default activity code will return an error.</param>
+        /// <param name="Category">The activity code's category. Attempting to change the category of a default activity code will return an error.</param>
         /// <param name="LengthInMinutes">The default length of the activity in minutes.</param>
         /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity.</param>
         /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as work time.</param>
         /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request.</param>
-        /// <param name="Metadata">Version metadata for the associated business unit&#39;s list of activity codes (required).</param>
+        /// <param name="Metadata">Version metadata for the associated business unit's list of activity codes (required).</param>
         public UpdateActivityCodeRequest(string Name = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Name = Name;
@@ -161,63 +121,63 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The name of the activity code
         /// </summary>
         /// <value>The name of the activity code</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The default length of the activity in minutes
         /// </summary>
         /// <value>The default length of the activity in minutes</value>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether an agent is paid while performing this activity
         /// </summary>
         /// <value>Whether an agent is paid while performing this activity</value>
         [DataMember(Name="countsAsPaidTime", EmitDefaultValue=false)]
         public bool? CountsAsPaidTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether or not the activity should be counted as work time
         /// </summary>
         /// <value>Indicates whether or not the activity should be counted as work time</value>
         [DataMember(Name="countsAsWorkTime", EmitDefaultValue=false)]
         public bool? CountsAsWorkTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether an agent can select this activity code when creating or editing a time off request
         /// </summary>
         /// <value>Whether an agent can select this activity code when creating or editing a time off request</value>
         [DataMember(Name="agentTimeOffSelectable", EmitDefaultValue=false)]
         public bool? AgentTimeOffSelectable { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Version metadata for the associated business unit&#39;s list of activity codes
+        /// Version metadata for the associated business unit's list of activity codes
         /// </summary>
-        /// <value>Version metadata for the associated business unit&#39;s list of activity codes</value>
+        /// <value>Version metadata for the associated business unit's list of activity codes</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -226,7 +186,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UpdateActivityCodeRequest {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
@@ -322,28 +282,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
-                
+
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
-                
+
                 if (this.CountsAsPaidTime != null)
                     hash = hash * 59 + this.CountsAsPaidTime.GetHashCode();
-                
+
                 if (this.CountsAsWorkTime != null)
                     hash = hash * 59 + this.CountsAsWorkTime.GetHashCode();
-                
+
                 if (this.AgentTimeOffSelectable != null)
                     hash = hash * 59 + this.AgentTimeOffSelectable.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

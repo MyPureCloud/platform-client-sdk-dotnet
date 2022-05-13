@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimServiceProviderConfigSimpleFeature :  IEquatable<ScimServiceProviderConfigSimpleFeature>
     {
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfigSimpleFeature" /> class.
         /// </summary>
@@ -34,16 +26,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Indicates whether configuration options are supported.
         /// </summary>
         /// <value>Indicates whether configuration options are supported.</value>
         [DataMember(Name="supported", EmitDefaultValue=false)]
         public bool? Supported { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimServiceProviderConfigSimpleFeature {\n");
-            
+
             sb.Append("  Supported: ").Append(Supported).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -112,10 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Supported != null)
                     hash = hash * 59 + this.Supported.GetHashCode();
-                
+
                 return hash;
             }
         }

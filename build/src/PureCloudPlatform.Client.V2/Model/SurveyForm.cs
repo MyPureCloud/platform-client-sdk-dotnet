@@ -18,75 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SurveyForm :  IEquatable<SurveyForm>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyForm" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SurveyForm() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyForm" /> class.
         /// </summary>
@@ -107,115 +44,115 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The survey form name
         /// </summary>
         /// <value>The survey form name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Last modified date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Last modified date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Is this form published
         /// </summary>
         /// <value>Is this form published</value>
         [DataMember(Name="published", EmitDefaultValue=false)]
         public bool? Published { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Is this form disabled
         /// </summary>
         /// <value>Is this form disabled</value>
         [DataMember(Name="disabled", EmitDefaultValue=false)]
         public bool? Disabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Unique Id for all versions of this form
         /// </summary>
         /// <value>Unique Id for all versions of this form</value>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Language for survey viewer localization. Currently localized languages: da, de, en-US, es, fi, fr, it, ja, ko, nl, no, pl, pt-BR, sv, th, tr, zh-CH, zh-TW
         /// </summary>
         /// <value>Language for survey viewer localization. Currently localized languages: da, de, en-US, es, fi, fr, it, ja, ko, nl, no, pl, pt-BR, sv, th, tr, zh-CH, zh-TW</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Markdown text for the top of the form.
         /// </summary>
         /// <value>Markdown text for the top of the form.</value>
         [DataMember(Name="header", EmitDefaultValue=false)]
         public string Header { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Markdown text for the bottom of the form.
         /// </summary>
         /// <value>Markdown text for the bottom of the form.</value>
         [DataMember(Name="footer", EmitDefaultValue=false)]
         public string Footer { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A list of question groups
         /// </summary>
         /// <value>A list of question groups</value>
         [DataMember(Name="questionGroups", EmitDefaultValue=false)]
         public List<SurveyQuestionGroup> QuestionGroups { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of published version of this form
         /// </summary>
         /// <value>List of published version of this form</value>
         [DataMember(Name="publishedVersions", EmitDefaultValue=false)]
         public DomainEntityListingSurveyForm PublishedVersions { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -224,7 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SurveyForm {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
@@ -350,43 +287,42 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
+
                 if (this.Published != null)
                     hash = hash * 59 + this.Published.GetHashCode();
-                
+
                 if (this.Disabled != null)
                     hash = hash * 59 + this.Disabled.GetHashCode();
-                
+
                 if (this.ContextId != null)
                     hash = hash * 59 + this.ContextId.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.Header != null)
                     hash = hash * 59 + this.Header.GetHashCode();
-                
+
                 if (this.Footer != null)
                     hash = hash * 59 + this.Footer.GetHashCode();
-                
+
                 if (this.QuestionGroups != null)
                     hash = hash * 59 + this.QuestionGroups.GetHashCode();
-                
+
                 if (this.PublishedVersions != null)
                     hash = hash * 59 + this.PublishedVersions.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

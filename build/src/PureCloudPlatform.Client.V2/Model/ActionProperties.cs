@@ -18,34 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActionProperties :  IEquatable<ActionProperties>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionProperties" /> class.
         /// </summary>
@@ -64,52 +36,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Prompt message shown to user, used for webchat type action.
         /// </summary>
         /// <value>Prompt message shown to user, used for webchat type action.</value>
         [DataMember(Name="webchatPrompt", EmitDefaultValue=false)]
         public string WebchatPrompt { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Title shown to the user, used for webchat type action.
         /// </summary>
         /// <value>Title shown to the user, used for webchat type action.</value>
         [DataMember(Name="webchatTitleText", EmitDefaultValue=false)]
         public string WebchatTitleText { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Accept button text shown to user, used for webchat type action.
         /// </summary>
         /// <value>Accept button text shown to user, used for webchat type action.</value>
         [DataMember(Name="webchatAcceptText", EmitDefaultValue=false)]
         public string WebchatAcceptText { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Decline button text shown to user, used for webchat type action.
         /// </summary>
         /// <value>Decline button text shown to user, used for webchat type action.</value>
         [DataMember(Name="webchatDeclineText", EmitDefaultValue=false)]
         public string WebchatDeclineText { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Survey provided to the user, used for webchat type action.
         /// </summary>
         /// <value>Survey provided to the user, used for webchat type action.</value>
         [DataMember(Name="webchatSurvey", EmitDefaultValue=false)]
         public ActionSurvey WebchatSurvey { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActionProperties {\n");
-            
+
             sb.Append("  WebchatPrompt: ").Append(WebchatPrompt).Append("\n");
             sb.Append("  WebchatTitleText: ").Append(WebchatTitleText).Append("\n");
             sb.Append("  WebchatAcceptText: ").Append(WebchatAcceptText).Append("\n");
@@ -202,22 +174,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WebchatPrompt != null)
                     hash = hash * 59 + this.WebchatPrompt.GetHashCode();
-                
+
                 if (this.WebchatTitleText != null)
                     hash = hash * 59 + this.WebchatTitleText.GetHashCode();
-                
+
                 if (this.WebchatAcceptText != null)
                     hash = hash * 59 + this.WebchatAcceptText.GetHashCode();
-                
+
                 if (this.WebchatDeclineText != null)
                     hash = hash * 59 + this.WebchatDeclineText.GetHashCode();
-                
+
                 if (this.WebchatSurvey != null)
                     hash = hash * 59 + this.WebchatSurvey.GetHashCode();
-                
+
                 return hash;
             }
         }

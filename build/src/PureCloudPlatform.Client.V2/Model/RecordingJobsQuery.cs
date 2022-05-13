@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RecordingJobsQuery :  IEquatable<RecordingJobsQuery>
     {
-        
-        
         /// <summary>
         /// Operation to perform bulk task
         /// </summary>
@@ -47,46 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EXPORT")]
             Export
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Operation to perform bulk task
         /// </summary>
         /// <value>Operation to perform bulk task</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingJobsQuery" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected RecordingJobsQuery() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingJobsQuery" /> class.
         /// </summary>
@@ -105,45 +75,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// The date when the action will be performed. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date when the action will be performed. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="actionDate", EmitDefaultValue=false)]
         public DateTime? ActionDate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// IntegrationId to Access AWS S3 bucket for bulk recording exports. This field is required and used only for EXPORT action.
         /// </summary>
         /// <value>IntegrationId to Access AWS S3 bucket for bulk recording exports. This field is required and used only for EXPORT action.</value>
         [DataMember(Name="integrationId", EmitDefaultValue=false)]
         public string IntegrationId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Include Screen recordings for export action, default value = true 
         /// </summary>
         /// <value>Include Screen recordings for export action, default value = true </value>
         [DataMember(Name="includeScreenRecordings", EmitDefaultValue=false)]
         public bool? IncludeScreenRecordings { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability
         /// </summary>
         /// <value>Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability</value>
         [DataMember(Name="conversationQuery", EmitDefaultValue=false)]
         public AsyncConversationQuery ConversationQuery { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RecordingJobsQuery {\n");
-            
+
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ActionDate: ").Append(ActionDate).Append("\n");
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
@@ -236,22 +206,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 if (this.ActionDate != null)
                     hash = hash * 59 + this.ActionDate.GetHashCode();
-                
+
                 if (this.IntegrationId != null)
                     hash = hash * 59 + this.IntegrationId.GetHashCode();
-                
+
                 if (this.IncludeScreenRecordings != null)
                     hash = hash * 59 + this.IncludeScreenRecordings.GetHashCode();
-                
+
                 if (this.ConversationQuery != null)
                     hash = hash * 59 + this.ConversationQuery.GetHashCode();
-                
+
                 return hash;
             }
         }

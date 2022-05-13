@@ -18,23 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActivityCode :  IEquatable<ActivityCode>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The activity code's category.
         /// </summary>
@@ -104,73 +87,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unscheduled")]
             Unscheduled
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The activity code's category.
         /// </summary>
         /// <value>The activity code's category.</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityCode" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ActivityCode() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityCode" /> class.
         /// </summary>
         /// <param name="Name">The name of the activity code. Default activity codes will be created with an empty name.</param>
         /// <param name="IsActive">Whether this activity code is active or has been deleted.</param>
         /// <param name="IsDefault">Whether this is a default activity code.</param>
-        /// <param name="Category">The activity code&#39;s category..</param>
+        /// <param name="Category">The activity code's category..</param>
         /// <param name="LengthInMinutes">The default length of the activity in minutes.</param>
         /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity.</param>
         /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints.</param>
-        /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off..</param>
-        /// <param name="Metadata">Version metadata for the associated management unit&#39;s list of activity codes (required).</param>
+        /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off..</param>
+        /// <param name="Metadata">Version metadata for the associated management unit's list of activity codes (required).</param>
         public ActivityCode(string Name = null, bool? IsActive = null, bool? IsDefault = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Name = Name;
@@ -185,99 +125,99 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The name of the activity code. Default activity codes will be created with an empty name
         /// </summary>
         /// <value>The name of the activity code. Default activity codes will be created with an empty name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this activity code is active or has been deleted
         /// </summary>
         /// <value>Whether this activity code is active or has been deleted</value>
         [DataMember(Name="isActive", EmitDefaultValue=false)]
         public bool? IsActive { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether this is a default activity code
         /// </summary>
         /// <value>Whether this is a default activity code</value>
         [DataMember(Name="isDefault", EmitDefaultValue=false)]
         public bool? IsDefault { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// The default length of the activity in minutes
         /// </summary>
         /// <value>The default length of the activity in minutes</value>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Whether an agent is paid while performing this activity
         /// </summary>
         /// <value>Whether an agent is paid while performing this activity</value>
         [DataMember(Name="countsAsPaidTime", EmitDefaultValue=false)]
         public bool? CountsAsPaidTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints
         /// </summary>
         /// <value>Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints</value>
         [DataMember(Name="countsAsWorkTime", EmitDefaultValue=false)]
         public bool? CountsAsWorkTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off.
+        /// Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off.
         /// </summary>
-        /// <value>Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off.</value>
+        /// <value>Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off.</value>
         [DataMember(Name="agentTimeOffSelectable", EmitDefaultValue=false)]
         public bool? AgentTimeOffSelectable { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Version metadata for the associated management unit&#39;s list of activity codes
+        /// Version metadata for the associated management unit's list of activity codes
         /// </summary>
-        /// <value>Version metadata for the associated management unit&#39;s list of activity codes</value>
+        /// <value>Version metadata for the associated management unit's list of activity codes</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -286,7 +226,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActivityCode {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -406,40 +346,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.IsActive != null)
                     hash = hash * 59 + this.IsActive.GetHashCode();
-                
+
                 if (this.IsDefault != null)
                     hash = hash * 59 + this.IsDefault.GetHashCode();
-                
+
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
-                
+
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
-                
+
                 if (this.CountsAsPaidTime != null)
                     hash = hash * 59 + this.CountsAsPaidTime.GetHashCode();
-                
+
                 if (this.CountsAsWorkTime != null)
                     hash = hash * 59 + this.CountsAsWorkTime.GetHashCode();
-                
+
                 if (this.AgentTimeOffSelectable != null)
                     hash = hash * 59 + this.AgentTimeOffSelectable.GetHashCode();
-                
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
+
                 return hash;
             }
         }

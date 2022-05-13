@@ -18,64 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResourcePermissionPolicy :  IEquatable<ResourcePermissionPolicy>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResourcePermissionPolicy" /> class.
         /// </summary>
@@ -106,95 +48,95 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets EntityName
         /// </summary>
         [DataMember(Name="entityName", EmitDefaultValue=false)]
         public string EntityName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PolicyName
         /// </summary>
         [DataMember(Name="policyName", EmitDefaultValue=false)]
         public string PolicyName { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets PolicyDescription
         /// </summary>
         [DataMember(Name="policyDescription", EmitDefaultValue=false)]
         public string PolicyDescription { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActionSetKey
         /// </summary>
         [DataMember(Name="actionSetKey", EmitDefaultValue=false)]
         public string ActionSetKey { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets AllowConditions
         /// </summary>
         [DataMember(Name="allowConditions", EmitDefaultValue=false)]
         public bool? AllowConditions { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ResourceConditionNode
         /// </summary>
         [DataMember(Name="resourceConditionNode", EmitDefaultValue=false)]
         public ResourceConditionNode ResourceConditionNode { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets NamedResources
         /// </summary>
         [DataMember(Name="namedResources", EmitDefaultValue=false)]
         public List<string> NamedResources { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ResourceCondition
         /// </summary>
         [DataMember(Name="resourceCondition", EmitDefaultValue=false)]
         public string ResourceCondition { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ActionSet
         /// </summary>
         [DataMember(Name="actionSet", EmitDefaultValue=false)]
         public List<string> ActionSet { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -203,7 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResourcePermissionPolicy {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
@@ -323,40 +265,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
+
                 if (this.EntityName != null)
                     hash = hash * 59 + this.EntityName.GetHashCode();
-                
+
                 if (this.PolicyName != null)
                     hash = hash * 59 + this.PolicyName.GetHashCode();
-                
+
                 if (this.PolicyDescription != null)
                     hash = hash * 59 + this.PolicyDescription.GetHashCode();
-                
+
                 if (this.ActionSetKey != null)
                     hash = hash * 59 + this.ActionSetKey.GetHashCode();
-                
+
                 if (this.AllowConditions != null)
                     hash = hash * 59 + this.AllowConditions.GetHashCode();
-                
+
                 if (this.ResourceConditionNode != null)
                     hash = hash * 59 + this.ResourceConditionNode.GetHashCode();
-                
+
                 if (this.NamedResources != null)
                     hash = hash * 59 + this.NamedResources.GetHashCode();
-                
+
                 if (this.ResourceCondition != null)
                     hash = hash * 59 + this.ResourceCondition.GetHashCode();
-                
+
                 if (this.ActionSet != null)
                     hash = hash * 59 + this.ActionSet.GetHashCode();
-                
+
                 return hash;
             }
         }

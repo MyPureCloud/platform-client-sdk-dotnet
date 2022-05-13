@@ -18,69 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RecordingMessagingMessage :  IEquatable<RecordingMessagingMessage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingMessagingMessage" /> class.
         /// </summary>
@@ -113,115 +50,115 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The message sender session id.
         /// </summary>
         /// <value>The message sender session id.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public string From { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user who sent this message.
         /// </summary>
         /// <value>The user who sent this message.</value>
         [DataMember(Name="fromUser", EmitDefaultValue=false)]
         public User FromUser { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The PureCloud external contact sender details.
         /// </summary>
         /// <value>The PureCloud external contact sender details.</value>
         [DataMember(Name="fromExternalContact", EmitDefaultValue=false)]
         public ExternalContact FromExternalContact { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The message recipient.
         /// </summary>
         /// <value>The message recipient.</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public string To { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// A globally unique identifier for this communication.
         /// </summary>
         /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The content of this message.
         /// </summary>
         /// <value>The content of this message.</value>
         [DataMember(Name="messageText", EmitDefaultValue=false)]
         public string MessageText { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of media objects attached  with this message.
         /// </summary>
         /// <value>List of media objects attached  with this message.</value>
         [DataMember(Name="messageMediaAttachments", EmitDefaultValue=false)]
         public List<MessageMediaAttachment> MessageMediaAttachments { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of message stickers attached with this message.
         /// </summary>
         /// <value>List of message stickers attached with this message.</value>
         [DataMember(Name="messageStickerAttachments", EmitDefaultValue=false)]
         public List<MessageStickerAttachment> MessageStickerAttachments { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of quick reply options offered with this message.
         /// </summary>
         /// <value>List of quick reply options offered with this message.</value>
         [DataMember(Name="quickReplies", EmitDefaultValue=false)]
         public List<QuickReply> QuickReplies { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Button Response selected by user for this message.
         /// </summary>
         /// <value>Button Response selected by user for this message.</value>
         [DataMember(Name="buttonResponse", EmitDefaultValue=false)]
         public ButtonResponse ButtonResponse { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Ephemeral story content.
         /// </summary>
         /// <value>Ephemeral story content.</value>
         [DataMember(Name="story", EmitDefaultValue=false)]
         public RecordingContentStory Story { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -230,7 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RecordingMessagingMessage {\n");
-            
+
             sb.Append("  From: ").Append(From).Append("\n");
             sb.Append("  FromUser: ").Append(FromUser).Append("\n");
             sb.Append("  FromExternalContact: ").Append(FromExternalContact).Append("\n");
@@ -356,43 +293,42 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
-                
+
                 if (this.FromUser != null)
                     hash = hash * 59 + this.FromUser.GetHashCode();
-                
+
                 if (this.FromExternalContact != null)
                     hash = hash * 59 + this.FromExternalContact.GetHashCode();
-                
+
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
-                
+
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
+
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.MessageText != null)
                     hash = hash * 59 + this.MessageText.GetHashCode();
-                
+
                 if (this.MessageMediaAttachments != null)
                     hash = hash * 59 + this.MessageMediaAttachments.GetHashCode();
-                
+
                 if (this.MessageStickerAttachments != null)
                     hash = hash * 59 + this.MessageStickerAttachments.GetHashCode();
-                
+
                 if (this.QuickReplies != null)
                     hash = hash * 59 + this.QuickReplies.GetHashCode();
-                
+
                 if (this.ButtonResponse != null)
                     hash = hash * 59 + this.ButtonResponse.GetHashCode();
-                
+
                 if (this.Story != null)
                     hash = hash * 59 + this.Story.GetHashCode();
-                
+
                 return hash;
             }
         }

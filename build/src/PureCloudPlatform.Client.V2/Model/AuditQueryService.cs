@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuditQueryService :  IEquatable<AuditQueryService>
     {
-        
-        
         /// <summary>
         /// Name of the Service
         /// </summary>
@@ -257,25 +255,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NumberPurchasing")]
             Numberpurchasing
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Name of the Service
         /// </summary>
         /// <value>Name of the Service</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public NameEnum? Name { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditQueryService" /> class.
         /// </summary>
@@ -288,18 +273,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// List of Entities
         /// </summary>
         /// <value>List of Entities</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<AuditQueryEntity> Entities { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -308,7 +293,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuditQueryService {\n");
-            
+
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("}\n");
@@ -374,13 +359,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
+
                 return hash;
             }
         }

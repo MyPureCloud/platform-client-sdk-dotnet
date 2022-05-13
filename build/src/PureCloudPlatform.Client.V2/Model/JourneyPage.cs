@@ -18,78 +18,25 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JourneyPage :  IEquatable<JourneyPage>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyPage" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected JourneyPage() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyPage" /> class.
         /// </summary>
         /// <param name="Url">The page URL. (required).</param>
         /// <param name="Title">Title of the page..</param>
-        /// <param name="Domain">Domain of the page&#39;s URL. (required).</param>
-        /// <param name="Fragment">Fragment or hash of the page&#39;s URL..</param>
-        /// <param name="Hostname">Hostname of the page&#39;s URL. (required).</param>
-        /// <param name="Keywords">Keywords from the HTML {@code &lt;meta&gt;} tag of the page..</param>
-        /// <param name="Lang">ISO 639-1 language code for the page as defined in the {@code &lt;html&gt;} tag..</param>
+        /// <param name="Domain">Domain of the page's URL. (required).</param>
+        /// <param name="Fragment">Fragment or hash of the page's URL..</param>
+        /// <param name="Hostname">Hostname of the page's URL. (required).</param>
+        /// <param name="Keywords">Keywords from the HTML {@code <meta>} tag of the page..</param>
+        /// <param name="Lang">ISO 639-1 language code for the page as defined in the {@code <html>} tag..</param>
         /// <param name="Pathname">Path name of the page for the event. (required).</param>
         /// <param name="QueryString">Query string that is passed to the page in the current event..</param>
-        /// <param name="Breadcrumb">Hierarchy of the current page in relation to the website&#39;s structure..</param>
+        /// <param name="Breadcrumb">Hierarchy of the current page in relation to the website's structure..</param>
         public JourneyPage(string Url = null, string Title = null, string Domain = null, string Fragment = null, string Hostname = null, string Keywords = null, string Lang = null, string Pathname = null, string QueryString = null, List<string> Breadcrumb = null)
         {
             this.Url = Url;
@@ -105,97 +52,97 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The page URL.
         /// </summary>
         /// <value>The page URL.</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Title of the page.
         /// </summary>
         /// <value>Title of the page.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Domain of the page&#39;s URL.
+        /// Domain of the page's URL.
         /// </summary>
-        /// <value>Domain of the page&#39;s URL.</value>
+        /// <value>Domain of the page's URL.</value>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Fragment or hash of the page&#39;s URL.
+        /// Fragment or hash of the page's URL.
         /// </summary>
-        /// <value>Fragment or hash of the page&#39;s URL.</value>
+        /// <value>Fragment or hash of the page's URL.</value>
         [DataMember(Name="fragment", EmitDefaultValue=false)]
         public string Fragment { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Hostname of the page&#39;s URL.
+        /// Hostname of the page's URL.
         /// </summary>
-        /// <value>Hostname of the page&#39;s URL.</value>
+        /// <value>Hostname of the page's URL.</value>
         [DataMember(Name="hostname", EmitDefaultValue=false)]
         public string Hostname { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Keywords from the HTML {@code &lt;meta&gt;} tag of the page.
+        /// Keywords from the HTML {@code <meta>} tag of the page.
         /// </summary>
-        /// <value>Keywords from the HTML {@code &lt;meta&gt;} tag of the page.</value>
+        /// <value>Keywords from the HTML {@code <meta>} tag of the page.</value>
         [DataMember(Name="keywords", EmitDefaultValue=false)]
         public string Keywords { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// ISO 639-1 language code for the page as defined in the {@code &lt;html&gt;} tag.
+        /// ISO 639-1 language code for the page as defined in the {@code <html>} tag.
         /// </summary>
-        /// <value>ISO 639-1 language code for the page as defined in the {@code &lt;html&gt;} tag.</value>
+        /// <value>ISO 639-1 language code for the page as defined in the {@code <html>} tag.</value>
         [DataMember(Name="lang", EmitDefaultValue=false)]
         public string Lang { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Path name of the page for the event.
         /// </summary>
         /// <value>Path name of the page for the event.</value>
         [DataMember(Name="pathname", EmitDefaultValue=false)]
         public string Pathname { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Query string that is passed to the page in the current event.
         /// </summary>
         /// <value>Query string that is passed to the page in the current event.</value>
         [DataMember(Name="queryString", EmitDefaultValue=false)]
         public string QueryString { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Hierarchy of the current page in relation to the website&#39;s structure.
+        /// Hierarchy of the current page in relation to the website's structure.
         /// </summary>
-        /// <value>Hierarchy of the current page in relation to the website&#39;s structure.</value>
+        /// <value>Hierarchy of the current page in relation to the website's structure.</value>
         [DataMember(Name="breadcrumb", EmitDefaultValue=false)]
         public List<string> Breadcrumb { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -204,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JourneyPage {\n");
-            
+
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
@@ -318,37 +265,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
+
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
+
                 if (this.Fragment != null)
                     hash = hash * 59 + this.Fragment.GetHashCode();
-                
+
                 if (this.Hostname != null)
                     hash = hash * 59 + this.Hostname.GetHashCode();
-                
+
                 if (this.Keywords != null)
                     hash = hash * 59 + this.Keywords.GetHashCode();
-                
+
                 if (this.Lang != null)
                     hash = hash * 59 + this.Lang.GetHashCode();
-                
+
                 if (this.Pathname != null)
                     hash = hash * 59 + this.Pathname.GetHashCode();
-                
+
                 if (this.QueryString != null)
                     hash = hash * 59 + this.QueryString.GetHashCode();
-                
+
                 if (this.Breadcrumb != null)
                     hash = hash * 59 + this.Breadcrumb.GetHashCode();
-                
+
                 return hash;
             }
         }

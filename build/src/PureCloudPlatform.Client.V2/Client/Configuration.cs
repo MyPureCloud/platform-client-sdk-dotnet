@@ -206,7 +206,7 @@ namespace PureCloudPlatform.Client.V2.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "144.1.0";
+        public const string Version = "145.0.0";
 
         /// <summary>
         /// Gets or sets the default Configuration.
@@ -465,15 +465,13 @@ namespace PureCloudPlatform.Client.V2.Client
         public static String ToDebugReport()
         {
             String report = "C# SDK (PureCloudPlatform.Client.V2) Debug Report:\n";
-            
             report += "    OS: " + Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + Assembly
                      .GetExecutingAssembly()
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
-            
             report += "    Version of the API: v2\n";
-            report += "    SDK Package Version: 144.1.0\n";
+            report += "    SDK Package Version: 145.0.0\n";
 
             return report;
         }

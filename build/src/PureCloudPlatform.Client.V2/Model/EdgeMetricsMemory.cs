@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeMetricsMemory :  IEquatable<EdgeMetricsMemory>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsMemory" /> class.
         /// </summary>
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Available memory in bytes.
         /// </summary>
         /// <value>Available memory in bytes.</value>
         [DataMember(Name="availableBytes", EmitDefaultValue=false)]
         public double? AvailableBytes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Type of memory. Virtual or physical.
         /// </summary>
         /// <value>Type of memory. Virtual or physical.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Total memory in bytes.
         /// </summary>
         /// <value>Total memory in bytes.</value>
         [DataMember(Name="totalBytes", EmitDefaultValue=false)]
         public double? TotalBytes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeMetricsMemory {\n");
-            
+
             sb.Append("  AvailableBytes: ").Append(AvailableBytes).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  TotalBytes: ").Append(TotalBytes).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AvailableBytes != null)
                     hash = hash * 59 + this.AvailableBytes.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.TotalBytes != null)
                     hash = hash * 59 + this.TotalBytes.GetHashCode();
-                
+
                 return hash;
             }
         }

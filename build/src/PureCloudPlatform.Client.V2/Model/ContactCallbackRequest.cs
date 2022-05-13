@@ -18,40 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactCallbackRequest :  IEquatable<ContactCallbackRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactCallbackRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ContactCallbackRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactCallbackRequest" /> class.
         /// </summary>
@@ -59,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactListId">Contact list identifier (required).</param>
         /// <param name="ContactId">Contact identifier (required).</param>
         /// <param name="PhoneColumn">Name of the phone column containing the number to be called (required).</param>
-        /// <param name="Schedule">The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\&quot;, example = \&quot;2016-01-02T16:59:59\&quot; (required).</param>
+        /// <param name="Schedule">The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\", example = \"2016-01-02T16:59:59\" (required).</param>
         public ContactCallbackRequest(string CampaignId = null, string ContactListId = null, string ContactId = null, string PhoneColumn = null, string Schedule = null)
         {
             this.CampaignId = CampaignId;
@@ -70,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Campaign identifier
         /// </summary>
         /// <value>Campaign identifier</value>
         [DataMember(Name="campaignId", EmitDefaultValue=false)]
         public string CampaignId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Contact list identifier
         /// </summary>
         /// <value>Contact list identifier</value>
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Contact identifier
         /// </summary>
         /// <value>Contact identifier</value>
         [DataMember(Name="contactId", EmitDefaultValue=false)]
         public string ContactId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Name of the phone column containing the number to be called
         /// </summary>
         /// <value>Name of the phone column containing the number to be called</value>
         [DataMember(Name="phoneColumn", EmitDefaultValue=false)]
         public string PhoneColumn { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\&quot;, example = \&quot;2016-01-02T16:59:59\&quot;
+        /// The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\", example = \"2016-01-02T16:59:59\"
         /// </summary>
-        /// <value>The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\&quot;, example = \&quot;2016-01-02T16:59:59\&quot;</value>
+        /// <value>The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\", example = \"2016-01-02T16:59:59\"</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public string Schedule { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactCallbackRequest {\n");
-            
+
             sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
             sb.Append("  ContactId: ").Append(ContactId).Append("\n");
@@ -208,22 +180,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CampaignId != null)
                     hash = hash * 59 + this.CampaignId.GetHashCode();
-                
+
                 if (this.ContactListId != null)
                     hash = hash * 59 + this.ContactListId.GetHashCode();
-                
+
                 if (this.ContactId != null)
                     hash = hash * 59 + this.ContactId.GetHashCode();
-                
+
                 if (this.PhoneColumn != null)
                     hash = hash * 59 + this.PhoneColumn.GetHashCode();
-                
+
                 if (this.Schedule != null)
                     hash = hash * 59 + this.Schedule.GetHashCode();
-                
+
                 return hash;
             }
         }

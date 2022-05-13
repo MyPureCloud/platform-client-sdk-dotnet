@@ -18,11 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TextBotPromptSegment :  IEquatable<TextBotPromptSegment>
     {
-        
-        
-        
-        
-        
         /// <summary>
         /// The segment type which describes any semantics about the 'text' and also indicates which other field might include additional relevant info.
         /// </summary>
@@ -50,45 +45,25 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "RichMedia")]
             Richmedia
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The segment type which describes any semantics about the 'text' and also indicates which other field might include additional relevant info.
         /// </summary>
         /// <value>The segment type which describes any semantics about the 'text' and also indicates which other field might include additional relevant info.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotPromptSegment" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TextBotPromptSegment() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TextBotPromptSegment" /> class.
         /// </summary>
         /// <param name="Text">The text of this prompt segment. (required).</param>
-        /// <param name="Type">The segment type which describes any semantics about the &#39;text&#39; and also indicates which other field might include additional relevant info. (required).</param>
+        /// <param name="Type">The segment type which describes any semantics about the 'text' and also indicates which other field might include additional relevant info. (required).</param>
         /// <param name="Format">Additional details describing the segment’s contents, which the client should honour where possible..</param>
-        /// <param name="Content">Details to display Rich Media content. This is only populated when the segment &#39;type&#39; is &#39;Rich Media&#39;..</param>
+        /// <param name="Content">Details to display Rich Media content. This is only populated when the segment 'type' is 'Rich Media'..</param>
         public TextBotPromptSegment(string Text = null, TypeEnum? Type = null, Format Format = null, List<MessageContent> Content = null)
         {
             this.Text = Text;
@@ -98,36 +73,36 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The text of this prompt segment.
         /// </summary>
         /// <value>The text of this prompt segment.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
-        
-        
+
+
+
+
+
         /// <summary>
         /// Additional details describing the segment’s contents, which the client should honour where possible.
         /// </summary>
         /// <value>Additional details describing the segment’s contents, which the client should honour where possible.</value>
         [DataMember(Name="format", EmitDefaultValue=false)]
         public Format Format { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// Details to display Rich Media content. This is only populated when the segment &#39;type&#39; is &#39;Rich Media&#39;.
+        /// Details to display Rich Media content. This is only populated when the segment 'type' is 'Rich Media'.
         /// </summary>
-        /// <value>Details to display Rich Media content. This is only populated when the segment &#39;type&#39; is &#39;Rich Media&#39;.</value>
+        /// <value>Details to display Rich Media content. This is only populated when the segment 'type' is 'Rich Media'.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public List<MessageContent> Content { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -136,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextBotPromptSegment {\n");
-            
+
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Format: ").Append(Format).Append("\n");
@@ -214,19 +189,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 if (this.Format != null)
                     hash = hash * 59 + this.Format.GetHashCode();
-                
+
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScimUserExtensions :  IEquatable<ScimUserExtensions>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimUserExtensions" /> class.
         /// </summary>
         /// <param name="RoutingSkills">The list of routing skills assigned to a user. Maximum 50 skills..</param>
         /// <param name="RoutingLanguages">The list of routing languages assigned to a user. Maximum 50 languages..</param>
-        /// <param name="ExternalIds">The list of external identifiers assigned to user. Always includes an immutable SCIM authority prefixed with \&quot;x-pc:scimv2:v1\&quot;. ExternalIds are searchable with complex filter query parameter using &#39;authority&#39; and &#39;value&#39;, e.g., filter=urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds[authority eq \&quot;matchAuthName\&quot; and value eq \&quot;matchingExternalKeyValue\&quot;]..</param>
+        /// <param name="ExternalIds">The list of external identifiers assigned to user. Always includes an immutable SCIM authority prefixed with \"x-pc:scimv2:v1\". ExternalIds are searchable with complex filter query parameter using 'authority' and 'value', e.g., filter=urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds[authority eq \"matchAuthName\" and value eq \"matchingExternalKeyValue\"]..</param>
         public ScimUserExtensions(List<ScimUserRoutingSkill> RoutingSkills = null, List<ScimUserRoutingLanguage> RoutingLanguages = null, List<ScimGenesysUserExternalId> ExternalIds = null)
         {
             this.RoutingSkills = RoutingSkills;
@@ -50,34 +32,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of routing skills assigned to a user. Maximum 50 skills.
         /// </summary>
         /// <value>The list of routing skills assigned to a user. Maximum 50 skills.</value>
         [DataMember(Name="routingSkills", EmitDefaultValue=false)]
         public List<ScimUserRoutingSkill> RoutingSkills { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of routing languages assigned to a user. Maximum 50 languages.
         /// </summary>
         /// <value>The list of routing languages assigned to a user. Maximum 50 languages.</value>
         [DataMember(Name="routingLanguages", EmitDefaultValue=false)]
         public List<ScimUserRoutingLanguage> RoutingLanguages { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// The list of external identifiers assigned to user. Always includes an immutable SCIM authority prefixed with \&quot;x-pc:scimv2:v1\&quot;. ExternalIds are searchable with complex filter query parameter using &#39;authority&#39; and &#39;value&#39;, e.g., filter=urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds[authority eq \&quot;matchAuthName\&quot; and value eq \&quot;matchingExternalKeyValue\&quot;].
+        /// The list of external identifiers assigned to user. Always includes an immutable SCIM authority prefixed with \"x-pc:scimv2:v1\". ExternalIds are searchable with complex filter query parameter using 'authority' and 'value', e.g., filter=urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds[authority eq \"matchAuthName\" and value eq \"matchingExternalKeyValue\"].
         /// </summary>
-        /// <value>The list of external identifiers assigned to user. Always includes an immutable SCIM authority prefixed with \&quot;x-pc:scimv2:v1\&quot;. ExternalIds are searchable with complex filter query parameter using &#39;authority&#39; and &#39;value&#39;, e.g., filter=urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds[authority eq \&quot;matchAuthName\&quot; and value eq \&quot;matchingExternalKeyValue\&quot;].</value>
+        /// <value>The list of external identifiers assigned to user. Always includes an immutable SCIM authority prefixed with \"x-pc:scimv2:v1\". ExternalIds are searchable with complex filter query parameter using 'authority' and 'value', e.g., filter=urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds[authority eq \"matchAuthName\" and value eq \"matchingExternalKeyValue\"].</value>
         [DataMember(Name="externalIds", EmitDefaultValue=false)]
         public List<ScimGenesysUserExternalId> ExternalIds { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScimUserExtensions {\n");
-            
+
             sb.Append("  RoutingSkills: ").Append(RoutingSkills).Append("\n");
             sb.Append("  RoutingLanguages: ").Append(RoutingLanguages).Append("\n");
             sb.Append("  ExternalIds: ").Append(ExternalIds).Append("\n");
@@ -158,16 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RoutingSkills != null)
                     hash = hash * 59 + this.RoutingSkills.GetHashCode();
-                
+
                 if (this.RoutingLanguages != null)
                     hash = hash * 59 + this.RoutingLanguages.GetHashCode();
-                
+
                 if (this.ExternalIds != null)
                     hash = hash * 59 + this.ExternalIds.GetHashCode();
-                
+
                 return hash;
             }
         }

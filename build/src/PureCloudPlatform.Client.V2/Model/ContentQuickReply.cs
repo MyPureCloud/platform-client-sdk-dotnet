@@ -18,20 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContentQuickReply :  IEquatable<ContentQuickReply>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Specifies the type of action that is triggered upon clicking the quick reply.
         /// </summary>
@@ -53,34 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Message")]
             Message
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Specifies the type of action that is triggered upon clicking the quick reply.
         /// </summary>
         /// <value>Specifies the type of action that is triggered upon clicking the quick reply.</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentQuickReply" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ContentQuickReply() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentQuickReply" /> class.
         /// </summary>
@@ -99,45 +69,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A unique ID assigned to the quick reply (Deprecated).
         /// </summary>
         /// <value>A unique ID assigned to the quick reply (Deprecated).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply.
         /// </summary>
         /// <value>Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response.
         /// </summary>
         /// <value>Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response.</value>
         [DataMember(Name="payload", EmitDefaultValue=false)]
         public string Payload { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// URL of an image associated with the quick reply.
         /// </summary>
         /// <value>URL of an image associated with the quick reply.</value>
         [DataMember(Name="image", EmitDefaultValue=false)]
         public string Image { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContentQuickReply {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Payload: ").Append(Payload).Append("\n");
@@ -230,22 +200,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
+
                 if (this.Payload != null)
                     hash = hash * 59 + this.Payload.GetHashCode();
-                
+
                 if (this.Image != null)
                     hash = hash * 59 + this.Image.GetHashCode();
-                
+
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
+
                 return hash;
             }
         }

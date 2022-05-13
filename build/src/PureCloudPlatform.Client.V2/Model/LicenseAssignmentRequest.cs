@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LicenseAssignmentRequest :  IEquatable<LicenseAssignmentRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LicenseAssignmentRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LicenseAssignmentRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LicenseAssignmentRequest" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The id of the license to assign/unassign.
         /// </summary>
         /// <value>The id of the license to assign/unassign.</value>
         [DataMember(Name="licenseId", EmitDefaultValue=false)]
         public string LicenseId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ids of users to assign this license to.
         /// </summary>
         /// <value>The ids of users to assign this license to.</value>
         [DataMember(Name="userIdsAdd", EmitDefaultValue=false)]
         public List<string> UserIdsAdd { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ids of users to unassign this license from.
         /// </summary>
         /// <value>The ids of users to unassign this license from.</value>
         [DataMember(Name="userIdsRemove", EmitDefaultValue=false)]
         public List<string> UserIdsRemove { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LicenseAssignmentRequest {\n");
-            
+
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
             sb.Append("  UserIdsAdd: ").Append(UserIdsAdd).Append("\n");
             sb.Append("  UserIdsRemove: ").Append(UserIdsRemove).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LicenseId != null)
                     hash = hash * 59 + this.LicenseId.GetHashCode();
-                
+
                 if (this.UserIdsAdd != null)
                     hash = hash * 59 + this.UserIdsAdd.GetHashCode();
-                
+
                 if (this.UserIdsRemove != null)
                     hash = hash * 59 + this.UserIdsRemove.GetHashCode();
-                
+
                 return hash;
             }
         }

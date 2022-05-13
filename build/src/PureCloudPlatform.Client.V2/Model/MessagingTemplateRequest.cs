@@ -18,24 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MessagingTemplateRequest :  IEquatable<MessagingTemplateRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagingTemplateRequest" /> class.
         /// </summary>
         /// <param name="ResponseId">A Response Management response identifier for a messaging template defined response.</param>
-        /// <param name="Parameters">A list of Response Management response substitutions for the response&#39;s messaging template.</param>
+        /// <param name="Parameters">A list of Response Management response substitutions for the response's messaging template.</param>
         public MessagingTemplateRequest(string ResponseId = null, List<TemplateParameter> Parameters = null)
         {
             this.ResponseId = ResponseId;
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// A Response Management response identifier for a messaging template defined response
         /// </summary>
         /// <value>A Response Management response identifier for a messaging template defined response</value>
         [DataMember(Name="responseId", EmitDefaultValue=false)]
         public string ResponseId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
-        /// A list of Response Management response substitutions for the response&#39;s messaging template
+        /// A list of Response Management response substitutions for the response's messaging template
         /// </summary>
-        /// <value>A list of Response Management response substitutions for the response&#39;s messaging template</value>
+        /// <value>A list of Response Management response substitutions for the response's messaging template</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public List<TemplateParameter> Parameters { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MessagingTemplateRequest {\n");
-            
+
             sb.Append("  ResponseId: ").Append(ResponseId).Append("\n");
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ResponseId != null)
                     hash = hash * 59 + this.ResponseId.GetHashCode();
-                
+
                 if (this.Parameters != null)
                     hash = hash * 59 + this.Parameters.GetHashCode();
-                
+
                 return hash;
             }
         }

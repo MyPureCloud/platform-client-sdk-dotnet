@@ -18,24 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationUserDisposition :  IEquatable<ConversationUserDisposition>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationUserDisposition" /> class.
         /// </summary>
@@ -48,34 +30,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// User-defined wrap-up code for the conversation.
         /// </summary>
         /// <value>User-defined wrap-up code for the conversation.</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Text entered by the user to describe the call or disposition.
         /// </summary>
         /// <value>Text entered by the user to describe the call or disposition.</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The user that wrapped up the conversation.
         /// </summary>
         /// <value>The user that wrapped up the conversation.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public AddressableEntityRef User { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationUserDisposition {\n");
-            
+
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -156,16 +138,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
-                
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
+
                 return hash;
             }
         }

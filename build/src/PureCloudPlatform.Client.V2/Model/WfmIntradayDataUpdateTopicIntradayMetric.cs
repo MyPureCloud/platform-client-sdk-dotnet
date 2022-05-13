@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmIntradayDataUpdateTopicIntradayMetric :  IEquatable<WfmIntradayDataUpdateTopicIntradayMetric>
     {
-        
-        
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
@@ -70,24 +68,11 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PerformancePredictionQueueData")]
             Performancepredictionqueuedata
         }
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmIntradayDataUpdateTopicIntradayMetric" /> class.
         /// </summary>
@@ -100,17 +85,17 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -119,7 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmIntradayDataUpdateTopicIntradayMetric {\n");
-            
+
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("}\n");
@@ -185,13 +170,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
-                
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
+
                 return hash;
             }
         }

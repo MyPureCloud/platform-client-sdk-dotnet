@@ -18,14 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LocationEmergencyNumber :  IEquatable<LocationEmergencyNumber>
     {
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of emergency number.
         /// </summary>
@@ -53,24 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "elin")]
             Elin
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The type of emergency number.
         /// </summary>
         /// <value>The type of emergency number.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationEmergencyNumber" /> class.
         /// </summary>
@@ -85,25 +65,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets E164
         /// </summary>
         [DataMember(Name="e164", EmitDefaultValue=false)]
         public string E164 { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Number
         /// </summary>
         [DataMember(Name="number", EmitDefaultValue=false)]
         public string Number { get; set; }
-        
-        
-        
-        
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -112,7 +92,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LocationEmergencyNumber {\n");
-            
+
             sb.Append("  E164: ").Append(E164).Append("\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -184,16 +164,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.E164 != null)
                     hash = hash * 59 + this.E164.GetHashCode();
-                
+
                 if (this.Number != null)
                     hash = hash * 59 + this.Number.GetHashCode();
-                
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
+
                 return hash;
             }
         }

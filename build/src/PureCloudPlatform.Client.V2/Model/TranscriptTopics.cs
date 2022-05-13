@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TranscriptTopics :  IEquatable<TranscriptTopics>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TranscriptTopics" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// List of topics which need to be included in exact match criteria. This field is not mutually exclusive with excludes topic list.
         /// </summary>
         /// <value>List of topics which need to be included in exact match criteria. This field is not mutually exclusive with excludes topic list.</value>
         [DataMember(Name="includes", EmitDefaultValue=false)]
         public List<string> Includes { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of topics which need to be excluded in exact match criteria. This field is not mutually exclusive with includes topic list.
         /// </summary>
         /// <value>List of topics which need to be excluded in exact match criteria. This field is not mutually exclusive with includes topic list.</value>
         [DataMember(Name="excludes", EmitDefaultValue=false)]
         public List<string> Excludes { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TranscriptTopics {\n");
-            
+
             sb.Append("  Includes: ").Append(Includes).Append("\n");
             sb.Append("  Excludes: ").Append(Excludes).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Includes != null)
                     hash = hash * 59 + this.Includes.GetHashCode();
-                
+
                 if (this.Excludes != null)
                     hash = hash * 59 + this.Excludes.GetHashCode();
-                
+
                 return hash;
             }
         }

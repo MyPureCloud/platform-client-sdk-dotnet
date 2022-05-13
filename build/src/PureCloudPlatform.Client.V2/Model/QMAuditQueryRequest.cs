@@ -18,30 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QMAuditQueryRequest :  IEquatable<QMAuditQueryRequest>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="QMAuditQueryRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected QMAuditQueryRequest() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="QMAuditQueryRequest" /> class.
         /// </summary>
@@ -56,34 +38,34 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
         /// <value>Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// List of filters for the query.
         /// </summary>
         /// <value>List of filters for the query.</value>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<QualityAuditQueryFilter> Filters { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Sort parameter for the query.
         /// </summary>
         /// <value>Sort parameter for the query.</value>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public List<AuditQuerySort> Sort { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QMAuditQueryRequest {\n");
-            
+
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
             sb.Append("  Sort: ").Append(Sort).Append("\n");
@@ -164,16 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
+
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
-                
+
                 if (this.Sort != null)
                     hash = hash * 59 + this.Sort.GetHashCode();
-                
+
                 return hash;
             }
         }

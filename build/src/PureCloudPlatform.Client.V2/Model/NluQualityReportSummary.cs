@@ -18,20 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NluQualityReportSummary :  IEquatable<NluQualityReportSummary>
     {
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NluQualityReportSummary" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected NluQualityReportSummary() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="NluQualityReportSummary" /> class.
         /// </summary>
@@ -42,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The list of metrics in the summary
         /// </summary>
         /// <value>The list of metrics in the summary</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
         public List<NluQualityReportSummaryMetric> Metrics { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NluQualityReportSummary {\n");
-            
+
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -120,10 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
-                
+
                 return hash;
             }
         }

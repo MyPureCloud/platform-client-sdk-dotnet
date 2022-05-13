@@ -18,29 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkInstanceTopicTrunkMetricsOptions :  IEquatable<TrunkInstanceTopicTrunkMetricsOptions>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkInstanceTopicTrunkMetricsOptions" /> class.
         /// </summary>
@@ -57,39 +34,39 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// Gets or Sets ProxyAddress
         /// </summary>
         [DataMember(Name="proxyAddress", EmitDefaultValue=false)]
         public string ProxyAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OptionState
         /// </summary>
         [DataMember(Name="optionState", EmitDefaultValue=false)]
         public bool? OptionState { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets OptionStateTime
         /// </summary>
         [DataMember(Name="optionStateTime", EmitDefaultValue=false)]
         public DateTime? OptionStateTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public TrunkInstanceTopicTrunkErrorInfo ErrorInfo { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkInstanceTopicTrunkMetricsOptions {\n");
-            
+
             sb.Append("  ProxyAddress: ").Append(ProxyAddress).Append("\n");
             sb.Append("  OptionState: ").Append(OptionState).Append("\n");
             sb.Append("  OptionStateTime: ").Append(OptionStateTime).Append("\n");
@@ -176,19 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ProxyAddress != null)
                     hash = hash * 59 + this.ProxyAddress.GetHashCode();
-                
+
                 if (this.OptionState != null)
                     hash = hash * 59 + this.OptionState.GetHashCode();
-                
+
                 if (this.OptionStateTime != null)
                     hash = hash * 59 + this.OptionStateTime.GetHashCode();
-                
+
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
+
                 return hash;
             }
         }

@@ -18,19 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AtzmTimeSlot :  IEquatable<AtzmTimeSlot>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="AtzmTimeSlot" /> class.
         /// </summary>
@@ -43,25 +30,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The earliest time to dial a contact. Valid format is HH:mm
         /// </summary>
         /// <value>The earliest time to dial a contact. Valid format is HH:mm</value>
         [DataMember(Name="earliestCallableTime", EmitDefaultValue=false)]
         public string EarliestCallableTime { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The latest time to dial a contact. Valid format is HH:mm
         /// </summary>
         /// <value>The latest time to dial a contact. Valid format is HH:mm</value>
         [DataMember(Name="latestCallableTime", EmitDefaultValue=false)]
         public string LatestCallableTime { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AtzmTimeSlot {\n");
-            
+
             sb.Append("  EarliestCallableTime: ").Append(EarliestCallableTime).Append("\n");
             sb.Append("  LatestCallableTime: ").Append(LatestCallableTime).Append("\n");
             sb.Append("}\n");
@@ -136,13 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EarliestCallableTime != null)
                     hash = hash * 59 + this.EarliestCallableTime.GetHashCode();
-                
+
                 if (this.LatestCallableTime != null)
                     hash = hash * 59 + this.LatestCallableTime.GetHashCode();
-                
+
                 return hash;
             }
         }

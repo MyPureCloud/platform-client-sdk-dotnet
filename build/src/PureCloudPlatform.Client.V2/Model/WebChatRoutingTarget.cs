@@ -18,8 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WebChatRoutingTarget :  IEquatable<WebChatRoutingTarget>
     {
-        
-        
         /// <summary>
         /// The target type of the routing target, such as 'QUEUE'.
         /// </summary>
@@ -41,51 +39,23 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "QUEUE")]
             Queue
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// The target type of the routing target, such as 'QUEUE'.
         /// </summary>
         /// <value>The target type of the routing target, such as 'QUEUE'.</value>
         [DataMember(Name="targetType", EmitDefaultValue=false)]
         public TargetTypeEnum? TargetType { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatRoutingTarget" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WebChatRoutingTarget() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatRoutingTarget" /> class.
         /// </summary>
-        /// <param name="TargetType">The target type of the routing target, such as &#39;QUEUE&#39;. (required).</param>
-        /// <param name="TargetAddress">The target of the route, in the format appropriate given the &#39;targetType&#39;. (required).</param>
+        /// <param name="TargetType">The target type of the routing target, such as 'QUEUE'. (required).</param>
+        /// <param name="TargetAddress">The target of the route, in the format appropriate given the 'targetType'. (required).</param>
         /// <param name="Skills">The list of skill names to use for routing..</param>
         /// <param name="Language">The language name to use for routing..</param>
         /// <param name="Priority">The priority to assign to the conversation for routing..</param>
@@ -99,45 +69,45 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
-        
-        
+
+
+
+
         /// <summary>
-        /// The target of the route, in the format appropriate given the &#39;targetType&#39;.
+        /// The target of the route, in the format appropriate given the 'targetType'.
         /// </summary>
-        /// <value>The target of the route, in the format appropriate given the &#39;targetType&#39;.</value>
+        /// <value>The target of the route, in the format appropriate given the 'targetType'.</value>
         [DataMember(Name="targetAddress", EmitDefaultValue=false)]
         public string TargetAddress { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The list of skill names to use for routing.
         /// </summary>
         /// <value>The list of skill names to use for routing.</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
         public List<string> Skills { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The language name to use for routing.
         /// </summary>
         /// <value>The language name to use for routing.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The priority to assign to the conversation for routing.
         /// </summary>
         /// <value>The priority to assign to the conversation for routing.</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public long? Priority { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebChatRoutingTarget {\n");
-            
+
             sb.Append("  TargetType: ").Append(TargetType).Append("\n");
             sb.Append("  TargetAddress: ").Append(TargetAddress).Append("\n");
             sb.Append("  Skills: ").Append(Skills).Append("\n");
@@ -230,22 +200,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TargetType != null)
                     hash = hash * 59 + this.TargetType.GetHashCode();
-                
+
                 if (this.TargetAddress != null)
                     hash = hash * 59 + this.TargetAddress.GetHashCode();
-                
+
                 if (this.Skills != null)
                     hash = hash * 59 + this.Skills.GetHashCode();
-                
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
+
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
-                
+
                 return hash;
             }
         }

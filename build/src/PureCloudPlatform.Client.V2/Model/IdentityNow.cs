@@ -18,64 +18,6 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IdentityNow :  IEquatable<IdentityNow>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="IdentityNow" /> class.
         /// </summary>
@@ -102,97 +44,97 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Disabled
         /// </summary>
         [DataMember(Name="disabled", EmitDefaultValue=false)]
         public bool? Disabled { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets IssuerURI
         /// </summary>
         [DataMember(Name="issuerURI", EmitDefaultValue=false)]
         public string IssuerURI { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SsoTargetURI
         /// </summary>
         [DataMember(Name="ssoTargetURI", EmitDefaultValue=false)]
         public string SsoTargetURI { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SloURI
         /// </summary>
         [DataMember(Name="sloURI", EmitDefaultValue=false)]
         public string SloURI { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets SloBinding
         /// </summary>
         [DataMember(Name="sloBinding", EmitDefaultValue=false)]
         public string SloBinding { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets RelyingPartyIdentifier
         /// </summary>
         [DataMember(Name="relyingPartyIdentifier", EmitDefaultValue=false)]
         public string RelyingPartyIdentifier { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Certificate
         /// </summary>
         [DataMember(Name="certificate", EmitDefaultValue=false)]
         public string Certificate { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// Gets or Sets Certificates
         /// </summary>
         [DataMember(Name="certificates", EmitDefaultValue=false)]
         public List<string> Certificates { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -201,7 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IdentityNow {\n");
-            
+
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
@@ -321,40 +263,39 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
+
                 if (this.Disabled != null)
                     hash = hash * 59 + this.Disabled.GetHashCode();
-                
+
                 if (this.IssuerURI != null)
                     hash = hash * 59 + this.IssuerURI.GetHashCode();
-                
+
                 if (this.SsoTargetURI != null)
                     hash = hash * 59 + this.SsoTargetURI.GetHashCode();
-                
+
                 if (this.SloURI != null)
                     hash = hash * 59 + this.SloURI.GetHashCode();
-                
+
                 if (this.SloBinding != null)
                     hash = hash * 59 + this.SloBinding.GetHashCode();
-                
+
                 if (this.RelyingPartyIdentifier != null)
                     hash = hash * 59 + this.RelyingPartyIdentifier.GetHashCode();
-                
+
                 if (this.Certificate != null)
                     hash = hash * 59 + this.Certificate.GetHashCode();
-                
+
                 if (this.Certificates != null)
                     hash = hash * 59 + this.Certificates.GetHashCode();
-                
+
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
+
                 return hash;
             }
         }

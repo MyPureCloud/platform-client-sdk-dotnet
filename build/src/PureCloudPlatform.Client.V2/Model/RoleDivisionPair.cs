@@ -18,25 +18,12 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RoleDivisionPair :  IEquatable<RoleDivisionPair>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="RoleDivisionPair" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected RoleDivisionPair() { }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoleDivisionPair" /> class.
         /// </summary>
@@ -49,25 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
-        
-        
+
+
         /// <summary>
         /// The ID of the role
         /// </summary>
         /// <value>The ID of the role</value>
         [DataMember(Name="roleId", EmitDefaultValue=false)]
         public string RoleId { get; set; }
-        
-        
-        
+
+
+
         /// <summary>
         /// The ID of the division
         /// </summary>
         /// <value>The ID of the division</value>
         [DataMember(Name="divisionId", EmitDefaultValue=false)]
         public string DivisionId { get; set; }
-        
-        
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RoleDivisionPair {\n");
-            
+
             sb.Append("  RoleId: ").Append(RoleId).Append("\n");
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("}\n");
@@ -142,13 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RoleId != null)
                     hash = hash * 59 + this.RoleId.GetHashCode();
-                
+
                 if (this.DivisionId != null)
                     hash = hash * 59 + this.DivisionId.GetHashCode();
-                
+
                 return hash;
             }
         }
