@@ -43,13 +43,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Zoomphone for "ZoomPhone"
             /// </summary>
             [EnumMember(Value = "ZoomPhone")]
-            Zoomphone,
-            
-            /// <summary>
-            /// Enum Ringcentral for "RingCentral"
-            /// </summary>
-            [EnumMember(Value = "RingCentral")]
-            Ringcentral
+            Zoomphone
         }
         /// <summary>
         /// integrationPresenceType

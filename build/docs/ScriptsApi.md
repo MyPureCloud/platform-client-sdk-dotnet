@@ -813,9 +813,9 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **scriptId** | **string**| Script ID |  |
-| **input** | **string**| input | [optional]  |
-| **output** | **string**| output | [optional]  |
-| **type** | **string**| type | [optional]  |
+| **input** | **string**| input | [optional] <br />**Values**: true, false |
+| **output** | **string**| output | [optional] <br />**Values**: true, false |
+| **type** | **string**| type | [optional] <br />**Values**: string, number, boolean |
 | **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 

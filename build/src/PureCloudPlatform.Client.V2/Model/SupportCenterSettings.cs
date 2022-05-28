@@ -61,7 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Screens">Available screens for the support center with its modules.</param>
         /// <param name="EnabledCategories">Enabled article categories for support center.</param>
         /// <param name="StyleSetting">Style attributes for support center.</param>
-        public SupportCenterSettings(bool? Enabled = null, AddressableEntityRef KnowledgeBase = null, List<SupportCenterCustomMessage> CustomMessages = null, RouterTypeEnum? RouterType = null, List<SupportCenterScreen> Screens = null, List<AddressableEntityRef> EnabledCategories = null, SupportCenterStyleSetting StyleSetting = null)
+        /// <param name="Feedback">Customer feedback settings.</param>
+        public SupportCenterSettings(bool? Enabled = null, AddressableEntityRef KnowledgeBase = null, List<SupportCenterCustomMessage> CustomMessages = null, RouterTypeEnum? RouterType = null, List<SupportCenterScreen> Screens = null, List<AddressableEntityRef> EnabledCategories = null, SupportCenterStyleSetting StyleSetting = null, SupportCenterFeedbackSettings Feedback = null)
         {
             this.Enabled = Enabled;
             this.KnowledgeBase = KnowledgeBase;
@@ -70,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Screens = Screens;
             this.EnabledCategories = EnabledCategories;
             this.StyleSetting = StyleSetting;
+            this.Feedback = Feedback;
             
         }
         
@@ -130,6 +132,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public SupportCenterStyleSetting StyleSetting { get; set; }
 
 
+
+        /// <summary>
+        /// Customer feedback settings
+        /// </summary>
+        /// <value>Customer feedback settings</value>
+        [DataMember(Name="feedback", EmitDefaultValue=false)]
+        public SupportCenterFeedbackSettings Feedback { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,6 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Screens: ").Append(Screens).Append("\n");
             sb.Append("  EnabledCategories: ").Append(EnabledCategories).Append("\n");
             sb.Append("  StyleSetting: ").Append(StyleSetting).Append("\n");
+            sb.Append("  Feedback: ").Append(Feedback).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -220,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StyleSetting == other.StyleSetting ||
                     this.StyleSetting != null &&
                     this.StyleSetting.Equals(other.StyleSetting)
+                ) &&
+                (
+                    this.Feedback == other.Feedback ||
+                    this.Feedback != null &&
+                    this.Feedback.Equals(other.Feedback)
                 );
         }
 
@@ -254,6 +271,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.StyleSetting != null)
                     hash = hash * 59 + this.StyleSetting.GetHashCode();
+
+                if (this.Feedback != null)
+                    hash = hash * 59 + this.Feedback.GetHashCode();
 
                 return hash;
             }

@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="MessengerHomeScreen" /> class.
         /// </summary>
         /// <param name="Enabled">whether or not homescreen is enabled.</param>
-        public MessengerHomeScreen(bool? Enabled = null)
+        /// <param name="LogoUrl">to capture uploaded company logoUrl.</param>
+        public MessengerHomeScreen(bool? Enabled = null, string LogoUrl = null)
         {
             this.Enabled = Enabled;
+            this.LogoUrl = LogoUrl;
             
         }
         
@@ -38,6 +40,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Enabled { get; set; }
 
 
+
+        /// <summary>
+        /// to capture uploaded company logoUrl
+        /// </summary>
+        /// <value>to capture uploaded company logoUrl</value>
+        [DataMember(Name="logoUrl", EmitDefaultValue=false)]
+        public string LogoUrl { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class MessengerHomeScreen {\n");
 
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  LogoUrl: ").Append(LogoUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +104,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
+                ) &&
+                (
+                    this.LogoUrl == other.LogoUrl ||
+                    this.LogoUrl != null &&
+                    this.LogoUrl.Equals(other.LogoUrl)
                 );
         }
 
@@ -108,6 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+
+                if (this.LogoUrl != null)
+                    hash = hash * 59 + this.LogoUrl.GetHashCode();
 
                 return hash;
             }

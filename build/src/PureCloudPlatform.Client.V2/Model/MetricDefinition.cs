@@ -91,7 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DivisorMetrics">Metric names used as divisor.</param>
         /// <param name="DefaultObjective">A predefined default objective for this metric.</param>
         /// <param name="LockTemplateId">An optional field to specify if this metric definition is locked to certain template. e.g. punctuality.</param>
-        public MetricDefinition(string Name = null, UnitTypeEnum? UnitType = null, string ShortName = null, List<string> DividendMetrics = null, List<string> DivisorMetrics = null, DefaultObjective DefaultObjective = null, string LockTemplateId = null)
+        /// <param name="MediaTypeFilteringAllowed">Flag to indicate if this metricDefinition allows filter based on media types.</param>
+        /// <param name="QueueFilteringAllowed">Flag to indicate if this metricDefinition allows filter based on queues.</param>
+        public MetricDefinition(string Name = null, UnitTypeEnum? UnitType = null, string ShortName = null, List<string> DividendMetrics = null, List<string> DivisorMetrics = null, DefaultObjective DefaultObjective = null, string LockTemplateId = null, bool? MediaTypeFilteringAllowed = null, bool? QueueFilteringAllowed = null)
         {
             this.Name = Name;
             this.UnitType = UnitType;
@@ -100,6 +102,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DivisorMetrics = DivisorMetrics;
             this.DefaultObjective = DefaultObjective;
             this.LockTemplateId = LockTemplateId;
+            this.MediaTypeFilteringAllowed = MediaTypeFilteringAllowed;
+            this.QueueFilteringAllowed = QueueFilteringAllowed;
             
         }
         
@@ -170,6 +174,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Flag to indicate if this metricDefinition allows filter based on media types
+        /// </summary>
+        /// <value>Flag to indicate if this metricDefinition allows filter based on media types</value>
+        [DataMember(Name="mediaTypeFilteringAllowed", EmitDefaultValue=false)]
+        public bool? MediaTypeFilteringAllowed { get; set; }
+
+
+
+        /// <summary>
+        /// Flag to indicate if this metricDefinition allows filter based on queues
+        /// </summary>
+        /// <value>Flag to indicate if this metricDefinition allows filter based on queues</value>
+        [DataMember(Name="queueFilteringAllowed", EmitDefaultValue=false)]
+        public bool? QueueFilteringAllowed { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -194,6 +216,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DivisorMetrics: ").Append(DivisorMetrics).Append("\n");
             sb.Append("  DefaultObjective: ").Append(DefaultObjective).Append("\n");
             sb.Append("  LockTemplateId: ").Append(LockTemplateId).Append("\n");
+            sb.Append("  MediaTypeFilteringAllowed: ").Append(MediaTypeFilteringAllowed).Append("\n");
+            sb.Append("  QueueFilteringAllowed: ").Append(QueueFilteringAllowed).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -276,6 +300,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LockTemplateId.Equals(other.LockTemplateId)
                 ) &&
                 (
+                    this.MediaTypeFilteringAllowed == other.MediaTypeFilteringAllowed ||
+                    this.MediaTypeFilteringAllowed != null &&
+                    this.MediaTypeFilteringAllowed.Equals(other.MediaTypeFilteringAllowed)
+                ) &&
+                (
+                    this.QueueFilteringAllowed == other.QueueFilteringAllowed ||
+                    this.QueueFilteringAllowed != null &&
+                    this.QueueFilteringAllowed.Equals(other.QueueFilteringAllowed)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -316,6 +350,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LockTemplateId != null)
                     hash = hash * 59 + this.LockTemplateId.GetHashCode();
+
+                if (this.MediaTypeFilteringAllowed != null)
+                    hash = hash * 59 + this.MediaTypeFilteringAllowed.GetHashCode();
+
+                if (this.QueueFilteringAllowed != null)
+                    hash = hash * 59 + this.QueueFilteringAllowed.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

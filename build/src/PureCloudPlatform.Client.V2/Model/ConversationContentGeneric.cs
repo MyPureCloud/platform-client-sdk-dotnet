@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Generic content object.
+    /// Generic content object (Deprecated).
     /// </summary>
     [DataContract]
     public partial class ConversationContentGeneric :  IEquatable<ConversationContentGeneric>

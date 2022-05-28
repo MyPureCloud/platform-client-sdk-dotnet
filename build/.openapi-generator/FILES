@@ -1375,6 +1375,7 @@ docs/ExpiredEdgeListing.md
 docs/ExportScriptRequest.md
 docs/ExportScriptResponse.md
 docs/ExportUri.md
+docs/ExtendedWrapup.md
 docs/Extension.md
 docs/ExtensionEntityListing.md
 docs/ExtensionPool.md
@@ -2627,6 +2628,7 @@ docs/LearningAssignmentUser.md
 docs/LearningAssignmentUserListing.md
 docs/LearningAssignmentUserQuery.md
 docs/LearningAssignmentsDomainEntity.md
+docs/LearningCoverArtThumbnail.md
 docs/LearningModule.md
 docs/LearningModuleCoverArtRequest.md
 docs/LearningModuleCoverArtResponse.md
@@ -4317,6 +4319,7 @@ docs/SuggestApi.md
 docs/SuggestSearchCriteria.md
 docs/SuggestSearchRequest.md
 docs/SupportCenterCustomMessage.md
+docs/SupportCenterFeedbackSettings.md
 docs/SupportCenterGlobalStyle.md
 docs/SupportCenterHeroStyle.md
 docs/SupportCenterModuleSetting.md
@@ -6183,6 +6186,7 @@ src/PureCloudPlatform.Client.V2/Model/ExpiredEdgeListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExportScriptRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ExportScriptResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ExportUri.cs
+src/PureCloudPlatform.Client.V2/Model/ExtendedWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/Extension.cs
 src/PureCloudPlatform.Client.V2/Model/ExtensionEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExtensionPool.cs
@@ -6527,6 +6531,7 @@ src/PureCloudPlatform.Client.V2/Model/LearningAssignmentUser.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentUserListing.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentUserQuery.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentsDomainEntity.cs
+src/PureCloudPlatform.Client.V2/Model/LearningCoverArtThumbnail.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModule.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleCoverArtRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleCoverArtResponse.cs
@@ -7449,6 +7454,7 @@ src/PureCloudPlatform.Client.V2/Model/SubscriptionOverviewUsage.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestSearchCriteria.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestSearchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterCustomMessage.cs
+src/PureCloudPlatform.Client.V2/Model/SupportCenterFeedbackSettings.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterGlobalStyle.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterHeroStyle.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterModuleSetting.cs

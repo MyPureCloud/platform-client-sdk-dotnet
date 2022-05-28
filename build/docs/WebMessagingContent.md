@@ -11,7 +11,7 @@ title: WebMessagingContent
 | **Attachment** | [**WebMessagingAttachment**](WebMessagingAttachment.html) | Attachment content. | [optional] |
 | **QuickReply** | [**WebMessagingQuickReply**](WebMessagingQuickReply.html) | Quick reply content. | [optional] |
 | **ButtonResponse** | [**WebMessagingButtonResponse**](WebMessagingButtonResponse.html) | Button response content. | [optional] |
-| **Generic** | [**WebMessagingGeneric**](WebMessagingGeneric.html) | Generic content. | [optional] |
+| **Generic** | [**WebMessagingGeneric**](WebMessagingGeneric.html) | Generic content (Deprecated). | [optional] |
 | **Card** | [**ContentCard**](ContentCard.html) | Card content | [optional] |
 | **Carousel** | [**ContentCarousel**](ContentCarousel.html) | Carousel content | [optional] |
 {: class="table table-striped"}

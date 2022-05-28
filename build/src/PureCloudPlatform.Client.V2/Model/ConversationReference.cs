@@ -21,28 +21,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationReference" /> class.
         /// </summary>
-        public ConversationReference()
+        /// <param name="Id">Id.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+        public ConversationReference(string Id = null, string SelfUri = null)
         {
+            this.Id = Id;
+            this.SelfUri = SelfUri;
             
         }
         
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 
         /// <summary>
-        /// The URI for this object
+        /// Gets or Sets SelfUri
         /// </summary>
-        /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
+        public string SelfUri { get; set; }
 
 
         /// <summary>

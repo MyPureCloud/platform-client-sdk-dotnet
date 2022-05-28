@@ -177,6 +177,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Group,
             
             /// <summary>
+            /// Enum Image for "IMAGE"
+            /// </summary>
+            [EnumMember(Value = "IMAGE")]
+            Image,
+            
+            /// <summary>
             /// Enum Inboundcallflow for "INBOUNDCALLFLOW"
             /// </summary>
             [EnumMember(Value = "INBOUNDCALLFLOW")]

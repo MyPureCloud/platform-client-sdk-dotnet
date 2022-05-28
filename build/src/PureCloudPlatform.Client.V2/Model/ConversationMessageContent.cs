@@ -109,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QuickReply">Quick reply content..</param>
         /// <param name="Template">Template notification content..</param>
         /// <param name="ButtonResponse">Button response content..</param>
-        /// <param name="Generic">Generic Template Object.</param>
+        /// <param name="Generic">Generic Template Object (Deprecated)..</param>
         /// <param name="Card">Card (Generic Template) Object.</param>
         /// <param name="Carousel">Carousel (Multiple Generic Template) Object.</param>
         public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentStory Story = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentNotificationTemplate Template = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentGeneric Generic = null, ConversationContentCard Card = null, ConversationContentCarousel Carousel = null)
@@ -186,9 +186,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Generic Template Object
+        /// Generic Template Object (Deprecated).
         /// </summary>
-        /// <value>Generic Template Object</value>
+        /// <value>Generic Template Object (Deprecated).</value>
         [DataMember(Name="generic", EmitDefaultValue=false)]
         public ConversationContentGeneric Generic { get; set; }
 

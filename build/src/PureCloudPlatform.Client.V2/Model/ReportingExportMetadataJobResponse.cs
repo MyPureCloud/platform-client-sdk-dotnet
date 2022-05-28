@@ -505,7 +505,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum PredictiveRoutingModelView for "PREDICTIVE_ROUTING_MODEL_VIEW"
             /// </summary>
             [EnumMember(Value = "PREDICTIVE_ROUTING_MODEL_VIEW")]
-            PredictiveRoutingModelView
+            PredictiveRoutingModelView,
+            
+            /// <summary>
+            /// Enum DataActionsPerformanceSummaryView for "DATA_ACTIONS_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "DATA_ACTIONS_PERFORMANCE_SUMMARY_VIEW")]
+            DataActionsPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum DataActionsPerformanceDetailView for "DATA_ACTIONS_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "DATA_ACTIONS_PERFORMANCE_DETAIL_VIEW")]
+            DataActionsPerformanceDetailView
         }
         /// <summary>
         /// The view type of the export metadata

@@ -237,6 +237,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Waitforinputaction,
             
             /// <summary>
+            /// Enum Showknowledgearticleaction for "ShowKnowledgeArticleAction"
+            /// </summary>
+            [EnumMember(Value = "ShowKnowledgeArticleAction")]
+            Showknowledgearticleaction,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

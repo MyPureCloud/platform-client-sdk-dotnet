@@ -19,6 +19,39 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class KeyPerformanceIndicator :  IEquatable<KeyPerformanceIndicator>
     {
         /// <summary>
+        /// The optimization type of the Key Performance Indicator.
+        /// </summary>
+        /// <value>The optimization type of the Key Performance Indicator.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum OptimizationTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Maximization for "Maximization"
+            /// </summary>
+            [EnumMember(Value = "Maximization")]
+            Maximization,
+            
+            /// <summary>
+            /// Enum Minimization for "Minimization"
+            /// </summary>
+            [EnumMember(Value = "Minimization")]
+            Minimization
+        }
+        /// <summary>
+        /// The optimization type of the Key Performance Indicator.
+        /// </summary>
+        /// <value>The optimization type of the Key Performance Indicator.</value>
+        [DataMember(Name="optimizationType", EmitDefaultValue=false)]
+        public OptimizationTypeEnum? OptimizationType { get; private set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="KeyPerformanceIndicator" /> class.
         /// </summary>
         public KeyPerformanceIndicator()
@@ -45,6 +78,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Name { get; private set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -56,6 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  OptimizationType: ").Append(OptimizationType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,6 +141,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.OptimizationType == other.OptimizationType ||
+                    this.OptimizationType != null &&
+                    this.OptimizationType.Equals(other.OptimizationType)
                 );
         }
 
@@ -124,6 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.OptimizationType != null)
+                    hash = hash * 59 + this.OptimizationType.GetHashCode();
 
                 return hash;
             }

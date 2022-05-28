@@ -80,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="QuickReply">Quick reply content..</param>
         /// <param name="ButtonResponse">Button response content..</param>
-        /// <param name="Generic">Generic content..</param>
+        /// <param name="Generic">Generic content (Deprecated)..</param>
         /// <param name="Card">Card content.</param>
         /// <param name="Carousel">Carousel content.</param>
         public WebMessagingContent(WebMessagingQuickReply QuickReply = null, WebMessagingButtonResponse ButtonResponse = null, WebMessagingGeneric Generic = null, ContentCard Card = null, ContentCarousel Carousel = null)
@@ -125,9 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Generic content.
+        /// Generic content (Deprecated).
         /// </summary>
-        /// <value>Generic content.</value>
+        /// <value>Generic content (Deprecated).</value>
         [DataMember(Name="generic", EmitDefaultValue=false)]
         public WebMessagingGeneric Generic { get; set; }
 

@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="LearningModuleCoverArtResponse" /> class.
         /// </summary>
         /// <param name="Url">The URL for the cover art.</param>
-        public LearningModuleCoverArtResponse(string Url = null)
+        /// <param name="Thumbnails">Thumbnails for the cover art.</param>
+        public LearningModuleCoverArtResponse(string Url = null, List<LearningCoverArtThumbnail> Thumbnails = null)
         {
             this.Url = Url;
+            this.Thumbnails = Thumbnails;
             
         }
         
@@ -56,6 +58,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Url { get; set; }
 
 
+
+        /// <summary>
+        /// Thumbnails for the cover art
+        /// </summary>
+        /// <value>Thumbnails for the cover art</value>
+        [DataMember(Name="thumbnails", EmitDefaultValue=false)]
+        public List<LearningCoverArtThumbnail> Thumbnails { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
+            sb.Append("  Thumbnails: ").Append(Thumbnails).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -122,6 +134,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Url == other.Url ||
                     this.Url != null &&
                     this.Url.Equals(other.Url)
+                ) &&
+                (
+                    this.Thumbnails == other.Thumbnails ||
+                    this.Thumbnails != null &&
+                    this.Thumbnails.SequenceEqual(other.Thumbnails)
                 );
         }
 
@@ -144,6 +161,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
+
+                if (this.Thumbnails != null)
+                    hash = hash * 59 + this.Thumbnails.GetHashCode();
 
                 return hash;
             }

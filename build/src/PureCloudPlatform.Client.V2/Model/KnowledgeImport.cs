@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Jsonlines for "JsonLines"
             /// </summary>
             [EnumMember(Value = "JsonLines")]
-            Jsonlines
+            Jsonlines,
+            
+            /// <summary>
+            /// Enum Json for "Json"
+            /// </summary>
+            [EnumMember(Value = "Json")]
+            Json
         }
         /// <summary>
         /// Status of the operation
