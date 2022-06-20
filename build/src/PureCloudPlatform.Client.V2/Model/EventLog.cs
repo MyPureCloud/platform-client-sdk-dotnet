@@ -107,6 +107,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ContactListFilter,
             
             /// <summary>
+            /// Enum DigitalRule for "DIGITAL_RULE"
+            /// </summary>
+            [EnumMember(Value = "DIGITAL_RULE")]
+            DigitalRule,
+            
+            /// <summary>
             /// Enum DncList for "DNC_LIST"
             /// </summary>
             [EnumMember(Value = "DNC_LIST")]

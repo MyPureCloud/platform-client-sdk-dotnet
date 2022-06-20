@@ -601,7 +601,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum DataActionsPerformanceDetailView for "DATA_ACTIONS_PERFORMANCE_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "DATA_ACTIONS_PERFORMANCE_DETAIL_VIEW")]
-            DataActionsPerformanceDetailView
+            DataActionsPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum AgentTimelineSummaryView for "AGENT_TIMELINE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_TIMELINE_SUMMARY_VIEW")]
+            AgentTimelineSummaryView,
+            
+            /// <summary>
+            /// Enum AgentTimelineDetailView for "AGENT_TIMELINE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_TIMELINE_DETAIL_VIEW")]
+            AgentTimelineDetailView,
+            
+            /// <summary>
+            /// Enum AgentLoginLogoutSummaryView for "AGENT_LOGIN_LOGOUT_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_LOGIN_LOGOUT_SUMMARY_VIEW")]
+            AgentLoginLogoutSummaryView,
+            
+            /// <summary>
+            /// Enum AgentLoginLogoutDetailView for "AGENT_LOGIN_LOGOUT_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_LOGIN_LOGOUT_DETAIL_VIEW")]
+            AgentLoginLogoutDetailView,
+            
+            /// <summary>
+            /// Enum CampaignPerformanceSummaryView for "CAMPAIGN_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_PERFORMANCE_SUMMARY_VIEW")]
+            CampaignPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum CampaignPerformanceDetailView for "CAMPAIGN_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_PERFORMANCE_DETAIL_VIEW")]
+            CampaignPerformanceDetailView
         }
         /// <summary>
         /// The error message in case the export request failed

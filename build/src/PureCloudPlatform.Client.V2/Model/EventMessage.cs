@@ -243,6 +243,30 @@ namespace PureCloudPlatform.Client.V2.Model
             DataActionTooManyRequestsRemote,
             
             /// <summary>
+            /// Enum DigitalRuleEvaluationFailed for "DIGITAL_RULE_EVALUATION_FAILED"
+            /// </summary>
+            [EnumMember(Value = "DIGITAL_RULE_EVALUATION_FAILED")]
+            DigitalRuleEvaluationFailed,
+            
+            /// <summary>
+            /// Enum DigitalRuleInternalError for "DIGITAL_RULE_INTERNAL_ERROR"
+            /// </summary>
+            [EnumMember(Value = "DIGITAL_RULE_INTERNAL_ERROR")]
+            DigitalRuleInternalError,
+            
+            /// <summary>
+            /// Enum DigitalRuleNoDncListsConfigured for "DIGITAL_RULE_NO_DNC_LISTS_CONFIGURED"
+            /// </summary>
+            [EnumMember(Value = "DIGITAL_RULE_NO_DNC_LISTS_CONFIGURED")]
+            DigitalRuleNoDncListsConfigured,
+            
+            /// <summary>
+            /// Enum DigitalRuleUpdatedContactAddress for "DIGITAL_RULE_UPDATED_CONTACT_ADDRESS"
+            /// </summary>
+            [EnumMember(Value = "DIGITAL_RULE_UPDATED_CONTACT_ADDRESS")]
+            DigitalRuleUpdatedContactAddress,
+            
+            /// <summary>
             /// Enum DncAuthenticationFailure for "DNC_AUTHENTICATION_FAILURE"
             /// </summary>
             [EnumMember(Value = "DNC_AUTHENTICATION_FAILURE")]

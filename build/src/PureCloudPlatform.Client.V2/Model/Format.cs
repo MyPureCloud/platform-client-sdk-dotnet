@@ -228,7 +228,73 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Languagegenderneuter for "LanguageGenderNeuter"
             /// </summary>
             [EnumMember(Value = "LanguageGenderNeuter")]
-            Languagegenderneuter
+            Languagegenderneuter,
+            
+            /// <summary>
+            /// Enum Casearticle for "CaseArticle"
+            /// </summary>
+            [EnumMember(Value = "CaseArticle")]
+            Casearticle,
+            
+            /// <summary>
+            /// Enum Caseaccusative for "CaseAccusative"
+            /// </summary>
+            [EnumMember(Value = "CaseAccusative")]
+            Caseaccusative,
+            
+            /// <summary>
+            /// Enum Casedative for "CaseDative"
+            /// </summary>
+            [EnumMember(Value = "CaseDative")]
+            Casedative,
+            
+            /// <summary>
+            /// Enum Casegenitive for "CaseGenitive"
+            /// </summary>
+            [EnumMember(Value = "CaseGenitive")]
+            Casegenitive,
+            
+            /// <summary>
+            /// Enum Casenominative for "CaseNominative"
+            /// </summary>
+            [EnumMember(Value = "CaseNominative")]
+            Casenominative,
+            
+            /// <summary>
+            /// Enum Quantityplural for "QuantityPlural"
+            /// </summary>
+            [EnumMember(Value = "QuantityPlural")]
+            Quantityplural,
+            
+            /// <summary>
+            /// Enum Quantitysingular for "QuantitySingular"
+            /// </summary>
+            [EnumMember(Value = "QuantitySingular")]
+            Quantitysingular,
+            
+            /// <summary>
+            /// Enum Gendercommon for "GenderCommon"
+            /// </summary>
+            [EnumMember(Value = "GenderCommon")]
+            Gendercommon,
+            
+            /// <summary>
+            /// Enum Genderfeminine for "GenderFeminine"
+            /// </summary>
+            [EnumMember(Value = "GenderFeminine")]
+            Genderfeminine,
+            
+            /// <summary>
+            /// Enum Gendermasculine for "GenderMasculine"
+            /// </summary>
+            [EnumMember(Value = "GenderMasculine")]
+            Gendermasculine,
+            
+            /// <summary>
+            /// Enum Genderneuter for "GenderNeuter"
+            /// </summary>
+            [EnumMember(Value = "GenderNeuter")]
+            Genderneuter
         }
         /// <summary>
         /// Initializes a new instance of the <see cref="Format" /> class.

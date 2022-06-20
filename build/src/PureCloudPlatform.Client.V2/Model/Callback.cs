@@ -226,6 +226,75 @@ namespace PureCloudPlatform.Client.V2.Model
             Uncallable
         }
         /// <summary>
+        /// The initial connection state of this communication.
+        /// </summary>
+        /// <value>The initial connection state of this communication.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InitialStateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Alerting for "alerting"
+            /// </summary>
+            [EnumMember(Value = "alerting")]
+            Alerting,
+            
+            /// <summary>
+            /// Enum Dialing for "dialing"
+            /// </summary>
+            [EnumMember(Value = "dialing")]
+            Dialing,
+            
+            /// <summary>
+            /// Enum Contacting for "contacting"
+            /// </summary>
+            [EnumMember(Value = "contacting")]
+            Contacting,
+            
+            /// <summary>
+            /// Enum Offering for "offering"
+            /// </summary>
+            [EnumMember(Value = "offering")]
+            Offering,
+            
+            /// <summary>
+            /// Enum Connected for "connected"
+            /// </summary>
+            [EnumMember(Value = "connected")]
+            Connected,
+            
+            /// <summary>
+            /// Enum Disconnected for "disconnected"
+            /// </summary>
+            [EnumMember(Value = "disconnected")]
+            Disconnected,
+            
+            /// <summary>
+            /// Enum Terminated for "terminated"
+            /// </summary>
+            [EnumMember(Value = "terminated")]
+            Terminated,
+            
+            /// <summary>
+            /// Enum Scheduled for "scheduled"
+            /// </summary>
+            [EnumMember(Value = "scheduled")]
+            Scheduled,
+            
+            /// <summary>
+            /// Enum None for "none"
+            /// </summary>
+            [EnumMember(Value = "none")]
+            None
+        }
+        /// <summary>
         /// The connection state of this communication.
         /// </summary>
         /// <value>The connection state of this communication.</value>
@@ -243,6 +312,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        /// <summary>
+        /// The initial connection state of this communication.
+        /// </summary>
+        /// <value>The initial connection state of this communication.</value>
+        [DataMember(Name="initialState", EmitDefaultValue=false)]
+        public InitialStateEnum? InitialState { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Callback" /> class.
         /// </summary>
@@ -273,7 +348,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AfterCallWorkRequired">Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="CallerId">The phone number displayed to recipients of the phone call. The value should conform to the E164 format..</param>
         /// <param name="CallerIdName">The name displayed to recipients of the phone call..</param>
-        public Callback(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, string Provider = null, string PeerId = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string CallerId = null, string CallerIdName = null)
+        /// <param name="InitialState">The initial connection state of this communication..</param>
+        public Callback(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, string Provider = null, string PeerId = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string CallerId = null, string CallerIdName = null, InitialStateEnum? InitialState = null)
         {
             this.State = State;
             this.Id = Id;
@@ -302,6 +378,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AfterCallWorkRequired = AfterCallWorkRequired;
             this.CallerId = CallerId;
             this.CallerIdName = CallerIdName;
+            this.InitialState = InitialState;
             
         }
         
@@ -528,6 +605,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public string CallerIdName { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -564,6 +643,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("  CallerId: ").Append(CallerId).Append("\n");
             sb.Append("  CallerIdName: ").Append(CallerIdName).Append("\n");
+            sb.Append("  InitialState: ").Append(InitialState).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -738,6 +818,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallerIdName == other.CallerIdName ||
                     this.CallerIdName != null &&
                     this.CallerIdName.Equals(other.CallerIdName)
+                ) &&
+                (
+                    this.InitialState == other.InitialState ||
+                    this.InitialState != null &&
+                    this.InitialState.Equals(other.InitialState)
                 );
         }
 
@@ -832,6 +917,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CallerIdName != null)
                     hash = hash * 59 + this.CallerIdName.GetHashCode();
+
+                if (this.InitialState != null)
+                    hash = hash * 59 + this.InitialState.GetHashCode();
 
                 return hash;
             }

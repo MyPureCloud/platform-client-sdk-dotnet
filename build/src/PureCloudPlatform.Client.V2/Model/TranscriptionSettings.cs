@@ -68,11 +68,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Transcription">Setting to enable/disable transcription capability (required).</param>
         /// <param name="TranscriptionConfidenceThreshold">Configure confidence threshold. The possible values are from 1 to 100. (required).</param>
+        /// <param name="LowLatencyTranscriptionEnabled">Boolean flag indicating whether low latency transcription via Notification API is enabled.</param>
         /// <param name="ContentSearchEnabled">Setting to enable/disable content search.</param>
-        public TranscriptionSettings(TranscriptionEnum? Transcription = null, int? TranscriptionConfidenceThreshold = null, bool? ContentSearchEnabled = null)
+        public TranscriptionSettings(TranscriptionEnum? Transcription = null, int? TranscriptionConfidenceThreshold = null, bool? LowLatencyTranscriptionEnabled = null, bool? ContentSearchEnabled = null)
         {
             this.Transcription = Transcription;
             this.TranscriptionConfidenceThreshold = TranscriptionConfidenceThreshold;
+            this.LowLatencyTranscriptionEnabled = LowLatencyTranscriptionEnabled;
             this.ContentSearchEnabled = ContentSearchEnabled;
             
         }
@@ -87,6 +89,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Configure confidence threshold. The possible values are from 1 to 100.</value>
         [DataMember(Name="transcriptionConfidenceThreshold", EmitDefaultValue=false)]
         public int? TranscriptionConfidenceThreshold { get; set; }
+
+
+
+        /// <summary>
+        /// Boolean flag indicating whether low latency transcription via Notification API is enabled
+        /// </summary>
+        /// <value>Boolean flag indicating whether low latency transcription via Notification API is enabled</value>
+        [DataMember(Name="lowLatencyTranscriptionEnabled", EmitDefaultValue=false)]
+        public bool? LowLatencyTranscriptionEnabled { get; set; }
 
 
 
@@ -109,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Transcription: ").Append(Transcription).Append("\n");
             sb.Append("  TranscriptionConfidenceThreshold: ").Append(TranscriptionConfidenceThreshold).Append("\n");
+            sb.Append("  LowLatencyTranscriptionEnabled: ").Append(LowLatencyTranscriptionEnabled).Append("\n");
             sb.Append("  ContentSearchEnabled: ").Append(ContentSearchEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -161,6 +173,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TranscriptionConfidenceThreshold.Equals(other.TranscriptionConfidenceThreshold)
                 ) &&
                 (
+                    this.LowLatencyTranscriptionEnabled == other.LowLatencyTranscriptionEnabled ||
+                    this.LowLatencyTranscriptionEnabled != null &&
+                    this.LowLatencyTranscriptionEnabled.Equals(other.LowLatencyTranscriptionEnabled)
+                ) &&
+                (
                     this.ContentSearchEnabled == other.ContentSearchEnabled ||
                     this.ContentSearchEnabled != null &&
                     this.ContentSearchEnabled.Equals(other.ContentSearchEnabled)
@@ -183,6 +200,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TranscriptionConfidenceThreshold != null)
                     hash = hash * 59 + this.TranscriptionConfidenceThreshold.GetHashCode();
+
+                if (this.LowLatencyTranscriptionEnabled != null)
+                    hash = hash * 59 + this.LowLatencyTranscriptionEnabled.GetHashCode();
 
                 if (this.ContentSearchEnabled != null)
                     hash = hash * 59 + this.ContentSearchEnabled.GetHashCode();

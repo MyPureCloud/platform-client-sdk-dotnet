@@ -91,8 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageTime">The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Media">The media (images, files, etc) associated with this message, if any.</param>
         /// <param name="Stickers">One or more stickers associated with this message, if any.</param>
+        /// <param name="MessageMetadata">Information that describes the content of the message, if any.</param>
         /// <param name="ErrorInfo">Provider specific error information for a communication..</param>
-        public MessageDetails(string MessageId = null, string MessageURI = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, DateTime? MessageTime = null, List<MessageMedia> Media = null, List<MessageSticker> Stickers = null, ErrorBody ErrorInfo = null)
+        public MessageDetails(string MessageId = null, string MessageURI = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, DateTime? MessageTime = null, List<MessageMedia> Media = null, List<MessageSticker> Stickers = null, ConversationMessageMetadata MessageMetadata = null, ErrorBody ErrorInfo = null)
         {
             this.MessageId = MessageId;
             this.MessageURI = MessageURI;
@@ -101,6 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessageTime = MessageTime;
             this.Media = Media;
             this.Stickers = Stickers;
+            this.MessageMetadata = MessageMetadata;
             this.ErrorInfo = ErrorInfo;
             
         }
@@ -164,6 +166,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Information that describes the content of the message, if any
+        /// </summary>
+        /// <value>Information that describes the content of the message, if any</value>
+        [DataMember(Name="messageMetadata", EmitDefaultValue=false)]
+        public ConversationMessageMetadata MessageMetadata { get; set; }
+
+
+
+        /// <summary>
         /// Provider specific error information for a communication.
         /// </summary>
         /// <value>Provider specific error information for a communication.</value>
@@ -187,6 +198,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessageTime: ").Append(MessageTime).Append("\n");
             sb.Append("  Media: ").Append(Media).Append("\n");
             sb.Append("  Stickers: ").Append(Stickers).Append("\n");
+            sb.Append("  MessageMetadata: ").Append(MessageMetadata).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -264,6 +276,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Stickers.SequenceEqual(other.Stickers)
                 ) &&
                 (
+                    this.MessageMetadata == other.MessageMetadata ||
+                    this.MessageMetadata != null &&
+                    this.MessageMetadata.Equals(other.MessageMetadata)
+                ) &&
+                (
                     this.ErrorInfo == other.ErrorInfo ||
                     this.ErrorInfo != null &&
                     this.ErrorInfo.Equals(other.ErrorInfo)
@@ -301,6 +318,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Stickers != null)
                     hash = hash * 59 + this.Stickers.GetHashCode();
+
+                if (this.MessageMetadata != null)
+                    hash = hash * 59 + this.MessageMetadata.GetHashCode();
 
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();

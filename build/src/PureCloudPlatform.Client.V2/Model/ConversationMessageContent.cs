@@ -76,6 +76,30 @@ namespace PureCloudPlatform.Client.V2.Model
             Generictemplate,
             
             /// <summary>
+            /// Enum Listtemplate for "ListTemplate"
+            /// </summary>
+            [EnumMember(Value = "ListTemplate")]
+            Listtemplate,
+            
+            /// <summary>
+            /// Enum Postback for "Postback"
+            /// </summary>
+            [EnumMember(Value = "Postback")]
+            Postback,
+            
+            /// <summary>
+            /// Enum Reactions for "Reactions"
+            /// </summary>
+            [EnumMember(Value = "Reactions")]
+            Reactions,
+            
+            /// <summary>
+            /// Enum Mention for "Mention"
+            /// </summary>
+            [EnumMember(Value = "Mention")]
+            Mention,
+            
+            /// <summary>
             /// Enum Card for "Card"
             /// </summary>
             [EnumMember(Value = "Card")]
@@ -85,7 +109,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Carousel for "Carousel"
             /// </summary>
             [EnumMember(Value = "Carousel")]
-            Carousel
+            Carousel,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
         }
         /// <summary>
         /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.

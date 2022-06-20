@@ -13,18 +13,20 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ExternalContactsContactChangedTopicEntity
+    /// JourneySessionEventsNotificationOutcome
     /// </summary>
     [DataContract]
-    public partial class ExternalContactsContactChangedTopicEntity :  IEquatable<ExternalContactsContactChangedTopicEntity>
+    public partial class JourneySessionEventsNotificationOutcome :  IEquatable<JourneySessionEventsNotificationOutcome>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ExternalContactsContactChangedTopicEntity" /> class.
+        /// Initializes a new instance of the <see cref="JourneySessionEventsNotificationOutcome" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        public ExternalContactsContactChangedTopicEntity(string Id = null)
+        /// <param name="SelfUri">SelfUri.</param>
+        public JourneySessionEventsNotificationOutcome(string Id = null, string SelfUri = null)
         {
             this.Id = Id;
+            this.SelfUri = SelfUri;
             
         }
         
@@ -37,6 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Id { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets SelfUri
+        /// </summary>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,9 +54,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ExternalContactsContactChangedTopicEntity {\n");
+            sb.Append("class JourneySessionEventsNotificationOutcome {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -72,15 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ExternalContactsContactChangedTopicEntity);
+            return this.Equals(obj as JourneySessionEventsNotificationOutcome);
         }
 
         /// <summary>
-        /// Returns true if ExternalContactsContactChangedTopicEntity instances are equal
+        /// Returns true if JourneySessionEventsNotificationOutcome instances are equal
         /// </summary>
-        /// <param name="other">Instance of ExternalContactsContactChangedTopicEntity to be compared</param>
+        /// <param name="other">Instance of JourneySessionEventsNotificationOutcome to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ExternalContactsContactChangedTopicEntity other)
+        public bool Equals(JourneySessionEventsNotificationOutcome other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -91,6 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -107,6 +123,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

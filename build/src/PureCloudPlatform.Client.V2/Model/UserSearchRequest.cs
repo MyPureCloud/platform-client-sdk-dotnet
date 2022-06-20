@@ -76,7 +76,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Zoomphone for "ZoomPhone"
             /// </summary>
             [EnumMember(Value = "ZoomPhone")]
-            Zoomphone
+            Zoomphone,
+            
+            /// <summary>
+            /// Enum Eightbyeight for "EightByEight"
+            /// </summary>
+            [EnumMember(Value = "EightByEight")]
+            Eightbyeight
         }
         /// <summary>
         /// The sort order for results

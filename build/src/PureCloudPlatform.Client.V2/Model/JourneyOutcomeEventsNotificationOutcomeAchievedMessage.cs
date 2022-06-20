@@ -31,7 +31,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Geolocation">Geolocation.</param>
         /// <param name="MktCampaign">MktCampaign.</param>
         /// <param name="VisitReferrer">VisitReferrer.</param>
-        public JourneyOutcomeEventsNotificationOutcomeAchievedMessage(JourneyOutcomeEventsNotificationOutcome Outcome = null, JourneyOutcomeEventsNotificationBrowser Browser = null, DateTime? VisitCreatedDate = null, string IpAddress = null, string IpOrganization = null, string UserAgentString = null, JourneyOutcomeEventsNotificationDevice Device = null, JourneyOutcomeEventsNotificationGeoLocation Geolocation = null, JourneyOutcomeEventsNotificationMktCampaign MktCampaign = null, JourneyOutcomeEventsNotificationReferrer VisitReferrer = null)
+        /// <param name="AssociatedValue">AssociatedValue.</param>
+        public JourneyOutcomeEventsNotificationOutcomeAchievedMessage(JourneyOutcomeEventsNotificationOutcome Outcome = null, JourneyOutcomeEventsNotificationBrowser Browser = null, DateTime? VisitCreatedDate = null, string IpAddress = null, string IpOrganization = null, string UserAgentString = null, JourneyOutcomeEventsNotificationDevice Device = null, JourneyOutcomeEventsNotificationGeoLocation Geolocation = null, JourneyOutcomeEventsNotificationMktCampaign MktCampaign = null, JourneyOutcomeEventsNotificationReferrer VisitReferrer = null, JourneyOutcomeEventsNotificationAssociatedValue AssociatedValue = null)
         {
             this.Outcome = Outcome;
             this.Browser = Browser;
@@ -43,6 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Geolocation = Geolocation;
             this.MktCampaign = MktCampaign;
             this.VisitReferrer = VisitReferrer;
+            this.AssociatedValue = AssociatedValue;
             
         }
         
@@ -127,6 +129,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public JourneyOutcomeEventsNotificationReferrer VisitReferrer { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AssociatedValue
+        /// </summary>
+        [DataMember(Name="associatedValue", EmitDefaultValue=false)]
+        public JourneyOutcomeEventsNotificationAssociatedValue AssociatedValue { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Geolocation: ").Append(Geolocation).Append("\n");
             sb.Append("  MktCampaign: ").Append(MktCampaign).Append("\n");
             sb.Append("  VisitReferrer: ").Append(VisitReferrer).Append("\n");
+            sb.Append("  AssociatedValue: ").Append(AssociatedValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -235,6 +246,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.VisitReferrer == other.VisitReferrer ||
                     this.VisitReferrer != null &&
                     this.VisitReferrer.Equals(other.VisitReferrer)
+                ) &&
+                (
+                    this.AssociatedValue == other.AssociatedValue ||
+                    this.AssociatedValue != null &&
+                    this.AssociatedValue.Equals(other.AssociatedValue)
                 );
         }
 
@@ -278,6 +294,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.VisitReferrer != null)
                     hash = hash * 59 + this.VisitReferrer.GetHashCode();
+
+                if (this.AssociatedValue != null)
+                    hash = hash * 59 + this.AssociatedValue.GetHashCode();
 
                 return hash;
             }

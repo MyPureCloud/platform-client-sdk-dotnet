@@ -411,7 +411,7 @@ namespace Example
             var languageCode = en-US;  // string | Language code, format: iso2-LOCALE
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional) 
+            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var name = name_example;  // string | Filter to return the categories that starts with the given category name. (optional) 
 
@@ -439,7 +439,7 @@ namespace Example
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional]  |
+| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **name** | **string**| Filter to return the categories that starts with the given category name. | [optional]  |
 {: class="table table-striped"}
@@ -626,7 +626,7 @@ namespace Example
             var languageCode = en-US;  // string | Language code, format: iso2-LOCALE
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional) 
+            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var categories = categories_example;  // string | Filter by categories ids, comma separated values expected. (optional) 
             var title = title_example;  // string | Filter by document title. (optional) 
@@ -658,7 +658,7 @@ namespace Example
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional]  |
+| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **categories** | **string**| Filter by categories ids, comma separated values expected. | [optional]  |
 | **title** | **string**| Filter by document title. | [optional]  |
@@ -849,7 +849,7 @@ namespace Example
             var languageCode = en-US;  // string | Language code, format: iso2-LOCALE
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional) 
+            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var knowledgeDocumentsState = knowledgeDocumentsState_example;  // string | Return the training with the specified state of the trained documents. (optional) 
 
@@ -877,7 +877,7 @@ namespace Example
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional]  |
+| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **knowledgeDocumentsState** | **string**| Return the training with the specified state of the trained documents. | [optional] <br />**Values**: Draft, Active, Discarded, Archived |
 {: class="table table-striped"}
@@ -924,7 +924,7 @@ namespace Example
             var apiInstance = new KnowledgeApi();
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional) 
+            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var name = name_example;  // string | Filter by Name. (optional) 
             var coreLanguage = coreLanguage_example;  // string | Filter by core language. (optional) 
@@ -954,7 +954,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional]  |
+| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **name** | **string**| Filter by Name. | [optional]  |
 | **coreLanguage** | **string**| Filter by core language. | [optional] <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT |

@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Event for "Event"
             /// </summary>
             [EnumMember(Value = "Event")]
-            Event
+            Event,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
         }
         /// <summary>
         /// Message receipt status, only used with type Receipt.

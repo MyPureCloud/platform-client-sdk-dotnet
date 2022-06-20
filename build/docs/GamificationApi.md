@@ -16,7 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGamificationMetricdefinitions**](GamificationApi.html#getgamificationmetricdefinitions) | **GET** /api/v2/gamification/metricdefinitions | All metric definitions |
 | [**GetGamificationMetrics**](GamificationApi.html#getgamificationmetrics) | **GET** /api/v2/gamification/metrics | All gamified metrics for a given profile |
 | [**GetGamificationProfile**](GamificationApi.html#getgamificationprofile) | **GET** /api/v2/gamification/profiles/{profileId} | Performance profile by id |
-| [**GetGamificationProfileMembers**](GamificationApi.html#getgamificationprofilemembers) | **GET** /api/v2/gamification/profiles/{performanceProfileId}/members | Members of a given performance profile |
+| [**GetGamificationProfileMembers**](GamificationApi.html#getgamificationprofilemembers) | **GET** /api/v2/gamification/profiles/{profileId}/members | Members of a given performance profile |
 | [**GetGamificationProfileMetric**](GamificationApi.html#getgamificationprofilemetric) | **GET** /api/v2/gamification/profiles/{profileId}/metrics/{metricId} | Performance profile gamified metric by id |
 | [**GetGamificationProfileMetrics**](GamificationApi.html#getgamificationprofilemetrics) | **GET** /api/v2/gamification/profiles/{profileId}/metrics | All gamified metrics for a given performance profile |
 | [**GetGamificationProfileMetricsObjectivedetails**](GamificationApi.html#getgamificationprofilemetricsobjectivedetails) | **GET** /api/v2/gamification/profiles/{profileId}/metrics/objectivedetails | All metrics for a given performance profile with objective details such as order and maxPoints |
@@ -46,8 +46,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostGamificationMetrics**](GamificationApi.html#postgamificationmetrics) | **POST** /api/v2/gamification/metrics | Creates a gamified metric with a given metric definition and metric objective |
 | [**PostGamificationProfileActivate**](GamificationApi.html#postgamificationprofileactivate) | **POST** /api/v2/gamification/profiles/{profileId}/activate | Activate a performance profile |
 | [**PostGamificationProfileDeactivate**](GamificationApi.html#postgamificationprofiledeactivate) | **POST** /api/v2/gamification/profiles/{profileId}/deactivate | Deactivate a performance profile |
-| [**PostGamificationProfileMembers**](GamificationApi.html#postgamificationprofilemembers) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/members | Assign members to a given performance profile |
-| [**PostGamificationProfileMembersValidate**](GamificationApi.html#postgamificationprofilemembersvalidate) | **POST** /api/v2/gamification/profiles/{performanceProfileId}/members/validate | Validate member assignment |
+| [**PostGamificationProfileMembers**](GamificationApi.html#postgamificationprofilemembers) | **POST** /api/v2/gamification/profiles/{profileId}/members | Assign members to a given performance profile |
+| [**PostGamificationProfileMembersValidate**](GamificationApi.html#postgamificationprofilemembersvalidate) | **POST** /api/v2/gamification/profiles/{profileId}/members/validate | Validate member assignment |
 | [**PostGamificationProfileMetricLink**](GamificationApi.html#postgamificationprofilemetriclink) | **POST** /api/v2/gamification/profiles/{sourceProfileId}/metrics/{sourceMetricId}/link | Creates a linked metric |
 | [**PostGamificationProfileMetrics**](GamificationApi.html#postgamificationprofilemetrics) | **POST** /api/v2/gamification/profiles/{profileId}/metrics | Creates a gamified metric with a given metric definition and metric objective under in a performance profile |
 | [**PostGamificationProfiles**](GamificationApi.html#postgamificationprofiles) | **POST** /api/v2/gamification/profiles | Create a new custom performance profile |
@@ -662,7 +662,7 @@ namespace Example
 
 <a name="getgamificationprofilemembers"></a>
 
-## [**MemberListing**](MemberListing.html) GetGamificationProfileMembers (string performanceProfileId)
+## [**MemberListing**](MemberListing.html) GetGamificationProfileMembers (string profileId)
 
 
 
@@ -696,12 +696,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new GamificationApi();
-            var performanceProfileId = performanceProfileId_example;  // string | Performance Profile Id
+            var profileId = profileId_example;  // string | Profile Id
 
             try
             { 
                 // Members of a given performance profile
-                MemberListing result = apiInstance.GetGamificationProfileMembers(performanceProfileId);
+                MemberListing result = apiInstance.GetGamificationProfileMembers(profileId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -718,7 +718,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **performanceProfileId** | **string**| Performance Profile Id |  |
+| **profileId** | **string**| Profile Id |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -798,7 +798,7 @@ namespace Example
 
 <a name="getgamificationprofilemetrics"></a>
 
-## [**GetMetricResponse**](GetMetricResponse.html) GetGamificationProfileMetrics (string profileId, List<string> expand = null, String workday = null)
+## [**GetMetricResponse**](GetMetricResponse.html) GetGamificationProfileMetrics (string profileId, List<string> expand = null, String workday = null, string metricIds = null)
 
 
 
@@ -837,11 +837,12 @@ namespace Example
             var profileId = profileId_example;  // string | Performance Profile Id
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
             var workday = 2013-10-20;  // String | The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var metricIds = metricIds_example;  // string | List of metric ids to filter the response (Optional, comma-separated). (optional) 
 
             try
             { 
                 // All gamified metrics for a given performance profile
-                GetMetricResponse result = apiInstance.GetGamificationProfileMetrics(profileId, expand, workday);
+                GetMetricResponse result = apiInstance.GetGamificationProfileMetrics(profileId, expand, workday, metricIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -861,6 +862,7 @@ namespace Example
 | **profileId** | **string**| Performance Profile Id |  |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: objective |
 | **workday** | **String**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+| **metricIds** | **string**| List of metric ids to filter the response (Optional, comma-separated). | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2673,7 +2675,7 @@ namespace Example
 
 <a name="postgamificationprofilemembers"></a>
 
-## [**Assignment**](Assignment.html) PostGamificationProfileMembers (string performanceProfileId, AssignUsers body)
+## [**Assignment**](Assignment.html) PostGamificationProfileMembers (string profileId, AssignUsers body)
 
 
 
@@ -2707,13 +2709,13 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new GamificationApi();
-            var performanceProfileId = performanceProfileId_example;  // string | Performance Profile Id
+            var profileId = profileId_example;  // string | Profile Id
             var body = new AssignUsers(); // AssignUsers | assignUsers
 
             try
             { 
                 // Assign members to a given performance profile
-                Assignment result = apiInstance.PostGamificationProfileMembers(performanceProfileId, body);
+                Assignment result = apiInstance.PostGamificationProfileMembers(profileId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2730,7 +2732,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **performanceProfileId** | **string**| Performance Profile Id |  |
+| **profileId** | **string**| Profile Id |  |
 | **body** | [**AssignUsers**](AssignUsers.html)| assignUsers |  |
 {: class="table table-striped"}
 
@@ -2740,7 +2742,7 @@ namespace Example
 
 <a name="postgamificationprofilemembersvalidate"></a>
 
-## [**AssignmentValidation**](AssignmentValidation.html) PostGamificationProfileMembersValidate (string performanceProfileId, ValidateAssignUsers body)
+## [**AssignmentValidation**](AssignmentValidation.html) PostGamificationProfileMembersValidate (string profileId, ValidateAssignUsers body)
 
 
 
@@ -2774,13 +2776,13 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new GamificationApi();
-            var performanceProfileId = performanceProfileId_example;  // string | Performance Profile Id
+            var profileId = profileId_example;  // string | Profile Id
             var body = new ValidateAssignUsers(); // ValidateAssignUsers | memberAssignments
 
             try
             { 
                 // Validate member assignment
-                AssignmentValidation result = apiInstance.PostGamificationProfileMembersValidate(performanceProfileId, body);
+                AssignmentValidation result = apiInstance.PostGamificationProfileMembersValidate(profileId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2797,7 +2799,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **performanceProfileId** | **string**| Performance Profile Id |  |
+| **profileId** | **string**| Profile Id |  |
 | **body** | [**ValidateAssignUsers**](ValidateAssignUsers.html)| memberAssignments |  |
 {: class="table table-striped"}
 

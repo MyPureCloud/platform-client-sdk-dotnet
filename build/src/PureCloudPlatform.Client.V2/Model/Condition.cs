@@ -40,6 +40,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Wrapupcondition,
             
             /// <summary>
+            /// Enum Systemdispositioncondition for "systemDispositionCondition"
+            /// </summary>
+            [EnumMember(Value = "systemDispositionCondition")]
+            Systemdispositioncondition,
+            
+            /// <summary>
             /// Enum Contactattributecondition for "contactAttributeCondition"
             /// </summary>
             [EnumMember(Value = "contactAttributeCondition")]

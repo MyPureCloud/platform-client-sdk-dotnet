@@ -17,6 +17,7 @@ title: JourneyWebEventsNotificationOutcomeAchievedMessage
 | **Geolocation** | [**JourneyWebEventsNotificationGeoLocation**](JourneyWebEventsNotificationGeoLocation.html) |  | [optional] |
 | **MktCampaign** | [**JourneyWebEventsNotificationMktCampaign**](JourneyWebEventsNotificationMktCampaign.html) |  | [optional] |
 | **VisitReferrer** | [**JourneyWebEventsNotificationReferrer**](JourneyWebEventsNotificationReferrer.html) |  | [optional] |
+| **AssociatedValue** | [**JourneyWebEventsNotificationAssociatedValue**](JourneyWebEventsNotificationAssociatedValue.html) |  | [optional] |
 {: class="table table-striped"}
 
 

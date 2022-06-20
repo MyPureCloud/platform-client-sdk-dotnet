@@ -508,7 +508,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AgentInteractionsMeView for "AGENT_INTERACTIONS_ME_VIEW"
             /// </summary>
             [EnumMember(Value = "AGENT_INTERACTIONS_ME_VIEW")]
-            AgentInteractionsMeView
+            AgentInteractionsMeView,
+            
+            /// <summary>
+            /// Enum DataActionsPerformanceSummaryView for "DATA_ACTIONS_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "DATA_ACTIONS_PERFORMANCE_SUMMARY_VIEW")]
+            DataActionsPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum DataActionsPerformanceDetailView for "DATA_ACTIONS_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "DATA_ACTIONS_PERFORMANCE_DETAIL_VIEW")]
+            DataActionsPerformanceDetailView
         }
         /// <summary>
         /// Gets or Sets ExportErrorMessagesType

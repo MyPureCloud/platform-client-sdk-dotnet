@@ -1503,7 +1503,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Reset for "Reset"
             /// </summary>
             [EnumMember(Value = "Reset")]
-            Reset
+            Reset,
+            
+            /// <summary>
+            /// Enum Unarchive for "Unarchive"
+            /// </summary>
+            [EnumMember(Value = "Unarchive")]
+            Unarchive
         }
         /// <summary>
         /// Name of the Entity

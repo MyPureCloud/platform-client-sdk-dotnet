@@ -48,7 +48,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum OpenAction for "OPEN_ACTION"
             /// </summary>
             [EnumMember(Value = "OPEN_ACTION")]
-            OpenAction
+            OpenAction,
+            
+            /// <summary>
+            /// Enum Workitem for "WORKITEM"
+            /// </summary>
+            [EnumMember(Value = "WORKITEM")]
+            Workitem
         }
 
         /// <summary>

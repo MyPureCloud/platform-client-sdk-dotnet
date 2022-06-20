@@ -271,6 +271,39 @@ namespace PureCloudPlatform.Client.V2.Model
             Instagram
         }
         /// <summary>
+        /// The initial connection state of this communication.
+        /// </summary>
+        /// <value>The initial connection state of this communication.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InitialStateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Alerting for "alerting"
+            /// </summary>
+            [EnumMember(Value = "alerting")]
+            Alerting,
+            
+            /// <summary>
+            /// Enum Connected for "connected"
+            /// </summary>
+            [EnumMember(Value = "connected")]
+            Connected,
+            
+            /// <summary>
+            /// Enum Disconnected for "disconnected"
+            /// </summary>
+            [EnumMember(Value = "disconnected")]
+            Disconnected
+        }
+        /// <summary>
         /// The connection state of this communication.
         /// </summary>
         /// <value>The connection state of this communication.</value>
@@ -294,6 +327,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Indicates the type of message platform from which the message originated.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        /// <summary>
+        /// The initial connection state of this communication.
+        /// </summary>
+        /// <value>The initial connection state of this communication.</value>
+        [DataMember(Name="initialState", EmitDefaultValue=false)]
+        public InitialStateEnum? InitialState { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Message" /> class.
         /// </summary>
@@ -324,7 +363,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AfterCallWork">After-call work for the communication..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
-        public Message(StateEnum? State = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, bool? Authenticated = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, JourneyContext JourneyContext = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
+        /// <param name="InitialState">The initial connection state of this communication..</param>
+        public Message(StateEnum? State = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, bool? Authenticated = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, JourneyContext JourneyContext = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, InitialStateEnum? InitialState = null)
         {
             this.State = State;
             this.Id = Id;
@@ -353,6 +393,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
             this.AgentAssistantId = AgentAssistantId;
+            this.InitialState = InitialState;
             
         }
         
@@ -571,6 +612,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public string AgentAssistantId { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -607,6 +650,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
+            sb.Append("  InitialState: ").Append(InitialState).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -781,6 +825,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentAssistantId == other.AgentAssistantId ||
                     this.AgentAssistantId != null &&
                     this.AgentAssistantId.Equals(other.AgentAssistantId)
+                ) &&
+                (
+                    this.InitialState == other.InitialState ||
+                    this.InitialState != null &&
+                    this.InitialState.Equals(other.InitialState)
                 );
         }
 
@@ -875,6 +924,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AgentAssistantId != null)
                     hash = hash * 59 + this.AgentAssistantId.GetHashCode();
+
+                if (this.InitialState != null)
+                    hash = hash * 59 + this.InitialState.GetHashCode();
 
                 return hash;
             }

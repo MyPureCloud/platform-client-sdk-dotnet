@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Zoomphone for "ZoomPhone"
             /// </summary>
             [EnumMember(Value = "ZoomPhone")]
-            Zoomphone
+            Zoomphone,
+            
+            /// <summary>
+            /// Enum Eightbyeight for "EightByEight"
+            /// </summary>
+            [EnumMember(Value = "EightByEight")]
+            Eightbyeight
         }
         /// <summary>
         /// integrationPresenceType
@@ -110,6 +116,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// badgeIcon
+        /// </summary>
+        /// <value>badgeIcon</value>
+        [DataMember(Name="badgeIcons", EmitDefaultValue=false)]
+        public Dictionary<string, UCIcon> BadgeIcons { get; private set; }
+
+
+
+        /// <summary>
         /// i10n
         /// </summary>
         /// <value>i10n</value>
@@ -141,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IntegrationPresenceSource: ").Append(IntegrationPresenceSource).Append("\n");
             sb.Append("  PbxPermission: ").Append(PbxPermission).Append("\n");
             sb.Append("  Icon: ").Append(Icon).Append("\n");
+            sb.Append("  BadgeIcons: ").Append(BadgeIcons).Append("\n");
             sb.Append("  I10n: ").Append(I10n).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -214,6 +230,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Icon.Equals(other.Icon)
                 ) &&
                 (
+                    this.BadgeIcons == other.BadgeIcons ||
+                    this.BadgeIcons != null &&
+                    this.BadgeIcons.SequenceEqual(other.BadgeIcons)
+                ) &&
+                (
                     this.I10n == other.I10n ||
                     this.I10n != null &&
                     this.I10n.SequenceEqual(other.I10n)
@@ -253,6 +274,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Icon != null)
                     hash = hash * 59 + this.Icon.GetHashCode();
+
+                if (this.BadgeIcons != null)
+                    hash = hash * 59 + this.BadgeIcons.GetHashCode();
 
                 if (this.I10n != null)
                     hash = hash * 59 + this.I10n.GetHashCode();

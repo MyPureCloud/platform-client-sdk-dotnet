@@ -162,10 +162,19 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutConversationParticipantFlaggedreason**](ConversationsApi.html#putconversationparticipantflaggedreason) | **PUT** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Set flagged reason on conversation participant to indicate bad conversation quality. |
 | [**PutConversationTags**](ConversationsApi.html#putconversationtags) | **PUT** /api/v2/conversations/{conversationId}/tags | Update the tags on a conversation. |
 | [**PutConversationsCallParticipantCommunicationUuidata**](ConversationsApi.html#putconversationscallparticipantcommunicationuuidata) | **PUT** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata | Set uuiData to be sent on future commands. |
+| [**PutConversationsCallRecordingstate**](ConversationsApi.html#putconversationscallrecordingstate) | **PUT** /api/v2/conversations/calls/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsCallbackRecordingstate**](ConversationsApi.html#putconversationscallbackrecordingstate) | **PUT** /api/v2/conversations/callbacks/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsChatRecordingstate**](ConversationsApi.html#putconversationschatrecordingstate) | **PUT** /api/v2/conversations/chats/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsCobrowsesessionRecordingstate**](ConversationsApi.html#putconversationscobrowsesessionrecordingstate) | **PUT** /api/v2/conversations/cobrowsesessions/{conversationId}/recordingstate | Update a conversation by setting its recording state |
 | [**PutConversationsEmailMessagesDraft**](ConversationsApi.html#putconversationsemailmessagesdraft) | **PUT** /api/v2/conversations/emails/{conversationId}/messages/draft | Update conversation draft reply |
+| [**PutConversationsEmailRecordingstate**](ConversationsApi.html#putconversationsemailrecordingstate) | **PUT** /api/v2/conversations/emails/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsMessageRecordingstate**](ConversationsApi.html#putconversationsmessagerecordingstate) | **PUT** /api/v2/conversations/messages/{conversationId}/recordingstate | Update a conversation by setting its recording state |
 | [**PutConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#putconversationsmessagingintegrationslineintegrationid) | **PUT** /api/v2/conversations/messaging/integrations/line/{integrationId} | Update a LINE messenger integration |
 | [**PutConversationsMessagingSupportedcontentDefault**](ConversationsApi.html#putconversationsmessagingsupportedcontentdefault) | **PUT** /api/v2/conversations/messaging/supportedcontent/default | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
 | [**PutConversationsMessagingThreadingtimeline**](ConversationsApi.html#putconversationsmessagingthreadingtimeline) | **PUT** /api/v2/conversations/messaging/threadingtimeline | Update conversation threading window timeline for each messaging type |
+| [**PutConversationsScreenshareRecordingstate**](ConversationsApi.html#putconversationsscreensharerecordingstate) | **PUT** /api/v2/conversations/screenshares/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsSocialRecordingstate**](ConversationsApi.html#putconversationssocialrecordingstate) | **PUT** /api/v2/conversations/socials/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsVideoRecordingstate**](ConversationsApi.html#putconversationsvideorecordingstate) | **PUT** /api/v2/conversations/videos/{conversationId}/recordingstate | Update a conversation by setting its recording state |
 {: class="table table-striped"}
 
 <a name="deleteanalyticsconversationsdetailsjob"></a>
@@ -10473,6 +10482,274 @@ namespace Example
 
 **Object**
 
+<a name="putconversationscallrecordingstate"></a>
+
+## **string** PutConversationsCallRecordingstate (string conversationId, SetRecordingState body)
+
+
+
+Update a conversation by setting its recording state
+
+
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsCallRecordingstateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var body = new SetRecordingState(); // SetRecordingState | SetRecordingState
+
+            try
+            { 
+                // Update a conversation by setting its recording state
+                string result = apiInstance.PutConversationsCallRecordingstate(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsCallRecordingstate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="putconversationscallbackrecordingstate"></a>
+
+## **string** PutConversationsCallbackRecordingstate (string conversationId, SetRecordingState body)
+
+
+
+Update a conversation by setting its recording state
+
+
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsCallbackRecordingstateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var body = new SetRecordingState(); // SetRecordingState | SetRecordingState
+
+            try
+            { 
+                // Update a conversation by setting its recording state
+                string result = apiInstance.PutConversationsCallbackRecordingstate(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsCallbackRecordingstate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="putconversationschatrecordingstate"></a>
+
+## **string** PutConversationsChatRecordingstate (string conversationId, SetRecordingState body)
+
+
+
+Update a conversation by setting its recording state
+
+
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsChatRecordingstateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var body = new SetRecordingState(); // SetRecordingState | SetRecordingState
+
+            try
+            { 
+                // Update a conversation by setting its recording state
+                string result = apiInstance.PutConversationsChatRecordingstate(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsChatRecordingstate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="putconversationscobrowsesessionrecordingstate"></a>
+
+## **string** PutConversationsCobrowsesessionRecordingstate (string conversationId, SetRecordingState body)
+
+
+
+Update a conversation by setting its recording state
+
+
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsCobrowsesessionRecordingstateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var body = new SetRecordingState(); // SetRecordingState | SetRecordingState
+
+            try
+            { 
+                // Update a conversation by setting its recording state
+                string result = apiInstance.PutConversationsCobrowsesessionRecordingstate(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsCobrowsesessionRecordingstate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
 <a name="putconversationsemailmessagesdraft"></a>
 
 ## [**EmailMessage**](EmailMessage.html) PutConversationsEmailMessagesDraft (string conversationId, EmailMessage body)
@@ -10538,6 +10815,140 @@ namespace Example
 ### Return type
 
 [**EmailMessage**](EmailMessage.html)
+
+<a name="putconversationsemailrecordingstate"></a>
+
+## **string** PutConversationsEmailRecordingstate (string conversationId, SetRecordingState body)
+
+
+
+Update a conversation by setting its recording state
+
+
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsEmailRecordingstateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var body = new SetRecordingState(); // SetRecordingState | SetRecordingState
+
+            try
+            { 
+                // Update a conversation by setting its recording state
+                string result = apiInstance.PutConversationsEmailRecordingstate(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsEmailRecordingstate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="putconversationsmessagerecordingstate"></a>
+
+## **string** PutConversationsMessageRecordingstate (string conversationId, SetRecordingState body)
+
+
+
+Update a conversation by setting its recording state
+
+
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsMessageRecordingstateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var body = new SetRecordingState(); // SetRecordingState | SetRecordingState
+
+            try
+            { 
+                // Update a conversation by setting its recording state
+                string result = apiInstance.PutConversationsMessageRecordingstate(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsMessageRecordingstate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
 
 <a name="putconversationsmessagingintegrationslineintegrationid"></a>
 
@@ -10739,4 +11150,205 @@ namespace Example
 ### Return type
 
 [**ConversationThreadingWindow**](ConversationThreadingWindow.html)
+
+<a name="putconversationsscreensharerecordingstate"></a>
+
+## **string** PutConversationsScreenshareRecordingstate (string conversationId, SetRecordingState body)
+
+
+
+Update a conversation by setting its recording state
+
+
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsScreenshareRecordingstateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var body = new SetRecordingState(); // SetRecordingState | SetRecordingState
+
+            try
+            { 
+                // Update a conversation by setting its recording state
+                string result = apiInstance.PutConversationsScreenshareRecordingstate(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsScreenshareRecordingstate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="putconversationssocialrecordingstate"></a>
+
+## **string** PutConversationsSocialRecordingstate (string conversationId, SetRecordingState body)
+
+
+
+Update a conversation by setting its recording state
+
+
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsSocialRecordingstateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var body = new SetRecordingState(); // SetRecordingState | SetRecordingState
+
+            try
+            { 
+                // Update a conversation by setting its recording state
+                string result = apiInstance.PutConversationsSocialRecordingstate(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsSocialRecordingstate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="putconversationsvideorecordingstate"></a>
+
+## **string** PutConversationsVideoRecordingstate (string conversationId, SetRecordingState body)
+
+
+
+Update a conversation by setting its recording state
+
+
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsVideoRecordingstateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var body = new SetRecordingState(); // SetRecordingState | SetRecordingState
+
+            try
+            { 
+                // Update a conversation by setting its recording state
+                string result = apiInstance.PutConversationsVideoRecordingstate(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsVideoRecordingstate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
 

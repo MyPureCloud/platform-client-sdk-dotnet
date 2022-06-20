@@ -10,6 +10,7 @@ title: JourneyOutcomeEventsNotificationOutcomeAttributionMessage
 | **Outcome** | [**JourneyOutcomeEventsNotificationOutcome**](JourneyOutcomeEventsNotificationOutcome.html) |  | [optional] |
 | **OutcomeTouchpoints** | [**List&lt;JourneyOutcomeEventsNotificationOutcomeTouchpoint&gt;**](JourneyOutcomeEventsNotificationOutcomeTouchpoint.html) |  | [optional] |
 | **SegmentAssignments** | [**List&lt;JourneyOutcomeEventsNotificationSegment&gt;**](JourneyOutcomeEventsNotificationSegment.html) |  | [optional] |
+| **AssociatedValue** | [**JourneyOutcomeEventsNotificationAssociatedValue**](JourneyOutcomeEventsNotificationAssociatedValue.html) |  | [optional] |
 {: class="table table-striped"}
 
 

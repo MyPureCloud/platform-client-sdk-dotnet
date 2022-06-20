@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Outcome">Outcome.</param>
         /// <param name="OutcomeTouchpoints">OutcomeTouchpoints.</param>
         /// <param name="SegmentAssignments">SegmentAssignments.</param>
-        public JourneyOutcomeEventsNotificationOutcomeAttributionMessage(JourneyOutcomeEventsNotificationOutcome Outcome = null, List<JourneyOutcomeEventsNotificationOutcomeTouchpoint> OutcomeTouchpoints = null, List<JourneyOutcomeEventsNotificationSegment> SegmentAssignments = null)
+        /// <param name="AssociatedValue">AssociatedValue.</param>
+        public JourneyOutcomeEventsNotificationOutcomeAttributionMessage(JourneyOutcomeEventsNotificationOutcome Outcome = null, List<JourneyOutcomeEventsNotificationOutcomeTouchpoint> OutcomeTouchpoints = null, List<JourneyOutcomeEventsNotificationSegment> SegmentAssignments = null, JourneyOutcomeEventsNotificationAssociatedValue AssociatedValue = null)
         {
             this.Outcome = Outcome;
             this.OutcomeTouchpoints = OutcomeTouchpoints;
             this.SegmentAssignments = SegmentAssignments;
+            this.AssociatedValue = AssociatedValue;
             
         }
         
@@ -57,6 +59,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<JourneyOutcomeEventsNotificationSegment> SegmentAssignments { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AssociatedValue
+        /// </summary>
+        [DataMember(Name="associatedValue", EmitDefaultValue=false)]
+        public JourneyOutcomeEventsNotificationAssociatedValue AssociatedValue { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -69,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Outcome: ").Append(Outcome).Append("\n");
             sb.Append("  OutcomeTouchpoints: ").Append(OutcomeTouchpoints).Append("\n");
             sb.Append("  SegmentAssignments: ").Append(SegmentAssignments).Append("\n");
+            sb.Append("  AssociatedValue: ").Append(AssociatedValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,6 +134,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SegmentAssignments == other.SegmentAssignments ||
                     this.SegmentAssignments != null &&
                     this.SegmentAssignments.SequenceEqual(other.SegmentAssignments)
+                ) &&
+                (
+                    this.AssociatedValue == other.AssociatedValue ||
+                    this.AssociatedValue != null &&
+                    this.AssociatedValue.Equals(other.AssociatedValue)
                 );
         }
 
@@ -145,6 +161,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SegmentAssignments != null)
                     hash = hash * 59 + this.SegmentAssignments.GetHashCode();
+
+                if (this.AssociatedValue != null)
+                    hash = hash * 59 + this.AssociatedValue.GetHashCode();
 
                 return hash;
             }

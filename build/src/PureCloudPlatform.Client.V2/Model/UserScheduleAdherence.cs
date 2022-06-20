@@ -445,7 +445,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The business unit to which this user belongs</value>
         [DataMember(Name="businessUnit", EmitDefaultValue=false)]
-        public BusinessUnit BusinessUnit { get; private set; }
+        public BusinessUnitReference BusinessUnit { get; private set; }
 
 
 
@@ -454,7 +454,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The management unit to which this user belongs</value>
         [DataMember(Name="managementUnit", EmitDefaultValue=false)]
-        public ManagementUnit ManagementUnit { get; private set; }
+        public ManagementUnitReference ManagementUnit { get; private set; }
 
 
 
@@ -463,7 +463,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The team to which this user belongs</value>
         [DataMember(Name="team", EmitDefaultValue=false)]
-        public Team Team { get; private set; }
+        public TeamReference Team { get; private set; }
 
 
 

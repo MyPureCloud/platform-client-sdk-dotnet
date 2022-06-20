@@ -121,7 +121,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nlnl for "nl-NL"
             /// </summary>
             [EnumMember(Value = "nl-NL")]
-            Nlnl
+            Nlnl,
+            
+            /// <summary>
+            /// Enum Kokr for "ko-KR"
+            /// </summary>
+            [EnumMember(Value = "ko-KR")]
+            Kokr
         }
         /// <summary>
         /// The mode to use for the general program job, default value is Skip

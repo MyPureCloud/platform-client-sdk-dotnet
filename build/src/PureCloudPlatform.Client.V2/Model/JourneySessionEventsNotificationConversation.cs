@@ -13,18 +13,20 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ExternalContactsUnresolvedContactChangedTopicEntity
+    /// JourneySessionEventsNotificationConversation
     /// </summary>
     [DataContract]
-    public partial class ExternalContactsUnresolvedContactChangedTopicEntity :  IEquatable<ExternalContactsUnresolvedContactChangedTopicEntity>
+    public partial class JourneySessionEventsNotificationConversation :  IEquatable<JourneySessionEventsNotificationConversation>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ExternalContactsUnresolvedContactChangedTopicEntity" /> class.
+        /// Initializes a new instance of the <see cref="JourneySessionEventsNotificationConversation" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        public ExternalContactsUnresolvedContactChangedTopicEntity(string Id = null)
+        /// <param name="SelfUri">SelfUri.</param>
+        public JourneySessionEventsNotificationConversation(string Id = null, string SelfUri = null)
         {
             this.Id = Id;
+            this.SelfUri = SelfUri;
             
         }
         
@@ -37,6 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Id { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets SelfUri
+        /// </summary>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,9 +54,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ExternalContactsUnresolvedContactChangedTopicEntity {\n");
+            sb.Append("class JourneySessionEventsNotificationConversation {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -72,15 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ExternalContactsUnresolvedContactChangedTopicEntity);
+            return this.Equals(obj as JourneySessionEventsNotificationConversation);
         }
 
         /// <summary>
-        /// Returns true if ExternalContactsUnresolvedContactChangedTopicEntity instances are equal
+        /// Returns true if JourneySessionEventsNotificationConversation instances are equal
         /// </summary>
-        /// <param name="other">Instance of ExternalContactsUnresolvedContactChangedTopicEntity to be compared</param>
+        /// <param name="other">Instance of JourneySessionEventsNotificationConversation to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ExternalContactsUnresolvedContactChangedTopicEntity other)
+        public bool Equals(JourneySessionEventsNotificationConversation other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -91,6 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -107,6 +123,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }
