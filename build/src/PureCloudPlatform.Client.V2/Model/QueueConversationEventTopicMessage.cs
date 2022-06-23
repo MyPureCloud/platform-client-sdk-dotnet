@@ -19,11 +19,42 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class QueueConversationEventTopicMessage :  IEquatable<QueueConversationEventTopicMessage>
     {
         /// <summary>
-        /// The connection state of this communication.
+        /// Gets or Sets State
         /// </summary>
-        /// <value>The connection state of this communication.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Alerting for "alerting"
+            /// </summary>
+            [EnumMember(Value = "alerting")]
+            Alerting,
+            
+            /// <summary>
+            /// Enum Connected for "connected"
+            /// </summary>
+            [EnumMember(Value = "connected")]
+            Connected,
+            
+            /// <summary>
+            /// Enum Disconnected for "disconnected"
+            /// </summary>
+            [EnumMember(Value = "disconnected")]
+            Disconnected
+        }
+        /// <summary>
+        /// Gets or Sets InitialState
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InitialStateEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -256,11 +287,15 @@ namespace PureCloudPlatform.Client.V2.Model
             Instagram
         }
         /// <summary>
-        /// The connection state of this communication.
+        /// Gets or Sets State
         /// </summary>
-        /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        /// <summary>
+        /// Gets or Sets InitialState
+        /// </summary>
+        [DataMember(Name="initialState", EmitDefaultValue=false)]
+        public InitialStateEnum? InitialState { get; set; }
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
@@ -277,7 +312,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="QueueConversationEventTopicMessage" /> class.
         /// </summary>
         /// <param name="Id">A globally unique identifier for this communication..</param>
-        /// <param name="State">The connection state of this communication..</param>
+        /// <param name="State">State.</param>
+        /// <param name="InitialState">InitialState.</param>
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
         /// <param name="ErrorInfo">Detailed information about an error response..</param>
         /// <param name="Provider">The source provider of the email..</param>
@@ -299,10 +335,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AfterCallWork">A communication's after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
-        public QueueConversationEventTopicMessage(string Id = null, StateEnum? State = null, bool? Held = null, QueueConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationEventTopicAddress ToAddress = null, QueueConversationEventTopicAddress FromAddress = null, List<QueueConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationEventTopicJourneyContext JourneyContext = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
+        public QueueConversationEventTopicMessage(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, bool? Held = null, QueueConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationEventTopicAddress ToAddress = null, QueueConversationEventTopicAddress FromAddress = null, List<QueueConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationEventTopicJourneyContext JourneyContext = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
         {
             this.Id = Id;
             this.State = State;
+            this.InitialState = InitialState;
             this.Held = Held;
             this.ErrorInfo = ErrorInfo;
             this.Provider = Provider;
@@ -335,6 +372,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
 
 
 
@@ -525,6 +564,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  InitialState: ").Append(InitialState).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
@@ -595,6 +635,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
+                ) &&
+                (
+                    this.InitialState == other.InitialState ||
+                    this.InitialState != null &&
+                    this.InitialState.Equals(other.InitialState)
                 ) &&
                 (
                     this.Held == other.Held ||
@@ -719,6 +764,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+
+                if (this.InitialState != null)
+                    hash = hash * 59 + this.InitialState.GetHashCode();
 
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();

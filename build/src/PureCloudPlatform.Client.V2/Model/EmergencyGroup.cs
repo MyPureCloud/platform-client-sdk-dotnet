@@ -78,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedByApp">The application that created the resource..</param>
         /// <param name="Enabled">True if an emergency is occurring and the associated emergency call flow(s) should be used.  False otherwise..</param>
         /// <param name="EmergencyCallFlows">The emergency call flow(s) to use during an emergency..</param>
-        public EmergencyGroup(string Name = null, Division Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Enabled = null, List<EmergencyCallFlow> EmergencyCallFlows = null)
+        public EmergencyGroup(string Name = null, WritableDivision Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Enabled = null, List<EmergencyCallFlow> EmergencyCallFlows = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -120,7 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public WritableDivision Division { get; set; }
 
 
 

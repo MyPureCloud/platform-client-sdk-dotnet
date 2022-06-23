@@ -8,7 +8,8 @@ title: QueueConversationEventTopicMessage
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
-| **State** | **string** | The connection state of this communication. | [optional] |
+| **State** | **string** |  | [optional] |
+| **InitialState** | **string** |  | [optional] |
 | **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] |
 | **ErrorInfo** | [**QueueConversationEventTopicErrorDetails**](QueueConversationEventTopicErrorDetails.html) | Detailed information about an error response. | [optional] |
 | **Provider** | **string** | The source provider of the email. | [optional] |

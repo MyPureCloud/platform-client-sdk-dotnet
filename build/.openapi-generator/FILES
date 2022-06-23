@@ -700,6 +700,9 @@ docs/ConversationEventTopicJourneyCustomerSession.md
 docs/ConversationEventTopicMessage.md
 docs/ConversationEventTopicMessageDetails.md
 docs/ConversationEventTopicMessageMedia.md
+docs/ConversationEventTopicMessageMetadata.md
+docs/ConversationEventTopicMessageMetadataContent.md
+docs/ConversationEventTopicMessageMetadataEvent.md
 docs/ConversationEventTopicMessageSticker.md
 docs/ConversationEventTopicObject.md
 docs/ConversationEventTopicParticipant.md
@@ -727,6 +730,9 @@ docs/ConversationMessageEventTopicMessageConversation.md
 docs/ConversationMessageEventTopicMessageDetails.md
 docs/ConversationMessageEventTopicMessageMedia.md
 docs/ConversationMessageEventTopicMessageMediaParticipant.md
+docs/ConversationMessageEventTopicMessageMetadata.md
+docs/ConversationMessageEventTopicMessageMetadataContent.md
+docs/ConversationMessageEventTopicMessageMetadataEvent.md
 docs/ConversationMessageEventTopicMessageSticker.md
 docs/ConversationMessageEventTopicScoredAgent.md
 docs/ConversationMessageEventTopicUriReference.md
@@ -1932,6 +1938,7 @@ docs/GetLearningAssignment-example.txt
 docs/GetLearningAssignments-example.txt
 docs/GetLearningAssignmentsMe-example.txt
 docs/GetLearningModule-example.txt
+docs/GetLearningModuleJob-example.txt
 docs/GetLearningModuleRule-example.txt
 docs/GetLearningModuleVersion-example.txt
 docs/GetLearningModules-example.txt
@@ -2676,6 +2683,8 @@ docs/LearningModuleCoverArtRequest.md
 docs/LearningModuleCoverArtResponse.md
 docs/LearningModuleInformStep.md
 docs/LearningModuleInformStepRequest.md
+docs/LearningModuleJobRequest.md
+docs/LearningModuleJobResponse.md
 docs/LearningModulePublishResponse.md
 docs/LearningModuleReassignSummary.md
 docs/LearningModuleRequest.md
@@ -3361,10 +3370,13 @@ docs/PostLanguageunderstandingMinerExecute-example.txt
 docs/PostLanguageunderstandingMinerUploads-example.txt
 docs/PostLanguageunderstandingMiners-example.txt
 docs/PostLearningAssessmentsScoring-example.txt
+docs/PostLearningAssignmentReassign-example.txt
+docs/PostLearningAssignmentReset-example.txt
 docs/PostLearningAssignments-example.txt
 docs/PostLearningAssignmentsAggregatesQuery-example.txt
 docs/PostLearningAssignmentsBulkadd-example.txt
 docs/PostLearningAssignmentsBulkremove-example.txt
+docs/PostLearningModuleJobs-example.txt
 docs/PostLearningModulePublish-example.txt
 docs/PostLearningModules-example.txt
 docs/PostLearningRulesQuery-example.txt
@@ -3924,6 +3936,9 @@ docs/QueueConversationEventTopicJourneyCustomerSession.md
 docs/QueueConversationEventTopicMessage.md
 docs/QueueConversationEventTopicMessageDetails.md
 docs/QueueConversationEventTopicMessageMedia.md
+docs/QueueConversationEventTopicMessageMetadata.md
+docs/QueueConversationEventTopicMessageMetadataContent.md
+docs/QueueConversationEventTopicMessageMetadataEvent.md
 docs/QueueConversationEventTopicMessageSticker.md
 docs/QueueConversationEventTopicObject.md
 docs/QueueConversationEventTopicParticipant.md
@@ -3948,6 +3963,9 @@ docs/QueueConversationMessageEventTopicMessageConversation.md
 docs/QueueConversationMessageEventTopicMessageDetails.md
 docs/QueueConversationMessageEventTopicMessageMedia.md
 docs/QueueConversationMessageEventTopicMessageMediaParticipant.md
+docs/QueueConversationMessageEventTopicMessageMetadata.md
+docs/QueueConversationMessageEventTopicMessageMetadataContent.md
+docs/QueueConversationMessageEventTopicMessageMetadataEvent.md
 docs/QueueConversationMessageEventTopicMessageSticker.md
 docs/QueueConversationMessageEventTopicScoredAgent.md
 docs/QueueConversationMessageEventTopicUriReference.md
@@ -3987,6 +4005,9 @@ docs/QueueConversationSocialExpressionEventTopicJourneyCustomerSession.md
 docs/QueueConversationSocialExpressionEventTopicMessage.md
 docs/QueueConversationSocialExpressionEventTopicMessageDetails.md
 docs/QueueConversationSocialExpressionEventTopicMessageMedia.md
+docs/QueueConversationSocialExpressionEventTopicMessageMetadata.md
+docs/QueueConversationSocialExpressionEventTopicMessageMetadataContent.md
+docs/QueueConversationSocialExpressionEventTopicMessageMetadataEvent.md
 docs/QueueConversationSocialExpressionEventTopicMessageSticker.md
 docs/QueueConversationSocialExpressionEventTopicObject.md
 docs/QueueConversationSocialExpressionEventTopicParticipant.md
@@ -4020,6 +4041,9 @@ docs/QueueConversationVideoEventTopicJourneyCustomerSession.md
 docs/QueueConversationVideoEventTopicMessage.md
 docs/QueueConversationVideoEventTopicMessageDetails.md
 docs/QueueConversationVideoEventTopicMessageMedia.md
+docs/QueueConversationVideoEventTopicMessageMetadata.md
+docs/QueueConversationVideoEventTopicMessageMetadataContent.md
+docs/QueueConversationVideoEventTopicMessageMetadataEvent.md
 docs/QueueConversationVideoEventTopicMessageSticker.md
 docs/QueueConversationVideoEventTopicObject.md
 docs/QueueConversationVideoEventTopicParticipant.md
@@ -5009,6 +5033,7 @@ docs/WorkspaceEntityListing.md
 docs/WorkspaceMember.md
 docs/WorkspaceMemberEntityListing.md
 docs/WorkspaceSummary.md
+docs/WrapUpCodeConfig.md
 docs/WrapUpCodeMapping.md
 docs/WrapUpCodeReference.md
 docs/Wrapup.md
@@ -5770,6 +5795,9 @@ src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicJourneyCustomerSessi
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicMessage.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicMessageDetails.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicMessageMedia.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicMessageMetadata.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicMessageMetadataContent.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicMessageMetadataEvent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicMessageSticker.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicObject.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicParticipant.cs
@@ -5797,6 +5825,9 @@ src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicMessageConver
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicMessageDetails.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicMessageMedia.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicMessageMediaParticipant.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicMessageMetadata.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicMessageMetadataContent.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicMessageMetadataEvent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicMessageSticker.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicUriReference.cs
@@ -6632,6 +6663,8 @@ src/PureCloudPlatform.Client.V2/Model/LearningModuleCoverArtRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleCoverArtResponse.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleInformStep.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleInformStepRequest.cs
+src/PureCloudPlatform.Client.V2/Model/LearningModuleJobRequest.cs
+src/PureCloudPlatform.Client.V2/Model/LearningModuleJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModulePublishResponse.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleReassignSummary.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleRequest.cs
@@ -7121,6 +7154,9 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicJourneyCustomer
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicMessage.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicMessageDetails.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicMessageMedia.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicMessageMetadata.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicMessageMetadataContent.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicMessageMetadataEvent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicMessageSticker.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicObject.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicParticipant.cs
@@ -7145,6 +7181,9 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicMessageC
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicMessageDetails.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicMessageMedia.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicMessageMediaParticipant.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicMessageMetadata.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicMessageMetadataContent.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicMessageMetadataEvent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicMessageSticker.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicUriReference.cs
@@ -7184,6 +7223,9 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopi
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicMessage.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicMessageDetails.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicMessageMedia.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicMessageMetadata.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicMessageMetadataContent.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicMessageMetadataEvent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicMessageSticker.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicObject.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicParticipant.cs
@@ -7217,6 +7259,9 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicJourneyCus
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicMessage.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicMessageDetails.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicMessageMedia.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicMessageMetadata.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicMessageMetadataContent.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicMessageMetadataEvent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicMessageSticker.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicObject.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicParticipant.cs
@@ -8158,6 +8203,7 @@ src/PureCloudPlatform.Client.V2/Model/WorkspaceEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WorkspaceMember.cs
 src/PureCloudPlatform.Client.V2/Model/WorkspaceMemberEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WorkspaceSummary.cs
+src/PureCloudPlatform.Client.V2/Model/WrapUpCodeConfig.cs
 src/PureCloudPlatform.Client.V2/Model/WrapUpCodeMapping.cs
 src/PureCloudPlatform.Client.V2/Model/WrapUpCodeReference.cs
 src/PureCloudPlatform.Client.V2/Model/Wrapup.cs

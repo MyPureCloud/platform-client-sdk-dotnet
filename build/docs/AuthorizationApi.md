@@ -28,7 +28,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuthorizationSubject**](AuthorizationApi.html#getauthorizationsubject) | **GET** /api/v2/authorization/subjects/{subjectId} | Returns a listing of roles and permissions for a user. |
 | [**GetAuthorizationSubjectsMe**](AuthorizationApi.html#getauthorizationsubjectsme) | **GET** /api/v2/authorization/subjects/me | Returns a listing of roles and permissions for the currently authenticated user. |
 | [**GetAuthorizationSubjectsRolecounts**](AuthorizationApi.html#getauthorizationsubjectsrolecounts) | **GET** /api/v2/authorization/subjects/rolecounts | Get the count of roles granted to a list of subjects |
-| [**GetUserRoles**](AuthorizationApi.html#getuserroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
+| [**GetUserRoles**](AuthorizationApi.html#getuserroles) | **GET** /api/v2/users/{subjectId}/roles | Returns a listing of roles and permissions for a user. |
 | [**PatchAuthorizationRole**](AuthorizationApi.html#patchauthorizationrole) | **PATCH** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
 | [**PostAuthorizationDivisionObject**](AuthorizationApi.html#postauthorizationdivisionobject) | **POST** /api/v2/authorization/divisions/{divisionId}/objects/{objectType} | Assign a list of objects to a division |
 | [**PostAuthorizationDivisionRestore**](AuthorizationApi.html#postauthorizationdivisionrestore) | **POST** /api/v2/authorization/divisions/{divisionId}/restore | Recreate a previously deleted division. |
@@ -46,7 +46,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutAuthorizationRoleUsersAdd**](AuthorizationApi.html#putauthorizationroleusersadd) | **PUT** /api/v2/authorization/roles/{roleId}/users/add | Sets the users for the role |
 | [**PutAuthorizationRoleUsersRemove**](AuthorizationApi.html#putauthorizationroleusersremove) | **PUT** /api/v2/authorization/roles/{roleId}/users/remove | Removes the users from the role |
 | [**PutAuthorizationRolesDefault**](AuthorizationApi.html#putauthorizationrolesdefault) | **PUT** /api/v2/authorization/roles/default | Restore specified default roles |
-| [**PutUserRoles**](AuthorizationApi.html#putuserroles) | **PUT** /api/v2/users/{userId}/roles | Sets the user&#39;s roles |
+| [**PutUserRoles**](AuthorizationApi.html#putuserroles) | **PUT** /api/v2/users/{subjectId}/roles | Sets the user&#39;s roles |
 {: class="table table-striped"}
 
 <a name="deleteauthorizationdivision"></a>
@@ -1490,7 +1490,7 @@ namespace Example
 
 <a name="getuserroles"></a>
 
-## [**UserAuthorization**](UserAuthorization.html) GetUserRoles (string userId)
+## [**UserAuthorization**](UserAuthorization.html) GetUserRoles (string subjectId)
 
 
 
@@ -1524,12 +1524,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new AuthorizationApi();
-            var userId = userId_example;  // string | User ID
+            var subjectId = subjectId_example;  // string | User ID
 
             try
             { 
                 // Returns a listing of roles and permissions for a user.
-                UserAuthorization result = apiInstance.GetUserRoles(userId);
+                UserAuthorization result = apiInstance.GetUserRoles(subjectId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1546,7 +1546,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| User ID |  |
+| **subjectId** | **string**| User ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2707,7 +2707,7 @@ namespace Example
 
 <a name="putuserroles"></a>
 
-## [**UserAuthorization**](UserAuthorization.html) PutUserRoles (string userId, List<string> body)
+## [**UserAuthorization**](UserAuthorization.html) PutUserRoles (string subjectId, List<string> body)
 
 
 
@@ -2741,13 +2741,13 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new AuthorizationApi();
-            var userId = userId_example;  // string | User ID
+            var subjectId = subjectId_example;  // string | User ID
             var body = new List<string>(); // List<string> | List of roles
 
             try
             { 
                 // Sets the user's roles
-                UserAuthorization result = apiInstance.PutUserRoles(userId, body);
+                UserAuthorization result = apiInstance.PutUserRoles(subjectId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2764,7 +2764,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| User ID |  |
+| **subjectId** | **string**| User ID |  |
 | **body** | [**List<string>**](string.html)| List of roles |  |
 {: class="table table-striped"}
 

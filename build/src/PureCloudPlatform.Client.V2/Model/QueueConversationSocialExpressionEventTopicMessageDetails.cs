@@ -91,7 +91,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Media">The media (images, files, etc) associated with this message, if any.</param>
         /// <param name="ErrorInfo">Detailed information about an error response..</param>
         /// <param name="Stickers">A list of stickers included in the message.</param>
-        public QueueConversationSocialExpressionEventTopicMessageDetails(string MessageId = null, DateTime? MessageTime = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, List<QueueConversationSocialExpressionEventTopicMessageMedia> Media = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, List<QueueConversationSocialExpressionEventTopicMessageSticker> Stickers = null)
+        /// <param name="MessageMetadata">MessageMetadata.</param>
+        public QueueConversationSocialExpressionEventTopicMessageDetails(string MessageId = null, DateTime? MessageTime = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, List<QueueConversationSocialExpressionEventTopicMessageMedia> Media = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, List<QueueConversationSocialExpressionEventTopicMessageSticker> Stickers = null, QueueConversationSocialExpressionEventTopicMessageMetadata MessageMetadata = null)
         {
             this.MessageId = MessageId;
             this.MessageTime = MessageTime;
@@ -100,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Media = Media;
             this.ErrorInfo = ErrorInfo;
             this.Stickers = Stickers;
+            this.MessageMetadata = MessageMetadata;
             
         }
         
@@ -160,6 +162,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<QueueConversationSocialExpressionEventTopicMessageSticker> Stickers { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets MessageMetadata
+        /// </summary>
+        [DataMember(Name="messageMetadata", EmitDefaultValue=false)]
+        public QueueConversationSocialExpressionEventTopicMessageMetadata MessageMetadata { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -176,6 +186,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Media: ").Append(Media).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  Stickers: ").Append(Stickers).Append("\n");
+            sb.Append("  MessageMetadata: ").Append(MessageMetadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -250,6 +261,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Stickers == other.Stickers ||
                     this.Stickers != null &&
                     this.Stickers.SequenceEqual(other.Stickers)
+                ) &&
+                (
+                    this.MessageMetadata == other.MessageMetadata ||
+                    this.MessageMetadata != null &&
+                    this.MessageMetadata.Equals(other.MessageMetadata)
                 );
         }
 
@@ -284,6 +300,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Stickers != null)
                     hash = hash * 59 + this.Stickers.GetHashCode();
+
+                if (this.MessageMetadata != null)
+                    hash = hash * 59 + this.MessageMetadata.GetHashCode();
 
                 return hash;
             }

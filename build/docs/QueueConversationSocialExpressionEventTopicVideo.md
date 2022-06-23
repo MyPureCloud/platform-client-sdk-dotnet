@@ -7,7 +7,8 @@ title: QueueConversationSocialExpressionEventTopicVideo
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **State** | **string** | The connection state of this communication. | [optional] |
+| **State** | **string** |  | [optional] |
+| **InitialState** | **string** |  | [optional] |
 | **Self** | [**QueueConversationSocialExpressionEventTopicAddress**](QueueConversationSocialExpressionEventTopicAddress.html) | Address and name data for a call endpoint. | [optional] |
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
 | **Context** | **string** | The room id context (xmpp jid) for the conference session. | [optional] |

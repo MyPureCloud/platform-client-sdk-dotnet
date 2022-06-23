@@ -120,7 +120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gamified metric by id
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -133,7 +133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gamified metric by id
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -188,7 +188,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// All gamified metrics for a given profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
@@ -200,7 +200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// All gamified metrics for a given profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
@@ -892,7 +892,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a gamified metric with a given metric definition and metric objective
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Metric</param>
@@ -903,7 +903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a gamified metric with a given metric definition and metric objective
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Metric</param>
@@ -1080,7 +1080,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a metric
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -1093,7 +1093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a metric
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -1282,7 +1282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gamified metric by id
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -1295,7 +1295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gamified metric by id
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -1350,7 +1350,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// All gamified metrics for a given profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
@@ -1362,7 +1362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// All gamified metrics for a given profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
@@ -2054,7 +2054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a gamified metric with a given metric definition and metric objective
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Metric</param>
@@ -2065,7 +2065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a gamified metric with a given metric definition and metric objective
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Metric</param>
@@ -2242,7 +2242,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a metric
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -2255,7 +2255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a metric
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -3257,7 +3257,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gamified metric by id 
+        /// Gamified metric by id This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -3271,7 +3271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gamified metric by id 
+        /// Gamified metric by id This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -3357,7 +3357,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gamified metric by id 
+        /// Gamified metric by id This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -3372,7 +3372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gamified metric by id 
+        /// Gamified metric by id This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -3829,7 +3829,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// All gamified metrics for a given profile 
+        /// All gamified metrics for a given profile This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
@@ -3842,7 +3842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// All gamified metrics for a given profile 
+        /// All gamified metrics for a given profile This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
@@ -3923,7 +3923,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// All gamified metrics for a given profile 
+        /// All gamified metrics for a given profile This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
@@ -3937,7 +3937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// All gamified metrics for a given profile 
+        /// All gamified metrics for a given profile This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="performanceProfileId">The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)</param>
@@ -9657,7 +9657,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Creates a gamified metric with a given metric definition and metric objective 
+        /// Creates a gamified metric with a given metric definition and metric objective This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Metric</param>
@@ -9669,7 +9669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Creates a gamified metric with a given metric definition and metric objective 
+        /// Creates a gamified metric with a given metric definition and metric objective This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Metric</param>
@@ -9756,7 +9756,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Creates a gamified metric with a given metric definition and metric objective 
+        /// Creates a gamified metric with a given metric definition and metric objective This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Metric</param>
@@ -9769,7 +9769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Creates a gamified metric with a given metric definition and metric objective 
+        /// Creates a gamified metric with a given metric definition and metric objective This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Metric</param>
@@ -11316,7 +11316,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Updates a metric 
+        /// Updates a metric This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -11330,7 +11330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Updates a metric 
+        /// Updates a metric This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -11424,7 +11424,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Updates a metric 
+        /// Updates a metric This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>
@@ -11439,7 +11439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Updates a metric 
+        /// Updates a metric This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">metric Id</param>

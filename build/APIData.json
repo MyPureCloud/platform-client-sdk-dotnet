@@ -3934,16 +3934,16 @@
   "getuserroles": {
     "operationId": "getuserroles",
     "functionName": "GetUserRoles",
-    "signature": "GetUserRoles(userId)",
+    "signature": "GetUserRoles(subjectId)",
     "parameters": [
       {
-        "name": "userId",
+        "name": "subjectId",
         "type": "string",
         "required": "true"
       }
     ],
     "return": "UserAuthorization",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetUserRolesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new UsersApi();\n            var userId = \"userId_example\";  // string | User ID\n\n            try\n            { \n                // Returns a listing of roles and permissions for a user.\n                UserAuthorization result = apiInstance.GetUserRoles(userId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Users.GetUserRoles: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetUserRolesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new UsersApi();\n            var subjectId = \"subjectId_example\";  // string | User ID\n\n            try\n            { \n                // Returns a listing of roles and permissions for a user.\n                UserAuthorization result = apiInstance.GetUserRoles(subjectId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Users.GetUserRoles: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "patchauthorizationrole": {
     "operationId": "patchauthorizationrole",
@@ -4280,10 +4280,10 @@
   "putuserroles": {
     "operationId": "putuserroles",
     "functionName": "PutUserRoles",
-    "signature": "PutUserRoles(userId, body)",
+    "signature": "PutUserRoles(subjectId, body)",
     "parameters": [
       {
-        "name": "userId",
+        "name": "subjectId",
         "type": "string",
         "required": "true"
       },
@@ -4294,7 +4294,7 @@
       }
     ],
     "return": "UserAuthorization",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutUserRolesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new UsersApi();\n            var userId = \"userId_example\";  // string | User ID\n            var body = new List<string>(); // List<string> | List of roles\n\n            try\n            { \n                // Sets the user's roles\n                UserAuthorization result = apiInstance.PutUserRoles(userId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Users.PutUserRoles: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutUserRolesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new UsersApi();\n            var subjectId = \"subjectId_example\";  // string | User ID\n            var body = new List<string>(); // List<string> | List of roles\n\n            try\n            { \n                // Sets the user's roles\n                UserAuthorization result = apiInstance.PutUserRoles(subjectId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Users.PutUserRoles: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getbillingreportsbillableusage": {
     "operationId": "getbillingreportsbillableusage",
@@ -15380,6 +15380,25 @@
     "return": "LearningModule",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLearningModuleExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var moduleId = \"moduleId_example\";  // string | The ID of the learning module\n            var expand = new List<string>(); // List<string> | Fields to expand in response(case insensitive) (optional) \n\n            try\n            { \n                // Get a learning module\n                LearningModule result = apiInstance.GetLearningModule(moduleId, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.GetLearningModule: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getlearningmodulejob": {
+    "operationId": "getlearningmodulejob",
+    "functionName": "GetLearningModuleJob",
+    "signature": "GetLearningModuleJob(moduleId, jobId)",
+    "parameters": [
+      {
+        "name": "moduleId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "jobId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "LearningModuleJobResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLearningModuleJobExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var moduleId = \"moduleId_example\";  // string | The ID of the learning module\n            var jobId = \"jobId_example\";  // string | The ID of the learning module job\n\n            try\n            { \n                // Get a specific Learning Module job status\n                LearningModuleJobResponse result = apiInstance.GetLearningModuleJob(moduleId, jobId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.GetLearningModuleJob: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getlearningmodulerule": {
     "operationId": "getlearningmodulerule",
     "functionName": "GetLearningModuleRule",
@@ -15505,6 +15524,34 @@
     "return": "AssessmentScoringSet",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostLearningAssessmentsScoringExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var body = new LearningAssessmentScoringRequest(); // LearningAssessmentScoringRequest | Assessment form and answers to score\n\n            try\n            { \n                // Score learning assessment for preview\n                AssessmentScoringSet result = apiInstance.PostLearningAssessmentsScoring(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.PostLearningAssessmentsScoring: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "postlearningassignmentreassign": {
+    "operationId": "postlearningassignmentreassign",
+    "functionName": "PostLearningAssignmentReassign",
+    "signature": "PostLearningAssignmentReassign(assignmentId)",
+    "parameters": [
+      {
+        "name": "assignmentId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "LearningAssignment",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostLearningAssignmentReassignExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var assignmentId = \"assignmentId_example\";  // string | The Learning Assignment ID\n\n            try\n            { \n                // Reassign Learning Assignment\n                LearningAssignment result = apiInstance.PostLearningAssignmentReassign(assignmentId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.PostLearningAssignmentReassign: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postlearningassignmentreset": {
+    "operationId": "postlearningassignmentreset",
+    "functionName": "PostLearningAssignmentReset",
+    "signature": "PostLearningAssignmentReset(assignmentId)",
+    "parameters": [
+      {
+        "name": "assignmentId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "LearningAssignment",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostLearningAssignmentResetExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var assignmentId = \"assignmentId_example\";  // string | The Learning Assignment ID\n\n            try\n            { \n                // Reset Learning Assignment\n                LearningAssignment result = apiInstance.PostLearningAssignmentReset(assignmentId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.PostLearningAssignmentReset: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "postlearningassignments": {
     "operationId": "postlearningassignments",
     "functionName": "PostLearningAssignments",
@@ -15560,6 +15607,25 @@
     ],
     "return": "LearningAssignmentBulkRemoveResponse",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostLearningAssignmentsBulkremoveExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var body = new List<string>(); // List<string> | The IDs of the learning assignments to be removed (optional) \n\n            try\n            { \n                // Remove multiple Learning Assignments\n                LearningAssignmentBulkRemoveResponse result = apiInstance.PostLearningAssignmentsBulkremove(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.PostLearningAssignmentsBulkremove: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postlearningmodulejobs": {
+    "operationId": "postlearningmodulejobs",
+    "functionName": "PostLearningModuleJobs",
+    "signature": "PostLearningModuleJobs(moduleId, body)",
+    "parameters": [
+      {
+        "name": "moduleId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "LearningModuleJobRequest",
+        "required": "true"
+      }
+    ],
+    "return": "LearningModuleJobResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostLearningModuleJobsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var moduleId = \"moduleId_example\";  // string | The ID of the learning module\n            var body = new LearningModuleJobRequest(); // LearningModuleJobRequest | The learning module job request\n\n            try\n            { \n                // Starts a specified operation on learning module\n                LearningModuleJobResponse result = apiInstance.PostLearningModuleJobs(moduleId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.PostLearningModuleJobs: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postlearningmodulepublish": {
     "operationId": "postlearningmodulepublish",
@@ -20662,7 +20728,7 @@
       }
     ],
     "return": "List<SurveyForm>",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetQualityFormsSurveysBulkContextsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new QualityApi();\n            var contextId = new List<string>(); // List<string> | A comma-delimited list of valid survey form context ids\n            var published = true;  // bool? | If true, the latest published version will be included. If false, only the unpublished version will be included. (optional)  (default to true)\n\n            try\n            { \n                // Retrieve a list of the latest form versions by context ids\n                List<SurveyForm> result = apiInstance.GetQualityFormsSurveysBulkContexts(contextId, published);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Quality.GetQualityFormsSurveysBulkContexts: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetQualityFormsSurveysBulkContextsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new QualityApi();\n            var contextId = new List<string>(); // List<string> | A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100.\n            var published = true;  // bool? | If true, the latest published version will be included. If false, only the unpublished version will be included. (optional)  (default to true)\n\n            try\n            { \n                // Retrieve a list of the latest form versions by context ids\n                List<SurveyForm> result = apiInstance.GetQualityFormsSurveysBulkContexts(contextId, published);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Quality.GetQualityFormsSurveysBulkContexts: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getqualitypublishedform": {
     "operationId": "getqualitypublishedform",
@@ -23169,9 +23235,16 @@
   "getroutingpredictorskeyperformanceindicators": {
     "operationId": "getroutingpredictorskeyperformanceindicators",
     "functionName": "GetRoutingPredictorsKeyperformanceindicators",
-    "signature": "GetRoutingPredictorsKeyperformanceindicators()",
+    "signature": "GetRoutingPredictorsKeyperformanceindicators(kpiGroup)",
+    "parameters": [
+      {
+        "name": "kpiGroup",
+        "type": "string",
+        "required": "false"
+      }
+    ],
     "return": "List<KeyPerformanceIndicator>",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingPredictorsKeyperformanceindicatorsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n\n            try\n            { \n                // Get a list of Key Performance Indicators available for the predictors.\n                List<KeyPerformanceIndicator> result = apiInstance.GetRoutingPredictorsKeyperformanceindicators();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingPredictorsKeyperformanceindicators: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingPredictorsKeyperformanceindicatorsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var kpiGroup = \"kpiGroup_example\";  // string | The Group of Key Performance Indicators to return (optional) \n\n            try\n            { \n                // Get a list of Key Performance Indicators\n                List<KeyPerformanceIndicator> result = apiInstance.GetRoutingPredictorsKeyperformanceindicators(kpiGroup);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingPredictorsKeyperformanceindicators: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getroutingqueue": {
     "operationId": "getroutingqueue",

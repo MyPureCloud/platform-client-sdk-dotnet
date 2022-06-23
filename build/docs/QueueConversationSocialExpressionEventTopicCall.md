@@ -8,7 +8,8 @@ title: QueueConversationSocialExpressionEventTopicCall
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
-| **State** | **string** | The connection state of this communication. | [optional] |
+| **State** | **string** |  | [optional] |
+| **InitialState** | **string** |  | [optional] |
 | **Recording** | **bool?** | True if this call is being recorded. | [optional] |
 | **RecordingState** | **string** | State of recording on this call. | [optional] |
 | **Muted** | **bool?** | True if this call is muted so that remote participants can&#39;t hear any audio from this end. | [optional] |

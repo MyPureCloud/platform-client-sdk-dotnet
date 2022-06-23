@@ -1896,7 +1896,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new QualityApi();
-            var contextId = new List<string>(); // List<string> | A comma-delimited list of valid survey form context ids
+            var contextId = new List<string>(); // List<string> | A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100.
             var published = true;  // bool? | If true, the latest published version will be included. If false, only the unpublished version will be included. (optional)  (default to true)
 
             try
@@ -1919,7 +1919,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **contextId** | [**List<string>**](string.html)| A comma-delimited list of valid survey form context ids |  |
+| **contextId** | [**List<string>**](string.html)| A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100. |  |
 | **published** | **bool?**| If true, the latest published version will be included. If false, only the unpublished version will be included. | [optional] [default to true] |
 {: class="table table-striped"}
 

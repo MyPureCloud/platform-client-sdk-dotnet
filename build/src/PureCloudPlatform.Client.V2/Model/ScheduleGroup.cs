@@ -80,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OpenSchedules">The schedules defining the hours an organization is open..</param>
         /// <param name="ClosedSchedules">The schedules defining the hours an organization is closed..</param>
         /// <param name="HolidaySchedules">The schedules defining the hours an organization is closed for the holidays..</param>
-        public ScheduleGroup(string Name = null, Division Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string TimeZone = null, List<DomainEntityRef> OpenSchedules = null, List<DomainEntityRef> ClosedSchedules = null, List<DomainEntityRef> HolidaySchedules = null)
+        public ScheduleGroup(string Name = null, WritableDivision Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string TimeZone = null, List<DomainEntityRef> OpenSchedules = null, List<DomainEntityRef> ClosedSchedules = null, List<DomainEntityRef> HolidaySchedules = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -124,7 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public WritableDivision Division { get; set; }
 
 
 

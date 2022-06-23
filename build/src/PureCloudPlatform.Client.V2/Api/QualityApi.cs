@@ -743,7 +743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100.</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
         /// <returns>List&lt;SurveyForm&gt;</returns>
         List<SurveyForm> GetQualityFormsSurveysBulkContexts (List<string> contextId, bool? published = null);
@@ -755,7 +755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100.</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
         /// <returns>ApiResponse of List&lt;SurveyForm&gt;</returns>
         ApiResponse<List<SurveyForm>> GetQualityFormsSurveysBulkContextsWithHttpInfo (List<string> contextId, bool? published = null);
@@ -2171,7 +2171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100.</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
         /// <returns>Task of List&lt;SurveyForm&gt;</returns>
         System.Threading.Tasks.Task<List<SurveyForm>> GetQualityFormsSurveysBulkContextsAsync (List<string> contextId, bool? published = null);
@@ -2183,7 +2183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100.</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
         /// <returns>Task of ApiResponse (List&lt;SurveyForm&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SurveyForm>>> GetQualityFormsSurveysBulkContextsAsyncWithHttpInfo (List<string> contextId, bool? published = null);
@@ -8222,7 +8222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of the latest form versions by context ids 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100.</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
         /// <returns>List&lt;SurveyForm&gt;</returns>
         public List<SurveyForm> GetQualityFormsSurveysBulkContexts (List<string> contextId, bool? published = null)
@@ -8235,7 +8235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of the latest form versions by context ids 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100.</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
         /// <returns>ApiResponse of List&lt;SurveyForm&gt;</returns>
         public ApiResponse< List<SurveyForm> > GetQualityFormsSurveysBulkContextsWithHttpInfo (List<string> contextId, bool? published = null)
@@ -8319,7 +8319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of the latest form versions by context ids 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100.</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
         /// <returns>Task of List&lt;SurveyForm&gt;</returns>
         public async System.Threading.Tasks.Task<List<SurveyForm>> GetQualityFormsSurveysBulkContextsAsync (List<string> contextId, bool? published = null)
@@ -8333,7 +8333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of the latest form versions by context ids 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100.</param>
         /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
         /// <returns>Task of ApiResponse (List&lt;SurveyForm&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<SurveyForm>>> GetQualityFormsSurveysBulkContextsAsyncWithHttpInfo (List<string> contextId, bool? published = null)

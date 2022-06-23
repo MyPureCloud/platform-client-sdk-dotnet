@@ -91,7 +91,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Itit for "it-IT"
             /// </summary>
             [EnumMember(Value = "it-IT")]
-            Itit
+            Itit,
+            
+            /// <summary>
+            /// Enum Frca for "fr-CA"
+            /// </summary>
+            [EnumMember(Value = "fr-CA")]
+            Frca
         }
         /// <summary>
         /// Actual language of the category

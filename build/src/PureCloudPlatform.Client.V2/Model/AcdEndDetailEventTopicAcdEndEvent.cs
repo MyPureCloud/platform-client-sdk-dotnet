@@ -400,7 +400,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Other for "OTHER"
             /// </summary>
             [EnumMember(Value = "OTHER")]
-            Other
+            Other,
+            
+            /// <summary>
+            /// Enum Conditional for "CONDITIONAL"
+            /// </summary>
+            [EnumMember(Value = "CONDITIONAL")]
+            Conditional
         }
         /// <summary>
         /// Gets or Sets UsedRouting
@@ -462,7 +468,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Other for "OTHER"
             /// </summary>
             [EnumMember(Value = "OTHER")]
-            Other
+            Other,
+            
+            /// <summary>
+            /// Enum Conditional for "CONDITIONAL"
+            /// </summary>
+            [EnumMember(Value = "CONDITIONAL")]
+            Conditional
         }
         /// <summary>
         /// Gets or Sets DisconnectType

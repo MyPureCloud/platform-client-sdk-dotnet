@@ -14,6 +14,7 @@ title: QueueConversationEventTopicMessageDetails
 | **Media** | [**List&lt;QueueConversationEventTopicMessageMedia&gt;**](QueueConversationEventTopicMessageMedia.html) | The media (images, files, etc) associated with this message, if any | [optional] |
 | **ErrorInfo** | [**QueueConversationEventTopicErrorDetails**](QueueConversationEventTopicErrorDetails.html) | Detailed information about an error response. | [optional] |
 | **Stickers** | [**List&lt;QueueConversationEventTopicMessageSticker&gt;**](QueueConversationEventTopicMessageSticker.html) | A list of stickers included in the message | [optional] |
+| **MessageMetadata** | [**QueueConversationEventTopicMessageMetadata**](QueueConversationEventTopicMessageMetadata.html) |  | [optional] |
 {: class="table table-striped"}
 
 

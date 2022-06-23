@@ -38,7 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingMessageRecipients**](RoutingApi.html#getroutingmessagerecipients) | **GET** /api/v2/routing/message/recipients | Get recipients |
 | [**GetRoutingPredictor**](RoutingApi.html#getroutingpredictor) | **GET** /api/v2/routing/predictors/{predictorId} | Retrieve a single predictor. |
 | [**GetRoutingPredictors**](RoutingApi.html#getroutingpredictors) | **GET** /api/v2/routing/predictors | Retrieve all predictors. |
-| [**GetRoutingPredictorsKeyperformanceindicators**](RoutingApi.html#getroutingpredictorskeyperformanceindicators) | **GET** /api/v2/routing/predictors/keyperformanceindicators | Get a list of Key Performance Indicators available for the predictors. |
+| [**GetRoutingPredictorsKeyperformanceindicators**](RoutingApi.html#getroutingpredictorskeyperformanceindicators) | **GET** /api/v2/routing/predictors/keyperformanceindicators | Get a list of Key Performance Indicators |
 | [**GetRoutingQueue**](RoutingApi.html#getroutingqueue) | **GET** /api/v2/routing/queues/{queueId} | Get details about this queue. |
 | [**GetRoutingQueueComparisonperiod**](RoutingApi.html#getroutingqueuecomparisonperiod) | **GET** /api/v2/routing/queues/{queueId}/comparisonperiods/{comparisonPeriodId} | Get a Comparison Period. |
 | [**GetRoutingQueueComparisonperiods**](RoutingApi.html#getroutingqueuecomparisonperiods) | **GET** /api/v2/routing/queues/{queueId}/comparisonperiods | Get list of comparison periods |
@@ -2153,11 +2153,11 @@ namespace Example
 
 <a name="getroutingpredictorskeyperformanceindicators"></a>
 
-## [**List&lt;KeyPerformanceIndicator&gt;**](KeyPerformanceIndicator.html) GetRoutingPredictorsKeyperformanceindicators ()
+## [**List&lt;KeyPerformanceIndicator&gt;**](KeyPerformanceIndicator.html) GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null)
 
 
 
-Get a list of Key Performance Indicators available for the predictors.
+Get a list of Key Performance Indicators
 
 
 
@@ -2187,11 +2187,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
+            var kpiGroup = kpiGroup_example;  // string | The Group of Key Performance Indicators to return (optional) 
 
             try
             { 
-                // Get a list of Key Performance Indicators available for the predictors.
-                List<KeyPerformanceIndicator> result = apiInstance.GetRoutingPredictorsKeyperformanceindicators();
+                // Get a list of Key Performance Indicators
+                List<KeyPerformanceIndicator> result = apiInstance.GetRoutingPredictorsKeyperformanceindicators(kpiGroup);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2204,8 +2205,12 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does require any parameters.
 
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **kpiGroup** | **string**| The Group of Key Performance Indicators to return | [optional] <br />**Values**: Standard, Custom |
+{: class="table table-striped"}
 
 ### Return type
 

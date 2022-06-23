@@ -89,7 +89,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Media">Media.</param>
         /// <param name="Stickers">Stickers.</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
-        public ConversationMessageEventTopicMessageDetails(ConversationMessageEventTopicUriReference Message = null, DateTime? MessageTime = null, int? MessageSegmentCount = null, MessageStatusEnum? MessageStatus = null, List<ConversationMessageEventTopicMessageMedia> Media = null, List<ConversationMessageEventTopicMessageSticker> Stickers = null, ConversationMessageEventTopicErrorDetails ErrorInfo = null)
+        /// <param name="MessageMetadata">MessageMetadata.</param>
+        public ConversationMessageEventTopicMessageDetails(ConversationMessageEventTopicUriReference Message = null, DateTime? MessageTime = null, int? MessageSegmentCount = null, MessageStatusEnum? MessageStatus = null, List<ConversationMessageEventTopicMessageMedia> Media = null, List<ConversationMessageEventTopicMessageSticker> Stickers = null, ConversationMessageEventTopicErrorDetails ErrorInfo = null, ConversationMessageEventTopicMessageMetadata MessageMetadata = null)
         {
             this.Message = Message;
             this.MessageTime = MessageTime;
@@ -98,6 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Media = Media;
             this.Stickers = Stickers;
             this.ErrorInfo = ErrorInfo;
+            this.MessageMetadata = MessageMetadata;
             
         }
         
@@ -152,6 +154,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationMessageEventTopicErrorDetails ErrorInfo { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets MessageMetadata
+        /// </summary>
+        [DataMember(Name="messageMetadata", EmitDefaultValue=false)]
+        public ConversationMessageEventTopicMessageMetadata MessageMetadata { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -168,6 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Media: ").Append(Media).Append("\n");
             sb.Append("  Stickers: ").Append(Stickers).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
+            sb.Append("  MessageMetadata: ").Append(MessageMetadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -242,6 +253,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ErrorInfo == other.ErrorInfo ||
                     this.ErrorInfo != null &&
                     this.ErrorInfo.Equals(other.ErrorInfo)
+                ) &&
+                (
+                    this.MessageMetadata == other.MessageMetadata ||
+                    this.MessageMetadata != null &&
+                    this.MessageMetadata.Equals(other.MessageMetadata)
                 );
         }
 
@@ -276,6 +292,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
+
+                if (this.MessageMetadata != null)
+                    hash = hash * 59 + this.MessageMetadata.GetHashCode();
 
                 return hash;
             }

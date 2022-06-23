@@ -7,7 +7,8 @@ title: QueueConversationSocialExpressionEventTopicChat
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **State** | **string** | The connection state of this communication. | [optional] |
+| **State** | **string** |  | [optional] |
+| **InitialState** | **string** |  | [optional] |
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
 | **Provider** | **string** | The source provider of the chat. | [optional] |
 | **ScriptId** | **string** | The UUID of the script to use. | [optional] |

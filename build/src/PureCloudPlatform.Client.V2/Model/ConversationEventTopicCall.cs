@@ -19,11 +19,90 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ConversationEventTopicCall :  IEquatable<ConversationEventTopicCall>
     {
         /// <summary>
-        /// The connection state of this communication.
+        /// Gets or Sets State
         /// </summary>
-        /// <value>The connection state of this communication.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Alerting for "alerting"
+            /// </summary>
+            [EnumMember(Value = "alerting")]
+            Alerting,
+            
+            /// <summary>
+            /// Enum Dialing for "dialing"
+            /// </summary>
+            [EnumMember(Value = "dialing")]
+            Dialing,
+            
+            /// <summary>
+            /// Enum Contacting for "contacting"
+            /// </summary>
+            [EnumMember(Value = "contacting")]
+            Contacting,
+            
+            /// <summary>
+            /// Enum Offering for "offering"
+            /// </summary>
+            [EnumMember(Value = "offering")]
+            Offering,
+            
+            /// <summary>
+            /// Enum Connected for "connected"
+            /// </summary>
+            [EnumMember(Value = "connected")]
+            Connected,
+            
+            /// <summary>
+            /// Enum Disconnected for "disconnected"
+            /// </summary>
+            [EnumMember(Value = "disconnected")]
+            Disconnected,
+            
+            /// <summary>
+            /// Enum Terminated for "terminated"
+            /// </summary>
+            [EnumMember(Value = "terminated")]
+            Terminated,
+            
+            /// <summary>
+            /// Enum Uploading for "uploading"
+            /// </summary>
+            [EnumMember(Value = "uploading")]
+            Uploading,
+            
+            /// <summary>
+            /// Enum Converting for "converting"
+            /// </summary>
+            [EnumMember(Value = "converting")]
+            Converting,
+            
+            /// <summary>
+            /// Enum Transmitting for "transmitting"
+            /// </summary>
+            [EnumMember(Value = "transmitting")]
+            Transmitting,
+            
+            /// <summary>
+            /// Enum None for "none"
+            /// </summary>
+            [EnumMember(Value = "none")]
+            None
+        }
+        /// <summary>
+        /// Gets or Sets InitialState
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InitialStateEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -271,11 +350,15 @@ namespace PureCloudPlatform.Client.V2.Model
             Inbound
         }
         /// <summary>
-        /// The connection state of this communication.
+        /// Gets or Sets State
         /// </summary>
-        /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        /// <summary>
+        /// Gets or Sets InitialState
+        /// </summary>
+        [DataMember(Name="initialState", EmitDefaultValue=false)]
+        public InitialStateEnum? InitialState { get; set; }
         /// <summary>
         /// State of recording on this call.
         /// </summary>
@@ -298,7 +381,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConversationEventTopicCall" /> class.
         /// </summary>
         /// <param name="Id">A globally unique identifier for this communication..</param>
-        /// <param name="State">The connection state of this communication..</param>
+        /// <param name="State">State.</param>
+        /// <param name="InitialState">InitialState.</param>
         /// <param name="Recording">True if this call is being recorded..</param>
         /// <param name="RecordingState">State of recording on this call..</param>
         /// <param name="Muted">True if this call is muted so that remote participants can't hear any audio from this end..</param>
@@ -324,10 +408,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AfterCallWork">AfterCallWork.</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
-        public ConversationEventTopicCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationEventTopicAddress Self = null, ConversationEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationEventTopicDisconnectReason> DisconnectReasons = null, ConversationEventTopicFaxStatus FaxStatus = null, string UuiData = null, DateTime? BargedTime = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
+        public ConversationEventTopicCall(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationEventTopicAddress Self = null, ConversationEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationEventTopicDisconnectReason> DisconnectReasons = null, ConversationEventTopicFaxStatus FaxStatus = null, string UuiData = null, DateTime? BargedTime = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
         {
             this.Id = Id;
             this.State = State;
+            this.InitialState = InitialState;
             this.Recording = Recording;
             this.RecordingState = RecordingState;
             this.Muted = Muted;
@@ -364,6 +449,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
 
 
 
@@ -579,6 +666,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  InitialState: ").Append(InitialState).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  Muted: ").Append(Muted).Append("\n");
@@ -653,6 +741,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
+                ) &&
+                (
+                    this.InitialState == other.InitialState ||
+                    this.InitialState != null &&
+                    this.InitialState.Equals(other.InitialState)
                 ) &&
                 (
                     this.Recording == other.Recording ||
@@ -797,6 +890,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+
+                if (this.InitialState != null)
+                    hash = hash * 59 + this.InitialState.GetHashCode();
 
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();

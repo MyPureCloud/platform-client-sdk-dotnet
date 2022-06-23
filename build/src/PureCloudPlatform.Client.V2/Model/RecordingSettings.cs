@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="MaxSimultaneousStreams">Maximum number of simultaneous screen recording streams.</param>
         /// <param name="MaxConfigurableScreenRecordingStreams">Upper limit that maxSimultaneousStreams can be configured.</param>
-        public RecordingSettings(int? MaxSimultaneousStreams = null, int? MaxConfigurableScreenRecordingStreams = null)
+        /// <param name="RegionalRecordingStorageEnabled">Store call recordings in the region where they are intended to be recorded, otherwise in the organization's home region.</param>
+        public RecordingSettings(int? MaxSimultaneousStreams = null, int? MaxConfigurableScreenRecordingStreams = null, bool? RegionalRecordingStorageEnabled = null)
         {
             this.MaxSimultaneousStreams = MaxSimultaneousStreams;
             this.MaxConfigurableScreenRecordingStreams = MaxConfigurableScreenRecordingStreams;
+            this.RegionalRecordingStorageEnabled = RegionalRecordingStorageEnabled;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? MaxConfigurableScreenRecordingStreams { get; set; }
 
 
+
+        /// <summary>
+        /// Store call recordings in the region where they are intended to be recorded, otherwise in the organization's home region
+        /// </summary>
+        /// <value>Store call recordings in the region where they are intended to be recorded, otherwise in the organization's home region</value>
+        [DataMember(Name="regionalRecordingStorageEnabled", EmitDefaultValue=false)]
+        public bool? RegionalRecordingStorageEnabled { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  MaxSimultaneousStreams: ").Append(MaxSimultaneousStreams).Append("\n");
             sb.Append("  MaxConfigurableScreenRecordingStreams: ").Append(MaxConfigurableScreenRecordingStreams).Append("\n");
+            sb.Append("  RegionalRecordingStorageEnabled: ").Append(RegionalRecordingStorageEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxConfigurableScreenRecordingStreams == other.MaxConfigurableScreenRecordingStreams ||
                     this.MaxConfigurableScreenRecordingStreams != null &&
                     this.MaxConfigurableScreenRecordingStreams.Equals(other.MaxConfigurableScreenRecordingStreams)
+                ) &&
+                (
+                    this.RegionalRecordingStorageEnabled == other.RegionalRecordingStorageEnabled ||
+                    this.RegionalRecordingStorageEnabled != null &&
+                    this.RegionalRecordingStorageEnabled.Equals(other.RegionalRecordingStorageEnabled)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MaxConfigurableScreenRecordingStreams != null)
                     hash = hash * 59 + this.MaxConfigurableScreenRecordingStreams.GetHashCode();
+
+                if (this.RegionalRecordingStorageEnabled != null)
+                    hash = hash * 59 + this.RegionalRecordingStorageEnabled.GetHashCode();
 
                 return hash;
             }

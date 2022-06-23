@@ -36,7 +36,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserProfile**](UsersApi.html#getuserprofile) | **GET** /api/v2/users/{userId}/profile | Get user profile |
 | [**GetUserProfileskills**](UsersApi.html#getuserprofileskills) | **GET** /api/v2/users/{userId}/profileskills | List profile skills for a user |
 | [**GetUserQueues**](UsersApi.html#getuserqueues) | **GET** /api/v2/users/{userId}/queues | Get queues for user |
-| [**GetUserRoles**](UsersApi.html#getuserroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
+| [**GetUserRoles**](UsersApi.html#getuserroles) | **GET** /api/v2/users/{subjectId}/roles | Returns a listing of roles and permissions for a user. |
 | [**GetUserRoutinglanguages**](UsersApi.html#getuserroutinglanguages) | **GET** /api/v2/users/{userId}/routinglanguages | List routing language for user |
 | [**GetUserRoutingskills**](UsersApi.html#getuserroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
 | [**GetUserRoutingstatus**](UsersApi.html#getuserroutingstatus) | **GET** /api/v2/users/{userId}/routingstatus | Fetch the routing status of a user |
@@ -79,7 +79,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutUserCallforwarding**](UsersApi.html#putusercallforwarding) | **PUT** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
 | [**PutUserOutofoffice**](UsersApi.html#putuseroutofoffice) | **PUT** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
 | [**PutUserProfileskills**](UsersApi.html#putuserprofileskills) | **PUT** /api/v2/users/{userId}/profileskills | Update profile skills for a user |
-| [**PutUserRoles**](UsersApi.html#putuserroles) | **PUT** /api/v2/users/{userId}/roles | Sets the user&#39;s roles |
+| [**PutUserRoles**](UsersApi.html#putuserroles) | **PUT** /api/v2/users/{subjectId}/roles | Sets the user&#39;s roles |
 | [**PutUserRoutingskill**](UsersApi.html#putuserroutingskill) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
 | [**PutUserRoutingskillsBulk**](UsersApi.html#putuserroutingskillsbulk) | **PUT** /api/v2/users/{userId}/routingskills/bulk | Replace all routing skills assigned to a user |
 | [**PutUserRoutingstatus**](UsersApi.html#putuserroutingstatus) | **PUT** /api/v2/users/{userId}/routingstatus | Update the routing status of a user |
@@ -2024,7 +2024,7 @@ namespace Example
 
 <a name="getuserroles"></a>
 
-## [**UserAuthorization**](UserAuthorization.html) GetUserRoles (string userId)
+## [**UserAuthorization**](UserAuthorization.html) GetUserRoles (string subjectId)
 
 
 
@@ -2058,12 +2058,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new UsersApi();
-            var userId = userId_example;  // string | User ID
+            var subjectId = subjectId_example;  // string | User ID
 
             try
             { 
                 // Returns a listing of roles and permissions for a user.
-                UserAuthorization result = apiInstance.GetUserRoles(userId);
+                UserAuthorization result = apiInstance.GetUserRoles(subjectId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2080,7 +2080,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| User ID |  |
+| **subjectId** | **string**| User ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4959,7 +4959,7 @@ namespace Example
 
 <a name="putuserroles"></a>
 
-## [**UserAuthorization**](UserAuthorization.html) PutUserRoles (string userId, List<string> body)
+## [**UserAuthorization**](UserAuthorization.html) PutUserRoles (string subjectId, List<string> body)
 
 
 
@@ -4993,13 +4993,13 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new UsersApi();
-            var userId = userId_example;  // string | User ID
+            var subjectId = subjectId_example;  // string | User ID
             var body = new List<string>(); // List<string> | List of roles
 
             try
             { 
                 // Sets the user's roles
-                UserAuthorization result = apiInstance.PutUserRoles(userId, body);
+                UserAuthorization result = apiInstance.PutUserRoles(subjectId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5016,7 +5016,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| User ID |  |
+| **subjectId** | **string**| User ID |  |
 | **body** | [**List<string>**](string.html)| List of roles |  |
 {: class="table table-striped"}
 

@@ -79,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Start">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS (required).</param>
         /// <param name="End">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS (required).</param>
         /// <param name="Rrule">An iCal Recurrence Rule (RRULE) string. It is required to be set for schedules determining when upgrades to the Edge software can be applied..</param>
-        public Schedule(string Name = null, Division Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DateTime? Start = null, DateTime? End = null, string Rrule = null)
+        public Schedule(string Name = null, WritableDivision Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DateTime? Start = null, DateTime? End = null, string Rrule = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -122,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public WritableDivision Division { get; set; }
 
 
 

@@ -19,11 +19,72 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ConversationEventTopicScreenshare :  IEquatable<ConversationEventTopicScreenshare>
     {
         /// <summary>
-        /// The connection state of this communication.
+        /// Gets or Sets State
         /// </summary>
-        /// <value>The connection state of this communication.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Alerting for "alerting"
+            /// </summary>
+            [EnumMember(Value = "alerting")]
+            Alerting,
+            
+            /// <summary>
+            /// Enum Dialing for "dialing"
+            /// </summary>
+            [EnumMember(Value = "dialing")]
+            Dialing,
+            
+            /// <summary>
+            /// Enum Contacting for "contacting"
+            /// </summary>
+            [EnumMember(Value = "contacting")]
+            Contacting,
+            
+            /// <summary>
+            /// Enum Offering for "offering"
+            /// </summary>
+            [EnumMember(Value = "offering")]
+            Offering,
+            
+            /// <summary>
+            /// Enum Connected for "connected"
+            /// </summary>
+            [EnumMember(Value = "connected")]
+            Connected,
+            
+            /// <summary>
+            /// Enum Disconnected for "disconnected"
+            /// </summary>
+            [EnumMember(Value = "disconnected")]
+            Disconnected,
+            
+            /// <summary>
+            /// Enum Terminated for "terminated"
+            /// </summary>
+            [EnumMember(Value = "terminated")]
+            Terminated,
+            
+            /// <summary>
+            /// Enum None for "none"
+            /// </summary>
+            [EnumMember(Value = "none")]
+            None
+        }
+        /// <summary>
+        /// Gets or Sets InitialState
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InitialStateEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -193,11 +254,15 @@ namespace PureCloudPlatform.Client.V2.Model
             Uncallable
         }
         /// <summary>
-        /// The connection state of this communication.
+        /// Gets or Sets State
         /// </summary>
-        /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        /// <summary>
+        /// Gets or Sets InitialState
+        /// </summary>
+        [DataMember(Name="initialState", EmitDefaultValue=false)]
+        public InitialStateEnum? InitialState { get; set; }
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
@@ -207,7 +272,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationEventTopicScreenshare" /> class.
         /// </summary>
-        /// <param name="State">The connection state of this communication..</param>
+        /// <param name="State">State.</param>
+        /// <param name="InitialState">InitialState.</param>
         /// <param name="Self">Address and name data for a call endpoint..</param>
         /// <param name="Id">A globally unique identifier for this communication..</param>
         /// <param name="Context">The room id context (xmpp jid) for the conference session..</param>
@@ -222,9 +288,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">A communication's after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
-        public ConversationEventTopicScreenshare(StateEnum? State = null, ConversationEventTopicAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, string Provider = null, string ScriptId = null, string PeerId = null, Object PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
+        public ConversationEventTopicScreenshare(StateEnum? State = null, InitialStateEnum? InitialState = null, ConversationEventTopicAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, string Provider = null, string ScriptId = null, string PeerId = null, Object PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
         {
             this.State = State;
+            this.InitialState = InitialState;
             this.Self = Self;
             this.Id = Id;
             this.Context = Context;
@@ -242,6 +309,8 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
+
+
 
 
 
@@ -374,6 +443,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConversationEventTopicScreenshare {\n");
 
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  InitialState: ").Append(InitialState).Append("\n");
             sb.Append("  Self: ").Append(Self).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
@@ -432,6 +502,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
+                ) &&
+                (
+                    this.InitialState == other.InitialState ||
+                    this.InitialState != null &&
+                    this.InitialState.Equals(other.InitialState)
                 ) &&
                 (
                     this.Self == other.Self ||
@@ -518,6 +593,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+
+                if (this.InitialState != null)
+                    hash = hash * 59 + this.InitialState.GetHashCode();
 
                 if (this.Self != null)
                     hash = hash * 59 + this.Self.GetHashCode();

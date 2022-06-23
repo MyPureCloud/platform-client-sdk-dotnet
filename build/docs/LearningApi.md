@@ -13,15 +13,19 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLearningAssignments**](LearningApi.html#getlearningassignments) | **GET** /api/v2/learning/assignments | List of Learning module Assignments |
 | [**GetLearningAssignmentsMe**](LearningApi.html#getlearningassignmentsme) | **GET** /api/v2/learning/assignments/me | List of Learning Assignments assigned to current user |
 | [**GetLearningModule**](LearningApi.html#getlearningmodule) | **GET** /api/v2/learning/modules/{moduleId} | Get a learning module |
+| [**GetLearningModuleJob**](LearningApi.html#getlearningmodulejob) | **GET** /api/v2/learning/modules/{moduleId}/jobs/{jobId} | Get a specific Learning Module job status |
 | [**GetLearningModuleRule**](LearningApi.html#getlearningmodulerule) | **GET** /api/v2/learning/modules/{moduleId}/rule | Get a learning module rule |
 | [**GetLearningModuleVersion**](LearningApi.html#getlearningmoduleversion) | **GET** /api/v2/learning/modules/{moduleId}/versions/{versionId} | Get specific version of a published module |
 | [**GetLearningModules**](LearningApi.html#getlearningmodules) | **GET** /api/v2/learning/modules | Get all learning modules of an organization |
 | [**PatchLearningAssignment**](LearningApi.html#patchlearningassignment) | **PATCH** /api/v2/learning/assignments/{assignmentId} | Update Learning Assignment |
 | [**PostLearningAssessmentsScoring**](LearningApi.html#postlearningassessmentsscoring) | **POST** /api/v2/learning/assessments/scoring | Score learning assessment for preview |
+| [**PostLearningAssignmentReassign**](LearningApi.html#postlearningassignmentreassign) | **POST** /api/v2/learning/assignments/{assignmentId}/reassign | Reassign Learning Assignment |
+| [**PostLearningAssignmentReset**](LearningApi.html#postlearningassignmentreset) | **POST** /api/v2/learning/assignments/{assignmentId}/reset | Reset Learning Assignment |
 | [**PostLearningAssignments**](LearningApi.html#postlearningassignments) | **POST** /api/v2/learning/assignments | Create Learning Assignment |
 | [**PostLearningAssignmentsAggregatesQuery**](LearningApi.html#postlearningassignmentsaggregatesquery) | **POST** /api/v2/learning/assignments/aggregates/query | Retrieve aggregated assignment data |
 | [**PostLearningAssignmentsBulkadd**](LearningApi.html#postlearningassignmentsbulkadd) | **POST** /api/v2/learning/assignments/bulkadd | Add multiple learning assignments |
 | [**PostLearningAssignmentsBulkremove**](LearningApi.html#postlearningassignmentsbulkremove) | **POST** /api/v2/learning/assignments/bulkremove | Remove multiple Learning Assignments |
+| [**PostLearningModuleJobs**](LearningApi.html#postlearningmodulejobs) | **POST** /api/v2/learning/modules/{moduleId}/jobs | Starts a specified operation on learning module |
 | [**PostLearningModulePublish**](LearningApi.html#postlearningmodulepublish) | **POST** /api/v2/learning/modules/{moduleId}/publish | Publish a Learning module |
 | [**PostLearningModules**](LearningApi.html#postlearningmodules) | **POST** /api/v2/learning/modules | Create a new learning module |
 | [**PostLearningRulesQuery**](LearningApi.html#postlearningrulesquery) | **POST** /api/v2/learning/rules/query | Get users for learning module rule |
@@ -480,6 +484,73 @@ namespace Example
 
 [**LearningModule**](LearningModule.html)
 
+<a name="getlearningmodulejob"></a>
+
+## [**LearningModuleJobResponse**](LearningModuleJobResponse.html) GetLearningModuleJob (string moduleId, string jobId)
+
+
+
+Get a specific Learning Module job status
+
+
+
+Requires ANY permissions: 
+
+* learning:module:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLearningModuleJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var moduleId = moduleId_example;  // string | The ID of the learning module
+            var jobId = jobId_example;  // string | The ID of the learning module job
+
+            try
+            { 
+                // Get a specific Learning Module job status
+                LearningModuleJobResponse result = apiInstance.GetLearningModuleJob(moduleId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.GetLearningModuleJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **moduleId** | **string**| The ID of the learning module |  |
+| **jobId** | **string**| The ID of the learning module job |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningModuleJobResponse**](LearningModuleJobResponse.html)
+
 <a name="getlearningmodulerule"></a>
 
 ## [**LearningModuleRule**](LearningModuleRule.html) GetLearningModuleRule (string moduleId)
@@ -685,7 +756,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
-| **sortBy** | **string**| Sort by | [optional] [default to name]<br />**Values**: name |
+| **sortBy** | **string**| Sort by | [optional] [default to name]<br />**Values**: name, createddate, percentpassed, averagescore |
 | **searchTerm** | **string**| Search Term (searchable by name) | [optional]  |
 | **expand** | [**List<string>**](string.html)| Fields to expand in response(case insensitive) | [optional] <br />**Values**: rule, summaryData |
 | **isPublished** | **string**| Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned | [optional] [default to Any]<br />**Values**: True, False, Any |
@@ -827,6 +898,140 @@ namespace Example
 ### Return type
 
 [**AssessmentScoringSet**](AssessmentScoringSet.html)
+
+<a name="postlearningassignmentreassign"></a>
+
+## [**LearningAssignment**](LearningAssignment.html) PostLearningAssignmentReassign (string assignmentId)
+
+
+
+Reassign Learning Assignment
+
+This will reassign the state of the assignment to 'Assigned' and update the assignment to the latest version of the module
+
+
+
+Requires ANY permissions: 
+
+* learning:assignment:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLearningAssignmentReassignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var assignmentId = assignmentId_example;  // string | The Learning Assignment ID
+
+            try
+            { 
+                // Reassign Learning Assignment
+                LearningAssignment result = apiInstance.PostLearningAssignmentReassign(assignmentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.PostLearningAssignmentReassign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assignmentId** | **string**| The Learning Assignment ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningAssignment**](LearningAssignment.html)
+
+<a name="postlearningassignmentreset"></a>
+
+## [**LearningAssignment**](LearningAssignment.html) PostLearningAssignmentReset (string assignmentId)
+
+
+
+Reset Learning Assignment
+
+This will reset the state of the assignment to 'Assigned' and remove the version of Learning module associated with the assignment
+
+
+
+Requires ANY permissions: 
+
+* learning:assignment:reset
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLearningAssignmentResetExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var assignmentId = assignmentId_example;  // string | The Learning Assignment ID
+
+            try
+            { 
+                // Reset Learning Assignment
+                LearningAssignment result = apiInstance.PostLearningAssignmentReset(assignmentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.PostLearningAssignmentReset: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assignmentId** | **string**| The Learning Assignment ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningAssignment**](LearningAssignment.html)
 
 <a name="postlearningassignments"></a>
 
@@ -1087,6 +1292,75 @@ namespace Example
 ### Return type
 
 [**LearningAssignmentBulkRemoveResponse**](LearningAssignmentBulkRemoveResponse.html)
+
+<a name="postlearningmodulejobs"></a>
+
+## [**LearningModuleJobResponse**](LearningModuleJobResponse.html) PostLearningModuleJobs (string moduleId, LearningModuleJobRequest body)
+
+
+
+Starts a specified operation on learning module
+
+This will initiate operation specified in the request body for a learning module
+
+
+
+Requires ANY permissions: 
+
+* learning:module:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLearningModuleJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var moduleId = moduleId_example;  // string | The ID of the learning module
+            var body = new LearningModuleJobRequest(); // LearningModuleJobRequest | The learning module job request
+
+            try
+            { 
+                // Starts a specified operation on learning module
+                LearningModuleJobResponse result = apiInstance.PostLearningModuleJobs(moduleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.PostLearningModuleJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **moduleId** | **string**| The ID of the learning module |  |
+| **body** | [**LearningModuleJobRequest**](LearningModuleJobRequest.html)| The learning module job request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningModuleJobResponse**](LearningModuleJobResponse.html)
 
 <a name="postlearningmodulepublish"></a>
 

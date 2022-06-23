@@ -7,7 +7,8 @@ title: QueueConversationEventTopicCobrowse
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **State** | **string** | The connection state of this communication. | [optional] |
+| **State** | **string** |  | [optional] |
+| **InitialState** | **string** |  | [optional] |
 | **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
 | **Self** | [**QueueConversationEventTopicAddress**](QueueConversationEventTopicAddress.html) | Address and name data for a call endpoint. | [optional] |

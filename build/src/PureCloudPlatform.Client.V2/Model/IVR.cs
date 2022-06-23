@@ -81,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ClosedHoursFlow">The Architect flow to execute during the hours an organization is closed..</param>
         /// <param name="HolidayHoursFlow">The Architect flow to execute during an organization's holiday hours..</param>
         /// <param name="ScheduleGroup">The schedule group defining the open and closed hours for an organization.  If this is provided, an open flow and a closed flow must be specified as well..</param>
-        public IVR(string Name = null, Division Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> Dnis = null, DomainEntityRef OpenHoursFlow = null, DomainEntityRef ClosedHoursFlow = null, DomainEntityRef HolidayHoursFlow = null, DomainEntityRef ScheduleGroup = null)
+        public IVR(string Name = null, WritableDivision Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> Dnis = null, DomainEntityRef OpenHoursFlow = null, DomainEntityRef ClosedHoursFlow = null, DomainEntityRef HolidayHoursFlow = null, DomainEntityRef ScheduleGroup = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -126,7 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public WritableDivision Division { get; set; }
 
 
 

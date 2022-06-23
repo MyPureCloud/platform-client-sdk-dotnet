@@ -118,7 +118,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Failed for "Failed"
             /// </summary>
             [EnumMember(Value = "Failed")]
-            Failed
+            Failed,
+            
+            /// <summary>
+            /// Enum Abortrequested for "AbortRequested"
+            /// </summary>
+            [EnumMember(Value = "AbortRequested")]
+            Abortrequested,
+            
+            /// <summary>
+            /// Enum Aborted for "Aborted"
+            /// </summary>
+            [EnumMember(Value = "Aborted")]
+            Aborted
         }
         /// <summary>
         /// Language code
@@ -193,7 +205,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Itit for "it-IT"
             /// </summary>
             [EnumMember(Value = "it-IT")]
-            Itit
+            Itit,
+            
+            /// <summary>
+            /// Enum Frca for "fr-CA"
+            /// </summary>
+            [EnumMember(Value = "fr-CA")]
+            Frca
         }
         /// <summary>
         /// file type of the document

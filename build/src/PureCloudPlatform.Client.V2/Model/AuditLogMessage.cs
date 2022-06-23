@@ -796,6 +796,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Activitycode,
             
             /// <summary>
+            /// Enum Adherenceexplanation for "AdherenceExplanation"
+            /// </summary>
+            [EnumMember(Value = "AdherenceExplanation")]
+            Adherenceexplanation,
+            
+            /// <summary>
             /// Enum Agentroutinginfo for "AgentRoutingInfo"
             /// </summary>
             [EnumMember(Value = "AgentRoutingInfo")]

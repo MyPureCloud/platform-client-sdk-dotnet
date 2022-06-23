@@ -563,9 +563,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <returns>UserAuthorization</returns>
-        UserAuthorization GetUserRoles (string userId);
+        UserAuthorization GetUserRoles (string subjectId);
 
         /// <summary>
         /// Returns a listing of roles and permissions for a user.
@@ -574,9 +574,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
-        ApiResponse<UserAuthorization> GetUserRolesWithHttpInfo (string userId);
+        ApiResponse<UserAuthorization> GetUserRolesWithHttpInfo (string subjectId);
 
         /// <summary>
         /// Patch Organization Role for needsUpdate Field
@@ -999,10 +999,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
-        UserAuthorization PutUserRoles (string userId, List<string> body);
+        UserAuthorization PutUserRoles (string subjectId, List<string> body);
 
         /// <summary>
         /// Sets the user's roles
@@ -1011,10 +1011,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
-        ApiResponse<UserAuthorization> PutUserRolesWithHttpInfo (string userId, List<string> body);
+        ApiResponse<UserAuthorization> PutUserRolesWithHttpInfo (string subjectId, List<string> body);
 
         #endregion Synchronous Operations
 
@@ -1567,9 +1567,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <returns>Task of UserAuthorization</returns>
-        System.Threading.Tasks.Task<UserAuthorization> GetUserRolesAsync (string userId);
+        System.Threading.Tasks.Task<UserAuthorization> GetUserRolesAsync (string subjectId);
 
         /// <summary>
         /// Returns a listing of roles and permissions for a user.
@@ -1578,9 +1578,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserRolesAsyncWithHttpInfo (string userId);
+        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserRolesAsyncWithHttpInfo (string subjectId);
 
         /// <summary>
         /// Patch Organization Role for needsUpdate Field
@@ -2003,10 +2003,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
-        System.Threading.Tasks.Task<UserAuthorization> PutUserRolesAsync (string userId, List<string> body);
+        System.Threading.Tasks.Task<UserAuthorization> PutUserRolesAsync (string subjectId, List<string> body);
 
         /// <summary>
         /// Sets the user's roles
@@ -2015,10 +2015,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserRolesAsyncWithHttpInfo (string userId, List<string> body);
+        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserRolesAsyncWithHttpInfo (string subjectId, List<string> body);
 
         #endregion Asynchronous Operations
 
@@ -6327,11 +6327,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a listing of roles and permissions for a user. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <returns>UserAuthorization</returns>
-        public UserAuthorization GetUserRoles (string userId)
+        public UserAuthorization GetUserRoles (string subjectId)
         {
-             ApiResponse<UserAuthorization> localVarResponse = GetUserRolesWithHttpInfo(userId);
+             ApiResponse<UserAuthorization> localVarResponse = GetUserRolesWithHttpInfo(subjectId);
              return localVarResponse.Data;
         }
 
@@ -6339,15 +6339,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a listing of roles and permissions for a user. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
-        public ApiResponse< UserAuthorization > GetUserRolesWithHttpInfo (string userId)
+        public ApiResponse< UserAuthorization > GetUserRolesWithHttpInfo (string subjectId)
         { 
-            // verify the required parameter 'userId' is set
-            if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->GetUserRoles");
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetUserRoles");
 
-            var localVarPath = "/api/v2/users/{userId}/roles";
+            var localVarPath = "/api/v2/users/{subjectId}/roles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6377,7 +6377,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
 
             // Query params
 
@@ -6421,11 +6421,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a listing of roles and permissions for a user. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <returns>Task of UserAuthorization</returns>
-        public async System.Threading.Tasks.Task<UserAuthorization> GetUserRolesAsync (string userId)
+        public async System.Threading.Tasks.Task<UserAuthorization> GetUserRolesAsync (string subjectId)
         {
-             ApiResponse<UserAuthorization> localVarResponse = await GetUserRolesAsyncWithHttpInfo(userId);
+             ApiResponse<UserAuthorization> localVarResponse = await GetUserRolesAsyncWithHttpInfo(subjectId);
              return localVarResponse.Data;
 
         }
@@ -6434,16 +6434,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a listing of roles and permissions for a user. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserRolesAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserRolesAsyncWithHttpInfo (string subjectId)
         { 
-            // verify the required parameter 'userId' is set
-            if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->GetUserRoles");
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetUserRoles");
             
 
-            var localVarPath = "/api/v2/users/{userId}/roles";
+            var localVarPath = "/api/v2/users/{subjectId}/roles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6473,7 +6473,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
 
             // Query params
 
@@ -10128,12 +10128,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Sets the user's roles 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
-        public UserAuthorization PutUserRoles (string userId, List<string> body)
+        public UserAuthorization PutUserRoles (string subjectId, List<string> body)
         {
-             ApiResponse<UserAuthorization> localVarResponse = PutUserRolesWithHttpInfo(userId, body);
+             ApiResponse<UserAuthorization> localVarResponse = PutUserRolesWithHttpInfo(subjectId, body);
              return localVarResponse.Data;
         }
 
@@ -10141,19 +10141,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Sets the user's roles 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
-        public ApiResponse< UserAuthorization > PutUserRolesWithHttpInfo (string userId, List<string> body)
+        public ApiResponse< UserAuthorization > PutUserRolesWithHttpInfo (string subjectId, List<string> body)
         { 
-            // verify the required parameter 'userId' is set
-            if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->PutUserRoles");
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->PutUserRoles");
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutUserRoles");
 
-            var localVarPath = "/api/v2/users/{userId}/roles";
+            var localVarPath = "/api/v2/users/{subjectId}/roles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10184,7 +10184,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
 
             // Query params
 
@@ -10233,12 +10233,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Sets the user's roles 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
-        public async System.Threading.Tasks.Task<UserAuthorization> PutUserRolesAsync (string userId, List<string> body)
+        public async System.Threading.Tasks.Task<UserAuthorization> PutUserRolesAsync (string subjectId, List<string> body)
         {
-             ApiResponse<UserAuthorization> localVarResponse = await PutUserRolesAsyncWithHttpInfo(userId, body);
+             ApiResponse<UserAuthorization> localVarResponse = await PutUserRolesAsyncWithHttpInfo(subjectId, body);
              return localVarResponse.Data;
 
         }
@@ -10247,21 +10247,21 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Sets the user's roles 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
+        /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserRolesAsyncWithHttpInfo (string userId, List<string> body)
+        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserRolesAsyncWithHttpInfo (string subjectId, List<string> body)
         { 
-            // verify the required parameter 'userId' is set
-            if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->PutUserRoles");
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->PutUserRoles");
             
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutUserRoles");
             
 
-            var localVarPath = "/api/v2/users/{userId}/roles";
+            var localVarPath = "/api/v2/users/{subjectId}/roles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10292,7 +10292,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
 
             // Query params
 

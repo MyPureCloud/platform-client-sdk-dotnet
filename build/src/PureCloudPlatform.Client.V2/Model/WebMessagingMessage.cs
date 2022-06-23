@@ -140,7 +140,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Events">List of event elements..</param>
         /// <param name="Direction">The direction of the message.  Direction is always from the perspective of the Genesys Cloud platform.  An Inbound message is one sent from a guest to the Genesys Cloud Platform.  An Outbound message is one sent from the Genesys Cloud Platform to a guest..</param>
         /// <param name="OriginatingEntity">Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies..</param>
-        public WebMessagingMessage(string Id = null, WebMessagingChannel Channel = null, TypeEnum? Type = null, string Text = null, List<WebMessagingContent> Content = null, List<WebMessagingEvent> Events = null, DirectionEnum? Direction = null, OriginatingEntityEnum? OriginatingEntity = null)
+        /// <param name="Metadata">Additional metadata about this message..</param>
+        public WebMessagingMessage(string Id = null, WebMessagingChannel Channel = null, TypeEnum? Type = null, string Text = null, List<WebMessagingContent> Content = null, List<WebMessagingEvent> Events = null, DirectionEnum? Direction = null, OriginatingEntityEnum? OriginatingEntity = null, Dictionary<string, string> Metadata = null)
         {
             this.Id = Id;
             this.Channel = Channel;
@@ -150,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Events = Events;
             this.Direction = Direction;
             this.OriginatingEntity = OriginatingEntity;
+            this.Metadata = Metadata;
             
         }
         
@@ -205,6 +207,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Additional metadata about this message.
+        /// </summary>
+        /// <value>Additional metadata about this message.</value>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public Dictionary<string, string> Metadata { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -222,6 +233,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Events: ").Append(Events).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  OriginatingEntity: ").Append(OriginatingEntity).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -301,6 +313,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OriginatingEntity == other.OriginatingEntity ||
                     this.OriginatingEntity != null &&
                     this.OriginatingEntity.Equals(other.OriginatingEntity)
+                ) &&
+                (
+                    this.Metadata == other.Metadata ||
+                    this.Metadata != null &&
+                    this.Metadata.SequenceEqual(other.Metadata)
                 );
         }
 
@@ -338,6 +355,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OriginatingEntity != null)
                     hash = hash * 59 + this.OriginatingEntity.GetHashCode();
+
+                if (this.Metadata != null)
+                    hash = hash * 59 + this.Metadata.GetHashCode();
 
                 return hash;
             }

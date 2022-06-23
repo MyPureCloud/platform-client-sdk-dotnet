@@ -440,7 +440,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Reassign for "Reassign"
             /// </summary>
             [EnumMember(Value = "Reassign")]
-            Reassign
+            Reassign,
+            
+            /// <summary>
+            /// Enum Archive for "Archive"
+            /// </summary>
+            [EnumMember(Value = "Archive")]
+            Archive,
+            
+            /// <summary>
+            /// Enum Unarchive for "Unarchive"
+            /// </summary>
+            [EnumMember(Value = "Unarchive")]
+            Unarchive
         }
         /// <summary>
         /// Gets or Sets EntityType

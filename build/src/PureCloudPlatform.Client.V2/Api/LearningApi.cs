@@ -207,6 +207,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LearningModule> GetLearningModuleWithHttpInfo (string moduleId, List<string> expand = null);
 
         /// <summary>
+        /// Get a specific Learning Module job status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="jobId">The ID of the learning module job</param>
+        /// <returns>LearningModuleJobResponse</returns>
+        LearningModuleJobResponse GetLearningModuleJob (string moduleId, string jobId);
+
+        /// <summary>
+        /// Get a specific Learning Module job status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="jobId">The ID of the learning module job</param>
+        /// <returns>ApiResponse of LearningModuleJobResponse</returns>
+        ApiResponse<LearningModuleJobResponse> GetLearningModuleJobWithHttpInfo (string moduleId, string jobId);
+
+        /// <summary>
         /// Get a learning module rule
         /// </summary>
         /// <remarks>
@@ -339,6 +363,50 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AssessmentScoringSet> PostLearningAssessmentsScoringWithHttpInfo (LearningAssessmentScoringRequest body);
 
         /// <summary>
+        /// Reassign Learning Assignment
+        /// </summary>
+        /// <remarks>
+        /// This will reassign the state of the assignment to 'Assigned' and update the assignment to the latest version of the module
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>LearningAssignment</returns>
+        LearningAssignment PostLearningAssignmentReassign (string assignmentId);
+
+        /// <summary>
+        /// Reassign Learning Assignment
+        /// </summary>
+        /// <remarks>
+        /// This will reassign the state of the assignment to 'Assigned' and update the assignment to the latest version of the module
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>ApiResponse of LearningAssignment</returns>
+        ApiResponse<LearningAssignment> PostLearningAssignmentReassignWithHttpInfo (string assignmentId);
+
+        /// <summary>
+        /// Reset Learning Assignment
+        /// </summary>
+        /// <remarks>
+        /// This will reset the state of the assignment to 'Assigned' and remove the version of Learning module associated with the assignment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>LearningAssignment</returns>
+        LearningAssignment PostLearningAssignmentReset (string assignmentId);
+
+        /// <summary>
+        /// Reset Learning Assignment
+        /// </summary>
+        /// <remarks>
+        /// This will reset the state of the assignment to 'Assigned' and remove the version of Learning module associated with the assignment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>ApiResponse of LearningAssignment</returns>
+        ApiResponse<LearningAssignment> PostLearningAssignmentResetWithHttpInfo (string assignmentId);
+
+        /// <summary>
         /// Create Learning Assignment
         /// </summary>
         /// <remarks>
@@ -425,6 +493,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentBulkRemoveResponse</returns>
         ApiResponse<LearningAssignmentBulkRemoveResponse> PostLearningAssignmentsBulkremoveWithHttpInfo (List<string> body = null);
+
+        /// <summary>
+        /// Starts a specified operation on learning module
+        /// </summary>
+        /// <remarks>
+        /// This will initiate operation specified in the request body for a learning module
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module job request</param>
+        /// <returns>LearningModuleJobResponse</returns>
+        LearningModuleJobResponse PostLearningModuleJobs (string moduleId, LearningModuleJobRequest body);
+
+        /// <summary>
+        /// Starts a specified operation on learning module
+        /// </summary>
+        /// <remarks>
+        /// This will initiate operation specified in the request body for a learning module
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module job request</param>
+        /// <returns>ApiResponse of LearningModuleJobResponse</returns>
+        ApiResponse<LearningModuleJobResponse> PostLearningModuleJobsWithHttpInfo (string moduleId, LearningModuleJobRequest body);
 
         /// <summary>
         /// Publish a Learning module
@@ -739,6 +831,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<LearningModule>> GetLearningModuleAsyncWithHttpInfo (string moduleId, List<string> expand = null);
 
         /// <summary>
+        /// Get a specific Learning Module job status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="jobId">The ID of the learning module job</param>
+        /// <returns>Task of LearningModuleJobResponse</returns>
+        System.Threading.Tasks.Task<LearningModuleJobResponse> GetLearningModuleJobAsync (string moduleId, string jobId);
+
+        /// <summary>
+        /// Get a specific Learning Module job status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="jobId">The ID of the learning module job</param>
+        /// <returns>Task of ApiResponse (LearningModuleJobResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LearningModuleJobResponse>> GetLearningModuleJobAsyncWithHttpInfo (string moduleId, string jobId);
+
+        /// <summary>
         /// Get a learning module rule
         /// </summary>
         /// <remarks>
@@ -871,6 +987,50 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AssessmentScoringSet>> PostLearningAssessmentsScoringAsyncWithHttpInfo (LearningAssessmentScoringRequest body);
 
         /// <summary>
+        /// Reassign Learning Assignment
+        /// </summary>
+        /// <remarks>
+        /// This will reassign the state of the assignment to 'Assigned' and update the assignment to the latest version of the module
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>Task of LearningAssignment</returns>
+        System.Threading.Tasks.Task<LearningAssignment> PostLearningAssignmentReassignAsync (string assignmentId);
+
+        /// <summary>
+        /// Reassign Learning Assignment
+        /// </summary>
+        /// <remarks>
+        /// This will reassign the state of the assignment to 'Assigned' and update the assignment to the latest version of the module
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PostLearningAssignmentReassignAsyncWithHttpInfo (string assignmentId);
+
+        /// <summary>
+        /// Reset Learning Assignment
+        /// </summary>
+        /// <remarks>
+        /// This will reset the state of the assignment to 'Assigned' and remove the version of Learning module associated with the assignment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>Task of LearningAssignment</returns>
+        System.Threading.Tasks.Task<LearningAssignment> PostLearningAssignmentResetAsync (string assignmentId);
+
+        /// <summary>
+        /// Reset Learning Assignment
+        /// </summary>
+        /// <remarks>
+        /// This will reset the state of the assignment to 'Assigned' and remove the version of Learning module associated with the assignment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PostLearningAssignmentResetAsyncWithHttpInfo (string assignmentId);
+
+        /// <summary>
         /// Create Learning Assignment
         /// </summary>
         /// <remarks>
@@ -957,6 +1117,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentBulkRemoveResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LearningAssignmentBulkRemoveResponse>> PostLearningAssignmentsBulkremoveAsyncWithHttpInfo (List<string> body = null);
+
+        /// <summary>
+        /// Starts a specified operation on learning module
+        /// </summary>
+        /// <remarks>
+        /// This will initiate operation specified in the request body for a learning module
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module job request</param>
+        /// <returns>Task of LearningModuleJobResponse</returns>
+        System.Threading.Tasks.Task<LearningModuleJobResponse> PostLearningModuleJobsAsync (string moduleId, LearningModuleJobRequest body);
+
+        /// <summary>
+        /// Starts a specified operation on learning module
+        /// </summary>
+        /// <remarks>
+        /// This will initiate operation specified in the request body for a learning module
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module job request</param>
+        /// <returns>Task of ApiResponse (LearningModuleJobResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LearningModuleJobResponse>> PostLearningModuleJobsAsyncWithHttpInfo (string moduleId, LearningModuleJobRequest body);
 
         /// <summary>
         /// Publish a Learning module
@@ -2471,6 +2655,210 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a specific Learning Module job status 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="jobId">The ID of the learning module job</param>
+        /// <returns>LearningModuleJobResponse</returns>
+        public LearningModuleJobResponse GetLearningModuleJob (string moduleId, string jobId)
+        {
+             ApiResponse<LearningModuleJobResponse> localVarResponse = GetLearningModuleJobWithHttpInfo(moduleId, jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a specific Learning Module job status 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="jobId">The ID of the learning module job</param>
+        /// <returns>ApiResponse of LearningModuleJobResponse</returns>
+        public ApiResponse< LearningModuleJobResponse > GetLearningModuleJobWithHttpInfo (string moduleId, string jobId)
+        { 
+            // verify the required parameter 'moduleId' is set
+            if (moduleId == null)
+                throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->GetLearningModuleJob");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling LearningApi->GetLearningModuleJob");
+
+            var localVarPath = "/api/v2/learning/modules/{moduleId}/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModuleJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModuleJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningModuleJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningModuleJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModuleJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a specific Learning Module job status 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="jobId">The ID of the learning module job</param>
+        /// <returns>Task of LearningModuleJobResponse</returns>
+        public async System.Threading.Tasks.Task<LearningModuleJobResponse> GetLearningModuleJobAsync (string moduleId, string jobId)
+        {
+             ApiResponse<LearningModuleJobResponse> localVarResponse = await GetLearningModuleJobAsyncWithHttpInfo(moduleId, jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a specific Learning Module job status 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="jobId">The ID of the learning module job</param>
+        /// <returns>Task of ApiResponse (LearningModuleJobResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LearningModuleJobResponse>> GetLearningModuleJobAsyncWithHttpInfo (string moduleId, string jobId)
+        { 
+            // verify the required parameter 'moduleId' is set
+            if (moduleId == null)
+                throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->GetLearningModuleJob");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling LearningApi->GetLearningModuleJob");
+            
+
+            var localVarPath = "/api/v2/learning/modules/{moduleId}/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModuleJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModuleJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningModuleJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningModuleJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModuleJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a learning module rule 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3512,6 +3900,388 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Reassign Learning Assignment This will reassign the state of the assignment to 'Assigned' and update the assignment to the latest version of the module
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>LearningAssignment</returns>
+        public LearningAssignment PostLearningAssignmentReassign (string assignmentId)
+        {
+             ApiResponse<LearningAssignment> localVarResponse = PostLearningAssignmentReassignWithHttpInfo(assignmentId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Reassign Learning Assignment This will reassign the state of the assignment to 'Assigned' and update the assignment to the latest version of the module
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>ApiResponse of LearningAssignment</returns>
+        public ApiResponse< LearningAssignment > PostLearningAssignmentReassignWithHttpInfo (string assignmentId)
+        { 
+            // verify the required parameter 'assignmentId' is set
+            if (assignmentId == null)
+                throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PostLearningAssignmentReassign");
+
+            var localVarPath = "/api/v2/learning/assignments/{assignmentId}/reassign";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assignmentId != null) localVarPathParams.Add("assignmentId", this.Configuration.ApiClient.ParameterToString(assignmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningAssignmentReassign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningAssignmentReassign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningAssignment>(localVarStatusCode,
+                localVarHeaders,
+                (LearningAssignment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Reassign Learning Assignment This will reassign the state of the assignment to 'Assigned' and update the assignment to the latest version of the module
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>Task of LearningAssignment</returns>
+        public async System.Threading.Tasks.Task<LearningAssignment> PostLearningAssignmentReassignAsync (string assignmentId)
+        {
+             ApiResponse<LearningAssignment> localVarResponse = await PostLearningAssignmentReassignAsyncWithHttpInfo(assignmentId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Reassign Learning Assignment This will reassign the state of the assignment to 'Assigned' and update the assignment to the latest version of the module
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PostLearningAssignmentReassignAsyncWithHttpInfo (string assignmentId)
+        { 
+            // verify the required parameter 'assignmentId' is set
+            if (assignmentId == null)
+                throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PostLearningAssignmentReassign");
+            
+
+            var localVarPath = "/api/v2/learning/assignments/{assignmentId}/reassign";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assignmentId != null) localVarPathParams.Add("assignmentId", this.Configuration.ApiClient.ParameterToString(assignmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningAssignmentReassign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningAssignmentReassign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningAssignment>(localVarStatusCode,
+                localVarHeaders,
+                (LearningAssignment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Reset Learning Assignment This will reset the state of the assignment to 'Assigned' and remove the version of Learning module associated with the assignment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>LearningAssignment</returns>
+        public LearningAssignment PostLearningAssignmentReset (string assignmentId)
+        {
+             ApiResponse<LearningAssignment> localVarResponse = PostLearningAssignmentResetWithHttpInfo(assignmentId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Reset Learning Assignment This will reset the state of the assignment to 'Assigned' and remove the version of Learning module associated with the assignment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>ApiResponse of LearningAssignment</returns>
+        public ApiResponse< LearningAssignment > PostLearningAssignmentResetWithHttpInfo (string assignmentId)
+        { 
+            // verify the required parameter 'assignmentId' is set
+            if (assignmentId == null)
+                throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PostLearningAssignmentReset");
+
+            var localVarPath = "/api/v2/learning/assignments/{assignmentId}/reset";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assignmentId != null) localVarPathParams.Add("assignmentId", this.Configuration.ApiClient.ParameterToString(assignmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningAssignmentReset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningAssignmentReset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningAssignment>(localVarStatusCode,
+                localVarHeaders,
+                (LearningAssignment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Reset Learning Assignment This will reset the state of the assignment to 'Assigned' and remove the version of Learning module associated with the assignment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>Task of LearningAssignment</returns>
+        public async System.Threading.Tasks.Task<LearningAssignment> PostLearningAssignmentResetAsync (string assignmentId)
+        {
+             ApiResponse<LearningAssignment> localVarResponse = await PostLearningAssignmentResetAsyncWithHttpInfo(assignmentId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Reset Learning Assignment This will reset the state of the assignment to 'Assigned' and remove the version of Learning module associated with the assignment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The Learning Assignment ID</param>
+        /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PostLearningAssignmentResetAsyncWithHttpInfo (string assignmentId)
+        { 
+            // verify the required parameter 'assignmentId' is set
+            if (assignmentId == null)
+                throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PostLearningAssignmentReset");
+            
+
+            var localVarPath = "/api/v2/learning/assignments/{assignmentId}/reset";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assignmentId != null) localVarPathParams.Add("assignmentId", this.Configuration.ApiClient.ParameterToString(assignmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningAssignmentReset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningAssignmentReset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningAssignment>(localVarStatusCode,
+                localVarHeaders,
+                (LearningAssignment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create Learning Assignment 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4288,6 +5058,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LearningAssignmentBulkRemoveResponse>(localVarStatusCode,
                 localVarHeaders,
                 (LearningAssignmentBulkRemoveResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignmentBulkRemoveResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Starts a specified operation on learning module This will initiate operation specified in the request body for a learning module
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module job request</param>
+        /// <returns>LearningModuleJobResponse</returns>
+        public LearningModuleJobResponse PostLearningModuleJobs (string moduleId, LearningModuleJobRequest body)
+        {
+             ApiResponse<LearningModuleJobResponse> localVarResponse = PostLearningModuleJobsWithHttpInfo(moduleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Starts a specified operation on learning module This will initiate operation specified in the request body for a learning module
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module job request</param>
+        /// <returns>ApiResponse of LearningModuleJobResponse</returns>
+        public ApiResponse< LearningModuleJobResponse > PostLearningModuleJobsWithHttpInfo (string moduleId, LearningModuleJobRequest body)
+        { 
+            // verify the required parameter 'moduleId' is set
+            if (moduleId == null)
+                throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->PostLearningModuleJobs");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningModuleJobs");
+
+            var localVarPath = "/api/v2/learning/modules/{moduleId}/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningModuleJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningModuleJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningModuleJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningModuleJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModuleJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Starts a specified operation on learning module This will initiate operation specified in the request body for a learning module
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module job request</param>
+        /// <returns>Task of LearningModuleJobResponse</returns>
+        public async System.Threading.Tasks.Task<LearningModuleJobResponse> PostLearningModuleJobsAsync (string moduleId, LearningModuleJobRequest body)
+        {
+             ApiResponse<LearningModuleJobResponse> localVarResponse = await PostLearningModuleJobsAsyncWithHttpInfo(moduleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Starts a specified operation on learning module This will initiate operation specified in the request body for a learning module
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module job request</param>
+        /// <returns>Task of ApiResponse (LearningModuleJobResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LearningModuleJobResponse>> PostLearningModuleJobsAsyncWithHttpInfo (string moduleId, LearningModuleJobRequest body)
+        { 
+            // verify the required parameter 'moduleId' is set
+            if (moduleId == null)
+                throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->PostLearningModuleJobs");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningModuleJobs");
+            
+
+            var localVarPath = "/api/v2/learning/modules/{moduleId}/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningModuleJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningModuleJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningModuleJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningModuleJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModuleJobResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
