@@ -7,7 +7,7 @@ mozroots --import --sync
 mono nuget.exe install src/PureCloudPlatform.Client.V2/packages.config -o packages -NoCache -Verbosity detailed;
 mkdir -p bin;
 
-cp packages/ini-parser.3.4.0/lib/net20/INIFileParser.dll bin/INIFileParser.dll;
+cp packages/ini-parser.2.5.2/lib/net20/INIFileParser.dll bin/INIFileParser.dll;
 cp packages/Newtonsoft.Json.9.0.1/lib/net45/Newtonsoft.Json.dll bin/Newtonsoft.Json.dll;
 cp packages/RestSharp.105.2.3/lib/net45/RestSharp.dll bin/RestSharp.dll;
 cp packages/WebSocketSharp.1.0.3-rc11/lib/websocket-sharp.dll bin/websocket-sharp.dll;

@@ -10,6 +10,6 @@ if not exist ".\bin" mkdir bin
 
 copy packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll bin\Newtonsoft.Json.dll
 copy packages\RestSharp.105.2.3\lib\net45\RestSharp.dll bin\RestSharp.dll
-copy packages\ini-parser.3.4.0\lib\net20\net45\INIFileParser.dll bin\INIFileParser.dll;
+copy packages\ini-parser.2.5.2\lib\net20\net45\INIFileParser.dll bin\INIFileParser.dll;
 
 %CSCPATH%\csc /reference:bin\Newtonsoft.Json.dll;bin\RestSharp.dll;bin\INIFileParser.dll /target:library /out:bin\PureCloudPlatform.Client.V2.dll /recurse:src\PureCloudPlatform.Client.V2\*.cs /doc:bin\PureCloudPlatform.Client.V2.xml
